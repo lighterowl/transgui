@@ -27,5 +27,5 @@ jobs:
 
     - uses: actions/upload-artifact@v3
       with:
-        name: TransGUI
+        name: TransGUI ${{ matrix.arch }}
         path: units\transgui.exe
