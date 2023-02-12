@@ -11,6 +11,10 @@ on:
 jobs:
   build-win:
 
+    parallel:
+      matrix:
+        arch: [x86, amd64]
+
     runs-on: windows-latest
 
     steps:
@@ -19,9 +23,9 @@ jobs:
         submodules: recursive
       
     - shell: cmd
-      run: .github/build_windows.bat
+      run: .github/build_windows.bat ${{ matrix.arch }}
 
     - uses: actions/upload-artifact@v3
       with:
-        name: Windows Executable
+        name: TransGUI
         path: units\transgui.exe
