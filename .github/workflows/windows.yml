@@ -11,11 +11,11 @@ on:
 jobs:
   build-win:
 
-    parallel:
+    runs-on: windows-latest
+
+    strategy:
       matrix:
         arch: [x86, amd64]
-
-    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v1
