@@ -1,4 +1,4 @@
-name: macOS Build
+name: Ubuntu Build
 
 on:
   push:
@@ -11,16 +11,16 @@ on:
 jobs:
   build-macos:
 
-    runs-on: macos-11
+    runs-on: ubuntu-20.04
 
     steps:
     - uses: actions/checkout@v1
       with:
         submodules: recursive
 
-    - run: .github/build_macos.sh
+    - run: .github/build_ubuntu.sh
 
     - uses: actions/upload-artifact@v3
       with:
-        name: TransGUI macOS
+        name: TransGUI Linux
         path: units\transgui
