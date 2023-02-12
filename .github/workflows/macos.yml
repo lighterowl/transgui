@@ -18,8 +18,7 @@ jobs:
       with:
         submodules: recursive
 
-    - shell: cmd
-      run: .github/build_macos.sh
+    - run: .github/build_macos.sh
 
     - uses: actions/upload-artifact@v3
       with:
