@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  build-macos:
+  build-ubuntu:
 
     runs-on: ubuntu-20.04
 
