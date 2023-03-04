@@ -15,15 +15,15 @@ jobs:
 
     strategy:
       matrix:
-        arch: [x86, amd64]
+        arch: [x86]
 
     steps:
     - uses: actions/checkout@v1
       with:
         submodules: recursive
       
-    - shell: cmd
-      run: .github/build_windows.bat ${{ matrix.arch }}
+    - shell: pwsh
+      run: .github/build_windows.ps1 ${{ matrix.arch }}
 
     - uses: actions/upload-artifact@v3
       with:
