@@ -14,7 +14,7 @@ Invoke-WebRequest -Uri "https://gitlab.com/freepascal.org/fpc/source/-/archive/0
 # Expand-Archive takes an eternity and then some
 7z x fpc-fixes.zip
 
-cd "C:\FPC\source-fixes_3_2"
+cd "C:\FPC\source-0c5256300a323c78caa0b1a9cb772ac137f5aa8e"
 make all
 mkdir C:\FPC\3.2.3
 make PREFIX=C:\FPC\3.2.3 install
