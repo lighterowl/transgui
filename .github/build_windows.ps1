@@ -5,7 +5,7 @@ mkdir C:\FPC
 cd C:\FPC
 
 Invoke-WebRequest -Uri "https://sourceforge.net/projects/freepascal/files/Win32/3.2.2/fpc-3.2.2.i386-win32.exe/download" -UserAgent Wget -MaximumRedirection 10 -OutFile fpc-install.exe
-Start-Process -FilePath fpc-install.exe -Wait -ArgumentList "/sp-","/verysilent","/supperssmsgboxes","/norestart"
+Start-Process -FilePath fpc-install.exe -Wait -ArgumentList "/sp-","/verysilent","/suppressmsgboxes","/norestart"
 
 $env:Path = "C:\FPC\3.2.2\bin\i386-win32;" + $env:Path;
 
