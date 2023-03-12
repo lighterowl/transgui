@@ -3,8 +3,8 @@
 set -e
 repo_dir=$PWD
 
-apt update -yqq
-apt install -yqq --no-install-recommends fpc build-essential
+sudo apt update -yqq
+sudo apt install -yqq --no-install-recommends fpc build-essential
 
 fpcmkcfg -d basepath=/usr/lib/x86_64-linux-gnu/fpc/3.2.2 -o ~/.fpc.cfg
 
