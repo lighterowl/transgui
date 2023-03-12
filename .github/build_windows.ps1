@@ -40,7 +40,7 @@ $env:Path = "C:\FPC\3.2.3\bin\i386-win32;" + $env:Path
 fpcmkcfg -d basepath=C:\FPC\3.2.3 -o C:\FPC\3.2.3\bin\i386-win32\fpc.cfg
 
 cd C:\FPC
-My-Download -Uri "https://sourceforge.net/projects/lazarus/files/Lazarus%20Zip%20_%20GZip/Lazarus%202.2.4/lazarus-2.2.4-0.zip/download" -OutFile lazarus-src.zip
+My-Download -Uri "https://sourceforge.net/projects/lazarus/files/Lazarus%20Zip%20_%20GZip/Lazarus%202.2.6/lazarus-2.2.6-0.zip/download" -OutFile lazarus-src.zip
 7z x lazarus-src.zip
 
 cd lazarus
