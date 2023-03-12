@@ -32,8 +32,8 @@ fpcmkcfg -d basepath=${HOME}/fpc-3.2.3/lib/fpc/3.2.3 -o ~/.fpc.cfg
 fixup_fpc_cfg ~/.fpc.cfg
 
 cd
-curl -L -o lazarus-src.zip 'https://sourceforge.net/projects/lazarus/files/Lazarus%20Zip%20_%20GZip/Lazarus%202.2.4/lazarus-2.2.4-0.zip/download'
-unzip lazarus-src.zip
+curl -L -o lazarus-src.tar.gz 'https://sourceforge.net/projects/lazarus/files/Lazarus%20Zip%20_%20GZip/Lazarus%202.2.6/lazarus-2.2.6-0.tar.gz/download'
+tar xf lazarus-src.tar.gz
 cd lazarus
 make bigide
 export PATH=$PWD:$PATH
