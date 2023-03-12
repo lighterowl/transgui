@@ -13,19 +13,15 @@ jobs:
 
     runs-on: windows-latest
 
-    strategy:
-      matrix:
-        arch: [x86, amd64]
-
     steps:
     - uses: actions/checkout@v1
       with:
         submodules: recursive
       
-    - shell: cmd
-      run: .github/build_windows.bat ${{ matrix.arch }}
+    - shell: pwsh
+      run: .github/build_windows.ps1
 
     - uses: actions/upload-artifact@v3
       with:
-        name: TransGUI ${{ matrix.arch }}
+        name: TransGUI Windows
         path: units\transgui.exe
