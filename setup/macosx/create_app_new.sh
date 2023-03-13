@@ -1,34 +1,22 @@
 #!/bin/sh
 
-set -x
+set -xe
 
 prog_ver="$(cat ../../VERSION.txt)"
 build="$(git rev-list --abbrev-commit --max-count=1 HEAD ../..)"
 lazarus_ver="$(lazbuild -v)"
 fpc_ver="$(fpc -i V | head -n 1)"
-exename=../../transgui
+exename=../../units/transgui
 appname="Transmission Remote GUI"
 dmg_dist_file="../../Release/transgui-$prog_ver.dmg"
 dmgfolder=./Release
 appfolder="$dmgfolder/$appname.app"
-lazdir="${1:-/Library/Lazarus/}"
-
-if [ -z "${CI-}" ]; then
-  ./install_deps.sh
-fi
-
-if [ ! "$lazdir" = "" ]; then
-  lazdir=LAZARUS_DIR="$lazdir"
-fi
 
 mkdir -p ../../Release/
 sed -i.bak "s/'Version %s'/'Version %s Build $build'#13#10'Compiled by: $fpc_ver, Lazarus v$lazarus_ver'/" ../../about.lfm
 
-lazbuild -B ../../transgui.lpi --lazarusdir=/Library/Lazarus/ --compiler=/usr/local/bin/fpc --cpu=x86_64 --widgetset=cocoa
-
-# Building Intel version
-make -j"$(sysctl -n hw.ncpu)" -C ../.. clean CPU_TARGET=x86_64 "$lazdir"
-make -j"$(sysctl -n hw.ncpu)" -C ../.. CPU_TARGET=x86_64 "$lazdir"
+lazbuild --compiler=$HOME/fpc-3.2.3/lib/fpc/3.2.3/ppcx64 --build-mode=Release \
+  --ws=cocoa --lazarusdir=$HOME/lazarus transgui.lpi
 
 if ! [ -e $exename ]; then
   echo "$exename does not exist"
@@ -52,8 +40,6 @@ cp PkgInfo "$appfolder/Contents"
 cp transgui.icns "$appfolder/Contents/Resources"
 sed -e "s/@prog_ver@/$prog_ver/" Info.plist > "$appfolder/Contents/Info.plist"
 
-ln -s /Applications "$dmgfolder/Drag \"Transmission Remote GUI\" here!"
-
 hdiutil create -ov -anyowners -volname "transgui-v$prog_ver" -format UDRW -srcfolder ./Release -fs HFS+ "tmp.dmg"
 
 mount_device="$(hdiutil attach -readwrite -noautoopen "tmp.dmg" | awk 'NR==1{print$1}')"
@@ -69,7 +55,3 @@ hdiutil convert tmp.dmg -format UDBZ -imagekey zlib-level=9 -o "$dmg_dist_file"
 rm tmp.dmg
 rm -rf "$dmgfolder"
 mv ../../about.lfm.bak ../../about.lfm
-
-if [ -z "${CI-}" ]; then
-  open "$dmg_dist_file"
-fi

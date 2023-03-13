@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-set -e
+set -xe
+
 repo_dir=$PWD
 
 fixup_fpc_cfg() {
@@ -38,5 +39,5 @@ cd lazarus
 make bigide
 export PATH=$PWD:$PATH
 
-cd "$repo_dir"
-lazbuild transgui.lpi --lazarusdir=${HOME}/lazarus
+cd "${repo_dir}/setup/macosx"
+source create_app_new.sh
