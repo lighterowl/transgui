@@ -18,6 +18,14 @@ jobs:
       with:
         submodules: recursive
 
+    - uses: actions/cache@v3
+      with:
+        path: |
+          ~/.fpc.cfg
+          ~/lazarus
+          ~/fpc-3.2.3
+        key: macos-fpc-lazarus
+
     - run: .github/build_macos.sh
 
     - uses: actions/upload-artifact@v3
