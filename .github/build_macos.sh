@@ -46,5 +46,5 @@ else
   fpc_lazarus_build_install
 fi
 
-cd "${repo_dir}/setup/macosx"
+cd "${repo_dir}/.github/macosx"
 source create_app_new.sh
