@@ -4,7 +4,6 @@ set -xe
 repo_dir=$PWD
 
 fpc_lazarus_build_install() {
-  sudo apt update -yqq
   sudo apt install -yqq --no-install-recommends fpc build-essential
 
   fpcmkcfg -d basepath=/usr/lib/x86_64-linux-gnu/fpc/3.2.2 -o ~/.fpc.cfg
@@ -27,6 +26,9 @@ fpc_lazarus_build_install() {
   make bigide
   export PATH=$PWD:$PATH
 }
+
+sudo apt update -yqq
+sudo apt install -yqq build-essential libgtk2.0-dev
 
 if [[ -f ~/.fpc.cfg && -d ~/lazarus && -d ~/fpc-3.2.3 ]]; then
   export PATH=~/lazarus:~/fpc-3.2.3/bin:~/fpc-3.2.3/lib/fpc/3.2.3:$PATH
