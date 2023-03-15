@@ -44,12 +44,15 @@ function FPC-Lazarus-Build-Install {
     cd lazarus
     make bigide
     $env:Path = "C:\FPC\lazarus;" + $env:Path
+
+    My-Download -Uri "https://slproweb.com/download/Win32OpenSSL_Light-3_1_0.exe" -OutFile openssl-install.exe
+    Start-Process -FilePath openssl-install.exe -Wait -ArgumentList "/sp-","/verysilent","/suppressmsgboxes","/norestart","/dir=C:\OpenSSL"
 }
 
 $repodir = Get-Location
 $ErrorActionPreference = "Stop"
 
-if ((Test-Path -Path "C:\FPC\3.2.3") -and (Test-Path -Path "C:\FPC\lazarus"))
+if ((Test-Path -Path "C:\FPC\3.2.3") -and (Test-Path -Path "C:\FPC\lazarus") -and (Test-Path -Path "C:\OpenSSL"))
 {
     $env:Path = "C:\FPC\lazarus;C:\FPC\3.2.3\bin\i386-win32;" + $env:Path
 }
@@ -60,3 +63,12 @@ else
 
 cd $repodir
 lazbuild --build-mode=Release --lazarusdir=C:\FPC\lazarus transgui.lpi
+
+mkdir Release
+Copy-Item "units\transgui.exe" -Destination Release
+Copy-Item lang Release -Recurse -Exclude '*.template'
+Copy-Item "C:\OpenSSL\bin\lib*-3.dll" Release
+
+cd Release
+7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on -sse transgui.7z *
+certutil -hashfile transgui.7z SHA256

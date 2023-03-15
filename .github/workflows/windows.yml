@@ -23,7 +23,9 @@ jobs:
         path: |
           C:\FPC\3.2.3
           C:\FPC\lazarus
-        key: windows-fpc-lazarus
+          C:\OpenSSL\bin\libcrypto-3.dll
+          C:\OpenSSL\bin\libssl-3.dll
+        key: windows-fpc-lazarus-openssl
 
     - shell: pwsh
       run: .github/build_windows.ps1
@@ -31,4 +33,4 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: TransGUI Windows
-        path: units\transgui.exe
+        path: Release\transgui.7z
