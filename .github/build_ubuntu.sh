@@ -11,6 +11,7 @@ fpc_lazarus_build_install() {
 
   fpcmkcfg -d basepath=/usr/lib/x86_64-linux-gnu/fpc/3.2.2 -o ~/.fpc.cfg
 
+  mkdir -p "$sdk_dir"
   cd "$sdk_dir"
   readonly fpc323_commit='0c5256300a323c78caa0b1a9cb772ac137f5aa8e'
   curl -O "https://gitlab.com/freepascal.org/fpc/source/-/archive/${fpc323_commit}/source-${fpc323_commit}.tar.gz"
