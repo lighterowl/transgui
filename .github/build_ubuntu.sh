@@ -35,7 +35,7 @@ fpc_lazarus_build_install() {
 }
 
 sudo apt update -yqq
-sudo apt install -yqq build-essential libqt5pas-dev
+sudo apt install -yqq build-essential libqt5pas-dev fuse
 
 if [[ -d $sdk_dir ]]; then
   export PATH=${sdk_dir}/lazarus:${fpc_installdir}/bin:${fpc_installdir}/lib/fpc/3.2.3:$PATH
