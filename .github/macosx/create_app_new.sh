@@ -2,6 +2,35 @@
 
 set -xe
 
+package_openssl() {
+  local bindir=$1
+  local libcrypto
+  local libssl
+
+  for i in $(brew ls openssl@3); do
+    if [[ $i =~ libcrypto\.3\.dylib$ ]]; then
+      libcrypto=$i
+    elif [[ $i =~ libssl\.3\.dylib$ ]]; then
+      libssl=$i
+    fi
+  done
+
+  if [[ -z $libcrypto || -z $libssl ]]; then
+    echo >&2 "libcrypto = '${libcrypto}' , libssl = '${libssl}' - quitting"
+    exit 1
+  fi
+
+  local libs=("$libcrypto" "$libssl")
+  for lib in "${libs[@]}"; do
+    local libname=${lib##*/}
+    cp "$lib" "$bindir"
+    install_name_tool -add_rpath '@executable_path' "${bindir}/${libname}"
+    install_name_tool -id "$libname" "${bindir}/${libname}"
+  done
+
+  install_name_tool -change "$libcrypto" 'libcrypto.3.dylib' "${bindir}/libssl.3.dylib"
+}
+
 prog_ver="$(cat ../../VERSION.txt)"
 build="$(git rev-list --abbrev-commit --max-count=1 HEAD ../..)"
 lazarus_ver="$(lazbuild -v)"
@@ -34,9 +63,7 @@ mkdir -p "$appfolder/Contents/Resources"
 
 install_name_tool -add_rpath '@executable_path' "$exename"
 mv "$exename" "$appfolder/Contents/MacOS"
-for i in $(brew ls openssl@3); do
-  [[ $i =~ lib(crypto|ssl)\.3\.dylib$ ]] && cp "$i" "$appfolder/Contents/MacOS"
-done
+package_openssl "$appfolder/Contents/MacOS"
 
 cp ../../lang/transgui.* "$appfolder/Contents/MacOS/lang"
 cp ../../history.txt "$dmgfolder"
