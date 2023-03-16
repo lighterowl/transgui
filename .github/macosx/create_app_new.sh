@@ -33,8 +33,12 @@ mkdir -p "$appfolder/Contents/MacOS/lang"
 mkdir -p "$appfolder/Contents/Resources"
 
 mv "$exename" "$appfolder/Contents/MacOS"
-cp ../../lang/transgui.* "$appfolder/Contents/MacOS/lang"
+install_name_tool -add_rpath '@executable_path'
+for i in $(brew ls openssl@3); do
+  [[ $i =~ lib(crypto|ssl)\.3\.dylib$ ]] && cp "$i" "$appfolder/Contents/MacOS"
+done
 
+cp ../../lang/transgui.* "$appfolder/Contents/MacOS/lang"
 cp ../../history.txt "$dmgfolder"
 cp ../../README.md "$dmgfolder"
 

@@ -40,6 +40,8 @@ fpc_lazarus_build_install() {
   export PATH=$PWD:$PATH
 }
 
+brew install openssl@3
+
 if [[ -f ~/.fpc.cfg && -d ~/lazarus && -d ~/fpc-3.2.3 ]]; then
   export PATH=~/lazarus:~/fpc-3.2.3/bin:~/fpc-3.2.3/lib/fpc/3.2.3:$PATH
 else
