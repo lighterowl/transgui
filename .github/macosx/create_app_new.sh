@@ -24,11 +24,10 @@ package_openssl() {
   for lib in "${libs[@]}"; do
     local libname=${lib##*/}
     cp "$lib" "$bindir"
-    install_name_tool -add_rpath '@executable_path' "${bindir}/${libname}"
     install_name_tool -id "$libname" "${bindir}/${libname}"
   done
 
-  install_name_tool -change "$libcrypto" 'libcrypto.3.dylib' "${bindir}/libssl.3.dylib"
+  install_name_tool -change "$libcrypto" '@executable_path/libcrypto.3.dylib' "${bindir}/libssl.3.dylib"
 }
 
 prog_ver="$(cat ../../VERSION.txt)"
