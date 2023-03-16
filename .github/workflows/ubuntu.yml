@@ -21,9 +21,8 @@ jobs:
     - uses: actions/cache@v3
       with:
         path: |
-          ~/.fpc.cfg
-          ~/lazarus
-          ~/fpc-3.2.3
+          ~/.transgui_sdk/lazarus
+          ~/.transgui_sdk/fpc-3.2.3
         key: ubuntu-fpc-lazarus
 
     - run: .github/build_ubuntu.sh
@@ -31,4 +30,4 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: TransGUI Linux
-        path: units/transgui
+        path: units/transgui--x86_64.AppImage
