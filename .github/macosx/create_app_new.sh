@@ -32,8 +32,8 @@ echo "Creating $appfolder..."
 mkdir -p "$appfolder/Contents/MacOS/lang"
 mkdir -p "$appfolder/Contents/Resources"
 
+install_name_tool -add_rpath '@executable_path' "$exename"
 mv "$exename" "$appfolder/Contents/MacOS"
-install_name_tool -add_rpath '@executable_path'
 for i in $(brew ls openssl@3); do
   [[ $i =~ lib(crypto|ssl)\.3\.dylib$ ]] && cp "$i" "$appfolder/Contents/MacOS"
 done
