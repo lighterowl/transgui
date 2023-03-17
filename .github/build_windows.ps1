@@ -13,14 +13,20 @@ function My-Download {
     Invoke-WebRequest @webRequestParams
 }
 
+$sdk_dir = "${HOME}\transgui_sdk"
+$fpc322 = "${sdk_dir}\fpc-3.2.2"
+$fpc323 = "${sdk_dir}\fpc-3.2.3"
+$lazarus = "${sdk_dir}\lazarus"
+$openssl = "${sdk_dir}\OpenSSL"
+
 function FPC-Lazarus-Build-Install {
-    mkdir C:\FPC
-    cd C:\FPC
+    mkdir "$sdk_dir"
+    cd "$sdk_dir"
 
     My-Download -Uri "https://sourceforge.net/projects/freepascal/files/Win32/3.2.2/fpc-3.2.2.i386-win32.exe/download" -OutFile fpc-install.exe
-    Start-Process -FilePath fpc-install.exe -Wait -ArgumentList "/sp-","/verysilent","/suppressmsgboxes","/norestart"
+    Start-Process -FilePath fpc-install.exe -Wait -ArgumentList "/sp-","/verysilent","/suppressmsgboxes","/norestart","/dir=${fpc322}"
 
-    $env:Path = "C:\FPC\3.2.2\bin\i386-win32;" + $env:Path
+    $env:Path = "${fpc322}\bin\i386-win32;" + $env:Path
 
     # top of fixes_3_2 at the time of writing
     $fpc323_commit = '0c5256300a323c78caa0b1a9cb772ac137f5aa8e'
@@ -29,32 +35,32 @@ function FPC-Lazarus-Build-Install {
     # we could use Expand-Archive but it takes an eternity and then some
     7z x fpc-fixes.zip
 
-    cd "C:\FPC\source-${fpc323_commit}"
+    cd "source-${fpc323_commit}"
     make all
-    mkdir C:\FPC\3.2.3
-    make PREFIX=C:\FPC\3.2.3 install
+    mkdir "$fpc323"
+    make PREFIX=${fpc323} install
 
-    $env:Path = "C:\FPC\3.2.3\bin\i386-win32;" + $env:Path
-    fpcmkcfg -d basepath=C:\FPC\3.2.3 -o C:\FPC\3.2.3\bin\i386-win32\fpc.cfg
+    $env:Path = "${fpc323}\bin\i386-win32;" + $env:Path
+    fpcmkcfg -d basepath=${fpc323} -o "${fpc323}\bin\i386-win32\fpc.cfg"
 
-    cd C:\FPC
+    cd "$sdk_dir"
     My-Download -Uri "https://sourceforge.net/projects/lazarus/files/Lazarus%20Zip%20_%20GZip/Lazarus%202.2.6/lazarus-2.2.6-0.zip/download" -OutFile lazarus-src.zip
     7z x lazarus-src.zip
 
     cd lazarus
     make bigide
-    $env:Path = "C:\FPC\lazarus;" + $env:Path
+    $env:Path = "${lazarus};" + $env:Path
 
     My-Download -Uri "https://slproweb.com/download/Win32OpenSSL_Light-3_1_0.exe" -OutFile openssl-install.exe
-    Start-Process -FilePath openssl-install.exe -Wait -ArgumentList "/sp-","/verysilent","/suppressmsgboxes","/norestart","/dir=C:\OpenSSL"
+    Start-Process -FilePath openssl-install.exe -Wait -ArgumentList "/sp-","/verysilent","/suppressmsgboxes","/norestart","/dir=${openssl}"
 }
 
 $repodir = Get-Location
 $ErrorActionPreference = "Stop"
 
-if ((Test-Path -Path "C:\FPC\3.2.3") -and (Test-Path -Path "C:\FPC\lazarus") -and (Test-Path -Path "C:\OpenSSL"))
+if (Test-Path -Path "$sdk_dir")
 {
-    $env:Path = "C:\FPC\lazarus;C:\FPC\3.2.3\bin\i386-win32;" + $env:Path
+    $env:Path = "${lazarus};${fpc323}\bin\i386-win32;" + $env:Path
 }
 else
 {
@@ -62,12 +68,12 @@ else
 }
 
 cd $repodir
-lazbuild --build-mode=Release --lazarusdir=C:\FPC\lazarus transgui.lpi
+lazbuild --build-mode=Release --lazarusdir=${sdk_dir}\lazarus transgui.lpi
 
 mkdir Release
 Copy-Item "units\transgui.exe" -Destination Release
 Copy-Item lang Release -Recurse -Exclude '*.template'
-Copy-Item "C:\OpenSSL\bin\lib*-3.dll" Release
+Copy-Item "${openssl}\bin\lib*-3.dll" Release
 
 cd Release
 7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on -sse transgui.7z *

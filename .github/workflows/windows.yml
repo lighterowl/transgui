@@ -21,10 +21,10 @@ jobs:
     - uses: actions/cache@v3
       with:
         path: |
-          C:\FPC\3.2.3
-          C:\FPC\lazarus
-          C:\OpenSSL\bin\libcrypto-3.dll
-          C:\OpenSSL\bin\libssl-3.dll
+          ~\transgui_sdk\fpc-3.2.3
+          ~\transgui_sdk\lazarus
+          ~\transgui_sdk\OpenSSL\bin\libcrypto-3.dll
+          ~\transgui_sdk\OpenSSL\bin\libssl-3.dll
         key: windows-fpc-lazarus-openssl
 
     - shell: pwsh
