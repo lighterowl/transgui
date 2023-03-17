@@ -37,6 +37,7 @@ fpc_lazarus_build_install() {
   fpcmkcfg -d basepath=${fpc_installdir}/lib/fpc/3.2.3 -p \
     -o "${fpc_installdir}/etc/fpc.cfg"
   fixup_fpc_cfg "${fpc_installdir}/etc/fpc.cfg"
+  mkdir -p "${fpc_installdir}/lib/fpc/etc"
   ln -s ../../../etc/fpc.cfg "${fpc_installdir}/lib/fpc/etc/fpc.cfg"
 
   cd "$sdk_dir"
