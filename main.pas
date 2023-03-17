@@ -706,9 +706,6 @@ type
     FUserDefinedMenuEx: string;
     FUserDefinedMenuParam: string;
 {$endif windows}
-{$ifdef LCLcarbon}
-    FFormActive: boolean;
-{$endif LCLcarbon}
     FSlowResponse: TProgressImage;
     FDetailsWait: TProgressImage;
     FDetailsWaitStart: TDateTime;
@@ -4290,9 +4287,6 @@ end;
 procedure TMainForm.ApplicationPropertiesIdle(Sender: TObject; var Done: Boolean);
 begin
   UpdateUI;
-{$ifdef LCLcarbon}
-  CheckSynchronize;
-{$endif LCLcarbon}
   Done:=True;
 end;
 
@@ -4841,12 +4835,6 @@ begin
   end;
 end;
 
-{$ifdef LCLcarbon}
-type
-  THackApplication = class(TApplication)
-  end;
-{$endif LCLcarbon}
-
 procedure TMainForm.TickTimerTimer(Sender: TObject);
 var
   i: integer;
@@ -4926,17 +4914,6 @@ begin
         panDetailsWait.BringToFront;
       end;
 
-{$ifdef LCLcarbon}
-    THackApplication(Application).ProcessAsyncCallQueue;
-    if Active and (WindowState <> wsMinimized) then begin
-      if not FFormActive then begin
-        FFormActive:=True;
-        CheckClipboardLink;
-      end;
-    end
-    else
-      FFormActive:=False;
-{$endif LCLcarbon}
   finally
     TickTimer.Enabled:=True;
   end;
@@ -6279,12 +6256,8 @@ begin
   StatusBar.Panels[1].Text:=Format(sDownSpeed, [GetHumanSize(DownSpeed, 1)]) + ' (' + s + ')';
   StatusBar.Panels[2].Text:=Format(sUpSpeed, [GetHumanSize(UpSpeed, 1)]) + ' (' + ss + ')';
 
-{$ifndef LCLcarbon}
-  // There is memory leak in TTrayIcon implementation for Mac.
-  // Disable tray icon update for Mac.
   TrayIcon.Hint:=Format(sDownloadingSeeding,
         [RpcObj.InfoStatus, LineEnding, DownCnt, SeedCnt, LineEnding, StatusBar.Panels[1].Text, StatusBar.Panels[2].Text]);
-{$endif LCLcarbon}
   finally
     Paths.Free;
   end;
@@ -6853,9 +6826,6 @@ procedure TMainForm.FillSessionInfo(s: TJSONObject);
 var
   d, u: integer;
 begin
-{$ifdef LCLcarbon}
-  TrayIcon.Tag:=0;
-{$endif LCLcarbon}
   if RpcObj.RPCVersion < 14 then begin
     TR_STATUS_STOPPED:=TR_STATUS_STOPPED_1;
     TR_STATUS_CHECK_WAIT:=TR_STATUS_CHECK_WAIT_1;
@@ -6878,10 +6848,6 @@ begin
   UpdateUIRpcVersion(RpcObj.RPCVersion);
 
   if RpcObj.RPCVersion >= 5 then begin
-{$ifdef LCLcarbon}
-    if acAltSpeed.Checked <> (s.Integers['alt-speed-enabled'] <> 0) then
-      TrayIcon.Tag:=1;
-{$endif LCLcarbon}
     acAltSpeed.Checked:=s.Integers['alt-speed-enabled'] <> 0;
     acUpdateBlocklist.Tag:=s.Integers['blocklist-enabled'];
     acUpdateBlocklist.Enabled:=acUpdateBlocklist.Tag <> 0;
@@ -6903,18 +6869,11 @@ begin
     else
       u:=-1;
   end;
-{$ifdef LCLcarbon}
-  UpdateUI;
-{$endif LCLcarbon}
   if (FCurDownSpeedLimit <> d) or (FCurUpSpeedLimit <> u) then begin
     FCurDownSpeedLimit:=d;
     FCurUpSpeedLimit:=u;
     FillSpeedsMenu;
   end;
-{$ifdef LCLcarbon}
-  if TrayIcon.Tag <> 0 then
-    TrayIcon.InternalUpdate;
-{$endif LCLcarbon}
 end;
 
 procedure TMainForm.FillStatistics(s: TJSONObject);
@@ -8133,9 +8092,6 @@ begin
   s:=Ini.ReadString('Connection.' + FCurConn, 'UpSpeeds', DefSpeeds);
   _FillMenu(pmUpSpeeds.Items, s, @DoSetUploadSpeed, FCurUpSpeedLimit);
   _FillMenu(pmiUpSpeedLimit, s, @DoSetUploadSpeed, FCurUpSpeedLimit);
-{$ifdef LCLcarbon}
-  TrayIcon.InternalUpdate;
-{$endif LCLcarbon}
 end;
 
 initialization

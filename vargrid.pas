@@ -248,8 +248,7 @@ procedure Register;
 
 implementation
 
-uses Variants, Math, GraphType, lclintf, Themes, types, lclproc
-    {$ifdef LCLcarbon} , carbonproc {$endif LCLcarbon};
+uses Variants, Math, GraphType, lclintf, Themes, types, lclproc;
 
 const
   roSelected = 1;
@@ -752,15 +751,11 @@ var
   ca: TCellAttributes;
   R, RR: TRect;
 begin
-{$ifdef LCLcarbon}
-  IsCtrl:=ssMeta in GetCarbonShiftState;
-{$else}
 {$ifdef LCLCocoa}
   IsCtrl:=ssMeta in Shift;
 {$else}
   IsCtrl:=ssCtrl in Shift;
 {$endif LCLCocoa}
-{$endif LCLcarbon}
   CheckBoxClicked:=False;
   pt:=MouseToCell(Point(X,Y));
   if ssLeft in Shift then begin

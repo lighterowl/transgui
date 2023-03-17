@@ -233,10 +233,6 @@ begin
 end;
 
 procedure TAboutForm.FormCreate(Sender: TObject);
-{$ifdef lclcarbon}
-var
-  s: string;
-{$endif lclcarbon}
 begin
   bidiMode := GetBiDi();
   txAppName.Font.Size:=Font.Size + 2;
@@ -247,14 +243,6 @@ begin
   Page.ActivePageIndex:=0;
 
   txVersFPC.caption := 'Fpc : ' + {$I %FPCVERSION%} + '   Lazarus : ' +lcl_version;
-
-{$ifdef lclcarbon}
-  s:=edLicense.Text;
-  edLicense.Text:='';
-  edLicense.HandleNeeded;
-  edLicense.Text:=s;
-  Buttons.BorderSpacing.Right:=Buttons.BorderSpacing.Right + ScaleInt(12);
-{$endif lclcarbon}
 end;
 
 procedure TAboutForm.imgDonateClick(Sender: TObject);

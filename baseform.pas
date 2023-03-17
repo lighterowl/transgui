@@ -91,10 +91,6 @@ begin
       end
       else
         h:=Height;
-{$ifdef LCLcarbon}
-      if C is TPageControl then
-        Inc(h, ScaleInt(10));
-{$endif LCLcarbon}
       Inc(ht, h + BorderSpacing.Top + BorderSpacing.Bottom + BorderSpacing.Around*2);
     end;
   end;
@@ -222,10 +218,6 @@ begin
 end;
 
 procedure TBaseForm.DoCreate;
-{$ifdef LCLcarbon}
-var
-  i: integer;
-  {$endif LCLcarbon}
 begin
   InitScale;
   HandleNeeded;
@@ -233,13 +225,6 @@ begin
   DoScale(Self);
   if FNeedAutoSize then
     AutoSizeForm(Self);
-{$ifdef LCLcarbon}
-  // Destroy handles of child controls to fix the LCL Carbon bug.
-  // Without this hack, it will not be possible to hide form's controls.
-  for i:=0 to ControlCount - 1 do
-    if Controls[i] is TWinControl then
-      THackControl(Controls[i]).DestroyHandle;
-{$endif LCLcarbon}
   inherited DoCreate;
 end;
 
