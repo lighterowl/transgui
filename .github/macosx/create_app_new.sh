@@ -44,8 +44,8 @@ mkdir -p ../../Release/
 sed -i.bak "s/'Version %s'/'Version %s Build $build'#13#10'Compiled by: $fpc_ver, Lazarus v$lazarus_ver'/" ../../about.lfm
 
 pushd ../..
-lazbuild --compiler=$HOME/fpc-3.2.3/lib/fpc/3.2.3/ppcx64 --build-mode=Release \
-  --ws=cocoa --lazarusdir=$HOME/lazarus transgui.lpi
+lazbuild --compiler=${fpc_installdir}/lib/fpc/3.2.3/ppcx64 --build-mode=Release \
+  --ws=cocoa --lazarusdir=${sdk_dir}/lazarus transgui.lpi
 popd
 
 if ! [ -e $exename ]; then

@@ -21,9 +21,8 @@ jobs:
     - uses: actions/cache@v3
       with:
         path: |
-          ~/.fpc.cfg
-          ~/lazarus
-          ~/fpc-3.2.3
+          ~/.transgui_sdk/lazarus
+          ~/.transgui_sdk/fpc-3.2.3
         key: macos-fpc-lazarus
 
     - run: .github/build_macos.sh
