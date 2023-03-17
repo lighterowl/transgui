@@ -7,6 +7,7 @@ package_openssl() {
   local libcrypto
   local libssl
 
+  set +x
   for i in $(brew ls openssl@3); do
     if [[ $i =~ libcrypto\.3\.dylib$ ]]; then
       libcrypto=$i
@@ -14,6 +15,7 @@ package_openssl() {
       libssl=$i
     fi
   done
+  set -x
 
   if [[ -z $libcrypto || -z $libssl ]]; then
     echo >&2 "libcrypto = '${libcrypto}' , libssl = '${libssl}' - quitting"
