@@ -5,6 +5,7 @@ set -xe
 readonly repo_dir=$PWD
 readonly sdk_dir=~/.transgui_sdk
 readonly fpc_installdir="${sdk_dir}/fpc-3.2.3"
+readonly fpc_basepath="${fpc_installdir}/lib/fpc/3.2.3"
 
 fixup_fpc_cfg() {
   local fpc_cfg_path=$1
@@ -12,6 +13,11 @@ fixup_fpc_cfg() {
 
   echo '-Fl/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib' >> "$fpc_cfg_path"
   echo '-k-F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks' >> "$fpc_cfg_path"
+}
+
+make_fpc_cfg() {
+  fpcmkcfg -d basepath=${fpc_basepath} -o ~/.fpc.cfg
+  fixup_fpc_cfg ~/.fpc.cfg
 }
 
 fpc_lazarus_build_install() {
@@ -32,13 +38,9 @@ fpc_lazarus_build_install() {
     all
   mkdir -p "${fpc_installdir}"
   make PREFIX=${fpc_installdir} install
-  export PATH=${fpc_installdir}/bin:${fpc_installdir}/lib/fpc/3.2.3:$PATH
+  export PATH=${fpc_installdir}/bin:${fpc_basepath}:$PATH
 
-  fpcmkcfg -d basepath=${fpc_installdir}/lib/fpc/3.2.3 -p \
-    -o "${fpc_installdir}/etc/fpc.cfg"
-  fixup_fpc_cfg "${fpc_installdir}/etc/fpc.cfg"
-  mkdir -p "${fpc_installdir}/lib/fpc/etc"
-  ln -s ../../../etc/fpc.cfg "${fpc_installdir}/lib/fpc/etc/fpc.cfg"
+  make_fpc_cfg
 
   cd "$sdk_dir"
   curl -L -o lazarus-src.tar.gz 'https://sourceforge.net/projects/lazarus/files/Lazarus%20Zip%20_%20GZip/Lazarus%202.2.6/lazarus-2.2.6-0.tar.gz/download'
@@ -51,7 +53,8 @@ fpc_lazarus_build_install() {
 brew install openssl@3
 
 if [[ -d $sdk_dir ]]; then
-  export PATH=${sdk_dir}/lazarus:${fpc_installdir}/bin:${fpc_installdir}/lib/fpc/3.2.3:$PATH
+  export PATH=${sdk_dir}/lazarus:${fpc_installdir}/bin:${fpc_basepath}:$PATH
+  make_fpc_cfg
 else
   fpc_lazarus_build_install
 fi
