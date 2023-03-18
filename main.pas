@@ -87,12 +87,10 @@ resourcestring
   SFreeSpace = 'Free: %s';
   sNoPathMapping = 'Unable to find path mapping.'+LineEnding+'Use the application''s options to setup path mappings.';
   sGeoIPConfirm = 'Geo IP database is needed to resolve country by IP address.' + LineEnding + 'Download this database now?';
-  sFlagArchiveConfirm = 'Flag images archive is needed to display country flags.' + LineEnding + 'Download this archive now?';
   sInSwarm = 'in swarm';
   sHashfails = '%s (%d hashfails)';
   sDone = '%s (%s done)';
   sHave = '%d x %s (have %d)';
-  sUnableExtractFlag = 'Unable to extract flag image.';
   sTrackerWorking = 'Working';
   sTrackerUpdating = 'Updating';
   sRestartRequired = 'You need to restart the application to apply changes.';
@@ -686,7 +684,6 @@ type
     FFilterChanged: boolean;
     FCurDownSpeedLimit: integer;
     FCurUpSpeedLimit: integer;
-    FFlagsPath: string;
     FAddingTorrent: integer;
     FPendingTorrents: TStringList;
     FLinksFromClipboard: boolean;
@@ -719,9 +716,7 @@ type
     procedure UpdateUI;
     procedure UpdateUIRpcVersion(RpcVersion: integer);
     function DoConnect: boolean;
-    procedure DoCreateOutZipStream(Sender: TObject; var AStream: TStream; AItem: TFullZipFileEntry);
     procedure DoDisconnect;
-    procedure DoOpenFlagsZip(Sender: TObject; var AStream: TStream);
     procedure TorrentProps(PageNo: integer);
     procedure ShowConnOptions(NewConnection: boolean);
     procedure SaveColumns(LV: TVarGrid; const AName: string; FullInfo: boolean = True);
@@ -736,7 +731,6 @@ type
     function GetFlagImage(const CountryCode: string): integer;
     procedure BeforeCloseApp;
     function GetGeoIpDatabase: string;
-    function GetFlagsArchive: string;
     function DownloadGeoIpDatabase(AUpdate: boolean): boolean;
     procedure TorrentColumnsChanged;
     function EtaToString(ETA: integer): string;
@@ -1688,7 +1682,7 @@ begin
 
   acResolveHost.Checked:=Ini.ReadBool('PeersList', 'ResolveHost', True);
   acResolveCountry.Checked:=Ini.ReadBool('PeersList', 'ResolveCountry', True) and (GetGeoIpDatabase <> '');
-  acShowCountryFlag.Checked:=Ini.ReadBool('PeersList', 'ShowCountryFlag', True) and (GetFlagsArchive <> '');
+  acShowCountryFlag.Checked:=Ini.ReadBool('PeersList', 'ShowCountryFlag', True);
   acShowCountryFlag.Enabled:=acResolveCountry.Checked;
   FCurConn:=Ini.ReadString('Hosts', 'CurHost', '');
   if FCurConn = '' then
@@ -2911,62 +2905,19 @@ begin
 {$endif CPUARM}
 end;
 
-Procedure TMainForm.DoOpenFlagsZip(Sender: TObject; var AStream: TStream);
-begin
-  AStream:=TFileStreamUTF8.Create(TUnZipper(Sender).FileName, fmOpenRead or fmShareDenyWrite);
-end;
-
-Procedure TMainForm.DoCreateOutZipStream(Sender : TObject; var AStream : TStream; AItem : TFullZipFileEntry);
-begin
-  ForceDirectoriesUTF8(FFlagsPath);
-  AStream:=TFileStreamUTF8.Create(FFlagsPath + AItem.DiskFileName, fmCreate);
-end;
-
 function TMainForm.GetFlagImage(const CountryCode: string): integer;
 var
-  s, ImageName: string;
+  ResourceName: string;
   pic: TPicture;
-  fs: TFileStreamUTF8;
 begin
   Result:=0;
   if CountryCode = '' then exit;
   try
-    ImageName:=CountryCode + '.png';
-    if FFlagsPath = '' then
-      FFlagsPath:=FHomeDir + 'flags' + DirectorySeparator;
-    if not FileExistsUTF8(FFlagsPath + ImageName) then begin
-      // Unzipping flag image
-      if FUnZip = nil then begin
-        s:=GetFlagsArchive;
-        if s <> '' then begin
-          FUnZip:=TUnZipper.Create;
-          FUnZip.FileName:=s;
-          FUnZip.OnOpenInputStream:=@DoOpenFlagsZip;
-          FUnZip.OnCreateStream:=@DoCreateOutZipStream;
-        end
-        else
-          exit;
-      end;
+    ResourceName:='country_flag_' + CountryCode;
 
-      FUnZip.Files.Clear;
-      FUnZip.Files.Add(ImageName);
-      try
-        FUnZip.UnZipAllFiles;
-      except
-        FreeAndNil(FUnZip);
-        DeleteFileUTF8(GetFlagsArchive);
-        acShowCountryFlag.Checked:=False;
-        MessageDlg(sUnableExtractFlag + LineEnding + Exception(ExceptObject).Message, mtError, [mbOK], 0);
-        exit;
-      end;
-      if not FileExistsUTF8(FFlagsPath + ImageName) then exit;
-    end;
-
-    fs:=nil;
-    pic:=TPicture.Create;
     try
-      fs:=TFileStreamUTF8.Create(FFlagsPath + ImageName, fmOpenRead or fmShareDenyWrite);
-      pic.LoadFromStream(fs);
+      pic:=TPicture.Create;
+      pic.LoadFromResourceName(HInstance, ResourceName);
       if imgFlags.Count = 1 then begin
         imgFlags.Width:=pic.Width;
         imgFlags.Height:=pic.Height;
@@ -2974,7 +2925,6 @@ begin
       Result:=imgFlags.AddMasked(pic.Bitmap, clNone);
     finally
       pic.Free;
-      fs.Free;
     end;
   except
   end;
@@ -3029,11 +2979,6 @@ end;
 function TMainForm.GetGeoIpDatabase: string;
 begin
   Result:=LocateFile('GeoIP.dat', [FHomeDir, ExtractFilePath(ParamStrUTF8(0))]);
-end;
-
-function TMainForm.GetFlagsArchive: string;
-begin
-  Result:=LocateFile('flags.zip', [FHomeDir, ExtractFilePath(ParamStrUTF8(0))]);
 end;
 
 function TMainForm.DownloadGeoIpDatabase(AUpdate: boolean): boolean;
@@ -3791,16 +3736,7 @@ begin
 end;
 
 procedure TMainForm.acShowCountryFlagExecute(Sender: TObject);
-const
-  FlagsURL = 'https://raw.githubusercontent.com/transmission-remote-gui/transgui/master/flags.zip';
 begin
-  if not acShowCountryFlag.Checked then
-    if GetFlagsArchive = '' then begin
-      if MessageDlg('', sFlagArchiveConfirm, mtConfirmation, mbYesNo, 0, mbYes) <> mrYes then
-        exit;
-      if not DownloadFile(FlagsURL, FHomeDir) then
-        exit;
-    end;
   acShowCountryFlag.Checked:=not acShowCountryFlag.Checked;
   DoRefresh;
 end;

@@ -5,8 +5,9 @@
     <PathDelim Value="\"/>
     <General>
       <Flags>
+        <MainUnitHasTitleStatement Value="False"/>
+        <MainUnitHasScaledStatement Value="False"/>
         <LRSInOutputDirectory Value="False"/>
-        <CompatibilityMode Value="True"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
       <AutoCreateForms Value="False"/>
@@ -17,6 +18,249 @@
         <DpiAware Value="True"/>
       </XPManifest>
       <Icon Value="0"/>
+      <Resources Count="241">
+        <Resource_0 FileName="flags/flag_ad.png" Type="RCDATA" ResourceName="country_flag_ad"/>
+        <Resource_1 FileName="flags/flag_ae.png" Type="RCDATA" ResourceName="country_flag_ae"/>
+        <Resource_2 FileName="flags/flag_af.png" Type="RCDATA" ResourceName="country_flag_af"/>
+        <Resource_3 FileName="flags/flag_ag.png" Type="RCDATA" ResourceName="country_flag_ag"/>
+        <Resource_4 FileName="flags/flag_ai.png" Type="RCDATA" ResourceName="country_flag_ai"/>
+        <Resource_5 FileName="flags/flag_al.png" Type="RCDATA" ResourceName="country_flag_al"/>
+        <Resource_6 FileName="flags/flag_am.png" Type="RCDATA" ResourceName="country_flag_am"/>
+        <Resource_7 FileName="flags/flag_an.png" Type="RCDATA" ResourceName="country_flag_an"/>
+        <Resource_8 FileName="flags/flag_ao.png" Type="RCDATA" ResourceName="country_flag_ao"/>
+        <Resource_9 FileName="flags/flag_aq.png" Type="RCDATA" ResourceName="country_flag_aq"/>
+        <Resource_10 FileName="flags/flag_ar.png" Type="RCDATA" ResourceName="country_flag_ar"/>
+        <Resource_11 FileName="flags/flag_as.png" Type="RCDATA" ResourceName="country_flag_as"/>
+        <Resource_12 FileName="flags/flag_at.png" Type="RCDATA" ResourceName="country_flag_at"/>
+        <Resource_13 FileName="flags/flag_au.png" Type="RCDATA" ResourceName="country_flag_au"/>
+        <Resource_14 FileName="flags/flag_aw.png" Type="RCDATA" ResourceName="country_flag_aw"/>
+        <Resource_15 FileName="flags/flag_ax.png" Type="RCDATA" ResourceName="country_flag_ax"/>
+        <Resource_16 FileName="flags/flag_az.png" Type="RCDATA" ResourceName="country_flag_az"/>
+        <Resource_17 FileName="flags/flag_ba.png" Type="RCDATA" ResourceName="country_flag_ba"/>
+        <Resource_18 FileName="flags/flag_bb.png" Type="RCDATA" ResourceName="country_flag_bb"/>
+        <Resource_19 FileName="flags/flag_bd.png" Type="RCDATA" ResourceName="country_flag_bd"/>
+        <Resource_20 FileName="flags/flag_be.png" Type="RCDATA" ResourceName="country_flag_be"/>
+        <Resource_21 FileName="flags/flag_bf.png" Type="RCDATA" ResourceName="country_flag_bf"/>
+        <Resource_22 FileName="flags/flag_bg.png" Type="RCDATA" ResourceName="country_flag_bg"/>
+        <Resource_23 FileName="flags/flag_bh.png" Type="RCDATA" ResourceName="country_flag_bh"/>
+        <Resource_24 FileName="flags/flag_bi.png" Type="RCDATA" ResourceName="country_flag_bi"/>
+        <Resource_25 FileName="flags/flag_bj.png" Type="RCDATA" ResourceName="country_flag_bj"/>
+        <Resource_26 FileName="flags/flag_bm.png" Type="RCDATA" ResourceName="country_flag_bm"/>
+        <Resource_27 FileName="flags/flag_bn.png" Type="RCDATA" ResourceName="country_flag_bn"/>
+        <Resource_28 FileName="flags/flag_bo.png" Type="RCDATA" ResourceName="country_flag_bo"/>
+        <Resource_29 FileName="flags/flag_br.png" Type="RCDATA" ResourceName="country_flag_br"/>
+        <Resource_30 FileName="flags/flag_bs.png" Type="RCDATA" ResourceName="country_flag_bs"/>
+        <Resource_31 FileName="flags/flag_bt.png" Type="RCDATA" ResourceName="country_flag_bt"/>
+        <Resource_32 FileName="flags/flag_bv.png" Type="RCDATA" ResourceName="country_flag_bv"/>
+        <Resource_33 FileName="flags/flag_bw.png" Type="RCDATA" ResourceName="country_flag_bw"/>
+        <Resource_34 FileName="flags/flag_by.png" Type="RCDATA" ResourceName="country_flag_by"/>
+        <Resource_35 FileName="flags/flag_bz.png" Type="RCDATA" ResourceName="country_flag_bz"/>
+        <Resource_36 FileName="flags/flag_ca.png" Type="RCDATA" ResourceName="country_flag_ca"/>
+        <Resource_37 FileName="flags/flag_cd.png" Type="RCDATA" ResourceName="country_flag_cd"/>
+        <Resource_38 FileName="flags/flag_cf.png" Type="RCDATA" ResourceName="country_flag_cf"/>
+        <Resource_39 FileName="flags/flag_cg.png" Type="RCDATA" ResourceName="country_flag_cg"/>
+        <Resource_40 FileName="flags/flag_ch.png" Type="RCDATA" ResourceName="country_flag_ch"/>
+        <Resource_41 FileName="flags/flag_ci.png" Type="RCDATA" ResourceName="country_flag_ci"/>
+        <Resource_42 FileName="flags/flag_ck.png" Type="RCDATA" ResourceName="country_flag_ck"/>
+        <Resource_43 FileName="flags/flag_cl.png" Type="RCDATA" ResourceName="country_flag_cl"/>
+        <Resource_44 FileName="flags/flag_cm.png" Type="RCDATA" ResourceName="country_flag_cm"/>
+        <Resource_45 FileName="flags/flag_cn.png" Type="RCDATA" ResourceName="country_flag_cn"/>
+        <Resource_46 FileName="flags/flag_co.png" Type="RCDATA" ResourceName="country_flag_co"/>
+        <Resource_47 FileName="flags/flag_cr.png" Type="RCDATA" ResourceName="country_flag_cr"/>
+        <Resource_48 FileName="flags/flag_cs.png" Type="RCDATA" ResourceName="country_flag_cs"/>
+        <Resource_49 FileName="flags/flag_cu.png" Type="RCDATA" ResourceName="country_flag_cu"/>
+        <Resource_50 FileName="flags/flag_cv.png" Type="RCDATA" ResourceName="country_flag_cv"/>
+        <Resource_51 FileName="flags/flag_cy.png" Type="RCDATA" ResourceName="country_flag_cy"/>
+        <Resource_52 FileName="flags/flag_cz.png" Type="RCDATA" ResourceName="country_flag_cz"/>
+        <Resource_53 FileName="flags/flag_de.png" Type="RCDATA" ResourceName="country_flag_de"/>
+        <Resource_54 FileName="flags/flag_dj.png" Type="RCDATA" ResourceName="country_flag_dj"/>
+        <Resource_55 FileName="flags/flag_dk.png" Type="RCDATA" ResourceName="country_flag_dk"/>
+        <Resource_56 FileName="flags/flag_dm.png" Type="RCDATA" ResourceName="country_flag_dm"/>
+        <Resource_57 FileName="flags/flag_do.png" Type="RCDATA" ResourceName="country_flag_do"/>
+        <Resource_58 FileName="flags/flag_dz.png" Type="RCDATA" ResourceName="country_flag_dz"/>
+        <Resource_59 FileName="flags/flag_ec.png" Type="RCDATA" ResourceName="country_flag_ec"/>
+        <Resource_60 FileName="flags/flag_ee.png" Type="RCDATA" ResourceName="country_flag_ee"/>
+        <Resource_61 FileName="flags/flag_eg.png" Type="RCDATA" ResourceName="country_flag_eg"/>
+        <Resource_62 FileName="flags/flag_er.png" Type="RCDATA" ResourceName="country_flag_er"/>
+        <Resource_63 FileName="flags/flag_es.png" Type="RCDATA" ResourceName="country_flag_es"/>
+        <Resource_64 FileName="flags/flag_et.png" Type="RCDATA" ResourceName="country_flag_et"/>
+        <Resource_65 FileName="flags/flag_eu.png" Type="RCDATA" ResourceName="country_flag_eu"/>
+        <Resource_66 FileName="flags/flag_fi.png" Type="RCDATA" ResourceName="country_flag_fi"/>
+        <Resource_67 FileName="flags/flag_fj.png" Type="RCDATA" ResourceName="country_flag_fj"/>
+        <Resource_68 FileName="flags/flag_fk.png" Type="RCDATA" ResourceName="country_flag_fk"/>
+        <Resource_69 FileName="flags/flag_fm.png" Type="RCDATA" ResourceName="country_flag_fm"/>
+        <Resource_70 FileName="flags/flag_fo.png" Type="RCDATA" ResourceName="country_flag_fo"/>
+        <Resource_71 FileName="flags/flag_fr.png" Type="RCDATA" ResourceName="country_flag_fr"/>
+        <Resource_72 FileName="flags/flag_ga.png" Type="RCDATA" ResourceName="country_flag_ga"/>
+        <Resource_73 FileName="flags/flag_gb.png" Type="RCDATA" ResourceName="country_flag_gb"/>
+        <Resource_74 FileName="flags/flag_gd.png" Type="RCDATA" ResourceName="country_flag_gd"/>
+        <Resource_75 FileName="flags/flag_ge.png" Type="RCDATA" ResourceName="country_flag_ge"/>
+        <Resource_76 FileName="flags/flag_gf.png" Type="RCDATA" ResourceName="country_flag_gf"/>
+        <Resource_77 FileName="flags/flag_gh.png" Type="RCDATA" ResourceName="country_flag_gh"/>
+        <Resource_78 FileName="flags/flag_gi.png" Type="RCDATA" ResourceName="country_flag_gi"/>
+        <Resource_79 FileName="flags/flag_gl.png" Type="RCDATA" ResourceName="country_flag_gl"/>
+        <Resource_80 FileName="flags/flag_gm.png" Type="RCDATA" ResourceName="country_flag_gm"/>
+        <Resource_81 FileName="flags/flag_gn.png" Type="RCDATA" ResourceName="country_flag_gn"/>
+        <Resource_82 FileName="flags/flag_gp.png" Type="RCDATA" ResourceName="country_flag_gp"/>
+        <Resource_83 FileName="flags/flag_gq.png" Type="RCDATA" ResourceName="country_flag_gq"/>
+        <Resource_84 FileName="flags/flag_gr.png" Type="RCDATA" ResourceName="country_flag_gr"/>
+        <Resource_85 FileName="flags/flag_gt.png" Type="RCDATA" ResourceName="country_flag_gt"/>
+        <Resource_86 FileName="flags/flag_gu.png" Type="RCDATA" ResourceName="country_flag_gu"/>
+        <Resource_87 FileName="flags/flag_gw.png" Type="RCDATA" ResourceName="country_flag_gw"/>
+        <Resource_88 FileName="flags/flag_gy.png" Type="RCDATA" ResourceName="country_flag_gy"/>
+        <Resource_89 FileName="flags/flag_hk.png" Type="RCDATA" ResourceName="country_flag_hk"/>
+        <Resource_90 FileName="flags/flag_hm.png" Type="RCDATA" ResourceName="country_flag_hm"/>
+        <Resource_91 FileName="flags/flag_hn.png" Type="RCDATA" ResourceName="country_flag_hn"/>
+        <Resource_92 FileName="flags/flag_hr.png" Type="RCDATA" ResourceName="country_flag_hr"/>
+        <Resource_93 FileName="flags/flag_ht.png" Type="RCDATA" ResourceName="country_flag_ht"/>
+        <Resource_94 FileName="flags/flag_hu.png" Type="RCDATA" ResourceName="country_flag_hu"/>
+        <Resource_95 FileName="flags/flag_id.png" Type="RCDATA" ResourceName="country_flag_id"/>
+        <Resource_96 FileName="flags/flag_ie.png" Type="RCDATA" ResourceName="country_flag_ie"/>
+        <Resource_97 FileName="flags/flag_il.png" Type="RCDATA" ResourceName="country_flag_il"/>
+        <Resource_98 FileName="flags/flag_im.png" Type="RCDATA" ResourceName="country_flag_im"/>
+        <Resource_99 FileName="flags/flag_in.png" Type="RCDATA" ResourceName="country_flag_in"/>
+        <Resource_100 FileName="flags/flag_io.png" Type="RCDATA" ResourceName="country_flag_io"/>
+        <Resource_101 FileName="flags/flag_iq.png" Type="RCDATA" ResourceName="country_flag_iq"/>
+        <Resource_102 FileName="flags/flag_ir.png" Type="RCDATA" ResourceName="country_flag_ir"/>
+        <Resource_103 FileName="flags/flag_is.png" Type="RCDATA" ResourceName="country_flag_is"/>
+        <Resource_104 FileName="flags/flag_it.png" Type="RCDATA" ResourceName="country_flag_it"/>
+        <Resource_105 FileName="flags/flag_je.png" Type="RCDATA" ResourceName="country_flag_je"/>
+        <Resource_106 FileName="flags/flag_jm.png" Type="RCDATA" ResourceName="country_flag_jm"/>
+        <Resource_107 FileName="flags/flag_jo.png" Type="RCDATA" ResourceName="country_flag_jo"/>
+        <Resource_108 FileName="flags/flag_jp.png" Type="RCDATA" ResourceName="country_flag_jp"/>
+        <Resource_109 FileName="flags/flag_ke.png" Type="RCDATA" ResourceName="country_flag_ke"/>
+        <Resource_110 FileName="flags/flag_kg.png" Type="RCDATA" ResourceName="country_flag_kg"/>
+        <Resource_111 FileName="flags/flag_kh.png" Type="RCDATA" ResourceName="country_flag_kh"/>
+        <Resource_112 FileName="flags/flag_ki.png" Type="RCDATA" ResourceName="country_flag_ki"/>
+        <Resource_113 FileName="flags/flag_km.png" Type="RCDATA" ResourceName="country_flag_km"/>
+        <Resource_114 FileName="flags/flag_kn.png" Type="RCDATA" ResourceName="country_flag_kn"/>
+        <Resource_115 FileName="flags/flag_kp.png" Type="RCDATA" ResourceName="country_flag_kp"/>
+        <Resource_116 FileName="flags/flag_kr.png" Type="RCDATA" ResourceName="country_flag_kr"/>
+        <Resource_117 FileName="flags/flag_kw.png" Type="RCDATA" ResourceName="country_flag_kw"/>
+        <Resource_118 FileName="flags/flag_ky.png" Type="RCDATA" ResourceName="country_flag_ky"/>
+        <Resource_119 FileName="flags/flag_kz.png" Type="RCDATA" ResourceName="country_flag_kz"/>
+        <Resource_120 FileName="flags/flag_la.png" Type="RCDATA" ResourceName="country_flag_la"/>
+        <Resource_121 FileName="flags/flag_lb.png" Type="RCDATA" ResourceName="country_flag_lb"/>
+        <Resource_122 FileName="flags/flag_lc.png" Type="RCDATA" ResourceName="country_flag_lc"/>
+        <Resource_123 FileName="flags/flag_li.png" Type="RCDATA" ResourceName="country_flag_li"/>
+        <Resource_124 FileName="flags/flag_lk.png" Type="RCDATA" ResourceName="country_flag_lk"/>
+        <Resource_125 FileName="flags/flag_lr.png" Type="RCDATA" ResourceName="country_flag_lr"/>
+        <Resource_126 FileName="flags/flag_ls.png" Type="RCDATA" ResourceName="country_flag_ls"/>
+        <Resource_127 FileName="flags/flag_lt.png" Type="RCDATA" ResourceName="country_flag_lt"/>
+        <Resource_128 FileName="flags/flag_lu.png" Type="RCDATA" ResourceName="country_flag_lu"/>
+        <Resource_129 FileName="flags/flag_lv.png" Type="RCDATA" ResourceName="country_flag_lv"/>
+        <Resource_130 FileName="flags/flag_ly.png" Type="RCDATA" ResourceName="country_flag_ly"/>
+        <Resource_131 FileName="flags/flag_ma.png" Type="RCDATA" ResourceName="country_flag_ma"/>
+        <Resource_132 FileName="flags/flag_mc.png" Type="RCDATA" ResourceName="country_flag_mc"/>
+        <Resource_133 FileName="flags/flag_md.png" Type="RCDATA" ResourceName="country_flag_md"/>
+        <Resource_134 FileName="flags/flag_me.png" Type="RCDATA" ResourceName="country_flag_me"/>
+        <Resource_135 FileName="flags/flag_mg.png" Type="RCDATA" ResourceName="country_flag_mg"/>
+        <Resource_136 FileName="flags/flag_mh.png" Type="RCDATA" ResourceName="country_flag_mh"/>
+        <Resource_137 FileName="flags/flag_mk.png" Type="RCDATA" ResourceName="country_flag_mk"/>
+        <Resource_138 FileName="flags/flag_ml.png" Type="RCDATA" ResourceName="country_flag_ml"/>
+        <Resource_139 FileName="flags/flag_mm.png" Type="RCDATA" ResourceName="country_flag_mm"/>
+        <Resource_140 FileName="flags/flag_mn.png" Type="RCDATA" ResourceName="country_flag_mn"/>
+        <Resource_141 FileName="flags/flag_mo.png" Type="RCDATA" ResourceName="country_flag_mo"/>
+        <Resource_142 FileName="flags/flag_mp.png" Type="RCDATA" ResourceName="country_flag_mp"/>
+        <Resource_143 FileName="flags/flag_mq.png" Type="RCDATA" ResourceName="country_flag_mq"/>
+        <Resource_144 FileName="flags/flag_mr.png" Type="RCDATA" ResourceName="country_flag_mr"/>
+        <Resource_145 FileName="flags/flag_ms.png" Type="RCDATA" ResourceName="country_flag_ms"/>
+        <Resource_146 FileName="flags/flag_mt.png" Type="RCDATA" ResourceName="country_flag_mt"/>
+        <Resource_147 FileName="flags/flag_mu.png" Type="RCDATA" ResourceName="country_flag_mu"/>
+        <Resource_148 FileName="flags/flag_mv.png" Type="RCDATA" ResourceName="country_flag_mv"/>
+        <Resource_149 FileName="flags/flag_mw.png" Type="RCDATA" ResourceName="country_flag_mw"/>
+        <Resource_150 FileName="flags/flag_mx.png" Type="RCDATA" ResourceName="country_flag_mx"/>
+        <Resource_151 FileName="flags/flag_my.png" Type="RCDATA" ResourceName="country_flag_my"/>
+        <Resource_152 FileName="flags/flag_mz.png" Type="RCDATA" ResourceName="country_flag_mz"/>
+        <Resource_153 FileName="flags/flag_na.png" Type="RCDATA" ResourceName="country_flag_na"/>
+        <Resource_154 FileName="flags/flag_nc.png" Type="RCDATA" ResourceName="country_flag_nc"/>
+        <Resource_155 FileName="flags/flag_ne.png" Type="RCDATA" ResourceName="country_flag_ne"/>
+        <Resource_156 FileName="flags/flag_nf.png" Type="RCDATA" ResourceName="country_flag_nf"/>
+        <Resource_157 FileName="flags/flag_ng.png" Type="RCDATA" ResourceName="country_flag_ng"/>
+        <Resource_158 FileName="flags/flag_ni.png" Type="RCDATA" ResourceName="country_flag_ni"/>
+        <Resource_159 FileName="flags/flag_nl.png" Type="RCDATA" ResourceName="country_flag_nl"/>
+        <Resource_160 FileName="flags/flag_no.png" Type="RCDATA" ResourceName="country_flag_no"/>
+        <Resource_161 FileName="flags/flag_np.png" Type="RCDATA" ResourceName="country_flag_np"/>
+        <Resource_162 FileName="flags/flag_nr.png" Type="RCDATA" ResourceName="country_flag_nr"/>
+        <Resource_163 FileName="flags/flag_nu.png" Type="RCDATA" ResourceName="country_flag_nu"/>
+        <Resource_164 FileName="flags/flag_nz.png" Type="RCDATA" ResourceName="country_flag_nz"/>
+        <Resource_165 FileName="flags/flag_om.png" Type="RCDATA" ResourceName="country_flag_om"/>
+        <Resource_166 FileName="flags/flag_pa.png" Type="RCDATA" ResourceName="country_flag_pa"/>
+        <Resource_167 FileName="flags/flag_pe.png" Type="RCDATA" ResourceName="country_flag_pe"/>
+        <Resource_168 FileName="flags/flag_pf.png" Type="RCDATA" ResourceName="country_flag_pf"/>
+        <Resource_169 FileName="flags/flag_pg.png" Type="RCDATA" ResourceName="country_flag_pg"/>
+        <Resource_170 FileName="flags/flag_ph.png" Type="RCDATA" ResourceName="country_flag_ph"/>
+        <Resource_171 FileName="flags/flag_pk.png" Type="RCDATA" ResourceName="country_flag_pk"/>
+        <Resource_172 FileName="flags/flag_pl.png" Type="RCDATA" ResourceName="country_flag_pl"/>
+        <Resource_173 FileName="flags/flag_pm.png" Type="RCDATA" ResourceName="country_flag_pm"/>
+        <Resource_174 FileName="flags/flag_pr.png" Type="RCDATA" ResourceName="country_flag_pr"/>
+        <Resource_175 FileName="flags/flag_ps.png" Type="RCDATA" ResourceName="country_flag_ps"/>
+        <Resource_176 FileName="flags/flag_pt.png" Type="RCDATA" ResourceName="country_flag_pt"/>
+        <Resource_177 FileName="flags/flag_pw.png" Type="RCDATA" ResourceName="country_flag_pw"/>
+        <Resource_178 FileName="flags/flag_py.png" Type="RCDATA" ResourceName="country_flag_py"/>
+        <Resource_179 FileName="flags/flag_qa.png" Type="RCDATA" ResourceName="country_flag_qa"/>
+        <Resource_180 FileName="flags/flag_re.png" Type="RCDATA" ResourceName="country_flag_re"/>
+        <Resource_181 FileName="flags/flag_ro.png" Type="RCDATA" ResourceName="country_flag_ro"/>
+        <Resource_182 FileName="flags/flag_rs.png" Type="RCDATA" ResourceName="country_flag_rs"/>
+        <Resource_183 FileName="flags/flag_ru.png" Type="RCDATA" ResourceName="country_flag_ru"/>
+        <Resource_184 FileName="flags/flag_rw.png" Type="RCDATA" ResourceName="country_flag_rw"/>
+        <Resource_185 FileName="flags/flag_sa.png" Type="RCDATA" ResourceName="country_flag_sa"/>
+        <Resource_186 FileName="flags/flag_sb.png" Type="RCDATA" ResourceName="country_flag_sb"/>
+        <Resource_187 FileName="flags/flag_sc.png" Type="RCDATA" ResourceName="country_flag_sc"/>
+        <Resource_188 FileName="flags/flag_sd.png" Type="RCDATA" ResourceName="country_flag_sd"/>
+        <Resource_189 FileName="flags/flag_se.png" Type="RCDATA" ResourceName="country_flag_se"/>
+        <Resource_190 FileName="flags/flag_sg.png" Type="RCDATA" ResourceName="country_flag_sg"/>
+        <Resource_191 FileName="flags/flag_si.png" Type="RCDATA" ResourceName="country_flag_si"/>
+        <Resource_192 FileName="flags/flag_sk.png" Type="RCDATA" ResourceName="country_flag_sk"/>
+        <Resource_193 FileName="flags/flag_sl.png" Type="RCDATA" ResourceName="country_flag_sl"/>
+        <Resource_194 FileName="flags/flag_sm.png" Type="RCDATA" ResourceName="country_flag_sm"/>
+        <Resource_195 FileName="flags/flag_sn.png" Type="RCDATA" ResourceName="country_flag_sn"/>
+        <Resource_196 FileName="flags/flag_so.png" Type="RCDATA" ResourceName="country_flag_so"/>
+        <Resource_197 FileName="flags/flag_sr.png" Type="RCDATA" ResourceName="country_flag_sr"/>
+        <Resource_198 FileName="flags/flag_st.png" Type="RCDATA" ResourceName="country_flag_st"/>
+        <Resource_199 FileName="flags/flag_sv.png" Type="RCDATA" ResourceName="country_flag_sv"/>
+        <Resource_200 FileName="flags/flag_sy.png" Type="RCDATA" ResourceName="country_flag_sy"/>
+        <Resource_201 FileName="flags/flag_sz.png" Type="RCDATA" ResourceName="country_flag_sz"/>
+        <Resource_202 FileName="flags/flag_tc.png" Type="RCDATA" ResourceName="country_flag_tc"/>
+        <Resource_203 FileName="flags/flag_td.png" Type="RCDATA" ResourceName="country_flag_td"/>
+        <Resource_204 FileName="flags/flag_tf.png" Type="RCDATA" ResourceName="country_flag_tf"/>
+        <Resource_205 FileName="flags/flag_tg.png" Type="RCDATA" ResourceName="country_flag_tg"/>
+        <Resource_206 FileName="flags/flag_th.png" Type="RCDATA" ResourceName="country_flag_th"/>
+        <Resource_207 FileName="flags/flag_tj.png" Type="RCDATA" ResourceName="country_flag_tj"/>
+        <Resource_208 FileName="flags/flag_tk.png" Type="RCDATA" ResourceName="country_flag_tk"/>
+        <Resource_209 FileName="flags/flag_tm.png" Type="RCDATA" ResourceName="country_flag_tm"/>
+        <Resource_210 FileName="flags/flag_tn.png" Type="RCDATA" ResourceName="country_flag_tn"/>
+        <Resource_211 FileName="flags/flag_to.png" Type="RCDATA" ResourceName="country_flag_to"/>
+        <Resource_212 FileName="flags/flag_tp.png" Type="RCDATA" ResourceName="country_flag_tp"/>
+        <Resource_213 FileName="flags/flag_tr.png" Type="RCDATA" ResourceName="country_flag_tr"/>
+        <Resource_214 FileName="flags/flag_tt.png" Type="RCDATA" ResourceName="country_flag_tt"/>
+        <Resource_215 FileName="flags/flag_tv.png" Type="RCDATA" ResourceName="country_flag_tv"/>
+        <Resource_216 FileName="flags/flag_tw.png" Type="RCDATA" ResourceName="country_flag_tw"/>
+        <Resource_217 FileName="flags/flag_tz.png" Type="RCDATA" ResourceName="country_flag_tz"/>
+        <Resource_218 FileName="flags/flag_ua.png" Type="RCDATA" ResourceName="country_flag_ua"/>
+        <Resource_219 FileName="flags/flag_ug.png" Type="RCDATA" ResourceName="country_flag_ug"/>
+        <Resource_220 FileName="flags/flag_uk.png" Type="RCDATA" ResourceName="country_flag_uk"/>
+        <Resource_221 FileName="flags/flag_um.png" Type="RCDATA" ResourceName="country_flag_um"/>
+        <Resource_222 FileName="flags/flag_us.png" Type="RCDATA" ResourceName="country_flag_us"/>
+        <Resource_223 FileName="flags/flag_uy.png" Type="RCDATA" ResourceName="country_flag_uy"/>
+        <Resource_224 FileName="flags/flag_uz.png" Type="RCDATA" ResourceName="country_flag_uz"/>
+        <Resource_225 FileName="flags/flag_va.png" Type="RCDATA" ResourceName="country_flag_va"/>
+        <Resource_226 FileName="flags/flag_vc.png" Type="RCDATA" ResourceName="country_flag_vc"/>
+        <Resource_227 FileName="flags/flag_ve.png" Type="RCDATA" ResourceName="country_flag_ve"/>
+        <Resource_228 FileName="flags/flag_vg.png" Type="RCDATA" ResourceName="country_flag_vg"/>
+        <Resource_229 FileName="flags/flag_vi.png" Type="RCDATA" ResourceName="country_flag_vi"/>
+        <Resource_230 FileName="flags/flag_vn.png" Type="RCDATA" ResourceName="country_flag_vn"/>
+        <Resource_231 FileName="flags/flag_vu.png" Type="RCDATA" ResourceName="country_flag_vu"/>
+        <Resource_232 FileName="flags/flag_wf.png" Type="RCDATA" ResourceName="country_flag_wf"/>
+        <Resource_233 FileName="flags/flag_ws.png" Type="RCDATA" ResourceName="country_flag_ws"/>
+        <Resource_234 FileName="flags/flag_ye.png" Type="RCDATA" ResourceName="country_flag_ye"/>
+        <Resource_235 FileName="flags/flag_yt.png" Type="RCDATA" ResourceName="country_flag_yt"/>
+        <Resource_236 FileName="flags/flag_yu.png" Type="RCDATA" ResourceName="country_flag_yu"/>
+        <Resource_237 FileName="flags/flag_za.png" Type="RCDATA" ResourceName="country_flag_za"/>
+        <Resource_238 FileName="flags/flag_zm.png" Type="RCDATA" ResourceName="country_flag_zm"/>
+        <Resource_239 FileName="flags/flag_zr.png" Type="RCDATA" ResourceName="country_flag_zr"/>
+        <Resource_240 FileName="flags/flag_zw.png" Type="RCDATA" ResourceName="country_flag_zw"/>
+      </Resources>
     </General>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
@@ -24,9 +268,9 @@
       <MinorVersionNr Value="18"/>
       <StringTable CompanyName="Transmission Remote GUI working group" FileDescription="Transmission Remote GUI" InternalName="transgui" LegalCopyright="Copyright (c) 2008-2019 by Yury Sidorov &amp; Transmission Remote GUI working group" OriginalFilename="transgui.exe" ProductName="Transmission Remote GUI" ProductVersion="5.18.0"/>
     </VersionInfo>
-    <BuildModes Count="2">
-      <Item1 Name="Debug" Default="True"/>
-      <Item2 Name="Release">
+    <BuildModes>
+      <Item Name="Debug" Default="True"/>
+      <Item Name="Release">
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>
@@ -67,173 +311,169 @@
             </ExecuteAfter>
           </Other>
         </CompilerOptions>
-      </Item2>
+      </Item>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
       <DestinationDirectory Value="\home\pi\project\0"/>
     </PublishOptions>
     <RunParams>
-      <local>
-        <CommandLineParams Value="--home=home"/>
-        <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T &apos;Lazarus Run Output&apos; -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
-      </local>
       <FormatVersion Value="2"/>
-      <Modes Count="1">
-        <Mode0 Name="default">
+      <Modes>
+        <Mode Name="default">
           <local>
             <CommandLineParams Value="--home=home"/>
             <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T &apos;Lazarus Run Output&apos; -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
           </local>
-        </Mode0>
+        </Mode>
       </Modes>
     </RunParams>
-    <RequiredPackages Count="2">
-      <Item1>
+    <RequiredPackages>
+      <Item>
         <PackageName Value="trcomp"/>
         <MinVersion Major="1" Valid="True"/>
-      </Item1>
-      <Item2>
+      </Item>
+      <Item>
         <PackageName Value="LCL"/>
-      </Item2>
+      </Item>
     </RequiredPackages>
-    <Units Count="20">
-      <Unit0>
+    <Units>
+      <Unit>
         <Filename Value="transgui.lpr"/>
         <IsPartOfProject Value="True"/>
-      </Unit0>
-      <Unit1>
+      </Unit>
+      <Unit>
         <Filename Value="main.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="MainForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Main"/>
-      </Unit1>
-      <Unit2>
+      </Unit>
+      <Unit>
         <Filename Value="rpc.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit2>
-      <Unit3>
+      </Unit>
+      <Unit>
         <Filename Value="addtorrent.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="AddTorrentForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AddTorrent"/>
-      </Unit3>
-      <Unit4>
+      </Unit>
+      <Unit>
         <Filename Value="connoptions.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="ConnOptionsForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="ConnOptions"/>
-      </Unit4>
-      <Unit5>
+      </Unit>
+      <Unit>
         <Filename Value="varlist.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit5>
-      <Unit6>
+      </Unit>
+      <Unit>
         <Filename Value="torrprops.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="TorrPropsForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="TorrProps"/>
-      </Unit6>
-      <Unit7>
+      </Unit>
+      <Unit>
         <Filename Value="daemonoptions.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="DaemonOptionsForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="DaemonOptions"/>
-      </Unit7>
-      <Unit8>
+      </Unit>
+      <Unit>
         <Filename Value="about.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="AboutForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="About"/>
-      </Unit8>
-      <Unit9>
+      </Unit>
+      <Unit>
         <Filename Value="ipresolver.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="IpResolver"/>
-      </Unit9>
-      <Unit10>
+      </Unit>
+      <Unit>
         <Filename Value="download.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="DownloadForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit10>
-      <Unit11>
+      </Unit>
+      <Unit>
         <Filename Value="colsetup.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="ColSetupForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="ColSetup"/>
-      </Unit11>
-      <Unit12>
+      </Unit>
+      <Unit>
         <Filename Value="utils.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit12>
-      <Unit13>
+      </Unit>
+      <Unit>
         <Filename Value="restranslator.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ResTranslator"/>
-      </Unit13>
-      <Unit14>
+      </Unit>
+      <Unit>
         <Filename Value="addlink.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="AddLinkForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AddLink"/>
-      </Unit14>
-      <Unit15>
+      </Unit>
+      <Unit>
         <Filename Value="movetorrent.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="MoveTorrentForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MoveTorrent"/>
-      </Unit15>
-      <Unit16>
+      </Unit>
+      <Unit>
         <Filename Value="addtracker.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="AddTrackerForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AddTracker"/>
-      </Unit16>
-      <Unit17>
+      </Unit>
+      <Unit>
         <Filename Value="options.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="OptionsForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Options"/>
-      </Unit17>
-      <Unit18>
+      </Unit>
+      <Unit>
         <Filename Value="baseform.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="BaseForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="BaseForm"/>
-      </Unit18>
-      <Unit19>
+      </Unit>
+      <Unit>
         <Filename Value="passwcon.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="PasswordConnect"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit19>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -283,19 +523,19 @@
     </Other>
   </CompilerOptions>
   <Debugging>
-    <Exceptions Count="4">
-      <Item1>
+    <Exceptions>
+      <Item>
         <Name Value="EInvalidCast"/>
-      </Item1>
-      <Item2>
+      </Item>
+      <Item>
         <Name Value="RunError(219)"/>
-      </Item2>
-      <Item3>
+      </Item>
+      <Item>
         <Name Value="RunError(216)"/>
-      </Item3>
-      <Item4>
+      </Item>
+      <Item>
         <Name Value="EAccessViolation"/>
-      </Item4>
+      </Item>
     </Exceptions>
   </Debugging>
 </CONFIG>
