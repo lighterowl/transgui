@@ -1,0 +1,5 @@
+{"version":1,"strings":[
+{"hash":84637092,"name":"tpasswordconnect.caption","sourcebytes":[80,97,115,115,119,111,114,100,67,111,110,110,101,99,116],"value":"PasswordConnect"},
+{"hash":464023,"name":"tpasswordconnect.lmsg.caption","sourcebytes":[108,77,115,103],"value":"lMsg"},
+{"hash":3430005,"name":"tpasswordconnect.passw.text","sourcebytes":[49,50,51,52,53],"value":"12345"}
+]}

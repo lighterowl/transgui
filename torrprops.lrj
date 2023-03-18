@@ -1,0 +1,15 @@
+{"version":1,"strings":[
+{"hash":102256227,"name":"ttorrpropsform.caption","sourcebytes":[84,111,114,114,101,110,116,32,112,114,111,112,101,114,116,105,101,115],"value":"Torrent properties"},
+{"hash":231000124,"name":"ttorrpropsform.tabgeneral.caption","sourcebytes":[71,101,110,101,114,97,108],"value":"General"},
+{"hash":324963,"name":"ttorrpropsform.txkbs1.caption","sourcebytes":[75,66,47,115],"value":"KB/s"},
+{"hash":324963,"name":"ttorrpropsform.txkbs2.caption","sourcebytes":[75,66,47,115],"value":"KB/s"},
+{"hash":5538698,"name":"ttorrpropsform.txname.caption","sourcebytes":[78,97,109,101,58],"value":"Name:"},
+{"hash":125475898,"name":"ttorrpropsform.txpeerlimit.caption","sourcebytes":[80,101,101,114,32,108,105,109,105,116,58],"value":"Peer limit:"},
+{"hash":67488435,"name":"ttorrpropsform.txminutes.caption","sourcebytes":[109,105,110,117,116,101,115],"value":"minutes"},
+{"hash":219744890,"name":"ttorrpropsform.cbmaxdown.caption","sourcebytes":[77,97,120,105,109,117,109,32,100,111,119,110,108,111,97,100,32,115,112,101,101,100,58],"value":"Maximum download speed:"},
+{"hash":80806122,"name":"ttorrpropsform.cbmaxup.caption","sourcebytes":[77,97,120,105,109,117,109,32,117,112,108,111,97,100,32,115,112,101,101,100,58],"value":"Maximum upload speed:"},
+{"hash":131142986,"name":"ttorrpropsform.cbseedratio.caption","sourcebytes":[83,101,101,100,32,114,97,116,105,111,58],"value":"Seed ratio:"},
+{"hash":115547242,"name":"ttorrpropsform.cbidleseedlimit.caption","sourcebytes":[83,116,111,112,32,115,101,101,100,105,110,103,32,119,104,101,110,32,105,110,97,99,116,105,118,101,32,102,111,114,58],"value":"Stop seeding when inactive for:"},
+{"hash":197676484,"name":"ttorrpropsform.tabadvanced.caption","sourcebytes":[65,100,118,97,110,99,101,100],"value":"Advanced"},
+{"hash":128029418,"name":"ttorrpropsform.txtrackers.caption","sourcebytes":[84,114,97,99,107,101,114,115,58],"value":"Trackers:"}
+]}

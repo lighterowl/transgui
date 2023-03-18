@@ -262,6 +262,10 @@
         <Resource_240 FileName="flags/flag_zw.png" Type="RCDATA" ResourceName="country_flag_zw"/>
       </Resources>
     </General>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="po_files"/>
+    </i18n>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <MajorVersionNr Value="5"/>

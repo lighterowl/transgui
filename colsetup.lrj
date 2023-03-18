@@ -1,0 +1,5 @@
+{"version":1,"strings":[
+{"hash":253366224,"name":"tcolsetupform.caption","sourcebytes":[67,111,108,117,109,110,115,32,115,101,116,117,112],"value":"Columns setup"},
+{"hash":1472,"name":"tcolsetupform.btup.caption","sourcebytes":[85,112],"value":"Up"},
+{"hash":308958,"name":"tcolsetupform.btdown.caption","sourcebytes":[68,111,119,110],"value":"Down"}
+]}

@@ -1,0 +1,10 @@
+{"version":1,"strings":[
+{"hash":4691652,"name":"taboutform.caption","sourcebytes":[65,98,111,117,116],"value":"About"},
+{"hash":4691652,"name":"taboutform.tababout.caption","sourcebytes":[65,98,111,117,116],"value":"About"},
+{"hash":141901301,"name":"taboutform.txappname.caption","sourcebytes":[116,120,65,112,112,78,97,109,101],"value":"txAppName"},
+{"hash":86455920,"name":"taboutform.txauthor.caption","sourcebytes":[67,111,112,121,114,105,103,104,116,32,40,99,41,32,50,48,48,56,45,50,48,49,57,32,98,121,32,89,117,114,121,32,83,105,100,111,114,111,118,32,97,110,100,32,84,114,97,110,115,109,105,115,115,105,111,110,32,82,101,109,111,116,101,32,71,85,73,32,119,111,114,107,105,110,103,32,103,114,111,117,112],"value":"Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group"},
+{"hash":167890515,"name":"taboutform.txversion.caption","sourcebytes":[86,101,114,115,105,111,110,32,37,115],"value":"Version %s"},
+{"hash":58140853,"name":"taboutform.txhomepage.caption","sourcebytes":[72,111,109,101,32,112,97,103,101],"value":"Home page"},
+{"hash":167890515,"name":"taboutform.txversfpc.caption","sourcebytes":[86,101,114,115,105,111,110,32,37,115],"value":"Version %s"},
+{"hash":49923525,"name":"taboutform.tablicense.caption","sourcebytes":[76,105,99,101,110,115,101],"value":"License"}
+]}

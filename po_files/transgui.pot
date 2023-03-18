@@ -1,0 +1,531 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: about.serrorcheckingversion
+msgid "Error checking for new version."
+msgstr ""
+
+#: about.slatestversion
+#, object-pascal-format
+msgid ""
+"No updates have been found.\n"
+"You are running the latest version of %s."
+msgstr ""
+
+#: about.snewversionfound
+#, object-pascal-format
+msgid ""
+"A new version of %s is available.\n"
+"Your current version: %s\n"
+"The new version: %s\n"
+"\n"
+"Do you wish to open the Downloads web page?"
+msgstr ""
+
+#: addlink.snolink
+msgid "No link was specified."
+msgstr ""
+
+#: addtorrent.sinvalidname
+msgid "Invalid name specified."
+msgstr ""
+
+#: addtorrent.sselectdownloadfolder
+msgid "Select a folder for download"
+msgstr ""
+
+#: addtorrent.ssize
+msgid "Size"
+msgstr ""
+
+#: addtracker.snotracker
+msgid "No tracker URL was specified."
+msgstr ""
+
+#: addtracker.strackerprops
+msgid "Tracker properties"
+msgstr ""
+
+#: connoptions.sdelconnection
+#, object-pascal-format
+msgid "Are you sure to delete connection '%s'?"
+msgstr ""
+
+#: connoptions.snewconnection
+msgid "New connection to Transmission"
+msgstr ""
+
+#: connoptions.snohost
+msgid "No host name specified."
+msgstr ""
+
+#: connoptions.snoproxy
+msgid "No proxy server specified."
+msgstr ""
+
+#: daemonoptions.sencryptiondisabled
+msgid "Encryption disabled"
+msgstr ""
+
+#: daemonoptions.sencryptionenabled
+msgid "Encryption enabled"
+msgstr ""
+
+#: daemonoptions.sencryptionrequired
+msgid "Encryption required"
+msgstr ""
+
+#: daemonoptions.sinvalidtime
+msgid "The invalid time value was entered."
+msgstr ""
+
+#: daemonoptions.snodownloaddir
+msgid "The downloads directory was not specified."
+msgstr ""
+
+#: daemonoptions.snoincompletedir
+msgid "The directory for incomplete files was not specified."
+msgstr ""
+
+#: daemonoptions.sporttestfailed
+msgid "Incoming port is closed. Check your firewall settings."
+msgstr ""
+
+#: daemonoptions.sporttestsuccess
+msgid "Incoming port tested successfully."
+msgstr ""
+
+#: download.sdownloadprogress
+#, object-pascal-format
+msgid "%s of %s downloaded"
+msgstr ""
+
+#: download.sdownloadprogress2
+#, object-pascal-format
+msgid "%s downloaded"
+msgstr ""
+
+#: main.sactive
+msgid "Active"
+msgstr ""
+
+#: main.sactivetime
+msgid "Active time"
+msgstr ""
+
+#: main.sall
+msgid "All torrents"
+msgstr ""
+
+#: main.saverage
+msgid "average"
+msgstr ""
+
+#: main.sbididefault
+msgid "Default"
+msgstr ""
+
+#: main.sbidileftright
+msgid "Left->Right"
+msgstr ""
+
+#: main.sbidirightleft
+msgid "Right->Left"
+msgstr ""
+
+#: main.sbidirightleftnoalign
+msgid "Right->Left (No Align)"
+msgstr ""
+
+#: main.sbidirightleftreadonly
+msgid "Right->Left (Reading Only)"
+msgstr ""
+
+#: main.sblocklistupdatecomplete
+#, object-pascal-format
+msgid ""
+"The block list has been updated successfully.\n"
+"The list entries count: %d."
+msgstr ""
+
+#: main.sbyte
+msgid "b"
+msgstr ""
+
+#: main.schecknewversion
+#, object-pascal-format
+msgid "Do you wish to enable automatic checking for a new version of %s?"
+msgstr ""
+
+#: main.scompleted
+msgid "Completed"
+msgstr ""
+
+#: main.sconnected
+msgid "connected"
+msgstr ""
+
+#: main.sconnectingtodaemon
+msgid "Connecting to daemon..."
+msgstr ""
+
+#: main.sconnectto
+#, object-pascal-format
+msgid "Connect to %s"
+msgstr ""
+
+#: main.sdays
+#, object-pascal-format
+msgid "%dd"
+msgstr ""
+
+#: main.sdisconnected
+msgid "Disconnected"
+msgstr ""
+
+#: main.sdone
+#, object-pascal-format
+msgid "%s (%s done)"
+msgstr ""
+
+#: main.sdownloadcomplete
+msgid "Download complete"
+msgstr ""
+
+#: main.sdownloaded
+msgid "Downloaded"
+msgstr ""
+
+#: main.sdownloading
+msgid "Downloading"
+msgstr ""
+
+#: main.sdownloadingseeding
+#, object-pascal-format
+msgid "%s%s%d downloading, %d seeding%s%s, %s"
+msgstr ""
+
+#: main.sdownloadingtorrent
+msgid "Downloading torrent file..."
+msgstr ""
+
+#: main.sdownspeed
+#, object-pascal-format
+msgid "D: %s/s"
+msgstr ""
+
+#: main.sduplicatetorrent
+msgid "Torrent already exists in the list"
+msgstr ""
+
+#: main.senterpassword
+#, object-pascal-format
+msgid "Please enter a password to connect to %s:"
+msgstr ""
+
+#: main.serrorstate
+msgid "Error"
+msgstr ""
+
+#: main.sfilesadded
+msgid "Files added"
+msgstr ""
+
+#: main.sfinished
+msgid "Finished"
+msgstr ""
+
+#: main.sfinisheddownload
+#, object-pascal-format
+msgid "'%s' has finished downloading"
+msgstr ""
+
+#: main.sfreespace
+#, object-pascal-format
+msgid "Free: %s"
+msgstr ""
+
+#: main.sgbyte
+msgid "GB"
+msgstr ""
+
+#: main.sgeoipconfirm
+msgid ""
+"Geo IP database is needed to resolve country by IP address.\n"
+"Download this database now?"
+msgstr ""
+
+#: main.shashfails
+#, object-pascal-format
+msgid "%s (%d hashfails)"
+msgstr ""
+
+#: main.shave
+#, object-pascal-format
+msgid "%d x %s (have %d)"
+msgstr ""
+
+#: main.shigh
+msgid "high"
+msgstr ""
+
+#: main.shours
+#, object-pascal-format
+msgid "%dh"
+msgstr ""
+
+#: main.sinactive
+msgid "Inactive"
+msgstr ""
+
+#: main.sinswarm
+msgid "in swarm"
+msgstr ""
+
+#: main.skbyte
+msgid "KB"
+msgstr ""
+
+#: main.slanguagelist
+msgid "Language list"
+msgstr ""
+
+#: main.slanguagepath
+msgid "Language path"
+msgstr ""
+
+#: main.slanguagepathfile
+msgid "Language pathfile"
+msgstr ""
+
+#: main.slow
+msgid "low"
+msgstr ""
+
+#: main.smbyte
+msgid "MB"
+msgstr ""
+
+#: main.smins
+#, object-pascal-format
+msgid "%dm"
+msgstr ""
+
+#: main.smonths
+#, object-pascal-format
+msgid "%dmo"
+msgstr ""
+
+#: main.snopathmapping
+msgid ""
+"Unable to find path mapping.\n"
+"Use the application's options to setup path mappings."
+msgstr ""
+
+#: main.snormal
+msgid "normal"
+msgstr ""
+
+#: main.snotracker
+msgid "No tracker"
+msgstr ""
+
+#: main.sof
+msgid "of"
+msgstr ""
+
+#: main.spersecond
+msgid "/s"
+msgstr ""
+
+#: main.sprivateoff
+msgid "OFF"
+msgstr ""
+
+#: main.sprivateon
+msgid "ON"
+msgstr ""
+
+#: main.sreconnect
+#, object-pascal-format
+msgid "Reconnect in %d seconds."
+msgstr ""
+
+#: main.sremovetorrent
+#, object-pascal-format
+msgid "Are you sure to remove torrent '%s'?"
+msgstr ""
+
+#: main.sremovetorrentdata
+#, object-pascal-format
+msgid "Are you sure to remove torrent '%s' and all associated DATA?"
+msgstr ""
+
+#: main.sremovetorrentdatamulti
+#, object-pascal-format
+msgid "Are you sure to remove %d selected torrents and all their associated DATA?"
+msgstr ""
+
+#: main.sremovetorrentmulti
+#, object-pascal-format
+msgid "Are you sure to remove %d selected torrents?"
+msgstr ""
+
+#: main.sremovetracker
+#, object-pascal-format
+msgid "Are you sure to remove tracker '%s'?"
+msgstr ""
+
+#: main.srestartrequired
+msgid "You need to restart the application to apply changes."
+msgstr ""
+
+#: main.ssecs
+#, object-pascal-format
+msgid "%ds"
+msgstr ""
+
+#: main.sseeding
+msgid "Seeding"
+msgstr ""
+
+#: main.sseveraltorrents
+#, object-pascal-format
+msgid "%d torrents"
+msgstr ""
+
+#: main.sskip
+msgid "skip"
+msgstr ""
+
+#: main.ssslloaderror
+#, object-pascal-format
+msgid "Unable to load OpenSSL library files: %s and %s"
+msgstr ""
+
+#: main.sstopped
+msgid "Stopped"
+msgstr ""
+
+#: main.stbyte
+msgid "TB"
+msgstr ""
+
+#: main.storrents
+msgid "Torrents"
+msgstr ""
+
+#: main.storrentsverification
+#, object-pascal-format
+msgid ""
+"Torrents verification may take a long time.\n"
+"Are you sure to start verification of %d torrents?"
+msgstr ""
+
+#: main.storrentverification
+#, object-pascal-format
+msgid ""
+"Torrent verification may take a long time.\n"
+"Are you sure to start verification of torrent '%s'?"
+msgstr ""
+
+#: main.stotaldownloaded
+#, object-pascal-format
+msgid "Done: %s"
+msgstr ""
+
+#: main.stotalremain
+#, object-pascal-format
+msgid "Remaining: %s"
+msgstr ""
+
+#: main.stotalsize
+#, object-pascal-format
+msgid "Total: %s"
+msgstr ""
+
+#: main.stotalsizetodownload
+#, object-pascal-format
+msgid "Selected: %s"
+msgstr ""
+
+#: main.strackererror
+msgid "Tracker"
+msgstr ""
+
+#: main.strackerupdating
+msgid "Updating"
+msgstr ""
+
+#: main.strackerworking
+msgid "Working"
+msgstr ""
+
+#: main.sunablegetfileslist
+msgid "Unable to get files list"
+msgstr ""
+
+#: main.sunabletoexecute
+#, object-pascal-format
+msgid "Unable to execute \"%s\"."
+msgstr ""
+
+#: main.sunknown
+msgid "Unknown"
+msgstr ""
+
+#: main.sunlimited
+msgid "Unlimited"
+msgstr ""
+
+#: main.supdatecomplete
+msgid "Update complete."
+msgstr ""
+
+#: main.supdatetrackers
+msgid "Update trackers for the existing torrent?"
+msgstr ""
+
+#: main.supdating
+msgid "Updating..."
+msgstr ""
+
+#: main.suploaded
+msgid "Uploaded"
+msgstr ""
+
+#: main.supspeed
+#, object-pascal-format
+msgid "U: %s/s"
+msgstr ""
+
+#: main.susermenu
+msgid "User Menu"
+msgstr ""
+
+#: main.sverifying
+msgid "Verifying"
+msgstr ""
+
+#: main.swaiting
+msgid "Waiting"
+msgstr ""
+
+#: main.syears
+#, object-pascal-format
+msgid "%dy"
+msgstr ""
+
+#: movetorrent.snotorrentdir
+msgid "No torrent location was specified."
+msgstr ""
+
+#: movetorrent.sselectfolder
+msgid "Select torrent location"
+msgstr ""
+
+#: rpc.stransmissionat
+#, object-pascal-format
+msgid "Transmission%s at %s:%s"
+msgstr ""
+
