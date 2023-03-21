@@ -14,7 +14,7 @@ binmode( STDOUT, ":encoding(UTF-8)" );
 sub do_open {
   ( my $path, my $sub ) = @_;
   open( my $fh, '<:encoding(UTF-8)', $path )
-    or die "Can't open $path : $!";
+      or die "Can't open $path : $!";
   $sub->($fh);
   close($fh);
   return;
@@ -30,13 +30,13 @@ sub new_entry {
 }
 
 sub read_template {
-  my $pot_file  = shift;
+  my $pot_file = shift;
   my @po_entries;
 
   do_open(
     $pot_file,
     sub {
-      my $fh = shift;
+      my $fh        = shift;
       my $cur_entry = new_entry();
       my $dest;
       while (<$fh>) {
@@ -48,7 +48,7 @@ sub read_template {
         }
 
         if (/^#/) {
-          push @{ $cur_entry->{comments} }, substr($_, 1);
+          push @{ $cur_entry->{comments} }, substr( $_, 1 );
         }
         elsif (/^"(.*?)"$/) {
           push @{ $cur_entry->{$dest} }, $1;
@@ -82,7 +82,7 @@ sub gen_msgid_hash {
 
 sub langfile_to_msgstr {
   ( my $lang_file, my $po_entries ) = @_;
-  my $msgid_hash = gen_msgid_hash( $po_entries );
+  my $msgid_hash = gen_msgid_hash($po_entries);
   do_open(
     $lang_file,
     sub {
@@ -103,16 +103,14 @@ sub langfile_to_msgstr {
           $msgid  =~ s,\\,\\\\,g;
           $msgstr =~ s,\\,\\\\,g;
 
-          my $entry = $msgid_hash->{$msgid};
+          my $entry          = $msgid_hash->{$msgid};
           my @decoded_msgstr = split( /\s*~\s*/, $msgstr );
           if ( defined($entry) ) {
-            $entry->{msgstr} = [ @decoded_msgstr ];
+            $entry->{msgstr} = [@decoded_msgstr];
           }
           else {
             $entry = new_entry();
-            $entry->{comments} = [
-              $msgid, @decoded_msgstr
-            ];
+            $entry->{comments} = [ $msgid, @decoded_msgstr ];
             push @{$po_entries}, $entry;
           }
         }
