@@ -72,7 +72,6 @@ lazbuild --build-mode=Release --lazarusdir=${sdk_dir}\lazarus transgui.lpi
 
 mkdir Release
 Copy-Item "units\transgui.exe" -Destination Release
-Copy-Item lang Release -Recurse -Exclude '*.template'
 Copy-Item "${openssl}\bin\lib*-3.dll" Release
 
 cd Release
