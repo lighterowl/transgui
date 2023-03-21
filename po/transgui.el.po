@@ -1,0 +1,2539 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: about.serrorcheckingversion
+msgid "Error checking for new version."
+msgstr ""
+
+#: about.slatestversion
+#, object-pascal-format
+msgid ""
+"No updates have been found.\n"
+"You are running the latest version of %s."
+msgstr ""
+
+#: about.snewversionfound
+#, object-pascal-format
+msgid ""
+"A new version of %s is available.\n"
+"Your current version: %s\n"
+"The new version: %s\n"
+"\n"
+"Do you wish to open the Downloads web page?"
+msgstr ""
+
+#: addlink.snolink
+msgid "No link was specified."
+msgstr ""
+
+#: addtorrent.sinvalidname
+msgid "Invalid name specified."
+msgstr ""
+
+#: addtorrent.sselectdownloadfolder
+msgid "Select a folder for download"
+msgstr "Επιλέξτε ένα φάκελο για λήψη"
+
+#: addtorrent.ssize
+msgctxt "addtorrent.ssize"
+msgid "Size"
+msgstr ""
+
+#: addtracker.snotracker
+msgid "No tracker URL was specified."
+msgstr ""
+
+#: addtracker.strackerprops
+msgid "Tracker properties"
+msgstr "Ιδιότητες ιχνηλάτη"
+
+#: connoptions.sdelconnection
+#, object-pascal-format
+msgid "Are you sure to delete connection '%s'?"
+msgstr "Είστε σίγουροι για τη διαγραφή της σύνδεσης '%s'?"
+
+#: connoptions.snewconnection
+msgid "New connection to Transmission"
+msgstr "Νέα σύνδεση στο Transmission"
+
+#: connoptions.snohost
+msgid "No host name specified."
+msgstr ""
+
+#: connoptions.snoproxy
+msgid "No proxy server specified."
+msgstr ""
+
+#: daemonoptions.sencryptiondisabled
+msgid "Encryption disabled"
+msgstr "Κρυπτογράφηση απενεργοποιημένη"
+
+#: daemonoptions.sencryptionenabled
+msgid "Encryption enabled"
+msgstr "Κρυπτογράφηση ενεργοποιημένη"
+
+#: daemonoptions.sencryptionrequired
+msgid "Encryption required"
+msgstr "Απαιτείται Κρυπτογράφηση"
+
+#: daemonoptions.sinvalidtime
+msgid "The invalid time value was entered."
+msgstr ""
+
+#: daemonoptions.snodownloaddir
+msgid "The downloads directory was not specified."
+msgstr ""
+
+#: daemonoptions.snoincompletedir
+msgid "The directory for incomplete files was not specified."
+msgstr ""
+
+#: daemonoptions.sporttestfailed
+msgid "Incoming port is closed. Check your firewall settings."
+msgstr ""
+
+#: daemonoptions.sporttestsuccess
+msgid "Incoming port tested successfully."
+msgstr ""
+
+#: download.sdownloadprogress
+#, object-pascal-format
+msgid "%s of %s downloaded"
+msgstr "%s από %s λήφθηκαν"
+
+#: download.sdownloadprogress2
+#, object-pascal-format
+msgid "%s downloaded"
+msgstr "%s λήφθηκαν"
+
+#: main.sactive
+msgid "Active"
+msgstr "Ενεργά"
+
+#: main.sactivetime
+msgid "Active time"
+msgstr "Ενεργός χρόνος"
+
+#: main.sall
+msgid "All torrents"
+msgstr "Όλα τα torrents"
+
+#: main.saverage
+msgid "average"
+msgstr "μέσος όρος"
+
+#: main.sbididefault
+msgid "Default"
+msgstr ""
+
+#: main.sbidileftright
+msgid "Left->Right"
+msgstr ""
+
+#: main.sbidirightleft
+msgid "Right->Left"
+msgstr ""
+
+#: main.sbidirightleftnoalign
+msgid "Right->Left (No Align)"
+msgstr ""
+
+#: main.sbidirightleftreadonly
+msgid "Right->Left (Reading Only)"
+msgstr ""
+
+#: main.sblocklistupdatecomplete
+#, object-pascal-format
+msgid ""
+"The block list has been updated successfully.\n"
+"The list entries count: %d."
+msgstr ""
+
+#: main.sbyte
+msgid "b"
+msgstr "b"
+
+#: main.schecknewversion
+#, object-pascal-format
+msgid "Do you wish to enable automatic checking for a new version of %s?"
+msgstr "Ενεργοποίηση αυτόματου ελέγχου για νέες εκδόσεις of %s;"
+
+#: main.scompleted
+msgid "Completed"
+msgstr "Ολοκληρωμένα"
+
+#: main.sconnected
+msgid "connected"
+msgstr "συνδεδεμένοι"
+
+#: main.sconnectingtodaemon
+msgid "Connecting to daemon..."
+msgstr ""
+
+#: main.sconnectto
+#, object-pascal-format
+msgid "Connect to %s"
+msgstr "Σύνδεση σε %s"
+
+#: main.sdays
+#, object-pascal-format
+msgid "%dd"
+msgstr "%dd"
+
+#: main.sdisconnected
+msgid "Disconnected"
+msgstr "Αποσυνδέθηκε"
+
+#: main.sdone
+#, object-pascal-format
+msgid "%s (%s done)"
+msgstr "%s (%s έτοιμο)"
+
+#: main.sdownloadcomplete
+msgid "Download complete"
+msgstr "Ολοκλήρωση λήψης"
+
+#: main.sdownloaded
+msgctxt "main.sdownloaded"
+msgid "Downloaded"
+msgstr ""
+
+#: main.sdownloading
+msgctxt "main.sdownloading"
+msgid "Downloading"
+msgstr ""
+
+#: main.sdownloadingseeding
+#, object-pascal-format
+msgid "%s%s%d downloading, %d seeding%s%s, %s"
+msgstr "%s%s%d λήψη, %d αποστολή%s%s, %s"
+
+#: main.sdownloadingtorrent
+msgid "Downloading torrent file..."
+msgstr ""
+
+#: main.sdownspeed
+#, object-pascal-format
+msgid "D: %s/s"
+msgstr "Λ: %s/s"
+
+#: main.sduplicatetorrent
+msgid "Torrent already exists in the list"
+msgstr "Το torrent υπάρχει ήδη στη λίστα"
+
+#: main.senterpassword
+#, object-pascal-format
+msgid "Please enter a password to connect to %s:"
+msgstr ""
+
+#: main.serrorstate
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: main.sfilesadded
+msgid "Files added"
+msgstr "Αρχεία που προστέθηκαν"
+
+#: main.sfinished
+msgid "Finished"
+msgstr "Ολοκληρωμένα"
+
+#: main.sfinisheddownload
+#, object-pascal-format
+msgid "'%s' has finished downloading"
+msgstr "'%s' ολοκληρώθηκε η λήψη"
+
+#: main.sfreespace
+#, object-pascal-format
+msgid "Free: %s"
+msgstr "Κενά: %s"
+
+#: main.sgbyte
+msgid "GB"
+msgstr "GB"
+
+#: main.sgeoipconfirm
+msgid ""
+"Geo IP database is needed to resolve country by IP address.\n"
+"Download this database now?"
+msgstr "Απαιτείται η βάση δεδομένων Geo IP για την αναγνώριση της χώρας από την διεύθυνση IP."
+"Να ξεκινήσει η λήψη της βάσης δεδομένων τώρα;"
+
+#: main.shashfails
+#, object-pascal-format
+msgid "%s (%d hashfails)"
+msgstr "%s (%d hashfails)"
+
+#: main.shave
+#, object-pascal-format
+msgid "%d x %s (have %d)"
+msgstr "%d x %s (έχω %d)"
+
+#: main.shigh
+msgid "high"
+msgstr "υψηλή"
+
+#: main.shours
+#, object-pascal-format
+msgid "%dh"
+msgstr "%dh"
+
+#: main.sinactive
+msgid "Inactive"
+msgstr "Ανενεργά"
+
+#: main.sinswarm
+msgid "in swarm"
+msgstr "στο νέφος"
+
+#: main.skbyte
+msgid "KB"
+msgstr "KB"
+
+#: main.slanguagelist
+msgid "Language list"
+msgstr ""
+
+#: main.slanguagepath
+msgid "Language path"
+msgstr ""
+
+#: main.slanguagepathfile
+msgid "Language pathfile"
+msgstr ""
+
+#: main.slow
+msgid "low"
+msgstr "χαμηλή"
+
+#: main.smbyte
+msgctxt "main.smbyte"
+msgid "MB"
+msgstr ""
+
+#: main.smins
+#, object-pascal-format
+msgid "%dm"
+msgstr "%dm"
+
+#: main.smonths
+#, object-pascal-format
+msgid "%dmo"
+msgstr ""
+
+#: main.snopathmapping
+msgid ""
+"Unable to find path mapping.\n"
+"Use the application's options to setup path mappings."
+msgstr ""
+
+#: main.snormal
+msgid "normal"
+msgstr "κανονική"
+
+#: main.snotracker
+msgid "No tracker"
+msgstr "Κανένας ιχνηλάτης"
+
+#: main.sof
+msgid "of"
+msgstr "από"
+
+#: main.spersecond
+msgid "/s"
+msgstr "/s"
+
+#: main.sprivateoff
+msgid "OFF"
+msgstr ""
+
+#: main.sprivateon
+msgid "ON"
+msgstr ""
+
+#: main.sreconnect
+#, object-pascal-format
+msgid "Reconnect in %d seconds."
+msgstr ""
+
+#: main.sremovetorrent
+#, object-pascal-format
+msgid "Are you sure to remove torrent '%s'?"
+msgstr "Είστε σίγουροι για τη διαγραφή του torrent '%s';"
+
+#: main.sremovetorrentdata
+#, object-pascal-format
+msgid "Are you sure to remove torrent '%s' and all associated DATA?"
+msgstr "Είστε σίγουροι για τη διαγραφή του torrent '%s' και όλων των ΑΡΧΕΙΩΝ;"
+
+#: main.sremovetorrentdatamulti
+#, object-pascal-format
+msgid "Are you sure to remove %d selected torrents and all their associated DATA?"
+msgstr "Είστε σίγουροι για τη διαγραφή %d επιλεγμένων torrents και όλων των σχετικών ΑΡΧΕΙΩΝ;"
+
+#: main.sremovetorrentmulti
+#, object-pascal-format
+msgid "Are you sure to remove %d selected torrents?"
+msgstr "Είστε σίγουροι για τη διαγραφή %d επιλεγμένων torrents;"
+
+#: main.sremovetracker
+#, object-pascal-format
+msgid "Are you sure to remove tracker '%s'?"
+msgstr "Είστε σίγουροι για τη διαγραφή του ιχνηλάτη '%s'?"
+
+#: main.srestartrequired
+msgid "You need to restart the application to apply changes."
+msgstr ""
+
+#: main.ssecs
+#, object-pascal-format
+msgid "%ds"
+msgstr "%ds"
+
+#: main.sseeding
+msgid "Seeding"
+msgstr "Αποστολή"
+
+#: main.sseveraltorrents
+#, object-pascal-format
+msgid "%d torrents"
+msgstr "%d torrents"
+
+#: main.sskip
+msgid "skip"
+msgstr "προσπέρασε"
+
+#: main.ssslloaderror
+#, object-pascal-format
+msgid "Unable to load OpenSSL library files: %s and %s"
+msgstr "Αδυναμία φόρτωσης των αρχείων βιβλιοθήκης του OpenSSL: %s και %s"
+
+#: main.sstopped
+msgid "Stopped"
+msgstr "Σταματημένα"
+
+#: main.stbyte
+msgid "TB"
+msgstr "TB"
+
+#: main.storrents
+msgid "Torrents"
+msgstr "Torrents"
+
+#: main.storrentsverification
+#, object-pascal-format
+msgid ""
+"Torrents verification may take a long time.\n"
+"Are you sure to start verification of %d torrents?"
+msgstr "Η επαλήθευση των torrent μπορεί να διαρκέσει αρκετό χρόνο."
+"Είστε σίγουροι ότι θέλετε να ξεκινήσετε την επαλήθευση των %d torrents?"
+
+#: main.storrentverification
+#, object-pascal-format
+msgid ""
+"Torrent verification may take a long time.\n"
+"Are you sure to start verification of torrent '%s'?"
+msgstr "Η επαλήθευση του torrent μπορεί να διαρκέσει αρκετό χρόνο."
+"Είστε σίγουροι ότι θέλετε να ξεκινήσετε την επαλήθευση του torrent '%s';"
+
+#: main.stotaldownloaded
+#, object-pascal-format
+msgid "Done: %s"
+msgstr ""
+
+#: main.stotalremain
+#, object-pascal-format
+msgid "Remaining: %s"
+msgstr ""
+
+#: main.stotalsize
+#, object-pascal-format
+msgid "Total: %s"
+msgstr ""
+
+#: main.stotalsizetodownload
+#, object-pascal-format
+msgid "Selected: %s"
+msgstr ""
+
+#: main.strackererror
+msgctxt "main.strackererror"
+msgid "Tracker"
+msgstr ""
+
+#: main.strackerupdating
+msgid "Updating"
+msgstr "Ενημέρωση"
+
+#: main.strackerworking
+msgid "Working"
+msgstr "Λειτουργεί"
+
+#: main.sunablegetfileslist
+msgid "Unable to get files list"
+msgstr "Αδυναμία λήψης της λίστας αρχείων"
+
+#: main.sunabletoexecute
+#, object-pascal-format
+msgid "Unable to execute \"%s\"."
+msgstr ""
+
+#: main.sunknown
+msgid "Unknown"
+msgstr "Άγνωστο"
+
+#: main.sunlimited
+msgid "Unlimited"
+msgstr "Χωρίς όριο"
+
+#: main.supdatecomplete
+msgid "Update complete."
+msgstr ""
+
+#: main.supdatetrackers
+msgid "Update trackers for the existing torrent?"
+msgstr "Ενημέρωση ιχνηλατών για το υπάρχον torrent?"
+
+#: main.supdating
+msgid "Updating..."
+msgstr ""
+
+#: main.suploaded
+msgctxt "main.suploaded"
+msgid "Uploaded"
+msgstr ""
+
+#: main.supspeed
+#, object-pascal-format
+msgid "U: %s/s"
+msgstr "Α: %s/s"
+
+#: main.susermenu
+msgid "User Menu"
+msgstr ""
+
+#: main.sverifying
+msgid "Verifying"
+msgstr "Υπό επαλήθευση"
+
+#: main.swaiting
+msgid "Waiting"
+msgstr "Αναμονή"
+
+#: main.syears
+#, object-pascal-format
+msgid "%dy"
+msgstr ""
+
+#: movetorrent.snotorrentdir
+msgid "No torrent location was specified."
+msgstr ""
+
+#: movetorrent.sselectfolder
+msgid "Select torrent location"
+msgstr "Επιλέξτε τη θέση του αρχείου torrent"
+
+#: rpc.stransmissionat
+#, object-pascal-format
+msgid "Transmission%s at %s:%s"
+msgstr "Transmission%s στο %s:%s"
+
+#: taboutform.caption
+msgctxt "taboutform.caption"
+msgid "About"
+msgstr ""
+
+#: taboutform.tababout.caption
+msgctxt "taboutform.tababout.caption"
+msgid "About"
+msgstr "Περί"
+
+#: taboutform.tablicense.caption
+msgid "License"
+msgstr "Άδεια"
+
+#: taboutform.txappname.caption
+msgid "txAppName"
+msgstr ""
+
+#: taboutform.txauthor.caption
+msgid "Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group"
+msgstr ""
+
+#: taboutform.txhomepage.caption
+msgid "Home page"
+msgstr "Αρχική σελίδα"
+
+#: taboutform.txversfpc.caption
+#, object-pascal-format
+msgctxt "taboutform.txversfpc.caption"
+msgid "Version %s"
+msgstr ""
+
+#: taboutform.txversion.caption
+#, object-pascal-format
+msgctxt "taboutform.txversion.caption"
+msgid "Version %s"
+msgstr "Έκδοση %s"
+
+#: taddlinkform.caption
+msgctxt "taddlinkform.caption"
+msgid "Add torrent link"
+msgstr ""
+
+#: taddlinkform.txlink.caption
+msgid "URL of a .torrent file or a magnet link:"
+msgstr ""
+
+#: taddtorrentform.btbrowse.caption
+msgctxt "taddtorrentform.btbrowse.caption"
+msgid "Browse..."
+msgstr ""
+
+#: taddtorrentform.btbrowse.hint
+msgid "Browse folder"
+msgstr ""
+
+#: taddtorrentform.btselectall.caption
+msgctxt "taddtorrentform.btselectall.caption"
+msgid "Select all"
+msgstr ""
+
+#: taddtorrentform.btselectnone.caption
+msgid "Select none"
+msgstr "Αποεπιλογή όλων"
+
+#: taddtorrentform.caption
+msgid "Add new torrent"
+msgstr "Προσθήκη νέου torrent"
+
+#: taddtorrentform.cbstarttorrent.caption
+msgctxt "taddtorrentform.cbstarttorrent.caption"
+msgid "Start torrent"
+msgstr ""
+
+#: taddtorrentform.delbutton.hint
+msgid "Delete destination folder"
+msgstr ""
+
+#: taddtorrentform.edextension.hint
+msgctxt "taddtorrentform.edextension.hint"
+msgid "for example: *.avi *.mkv"
+msgstr ""
+
+#: taddtorrentform.gbcontents.caption
+msgid "Torrent contents"
+msgstr "Περιεχόμενα torrent"
+
+#: taddtorrentform.gbsaveas.caption
+msgctxt "taddtorrentform.gbsaveas.caption"
+msgid " "
+msgstr ""
+
+#: taddtorrentform.lvfiles.columns[0].title.caption
+msgctxt "taddtorrentform.lvfiles.columns[0].title.caption"
+msgid "File name"
+msgstr ""
+
+#: taddtorrentform.lvfiles.columns[1].title.caption
+msgctxt "taddtorrentform.lvfiles.columns[1].title.caption"
+msgid "Size"
+msgstr ""
+
+#: taddtorrentform.txdestfolder.caption
+msgid "Destination folder:"
+msgstr ""
+
+#: taddtorrentform.txdiskspace.caption
+msgid "Free disk space:"
+msgstr ""
+
+#: taddtorrentform.txpeerlimit.caption
+msgctxt "taddtorrentform.txpeerlimit.caption"
+msgid "Peer limit:"
+msgstr ""
+
+#: taddtorrentform.txsaveas.caption
+msgid "Save as:"
+msgstr ""
+
+#: taddtorrentform.txsaveas1.caption
+msgid "Template:  "
+msgstr ""
+
+#: taddtorrentform.txsaveas1.hint
+msgctxt "taddtorrentform.txsaveas1.hint"
+msgid "for example: *.avi *.mkv"
+msgstr ""
+
+#: taddtrackerform.caption
+msgid "Add tracker"
+msgstr "Προσθήκη ιχνηλάτη"
+
+#: taddtrackerform.txtrackerurl.caption
+msgid "Tracker announce URL:"
+msgstr ""
+
+#: tcolsetupform.btdown.caption
+msgid "Down"
+msgstr "Κάτω"
+
+#: tcolsetupform.btup.caption
+msgid "Up"
+msgstr "Πάνω"
+
+#: tcolsetupform.caption
+msgid "Columns setup"
+msgstr "Επιλογή στηλών"
+
+#: tconnoptionsform.btdel.caption
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: tconnoptionsform.btnew.caption
+msgid "New"
+msgstr "Νέα"
+
+#: tconnoptionsform.btrename.caption
+msgctxt "tconnoptionsform.btrename.caption"
+msgid "Rename"
+msgstr ""
+
+#: tconnoptionsform.caption
+msgid "Manage connections to Transmission"
+msgstr "Διαχείριση συνδέσεων στο Transmission"
+
+#: tconnoptionsform.cbaskpassword.caption
+msgid "Ask for password"
+msgstr "Να ζητείται το συνθηματικό"
+
+#: tconnoptionsform.cbauth.caption
+msgctxt "tconnoptionsform.cbauth.caption"
+msgid "Authentication required"
+msgstr ""
+
+#: tconnoptionsform.cbautoreconnect.caption
+msgid "Always auto-reconnect"
+msgstr ""
+
+#: tconnoptionsform.cbproxyauth.caption
+msgctxt "tconnoptionsform.cbproxyauth.caption"
+msgid "Authentication required"
+msgstr "Απαιτείται πιστοποίηση"
+
+#: tconnoptionsform.cbshowadvanced.caption
+msgid "Show advanced options"
+msgstr "Προβολή προχωρημένων επιλογών"
+
+#: tconnoptionsform.cbssl.caption
+msgid "Use SSL"
+msgstr "Χρήση SSL"
+
+#: tconnoptionsform.cbuseproxy.caption
+msgid "Connect to Transmission using proxy server"
+msgstr "Σύνδεση στον Transmission μέσω proxy server"
+
+#: tconnoptionsform.cbusesocks5.caption
+msgid "SOCKS 5"
+msgstr ""
+
+#: tconnoptionsform.edtranslateform.caption
+msgid "Activate the translated version of the application (need to restart the application)"
+msgstr ""
+
+#: tconnoptionsform.edtranslatemsg.caption
+msgid "Activate the translation of the Transmission strings"
+msgstr ""
+
+#: tconnoptionsform.gbspeed.caption
+msgid "Speed limit menu items"
+msgstr "Στοιχεία μενού ορίων ταχύτητας"
+
+#: tconnoptionsform.label1.caption
+msgid "The maximum history of directories for storage of torrents"
+msgstr ""
+
+#: tconnoptionsform.label111.caption
+msgctxt "tconnoptionsform.label111.caption"
+msgid "Language:"
+msgstr ""
+
+#: tconnoptionsform.label2.caption
+msgid "Config file:"
+msgstr ""
+
+#: tconnoptionsform.tabconnection.caption
+msgid "Transmission"
+msgstr ""
+
+#: tconnoptionsform.tabmisc.caption
+msgid "Misc"
+msgstr "Διάφορα"
+
+#: tconnoptionsform.tabpaths.caption
+msgid "Paths"
+msgstr "Μονοπάτια"
+
+#: tconnoptionsform.tabproxy.caption
+msgid "Proxy"
+msgstr "Proxy"
+
+#: tconnoptionsform.txcertfile.caption
+msgid "Client Certificate:"
+msgstr ""
+
+#: tconnoptionsform.txcertpass.caption
+msgid "Private Key:"
+msgstr ""
+
+#: tconnoptionsform.txconname.caption
+msgid "Connection name:"
+msgstr ""
+
+#: tconnoptionsform.txconnhelp.caption
+#, object-pascal-format
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)."
+msgstr ""
+
+#: tconnoptionsform.txdownspeeds.caption
+msgid "Download speeds (KB/s):"
+msgstr ""
+
+#: tconnoptionsform.txhost.caption
+msgid "Remote host:"
+msgstr ""
+
+#: tconnoptionsform.txpassword.caption
+msgid "Password:"
+msgstr ""
+
+#: tconnoptionsform.txpaths.caption
+msgid ""
+"Remote to local path mappings.\n"
+"Examples:\n"
+"/share=\\\\pch\\share\n"
+"/var/downloads/music=Z:\\music"
+msgstr "Χαρτογράφηση μονοπατιού απομακρυσμένο σε τοπικό."
+"Παραδείγματα:"
+"/share=\\\\pch\\share"
+"/var/downloads/music=Z:\\music"
+
+#: tconnoptionsform.txport.caption
+msgid "Port:"
+msgstr ""
+
+#: tconnoptionsform.txproxy.caption
+msgid "Proxy server:"
+msgstr ""
+
+#: tconnoptionsform.txproxypassword.caption
+msgid "Proxy password:"
+msgstr ""
+
+#: tconnoptionsform.txproxyport.caption
+msgid "Proxy port:"
+msgstr ""
+
+#: tconnoptionsform.txproxyusername.caption
+msgid "Proxy user name:"
+msgstr ""
+
+#: tconnoptionsform.txrpcpath.caption
+msgid "RPC path:"
+msgstr ""
+
+#: tconnoptionsform.txupspeeds.caption
+msgid "Upload speeds (KB/s):"
+msgstr ""
+
+#: tconnoptionsform.txusername.caption
+msgid "User name:"
+msgstr ""
+
+#: tdaemonoptionsform.bttestport.caption
+msgid "Test port"
+msgstr "Δοκιμή θύρας"
+
+#: tdaemonoptionsform.caption
+msgctxt "tdaemonoptionsform.caption"
+msgid "Transmission options"
+msgstr ""
+
+#: tdaemonoptionsform.cbaltenabled.caption
+msgctxt "tdaemonoptionsform.cbaltenabled.caption"
+msgid "Use alternate bandwidth settings"
+msgstr ""
+
+#: tdaemonoptionsform.cbautoalt.caption
+msgid "Apply alternate bandwidth settings automatically"
+msgstr "Αυτόματη εφαρμογή εναλλακτικών ρυθμίσεων εύρους ζώνης"
+
+#: tdaemonoptionsform.cbblocklist.caption
+msgid "Enable blocklist:"
+msgstr ""
+
+#: tdaemonoptionsform.cbdht.caption
+msgid "Enable DHT"
+msgstr "Ενεργοποίηση DHT"
+
+#: tdaemonoptionsform.cbdownqueue.caption
+msgid "Download queue size:"
+msgstr ""
+
+#: tdaemonoptionsform.cbidleseedlimit.caption
+msgctxt "tdaemonoptionsform.cbidleseedlimit.caption"
+msgid "Stop seeding when inactive for:"
+msgstr ""
+
+#: tdaemonoptionsform.cbincompletedir.caption
+msgid "Directory for incomplete files:"
+msgstr ""
+
+#: tdaemonoptionsform.cblpd.caption
+msgid "Enable Local Peer Discovery"
+msgstr "Ενεργοποίηση ανεύρεσης τοπικών κόμβων"
+
+#: tdaemonoptionsform.cbmaxdown.caption
+msgctxt "tdaemonoptionsform.cbmaxdown.caption"
+msgid "Maximum download speed:"
+msgstr ""
+
+#: tdaemonoptionsform.cbmaxup.caption
+msgctxt "tdaemonoptionsform.cbmaxup.caption"
+msgid "Maximum upload speed:"
+msgstr ""
+
+#: tdaemonoptionsform.cbpartext.caption
+msgid "Add .part extension to incomplete files"
+msgstr "Προσθήκη κατάληξης .part σε μη ολοκληρωμένα αρχεία"
+
+#: tdaemonoptionsform.cbpex.caption
+msgid "Enable Peer Exchange"
+msgstr "Ενεργοποίηση Ανταλλαγής Κόμβων"
+
+#: tdaemonoptionsform.cbportforwarding.caption
+msgid "Enable port forwarding"
+msgstr "Ενεργοποίηση προώθησης θυρών"
+
+#: tdaemonoptionsform.cbrandomport.caption
+msgid "Pick random port on Transmission launch"
+msgstr "Επιλογή τυχαίας θύρας κατά την εκκίνηση"
+
+#: tdaemonoptionsform.cbseedratio.caption
+msgctxt "tdaemonoptionsform.cbseedratio.caption"
+msgid "Seed ratio:"
+msgstr ""
+
+#: tdaemonoptionsform.cbstalled.caption
+msgid "Consider active torrents as stalled when idle for:"
+msgstr ""
+
+#: tdaemonoptionsform.cbstalled.hint
+msgid "Torrents that are idle for N minuets aren't counted toward the Download queue or Upload queue"
+msgstr "Τα ανενεργά torrents για N λεπτά δεν υπολογίζονται στην Ουρά Λήψεων ή την Ουρά Αποστολών"
+
+#: tdaemonoptionsform.cbupqueue.caption
+msgid "Upload queue size:"
+msgstr ""
+
+#: tdaemonoptionsform.cbutp.caption
+msgid "Enable µTP"
+msgstr "Ενεργοποίηση µTP"
+
+#: tdaemonoptionsform.edalttimebegin.text
+msgctxt "tdaemonoptionsform.edalttimebegin.text"
+msgid "  :  "
+msgstr ""
+
+#: tdaemonoptionsform.edalttimeend.text
+msgctxt "tdaemonoptionsform.edalttimeend.text"
+msgid "  :  "
+msgstr ""
+
+#: tdaemonoptionsform.gbaltspeed.caption
+msgid "Alternate bandwidth settings"
+msgstr "Εναλλακτικές ρυθμίσεις εύρους ζώνης"
+
+#: tdaemonoptionsform.gbbandwidth.caption
+msgid "Global bandwidth settings"
+msgstr "Γενικές ρυθμίσεις εύρους ζώνης"
+
+#: tdaemonoptionsform.tabbandwidth.caption
+msgid "Bandwidth"
+msgstr "Εύρος ζώνης"
+
+#: tdaemonoptionsform.tabdownload.caption
+msgid "Download"
+msgstr "Λήψη"
+
+#: tdaemonoptionsform.tabnetwork.caption
+msgid "Network (WAN)"
+msgstr "Δίκτυο (WAN)"
+
+#: tdaemonoptionsform.tabqueue.caption
+msgctxt "tdaemonoptionsform.tabqueue.caption"
+msgid "Queue"
+msgstr ""
+
+#: tdaemonoptionsform.txaltdown.caption
+msgctxt "tdaemonoptionsform.txaltdown.caption"
+msgid "Maximum download speed:"
+msgstr ""
+
+#: tdaemonoptionsform.txaltup.caption
+msgctxt "tdaemonoptionsform.txaltup.caption"
+msgid "Maximum upload speed:"
+msgstr ""
+
+#: tdaemonoptionsform.txcachesize.caption
+msgid "Disk cache size:"
+msgstr ""
+
+#: tdaemonoptionsform.txdays.caption
+msgid "Days:"
+msgstr ""
+
+#: tdaemonoptionsform.txdownloaddir.caption
+msgid "Default download folder on remote host:"
+msgstr ""
+
+#: tdaemonoptionsform.txencryption.caption
+msgid "Encryption:"
+msgstr ""
+
+#: tdaemonoptionsform.txfrom.caption
+msgid "From:"
+msgstr ""
+
+#: tdaemonoptionsform.txkbs1.caption
+msgctxt "tdaemonoptionsform.txkbs1.caption"
+msgid "KB/s"
+msgstr ""
+
+#: tdaemonoptionsform.txkbs2.caption
+msgctxt "tdaemonoptionsform.txkbs2.caption"
+msgid "KB/s"
+msgstr ""
+
+#: tdaemonoptionsform.txkbs3.caption
+msgctxt "tdaemonoptionsform.txkbs3.caption"
+msgid "KB/s"
+msgstr ""
+
+#: tdaemonoptionsform.txkbs4.caption
+msgctxt "tdaemonoptionsform.txkbs4.caption"
+msgid "KB/s"
+msgstr ""
+
+#: tdaemonoptionsform.txmb.caption
+msgctxt "tdaemonoptionsform.txmb.caption"
+msgid "MB"
+msgstr "MB"
+
+#: tdaemonoptionsform.txminutes.caption
+msgctxt "tdaemonoptionsform.txminutes.caption"
+msgid "minutes"
+msgstr ""
+
+#: tdaemonoptionsform.txminutes1.caption
+msgctxt "tdaemonoptionsform.txminutes1.caption"
+msgid "minutes"
+msgstr ""
+
+#: tdaemonoptionsform.txpeerlimit.caption
+msgid "Global peer limit:"
+msgstr ""
+
+#: tdaemonoptionsform.txport.caption
+msgid "Incoming port:"
+msgstr ""
+
+#: tdaemonoptionsform.txto.caption
+msgid "to:"
+msgstr ""
+
+#: tdownloadform.btcancel.caption
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: tdownloadform.caption
+msgctxt "tdownloadform.caption"
+msgid "Downloading"
+msgstr "Λαμβάνονται"
+
+#: tdownloadform.txbytes.caption
+msgid "txBytes"
+msgstr ""
+
+#: tdownloadform.txfilename.caption
+msgid "txFileName"
+msgstr ""
+
+#: tdownloadform.txpercent.caption
+msgid "txPercent"
+msgstr ""
+
+#: tmainform.acaddlink.caption
+msgid "Add torrent link..."
+msgstr ""
+
+#: tmainform.acaddlink.hint
+msgctxt "tmainform.acaddlink.hint"
+msgid "Add torrent link"
+msgstr "Προσθήκη συνδέσμου torrent"
+
+#: tmainform.acaddtorrent.caption
+msgid "&Add torrent..."
+msgstr ""
+
+#: tmainform.acaddtorrent.hint
+msgctxt "tmainform.acaddtorrent.hint"
+msgid "Add torrent"
+msgstr ""
+
+#: tmainform.acaddtracker.caption
+msgid "Add tracker..."
+msgstr ""
+
+#: tmainform.acadvedittrackers.caption
+msgid "Modify trackers..."
+msgstr ""
+
+#: tmainform.acaltspeed.caption
+msgctxt "tmainform.acaltspeed.caption"
+msgid "Use alternate bandwidth settings"
+msgstr ""
+
+#: tmainform.acaltspeed.hint
+msgctxt "tmainform.acaltspeed.hint"
+msgid "Use alternate bandwidth settings"
+msgstr "Χρήση εναλλακτικών ρυθμίσεων εύρους ζώνης"
+
+#: tmainform.acbigtoolbar.caption
+msgid "acBigToolbar"
+msgstr ""
+
+#: tmainform.acchecknewversion.caption
+msgid "Check for updates"
+msgstr "Έλεγχος για ενημερώσεις"
+
+#: tmainform.acconnect.caption
+msgctxt "tmainform.acconnect.caption"
+msgid "Connect to Transmission"
+msgstr ""
+
+#: tmainform.acconnect.hint
+msgctxt "tmainform.acconnect.hint"
+msgid "Connect to Transmission"
+msgstr ""
+
+#: tmainform.acconnoptions.caption
+msgid "Manage connections..."
+msgstr ""
+
+#: tmainform.accopypath.caption
+msgid "Copy file path to clipboard"
+msgstr "Αντιγραφή θέσης αρχείου στο πρόχειρο"
+
+#: tmainform.acdaemonoptions.caption
+msgid "Transmission options..."
+msgstr ""
+
+#: tmainform.acdaemonoptions.hint
+msgctxt "tmainform.acdaemonoptions.hint"
+msgid "Transmission options"
+msgstr "Επιλογές του transmission"
+
+#: tmainform.acdeltracker.caption
+msgid "Remove tracker"
+msgstr "Διαγραφή ιχνηλάτη"
+
+#: tmainform.acdisconnect.caption
+msgid "Disconnect from Transmission"
+msgstr "Αποσύνδεση από το Transmission"
+
+#: tmainform.acedittracker.caption
+msgid "Edit tracker..."
+msgstr ""
+
+#: tmainform.acexit.caption
+msgid "E&xit"
+msgstr "Έξοδος"
+
+#: tmainform.acexport.caption
+msgid "Export settings..."
+msgstr ""
+
+#: tmainform.acfilterpane.caption
+msgid "Filter pane"
+msgstr "Παράθυρο φίλτρων"
+
+#: tmainform.acfoldergrouping.caption
+msgid "Folder grouping"
+msgstr "Ομαδοποίηση καταλόγων"
+
+#: tmainform.acforcestarttorrent.caption
+msgid "Force start"
+msgstr "Εξαναγκασμός έναρξης"
+
+#: tmainform.achideapp.caption
+msgid "Hide"
+msgstr "Απόκρυψη"
+
+#: tmainform.acimport.caption
+msgid "Import settings..."
+msgstr ""
+
+#: tmainform.acinfopane.caption
+msgid "Info pane"
+msgstr "Παράθυρο πληροφοριών"
+
+#: tmainform.aclabelgrouping.caption
+msgid "Label grouping"
+msgstr ""
+
+#: tmainform.acmenushow.caption
+msgid "Menu"
+msgstr ""
+
+#: tmainform.acmovetorrent.caption
+msgid "Set data location..."
+msgstr ""
+
+#: tmainform.acnewconnection.caption
+msgid "New connection..."
+msgstr ""
+
+#: tmainform.acopencontainingfolder.caption
+msgid "Open containing folder"
+msgstr "Άνοιγμα φακέλου"
+
+#: tmainform.acopenfile.caption
+msgid "Open"
+msgstr "Άνοιγμα"
+
+#: tmainform.acoptions.caption
+msgid "Application options..."
+msgstr ""
+
+#: tmainform.acqmovebottom.caption
+msgid "Move bottom"
+msgstr "Μετακίνηση στο τέλος"
+
+#: tmainform.acqmovedown.caption
+msgid "Move down"
+msgstr "Μετακίνηση κάτω"
+
+#: tmainform.acqmovedown.hint
+msgid "Move down queue"
+msgstr "Μετακίνηση κάτω στην ουρά"
+
+#: tmainform.acqmovetop.caption
+msgid "Move top"
+msgstr "Μετακίνηση στην αρχή"
+
+#: tmainform.acqmoveup.caption
+msgid "Move up"
+msgstr "Μετακίνηση επάνω"
+
+#: tmainform.acqmoveup.hint
+msgid "Move up queue"
+msgstr "Μετακίνηση επάνω στην ουρά"
+
+#: tmainform.acreannouncetorrent.caption
+msgid "Reannounce (get more peers)"
+msgstr "Επανεκφώνηση (φέρε επιπλέον χρήστες)"
+
+#: tmainform.acremovetorrent.caption
+msgid "Remove"
+msgstr "Διαγραφή"
+
+#: tmainform.acremovetorrent.hint
+msgid "Remove torrent"
+msgstr "Διαγραφή μόνο του torrent"
+
+#: tmainform.acremovetorrentanddata.caption
+msgid "Remove torrent and Data"
+msgstr "Διαγραφή του torrent και των Αρχείων"
+
+#: tmainform.acrename.caption
+msgctxt "tmainform.acrename.caption"
+msgid "Rename"
+msgstr "Μετονομασία"
+
+#: tmainform.acresolvecountry.caption
+msgid "Resolve country"
+msgstr "Αναγνώριση χώρας"
+
+#: tmainform.acresolvehost.caption
+msgid "Resolve host name"
+msgstr "Αναγνώριση ονόματος απομακρυσμένου υπολογιστή"
+
+#: tmainform.acselectall.caption
+msgctxt "tmainform.acselectall.caption"
+msgid "Select all"
+msgstr "Επιλογή όλων"
+
+#: tmainform.acsethighpriority.caption
+msgid "High priority"
+msgstr "Υψηλή προτεραιότητα"
+
+#: tmainform.acsetlabels.caption
+msgid "Set labels..."
+msgstr ""
+
+#: tmainform.acsetlowpriority.caption
+msgid "Low priority"
+msgstr "Χαμηλή προτεραιότητα"
+
+#: tmainform.acsetnormalpriority.caption
+msgid "Normal priority"
+msgstr "Κανονική προτεραιότητα"
+
+#: tmainform.acsetnotdownload.caption
+msgid "Don't download"
+msgstr "Μην κατεβάσεις"
+
+#: tmainform.acsetupcolumns.caption
+msgid "Setup columns..."
+msgstr ""
+
+#: tmainform.acshowapp.caption
+msgid "Show"
+msgstr "Άνοιγμα"
+
+#: tmainform.acshowcountryflag.caption
+msgid "Show country flag"
+msgstr "Παρουσίασε τη σημαία της χώρας"
+
+#: tmainform.acstartalltorrents.caption
+msgctxt "tmainform.acstartalltorrents.caption"
+msgid "Start all torrents"
+msgstr ""
+
+#: tmainform.acstartalltorrents.hint
+msgctxt "tmainform.acstartalltorrents.hint"
+msgid "Start all torrents"
+msgstr "Έναρξη όλων των torrents"
+
+#: tmainform.acstarttorrent.caption
+msgid "Start"
+msgstr "Έναρξη"
+
+#: tmainform.acstarttorrent.hint
+msgctxt "tmainform.acstarttorrent.hint"
+msgid "Start torrent"
+msgstr "Έναρξη του torrent"
+
+#: tmainform.acstatusbar.caption
+msgid "Status bar"
+msgstr "Μπάρα κατάστασης"
+
+#: tmainform.acstatusbarsizes.caption
+msgid "Status bar - Sizes"
+msgstr ""
+
+#: tmainform.acstopalltorrents.caption
+msgid "Stop all torrents"
+msgstr "Παύση όλων των torrents"
+
+#: tmainform.acstopalltorrents.hint
+msgid "Stop all"
+msgstr "Παύση όλων"
+
+#: tmainform.acstoptorrent.caption
+msgid "Stop"
+msgstr "Παύση"
+
+#: tmainform.acstoptorrent.hint
+msgid "Stop torrent"
+msgstr "Παύση του torrent"
+
+#: tmainform.actoolbarshow.caption
+msgid "Toolbar"
+msgstr ""
+
+#: tmainform.actorrentprops.caption
+msgid "Properties..."
+msgstr ""
+
+#: tmainform.actrackergrouping.caption
+msgid "Tracker grouping"
+msgstr "Ομαδοποίηση ιχνηλατών"
+
+#: tmainform.acupdateblocklist.caption
+msgid "Update blocklist"
+msgstr "Ενημέρωση λίστας αποκλεισμού"
+
+#: tmainform.acupdategeoip.caption
+msgid "Update GeoIP database"
+msgstr "Ενημέρωση βάσης δεδομένων GeoIP"
+
+#: tmainform.acverifytorrent.caption
+msgid "&Verify"
+msgstr "Επαλήθευση"
+
+#: tmainform.acverifytorrent.hint
+msgid "Verify torrent"
+msgstr "Επαλήθευση torrent"
+
+#: tmainform.caption
+msgctxt "tmainform.caption"
+msgid " "
+msgstr ""
+
+#: tmainform.godevelopmentsite.caption
+msgid "Development site"
+msgstr ""
+
+#: tmainform.gstats.columns[0].title.caption
+msgctxt "tmainform.gstats.columns[0].title.caption"
+msgid " "
+msgstr ""
+
+#: tmainform.gstats.columns[1].title.caption
+msgid "Current"
+msgstr "Τρέχοντα"
+
+#: tmainform.gstats.columns[2].title.caption
+msgid "Cumulative"
+msgstr "Αθροιστικά"
+
+#: tmainform.gtorrents.columns[0].title.caption
+msgctxt "tmainform.gtorrents.columns[0].title.caption"
+msgid "Name"
+msgstr ""
+
+#: tmainform.gtorrents.columns[10].title.caption
+msgctxt "tmainform.gtorrents.columns[10].title.caption"
+msgid "Downloaded"
+msgstr "Λήφθηκαν"
+
+#: tmainform.gtorrents.columns[11].title.caption
+msgctxt "tmainform.gtorrents.columns[11].title.caption"
+msgid "Uploaded"
+msgstr "Απεστάλησαν"
+
+#: tmainform.gtorrents.columns[12].title.caption
+msgctxt "tmainform.gtorrents.columns[12].title.caption"
+msgid "Tracker"
+msgstr "Ιχνηλάτης"
+
+#: tmainform.gtorrents.columns[13].title.caption
+msgid "Tracker status"
+msgstr "Κατάσταση ιχνηλάτη"
+
+#: tmainform.gtorrents.columns[14].title.caption
+msgid "Added on"
+msgstr "Προστέθηκε την"
+
+#: tmainform.gtorrents.columns[15].title.caption
+msgid "Completed on"
+msgstr "Ολοκληρώθηκε την"
+
+#: tmainform.gtorrents.columns[16].title.caption
+msgid "Last active"
+msgstr "Τελευταία δραστηριότητα"
+
+#: tmainform.gtorrents.columns[17].title.caption
+msgid "Path"
+msgstr "Μονοπάτι"
+
+#: tmainform.gtorrents.columns[18].title.caption
+msgctxt "tmainform.gtorrents.columns[18].title.caption"
+msgid "Priority"
+msgstr ""
+
+#: tmainform.gtorrents.columns[19].title.caption
+msgid "Size to download"
+msgstr "Μέγεθος για λήψη"
+
+#: tmainform.gtorrents.columns[1].title.caption
+msgctxt "tmainform.gtorrents.columns[1].title.caption"
+msgid "Size"
+msgstr ""
+
+#: tmainform.gtorrents.columns[20].title.caption
+msgid "ID"
+msgstr "ΑΑ"
+
+#: tmainform.gtorrents.columns[21].title.caption
+msgid "Queue position"
+msgstr "Θέση Ουράς"
+
+#: tmainform.gtorrents.columns[22].title.caption
+msgid "Seeding time"
+msgstr "Χρόνος αποστολής"
+
+#: tmainform.gtorrents.columns[23].title.caption
+msgid "Size left"
+msgstr ""
+
+#: tmainform.gtorrents.columns[24].title.caption
+msgid "Private"
+msgstr ""
+
+#: tmainform.gtorrents.columns[25].title.caption
+msgid "Labels"
+msgstr ""
+
+#: tmainform.gtorrents.columns[2].title.caption
+msgctxt "tmainform.gtorrents.columns[2].title.caption"
+msgid "Done"
+msgstr ""
+
+#: tmainform.gtorrents.columns[3].title.caption
+msgctxt "tmainform.gtorrents.columns[3].title.caption"
+msgid "Status"
+msgstr ""
+
+#: tmainform.gtorrents.columns[4].title.caption
+msgctxt "tmainform.gtorrents.columns[4].title.caption"
+msgid "Seeds"
+msgstr ""
+
+#: tmainform.gtorrents.columns[5].title.caption
+msgctxt "tmainform.gtorrents.columns[5].title.caption"
+msgid "Peers"
+msgstr ""
+
+#: tmainform.gtorrents.columns[6].title.caption
+msgctxt "tmainform.gtorrents.columns[6].title.caption"
+msgid "Down speed"
+msgstr ""
+
+#: tmainform.gtorrents.columns[7].title.caption
+msgctxt "tmainform.gtorrents.columns[7].title.caption"
+msgid "Up speed"
+msgstr ""
+
+#: tmainform.gtorrents.columns[8].title.caption
+msgid "ETA"
+msgstr "Απομένουν"
+
+#: tmainform.gtorrents.columns[9].title.caption
+msgid "Ratio"
+msgstr "Αναλογία"
+
+#: tmainform.lvfiles.columns[0].title.caption
+msgctxt "tmainform.lvfiles.columns[0].title.caption"
+msgid "File name"
+msgstr "Όνομα αρχείου"
+
+#: tmainform.lvfiles.columns[1].title.caption
+msgctxt "tmainform.lvfiles.columns[1].title.caption"
+msgid "Size"
+msgstr "Μέγεθος"
+
+#: tmainform.lvfiles.columns[2].title.caption
+msgctxt "tmainform.lvfiles.columns[2].title.caption"
+msgid "Done"
+msgstr "Έχω"
+
+#: tmainform.lvfiles.columns[3].title.caption
+msgctxt "tmainform.lvfiles.columns[3].title.caption"
+msgid "%"
+msgstr ""
+
+#: tmainform.lvfiles.columns[4].title.caption
+msgctxt "tmainform.lvfiles.columns[4].title.caption"
+msgid "Priority"
+msgstr ""
+
+#: tmainform.lvfilter.columns[0].title.caption
+msgctxt "tmainform.lvfilter.columns[0].title.caption"
+msgid " "
+msgstr ""
+
+#: tmainform.lvpeers.columns[0].title.caption
+msgid "Host"
+msgstr "Χρήστης"
+
+#: tmainform.lvpeers.columns[1].title.caption
+msgid "Port"
+msgstr "Θύρα"
+
+#: tmainform.lvpeers.columns[2].title.caption
+msgid "Country"
+msgstr "Χώρα"
+
+#: tmainform.lvpeers.columns[3].title.caption
+msgid "Client"
+msgstr "Πελάτης"
+
+#: tmainform.lvpeers.columns[4].title.caption
+msgid "Flags"
+msgstr "Σημαίες"
+
+#: tmainform.lvpeers.columns[5].title.caption
+msgid "Have"
+msgstr "Έχει"
+
+#: tmainform.lvpeers.columns[6].title.caption
+msgctxt "tmainform.lvpeers.columns[6].title.caption"
+msgid "Up speed"
+msgstr "Ταχύτητα αποστολής"
+
+#: tmainform.lvpeers.columns[7].title.caption
+msgctxt "tmainform.lvpeers.columns[7].title.caption"
+msgid "Down speed"
+msgstr "Ταχύτητα λήψης"
+
+#: tmainform.lvtrackers.columns[0].title.caption
+msgctxt "tmainform.lvtrackers.columns[0].title.caption"
+msgid "Name"
+msgstr "Όνομα"
+
+#: tmainform.lvtrackers.columns[1].title.caption
+msgctxt "tmainform.lvtrackers.columns[1].title.caption"
+msgid "Status"
+msgstr "Κατάσταση"
+
+#: tmainform.lvtrackers.columns[2].title.caption
+msgid "Update in"
+msgstr "Ενημέρωση σε"
+
+#: tmainform.lvtrackers.columns[3].title.caption
+msgctxt "tmainform.lvtrackers.columns[3].title.caption"
+msgid "Seeds"
+msgstr "Αποστέλλουν"
+
+#: tmainform.maintoolbar.caption
+msgid "MainToolBar"
+msgstr ""
+
+#: tmainform.menuitem101.caption
+msgid "Copy Magnet Link(s)"
+msgstr ""
+
+#: tmainform.menuitem103.caption
+msgid "Big Toolbar"
+msgstr ""
+
+#: tmainform.menuitem17.hint
+msgctxt "tmainform.menuitem17.hint"
+msgid "Application Options (Ctrl+F9)"
+msgstr ""
+
+#: tmainform.menushow.caption
+msgid "MenuShow"
+msgstr ""
+
+#: tmainform.miabout.caption
+msgid "About..."
+msgstr ""
+
+#: tmainform.miconnect.caption
+msgctxt "tmainform.miconnect.caption"
+msgid "Connect to Transmission"
+msgstr "Σύνδεση στο Transmission"
+
+#: tmainform.micopylabel.caption
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+#: tmainform.mihelp.caption
+msgid "&Help"
+msgstr "&Βοήθεια"
+
+#: tmainform.mihomepage.caption
+msgid "Visit home page"
+msgstr "Αρχική Σελίδα"
+
+#: tmainform.mipriority.caption
+msgctxt "tmainform.mipriority.caption"
+msgid "Priority"
+msgstr ""
+
+#: tmainform.miqueue.caption
+msgctxt "tmainform.miqueue.caption"
+msgid "Queue"
+msgstr ""
+
+#: tmainform.mitools.caption
+msgid "T&ools"
+msgstr "Εργαλεία"
+
+#: tmainform.mitorrent.caption
+msgid "&Torrent"
+msgstr "Torrent"
+
+#: tmainform.miview.caption
+msgid "View"
+msgstr "Προβολή"
+
+#: tmainform.opentorrentdlg.title
+msgid "Select a .torrent to open"
+msgstr "Επέλεξε ένα αρχείου τύπου .torrent για άνοιγμα"
+
+#: tmainform.pmidownspeedlimit.caption
+msgid "Maximum download speed"
+msgstr "Μέγιστη ταχύτητα λήψης"
+
+#: tmainform.pmipriority.caption
+msgctxt "tmainform.pmipriority.caption"
+msgid "Priority"
+msgstr "Προτεραιότητα"
+
+#: tmainform.pmiqueue.caption
+msgctxt "tmainform.pmiqueue.caption"
+msgid "Queue"
+msgstr "Ουρά"
+
+#: tmainform.pmiupspeedlimit.caption
+msgid "Maximum upload speed"
+msgstr "Μέγιστη ταχύτητα αποστολής"
+
+#: tmainform.searchtoolbar.caption
+msgid "SearchToolbar"
+msgstr ""
+
+#: tmainform.sepaltspeed.caption
+msgid "sepAltSpeed"
+msgstr ""
+
+#: tmainform.sepqueue.caption
+msgid "sepQueue"
+msgstr ""
+
+#: tmainform.tabfiles.caption
+msgid "Files"
+msgstr "Αρχεία"
+
+#: tmainform.tabgeneral.caption
+msgctxt "tmainform.tabgeneral.caption"
+msgid "General"
+msgstr ""
+
+#: tmainform.tabpeers.caption
+msgctxt "tmainform.tabpeers.caption"
+msgid "Peers"
+msgstr "Χρήστες"
+
+#: tmainform.tabstats.caption
+msgid "Statistics"
+msgstr "Στατιστικά"
+
+#: tmainform.tabtrackers.caption
+msgid "Trackers"
+msgstr "Ιχνηλάτες"
+
+#: tmainform.tbsearchcancel.caption
+msgid "tbSearchCancel"
+msgstr ""
+
+#: tmainform.toolbutton10.caption
+msgid "ToolButton10"
+msgstr ""
+
+#: tmainform.toolbutton2.caption
+msgid "ToolButton2"
+msgstr ""
+
+#: tmainform.toolbutton5.caption
+msgid "Application option..."
+msgstr ""
+
+#: tmainform.toolbutton5.hint
+msgctxt "tmainform.toolbutton5.hint"
+msgid "Application Options (Ctrl+F9)"
+msgstr ""
+
+#: tmainform.toolbutton6.caption
+msgid "ToolButton6"
+msgstr ""
+
+#: tmainform.toolbutton7.caption
+msgid "ToolButton7"
+msgstr ""
+
+#: tmainform.txaddedon.caption
+msgid "txAddedOn"
+msgstr ""
+
+#: tmainform.txaddedonlabel.caption
+msgid "Added on:"
+msgstr ""
+
+#: tmainform.txcomment.caption
+msgid "txComment"
+msgstr ""
+
+#: tmainform.txcommentlabel.caption
+msgid "Comment:"
+msgstr ""
+
+#: tmainform.txcompletedon.caption
+msgid "txCompletedOn"
+msgstr ""
+
+#: tmainform.txcompletedonlabel.caption
+msgid "Completed on:"
+msgstr ""
+
+#: tmainform.txconnerrorlabel.caption
+msgid "Connection error occurred:"
+msgstr ""
+
+#: tmainform.txcreated.caption
+msgid "txCreated"
+msgstr ""
+
+#: tmainform.txcreatedlabel.caption
+msgid "Created on:"
+msgstr ""
+
+#: tmainform.txdownlimit.caption
+msgid "txDownLimit"
+msgstr ""
+
+#: tmainform.txdownlimitlabel.caption
+msgid "Down limit:"
+msgstr ""
+
+#: tmainform.txdownloaded.caption
+msgid "txDownloaded"
+msgstr ""
+
+#: tmainform.txdownloadedlabel.caption
+msgctxt "tmainform.txdownloadedlabel.caption"
+msgid "Downloaded:"
+msgstr ""
+
+#: tmainform.txdownprogress.caption
+msgid "100.0%"
+msgstr ""
+
+#: tmainform.txdownprogresslabel.caption
+msgctxt "tmainform.txdownprogresslabel.caption"
+msgid "Downloaded:"
+msgstr ""
+
+#: tmainform.txdownspeed.caption
+msgid "txDownSpeed"
+msgstr ""
+
+#: tmainform.txdownspeedlabel.caption
+msgid "Download speed:"
+msgstr ""
+
+#: tmainform.txerror.caption
+msgid "txError"
+msgstr ""
+
+#: tmainform.txerrorlabel.caption
+msgid "Error:"
+msgstr ""
+
+#: tmainform.txglobalstats.caption
+msgid "Global statistics:"
+msgstr ""
+
+#: tmainform.txhash.caption
+msgid "txHash"
+msgstr ""
+
+#: tmainform.txhashlabel.caption
+msgid "Hash:"
+msgstr ""
+
+#: tmainform.txlabels.caption
+msgid "txLabels"
+msgstr ""
+
+#: tmainform.txlabelslabel.caption
+msgid "Labels:"
+msgstr ""
+
+#: tmainform.txlastactive.caption
+msgid "txLastActive"
+msgstr ""
+
+#: tmainform.txlastactivelabel.caption
+msgid "Last active:"
+msgstr ""
+
+#: tmainform.txmaglabel.caption
+msgid "Magnet Link:"
+msgstr ""
+
+#: tmainform.txmaxpeers.caption
+msgid "txMaxPeers"
+msgstr ""
+
+#: tmainform.txmaxpeerslabel.caption
+msgid "Max peers:"
+msgstr ""
+
+#: tmainform.txpeers.caption
+msgid "txPeers"
+msgstr ""
+
+#: tmainform.txpeerslabel.caption
+msgid "Peers:"
+msgstr ""
+
+#: tmainform.txpieces.caption
+msgid "txPieces"
+msgstr ""
+
+#: tmainform.txpieceslabel.caption
+msgid "Pieces:"
+msgstr ""
+
+#: tmainform.txratio.caption
+msgid "txRatio"
+msgstr ""
+
+#: tmainform.txratiolabel.caption
+msgid "Share ratio:"
+msgstr ""
+
+#: tmainform.txremaining.caption
+msgid "txRemaining"
+msgstr ""
+
+#: tmainform.txremaininglabel.caption
+msgid "Remaining:"
+msgstr ""
+
+#: tmainform.txseeds.caption
+msgid "txSeeds"
+msgstr ""
+
+#: tmainform.txseedslabel.caption
+msgid "Seeds:"
+msgstr ""
+
+#: tmainform.txstatus.caption
+msgid "txStatus"
+msgstr ""
+
+#: tmainform.txstatuslabel.caption
+msgid "Status:"
+msgstr ""
+
+#: tmainform.txtorrentheader.caption
+msgid "Torrent"
+msgstr "Torrent"
+
+#: tmainform.txtorrentname.caption
+msgid "txTorrentName"
+msgstr ""
+
+#: tmainform.txtorrentnamelabel.caption
+msgctxt "tmainform.txtorrentnamelabel.caption"
+msgid "Name:"
+msgstr ""
+
+#: tmainform.txtotalsize.caption
+msgid "txTotalSize"
+msgstr ""
+
+#: tmainform.txtotalsizelabel.caption
+msgid "Total size:"
+msgstr ""
+
+#: tmainform.txtracker.caption
+msgid "txTracker"
+msgstr ""
+
+#: tmainform.txtrackerlabel.caption
+msgid "Tracker:"
+msgstr ""
+
+#: tmainform.txtrackerupdate.caption
+msgid "txTrackerUpdate"
+msgstr ""
+
+#: tmainform.txtrackerupdatelabel.caption
+msgid "Tracker update on:"
+msgstr ""
+
+#: tmainform.txtransferheader.caption
+msgid "Transfer"
+msgstr "Μεταφόρτωση"
+
+#: tmainform.txuplimit.caption
+msgid "txUpLimit"
+msgstr ""
+
+#: tmainform.txuplimitlabel.caption
+msgid "Up limit:"
+msgstr ""
+
+#: tmainform.txuploaded.caption
+msgid "txUploaded"
+msgstr ""
+
+#: tmainform.txuploadedlabel.caption
+msgid "Uploaded:"
+msgstr ""
+
+#: tmainform.txupspeed.caption
+msgid "txUpSpeed"
+msgstr ""
+
+#: tmainform.txupspeedlabel.caption
+msgid "Upload speed:"
+msgstr ""
+
+#: tmainform.txwasted.caption
+msgid "txWasted"
+msgstr ""
+
+#: tmainform.txwastedlabel.caption
+msgid "Wasted:"
+msgstr ""
+
+#: tmovetorrentform.btbrowse.caption
+msgctxt "tmovetorrentform.btbrowse.caption"
+msgid "Browse..."
+msgstr ""
+
+#: tmovetorrentform.caption
+msgid "Torrent data location"
+msgstr "Θέση αρχείων"
+
+#: tmovetorrentform.cbmovedata.caption
+msgid "Move torrent data from current location to new location"
+msgstr "Μεταφορά των αρχείων από την τρέχουσα θέση σε νέα θέση"
+
+#: tmovetorrentform.txtorrentdir.caption
+msgid "New location for torrent data:"
+msgstr ""
+
+#: toptionsform.caption
+msgid "Application options"
+msgstr "Επιλογές εφαρμογής"
+
+#: toptionsform.cbcalcavg.caption
+msgid "Average out transfer speeds to eliminate fluctuations"
+msgstr "Χρήση μέσου όρου ταχύτητας μεταφοράς για αποφυγή διακυμάνσεων"
+
+#: toptionsform.cbchecknewversion.caption
+msgid "Check for new version every:"
+msgstr ""
+
+#: toptionsform.cbdeletetorrentfile.caption
+msgid "Delete a .torrent file after a successful addition"
+msgstr "Διαγραφή αρχείου .torrent μετά από επιτυχή προσθήκη"
+
+#: toptionsform.cblinksfromclipboard.caption
+msgid "Automatically add torrent links from the clipboard"
+msgstr "Αυτόματη προσθήκη συνδέσμων torrent από το πρόχειρο"
+
+#: toptionsform.cbregext.caption
+#, object-pascal-format
+msgid "Handle .torrent files by %s"
+msgstr "Διαχείριση των αρχείων .torrent από το %s"
+
+#: toptionsform.cbregmagnet.caption
+#, object-pascal-format
+msgid "Handle magnet links by %s"
+msgstr "Διαχείριση magnet link από το %s"
+
+#: toptionsform.cbshowaddtorrentwindow.caption
+msgid "Prompt for download options when adding a new torrent"
+msgstr "Προτροπή για επιλογές λήψης κατά την προσθήκη νέου torrent"
+
+#: toptionsform.cbtrayclose.caption
+msgid "Close to tray"
+msgstr "Κλείσιμο στη γραμμή εργασιών"
+
+#: toptionsform.cbtrayiconalways.caption
+msgid "Tray icon always visible"
+msgstr "Εικονίδιο γραμμής εργασιών πάντα ορατό"
+
+#: toptionsform.cbtrayminimize.caption
+msgid "Minimize to tray"
+msgstr "Ελαχιστοποίηση στη γραμμή εργασιών"
+
+#: toptionsform.cbtraynotify.caption
+msgid "Show notifications in tray icon"
+msgstr "Προβολή ειδοποιήσεων στο εικονίδιο γραμμής εργασιών"
+
+#: toptionsform.gbdata.caption
+msgid "Data display"
+msgstr "Προβολή δεδομένων"
+
+#: toptionsform.gbnewtorrent.caption
+msgctxt "toptionsform.gbnewtorrent.caption"
+msgid "Add torrent"
+msgstr "Προσθήκη torrent"
+
+#: toptionsform.gbsysint.caption
+msgid "System integration"
+msgstr "Ενσωμάτωση στο λειτουργικό σύστημα"
+
+#: toptionsform.gbtray.caption
+msgid "Tray icon"
+msgstr "Εικονίδιο γραμμής εργασιών"
+
+#: toptionsform.tabadvanced.caption
+msgctxt "toptionsform.tabadvanced.caption"
+msgid "Advanced"
+msgstr ""
+
+#: toptionsform.tabgeneral.caption
+msgctxt "toptionsform.tabgeneral.caption"
+msgid "General"
+msgstr ""
+
+#: toptionsform.txdays.caption
+msgid "days"
+msgstr "ημέρες"
+
+#: toptionsform.txintfscale.caption
+msgid "Font size:"
+msgstr ""
+
+#: toptionsform.txlanguage.caption
+msgctxt "toptionsform.txlanguage.caption"
+msgid "Language:"
+msgstr ""
+
+#: toptionsform.txperc.caption
+msgctxt "toptionsform.txperc.caption"
+msgid "%"
+msgstr ""
+
+#: toptionsform.txrefreshinterval.caption
+msgid "Data refresh interval:"
+msgstr ""
+
+#: toptionsform.txrefreshintervalmin.caption
+msgid "Data refresh interval when minimized:"
+msgstr ""
+
+#: toptionsform.txseconds.caption
+msgctxt "toptionsform.txseconds.caption"
+msgid "seconds"
+msgstr ""
+
+#: toptionsform.txseconds2.caption
+msgctxt "toptionsform.txseconds2.caption"
+msgid "seconds"
+msgstr "δευτερόλεπτα"
+
+#: tpasswordconnect.caption
+msgid "PasswordConnect"
+msgstr ""
+
+#: tpasswordconnect.lmsg.caption
+msgid "lMsg"
+msgstr ""
+
+#: tpasswordconnect.passw.text
+msgid "12345"
+msgstr ""
+
+#: ttorrpropsform.caption
+msgid "Torrent properties"
+msgstr "Ιδιότητες torrent"
+
+#: ttorrpropsform.cbidleseedlimit.caption
+msgctxt "ttorrpropsform.cbidleseedlimit.caption"
+msgid "Stop seeding when inactive for:"
+msgstr ""
+
+#: ttorrpropsform.cbmaxdown.caption
+msgctxt "ttorrpropsform.cbmaxdown.caption"
+msgid "Maximum download speed:"
+msgstr ""
+
+#: ttorrpropsform.cbmaxup.caption
+msgctxt "ttorrpropsform.cbmaxup.caption"
+msgid "Maximum upload speed:"
+msgstr ""
+
+#: ttorrpropsform.cbseedratio.caption
+msgctxt "ttorrpropsform.cbseedratio.caption"
+msgid "Seed ratio:"
+msgstr ""
+
+#: ttorrpropsform.tabadvanced.caption
+msgctxt "ttorrpropsform.tabadvanced.caption"
+msgid "Advanced"
+msgstr "Για προχωρημένους"
+
+#: ttorrpropsform.tabgeneral.caption
+msgctxt "ttorrpropsform.tabgeneral.caption"
+msgid "General"
+msgstr "Γενικά"
+
+#: ttorrpropsform.txkbs1.caption
+msgctxt "ttorrpropsform.txkbs1.caption"
+msgid "KB/s"
+msgstr ""
+
+#: ttorrpropsform.txkbs2.caption
+msgctxt "ttorrpropsform.txkbs2.caption"
+msgid "KB/s"
+msgstr "KB/s"
+
+#: ttorrpropsform.txminutes.caption
+msgctxt "ttorrpropsform.txminutes.caption"
+msgid "minutes"
+msgstr "λεπτά"
+
+#: ttorrpropsform.txname.caption
+msgctxt "ttorrpropsform.txname.caption"
+msgid "Name:"
+msgstr ""
+
+#: ttorrpropsform.txpeerlimit.caption
+msgctxt "ttorrpropsform.txpeerlimit.caption"
+msgid "Peer limit:"
+msgstr ""
+
+#: ttorrpropsform.txtrackers.caption
+msgid "Trackers:"
+msgstr ""
+
+#TranslationLanguage
+#Ελληνικά
+
+#&All
+#&Όλα
+
+#&Close
+#&Κλείσιμο
+
+#&Ignore
+#&Αγνόησε
+
+#&No
+#&Όχι
+
+#&OK
+#&OK
+
+#&Open
+#&Άνοιγμα
+
+#&Retry
+#&Επανάληψη
+
+#&Save
+#&Αποθήκευση
+
+#&Unlock
+#&Ξεκλείδωμα
+
+#&Yes
+#&Ναι
+
+#Abort
+#Ματαίωση
+
+#&Add torrent
+#Προσθήκη torrent
+
+#Authentication
+#Πιστοποίηση
+
+#Comment
+#Σχόλια
+
+#Confirmation
+#Επικύρωση
+
+#Connecting to daemon
+#Συνδέεται στο δαίμονα
+
+#Connection error occurred
+#Σφάλμα σύνδεσης
+
+#Created on
+#Δημιουργήθηκε την
+
+#Destination folder
+#Φάκελος προορισμού
+
+#Donate to support further development
+#Υποστηρίξτε την περαιτέρω ανάπτυξη μέσω ΔΩΡΕΑΣ
+
+#Donate via PayPal,WebMoney,Credit card
+#Δωρίστε μέσω PayPal,WebMoney,Πιστωτικής Κάρτας
+
+#Down limit
+#Όριο λήψης
+
+#Download speed
+#Ταχύτητα λήψης
+
+#Encryption
+#Κρυπτογράφηση
+
+#Flag images archive is needed to display country flags.~Download this archive now?
+#Απαιτούνται αρχεία εικόνας για προβολή της σημαίας κάθε χώρας.
+#Να ξεκινήσει η λήψη των αρχείων εικόνας τώρα;
+
+#Global peer limit
+#Γενικό όριο κόμβων
+
+#Hash
+#Hash
+
+#Incoming port is closed. Check your firewall settings
+#Η θύρα εισερχομένων συνδέσεων είναι κλειστή.Ελέγξτε τις ρυθμίσεις του τείχους προστασίας
+
+#Incoming port tested successfully
+#Η θύρα εισερχομένων συνδέσεων δοκιμάστηκε με επιτυχία
+
+#Incoming port
+#Θύρα εισερχομένων συνδέσεων
+
+#Information
+#Πληροφορίες
+
+#Language
+#Γλώσσα
+
+#Max peers
+#Μέγιστος αριθμός κόμβων
+
+#No host name specified
+#Δεν έχει οριστεί όνομα εξυπηρετητή
+
+#No proxy server specified
+#Δεν έχει οριστεί proxy server
+
+#No to all
+#Όχι σε όλα
+
+#Password
+#Συνθηματικό
+
+#Peer limit
+#Όριο κόμβων
+
+#Pieces
+#Τμήματα
+
+#Properties
+#Ιδιότητες
+
+#Proxy password
+#Συνθηματικό proxy
+
+#Proxy port
+#Θύρα Proxy
+
+#Proxy server
+#Proxy server
+
+#Proxy user name
+#Όνομα χρήστη Proxy
+
+#Reconnect in %d seconds
+#Επανασύνδεση σε %d δευτερόλεπτα
+
+#Remaining
+#Υπολείπονται
+
+#Remote host
+#Δ/νση υπολογιστή
+
+#Seed ratio
+#Αναλογία αποστολής
+
+#Setup columns
+#Επιλογή στηλών
+
+#Share ratio
+#Αναλογία διαμοιρασμού
+
+#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
+#Torrents (*.torrent)|*.torrent|Όλα τα αρχεία (*.*)|*.*
+
+#Total size
+#Συνολικό μέγεθος
+
+#Tracker update on
+#Ενημέρωση ιχνηλάτη σε
+
+#Unable to extract flag image
+#Αδυναμία ανεύρεσης εικονιδίου σημαίας
+
+#Up limit
+#Όριο αποστολής
+
+#Update complete
+#Ολοκλήρωση ενημέρωσης
+
+#Upload speed
+#Ταχύτητα αποστολής
+
+#User name
+#Όνομα χρήστη
+
+#Warning
+#Προειδοποίηση
+
+#Wasted
+#Χάθηκαν
+
+#Yes to &All
+#Ναι σε &Όλα
+
+#Directory for incomplete files
+#Φάκελος για μη ολοκληρωμένα αρχεία
+
+#Enable blocklist
+#Ενεργοποίηση της λίστας αποκλεισμού
+
+#New location for torrent data
+#Νέα θέση για τα αρχεία
+
+#No link was specified
+#Δέν ορίστηκε σύνδεση
+
+#No torrent location was specified
+#Δεν ορίστηκε η θέση των torrent
+
+#Set data location
+#Όρισε θέση αρχείων
+
+#The block list has been updated successfully.~The list entries count: %d
+#Η λίστα αποκλεισμού ενημερώθηκε επιτυχώς.
+#Η λίστα περιέχει %d καταχωρήσεις
+
+#The directory for incomplete files was not specified
+#Δεν ορίστηκε ο φάκελος για μη ολοκληρωμένα αρχεία
+
+#The downloads directory was not specified
+#Δεν ορίστηκε ο φάκελος για τις λήψεις
+
+#Unable to execute "%s"
+#Αδυναμία εκτέλεσης "%s"
+
+#URL of a .torrent file or a magnet link
+#URL ενός αρχείου .torrent ή ένα magnet link
+
+#Days
+#Ημέρες
+
+#Disk cache size
+#Μέγεθος cache του δίσκου
+
+#Download speeds (KB/s)
+#Ταχύτητες λήψης (KB/s)
+
+#Edit tracker
+#Επεξεργασία ιχνηλάτη
+
+#Free disk space
+#Ελεύθερος χώρος στο δίσκο
+
+#From
+#από
+
+#New connection
+#Νέα σύνδεση
+
+#No tracker URL was specified
+#Δεν καθορίστηκε URL ιχνηλάτη
+
+#Stop seeding when inactive for
+#Διακοπή αποστολής ανενεργού
+
+#The invalid time value was entered
+#Εισήχθη μη έγκυρη τιμή ώρας
+
+#to
+#έως
+
+#Tracker announce URL
+#URL εκφώνησης ιχνηλάτη
+
+#Upload speeds (KB/s)
+#Ταχύτητες αποστολής (KB/s)
+
+#Browse
+#Αναζήτηση
+
+#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
+#Μια νέα έκδοση του %s είναι διαθέσιμη.
+#Εγκατεστημένη έκδοση : %s
+#Νέα έκδοση: %s
+#Να ανοίξει η ιστοσελίδα λήψης της νέας έκδοσης;
+
+#Check for new version every
+#Έλεγχος για νέα έκδοση κάθε
+
+#Consider active torrents as stalled when idle for
+#Θεώρησε τα ενεργά torrent ως στάσιμα εάν είναι ανενεργά για
+
+#Donate!
+#Δωρεές!
+
+#Download queue size
+#Μέγεθος ουράς λήψεων
+
+#Error checking for new version
+#Σφάλμα ελέγχου νέας έκδοσης
+
+#Modify trackers
+#Τροποποίηση ιχνηλατών
+
+#No updates have been found.~You are running the latest version of %s
+#Δεν βρέθηκαν ενημερώσεις.
+#Χρησιμοποιείτε τη νεώτερη έκδοση του %s
+
+#Upload queue size
+#Μέγεθος ουράς αποστολών
+
+#Global statistics
+#Συνολικά στατιστικά
+
+#Connection name
+#Όνομα σύνδεσης
+
+#Could not connect to tracker
+#=Αδύνατη η σύνδεση στον ιχνηλάτη
+
+#Data refresh interval when minimized
+#Ανανέωση δεδομένων υπό ελαχιστοποίηση
+
+#Data refresh interval
+#Διάστημα ανανέωσης δεδομένων
+
+#Default download folder on remote host
+#Προεπιλεγμένος φάκελος λήψεων στον απομακρυσμένο υπολογιστή
+
+#Downloading torrent file
+#Λήψη αρχείου torrent
+
+#Font size
+#Μέγεθος γραμματοσειράς
+
+#Invalid name specified
+#Μη έγκυρο όνομα
+
+#Manage connections
+#Διαχείριση συνδέσεων
+
+#Please enter a password to connect to %s
+#Παρακαλώ εισάγετε το συνθηματικό για να συνδεθείτε στο %s
+
+#Please specify how %s will connect to a remote host running Transmission daemon (service)
+#Παρακαλώ καθορίστε πως το %s θα συνδέεται σε έναν απομακρυσμένο υπολογιστή όπου εκτελείται ο δαίμονας του Transmission (υπηρεσία)
+
+#RPC path
+#Μονοπάτι RPC
+
+#Save as
+#Αποθήκευση ως
+
+#Torrent not registered with this tracker
+#=Το torrent δεν είναι εγγεγραμμένο στον ιχνηλάτη
+
+#Unable to find path mapping.~Use the application's options to setup path mappings
+#Αδύνατη η εύρεση του μονοπατιού.
+#Χρησιμοποιήστε τις επιλογές της εφαρμογής για καθορισμό των μονοπατιών
+
+#You need to restart the application to apply changes
+#Απαιτείται επανεκκίνηση για εφαρμογή των αλλαγών
+

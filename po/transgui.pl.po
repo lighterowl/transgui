@@ -1,0 +1,2569 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: about.serrorcheckingversion
+msgid "Error checking for new version."
+msgstr ""
+
+#: about.slatestversion
+#, object-pascal-format
+msgid ""
+"No updates have been found.\n"
+"You are running the latest version of %s."
+msgstr ""
+
+#: about.snewversionfound
+#, object-pascal-format
+msgid ""
+"A new version of %s is available.\n"
+"Your current version: %s\n"
+"The new version: %s\n"
+"\n"
+"Do you wish to open the Downloads web page?"
+msgstr ""
+
+#: addlink.snolink
+msgid "No link was specified."
+msgstr ""
+
+#: addtorrent.sinvalidname
+msgid "Invalid name specified."
+msgstr ""
+
+#: addtorrent.sselectdownloadfolder
+msgid "Select a folder for download"
+msgstr "Wybierz folder pobierania"
+
+#: addtorrent.ssize
+msgctxt "addtorrent.ssize"
+msgid "Size"
+msgstr ""
+
+#: addtracker.snotracker
+msgid "No tracker URL was specified."
+msgstr ""
+
+#: addtracker.strackerprops
+msgid "Tracker properties"
+msgstr "Właściwości trackera"
+
+#: connoptions.sdelconnection
+#, object-pascal-format
+msgid "Are you sure to delete connection '%s'?"
+msgstr "Czy na pewno chcesz usunąć połączenie '%s'?"
+
+#: connoptions.snewconnection
+msgid "New connection to Transmission"
+msgstr "Nowe połączenie do Transmission"
+
+#: connoptions.snohost
+msgid "No host name specified."
+msgstr ""
+
+#: connoptions.snoproxy
+msgid "No proxy server specified."
+msgstr ""
+
+#: daemonoptions.sencryptiondisabled
+msgid "Encryption disabled"
+msgstr "Szyfrowanie wyłączone"
+
+#: daemonoptions.sencryptionenabled
+msgid "Encryption enabled"
+msgstr "Szyfrowanie włączone"
+
+#: daemonoptions.sencryptionrequired
+msgid "Encryption required"
+msgstr "Szyfrowanie wymagane"
+
+#: daemonoptions.sinvalidtime
+msgid "The invalid time value was entered."
+msgstr ""
+
+#: daemonoptions.snodownloaddir
+msgid "The downloads directory was not specified."
+msgstr ""
+
+#: daemonoptions.snoincompletedir
+msgid "The directory for incomplete files was not specified."
+msgstr ""
+
+#: daemonoptions.sporttestfailed
+msgid "Incoming port is closed. Check your firewall settings."
+msgstr ""
+
+#: daemonoptions.sporttestsuccess
+msgid "Incoming port tested successfully."
+msgstr ""
+
+#: download.sdownloadprogress
+#, object-pascal-format
+msgid "%s of %s downloaded"
+msgstr "%s z %s pobrano"
+
+#: download.sdownloadprogress2
+#, object-pascal-format
+msgid "%s downloaded"
+msgstr "%s pobrano"
+
+#: main.sactive
+msgid "Active"
+msgstr "Aktywne"
+
+#: main.sactivetime
+msgid "Active time"
+msgstr "Czas pracy"
+
+#: main.sall
+msgid "All torrents"
+msgstr "Wszystkie torrenty"
+
+#: main.saverage
+msgid "average"
+msgstr "średnio"
+
+#: main.sbididefault
+msgid "Default"
+msgstr "Domyślny"
+
+#: main.sbidileftright
+msgid "Left->Right"
+msgstr "Lewy->Prawy"
+
+#: main.sbidirightleft
+msgid "Right->Left"
+msgstr "Prawy->Lewy"
+
+#: main.sbidirightleftnoalign
+msgid "Right->Left (No Align)"
+msgstr "Prawy->Lewy (bez wyrównania)"
+
+#: main.sbidirightleftreadonly
+msgid "Right->Left (Reading Only)"
+msgstr "Prawy->Lewy (tylko przy czytaniu)"
+
+#: main.sblocklistupdatecomplete
+#, object-pascal-format
+msgid ""
+"The block list has been updated successfully.\n"
+"The list entries count: %d."
+msgstr ""
+
+#: main.sbyte
+msgid "b"
+msgstr "b"
+
+#: main.schecknewversion
+#, object-pascal-format
+msgid "Do you wish to enable automatic checking for a new version of %s?"
+msgstr "Czy chcesz włączyć automatyczne sprawdzanie nowej wersji %s?"
+
+#: main.scompleted
+msgid "Completed"
+msgstr "Ukończono"
+
+#: main.sconnected
+msgid "connected"
+msgstr "połączono"
+
+#: main.sconnectingtodaemon
+msgid "Connecting to daemon..."
+msgstr ""
+
+#: main.sconnectto
+#, object-pascal-format
+msgid "Connect to %s"
+msgstr "Połącz z %s"
+
+#: main.sdays
+#, object-pascal-format
+msgid "%dd"
+msgstr "%dd"
+
+#: main.sdisconnected
+msgid "Disconnected"
+msgstr "Rozłącz"
+
+#: main.sdone
+#, object-pascal-format
+msgid "%s (%s done)"
+msgstr "%s (%s pobrane)"
+
+#: main.sdownloadcomplete
+msgid "Download complete"
+msgstr "Zakończono pobieranie"
+
+#: main.sdownloaded
+msgctxt "main.sdownloaded"
+msgid "Downloaded"
+msgstr ""
+
+#: main.sdownloading
+msgctxt "main.sdownloading"
+msgid "Downloading"
+msgstr ""
+
+#: main.sdownloadingseeding
+#, object-pascal-format
+msgid "%s%s%d downloading, %d seeding%s%s, %s"
+msgstr "%s%s%d pobieranie, %d seedowanie%s%s, %s"
+
+#: main.sdownloadingtorrent
+msgid "Downloading torrent file..."
+msgstr ""
+
+#: main.sdownspeed
+#, object-pascal-format
+msgid "D: %s/s"
+msgstr "D: %s/s"
+
+#: main.sduplicatetorrent
+msgid "Torrent already exists in the list"
+msgstr "Torrent już istnieje na liście"
+
+#: main.senterpassword
+#, object-pascal-format
+msgid "Please enter a password to connect to %s:"
+msgstr ""
+
+#: main.serrorstate
+msgid "Error"
+msgstr "Błąd"
+
+#: main.sfilesadded
+msgid "Files added"
+msgstr "Pliki dodane"
+
+#: main.sfinished
+msgid "Finished"
+msgstr "Ukończono"
+
+#: main.sfinisheddownload
+#, object-pascal-format
+msgid "'%s' has finished downloading"
+msgstr "Zakończono pobieranie '%s'"
+
+#: main.sfreespace
+#, object-pascal-format
+msgid "Free: %s"
+msgstr "Wolne: %s"
+
+#: main.sgbyte
+msgid "GB"
+msgstr "GB"
+
+#: main.sgeoipconfirm
+msgid ""
+"Geo IP database is needed to resolve country by IP address.\n"
+"Download this database now?"
+msgstr "Baza Geo IP jest potrzebna, aby wykryć kraj peera."
+"Czy chcesz ją teraz pobrać?"
+
+#: main.shashfails
+#, object-pascal-format
+msgid "%s (%d hashfails)"
+msgstr "%s (%d błędów bufora)"
+
+#: main.shave
+#, object-pascal-format
+msgid "%d x %s (have %d)"
+msgstr "%d x %s (pobrano %d)"
+
+#: main.shigh
+msgid "high"
+msgstr "Wysoki"
+
+#: main.shours
+#, object-pascal-format
+msgid "%dh"
+msgstr "%dh"
+
+#: main.sinactive
+msgid "Inactive"
+msgstr "Nieaktywne"
+
+#: main.sinswarm
+msgid "in swarm"
+msgstr "w kolejce"
+
+#: main.skbyte
+msgid "KB"
+msgstr "KB"
+
+#: main.slanguagelist
+msgid "Language list"
+msgstr ""
+
+#: main.slanguagepath
+msgid "Language path"
+msgstr ""
+
+#: main.slanguagepathfile
+msgid "Language pathfile"
+msgstr ""
+
+#: main.slow
+msgid "low"
+msgstr "niski"
+
+#: main.smbyte
+msgctxt "main.smbyte"
+msgid "MB"
+msgstr ""
+
+#: main.smins
+#, object-pascal-format
+msgid "%dm"
+msgstr "%dm"
+
+#: main.smonths
+#, object-pascal-format
+msgid "%dmo"
+msgstr "%dm-c"
+
+#: main.snopathmapping
+msgid ""
+"Unable to find path mapping.\n"
+"Use the application's options to setup path mappings."
+msgstr ""
+
+#: main.snormal
+msgid "normal"
+msgstr "normalny"
+
+#: main.snotracker
+msgid "No tracker"
+msgstr "Brak trackera"
+
+#: main.sof
+msgid "of"
+msgstr "z"
+
+#: main.spersecond
+msgid "/s"
+msgstr "/s"
+
+#: main.sprivateoff
+msgid "OFF"
+msgstr ""
+
+#: main.sprivateon
+msgid "ON"
+msgstr ""
+
+#: main.sreconnect
+#, object-pascal-format
+msgid "Reconnect in %d seconds."
+msgstr ""
+
+#: main.sremovetorrent
+#, object-pascal-format
+msgid "Are you sure to remove torrent '%s'?"
+msgstr "Czy na pewno chcesz usunąć plik torrent '%s'?"
+
+#: main.sremovetorrentdata
+#, object-pascal-format
+msgid "Are you sure to remove torrent '%s' and all associated DATA?"
+msgstr "Czy na pewno chcesz usunąć plik torrent '%s' oraz wszystkie pobrane dane?"
+
+#: main.sremovetorrentdatamulti
+#, object-pascal-format
+msgid "Are you sure to remove %d selected torrents and all their associated DATA?"
+msgstr "Czy na pewno chcesz usunąć %d wybranych torrentów razem z danymi?"
+
+#: main.sremovetorrentmulti
+#, object-pascal-format
+msgid "Are you sure to remove %d selected torrents?"
+msgstr "Czy na pewno chcesz usunąć %d wybranych torrentów?"
+
+#: main.sremovetracker
+#, object-pascal-format
+msgid "Are you sure to remove tracker '%s'?"
+msgstr "Czy na pewno chcesz usunąć tracker '%s'?"
+
+#: main.srestartrequired
+msgid "You need to restart the application to apply changes."
+msgstr ""
+
+#: main.ssecs
+#, object-pascal-format
+msgid "%ds"
+msgstr "%ds"
+
+#: main.sseeding
+msgid "Seeding"
+msgstr "Seedowanie"
+
+#: main.sseveraltorrents
+#, object-pascal-format
+msgid "%d torrents"
+msgstr "%d torrenty"
+
+#: main.sskip
+msgid "skip"
+msgstr "pomiń"
+
+#: main.ssslloaderror
+#, object-pascal-format
+msgid "Unable to load OpenSSL library files: %s and %s"
+msgstr "Nie można załadować biblioteki OpenSSL: %s i %s"
+
+#: main.sstopped
+msgid "Stopped"
+msgstr "Zatrzymane"
+
+#: main.stbyte
+msgid "TB"
+msgstr "TB"
+
+#: main.storrents
+msgid "Torrents"
+msgstr "Torrenty"
+
+#: main.storrentsverification
+#, object-pascal-format
+msgid ""
+"Torrents verification may take a long time.\n"
+"Are you sure to start verification of %d torrents?"
+msgstr "Weryfikacja torrentów może trwać bardzo długo."
+"Czy na pewno chcesz zweryfikować %d torrentów?"
+
+#: main.storrentverification
+#, object-pascal-format
+msgid ""
+"Torrent verification may take a long time.\n"
+"Are you sure to start verification of torrent '%s'?"
+msgstr "Weryfikacja torrenta może trwać bardzo długo."
+"Czy na pewno chcesz zweryfikować torrent '%s'?"
+
+#: main.stotaldownloaded
+#, object-pascal-format
+msgid "Done: %s"
+msgstr "Pobrane: %s"
+
+#: main.stotalremain
+#, object-pascal-format
+msgid "Remaining: %s"
+msgstr "Pozostało: %s"
+
+#: main.stotalsize
+#, object-pascal-format
+msgid "Total: %s"
+msgstr "Wszystko: %s"
+
+#: main.stotalsizetodownload
+#, object-pascal-format
+msgid "Selected: %s"
+msgstr "Zaznaczone: %s"
+
+#: main.strackererror
+msgctxt "main.strackererror"
+msgid "Tracker"
+msgstr ""
+
+#: main.strackerupdating
+msgid "Updating"
+msgstr "Aktualizacja"
+
+#: main.strackerworking
+msgid "Working"
+msgstr "Działa"
+
+#: main.sunablegetfileslist
+msgid "Unable to get files list"
+msgstr "Nie można pobrać listy plików"
+
+#: main.sunabletoexecute
+#, object-pascal-format
+msgid "Unable to execute \"%s\"."
+msgstr ""
+
+#: main.sunknown
+msgid "Unknown"
+msgstr "Nieznane"
+
+#: main.sunlimited
+msgid "Unlimited"
+msgstr "Bez limitów"
+
+#: main.supdatecomplete
+msgid "Update complete."
+msgstr ""
+
+#: main.supdatetrackers
+msgid "Update trackers for the existing torrent?"
+msgstr "Zaktualizować trackery dla istniejącego torrenta?"
+
+#: main.supdating
+msgid "Updating..."
+msgstr ""
+
+#: main.suploaded
+msgctxt "main.suploaded"
+msgid "Uploaded"
+msgstr ""
+
+#: main.supspeed
+#, object-pascal-format
+msgid "U: %s/s"
+msgstr "U: %s/s"
+
+#: main.susermenu
+msgid "User Menu"
+msgstr "Menu użytkownika"
+
+#: main.sverifying
+msgid "Verifying"
+msgstr "Sprawdzanie"
+
+#: main.swaiting
+msgid "Waiting"
+msgstr "Oczekiwanie"
+
+#: main.syears
+#, object-pascal-format
+msgid "%dy"
+msgstr "%dr"
+
+#: movetorrent.snotorrentdir
+msgid "No torrent location was specified."
+msgstr ""
+
+#: movetorrent.sselectfolder
+msgid "Select torrent location"
+msgstr "Wybierz lokalizację torrenta"
+
+#: rpc.stransmissionat
+#, object-pascal-format
+msgid "Transmission%s at %s:%s"
+msgstr "Transmission%s na %s:%s"
+
+#: taboutform.caption
+msgctxt "taboutform.caption"
+msgid "About"
+msgstr ""
+
+#: taboutform.tababout.caption
+msgctxt "taboutform.tababout.caption"
+msgid "About"
+msgstr "O programie"
+
+#: taboutform.tablicense.caption
+msgid "License"
+msgstr "Licencja"
+
+#: taboutform.txappname.caption
+msgid "txAppName"
+msgstr ""
+
+#: taboutform.txauthor.caption
+msgid "Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group"
+msgstr ""
+
+#: taboutform.txhomepage.caption
+msgid "Home page"
+msgstr "Strona domowa"
+
+#: taboutform.txversfpc.caption
+#, object-pascal-format
+msgctxt "taboutform.txversfpc.caption"
+msgid "Version %s"
+msgstr ""
+
+#: taboutform.txversion.caption
+#, object-pascal-format
+msgctxt "taboutform.txversion.caption"
+msgid "Version %s"
+msgstr "Wersja %s"
+
+#: taddlinkform.caption
+msgctxt "taddlinkform.caption"
+msgid "Add torrent link"
+msgstr ""
+
+#: taddlinkform.txlink.caption
+msgid "URL of a .torrent file or a magnet link:"
+msgstr ""
+
+#: taddtorrentform.btbrowse.caption
+msgctxt "taddtorrentform.btbrowse.caption"
+msgid "Browse..."
+msgstr ""
+
+#: taddtorrentform.btbrowse.hint
+msgid "Browse folder"
+msgstr ""
+
+#: taddtorrentform.btselectall.caption
+msgctxt "taddtorrentform.btselectall.caption"
+msgid "Select all"
+msgstr ""
+
+#: taddtorrentform.btselectnone.caption
+msgid "Select none"
+msgstr "Odznacz wszystko"
+
+#: taddtorrentform.caption
+msgid "Add new torrent"
+msgstr "Dodaj nowy torrent"
+
+#: taddtorrentform.cbstarttorrent.caption
+msgctxt "taddtorrentform.cbstarttorrent.caption"
+msgid "Start torrent"
+msgstr ""
+
+#: taddtorrentform.delbutton.hint
+msgid "Delete destination folder"
+msgstr "Usuń folder docelowy"
+
+#: taddtorrentform.edextension.hint
+msgctxt "taddtorrentform.edextension.hint"
+msgid "for example: *.avi *.mkv"
+msgstr ""
+
+#: taddtorrentform.gbcontents.caption
+msgid "Torrent contents"
+msgstr "Treść torrenta"
+
+#: taddtorrentform.gbsaveas.caption
+msgctxt "taddtorrentform.gbsaveas.caption"
+msgid " "
+msgstr ""
+
+#: taddtorrentform.lvfiles.columns[0].title.caption
+msgctxt "taddtorrentform.lvfiles.columns[0].title.caption"
+msgid "File name"
+msgstr ""
+
+#: taddtorrentform.lvfiles.columns[1].title.caption
+msgctxt "taddtorrentform.lvfiles.columns[1].title.caption"
+msgid "Size"
+msgstr ""
+
+#: taddtorrentform.txdestfolder.caption
+msgid "Destination folder:"
+msgstr ""
+
+#: taddtorrentform.txdiskspace.caption
+msgid "Free disk space:"
+msgstr ""
+
+#: taddtorrentform.txpeerlimit.caption
+msgctxt "taddtorrentform.txpeerlimit.caption"
+msgid "Peer limit:"
+msgstr ""
+
+#: taddtorrentform.txsaveas.caption
+msgid "Save as:"
+msgstr ""
+
+#: taddtorrentform.txsaveas1.caption
+msgid "Template:  "
+msgstr ""
+
+#: taddtorrentform.txsaveas1.hint
+msgctxt "taddtorrentform.txsaveas1.hint"
+msgid "for example: *.avi *.mkv"
+msgstr "na przykład: *.avi *.mkv"
+
+#: taddtrackerform.caption
+msgid "Add tracker"
+msgstr "Dodaj tracker"
+
+#: taddtrackerform.txtrackerurl.caption
+msgid "Tracker announce URL:"
+msgstr ""
+
+#: tcolsetupform.btdown.caption
+msgid "Down"
+msgstr "W dół"
+
+#: tcolsetupform.btup.caption
+msgid "Up"
+msgstr "W górę"
+
+#: tcolsetupform.caption
+msgid "Columns setup"
+msgstr "Ustawienia kolumn"
+
+#: tconnoptionsform.btdel.caption
+msgid "Delete"
+msgstr "Usuń"
+
+#: tconnoptionsform.btnew.caption
+msgid "New"
+msgstr "Nowy"
+
+#: tconnoptionsform.btrename.caption
+msgctxt "tconnoptionsform.btrename.caption"
+msgid "Rename"
+msgstr ""
+
+#: tconnoptionsform.caption
+msgid "Manage connections to Transmission"
+msgstr "Zarządzaj połączeniami do Transmission"
+
+#: tconnoptionsform.cbaskpassword.caption
+msgid "Ask for password"
+msgstr "Poproś o hasło"
+
+#: tconnoptionsform.cbauth.caption
+msgctxt "tconnoptionsform.cbauth.caption"
+msgid "Authentication required"
+msgstr ""
+
+#: tconnoptionsform.cbautoreconnect.caption
+msgid "Always auto-reconnect"
+msgstr "Zawsze automatycznie łącz ponownie"
+
+#: tconnoptionsform.cbproxyauth.caption
+msgctxt "tconnoptionsform.cbproxyauth.caption"
+msgid "Authentication required"
+msgstr "Uwierzytelnianie wymagane"
+
+#: tconnoptionsform.cbshowadvanced.caption
+msgid "Show advanced options"
+msgstr "Pokaż opcje zaawansowane"
+
+#: tconnoptionsform.cbssl.caption
+msgid "Use SSL"
+msgstr "Używaj SSL"
+
+#: tconnoptionsform.cbuseproxy.caption
+msgid "Connect to Transmission using proxy server"
+msgstr "Połącz z Transmission przy użyciu serwera proxy"
+
+#: tconnoptionsform.cbusesocks5.caption
+msgid "SOCKS 5"
+msgstr ""
+
+#: tconnoptionsform.edtranslateform.caption
+msgid "Activate the translated version of the application (need to restart the application)"
+msgstr ""
+
+#: tconnoptionsform.edtranslatemsg.caption
+msgid "Activate the translation of the Transmission strings"
+msgstr ""
+
+#: tconnoptionsform.gbspeed.caption
+msgid "Speed limit menu items"
+msgstr "Elementy menu ograniaczania prędkości"
+
+#: tconnoptionsform.label1.caption
+msgid "The maximum history of directories for storage of torrents"
+msgstr "Maksymalna historia katalogów do zapisywania torrentów"
+
+#: tconnoptionsform.label111.caption
+msgctxt "tconnoptionsform.label111.caption"
+msgid "Language:"
+msgstr ""
+
+#: tconnoptionsform.label2.caption
+msgid "Config file:"
+msgstr ""
+
+#: tconnoptionsform.tabconnection.caption
+msgid "Transmission"
+msgstr ""
+
+#: tconnoptionsform.tabmisc.caption
+msgid "Misc"
+msgstr "Inne"
+
+#: tconnoptionsform.tabpaths.caption
+msgid "Paths"
+msgstr "Ścieżki"
+
+#: tconnoptionsform.tabproxy.caption
+msgid "Proxy"
+msgstr "Proxy"
+
+#: tconnoptionsform.txcertfile.caption
+msgid "Client Certificate:"
+msgstr ""
+
+#: tconnoptionsform.txcertpass.caption
+msgid "Private Key:"
+msgstr ""
+
+#: tconnoptionsform.txconname.caption
+msgid "Connection name:"
+msgstr ""
+
+#: tconnoptionsform.txconnhelp.caption
+#, object-pascal-format
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)."
+msgstr ""
+
+#: tconnoptionsform.txdownspeeds.caption
+msgid "Download speeds (KB/s):"
+msgstr ""
+
+#: tconnoptionsform.txhost.caption
+msgid "Remote host:"
+msgstr ""
+
+#: tconnoptionsform.txpassword.caption
+msgid "Password:"
+msgstr ""
+
+#: tconnoptionsform.txpaths.caption
+msgid ""
+"Remote to local path mappings.\n"
+"Examples:\n"
+"/share=\\\\pch\\share\n"
+"/var/downloads/music=Z:\\music"
+msgstr "Mapowanie ścieżek zdalnych do lokalnych."
+"Przykłady:"
+"/share=\\\\pch\\share"
+"/var/downloads/music=Z:\\music"
+
+#: tconnoptionsform.txport.caption
+msgid "Port:"
+msgstr ""
+
+#: tconnoptionsform.txproxy.caption
+msgid "Proxy server:"
+msgstr ""
+
+#: tconnoptionsform.txproxypassword.caption
+msgid "Proxy password:"
+msgstr ""
+
+#: tconnoptionsform.txproxyport.caption
+msgid "Proxy port:"
+msgstr ""
+
+#: tconnoptionsform.txproxyusername.caption
+msgid "Proxy user name:"
+msgstr ""
+
+#: tconnoptionsform.txrpcpath.caption
+msgid "RPC path:"
+msgstr ""
+
+#: tconnoptionsform.txupspeeds.caption
+msgid "Upload speeds (KB/s):"
+msgstr ""
+
+#: tconnoptionsform.txusername.caption
+msgid "User name:"
+msgstr ""
+
+#: tdaemonoptionsform.bttestport.caption
+msgid "Test port"
+msgstr "Testuj port"
+
+#: tdaemonoptionsform.caption
+msgctxt "tdaemonoptionsform.caption"
+msgid "Transmission options"
+msgstr ""
+
+#: tdaemonoptionsform.cbaltenabled.caption
+msgctxt "tdaemonoptionsform.cbaltenabled.caption"
+msgid "Use alternate bandwidth settings"
+msgstr ""
+
+#: tdaemonoptionsform.cbautoalt.caption
+msgid "Apply alternate bandwidth settings automatically"
+msgstr "Automatycznie włącz alternatywne ustawienia łącza"
+
+#: tdaemonoptionsform.cbblocklist.caption
+msgid "Enable blocklist:"
+msgstr ""
+
+#: tdaemonoptionsform.cbdht.caption
+msgid "Enable DHT"
+msgstr "Włącz DHT"
+
+#: tdaemonoptionsform.cbdownqueue.caption
+msgid "Download queue size:"
+msgstr ""
+
+#: tdaemonoptionsform.cbidleseedlimit.caption
+msgctxt "tdaemonoptionsform.cbidleseedlimit.caption"
+msgid "Stop seeding when inactive for:"
+msgstr ""
+
+#: tdaemonoptionsform.cbincompletedir.caption
+msgid "Directory for incomplete files:"
+msgstr ""
+
+#: tdaemonoptionsform.cblpd.caption
+msgid "Enable Local Peer Discovery"
+msgstr "Włącz Local Peer Discovery"
+
+#: tdaemonoptionsform.cbmaxdown.caption
+msgctxt "tdaemonoptionsform.cbmaxdown.caption"
+msgid "Maximum download speed:"
+msgstr ""
+
+#: tdaemonoptionsform.cbmaxup.caption
+msgctxt "tdaemonoptionsform.cbmaxup.caption"
+msgid "Maximum upload speed:"
+msgstr ""
+
+#: tdaemonoptionsform.cbpartext.caption
+msgid "Add .part extension to incomplete files"
+msgstr "Dodaj końcówkę .part do plików niedokończonych"
+
+#: tdaemonoptionsform.cbpex.caption
+msgid "Enable Peer Exchange"
+msgstr "Włącz Peer Exchange"
+
+#: tdaemonoptionsform.cbportforwarding.caption
+msgid "Enable port forwarding"
+msgstr "Włącz przekierowywanie portów"
+
+#: tdaemonoptionsform.cbrandomport.caption
+msgid "Pick random port on Transmission launch"
+msgstr "Wybierz losowy port przy uruchomieniu Transmission"
+
+#: tdaemonoptionsform.cbseedratio.caption
+msgctxt "tdaemonoptionsform.cbseedratio.caption"
+msgid "Seed ratio:"
+msgstr ""
+
+#: tdaemonoptionsform.cbstalled.caption
+msgid "Consider active torrents as stalled when idle for:"
+msgstr ""
+
+#: tdaemonoptionsform.cbstalled.hint
+msgid "Torrents that are idle for N minuets aren't counted toward the Download queue or Upload queue"
+msgstr "Torrenty, które są bezczynne przez N minut, są pominięte z kolejki pobierania lub wysyłania"
+
+#: tdaemonoptionsform.cbupqueue.caption
+msgid "Upload queue size:"
+msgstr ""
+
+#: tdaemonoptionsform.cbutp.caption
+msgid "Enable µTP"
+msgstr "Włącz µTP"
+
+#: tdaemonoptionsform.edalttimebegin.text
+msgctxt "tdaemonoptionsform.edalttimebegin.text"
+msgid "  :  "
+msgstr ""
+
+#: tdaemonoptionsform.edalttimeend.text
+msgctxt "tdaemonoptionsform.edalttimeend.text"
+msgid "  :  "
+msgstr ""
+
+#: tdaemonoptionsform.gbaltspeed.caption
+msgid "Alternate bandwidth settings"
+msgstr "Alternatywne ustawienia łącza"
+
+#: tdaemonoptionsform.gbbandwidth.caption
+msgid "Global bandwidth settings"
+msgstr "Ogólne ustawienia prędkości"
+
+#: tdaemonoptionsform.tabbandwidth.caption
+msgid "Bandwidth"
+msgstr "Łącze"
+
+#: tdaemonoptionsform.tabdownload.caption
+msgid "Download"
+msgstr "Pobierz"
+
+#: tdaemonoptionsform.tabnetwork.caption
+msgid "Network (WAN)"
+msgstr "Sieć (WAN)"
+
+#: tdaemonoptionsform.tabqueue.caption
+msgctxt "tdaemonoptionsform.tabqueue.caption"
+msgid "Queue"
+msgstr ""
+
+#: tdaemonoptionsform.txaltdown.caption
+msgctxt "tdaemonoptionsform.txaltdown.caption"
+msgid "Maximum download speed:"
+msgstr ""
+
+#: tdaemonoptionsform.txaltup.caption
+msgctxt "tdaemonoptionsform.txaltup.caption"
+msgid "Maximum upload speed:"
+msgstr ""
+
+#: tdaemonoptionsform.txcachesize.caption
+msgid "Disk cache size:"
+msgstr ""
+
+#: tdaemonoptionsform.txdays.caption
+msgid "Days:"
+msgstr ""
+
+#: tdaemonoptionsform.txdownloaddir.caption
+msgid "Default download folder on remote host:"
+msgstr ""
+
+#: tdaemonoptionsform.txencryption.caption
+msgid "Encryption:"
+msgstr ""
+
+#: tdaemonoptionsform.txfrom.caption
+msgid "From:"
+msgstr ""
+
+#: tdaemonoptionsform.txkbs1.caption
+msgctxt "tdaemonoptionsform.txkbs1.caption"
+msgid "KB/s"
+msgstr ""
+
+#: tdaemonoptionsform.txkbs2.caption
+msgctxt "tdaemonoptionsform.txkbs2.caption"
+msgid "KB/s"
+msgstr ""
+
+#: tdaemonoptionsform.txkbs3.caption
+msgctxt "tdaemonoptionsform.txkbs3.caption"
+msgid "KB/s"
+msgstr ""
+
+#: tdaemonoptionsform.txkbs4.caption
+msgctxt "tdaemonoptionsform.txkbs4.caption"
+msgid "KB/s"
+msgstr ""
+
+#: tdaemonoptionsform.txmb.caption
+msgctxt "tdaemonoptionsform.txmb.caption"
+msgid "MB"
+msgstr "MB"
+
+#: tdaemonoptionsform.txminutes.caption
+msgctxt "tdaemonoptionsform.txminutes.caption"
+msgid "minutes"
+msgstr ""
+
+#: tdaemonoptionsform.txminutes1.caption
+msgctxt "tdaemonoptionsform.txminutes1.caption"
+msgid "minutes"
+msgstr ""
+
+#: tdaemonoptionsform.txpeerlimit.caption
+msgid "Global peer limit:"
+msgstr ""
+
+#: tdaemonoptionsform.txport.caption
+msgid "Incoming port:"
+msgstr ""
+
+#: tdaemonoptionsform.txto.caption
+msgid "to:"
+msgstr ""
+
+#: tdownloadform.btcancel.caption
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: tdownloadform.caption
+msgctxt "tdownloadform.caption"
+msgid "Downloading"
+msgstr "Pobieranie"
+
+#: tdownloadform.txbytes.caption
+msgid "txBytes"
+msgstr ""
+
+#: tdownloadform.txfilename.caption
+msgid "txFileName"
+msgstr ""
+
+#: tdownloadform.txpercent.caption
+msgid "txPercent"
+msgstr ""
+
+#: tmainform.acaddlink.caption
+msgid "Add torrent link..."
+msgstr ""
+
+#: tmainform.acaddlink.hint
+msgctxt "tmainform.acaddlink.hint"
+msgid "Add torrent link"
+msgstr "Dodaj link do torrenta"
+
+#: tmainform.acaddtorrent.caption
+msgid "&Add torrent..."
+msgstr ""
+
+#: tmainform.acaddtorrent.hint
+msgctxt "tmainform.acaddtorrent.hint"
+msgid "Add torrent"
+msgstr ""
+
+#: tmainform.acaddtracker.caption
+msgid "Add tracker..."
+msgstr ""
+
+#: tmainform.acadvedittrackers.caption
+msgid "Modify trackers..."
+msgstr ""
+
+#: tmainform.acaltspeed.caption
+msgctxt "tmainform.acaltspeed.caption"
+msgid "Use alternate bandwidth settings"
+msgstr ""
+
+#: tmainform.acaltspeed.hint
+msgctxt "tmainform.acaltspeed.hint"
+msgid "Use alternate bandwidth settings"
+msgstr "Używaj alternatywnych ustawień łacza"
+
+#: tmainform.acbigtoolbar.caption
+msgid "acBigToolbar"
+msgstr ""
+
+#: tmainform.acchecknewversion.caption
+msgid "Check for updates"
+msgstr "Sprawdź dostępność aktualizacji"
+
+#: tmainform.acconnect.caption
+msgctxt "tmainform.acconnect.caption"
+msgid "Connect to Transmission"
+msgstr ""
+
+#: tmainform.acconnect.hint
+msgctxt "tmainform.acconnect.hint"
+msgid "Connect to Transmission"
+msgstr ""
+
+#: tmainform.acconnoptions.caption
+msgid "Manage connections..."
+msgstr ""
+
+#: tmainform.accopypath.caption
+msgid "Copy file path to clipboard"
+msgstr "Skopiuj ścieżkę pliku do schowka"
+
+#: tmainform.acdaemonoptions.caption
+msgid "Transmission options..."
+msgstr ""
+
+#: tmainform.acdaemonoptions.hint
+msgctxt "tmainform.acdaemonoptions.hint"
+msgid "Transmission options"
+msgstr "Opcje Transmission"
+
+#: tmainform.acdeltracker.caption
+msgid "Remove tracker"
+msgstr "Usuń tracker"
+
+#: tmainform.acdisconnect.caption
+msgid "Disconnect from Transmission"
+msgstr "Odłącz od Transmission"
+
+#: tmainform.acedittracker.caption
+msgid "Edit tracker..."
+msgstr ""
+
+#: tmainform.acexit.caption
+msgid "E&xit"
+msgstr "Wyjdź"
+
+#: tmainform.acexport.caption
+msgid "Export settings..."
+msgstr ""
+
+#: tmainform.acfilterpane.caption
+msgid "Filter pane"
+msgstr "Panel filtrów"
+
+#: tmainform.acfoldergrouping.caption
+msgid "Folder grouping"
+msgstr "Grupowanie folderów"
+
+#: tmainform.acforcestarttorrent.caption
+msgid "Force start"
+msgstr "Wymuś start"
+
+#: tmainform.achideapp.caption
+msgid "Hide"
+msgstr "Ukryj"
+
+#: tmainform.acimport.caption
+msgid "Import settings..."
+msgstr ""
+
+#: tmainform.acinfopane.caption
+msgid "Info pane"
+msgstr "Panel informacji"
+
+#: tmainform.aclabelgrouping.caption
+msgid "Label grouping"
+msgstr ""
+
+#: tmainform.acmenushow.caption
+msgid "Menu"
+msgstr "Menu"
+
+#: tmainform.acmovetorrent.caption
+msgid "Set data location..."
+msgstr ""
+
+#: tmainform.acnewconnection.caption
+msgid "New connection..."
+msgstr ""
+
+#: tmainform.acopencontainingfolder.caption
+msgid "Open containing folder"
+msgstr "Otwórz folder zawierający"
+
+#: tmainform.acopenfile.caption
+msgid "Open"
+msgstr "Otwórz"
+
+#: tmainform.acoptions.caption
+msgid "Application options..."
+msgstr ""
+
+#: tmainform.acqmovebottom.caption
+msgid "Move bottom"
+msgstr "Przenieś na dół"
+
+#: tmainform.acqmovedown.caption
+msgid "Move down"
+msgstr "Niżej"
+
+#: tmainform.acqmovedown.hint
+msgid "Move down queue"
+msgstr "Przenieś niżej w kolejce"
+
+#: tmainform.acqmovetop.caption
+msgid "Move top"
+msgstr "Przenieś na górę"
+
+#: tmainform.acqmoveup.caption
+msgid "Move up"
+msgstr "Wyżej"
+
+#: tmainform.acqmoveup.hint
+msgid "Move up queue"
+msgstr "Przenieś wyżej w kolejce"
+
+#: tmainform.acreannouncetorrent.caption
+msgid "Reannounce (get more peers)"
+msgstr "Pobierz więcej peerów"
+
+#: tmainform.acremovetorrent.caption
+msgid "Remove"
+msgstr "Usuń"
+
+#: tmainform.acremovetorrent.hint
+msgid "Remove torrent"
+msgstr "Usuń torrenta"
+
+#: tmainform.acremovetorrentanddata.caption
+msgid "Remove torrent and Data"
+msgstr "Usuń torrenta razem z danymi"
+
+#: tmainform.acrename.caption
+msgctxt "tmainform.acrename.caption"
+msgid "Rename"
+msgstr "Zmień nazwę"
+
+#: tmainform.acresolvecountry.caption
+msgid "Resolve country"
+msgstr "Sprawdzaj kraj"
+
+#: tmainform.acresolvehost.caption
+msgid "Resolve host name"
+msgstr "Sprawdzaj nazwę hosta"
+
+#: tmainform.acselectall.caption
+msgctxt "tmainform.acselectall.caption"
+msgid "Select all"
+msgstr "Zaznacz wszystko"
+
+#: tmainform.acsethighpriority.caption
+msgid "High priority"
+msgstr "Wysoki priorytet"
+
+#: tmainform.acsetlabels.caption
+msgid "Set labels..."
+msgstr ""
+
+#: tmainform.acsetlowpriority.caption
+msgid "Low priority"
+msgstr "Niski priorytet"
+
+#: tmainform.acsetnormalpriority.caption
+msgid "Normal priority"
+msgstr "Normalny priorytet"
+
+#: tmainform.acsetnotdownload.caption
+msgid "Don't download"
+msgstr "Nie pobieraj"
+
+#: tmainform.acsetupcolumns.caption
+msgid "Setup columns..."
+msgstr ""
+
+#: tmainform.acshowapp.caption
+msgid "Show"
+msgstr "Pokaż"
+
+#: tmainform.acshowcountryflag.caption
+msgid "Show country flag"
+msgstr "Wyświetlaj flagi państw"
+
+#: tmainform.acstartalltorrents.caption
+msgctxt "tmainform.acstartalltorrents.caption"
+msgid "Start all torrents"
+msgstr ""
+
+#: tmainform.acstartalltorrents.hint
+msgctxt "tmainform.acstartalltorrents.hint"
+msgid "Start all torrents"
+msgstr "Rozpocznij pobieranie wszystkiego"
+
+#: tmainform.acstarttorrent.caption
+msgid "Start"
+msgstr "Start"
+
+#: tmainform.acstarttorrent.hint
+msgctxt "tmainform.acstarttorrent.hint"
+msgid "Start torrent"
+msgstr "Rozpocznij pobieranie"
+
+#: tmainform.acstatusbar.caption
+msgid "Status bar"
+msgstr "Pasek stanu"
+
+#: tmainform.acstatusbarsizes.caption
+msgid "Status bar - Sizes"
+msgstr "Rozmiary w pasku stanu"
+
+#: tmainform.acstopalltorrents.caption
+msgid "Stop all torrents"
+msgstr "Zatrzymaj wszystkie torrenty"
+
+#: tmainform.acstopalltorrents.hint
+msgid "Stop all"
+msgstr "Zatrzymaj wszystko"
+
+#: tmainform.acstoptorrent.caption
+msgid "Stop"
+msgstr "Stop"
+
+#: tmainform.acstoptorrent.hint
+msgid "Stop torrent"
+msgstr "Zatrzymaj torrent"
+
+#: tmainform.actoolbarshow.caption
+msgid "Toolbar"
+msgstr "Pasek narzędzi"
+
+#: tmainform.actorrentprops.caption
+msgid "Properties..."
+msgstr ""
+
+#: tmainform.actrackergrouping.caption
+msgid "Tracker grouping"
+msgstr "Grupowanie trackerów"
+
+#: tmainform.acupdateblocklist.caption
+msgid "Update blocklist"
+msgstr "Zaktualizuj blocklistę"
+
+#: tmainform.acupdategeoip.caption
+msgid "Update GeoIP database"
+msgstr "Zaktualizuj bazę GeoIP"
+
+#: tmainform.acverifytorrent.caption
+msgid "&Verify"
+msgstr "Weryfikuj"
+
+#: tmainform.acverifytorrent.hint
+msgid "Verify torrent"
+msgstr "Zweryfikuj torrenta"
+
+#: tmainform.caption
+msgctxt "tmainform.caption"
+msgid " "
+msgstr ""
+
+#: tmainform.godevelopmentsite.caption
+msgid "Development site"
+msgstr "Strona deweloperska"
+
+#: tmainform.gstats.columns[0].title.caption
+msgctxt "tmainform.gstats.columns[0].title.caption"
+msgid " "
+msgstr ""
+
+#: tmainform.gstats.columns[1].title.caption
+msgid "Current"
+msgstr "Bieżący"
+
+#: tmainform.gstats.columns[2].title.caption
+msgid "Cumulative"
+msgstr "Łączny"
+
+#: tmainform.gtorrents.columns[0].title.caption
+msgctxt "tmainform.gtorrents.columns[0].title.caption"
+msgid "Name"
+msgstr ""
+
+#: tmainform.gtorrents.columns[10].title.caption
+msgctxt "tmainform.gtorrents.columns[10].title.caption"
+msgid "Downloaded"
+msgstr "Pobrane"
+
+#: tmainform.gtorrents.columns[11].title.caption
+msgctxt "tmainform.gtorrents.columns[11].title.caption"
+msgid "Uploaded"
+msgstr "Wysłane"
+
+#: tmainform.gtorrents.columns[12].title.caption
+msgctxt "tmainform.gtorrents.columns[12].title.caption"
+msgid "Tracker"
+msgstr "Tracker"
+
+#: tmainform.gtorrents.columns[13].title.caption
+msgid "Tracker status"
+msgstr "Status trackera"
+
+#: tmainform.gtorrents.columns[14].title.caption
+msgid "Added on"
+msgstr "Dodane o"
+
+#: tmainform.gtorrents.columns[15].title.caption
+msgid "Completed on"
+msgstr "Zakończono o"
+
+#: tmainform.gtorrents.columns[16].title.caption
+msgid "Last active"
+msgstr "Ostatnio aktywny"
+
+#: tmainform.gtorrents.columns[17].title.caption
+msgid "Path"
+msgstr "Ścieżka"
+
+#: tmainform.gtorrents.columns[18].title.caption
+msgctxt "tmainform.gtorrents.columns[18].title.caption"
+msgid "Priority"
+msgstr ""
+
+#: tmainform.gtorrents.columns[19].title.caption
+msgid "Size to download"
+msgstr "Do pobrania"
+
+#: tmainform.gtorrents.columns[1].title.caption
+msgctxt "tmainform.gtorrents.columns[1].title.caption"
+msgid "Size"
+msgstr ""
+
+#: tmainform.gtorrents.columns[20].title.caption
+msgid "ID"
+msgstr "Nr"
+
+#: tmainform.gtorrents.columns[21].title.caption
+msgid "Queue position"
+msgstr "Pozycja w kolejce"
+
+#: tmainform.gtorrents.columns[22].title.caption
+msgid "Seeding time"
+msgstr "Czas seedowania"
+
+#: tmainform.gtorrents.columns[23].title.caption
+msgid "Size left"
+msgstr "Pozostało"
+
+#: tmainform.gtorrents.columns[24].title.caption
+msgid "Private"
+msgstr ""
+
+#: tmainform.gtorrents.columns[25].title.caption
+msgid "Labels"
+msgstr ""
+
+#: tmainform.gtorrents.columns[2].title.caption
+msgctxt "tmainform.gtorrents.columns[2].title.caption"
+msgid "Done"
+msgstr ""
+
+#: tmainform.gtorrents.columns[3].title.caption
+msgctxt "tmainform.gtorrents.columns[3].title.caption"
+msgid "Status"
+msgstr ""
+
+#: tmainform.gtorrents.columns[4].title.caption
+msgctxt "tmainform.gtorrents.columns[4].title.caption"
+msgid "Seeds"
+msgstr ""
+
+#: tmainform.gtorrents.columns[5].title.caption
+msgctxt "tmainform.gtorrents.columns[5].title.caption"
+msgid "Peers"
+msgstr ""
+
+#: tmainform.gtorrents.columns[6].title.caption
+msgctxt "tmainform.gtorrents.columns[6].title.caption"
+msgid "Down speed"
+msgstr ""
+
+#: tmainform.gtorrents.columns[7].title.caption
+msgctxt "tmainform.gtorrents.columns[7].title.caption"
+msgid "Up speed"
+msgstr ""
+
+#: tmainform.gtorrents.columns[8].title.caption
+msgid "ETA"
+msgstr "ETA"
+
+#: tmainform.gtorrents.columns[9].title.caption
+msgid "Ratio"
+msgstr "Ratio"
+
+#: tmainform.lvfiles.columns[0].title.caption
+msgctxt "tmainform.lvfiles.columns[0].title.caption"
+msgid "File name"
+msgstr "Nazwa pliku"
+
+#: tmainform.lvfiles.columns[1].title.caption
+msgctxt "tmainform.lvfiles.columns[1].title.caption"
+msgid "Size"
+msgstr "Rozmiar"
+
+#: tmainform.lvfiles.columns[2].title.caption
+msgctxt "tmainform.lvfiles.columns[2].title.caption"
+msgid "Done"
+msgstr "Postęp"
+
+#: tmainform.lvfiles.columns[3].title.caption
+msgctxt "tmainform.lvfiles.columns[3].title.caption"
+msgid "%"
+msgstr ""
+
+#: tmainform.lvfiles.columns[4].title.caption
+msgctxt "tmainform.lvfiles.columns[4].title.caption"
+msgid "Priority"
+msgstr ""
+
+#: tmainform.lvfilter.columns[0].title.caption
+msgctxt "tmainform.lvfilter.columns[0].title.caption"
+msgid " "
+msgstr ""
+
+#: tmainform.lvpeers.columns[0].title.caption
+msgid "Host"
+msgstr "Host"
+
+#: tmainform.lvpeers.columns[1].title.caption
+msgid "Port"
+msgstr "Port"
+
+#: tmainform.lvpeers.columns[2].title.caption
+msgid "Country"
+msgstr "Kraj"
+
+#: tmainform.lvpeers.columns[3].title.caption
+msgid "Client"
+msgstr "Klient"
+
+#: tmainform.lvpeers.columns[4].title.caption
+msgid "Flags"
+msgstr "Flagi"
+
+#: tmainform.lvpeers.columns[5].title.caption
+msgid "Have"
+msgstr "Pobrał"
+
+#: tmainform.lvpeers.columns[6].title.caption
+msgctxt "tmainform.lvpeers.columns[6].title.caption"
+msgid "Up speed"
+msgstr "Wysyłanie"
+
+#: tmainform.lvpeers.columns[7].title.caption
+msgctxt "tmainform.lvpeers.columns[7].title.caption"
+msgid "Down speed"
+msgstr "Pobieranie"
+
+#: tmainform.lvtrackers.columns[0].title.caption
+msgctxt "tmainform.lvtrackers.columns[0].title.caption"
+msgid "Name"
+msgstr "Nazwa"
+
+#: tmainform.lvtrackers.columns[1].title.caption
+msgctxt "tmainform.lvtrackers.columns[1].title.caption"
+msgid "Status"
+msgstr "Stan"
+
+#: tmainform.lvtrackers.columns[2].title.caption
+msgid "Update in"
+msgstr "Aktualizacja za"
+
+#: tmainform.lvtrackers.columns[3].title.caption
+msgctxt "tmainform.lvtrackers.columns[3].title.caption"
+msgid "Seeds"
+msgstr "Seedy"
+
+#: tmainform.maintoolbar.caption
+msgid "MainToolBar"
+msgstr ""
+
+#: tmainform.menuitem101.caption
+msgid "Copy Magnet Link(s)"
+msgstr "Kopiuj link(i) magnet"
+
+#: tmainform.menuitem103.caption
+msgid "Big Toolbar"
+msgstr ""
+
+#: tmainform.menuitem17.hint
+msgctxt "tmainform.menuitem17.hint"
+msgid "Application Options (Ctrl+F9)"
+msgstr ""
+
+#: tmainform.menushow.caption
+msgid "MenuShow"
+msgstr ""
+
+#: tmainform.miabout.caption
+msgid "About..."
+msgstr ""
+
+#: tmainform.miconnect.caption
+msgctxt "tmainform.miconnect.caption"
+msgid "Connect to Transmission"
+msgstr "Połącz z Transmission"
+
+#: tmainform.micopylabel.caption
+msgid "Copy"
+msgstr "Kopiuj"
+
+#: tmainform.mihelp.caption
+msgid "&Help"
+msgstr "&Pomoc"
+
+#: tmainform.mihomepage.caption
+msgid "Visit home page"
+msgstr "Odwiedź stronę domową"
+
+#: tmainform.mipriority.caption
+msgctxt "tmainform.mipriority.caption"
+msgid "Priority"
+msgstr ""
+
+#: tmainform.miqueue.caption
+msgctxt "tmainform.miqueue.caption"
+msgid "Queue"
+msgstr ""
+
+#: tmainform.mitools.caption
+msgid "T&ools"
+msgstr "Narzędzia"
+
+#: tmainform.mitorrent.caption
+msgid "&Torrent"
+msgstr "Torrent"
+
+#: tmainform.miview.caption
+msgid "View"
+msgstr "Widok"
+
+#: tmainform.opentorrentdlg.title
+msgid "Select a .torrent to open"
+msgstr "Wybierz plik .torrent, aby otworzyć"
+
+#: tmainform.pmidownspeedlimit.caption
+msgid "Maximum download speed"
+msgstr "Maksymalna prędkość pobierania"
+
+#: tmainform.pmipriority.caption
+msgctxt "tmainform.pmipriority.caption"
+msgid "Priority"
+msgstr "Priorytet"
+
+#: tmainform.pmiqueue.caption
+msgctxt "tmainform.pmiqueue.caption"
+msgid "Queue"
+msgstr "Kolejka"
+
+#: tmainform.pmiupspeedlimit.caption
+msgid "Maximum upload speed"
+msgstr "Maksymalna prędkość wysyłania"
+
+#: tmainform.searchtoolbar.caption
+msgid "SearchToolbar"
+msgstr ""
+
+#: tmainform.sepaltspeed.caption
+msgid "sepAltSpeed"
+msgstr ""
+
+#: tmainform.sepqueue.caption
+msgid "sepQueue"
+msgstr ""
+
+#: tmainform.tabfiles.caption
+msgid "Files"
+msgstr "Pliki"
+
+#: tmainform.tabgeneral.caption
+msgctxt "tmainform.tabgeneral.caption"
+msgid "General"
+msgstr ""
+
+#: tmainform.tabpeers.caption
+msgctxt "tmainform.tabpeers.caption"
+msgid "Peers"
+msgstr "Peery"
+
+#: tmainform.tabstats.caption
+msgid "Statistics"
+msgstr "Statystyka"
+
+#: tmainform.tabtrackers.caption
+msgid "Trackers"
+msgstr "Trackery"
+
+#: tmainform.tbsearchcancel.caption
+msgid "tbSearchCancel"
+msgstr ""
+
+#: tmainform.toolbutton10.caption
+msgid "ToolButton10"
+msgstr ""
+
+#: tmainform.toolbutton2.caption
+msgid "ToolButton2"
+msgstr ""
+
+#: tmainform.toolbutton5.caption
+msgid "Application option..."
+msgstr ""
+
+#: tmainform.toolbutton5.hint
+msgctxt "tmainform.toolbutton5.hint"
+msgid "Application Options (Ctrl+F9)"
+msgstr "Opcje aplikacji (Ctrl+F9)"
+
+#: tmainform.toolbutton6.caption
+msgid "ToolButton6"
+msgstr ""
+
+#: tmainform.toolbutton7.caption
+msgid "ToolButton7"
+msgstr ""
+
+#: tmainform.txaddedon.caption
+msgid "txAddedOn"
+msgstr ""
+
+#: tmainform.txaddedonlabel.caption
+msgid "Added on:"
+msgstr ""
+
+#: tmainform.txcomment.caption
+msgid "txComment"
+msgstr ""
+
+#: tmainform.txcommentlabel.caption
+msgid "Comment:"
+msgstr ""
+
+#: tmainform.txcompletedon.caption
+msgid "txCompletedOn"
+msgstr ""
+
+#: tmainform.txcompletedonlabel.caption
+msgid "Completed on:"
+msgstr ""
+
+#: tmainform.txconnerrorlabel.caption
+msgid "Connection error occurred:"
+msgstr ""
+
+#: tmainform.txcreated.caption
+msgid "txCreated"
+msgstr ""
+
+#: tmainform.txcreatedlabel.caption
+msgid "Created on:"
+msgstr ""
+
+#: tmainform.txdownlimit.caption
+msgid "txDownLimit"
+msgstr ""
+
+#: tmainform.txdownlimitlabel.caption
+msgid "Down limit:"
+msgstr ""
+
+#: tmainform.txdownloaded.caption
+msgid "txDownloaded"
+msgstr ""
+
+#: tmainform.txdownloadedlabel.caption
+msgctxt "tmainform.txdownloadedlabel.caption"
+msgid "Downloaded:"
+msgstr ""
+
+#: tmainform.txdownprogress.caption
+msgid "100.0%"
+msgstr ""
+
+#: tmainform.txdownprogresslabel.caption
+msgctxt "tmainform.txdownprogresslabel.caption"
+msgid "Downloaded:"
+msgstr ""
+
+#: tmainform.txdownspeed.caption
+msgid "txDownSpeed"
+msgstr ""
+
+#: tmainform.txdownspeedlabel.caption
+msgid "Download speed:"
+msgstr ""
+
+#: tmainform.txerror.caption
+msgid "txError"
+msgstr ""
+
+#: tmainform.txerrorlabel.caption
+msgid "Error:"
+msgstr ""
+
+#: tmainform.txglobalstats.caption
+msgid "Global statistics:"
+msgstr ""
+
+#: tmainform.txhash.caption
+msgid "txHash"
+msgstr ""
+
+#: tmainform.txhashlabel.caption
+msgid "Hash:"
+msgstr ""
+
+#: tmainform.txlabels.caption
+msgid "txLabels"
+msgstr ""
+
+#: tmainform.txlabelslabel.caption
+msgid "Labels:"
+msgstr ""
+
+#: tmainform.txlastactive.caption
+msgid "txLastActive"
+msgstr ""
+
+#: tmainform.txlastactivelabel.caption
+msgid "Last active:"
+msgstr ""
+
+#: tmainform.txmaglabel.caption
+msgid "Magnet Link:"
+msgstr ""
+
+#: tmainform.txmaxpeers.caption
+msgid "txMaxPeers"
+msgstr ""
+
+#: tmainform.txmaxpeerslabel.caption
+msgid "Max peers:"
+msgstr ""
+
+#: tmainform.txpeers.caption
+msgid "txPeers"
+msgstr ""
+
+#: tmainform.txpeerslabel.caption
+msgid "Peers:"
+msgstr ""
+
+#: tmainform.txpieces.caption
+msgid "txPieces"
+msgstr ""
+
+#: tmainform.txpieceslabel.caption
+msgid "Pieces:"
+msgstr ""
+
+#: tmainform.txratio.caption
+msgid "txRatio"
+msgstr ""
+
+#: tmainform.txratiolabel.caption
+msgid "Share ratio:"
+msgstr ""
+
+#: tmainform.txremaining.caption
+msgid "txRemaining"
+msgstr ""
+
+#: tmainform.txremaininglabel.caption
+msgid "Remaining:"
+msgstr ""
+
+#: tmainform.txseeds.caption
+msgid "txSeeds"
+msgstr ""
+
+#: tmainform.txseedslabel.caption
+msgid "Seeds:"
+msgstr ""
+
+#: tmainform.txstatus.caption
+msgid "txStatus"
+msgstr ""
+
+#: tmainform.txstatuslabel.caption
+msgid "Status:"
+msgstr ""
+
+#: tmainform.txtorrentheader.caption
+msgid "Torrent"
+msgstr "Torrent"
+
+#: tmainform.txtorrentname.caption
+msgid "txTorrentName"
+msgstr ""
+
+#: tmainform.txtorrentnamelabel.caption
+msgctxt "tmainform.txtorrentnamelabel.caption"
+msgid "Name:"
+msgstr ""
+
+#: tmainform.txtotalsize.caption
+msgid "txTotalSize"
+msgstr ""
+
+#: tmainform.txtotalsizelabel.caption
+msgid "Total size:"
+msgstr ""
+
+#: tmainform.txtracker.caption
+msgid "txTracker"
+msgstr ""
+
+#: tmainform.txtrackerlabel.caption
+msgid "Tracker:"
+msgstr ""
+
+#: tmainform.txtrackerupdate.caption
+msgid "txTrackerUpdate"
+msgstr ""
+
+#: tmainform.txtrackerupdatelabel.caption
+msgid "Tracker update on:"
+msgstr ""
+
+#: tmainform.txtransferheader.caption
+msgid "Transfer"
+msgstr "Transfer"
+
+#: tmainform.txuplimit.caption
+msgid "txUpLimit"
+msgstr ""
+
+#: tmainform.txuplimitlabel.caption
+msgid "Up limit:"
+msgstr ""
+
+#: tmainform.txuploaded.caption
+msgid "txUploaded"
+msgstr ""
+
+#: tmainform.txuploadedlabel.caption
+msgid "Uploaded:"
+msgstr ""
+
+#: tmainform.txupspeed.caption
+msgid "txUpSpeed"
+msgstr ""
+
+#: tmainform.txupspeedlabel.caption
+msgid "Upload speed:"
+msgstr ""
+
+#: tmainform.txwasted.caption
+msgid "txWasted"
+msgstr ""
+
+#: tmainform.txwastedlabel.caption
+msgid "Wasted:"
+msgstr ""
+
+#: tmovetorrentform.btbrowse.caption
+msgctxt "tmovetorrentform.btbrowse.caption"
+msgid "Browse..."
+msgstr ""
+
+#: tmovetorrentform.caption
+msgid "Torrent data location"
+msgstr "Lokalizacja danych torrenta"
+
+#: tmovetorrentform.cbmovedata.caption
+msgid "Move torrent data from current location to new location"
+msgstr "Przenieś dane tego torrenta do innej lokalizacji"
+
+#: tmovetorrentform.txtorrentdir.caption
+msgid "New location for torrent data:"
+msgstr ""
+
+#: toptionsform.caption
+msgid "Application options"
+msgstr "Opcje aplikacji"
+
+#: toptionsform.cbcalcavg.caption
+msgid "Average out transfer speeds to eliminate fluctuations"
+msgstr "Uśrednij prędkość transferu do wyeliminowania wahań"
+
+#: toptionsform.cbchecknewversion.caption
+msgid "Check for new version every:"
+msgstr ""
+
+#: toptionsform.cbdeletetorrentfile.caption
+msgid "Delete a .torrent file after a successful addition"
+msgstr "Usuń plik .torrent po dodaniu"
+
+#: toptionsform.cblinksfromclipboard.caption
+msgid "Automatically add torrent links from the clipboard"
+msgstr "Automatycznie dodaj linki torrentów ze schowka"
+
+#: toptionsform.cbregext.caption
+#, object-pascal-format
+msgid "Handle .torrent files by %s"
+msgstr "Obsługa plików .torrent przez %s"
+
+#: toptionsform.cbregmagnet.caption
+#, object-pascal-format
+msgid "Handle magnet links by %s"
+msgstr "Obsługa linków magnet przez %s"
+
+#: toptionsform.cbshowaddtorrentwindow.caption
+msgid "Prompt for download options when adding a new torrent"
+msgstr "Pytaj o opcje pobierania podczas dodawania nowego torrenta"
+
+#: toptionsform.cbtrayclose.caption
+msgid "Close to tray"
+msgstr "Zamknij do traya"
+
+#: toptionsform.cbtrayiconalways.caption
+msgid "Tray icon always visible"
+msgstr "Ikonka w trayu zawsze widoczna"
+
+#: toptionsform.cbtrayminimize.caption
+msgid "Minimize to tray"
+msgstr "Schowaj do traya"
+
+#: toptionsform.cbtraynotify.caption
+msgid "Show notifications in tray icon"
+msgstr "Pokaż powiadomienia w ikonie na pasku"
+
+#: toptionsform.gbdata.caption
+msgid "Data display"
+msgstr "Wyświetlaj dane"
+
+#: toptionsform.gbnewtorrent.caption
+msgctxt "toptionsform.gbnewtorrent.caption"
+msgid "Add torrent"
+msgstr "Dodaj torrent"
+
+#: toptionsform.gbsysint.caption
+msgid "System integration"
+msgstr "Integracja systemu"
+
+#: toptionsform.gbtray.caption
+msgid "Tray icon"
+msgstr "Ikonka w trayu"
+
+#: toptionsform.tabadvanced.caption
+msgctxt "toptionsform.tabadvanced.caption"
+msgid "Advanced"
+msgstr ""
+
+#: toptionsform.tabgeneral.caption
+msgctxt "toptionsform.tabgeneral.caption"
+msgid "General"
+msgstr ""
+
+#: toptionsform.txdays.caption
+msgid "days"
+msgstr "dni"
+
+#: toptionsform.txintfscale.caption
+msgid "Font size:"
+msgstr ""
+
+#: toptionsform.txlanguage.caption
+msgctxt "toptionsform.txlanguage.caption"
+msgid "Language:"
+msgstr ""
+
+#: toptionsform.txperc.caption
+msgctxt "toptionsform.txperc.caption"
+msgid "%"
+msgstr ""
+
+#: toptionsform.txrefreshinterval.caption
+msgid "Data refresh interval:"
+msgstr ""
+
+#: toptionsform.txrefreshintervalmin.caption
+msgid "Data refresh interval when minimized:"
+msgstr ""
+
+#: toptionsform.txseconds.caption
+msgctxt "toptionsform.txseconds.caption"
+msgid "seconds"
+msgstr ""
+
+#: toptionsform.txseconds2.caption
+msgctxt "toptionsform.txseconds2.caption"
+msgid "seconds"
+msgstr "sekund"
+
+#: tpasswordconnect.caption
+msgid "PasswordConnect"
+msgstr ""
+
+#: tpasswordconnect.lmsg.caption
+msgid "lMsg"
+msgstr ""
+
+#: tpasswordconnect.passw.text
+msgid "12345"
+msgstr ""
+
+#: ttorrpropsform.caption
+msgid "Torrent properties"
+msgstr "Właściwości torrenta"
+
+#: ttorrpropsform.cbidleseedlimit.caption
+msgctxt "ttorrpropsform.cbidleseedlimit.caption"
+msgid "Stop seeding when inactive for:"
+msgstr ""
+
+#: ttorrpropsform.cbmaxdown.caption
+msgctxt "ttorrpropsform.cbmaxdown.caption"
+msgid "Maximum download speed:"
+msgstr ""
+
+#: ttorrpropsform.cbmaxup.caption
+msgctxt "ttorrpropsform.cbmaxup.caption"
+msgid "Maximum upload speed:"
+msgstr ""
+
+#: ttorrpropsform.cbseedratio.caption
+msgctxt "ttorrpropsform.cbseedratio.caption"
+msgid "Seed ratio:"
+msgstr ""
+
+#: ttorrpropsform.tabadvanced.caption
+msgctxt "ttorrpropsform.tabadvanced.caption"
+msgid "Advanced"
+msgstr "Zaawansowane"
+
+#: ttorrpropsform.tabgeneral.caption
+msgctxt "ttorrpropsform.tabgeneral.caption"
+msgid "General"
+msgstr "Ogólne"
+
+#: ttorrpropsform.txkbs1.caption
+msgctxt "ttorrpropsform.txkbs1.caption"
+msgid "KB/s"
+msgstr ""
+
+#: ttorrpropsform.txkbs2.caption
+msgctxt "ttorrpropsform.txkbs2.caption"
+msgid "KB/s"
+msgstr "KB/s"
+
+#: ttorrpropsform.txminutes.caption
+msgctxt "ttorrpropsform.txminutes.caption"
+msgid "minutes"
+msgstr "minut"
+
+#: ttorrpropsform.txname.caption
+msgctxt "ttorrpropsform.txname.caption"
+msgid "Name:"
+msgstr ""
+
+#: ttorrpropsform.txpeerlimit.caption
+msgctxt "ttorrpropsform.txpeerlimit.caption"
+msgid "Peer limit:"
+msgstr ""
+
+#: ttorrpropsform.txtrackers.caption
+msgid "Trackers:"
+msgstr ""
+
+#TranslationLanguage
+#Polski
+
+#&All
+#&Wszystkie
+
+#&Close
+#&Zamknij
+
+#&Ignore
+#&Ignoruj
+
+#&No
+#&Nie
+
+#&OK
+#&OK
+
+#&Open
+#&Otwórz
+
+#&Retry
+#&Ponów
+
+#&Save
+#&Zapisz
+
+#&Unlock
+#&Odblokuj
+
+#&Yes
+#&Tak
+
+#Abort
+#Przerwij
+
+#&Add torrent
+#Dodaj torrent
+
+#Authentication
+#Autoryzacja
+
+#Comment
+#Komentarz
+
+#Confirmation
+#Potwierdzenie
+
+#Connecting to daemon
+#Łączenie do demona
+
+#Connection error occurred
+#Wystąpił błąd połączenia
+
+#Created on
+#Utworzono o
+
+#Destination folder
+#Folder docelowy
+
+#Donate to support further development
+#Darowizna na wsparcie dalszego rozwoju
+
+#Donate via PayPal,WebMoney,Credit card
+#Dotuj przez PayPal,WebMoney,Credit card
+
+#Down limit
+#Limit pobierania
+
+#Download speed
+#Prędkość pobierania
+
+#Encryption
+#Szyfrowanie
+
+#Flag images archive is needed to display country flags.~Download this archive now?
+#Obrazki flag są potrzebne, aby wyświetlać je w karcie peerów.
+#Czy chcesz je teraz pobrać?
+
+#Global peer limit
+#Ogólny limit peerów
+
+#Hash
+#Hash
+
+#Incoming port is closed. Check your firewall settings
+#Port połączeń przychodzących jest zablokowany. Sprawdź ustawienia swojego firewalla.
+
+#Incoming port tested successfully
+#Test portu połączeń przychodzących wypadł pomyślnie
+
+#Incoming port
+#Port połączeń przychodzących
+
+#Information
+#Informacja
+
+#Language
+#Język
+
+#Max peers
+#Maksymalna ilość peerów
+
+#No host name specified
+#Nie zdefiniowano nazwy hosta
+
+#No proxy server specified
+#Nie zdefiniowano serwera proxy
+
+#No to all
+#Nie na wszystko
+
+#Password
+#Hasło
+
+#Peer limit
+#Limit peerów
+
+#Pieces
+#Części
+
+#Properties
+#Właściwości
+
+#Proxy password
+#Hasło proxy
+
+#Proxy port
+#Port proxy
+
+#Proxy server
+#Serwer proxy
+
+#Proxy user name
+#Nazwa użytkownika proxy
+
+#Reconnect in %d seconds
+#Ponawianie próby za %d sekund
+
+#Remaining
+#Pozostało
+
+#Remote host
+#Zdalny host
+
+#Seed ratio
+#Ratio seedowania
+
+#Setup columns
+#Ustawienia kolumn
+
+#Share ratio
+#Ratio współdzielenia
+
+#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
+#Torrenty (*.torrent)|*.torrent|Wszystkie pliki (*.*)|*.*
+
+#Total size
+#Łączny rozmiar
+
+#Tracker update on
+#Aktualizacja trackera o
+
+#Unable to extract flag image
+#Nie można rozpakować obrazków flag
+
+#Up limit
+#Limit wysyłania
+
+#Update complete
+#Aktualizacja zakończona
+
+#Upload speed
+#Prędkość wysyłania
+
+#User name
+#Nazwa użytkownika
+
+#Warning
+#Ostrzeżenie
+
+#Wasted
+#Zmarnowane
+
+#Yes to &All
+#Tak na &Wszystkie
+
+#Directory for incomplete files
+#Folder na niedokończone pliki
+
+#Enable blocklist
+#Włącz blocklistę
+
+#New location for torrent data
+#Nowa lokalizacja na pobrane dane
+
+#No link was specified
+#Link nie został podany
+
+#No torrent location was specified
+#Nie została podana lokalizacja torrenta
+
+#Set data location
+#Ustaw lokalizację pobieranych plików
+
+#The block list has been updated successfully.~The list entries count: %d
+#Lista blokowanych adresów została pomyślnie zaktualizowana.
+#Liczba wpisów: %d
+
+#The directory for incomplete files was not specified
+#Katalog na niedokończone pliki nie został wskazany
+
+#The downloads directory was not specified
+#Katalog na pobierane pliki nie został wskazany
+
+#Unable to execute "%s"
+#Nie można uruchomić "%s"
+
+#URL of a .torrent file or a magnet link
+#URL pliku .torrent lub magnet linka
+
+#Days
+#Dni
+
+#Disk cache size
+#Wielkość cache dysku
+
+#Download speeds (KB/s)
+#Prędkości pobierania (KB/s)
+
+#Edit tracker
+#Edytuj tracker
+
+#Free disk space
+#Wolne miejsce na dysku
+
+#From
+#Od
+
+#New connection
+#Nowe połączenie
+
+#No tracker URL was specified
+#URL trackera nie został podany
+
+#Stop seeding when inactive for
+#Zakończ seedowanie gdy nieaktywny przez
+
+#The invalid time value was entered
+#Został podany niepoprawny czas
+
+#to
+#do
+
+#Tracker announce URL
+#URL Trackera
+
+#Upload speeds (KB/s)
+#Prędkości wysyłania (KB/s)
+
+#Browse
+#Przeglądaj
+
+#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
+#Nowa wersja %s jest dostępna.
+#Twoja obecna wersja: %s
+#Nowa wersja: %s
+#Czy chcesz otworzyć stronę pobierania?
+
+#Check for new version every
+#Sprawdź dostępność nowych wersji co
+
+#Consider active torrents as stalled when idle for
+#Uznaj za wstrzymane, aktywne torrenty, gdy są bezczynne przez
+
+#Donate!
+#Dotacje!
+
+#Download queue size
+#Rozmiar kolejki pobierania
+
+#Error checking for new version
+#Błąd sprawdzania nowej wersji
+
+#Modify trackers
+#Modyfikuj trackery
+
+#No updates have been found.~You are running the latest version of %s
+#Aktualizacja nie została znaleziona.
+#Używasz najnowszej wersji %s
+
+#Upload queue size
+#Rozmiar kolejki wysyłania
+
+#Global statistics
+#Globalna statystyka
+
+#Connection name
+#Nazwa połączenia
+
+#Could not connect to tracker
+#=Nie można połączyć się z trackerem
+
+#Data refresh interval when minimized
+#Interwał odświeżania danych, gdy zminimalizowane
+
+#Data refresh interval
+#Interwał odświeżania danych
+
+#Default download folder on remote host
+#Domyślny folder pobrania na zdalnym hoście
+
+#Downloading torrent file
+#Pobieranie pliku torrent
+
+#Font size
+#Rozmiar czcionki
+
+#Invalid name specified
+#Określona nazwa jest nieprawidłowa
+
+#Manage connections
+#Zarządzaj połączeniami
+
+#Please enter a password to connect to %s
+#Wprowadź hasło, aby połączyć się z %s
+
+#Please specify how %s will connect to a remote host running Transmission daemon (service)
+#Proszę określić, jak %s połączy się usługą Transmission (demonem) uruchomionym na zdalnym hoście
+
+#RPC path
+#ścieżka RPC
+
+#Save as
+#Zapisz jako
+
+#Torrent not registered with this tracker
+#=Torrent nie jest zarejestrowany na tym trackerze
+
+#Unable to find path mapping.~Use the application's options to setup path mappings
+#Nie można znaleźć mapowania ścieżki.
+#Użyj opcji w aplikacji do konfiguracji mapowania ścieżki
+
+#You need to restart the application to apply changes
+#Musisz ponownie uruchomić aplikację, aby zastosować zmiany
+
+#Magnet Link
+#Link magnet
+
+#Export settings
+#Eksportuj ustawienia
+
+#Import settings
+#Importuj ustawienia
+
+#Template:
+#Szablon:
+
+#Connection refused
+#Połączenie odrzucone
+
+#Access violation
+#Naruszenie zasad dostępu
+
+#Connection timed out
+#Przekroczono limit czasu połączenia
+
+#Other Winsock error
+#Inny błąd Winsock
+
+#Host not found
+#Nie odnaleziono hosta
+
+#Unauthorized User
+#Nieupoważniony użytkownik
+

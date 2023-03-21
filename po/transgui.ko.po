@@ -1,0 +1,2572 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: about.serrorcheckingversion
+msgid "Error checking for new version."
+msgstr ""
+
+#: about.slatestversion
+#, object-pascal-format
+msgid ""
+"No updates have been found.\n"
+"You are running the latest version of %s."
+msgstr ""
+
+#: about.snewversionfound
+#, object-pascal-format
+msgid ""
+"A new version of %s is available.\n"
+"Your current version: %s\n"
+"The new version: %s\n"
+"\n"
+"Do you wish to open the Downloads web page?"
+msgstr ""
+
+#: addlink.snolink
+msgid "No link was specified."
+msgstr ""
+
+#: addtorrent.sinvalidname
+msgid "Invalid name specified."
+msgstr ""
+
+#: addtorrent.sselectdownloadfolder
+msgid "Select a folder for download"
+msgstr "다운로드할 폴더를 지정하세요"
+
+#: addtorrent.ssize
+msgctxt "addtorrent.ssize"
+msgid "Size"
+msgstr ""
+
+#: addtracker.snotracker
+msgid "No tracker URL was specified."
+msgstr ""
+
+#: addtracker.strackerprops
+msgid "Tracker properties"
+msgstr "트래커 설정"
+
+#: connoptions.sdelconnection
+#, object-pascal-format
+msgid "Are you sure to delete connection '%s'?"
+msgstr "'%s'연결을 삭제 하시겠습니까?"
+
+#: connoptions.snewconnection
+msgid "New connection to Transmission"
+msgstr "새로운 트랜스미션과의 연결"
+
+#: connoptions.snohost
+msgid "No host name specified."
+msgstr ""
+
+#: connoptions.snoproxy
+msgid "No proxy server specified."
+msgstr ""
+
+#: daemonoptions.sencryptiondisabled
+msgid "Encryption disabled"
+msgstr "암호화 비활성화"
+
+#: daemonoptions.sencryptionenabled
+msgid "Encryption enabled"
+msgstr "암호화 활성화"
+
+#: daemonoptions.sencryptionrequired
+msgid "Encryption required"
+msgstr "암호화 필수"
+
+#: daemonoptions.sinvalidtime
+msgid "The invalid time value was entered."
+msgstr ""
+
+#: daemonoptions.snodownloaddir
+msgid "The downloads directory was not specified."
+msgstr ""
+
+#: daemonoptions.snoincompletedir
+msgid "The directory for incomplete files was not specified."
+msgstr ""
+
+#: daemonoptions.sporttestfailed
+msgid "Incoming port is closed. Check your firewall settings."
+msgstr ""
+
+#: daemonoptions.sporttestsuccess
+msgid "Incoming port tested successfully."
+msgstr ""
+
+#: download.sdownloadprogress
+#, object-pascal-format
+msgid "%s of %s downloaded"
+msgstr "%s 중 %s 다운로드 됨"
+
+#: download.sdownloadprogress2
+#, object-pascal-format
+msgid "%s downloaded"
+msgstr "%s 다운로드"
+
+#: main.sactive
+msgid "Active"
+msgstr "활성화"
+
+#: main.sactivetime
+msgid "Active time"
+msgstr "활성화 시간"
+
+#: main.sall
+msgid "All torrents"
+msgstr "모든 토렌트"
+
+#: main.saverage
+msgid "average"
+msgstr "평균"
+
+#: main.sbididefault
+msgid "Default"
+msgstr "기본값"
+
+#: main.sbidileftright
+msgid "Left->Right"
+msgstr "왼쪽에서 오른쪽으로"
+
+#: main.sbidirightleft
+msgid "Right->Left"
+msgstr "오른쪽에서 왼쪽으로"
+
+#: main.sbidirightleftnoalign
+msgid "Right->Left (No Align)"
+msgstr "오른쪽에서 왼쪽으로 (정렬 없음)"
+
+#: main.sbidirightleftreadonly
+msgid "Right->Left (Reading Only)"
+msgstr "오른쪽에서 왼쪽으로 (읽기 전용)"
+
+#: main.sblocklistupdatecomplete
+#, object-pascal-format
+msgid ""
+"The block list has been updated successfully.\n"
+"The list entries count: %d."
+msgstr ""
+
+#: main.sbyte
+msgid "b"
+msgstr "b"
+
+#: main.schecknewversion
+#, object-pascal-format
+msgid "Do you wish to enable automatic checking for a new version of %s?"
+msgstr "%s의 새 버전을 자동으로 확인할까요?"
+
+#: main.scompleted
+msgid "Completed"
+msgstr "완료됨"
+
+#: main.sconnected
+msgid "connected"
+msgstr "연결됨"
+
+#: main.sconnectingtodaemon
+msgid "Connecting to daemon..."
+msgstr ""
+
+#: main.sconnectto
+#, object-pascal-format
+msgid "Connect to %s"
+msgstr "%s 에 연결"
+
+#: main.sdays
+#, object-pascal-format
+msgid "%dd"
+msgstr "%d일"
+
+#: main.sdisconnected
+msgid "Disconnected"
+msgstr "연결종료"
+
+#: main.sdone
+#, object-pascal-format
+msgid "%s (%s done)"
+msgstr "%s (%s 끝)"
+
+#: main.sdownloadcomplete
+msgid "Download complete"
+msgstr "다운로드 완료"
+
+#: main.sdownloaded
+msgctxt "main.sdownloaded"
+msgid "Downloaded"
+msgstr ""
+
+#: main.sdownloading
+msgctxt "main.sdownloading"
+msgid "Downloading"
+msgstr ""
+
+#: main.sdownloadingseeding
+#, object-pascal-format
+msgid "%s%s%d downloading, %d seeding%s%s, %s"
+msgstr "%s%s%d 다운로드, %d 시딩%s%s, %s"
+
+#: main.sdownloadingtorrent
+msgid "Downloading torrent file..."
+msgstr ""
+
+#: main.sdownspeed
+#, object-pascal-format
+msgid "D: %s/s"
+msgstr "다운: %s/s"
+
+#: main.sduplicatetorrent
+msgid "Torrent already exists in the list"
+msgstr "목록에 토렌트가 이미 존재합니다"
+
+#: main.senterpassword
+#, object-pascal-format
+msgid "Please enter a password to connect to %s:"
+msgstr ""
+
+#: main.serrorstate
+msgid "Error"
+msgstr "오류"
+
+#: main.sfilesadded
+msgid "Files added"
+msgstr "추가된 파일"
+
+#: main.sfinished
+msgid "Finished"
+msgstr "끝"
+
+#: main.sfinisheddownload
+#, object-pascal-format
+msgid "'%s' has finished downloading"
+msgstr "'%s' 다운로드 종료"
+
+#: main.sfreespace
+#, object-pascal-format
+msgid "Free: %s"
+msgstr "남은 공간: %s"
+
+#: main.sgbyte
+msgid "GB"
+msgstr "GB"
+
+#: main.sgeoipconfirm
+msgid ""
+"Geo IP database is needed to resolve country by IP address.\n"
+"Download this database now?"
+msgstr "IP로 국가를 분석하기 위해 Geo IP 데이터베이스가 필요합니다."
+"데이터베이스를 지금 받을까요?"
+
+#: main.shashfails
+#, object-pascal-format
+msgid "%s (%d hashfails)"
+msgstr "%s (%d 해쉬실패)"
+
+#: main.shave
+#, object-pascal-format
+msgid "%d x %s (have %d)"
+msgstr "%d x %s (%d 소유)"
+
+#: main.shigh
+msgid "high"
+msgstr "높음"
+
+#: main.shours
+#, object-pascal-format
+msgid "%dh"
+msgstr "%d시간"
+
+#: main.sinactive
+msgid "Inactive"
+msgstr "비활성화"
+
+#: main.sinswarm
+msgid "in swarm"
+msgstr "피어"
+
+#: main.skbyte
+msgid "KB"
+msgstr "KB"
+
+#: main.slanguagelist
+msgid "Language list"
+msgstr ""
+
+#: main.slanguagepath
+msgid "Language path"
+msgstr ""
+
+#: main.slanguagepathfile
+msgid "Language pathfile"
+msgstr ""
+
+#: main.slow
+msgid "low"
+msgstr "낮음"
+
+#: main.smbyte
+msgctxt "main.smbyte"
+msgid "MB"
+msgstr ""
+
+#: main.smins
+#, object-pascal-format
+msgid "%dm"
+msgstr "%d분"
+
+#: main.smonths
+#, object-pascal-format
+msgid "%dmo"
+msgstr ""
+
+#: main.snopathmapping
+msgid ""
+"Unable to find path mapping.\n"
+"Use the application's options to setup path mappings."
+msgstr ""
+
+#: main.snormal
+msgid "normal"
+msgstr "보통"
+
+#: main.snotracker
+msgid "No tracker"
+msgstr "트래커 아님"
+
+#: main.sof
+msgid "of"
+msgstr "중"
+
+#: main.spersecond
+msgid "/s"
+msgstr "/s"
+
+#: main.sprivateoff
+msgid "OFF"
+msgstr ""
+
+#: main.sprivateon
+msgid "ON"
+msgstr ""
+
+#: main.sreconnect
+#, object-pascal-format
+msgid "Reconnect in %d seconds."
+msgstr ""
+
+#: main.sremovetorrent
+#, object-pascal-format
+msgid "Are you sure to remove torrent '%s'?"
+msgstr "'%s' 토렌트를 지울까요?"
+
+#: main.sremovetorrentdata
+#, object-pascal-format
+msgid "Are you sure to remove torrent '%s' and all associated DATA?"
+msgstr "'%s'토렌트와 데이터를 지울까요?"
+
+#: main.sremovetorrentdatamulti
+#, object-pascal-format
+msgid "Are you sure to remove %d selected torrents and all their associated DATA?"
+msgstr "%d 선택된 토렌트와 데이터를 모두 삭제 하시겠습니까?"
+
+#: main.sremovetorrentmulti
+#, object-pascal-format
+msgid "Are you sure to remove %d selected torrents?"
+msgstr "%d 선택된 토렌트를 삭제 하시겠습니까?"
+
+#: main.sremovetracker
+#, object-pascal-format
+msgid "Are you sure to remove tracker '%s'?"
+msgstr "'%s'트래커를 제거 하시겠습니까?"
+
+#: main.srestartrequired
+msgid "You need to restart the application to apply changes."
+msgstr ""
+
+#: main.ssecs
+#, object-pascal-format
+msgid "%ds"
+msgstr "%d초"
+
+#: main.sseeding
+msgid "Seeding"
+msgstr "시딩중"
+
+#: main.sseveraltorrents
+#, object-pascal-format
+msgid "%d torrents"
+msgstr "%d 토렌트"
+
+#: main.sskip
+msgid "skip"
+msgstr "취소"
+
+#: main.ssslloaderror
+#, object-pascal-format
+msgid "Unable to load OpenSSL library files: %s and %s"
+msgstr "OpenSSL library 파일을 열 수 없음: %s 와(과) %s"
+
+#: main.sstopped
+msgid "Stopped"
+msgstr "멈춤"
+
+#: main.stbyte
+msgid "TB"
+msgstr "TB"
+
+#: main.storrents
+msgid "Torrents"
+msgstr "토렌트"
+
+#: main.storrentsverification
+#, object-pascal-format
+msgid ""
+"Torrents verification may take a long time.\n"
+"Are you sure to start verification of %d torrents?"
+msgstr "토렌트 파일 확인은 시간이 오래 걸릴 수도 있습니다."
+"%d 개의 토렌트 파일을 확인 하시겠습니까?"
+
+#: main.storrentverification
+#, object-pascal-format
+msgid ""
+"Torrent verification may take a long time.\n"
+"Are you sure to start verification of torrent '%s'?"
+msgstr "토렌트 검증은 시간이 오래 걸릴 수 있습니다."
+"'%s'토렌트 검증을 시작할까요?"
+
+#: main.stotaldownloaded
+#, object-pascal-format
+msgid "Done: %s"
+msgstr "완료: %s"
+
+#: main.stotalremain
+#, object-pascal-format
+msgid "Remaining: %s"
+msgstr "남은 크기: %s"
+
+#: main.stotalsize
+#, object-pascal-format
+msgid "Total: %s"
+msgstr "전체: %s"
+
+#: main.stotalsizetodownload
+#, object-pascal-format
+msgid "Selected: %s"
+msgstr "선택: %s"
+
+#: main.strackererror
+msgctxt "main.strackererror"
+msgid "Tracker"
+msgstr ""
+
+#: main.strackerupdating
+msgid "Updating"
+msgstr "업데이트중"
+
+#: main.strackerworking
+msgid "Working"
+msgstr "동작중"
+
+#: main.sunablegetfileslist
+msgid "Unable to get files list"
+msgstr "파일 목록을 가져올 수 없음"
+
+#: main.sunabletoexecute
+#, object-pascal-format
+msgid "Unable to execute \"%s\"."
+msgstr ""
+
+#: main.sunknown
+msgid "Unknown"
+msgstr "알수없음"
+
+#: main.sunlimited
+msgid "Unlimited"
+msgstr "제한 없음"
+
+#: main.supdatecomplete
+msgid "Update complete."
+msgstr ""
+
+#: main.supdatetrackers
+msgid "Update trackers for the existing torrent?"
+msgstr "기존 토런트의 트래커를 업데이트 하시겠습니까?"
+
+#: main.supdating
+msgid "Updating..."
+msgstr ""
+
+#: main.suploaded
+msgctxt "main.suploaded"
+msgid "Uploaded"
+msgstr ""
+
+#: main.supspeed
+#, object-pascal-format
+msgid "U: %s/s"
+msgstr "업: %s/s"
+
+#: main.susermenu
+msgid "User Menu"
+msgstr "사용자 메뉴"
+
+#: main.sverifying
+msgid "Verifying"
+msgstr "검증중"
+
+#: main.swaiting
+msgid "Waiting"
+msgstr "대기"
+
+#: main.syears
+#, object-pascal-format
+msgid "%dy"
+msgstr ""
+
+#: movetorrent.snotorrentdir
+msgid "No torrent location was specified."
+msgstr ""
+
+#: movetorrent.sselectfolder
+msgid "Select torrent location"
+msgstr "토렌트 위치를 지정하세요"
+
+#: rpc.stransmissionat
+#, object-pascal-format
+msgid "Transmission%s at %s:%s"
+msgstr "트랜스미션%s at %s:%s"
+
+#: taboutform.caption
+msgctxt "taboutform.caption"
+msgid "About"
+msgstr ""
+
+#: taboutform.tababout.caption
+msgctxt "taboutform.tababout.caption"
+msgid "About"
+msgstr "정보"
+
+#: taboutform.tablicense.caption
+msgid "License"
+msgstr "저작권"
+
+#: taboutform.txappname.caption
+msgid "txAppName"
+msgstr ""
+
+#: taboutform.txauthor.caption
+msgid "Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group"
+msgstr ""
+
+#: taboutform.txhomepage.caption
+msgid "Home page"
+msgstr "홈페이지"
+
+#: taboutform.txversfpc.caption
+#, object-pascal-format
+msgctxt "taboutform.txversfpc.caption"
+msgid "Version %s"
+msgstr ""
+
+#: taboutform.txversion.caption
+#, object-pascal-format
+msgctxt "taboutform.txversion.caption"
+msgid "Version %s"
+msgstr "버전 %s"
+
+#: taddlinkform.caption
+msgctxt "taddlinkform.caption"
+msgid "Add torrent link"
+msgstr ""
+
+#: taddlinkform.txlink.caption
+msgid "URL of a .torrent file or a magnet link:"
+msgstr ""
+
+#: taddtorrentform.btbrowse.caption
+msgctxt "taddtorrentform.btbrowse.caption"
+msgid "Browse..."
+msgstr ""
+
+#: taddtorrentform.btbrowse.hint
+msgid "Browse folder"
+msgstr ""
+
+#: taddtorrentform.btselectall.caption
+msgctxt "taddtorrentform.btselectall.caption"
+msgid "Select all"
+msgstr ""
+
+#: taddtorrentform.btselectnone.caption
+msgid "Select none"
+msgstr "선택 하지 않음"
+
+#: taddtorrentform.caption
+msgid "Add new torrent"
+msgstr "새 토렌트 추가"
+
+#: taddtorrentform.cbstarttorrent.caption
+msgctxt "taddtorrentform.cbstarttorrent.caption"
+msgid "Start torrent"
+msgstr ""
+
+#: taddtorrentform.delbutton.hint
+msgid "Delete destination folder"
+msgstr "대상 폴더 삭제"
+
+#: taddtorrentform.edextension.hint
+msgctxt "taddtorrentform.edextension.hint"
+msgid "for example: *.avi *.mkv"
+msgstr ""
+
+#: taddtorrentform.gbcontents.caption
+msgid "Torrent contents"
+msgstr "토렌트 내용"
+
+#: taddtorrentform.gbsaveas.caption
+msgctxt "taddtorrentform.gbsaveas.caption"
+msgid " "
+msgstr ""
+
+#: taddtorrentform.lvfiles.columns[0].title.caption
+msgctxt "taddtorrentform.lvfiles.columns[0].title.caption"
+msgid "File name"
+msgstr ""
+
+#: taddtorrentform.lvfiles.columns[1].title.caption
+msgctxt "taddtorrentform.lvfiles.columns[1].title.caption"
+msgid "Size"
+msgstr ""
+
+#: taddtorrentform.txdestfolder.caption
+msgid "Destination folder:"
+msgstr ""
+
+#: taddtorrentform.txdiskspace.caption
+msgid "Free disk space:"
+msgstr ""
+
+#: taddtorrentform.txpeerlimit.caption
+msgctxt "taddtorrentform.txpeerlimit.caption"
+msgid "Peer limit:"
+msgstr ""
+
+#: taddtorrentform.txsaveas.caption
+msgid "Save as:"
+msgstr ""
+
+#: taddtorrentform.txsaveas1.caption
+msgid "Template:  "
+msgstr ""
+
+#: taddtorrentform.txsaveas1.hint
+msgctxt "taddtorrentform.txsaveas1.hint"
+msgid "for example: *.avi *.mkv"
+msgstr "사용 예: *.avi *.mkv"
+
+#: taddtrackerform.caption
+msgid "Add tracker"
+msgstr "트래커 추가"
+
+#: taddtrackerform.txtrackerurl.caption
+msgid "Tracker announce URL:"
+msgstr ""
+
+#: tcolsetupform.btdown.caption
+msgid "Down"
+msgstr "아래로"
+
+#: tcolsetupform.btup.caption
+msgid "Up"
+msgstr "위로"
+
+#: tcolsetupform.caption
+msgid "Columns setup"
+msgstr "세로줄 설정"
+
+#: tconnoptionsform.btdel.caption
+msgid "Delete"
+msgstr "삭제"
+
+#: tconnoptionsform.btnew.caption
+msgid "New"
+msgstr "새로만들기"
+
+#: tconnoptionsform.btrename.caption
+msgctxt "tconnoptionsform.btrename.caption"
+msgid "Rename"
+msgstr ""
+
+#: tconnoptionsform.caption
+msgid "Manage connections to Transmission"
+msgstr "트랜스미션과의 연결 관리하기"
+
+#: tconnoptionsform.cbaskpassword.caption
+msgid "Ask for password"
+msgstr "암호를 물어봄"
+
+#: tconnoptionsform.cbauth.caption
+msgctxt "tconnoptionsform.cbauth.caption"
+msgid "Authentication required"
+msgstr ""
+
+#: tconnoptionsform.cbautoreconnect.caption
+msgid "Always auto-reconnect"
+msgstr "항상 자동으로 재연결"
+
+#: tconnoptionsform.cbproxyauth.caption
+msgctxt "tconnoptionsform.cbproxyauth.caption"
+msgid "Authentication required"
+msgstr "인증이 필요함"
+
+#: tconnoptionsform.cbshowadvanced.caption
+msgid "Show advanced options"
+msgstr "고급 설정을 보이기"
+
+#: tconnoptionsform.cbssl.caption
+msgid "Use SSL"
+msgstr "SSL 사용"
+
+#: tconnoptionsform.cbuseproxy.caption
+msgid "Connect to Transmission using proxy server"
+msgstr "트랜스미션에 프록시를 사용하여 연결합니다"
+
+#: tconnoptionsform.cbusesocks5.caption
+msgid "SOCKS 5"
+msgstr ""
+
+#: tconnoptionsform.edtranslateform.caption
+msgid "Activate the translated version of the application (need to restart the application)"
+msgstr ""
+
+#: tconnoptionsform.edtranslatemsg.caption
+msgid "Activate the translation of the Transmission strings"
+msgstr ""
+
+#: tconnoptionsform.gbspeed.caption
+msgid "Speed limit menu items"
+msgstr "속도제한 메뉴 항목"
+
+#: tconnoptionsform.label1.caption
+msgid "The maximum history of directories for storage of torrents"
+msgstr "토렌트 저장 디렉토리 목록 최대값"
+
+#: tconnoptionsform.label111.caption
+msgctxt "tconnoptionsform.label111.caption"
+msgid "Language:"
+msgstr ""
+
+#: tconnoptionsform.label2.caption
+msgid "Config file:"
+msgstr ""
+
+#: tconnoptionsform.tabconnection.caption
+msgid "Transmission"
+msgstr ""
+
+#: tconnoptionsform.tabmisc.caption
+msgid "Misc"
+msgstr "기타"
+
+#: tconnoptionsform.tabpaths.caption
+msgid "Paths"
+msgstr "경로"
+
+#: tconnoptionsform.tabproxy.caption
+msgid "Proxy"
+msgstr "프록시"
+
+#: tconnoptionsform.txcertfile.caption
+msgid "Client Certificate:"
+msgstr ""
+
+#: tconnoptionsform.txcertpass.caption
+msgid "Private Key:"
+msgstr ""
+
+#: tconnoptionsform.txconname.caption
+msgid "Connection name:"
+msgstr ""
+
+#: tconnoptionsform.txconnhelp.caption
+#, object-pascal-format
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)."
+msgstr ""
+
+#: tconnoptionsform.txdownspeeds.caption
+msgid "Download speeds (KB/s):"
+msgstr ""
+
+#: tconnoptionsform.txhost.caption
+msgid "Remote host:"
+msgstr ""
+
+#: tconnoptionsform.txpassword.caption
+msgid "Password:"
+msgstr ""
+
+#: tconnoptionsform.txpaths.caption
+msgid ""
+"Remote to local path mappings.\n"
+"Examples:\n"
+"/share=\\\\pch\\share\n"
+"/var/downloads/music=Z:\\music"
+msgstr "리모트와 로컬간의 경로 맵핑."
+"사용 예:"
+"/share=\\\\pch\\share"
+"/var/downloads/music=Z:\\music"
+
+#: tconnoptionsform.txport.caption
+msgid "Port:"
+msgstr ""
+
+#: tconnoptionsform.txproxy.caption
+msgid "Proxy server:"
+msgstr ""
+
+#: tconnoptionsform.txproxypassword.caption
+msgid "Proxy password:"
+msgstr ""
+
+#: tconnoptionsform.txproxyport.caption
+msgid "Proxy port:"
+msgstr ""
+
+#: tconnoptionsform.txproxyusername.caption
+msgid "Proxy user name:"
+msgstr ""
+
+#: tconnoptionsform.txrpcpath.caption
+msgid "RPC path:"
+msgstr ""
+
+#: tconnoptionsform.txupspeeds.caption
+msgid "Upload speeds (KB/s):"
+msgstr ""
+
+#: tconnoptionsform.txusername.caption
+msgid "User name:"
+msgstr ""
+
+#: tdaemonoptionsform.bttestport.caption
+msgid "Test port"
+msgstr "포트 시험"
+
+#: tdaemonoptionsform.caption
+msgctxt "tdaemonoptionsform.caption"
+msgid "Transmission options"
+msgstr ""
+
+#: tdaemonoptionsform.cbaltenabled.caption
+msgctxt "tdaemonoptionsform.cbaltenabled.caption"
+msgid "Use alternate bandwidth settings"
+msgstr ""
+
+#: tdaemonoptionsform.cbautoalt.caption
+msgid "Apply alternate bandwidth settings automatically"
+msgstr "교차 대역폭 자동 설정 적용"
+
+#: tdaemonoptionsform.cbblocklist.caption
+msgid "Enable blocklist:"
+msgstr ""
+
+#: tdaemonoptionsform.cbdht.caption
+msgid "Enable DHT"
+msgstr "DHT 사용"
+
+#: tdaemonoptionsform.cbdownqueue.caption
+msgid "Download queue size:"
+msgstr ""
+
+#: tdaemonoptionsform.cbidleseedlimit.caption
+msgctxt "tdaemonoptionsform.cbidleseedlimit.caption"
+msgid "Stop seeding when inactive for:"
+msgstr ""
+
+#: tdaemonoptionsform.cbincompletedir.caption
+msgid "Directory for incomplete files:"
+msgstr ""
+
+#: tdaemonoptionsform.cblpd.caption
+msgid "Enable Local Peer Discovery"
+msgstr "지역 피어 발견 사용"
+
+#: tdaemonoptionsform.cbmaxdown.caption
+msgctxt "tdaemonoptionsform.cbmaxdown.caption"
+msgid "Maximum download speed:"
+msgstr ""
+
+#: tdaemonoptionsform.cbmaxup.caption
+msgctxt "tdaemonoptionsform.cbmaxup.caption"
+msgid "Maximum upload speed:"
+msgstr ""
+
+#: tdaemonoptionsform.cbpartext.caption
+msgid "Add .part extension to incomplete files"
+msgstr "진행중인 파일에 .part 연결 추가"
+
+#: tdaemonoptionsform.cbpex.caption
+msgid "Enable Peer Exchange"
+msgstr "피어 교환 사용"
+
+#: tdaemonoptionsform.cbportforwarding.caption
+msgid "Enable port forwarding"
+msgstr "포트 포워딩 사용"
+
+#: tdaemonoptionsform.cbrandomport.caption
+msgid "Pick random port on Transmission launch"
+msgstr "트랜스미션 데몬 시작시 랜덤으로 고름"
+
+#: tdaemonoptionsform.cbseedratio.caption
+msgctxt "tdaemonoptionsform.cbseedratio.caption"
+msgid "Seed ratio:"
+msgstr ""
+
+#: tdaemonoptionsform.cbstalled.caption
+msgid "Consider active torrents as stalled when idle for:"
+msgstr ""
+
+#: tdaemonoptionsform.cbstalled.hint
+msgid "Torrents that are idle for N minuets aren't counted toward the Download queue or Upload queue"
+msgstr "N 분간 유휴상태인 토렌트는 다운로드나 업로드 큐에 넣지 않습니다"
+
+#: tdaemonoptionsform.cbupqueue.caption
+msgid "Upload queue size:"
+msgstr ""
+
+#: tdaemonoptionsform.cbutp.caption
+msgid "Enable µTP"
+msgstr ""
+
+#: tdaemonoptionsform.edalttimebegin.text
+msgctxt "tdaemonoptionsform.edalttimebegin.text"
+msgid "  :  "
+msgstr ""
+
+#: tdaemonoptionsform.edalttimeend.text
+msgctxt "tdaemonoptionsform.edalttimeend.text"
+msgid "  :  "
+msgstr ""
+
+#: tdaemonoptionsform.gbaltspeed.caption
+msgid "Alternate bandwidth settings"
+msgstr "교차 대역폭 설정"
+
+#: tdaemonoptionsform.gbbandwidth.caption
+msgid "Global bandwidth settings"
+msgstr "전체 대역폭 설정"
+
+#: tdaemonoptionsform.tabbandwidth.caption
+msgid "Bandwidth"
+msgstr "대역폭"
+
+#: tdaemonoptionsform.tabdownload.caption
+msgid "Download"
+msgstr "다운로드"
+
+#: tdaemonoptionsform.tabnetwork.caption
+msgid "Network (WAN)"
+msgstr "네트워크 (WAN)"
+
+#: tdaemonoptionsform.tabqueue.caption
+msgctxt "tdaemonoptionsform.tabqueue.caption"
+msgid "Queue"
+msgstr ""
+
+#: tdaemonoptionsform.txaltdown.caption
+msgctxt "tdaemonoptionsform.txaltdown.caption"
+msgid "Maximum download speed:"
+msgstr ""
+
+#: tdaemonoptionsform.txaltup.caption
+msgctxt "tdaemonoptionsform.txaltup.caption"
+msgid "Maximum upload speed:"
+msgstr ""
+
+#: tdaemonoptionsform.txcachesize.caption
+msgid "Disk cache size:"
+msgstr ""
+
+#: tdaemonoptionsform.txdays.caption
+msgid "Days:"
+msgstr ""
+
+#: tdaemonoptionsform.txdownloaddir.caption
+msgid "Default download folder on remote host:"
+msgstr ""
+
+#: tdaemonoptionsform.txencryption.caption
+msgid "Encryption:"
+msgstr ""
+
+#: tdaemonoptionsform.txfrom.caption
+msgid "From:"
+msgstr ""
+
+#: tdaemonoptionsform.txkbs1.caption
+msgctxt "tdaemonoptionsform.txkbs1.caption"
+msgid "KB/s"
+msgstr ""
+
+#: tdaemonoptionsform.txkbs2.caption
+msgctxt "tdaemonoptionsform.txkbs2.caption"
+msgid "KB/s"
+msgstr ""
+
+#: tdaemonoptionsform.txkbs3.caption
+msgctxt "tdaemonoptionsform.txkbs3.caption"
+msgid "KB/s"
+msgstr ""
+
+#: tdaemonoptionsform.txkbs4.caption
+msgctxt "tdaemonoptionsform.txkbs4.caption"
+msgid "KB/s"
+msgstr ""
+
+#: tdaemonoptionsform.txmb.caption
+msgctxt "tdaemonoptionsform.txmb.caption"
+msgid "MB"
+msgstr "MB"
+
+#: tdaemonoptionsform.txminutes.caption
+msgctxt "tdaemonoptionsform.txminutes.caption"
+msgid "minutes"
+msgstr ""
+
+#: tdaemonoptionsform.txminutes1.caption
+msgctxt "tdaemonoptionsform.txminutes1.caption"
+msgid "minutes"
+msgstr ""
+
+#: tdaemonoptionsform.txpeerlimit.caption
+msgid "Global peer limit:"
+msgstr ""
+
+#: tdaemonoptionsform.txport.caption
+msgid "Incoming port:"
+msgstr ""
+
+#: tdaemonoptionsform.txto.caption
+msgid "to:"
+msgstr ""
+
+#: tdownloadform.btcancel.caption
+msgid "Cancel"
+msgstr "취소"
+
+#: tdownloadform.caption
+msgctxt "tdownloadform.caption"
+msgid "Downloading"
+msgstr "다운로드중"
+
+#: tdownloadform.txbytes.caption
+msgid "txBytes"
+msgstr ""
+
+#: tdownloadform.txfilename.caption
+msgid "txFileName"
+msgstr ""
+
+#: tdownloadform.txpercent.caption
+msgid "txPercent"
+msgstr ""
+
+#: tmainform.acaddlink.caption
+msgid "Add torrent link..."
+msgstr ""
+
+#: tmainform.acaddlink.hint
+msgctxt "tmainform.acaddlink.hint"
+msgid "Add torrent link"
+msgstr "토렌트 연결 추가"
+
+#: tmainform.acaddtorrent.caption
+msgid "&Add torrent..."
+msgstr ""
+
+#: tmainform.acaddtorrent.hint
+msgctxt "tmainform.acaddtorrent.hint"
+msgid "Add torrent"
+msgstr ""
+
+#: tmainform.acaddtracker.caption
+msgid "Add tracker..."
+msgstr ""
+
+#: tmainform.acadvedittrackers.caption
+msgid "Modify trackers..."
+msgstr ""
+
+#: tmainform.acaltspeed.caption
+msgctxt "tmainform.acaltspeed.caption"
+msgid "Use alternate bandwidth settings"
+msgstr ""
+
+#: tmainform.acaltspeed.hint
+msgctxt "tmainform.acaltspeed.hint"
+msgid "Use alternate bandwidth settings"
+msgstr "교차 대역폭 설정 사용"
+
+#: tmainform.acbigtoolbar.caption
+msgid "acBigToolbar"
+msgstr ""
+
+#: tmainform.acchecknewversion.caption
+msgid "Check for updates"
+msgstr "업데이트 확인"
+
+#: tmainform.acconnect.caption
+msgctxt "tmainform.acconnect.caption"
+msgid "Connect to Transmission"
+msgstr ""
+
+#: tmainform.acconnect.hint
+msgctxt "tmainform.acconnect.hint"
+msgid "Connect to Transmission"
+msgstr ""
+
+#: tmainform.acconnoptions.caption
+msgid "Manage connections..."
+msgstr ""
+
+#: tmainform.accopypath.caption
+msgid "Copy file path to clipboard"
+msgstr "파일 경로를 클립보드에 복사"
+
+#: tmainform.acdaemonoptions.caption
+msgid "Transmission options..."
+msgstr ""
+
+#: tmainform.acdaemonoptions.hint
+msgctxt "tmainform.acdaemonoptions.hint"
+msgid "Transmission options"
+msgstr "전송 옵션"
+
+#: tmainform.acdeltracker.caption
+msgid "Remove tracker"
+msgstr "트래커 제거"
+
+#: tmainform.acdisconnect.caption
+msgid "Disconnect from Transmission"
+msgstr "트랜스미션과의 연결 해제"
+
+#: tmainform.acedittracker.caption
+msgid "Edit tracker..."
+msgstr ""
+
+#: tmainform.acexit.caption
+msgid "E&xit"
+msgstr "종료"
+
+#: tmainform.acexport.caption
+msgid "Export settings..."
+msgstr ""
+
+#: tmainform.acfilterpane.caption
+msgid "Filter pane"
+msgstr "필터 패널"
+
+#: tmainform.acfoldergrouping.caption
+msgid "Folder grouping"
+msgstr "폴더 그룹화"
+
+#: tmainform.acforcestarttorrent.caption
+msgid "Force start"
+msgstr "강제로 시작"
+
+#: tmainform.achideapp.caption
+msgid "Hide"
+msgstr "숨김"
+
+#: tmainform.acimport.caption
+msgid "Import settings..."
+msgstr ""
+
+#: tmainform.acinfopane.caption
+msgid "Info pane"
+msgstr "정보 패널"
+
+#: tmainform.aclabelgrouping.caption
+msgid "Label grouping"
+msgstr ""
+
+#: tmainform.acmenushow.caption
+msgid "Menu"
+msgstr "메뉴"
+
+#: tmainform.acmovetorrent.caption
+msgid "Set data location..."
+msgstr ""
+
+#: tmainform.acnewconnection.caption
+msgid "New connection..."
+msgstr ""
+
+#: tmainform.acopencontainingfolder.caption
+msgid "Open containing folder"
+msgstr "저장된 폴더 열기"
+
+#: tmainform.acopenfile.caption
+msgid "Open"
+msgstr "열기"
+
+#: tmainform.acoptions.caption
+msgid "Application options..."
+msgstr ""
+
+#: tmainform.acqmovebottom.caption
+msgid "Move bottom"
+msgstr "맨 하단으로"
+
+#: tmainform.acqmovedown.caption
+msgid "Move down"
+msgstr "아래로"
+
+#: tmainform.acqmovedown.hint
+msgid "Move down queue"
+msgstr "큐 순위 아래로"
+
+#: tmainform.acqmovetop.caption
+msgid "Move top"
+msgstr "맨 상단으로"
+
+#: tmainform.acqmoveup.caption
+msgid "Move up"
+msgstr "위로"
+
+#: tmainform.acqmoveup.hint
+msgid "Move up queue"
+msgstr "큐 순위 위로"
+
+#: tmainform.acreannouncetorrent.caption
+msgid "Reannounce (get more peers)"
+msgstr "다시알림 (피어 추가)"
+
+#: tmainform.acremovetorrent.caption
+msgid "Remove"
+msgstr "제거"
+
+#: tmainform.acremovetorrent.hint
+msgid "Remove torrent"
+msgstr "토렌트 제거"
+
+#: tmainform.acremovetorrentanddata.caption
+msgid "Remove torrent and Data"
+msgstr "토렌트와 데이터 제거"
+
+#: tmainform.acrename.caption
+msgctxt "tmainform.acrename.caption"
+msgid "Rename"
+msgstr "이름 바꾸기"
+
+#: tmainform.acresolvecountry.caption
+msgid "Resolve country"
+msgstr "국가 확인"
+
+#: tmainform.acresolvehost.caption
+msgid "Resolve host name"
+msgstr "호스트 이름 확인"
+
+#: tmainform.acselectall.caption
+msgctxt "tmainform.acselectall.caption"
+msgid "Select all"
+msgstr "모두 선택"
+
+#: tmainform.acsethighpriority.caption
+msgid "High priority"
+msgstr "높은 우선권"
+
+#: tmainform.acsetlabels.caption
+msgid "Set labels..."
+msgstr ""
+
+#: tmainform.acsetlowpriority.caption
+msgid "Low priority"
+msgstr "낮은 우선권"
+
+#: tmainform.acsetnormalpriority.caption
+msgid "Normal priority"
+msgstr "보통 우선권"
+
+#: tmainform.acsetnotdownload.caption
+msgid "Don't download"
+msgstr "다운로드 하지않음"
+
+#: tmainform.acsetupcolumns.caption
+msgid "Setup columns..."
+msgstr ""
+
+#: tmainform.acshowapp.caption
+msgid "Show"
+msgstr "보이기"
+
+#: tmainform.acshowcountryflag.caption
+msgid "Show country flag"
+msgstr "국기 표시"
+
+#: tmainform.acstartalltorrents.caption
+msgctxt "tmainform.acstartalltorrents.caption"
+msgid "Start all torrents"
+msgstr ""
+
+#: tmainform.acstartalltorrents.hint
+msgctxt "tmainform.acstartalltorrents.hint"
+msgid "Start all torrents"
+msgstr "모든 토렌트 시작"
+
+#: tmainform.acstarttorrent.caption
+msgid "Start"
+msgstr "시작"
+
+#: tmainform.acstarttorrent.hint
+msgctxt "tmainform.acstarttorrent.hint"
+msgid "Start torrent"
+msgstr "토렌트 시작"
+
+#: tmainform.acstatusbar.caption
+msgid "Status bar"
+msgstr "상태 바"
+
+#: tmainform.acstatusbarsizes.caption
+msgid "Status bar - Sizes"
+msgstr "상태 바 - 파일 크기"
+
+#: tmainform.acstopalltorrents.caption
+msgid "Stop all torrents"
+msgstr "모든 토렌트 멈춤"
+
+#: tmainform.acstopalltorrents.hint
+msgid "Stop all"
+msgstr "모두 멈춤"
+
+#: tmainform.acstoptorrent.caption
+msgid "Stop"
+msgstr "멈춤"
+
+#: tmainform.acstoptorrent.hint
+msgid "Stop torrent"
+msgstr "토렌트 멈춤"
+
+#: tmainform.actoolbarshow.caption
+msgid "Toolbar"
+msgstr "툴바"
+
+#: tmainform.actorrentprops.caption
+msgid "Properties..."
+msgstr ""
+
+#: tmainform.actrackergrouping.caption
+msgid "Tracker grouping"
+msgstr "트래커 그룹화"
+
+#: tmainform.acupdateblocklist.caption
+msgid "Update blocklist"
+msgstr "blocklist 업데이트"
+
+#: tmainform.acupdategeoip.caption
+msgid "Update GeoIP database"
+msgstr "GeoIP database 업데이트"
+
+#: tmainform.acverifytorrent.caption
+msgid "&Verify"
+msgstr "검증"
+
+#: tmainform.acverifytorrent.hint
+msgid "Verify torrent"
+msgstr "토렌트 검증"
+
+#: tmainform.caption
+msgctxt "tmainform.caption"
+msgid " "
+msgstr ""
+
+#: tmainform.godevelopmentsite.caption
+msgid "Development site"
+msgstr "개발자 사이트"
+
+#: tmainform.gstats.columns[0].title.caption
+msgctxt "tmainform.gstats.columns[0].title.caption"
+msgid " "
+msgstr ""
+
+#: tmainform.gstats.columns[1].title.caption
+msgid "Current"
+msgstr "현재"
+
+#: tmainform.gstats.columns[2].title.caption
+msgid "Cumulative"
+msgstr "누적"
+
+#: tmainform.gtorrents.columns[0].title.caption
+msgctxt "tmainform.gtorrents.columns[0].title.caption"
+msgid "Name"
+msgstr ""
+
+#: tmainform.gtorrents.columns[10].title.caption
+msgctxt "tmainform.gtorrents.columns[10].title.caption"
+msgid "Downloaded"
+msgstr "다운로드"
+
+#: tmainform.gtorrents.columns[11].title.caption
+msgctxt "tmainform.gtorrents.columns[11].title.caption"
+msgid "Uploaded"
+msgstr "업로드"
+
+#: tmainform.gtorrents.columns[12].title.caption
+msgctxt "tmainform.gtorrents.columns[12].title.caption"
+msgid "Tracker"
+msgstr "트래커"
+
+#: tmainform.gtorrents.columns[13].title.caption
+msgid "Tracker status"
+msgstr "트래커 상태"
+
+#: tmainform.gtorrents.columns[14].title.caption
+msgid "Added on"
+msgstr "추가"
+
+#: tmainform.gtorrents.columns[15].title.caption
+msgid "Completed on"
+msgstr "완료"
+
+#: tmainform.gtorrents.columns[16].title.caption
+msgid "Last active"
+msgstr "최근 활성화"
+
+#: tmainform.gtorrents.columns[17].title.caption
+msgid "Path"
+msgstr "경로"
+
+#: tmainform.gtorrents.columns[18].title.caption
+msgctxt "tmainform.gtorrents.columns[18].title.caption"
+msgid "Priority"
+msgstr ""
+
+#: tmainform.gtorrents.columns[19].title.caption
+msgid "Size to download"
+msgstr "다운로드 크기"
+
+#: tmainform.gtorrents.columns[1].title.caption
+msgctxt "tmainform.gtorrents.columns[1].title.caption"
+msgid "Size"
+msgstr ""
+
+#: tmainform.gtorrents.columns[20].title.caption
+msgid "ID"
+msgstr "아이디"
+
+#: tmainform.gtorrents.columns[21].title.caption
+msgid "Queue position"
+msgstr "큐 순위"
+
+#: tmainform.gtorrents.columns[22].title.caption
+msgid "Seeding time"
+msgstr "시딩 시간"
+
+#: tmainform.gtorrents.columns[23].title.caption
+msgid "Size left"
+msgstr "남은 크기"
+
+#: tmainform.gtorrents.columns[24].title.caption
+msgid "Private"
+msgstr ""
+
+#: tmainform.gtorrents.columns[25].title.caption
+msgid "Labels"
+msgstr ""
+
+#: tmainform.gtorrents.columns[2].title.caption
+msgctxt "tmainform.gtorrents.columns[2].title.caption"
+msgid "Done"
+msgstr ""
+
+#: tmainform.gtorrents.columns[3].title.caption
+msgctxt "tmainform.gtorrents.columns[3].title.caption"
+msgid "Status"
+msgstr ""
+
+#: tmainform.gtorrents.columns[4].title.caption
+msgctxt "tmainform.gtorrents.columns[4].title.caption"
+msgid "Seeds"
+msgstr ""
+
+#: tmainform.gtorrents.columns[5].title.caption
+msgctxt "tmainform.gtorrents.columns[5].title.caption"
+msgid "Peers"
+msgstr ""
+
+#: tmainform.gtorrents.columns[6].title.caption
+msgctxt "tmainform.gtorrents.columns[6].title.caption"
+msgid "Down speed"
+msgstr ""
+
+#: tmainform.gtorrents.columns[7].title.caption
+msgctxt "tmainform.gtorrents.columns[7].title.caption"
+msgid "Up speed"
+msgstr ""
+
+#: tmainform.gtorrents.columns[8].title.caption
+msgid "ETA"
+msgstr "완료예정시간"
+
+#: tmainform.gtorrents.columns[9].title.caption
+msgid "Ratio"
+msgstr "비율"
+
+#: tmainform.lvfiles.columns[0].title.caption
+msgctxt "tmainform.lvfiles.columns[0].title.caption"
+msgid "File name"
+msgstr "파일 이름"
+
+#: tmainform.lvfiles.columns[1].title.caption
+msgctxt "tmainform.lvfiles.columns[1].title.caption"
+msgid "Size"
+msgstr "크기"
+
+#: tmainform.lvfiles.columns[2].title.caption
+msgctxt "tmainform.lvfiles.columns[2].title.caption"
+msgid "Done"
+msgstr "완료"
+
+#: tmainform.lvfiles.columns[3].title.caption
+msgctxt "tmainform.lvfiles.columns[3].title.caption"
+msgid "%"
+msgstr ""
+
+#: tmainform.lvfiles.columns[4].title.caption
+msgctxt "tmainform.lvfiles.columns[4].title.caption"
+msgid "Priority"
+msgstr ""
+
+#: tmainform.lvfilter.columns[0].title.caption
+msgctxt "tmainform.lvfilter.columns[0].title.caption"
+msgid " "
+msgstr ""
+
+#: tmainform.lvpeers.columns[0].title.caption
+msgid "Host"
+msgstr "호스트"
+
+#: tmainform.lvpeers.columns[1].title.caption
+msgid "Port"
+msgstr "포트"
+
+#: tmainform.lvpeers.columns[2].title.caption
+msgid "Country"
+msgstr "국가"
+
+#: tmainform.lvpeers.columns[3].title.caption
+msgid "Client"
+msgstr "클라이언트"
+
+#: tmainform.lvpeers.columns[4].title.caption
+msgid "Flags"
+msgstr "상태"
+
+#: tmainform.lvpeers.columns[5].title.caption
+msgid "Have"
+msgstr "완료"
+
+#: tmainform.lvpeers.columns[6].title.caption
+msgctxt "tmainform.lvpeers.columns[6].title.caption"
+msgid "Up speed"
+msgstr "업 속도"
+
+#: tmainform.lvpeers.columns[7].title.caption
+msgctxt "tmainform.lvpeers.columns[7].title.caption"
+msgid "Down speed"
+msgstr "다운 속도"
+
+#: tmainform.lvtrackers.columns[0].title.caption
+msgctxt "tmainform.lvtrackers.columns[0].title.caption"
+msgid "Name"
+msgstr "이름"
+
+#: tmainform.lvtrackers.columns[1].title.caption
+msgctxt "tmainform.lvtrackers.columns[1].title.caption"
+msgid "Status"
+msgstr "상태"
+
+#: tmainform.lvtrackers.columns[2].title.caption
+msgid "Update in"
+msgstr "업데이트"
+
+#: tmainform.lvtrackers.columns[3].title.caption
+msgctxt "tmainform.lvtrackers.columns[3].title.caption"
+msgid "Seeds"
+msgstr "시드"
+
+#: tmainform.maintoolbar.caption
+msgid "MainToolBar"
+msgstr ""
+
+#: tmainform.menuitem101.caption
+msgid "Copy Magnet Link(s)"
+msgstr "마그넷 링크 복사"
+
+#: tmainform.menuitem103.caption
+msgid "Big Toolbar"
+msgstr ""
+
+#: tmainform.menuitem17.hint
+msgctxt "tmainform.menuitem17.hint"
+msgid "Application Options (Ctrl+F9)"
+msgstr ""
+
+#: tmainform.menushow.caption
+msgid "MenuShow"
+msgstr ""
+
+#: tmainform.miabout.caption
+msgid "About..."
+msgstr ""
+
+#: tmainform.miconnect.caption
+msgctxt "tmainform.miconnect.caption"
+msgid "Connect to Transmission"
+msgstr "트랜스미션에 연결"
+
+#: tmainform.micopylabel.caption
+msgid "Copy"
+msgstr "복사"
+
+#: tmainform.mihelp.caption
+msgid "&Help"
+msgstr "&도움말"
+
+#: tmainform.mihomepage.caption
+msgid "Visit home page"
+msgstr "홈페이지 방문"
+
+#: tmainform.mipriority.caption
+msgctxt "tmainform.mipriority.caption"
+msgid "Priority"
+msgstr ""
+
+#: tmainform.miqueue.caption
+msgctxt "tmainform.miqueue.caption"
+msgid "Queue"
+msgstr ""
+
+#: tmainform.mitools.caption
+msgid "T&ools"
+msgstr "도구"
+
+#: tmainform.mitorrent.caption
+msgid "&Torrent"
+msgstr "토렌트"
+
+#: tmainform.miview.caption
+msgid "View"
+msgstr "보기"
+
+#: tmainform.opentorrentdlg.title
+msgid "Select a .torrent to open"
+msgstr "선택된 .torrent 열기"
+
+#: tmainform.pmidownspeedlimit.caption
+msgid "Maximum download speed"
+msgstr "최대 다운로드 속도"
+
+#: tmainform.pmipriority.caption
+msgctxt "tmainform.pmipriority.caption"
+msgid "Priority"
+msgstr "우선권"
+
+#: tmainform.pmiqueue.caption
+msgctxt "tmainform.pmiqueue.caption"
+msgid "Queue"
+msgstr "큐"
+
+#: tmainform.pmiupspeedlimit.caption
+msgid "Maximum upload speed"
+msgstr "최대 업로드 속도"
+
+#: tmainform.searchtoolbar.caption
+msgid "SearchToolbar"
+msgstr ""
+
+#: tmainform.sepaltspeed.caption
+msgid "sepAltSpeed"
+msgstr ""
+
+#: tmainform.sepqueue.caption
+msgid "sepQueue"
+msgstr ""
+
+#: tmainform.tabfiles.caption
+msgid "Files"
+msgstr "파일"
+
+#: tmainform.tabgeneral.caption
+msgctxt "tmainform.tabgeneral.caption"
+msgid "General"
+msgstr ""
+
+#: tmainform.tabpeers.caption
+msgctxt "tmainform.tabpeers.caption"
+msgid "Peers"
+msgstr "피어"
+
+#: tmainform.tabstats.caption
+msgid "Statistics"
+msgstr "통계"
+
+#: tmainform.tabtrackers.caption
+msgid "Trackers"
+msgstr "트래커"
+
+#: tmainform.tbsearchcancel.caption
+msgid "tbSearchCancel"
+msgstr ""
+
+#: tmainform.toolbutton10.caption
+msgid "ToolButton10"
+msgstr ""
+
+#: tmainform.toolbutton2.caption
+msgid "ToolButton2"
+msgstr ""
+
+#: tmainform.toolbutton5.caption
+msgid "Application option..."
+msgstr ""
+
+#: tmainform.toolbutton5.hint
+msgctxt "tmainform.toolbutton5.hint"
+msgid "Application Options (Ctrl+F9)"
+msgstr "어플리케이션 옵션 (Ctrl+F9)"
+
+#: tmainform.toolbutton6.caption
+msgid "ToolButton6"
+msgstr ""
+
+#: tmainform.toolbutton7.caption
+msgid "ToolButton7"
+msgstr ""
+
+#: tmainform.txaddedon.caption
+msgid "txAddedOn"
+msgstr ""
+
+#: tmainform.txaddedonlabel.caption
+msgid "Added on:"
+msgstr ""
+
+#: tmainform.txcomment.caption
+msgid "txComment"
+msgstr ""
+
+#: tmainform.txcommentlabel.caption
+msgid "Comment:"
+msgstr ""
+
+#: tmainform.txcompletedon.caption
+msgid "txCompletedOn"
+msgstr ""
+
+#: tmainform.txcompletedonlabel.caption
+msgid "Completed on:"
+msgstr ""
+
+#: tmainform.txconnerrorlabel.caption
+msgid "Connection error occurred:"
+msgstr ""
+
+#: tmainform.txcreated.caption
+msgid "txCreated"
+msgstr ""
+
+#: tmainform.txcreatedlabel.caption
+msgid "Created on:"
+msgstr ""
+
+#: tmainform.txdownlimit.caption
+msgid "txDownLimit"
+msgstr ""
+
+#: tmainform.txdownlimitlabel.caption
+msgid "Down limit:"
+msgstr ""
+
+#: tmainform.txdownloaded.caption
+msgid "txDownloaded"
+msgstr ""
+
+#: tmainform.txdownloadedlabel.caption
+msgctxt "tmainform.txdownloadedlabel.caption"
+msgid "Downloaded:"
+msgstr ""
+
+#: tmainform.txdownprogress.caption
+msgid "100.0%"
+msgstr ""
+
+#: tmainform.txdownprogresslabel.caption
+msgctxt "tmainform.txdownprogresslabel.caption"
+msgid "Downloaded:"
+msgstr ""
+
+#: tmainform.txdownspeed.caption
+msgid "txDownSpeed"
+msgstr ""
+
+#: tmainform.txdownspeedlabel.caption
+msgid "Download speed:"
+msgstr ""
+
+#: tmainform.txerror.caption
+msgid "txError"
+msgstr ""
+
+#: tmainform.txerrorlabel.caption
+msgid "Error:"
+msgstr ""
+
+#: tmainform.txglobalstats.caption
+msgid "Global statistics:"
+msgstr ""
+
+#: tmainform.txhash.caption
+msgid "txHash"
+msgstr ""
+
+#: tmainform.txhashlabel.caption
+msgid "Hash:"
+msgstr ""
+
+#: tmainform.txlabels.caption
+msgid "txLabels"
+msgstr ""
+
+#: tmainform.txlabelslabel.caption
+msgid "Labels:"
+msgstr ""
+
+#: tmainform.txlastactive.caption
+msgid "txLastActive"
+msgstr ""
+
+#: tmainform.txlastactivelabel.caption
+msgid "Last active:"
+msgstr ""
+
+#: tmainform.txmaglabel.caption
+msgid "Magnet Link:"
+msgstr ""
+
+#: tmainform.txmaxpeers.caption
+msgid "txMaxPeers"
+msgstr ""
+
+#: tmainform.txmaxpeerslabel.caption
+msgid "Max peers:"
+msgstr ""
+
+#: tmainform.txpeers.caption
+msgid "txPeers"
+msgstr ""
+
+#: tmainform.txpeerslabel.caption
+msgid "Peers:"
+msgstr ""
+
+#: tmainform.txpieces.caption
+msgid "txPieces"
+msgstr ""
+
+#: tmainform.txpieceslabel.caption
+msgid "Pieces:"
+msgstr ""
+
+#: tmainform.txratio.caption
+msgid "txRatio"
+msgstr ""
+
+#: tmainform.txratiolabel.caption
+msgid "Share ratio:"
+msgstr ""
+
+#: tmainform.txremaining.caption
+msgid "txRemaining"
+msgstr ""
+
+#: tmainform.txremaininglabel.caption
+msgid "Remaining:"
+msgstr ""
+
+#: tmainform.txseeds.caption
+msgid "txSeeds"
+msgstr ""
+
+#: tmainform.txseedslabel.caption
+msgid "Seeds:"
+msgstr ""
+
+#: tmainform.txstatus.caption
+msgid "txStatus"
+msgstr ""
+
+#: tmainform.txstatuslabel.caption
+msgid "Status:"
+msgstr ""
+
+#: tmainform.txtorrentheader.caption
+msgid "Torrent"
+msgstr "토렌트"
+
+#: tmainform.txtorrentname.caption
+msgid "txTorrentName"
+msgstr ""
+
+#: tmainform.txtorrentnamelabel.caption
+msgctxt "tmainform.txtorrentnamelabel.caption"
+msgid "Name:"
+msgstr ""
+
+#: tmainform.txtotalsize.caption
+msgid "txTotalSize"
+msgstr ""
+
+#: tmainform.txtotalsizelabel.caption
+msgid "Total size:"
+msgstr ""
+
+#: tmainform.txtracker.caption
+msgid "txTracker"
+msgstr ""
+
+#: tmainform.txtrackerlabel.caption
+msgid "Tracker:"
+msgstr ""
+
+#: tmainform.txtrackerupdate.caption
+msgid "txTrackerUpdate"
+msgstr ""
+
+#: tmainform.txtrackerupdatelabel.caption
+msgid "Tracker update on:"
+msgstr ""
+
+#: tmainform.txtransferheader.caption
+msgid "Transfer"
+msgstr "전송"
+
+#: tmainform.txuplimit.caption
+msgid "txUpLimit"
+msgstr ""
+
+#: tmainform.txuplimitlabel.caption
+msgid "Up limit:"
+msgstr ""
+
+#: tmainform.txuploaded.caption
+msgid "txUploaded"
+msgstr ""
+
+#: tmainform.txuploadedlabel.caption
+msgid "Uploaded:"
+msgstr ""
+
+#: tmainform.txupspeed.caption
+msgid "txUpSpeed"
+msgstr ""
+
+#: tmainform.txupspeedlabel.caption
+msgid "Upload speed:"
+msgstr ""
+
+#: tmainform.txwasted.caption
+msgid "txWasted"
+msgstr ""
+
+#: tmainform.txwastedlabel.caption
+msgid "Wasted:"
+msgstr ""
+
+#: tmovetorrentform.btbrowse.caption
+msgctxt "tmovetorrentform.btbrowse.caption"
+msgid "Browse..."
+msgstr ""
+
+#: tmovetorrentform.caption
+msgid "Torrent data location"
+msgstr "토렌트 데이터 위치"
+
+#: tmovetorrentform.cbmovedata.caption
+msgid "Move torrent data from current location to new location"
+msgstr "토렌트 데이터 새 위치로 이동"
+
+#: tmovetorrentform.txtorrentdir.caption
+msgid "New location for torrent data:"
+msgstr ""
+
+#: toptionsform.caption
+msgid "Application options"
+msgstr "어플리케이션 옵션"
+
+#: toptionsform.cbcalcavg.caption
+msgid "Average out transfer speeds to eliminate fluctuations"
+msgstr "급격한 속도 변경 현상을 막기위해 전송속도를 평균 처리 합니다"
+
+#: toptionsform.cbchecknewversion.caption
+msgid "Check for new version every:"
+msgstr ""
+
+#: toptionsform.cbdeletetorrentfile.caption
+msgid "Delete a .torrent file after a successful addition"
+msgstr "추가 성공 후 .torrent 파일을 지움"
+
+#: toptionsform.cblinksfromclipboard.caption
+msgid "Automatically add torrent links from the clipboard"
+msgstr "클립보드에 있는 토렌트 링크 자동으로 추가"
+
+#: toptionsform.cbregext.caption
+#, object-pascal-format
+msgid "Handle .torrent files by %s"
+msgstr "%s로 .torrent 파일 처리"
+
+#: toptionsform.cbregmagnet.caption
+#, object-pascal-format
+msgid "Handle magnet links by %s"
+msgstr "%s로 마그넷 링크 처리"
+
+#: toptionsform.cbshowaddtorrentwindow.caption
+msgid "Prompt for download options when adding a new torrent"
+msgstr "새로운 토렌트 추가시 다운로드 옵션을 물어봅니다"
+
+#: toptionsform.cbtrayclose.caption
+msgid "Close to tray"
+msgstr "트레이로 닫기"
+
+#: toptionsform.cbtrayiconalways.caption
+msgid "Tray icon always visible"
+msgstr "트레이 아이콘 항상 보이기"
+
+#: toptionsform.cbtrayminimize.caption
+msgid "Minimize to tray"
+msgstr "트레이로 최소화"
+
+#: toptionsform.cbtraynotify.caption
+msgid "Show notifications in tray icon"
+msgstr "트레이에 알림 아이콘 보이기"
+
+#: toptionsform.gbdata.caption
+msgid "Data display"
+msgstr "데이터 표시"
+
+#: toptionsform.gbnewtorrent.caption
+msgctxt "toptionsform.gbnewtorrent.caption"
+msgid "Add torrent"
+msgstr "토렌트 추가"
+
+#: toptionsform.gbsysint.caption
+msgid "System integration"
+msgstr "시스템과의 통합"
+
+#: toptionsform.gbtray.caption
+msgid "Tray icon"
+msgstr "트레이 아이콘"
+
+#: toptionsform.tabadvanced.caption
+msgctxt "toptionsform.tabadvanced.caption"
+msgid "Advanced"
+msgstr ""
+
+#: toptionsform.tabgeneral.caption
+msgctxt "toptionsform.tabgeneral.caption"
+msgid "General"
+msgstr ""
+
+#: toptionsform.txdays.caption
+msgid "days"
+msgstr "일"
+
+#: toptionsform.txintfscale.caption
+msgid "Font size:"
+msgstr ""
+
+#: toptionsform.txlanguage.caption
+msgctxt "toptionsform.txlanguage.caption"
+msgid "Language:"
+msgstr ""
+
+#: toptionsform.txperc.caption
+msgctxt "toptionsform.txperc.caption"
+msgid "%"
+msgstr ""
+
+#: toptionsform.txrefreshinterval.caption
+msgid "Data refresh interval:"
+msgstr ""
+
+#: toptionsform.txrefreshintervalmin.caption
+msgid "Data refresh interval when minimized:"
+msgstr ""
+
+#: toptionsform.txseconds.caption
+msgctxt "toptionsform.txseconds.caption"
+msgid "seconds"
+msgstr ""
+
+#: toptionsform.txseconds2.caption
+msgctxt "toptionsform.txseconds2.caption"
+msgid "seconds"
+msgstr "초"
+
+#: tpasswordconnect.caption
+msgid "PasswordConnect"
+msgstr ""
+
+#: tpasswordconnect.lmsg.caption
+msgid "lMsg"
+msgstr ""
+
+#: tpasswordconnect.passw.text
+msgid "12345"
+msgstr ""
+
+#: ttorrpropsform.caption
+msgid "Torrent properties"
+msgstr "토렌트 설정"
+
+#: ttorrpropsform.cbidleseedlimit.caption
+msgctxt "ttorrpropsform.cbidleseedlimit.caption"
+msgid "Stop seeding when inactive for:"
+msgstr ""
+
+#: ttorrpropsform.cbmaxdown.caption
+msgctxt "ttorrpropsform.cbmaxdown.caption"
+msgid "Maximum download speed:"
+msgstr ""
+
+#: ttorrpropsform.cbmaxup.caption
+msgctxt "ttorrpropsform.cbmaxup.caption"
+msgid "Maximum upload speed:"
+msgstr ""
+
+#: ttorrpropsform.cbseedratio.caption
+msgctxt "ttorrpropsform.cbseedratio.caption"
+msgid "Seed ratio:"
+msgstr ""
+
+#: ttorrpropsform.tabadvanced.caption
+msgctxt "ttorrpropsform.tabadvanced.caption"
+msgid "Advanced"
+msgstr "고급"
+
+#: ttorrpropsform.tabgeneral.caption
+msgctxt "ttorrpropsform.tabgeneral.caption"
+msgid "General"
+msgstr "종합"
+
+#: ttorrpropsform.txkbs1.caption
+msgctxt "ttorrpropsform.txkbs1.caption"
+msgid "KB/s"
+msgstr ""
+
+#: ttorrpropsform.txkbs2.caption
+msgctxt "ttorrpropsform.txkbs2.caption"
+msgid "KB/s"
+msgstr "KB/s"
+
+#: ttorrpropsform.txminutes.caption
+msgctxt "ttorrpropsform.txminutes.caption"
+msgid "minutes"
+msgstr "분"
+
+#: ttorrpropsform.txname.caption
+msgctxt "ttorrpropsform.txname.caption"
+msgid "Name:"
+msgstr ""
+
+#: ttorrpropsform.txpeerlimit.caption
+msgctxt "ttorrpropsform.txpeerlimit.caption"
+msgid "Peer limit:"
+msgstr ""
+
+#: ttorrpropsform.txtrackers.caption
+msgid "Trackers:"
+msgstr ""
+
+#TranslationLanguage
+#한국어
+
+#&All
+#&모든
+
+#&Close
+#&닫기
+
+#&Ignore
+#&무시
+
+#&No
+#&아니요
+
+#&OK
+#&확인
+
+#&Open
+#&열기
+
+#&Retry
+#&다시
+
+#&Save
+#&저장
+
+#&Unlock
+#&잠금풀기
+
+#&Yes
+#&예
+
+#Abort
+#중단
+
+#&Add torrent
+#토렌트 추가
+
+#Authentication
+#인증
+
+#Comment
+#설명
+
+#Confirmation
+#확인
+
+#Connecting to daemon
+#서버에 연결중
+
+#Connection error occurred
+#연결 오류
+
+#Created on
+#생성
+
+#Destination folder
+#대상 폴더
+
+#Donate to support further development
+#개발 지원을 위한 기부
+
+#Donate via PayPal,WebMoney,Credit card
+#페이팔, 웹머니, 신용카드를 통한 기부
+
+#Down limit
+#다운 제한
+
+#Download speed
+#다운로드 속도
+
+#Encryption
+#암호화
+
+#Flag images archive is needed to display country flags.~Download this archive now?
+#국기를 표시하기 위해 국기 이미지 모음이 필요합니다.
+#지금 다운로드 할까요?
+
+#Global peer limit
+#전체 피어 제한
+
+#Hash
+#해쉬
+
+#Incoming port is closed. Check your firewall settings
+#들어오는 포트 닫힘. 방화벽 설정을 점검하세요
+
+#Incoming port tested successfully
+#들어오는 포트 시험 성공
+
+#Incoming port
+#들어오는 포트
+
+#Information
+#정보
+
+#Language
+#언어
+
+#Max peers
+#최대 피어수
+
+#No host name specified
+#호스트 이름 명시되지 않음
+
+#No proxy server specified
+#프록시 서버 명시되지 않음
+
+#No to all
+#모두 아니요
+
+#Password
+#비밀번호
+
+#Peer limit
+#피어 제한
+
+#Pieces
+#조각
+
+#Properties
+#설정
+
+#Proxy password
+#프록시 비밀번호
+
+#Proxy port
+#프록시 포트
+
+#Proxy server
+#프록시 서버
+
+#Proxy user name
+#프록시 유저 이름
+
+#Reconnect in %d seconds
+#%d 초 안에 재접속
+
+#Remaining
+#남음
+
+#Remote host
+#원격 호스트
+
+#Seed ratio
+#시드 비율
+
+#Setup columns
+#세로줄 설정
+
+#Share ratio
+#공유 비율
+
+#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
+#토렌트 (*.torrent)|*.torrent|모든 파일 (*.*)|*.*
+
+#Total size
+#전체 크기
+
+#Tracker update on
+#트래커 업데이트 중
+
+#Unable to extract flag image
+#국기 이미지를 추출 할 수 없습니다
+
+#Up limit
+#업로드 제한
+
+#Update complete
+#업데이트 완료
+
+#Upload speed
+#업로드 속도
+
+#User name
+#사용자 이름
+
+#Warning
+#경고
+
+#Wasted
+#버려짐
+
+#Yes to &All
+#모두 예
+
+#Directory for incomplete files
+#진행중인 파일 디렉토리
+
+#Enable blocklist
+#차단 목록 사용하기
+
+#New location for torrent data
+#토렌트 데이터 새 위치
+
+#No link was specified
+#연결이 명시되지 않음
+
+#No torrent location was specified
+#토렌트 위치가 명시되지 않음
+
+#Set data location
+#데이터 위치 설정
+
+#The block list has been updated successfully.~The list entries count: %d
+#차단 목록이 업데이트 되었습니다.
+#목록 갯수: %d
+
+#The directory for incomplete files was not specified
+#진행중인 파일의 디렉토리가 명시되지 않았습니다
+
+#The downloads directory was not specified
+#다운로드 디렉토리가 명시되지 않았습니다
+
+#Unable to execute "%s"
+#"%s" 실행 불가
+
+#URL of a .torrent file or a magnet link
+#.torrent 파일 또는 마그넷 링크의 URL
+
+#Days
+#요일
+
+#Disk cache size
+#디스크 캐쉬 크기
+
+#Download speeds (KB/s)
+#다운로드 속도 (KB/s)
+
+#Edit tracker
+#트래커 편집
+
+#Free disk space
+#남은 디스크 공간
+
+#From
+#시작
+
+#New connection
+#새 연결
+
+#No tracker URL was specified
+#트래커 URL이 명시되지 않음
+
+#Stop seeding when inactive for
+#다음시간 동안 비활성화시 시딩 멈춤
+
+#The invalid time value was entered
+#잘못된 시간값이 입력됨
+
+#to
+#종료
+
+#Tracker announce URL
+#트래커 알림 URL
+
+#Upload speeds (KB/s)
+#업로드 속도 (KB/s)
+
+#Browse
+#찾아보기
+
+#Enable μTP
+#μTP 사용
+
+#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
+#%s의 새 버전이 나왔습니다.
+#현재 버젼: %s
+#새 버젼: %s
+#다운로드 페이지로 접속하시겠습니까?
+
+#Check for new version every
+#새 버전 확인 간격
+
+#Consider active torrents as stalled when idle for
+#다음 시간동안 유휴상태일 경우 활성화된 토렌트가 멈춘것으로 간주합니다
+
+#Donate!
+#기부하기!
+
+#Download queue size
+#다운로드 큐 크기
+
+#Error checking for new version
+#새 버전 확인 오류
+
+#Modify trackers
+#트래커 수정
+
+#No updates have been found.~You are running the latest version of %s
+#업데이트가 없습니다.
+#%s의 최신 버전을 사용중입니다
+
+#Upload queue size
+#업로드 큐 크기
+
+#Global statistics
+#전체 통계
+
+#Connection name
+#연결 이름
+
+#Could not connect to tracker
+#트래커에 연결할 수 없습니다
+
+#Data refresh interval when minimized
+#최소화시 데이터 갱신 주기
+
+#Data refresh interval
+#데이터 갱신 주기
+
+#Default download folder on remote host
+#원격 호스트의 기본 다운로드 폴더
+
+#Downloading torrent file
+#다운로드중인 토런트 파일
+
+#Font size
+#폰트 크기
+
+#Invalid name specified
+#비정상적인 이름이 지정되었습니다
+
+#Manage connections
+#연결 관리하기
+
+#Please enter a password to connect to %s
+#%s 에 연결하기 위해 비밀번호를 입력하세요
+
+#Please specify how %s will connect to a remote host running Transmission daemon (service)
+#%s 가 트랜스미션 데몬(서비스)이 가동중인 원격 호스트에 어떻게 접속할 지를 지정하세요
+
+#RPC path
+#RPC 경로
+
+#Save as
+#다른 이름으로 저장
+
+#Torrent not registered with this tracker
+#이 트래커에 해당 토렌트 정보가 등록되어 있지 않습니다
+
+#Unable to find path mapping.~Use the application's options to setup path mappings
+#맵핑된 경로를 찾을수 없습니다.
+#어플리케이션 옵션에서 경로를 확인하세요
+
+#You need to restart the application to apply changes
+#변경 사항을 적용하려면 프로그램을 다시 시작해야 합니다
+
+#Magnet Link
+#마그넷 링크
+
+#Export settings
+#설정 내보내기
+
+#Import settings
+#설정 읽기
+
+#Template:
+#템플릿:
+
+#Connection refused
+#연결 거부됨
+
+#Access violation
+#액세스 위반
+
+#Connection timed out
+#연결 시간 초과
+
+#Other Winsock error
+#기타 Winsock 오류
+
+#Host not found
+#호스트를 찾을 수 없음
+
+#Unauthorized User
+#비인가 사용자
+

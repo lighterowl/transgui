@@ -20,34 +20,35 @@ sub do_open {
   return;
 }
 
+sub new_entry {
+  return {
+    comments => [],
+    msgctxt  => [],
+    msgid    => [],
+    msgstr   => []
+  };
+}
+
 sub read_template {
   my $pot_file  = shift;
-  my $new_entry = sub {
-    return {
-      comments => [],
-      msgctxt  => [],
-      msgid    => [],
-      msgstr   => []
-    };
-  };
   my @po_entries;
 
   do_open(
     $pot_file,
     sub {
       my $fh = shift;
-      my $cur_entry = $new_entry->();
+      my $cur_entry = new_entry();
       my $dest;
       while (<$fh>) {
         chomp;
         if ( $_ eq '' ) {
           push @po_entries, $cur_entry;
-          $cur_entry = $new_entry->();
+          $cur_entry = new_entry();
           next;
         }
 
         if (/^#/) {
-          push @{ $cur_entry->{comments} }, $_;
+          push @{ $cur_entry->{comments} }, substr($_, 1);
         }
         elsif (/^"(.*?)"$/) {
           push @{ $cur_entry->{$dest} }, $1;
@@ -80,7 +81,8 @@ sub gen_msgid_hash {
 }
 
 sub langfile_to_msgstr {
-  ( my $lang_file, my $msgid_hash ) = @_;
+  ( my $lang_file, my $po_entries ) = @_;
+  my $msgid_hash = gen_msgid_hash( $po_entries );
   do_open(
     $lang_file,
     sub {
@@ -102,11 +104,16 @@ sub langfile_to_msgstr {
           $msgstr =~ s,\\,\\\\,g;
 
           my $entry = $msgid_hash->{$msgid};
+          my @decoded_msgstr = split( /\s*~\s*/, $msgstr );
           if ( defined($entry) ) {
-            $entry->{msgstr} = [ split( /\s*~\s*/, $msgstr ) ];
+            $entry->{msgstr} = [ @decoded_msgstr ];
           }
           else {
-            print STDERR "No .pot entry for msgid : $msgid\n";
+            $entry = new_entry();
+            $entry->{comments} = [
+              $msgid, @decoded_msgstr
+            ];
+            push @{$po_entries}, $entry;
           }
         }
       }
@@ -128,7 +135,7 @@ sub print_msg_array {
 sub print_po_entries {
   my $entries = shift;
   for my $entry ( @{$entries} ) {
-    print $_ . "\n" for ( @{ $entry->{comments} } );
+    print "#" . $_ . "\n" for ( @{ $entry->{comments} } );
     for my $ma ( 'msgctxt', 'msgid', 'msgstr' ) {
       print_msg_array( $ma, $entry->{$ma} );
     }
@@ -142,7 +149,6 @@ die "Usage: $0 template.pot langfile.xyz" unless @ARGV == 2;
 ( my $pot_file, my $lang_file ) = @ARGV;
 
 my @po_entries = read_template($pot_file);
-my $msgid_hash = gen_msgid_hash( \@po_entries );
-langfile_to_msgstr( $lang_file, $msgid_hash );
+langfile_to_msgstr( $lang_file, \@po_entries );
 
 print_po_entries( \@po_entries )
