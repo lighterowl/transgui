@@ -14,13 +14,15 @@ cd transgui
 lazbuild transgui.lpi
 ```
 
-If you hit trouble, have a look at `build_*` files in the `.github` repository. They are used to build the project for each of the supported platforms in GitHub Actions.
+If you hit trouble, have a look at `build_` scripts in the `.github` folder. They are used to build the project for each of the supported platforms in GitHub Actions.
+
+Due to issues with fpc 3.2.2 mentioned below, it is recommended to build transgui with a development version of the Free Pascal compiler. The `build_` scripts include necessary code that downloads and compiles the development version from source.
 
 # Changes made
 
  * transgui is now compiled with Free Pascal 3.2.3 and Lazarus 2.2.6 due to two rather serious bugs in parsing JSON in older versions ([38618](https://gitlab.com/freepascal.org/fpc/source/-/issues/38618) and [38624](https://gitlab.com/freepascal.org/fpc/source/-/issues/38624)).
  * The program binary is now compiled in Release mode.
- * Old and makefiles were removed and all compilation is now handled via `lazbuild`.
+ * Old makefiles were removed and all compilation is now handled via `lazbuild`.
  * Gzip compression is now used when talking to the daemon.
  * OpenSSL version was switched to version 3.0, making it possible to use TLS 1.3.
 
