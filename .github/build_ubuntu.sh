@@ -52,6 +52,8 @@ chmod +x linuxdeploy-x86_64.AppImage
 curl -L -O https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage
 chmod +x linuxdeploy-plugin-qt-x86_64.AppImage
 
-VERSION= ./linuxdeploy-x86_64.AppImage -e transgui --create-desktop-file \
+app_ver=$(cat ../VERSION.txt)
+VERSION=$app_ver ./linuxdeploy-x86_64.AppImage -e transgui --create-desktop-file \
   --appdir AppDir --output appimage -i ../transgui.png --plugin qt
-sha256sum transgui--x86_64.AppImage
+sha256sum transgui-${app_ver}-x86_64.AppImage
+mv transgui-${app_ver}-x86_64.AppImage transgui-x86_64.AppImage

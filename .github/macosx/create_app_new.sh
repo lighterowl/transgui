@@ -38,7 +38,7 @@ lazarus_ver="$(lazbuild -v)"
 fpc_ver="$(fpc -i V | head -n 1)"
 exename=../../units/transgui
 appname="Transmission Remote GUI"
-dmg_dist_file="../../Release/transgui-$prog_ver.dmg"
+dmg_dist_file="../../Release/transgui.dmg"
 dmgfolder=./Release
 appfolder="$dmgfolder/$appname.app"
 
