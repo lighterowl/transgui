@@ -43,11 +43,11 @@ uses
   Graphics, Dialogs, ComCtrls, Menus, ActnList, LCLVersion,
   httpsend, StdCtrls, fpjson, jsonparser, ExtCtrls, rpc, syncobjs, variants, varlist, IpResolver,
   zipper, ResTranslator, VarGrid, StrUtils, LCLProc, Grids, BaseForm, utils, AddTorrent, Types,
-  LazFileUtils, LazUTF8, StringToVK, passwcon, GContnrs,lineinfo, RegExpr;
-
-const
-  AppName = 'Transmission Remote GUI';
-  AppVersion = '5.18.0';
+  LazFileUtils, LazUTF8, StringToVK, passwcon, GContnrs,lineinfo, RegExpr,
+  {$IFDEF UNIX}{$IFDEF UseCThreads}
+  cthreads,
+  {$ENDIF}{$ENDIF}
+  fileinfo, winpeimagereader, elfreader, machoreader;
 
 resourcestring
   sAll = 'All torrents';
@@ -793,6 +793,8 @@ private
     procedure _onException(Sender: TObject; E: Exception);
 end;
 
+function AppName: string;
+function AppVersion: string;
 function ExcludeInvalidChar (path: string): string; // PETROV
 function GetBiDi: TBiDiMode;
 function CheckAppParams: boolean;
@@ -979,10 +981,36 @@ const
   SizeNames: array[1..5] of string = (sByte, sKByte, sMByte, sGByte, sTByte);
 
 var
+  FAppName: string;
+  FAppVersion: string;
   TR_STATUS_STOPPED, TR_STATUS_CHECK_WAIT, TR_STATUS_CHECK, TR_STATUS_DOWNLOAD_WAIT, TR_STATUS_DOWNLOAD, TR_STATUS_SEED_WAIT, TR_STATUS_SEED: integer;
 
+function AppName: string;
+begin
+  Result := FAppName;
+end;
 
-  {$ifdef windows}
+function AppVersion: string;
+begin
+  Result := FAppVersion;
+end;
+
+procedure ReadVersionInfo;
+var
+  file_ver_info : TFileVersionInfo;
+begin
+  {{ https://wiki.lazarus.freepascal.org/Show_Application_Title,_Version,_and_Company }}
+  file_ver_info := TFileVersionInfo.Create(nil);
+  try
+    file_ver_info.ReadFileInfo;
+    FAppName := file_ver_info.VersionStrings.Values['ProductName'];
+    FAppVersion := file_ver_info.VersionStrings.Values['ProductVersion'];
+  finally
+    file_ver_info.Free;
+  end;
+end;
+
+{$ifdef windows}
 function WndCallback(Ahwnd: HWND; uMsg: UINT; wParam: WParam; lParam: LParam):LRESULT; stdcall;
 begin
   if (uMsg=WM_HOTKEY) and (WParam=HotKeyID) then
@@ -995,7 +1023,7 @@ begin
   result:=CallWindowProc(PrevWndProc,Ahwnd, uMsg, WParam, LParam);
 end;
 
-  {$endif windows}
+{$endif windows}
 
 function IsHash(Hash: String): boolean;
 var i: integer;
@@ -8032,6 +8060,7 @@ end;
 
 initialization
   {$I main.lrs}
+  ReadVersionInfo;
 
 finalization
   try
