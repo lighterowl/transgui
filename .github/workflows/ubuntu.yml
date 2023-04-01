@@ -30,4 +30,4 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: TransGUI Linux
-        path: units/transgui--x86_64.AppImage
+        path: units/transgui-x86_64.AppImage
