@@ -30,4 +30,4 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: TransGUI macOS
-        path: Release/transgui-5.18.0.dmg
+        path: Release/transgui.dmg
