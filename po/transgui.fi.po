@@ -2191,352 +2191,352 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#Suomi
+msgid "TranslationLanguage"
+msgstr "Suomi"
 
-#&All
-#&Kaikki
+msgid "&All"
+msgstr "&Kaikki"
 
-#&Close
-#&Sulje
+msgid "&Close"
+msgstr "&Sulje"
 
-#&Ignore
-#&Hylkää
+msgid "&Ignore"
+msgstr "&Hylkää"
 
-#&No
-#&Ei
+msgid "&No"
+msgstr "&Ei"
 
-#&OK
-#&OK
+msgid "&OK"
+msgstr "&OK"
 
-#&Open
-#&Avaa
+msgid "&Open"
+msgstr "&Avaa"
 
-#&Retry
-#&Yritä uudelleen
+msgid "&Retry"
+msgstr "&Yritä uudelleen"
 
-#&Save
-#&Tallenna
+msgid "&Save"
+msgstr "&Tallenna"
 
-#&Unlock
-#&Avaa lukitus
+msgid "&Unlock"
+msgstr "&Avaa lukitus"
 
-#&Yes
-#&Kyllä
+msgid "&Yes"
+msgstr "&Kyllä"
 
-#Abort
-#Keskeytä
+msgid "Abort"
+msgstr "Keskeytä"
 
-#&Add torrent
-#Lisää torrentti
+msgid "&Add torrent"
+msgstr "Lisää torrentti"
 
-#Authentication
-#Todennus
+msgid "Authentication"
+msgstr "Todennus"
 
-#Comment
-#Kommentti
+msgid "Comment"
+msgstr "Kommentti"
 
-#Confirmation
-#Vahvistus
+msgid "Confirmation"
+msgstr "Vahvistus"
 
-#Connecting to daemon
-#Yhdistetään Transmissioniin
+msgid "Connecting to daemon"
+msgstr "Yhdistetään Transmissioniin"
 
-#Connection error occurred
-#Yhteysvirhe
+msgid "Connection error occurred"
+msgstr "Yhteysvirhe"
 
-#Created on
-#Luotu
+msgid "Created on"
+msgstr "Luotu"
 
-#Destination folder
-#Kohdekansio
+msgid "Destination folder"
+msgstr "Kohdekansio"
 
-#Donate to support further development
-#Tee lahjoitus tukeaksesi ohjelman kehitystä
+msgid "Donate to support further development"
+msgstr "Tee lahjoitus tukeaksesi ohjelman kehitystä"
 
-#Donate via PayPal,WebMoney,Credit card
-#Tee lahjoitus PayPal, WebMoney tai luottokortin avulla
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "Tee lahjoitus PayPal, WebMoney tai luottokortin avulla"
 
-#Down limit
-#Latausraja
+msgid "Down limit"
+msgstr "Latausraja"
 
-#Download speed
-#Latausnopeus
+msgid "Download speed"
+msgstr "Latausnopeus"
 
-#Encryption
-#Salaus
+msgid "Encryption"
+msgstr "Salaus"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#Lippuarkisto täytyy ladata jotta maiden liput voidaan näyttää.
-#Ladataanko arkisto nyt?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "Lippuarkisto täytyy ladata jotta maiden liput voidaan näyttää."
+"Ladataanko arkisto nyt?"
 
-#Global peer limit
-#Lataajien enimmäismäärä
+msgid "Global peer limit"
+msgstr "Lataajien enimmäismäärä"
 
-#Hash
-#Hash
+msgid "Hash"
+msgstr "Hash"
 
-#Incoming port is closed. Check your firewall settings
-#Saapuvien yhteyksien portti on kiinni. Tarkista palomuurisi asetukset.
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "Saapuvien yhteyksien portti on kiinni. Tarkista palomuurisi asetukset."
 
-#Incoming port tested successfully
-#Saapuvien yhteyksien portti testattu onnistuneesti
+msgid "Incoming port tested successfully"
+msgstr "Saapuvien yhteyksien portti testattu onnistuneesti"
 
-#Incoming port
-#Saapuvien yhteyksien portti
+msgid "Incoming port"
+msgstr "Saapuvien yhteyksien portti"
 
-#Information
-#Tietoa
+msgid "Information"
+msgstr "Tietoa"
 
-#Language
-#Kieli
+msgid "Language"
+msgstr "Kieli"
 
-#Max peers
-#Lataajien enimmäismäärä
+msgid "Max peers"
+msgstr "Lataajien enimmäismäärä"
 
-#No host name specified
-#Palvelimen IP-osoitetta tai nimeä ei ole määritetty
+msgid "No host name specified"
+msgstr "Palvelimen IP-osoitetta tai nimeä ei ole määritetty"
 
-#No proxy server specified
-#Välityspalvelinta ei ole määritetty
+msgid "No proxy server specified"
+msgstr "Välityspalvelinta ei ole määritetty"
 
-#No to all
-#Ei kaikkiin
+msgid "No to all"
+msgstr "Ei kaikkiin"
 
-#Password
-#Salasana
+msgid "Password"
+msgstr "Salasana"
 
-#Peer limit
-#Lataajien enimmäismäärä
+msgid "Peer limit"
+msgstr "Lataajien enimmäismäärä"
 
-#Pieces
-#Osia
+msgid "Pieces"
+msgstr "Osia"
 
-#Properties
-#Ominaisuudet
+msgid "Properties"
+msgstr "Ominaisuudet"
 
-#Proxy password
-#Salasana
+msgid "Proxy password"
+msgstr "Salasana"
 
-#Proxy port
-#Portti
+msgid "Proxy port"
+msgstr "Portti"
 
-#Proxy server
-#Palvelin
+msgid "Proxy server"
+msgstr "Palvelin"
 
-#Proxy user name
-#Käyttäjätunnus
+msgid "Proxy user name"
+msgstr "Käyttäjätunnus"
 
-#Reconnect in %d seconds
-#Yhdistetään uudelleen %d sekunnin kuluttua
+msgid "Reconnect in %d seconds"
+msgstr "Yhdistetään uudelleen %d sekunnin kuluttua"
 
-#Remaining
-#Jäljellä
+msgid "Remaining"
+msgstr "Jäljellä"
 
-#Remote host
-#Palvelin
+msgid "Remote host"
+msgstr "Palvelin"
 
-#Seed ratio
-#Lopeta jakaminen suhteessa
+msgid "Seed ratio"
+msgstr "Lopeta jakaminen suhteessa"
 
-#Setup columns
-#Sarakkeiden määritys
+msgid "Setup columns"
+msgstr "Sarakkeiden määritys"
 
-#Share ratio
-#Jakosuhde
+msgid "Share ratio"
+msgstr "Jakosuhde"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Torrentit (*.torrent)|*.torrent|Kaikki tiedostot (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Torrentit (*.torrent)|*.torrent|Kaikki tiedostot (*.*)|*.*"
 
-#Total size
-#Koko yhteensä
+msgid "Total size"
+msgstr "Koko yhteensä"
 
-#Tracker update on
-#Seurantapalvelimen päivitys
+msgid "Tracker update on"
+msgstr "Seurantapalvelimen päivitys"
 
-#Unable to extract flag image
-#Lippukuvan purkaminen epäonnistui
+msgid "Unable to extract flag image"
+msgstr "Lippukuvan purkaminen epäonnistui"
 
-#Up limit
-#Lähetysraja
+msgid "Up limit"
+msgstr "Lähetysraja"
 
-#Update complete
-#Päivitys valmis
+msgid "Update complete"
+msgstr "Päivitys valmis"
 
-#Upload speed
-#Lähetysnopeus
+msgid "Upload speed"
+msgstr "Lähetysnopeus"
 
-#User name
-#Käyttäjätunnus
+msgid "User name"
+msgstr "Käyttäjätunnus"
 
-#Warning
-#Varoitus
+msgid "Warning"
+msgstr "Varoitus"
 
-#Wasted
-#Hylätty
+msgid "Wasted"
+msgstr "Hylätty"
 
-#Yes to &All
-#Kyllä &kaikkiin
+msgid "Yes to &All"
+msgstr "Kyllä &kaikkiin"
 
-#Directory for incomplete files
-#Tallenna keskeneräiset lataukset kansioon
+msgid "Directory for incomplete files"
+msgstr "Tallenna keskeneräiset lataukset kansioon"
 
-#Enable blocklist
-#Käytä estolistaa
+msgid "Enable blocklist"
+msgstr "Käytä estolistaa"
 
-#New location for torrent data
-#Uusi sijainti torrentille
+msgid "New location for torrent data"
+msgstr "Uusi sijainti torrentille"
 
-#No link was specified
-#Linkkiä ei määritetty
+msgid "No link was specified"
+msgstr "Linkkiä ei määritetty"
 
-#No torrent location was specified
-#Torrentin sijaintia ei määritetty
+msgid "No torrent location was specified"
+msgstr "Torrentin sijaintia ei määritetty"
 
-#Set data location
-#Aseta sijainti
+msgid "Set data location"
+msgstr "Aseta sijainti"
 
-#The block list has been updated successfully.~The list entries count: %d
-#Estolista päivitetty onnistuneesti.
-#Sääntöjen määrä listalla: %d
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "Estolista päivitetty onnistuneesti."
+"Sääntöjen määrä listalla: %d"
 
-#The directory for incomplete files was not specified
-#Keskeneräisten torrenttien kansiota ei ole määritetty
+msgid "The directory for incomplete files was not specified"
+msgstr "Keskeneräisten torrenttien kansiota ei ole määritetty"
 
-#The downloads directory was not specified
-#Latauskansiota ei ole määritetty
+msgid "The downloads directory was not specified"
+msgstr "Latauskansiota ei ole määritetty"
 
-#Unable to execute "%s"
-#Suorittaminen epäonnistui "%s"
+msgid "Unable to execute "%s""
+msgstr "Suorittaminen epäonnistui "%s""
 
-#URL of a .torrent file or a magnet link
-#Anna .torrent tiedoston URL-osoite tai magnet -linkki
+msgid "URL of a .torrent file or a magnet link"
+msgstr "Anna .torrent tiedoston URL-osoite tai magnet -linkki"
 
-#Delete a .torrent file after after a successful addition
-#Poista .torrent tiedosto onnistuneen lisäämisen jälkeen
+msgid "Delete a .torrent file after after a successful addition"
+msgstr "Poista .torrent tiedosto onnistuneen lisäämisen jälkeen"
 
-#Days
-#Päivinä
+msgid "Days"
+msgstr "Päivinä"
 
-#Disk cache size
-#Levyn välimuisti
+msgid "Disk cache size"
+msgstr "Levyn välimuisti"
 
-#Download speeds (KB/s)
-#Latausnopeudet (kt/s)
+msgid "Download speeds (KB/s)"
+msgstr "Latausnopeudet (kt/s)"
 
-#Edit tracker
-#Muokkaa seurantapalvelinta
+msgid "Edit tracker"
+msgstr "Muokkaa seurantapalvelinta"
 
-#Free disk space
-#Vapaata levytilaa
+msgid "Free disk space"
+msgstr "Vapaata levytilaa"
 
-#From
-#Mistä
+msgid "From"
+msgstr "Mistä"
 
-#New connection
-#Uusi yhteys
+msgid "New connection"
+msgstr "Uusi yhteys"
 
-#No tracker URL was specified
-#Seurantapalvelimen osoitetta ei ole määritetty
+msgid "No tracker URL was specified"
+msgstr "Seurantapalvelimen osoitetta ei ole määritetty"
 
-#Stop seeding when inactive for
-#Lopeta jakaminen kun ollut toimettomana
+msgid "Stop seeding when inactive for"
+msgstr "Lopeta jakaminen kun ollut toimettomana"
 
-#The invalid time value was entered
-#Antamasi kellonajat eivät kelpaa
+msgid "The invalid time value was entered"
+msgstr "Antamasi kellonajat eivät kelpaa"
 
-#to
-#mihin
+msgid "to"
+msgstr "mihin"
 
-#Tracker announce URL
-#Tracker announce URL
+msgid "Tracker announce URL"
+msgstr "Tracker announce URL"
 
-#Upload speeds (KB/s)
-#Lähetysnopeudet (kt/s)
+msgid "Upload speeds (KB/s)"
+msgstr "Lähetysnopeudet (kt/s)"
 
-#Browse
-#Selaa
+msgid "Browse"
+msgstr "Selaa"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#Uusi versio %s on saatavilla.
-#Nykyinen versio: %s
-#Uusi versio: %s
-#Haluatko avata lataussivun?
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "Uusi versio %s on saatavilla."
+"Nykyinen versio: %s"
+"Uusi versio: %s"
+"Haluatko avata lataussivun?"
 
-#Check for new version every
-#Tarkista päivitykset joka
+msgid "Check for new version every"
+msgstr "Tarkista päivitykset joka"
 
-#Consider active torrents as stalled when idle for
-#Oleta torrentin olevan pysähtynyt kun se on ollut toimettomana
+msgid "Consider active torrents as stalled when idle for"
+msgstr "Oleta torrentin olevan pysähtynyt kun se on ollut toimettomana"
 
-#Donate!
-#Lahjoita!
+msgid "Donate!"
+msgstr "Lahjoita!"
 
-#Download queue size
-#Latausjonon koko
+msgid "Download queue size"
+msgstr "Latausjonon koko"
 
-#Error checking for new version
-#Virhe tarkistaessa uutta versiota
+msgid "Error checking for new version"
+msgstr "Virhe tarkistaessa uutta versiota"
 
-#Modify trackers
-#Muokka seurantapalvelimia
+msgid "Modify trackers"
+msgstr "Muokka seurantapalvelimia"
 
-#No updates have been found.~You are running the latest version of %s
-#Uusia päivityksiä ei löytynyt.
-#Käytössäsi on jo uusin versio %s
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "Uusia päivityksiä ei löytynyt."
+"Käytössäsi on jo uusin versio %s"
 
-#Upload queue size
-#Lähetysjonon koko
+msgid "Upload queue size"
+msgstr "Lähetysjonon koko"
 
-#Global statistics
-#Kokonaistilastot
+msgid "Global statistics"
+msgstr "Kokonaistilastot"
 
-#Connection name
-#Yhteyden nimi
+msgid "Connection name"
+msgstr "Yhteyden nimi"
 
-#Could not connect to tracker
-#=Yhdistäminen seurantapalvelimeen epäonnistui
+msgid "Could not connect to tracker"
+msgstr "=Yhdistäminen seurantapalvelimeen epäonnistui"
 
-#Data refresh interval when minimized
-#Tietojen päivityksen aikaväli, kun ohjelma pienennetty
+msgid "Data refresh interval when minimized"
+msgstr "Tietojen päivityksen aikaväli, kun ohjelma pienennetty"
 
-#Data refresh interval
-#Tietojen päivityksen aikaväli
+msgid "Data refresh interval"
+msgstr "Tietojen päivityksen aikaväli"
 
-#Default download folder on remote host
-#Oletus latauskansio etätietokoneella
+msgid "Default download folder on remote host"
+msgstr "Oletus latauskansio etätietokoneella"
 
-#Downloading torrent file
-#Ladataan torrent tiedostoa
+msgid "Downloading torrent file"
+msgstr "Ladataan torrent tiedostoa"
 
-#Font size
-#Fontin koko
+msgid "Font size"
+msgstr "Fontin koko"
 
-#Invalid name specified
-#Virheellinen nimi
+msgid "Invalid name specified"
+msgstr "Virheellinen nimi"
 
-#Manage connections
-#Yhteyksienhallinta
+msgid "Manage connections"
+msgstr "Yhteyksienhallinta"
 
-#Please enter a password to connect to %s
-#Anna salasana yhdistääksesi %s
+msgid "Please enter a password to connect to %s"
+msgstr "Anna salasana yhdistääksesi %s"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#Määritä kuinka %s yhdistää etähallittavaan Transmission-sovellukseen.
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "Määritä kuinka %s yhdistää etähallittavaan Transmission-sovellukseen."
 
-#RPC path
-#RPC sijainti
+msgid "RPC path"
+msgstr "RPC sijainti"
 
-#Save as
-#Tallenna nimellä
+msgid "Save as"
+msgstr "Tallenna nimellä"
 
-#Torrent not registered with this tracker
-#=Torrenttia ei ole rekisteröity tämän seurantapalvelimen kanssa
+msgid "Torrent not registered with this tracker"
+msgstr "=Torrenttia ei ole rekisteröity tämän seurantapalvelimen kanssa"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#Unable to find path mapping.
-#Use the application's options to setup path mappings
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "Unable to find path mapping."
+"Use the application's options to setup path mappings"
 
-#You need to restart the application to apply changes
-#Ohjelma täytyy käynnistää uudelleen jotta asetukset tulevat voimaan
+msgid "You need to restart the application to apply changes"
+msgstr "Ohjelma täytyy käynnistää uudelleen jotta asetukset tulevat voimaan"
 

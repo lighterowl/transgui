@@ -2191,349 +2191,349 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#Dansk
+msgid "TranslationLanguage"
+msgstr "Dansk"
 
-#&Add torrent
-#Tilføj torrent
+msgid "&Add torrent"
+msgstr "Tilføj torrent"
 
-#&All
-#&Alt
+msgid "&All"
+msgstr "&Alt"
 
-#&Close
-#&Luk
+msgid "&Close"
+msgstr "&Luk"
 
-#&Ignore
-#&Ignorer
+msgid "&Ignore"
+msgstr "&Ignorer"
 
-#&No
-#&Nej
+msgid "&No"
+msgstr "&Nej"
 
-#&OK
-#&OK
+msgid "&OK"
+msgstr "&OK"
 
-#&Open
-#&Åben
+msgid "&Open"
+msgstr "&Åben"
 
-#&Retry
-#&Prøv igen
+msgid "&Retry"
+msgstr "&Prøv igen"
 
-#&Save
-#&Gem
+msgid "&Save"
+msgstr "&Gem"
 
-#&Unlock
-#&Oplås
+msgid "&Unlock"
+msgstr "&Oplås"
 
-#&Yes
-#&Ja
+msgid "&Yes"
+msgstr "&Ja"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#En ny udgave af %s er tilgængelig.
-#Din nuværende version: %s
-#Den nye version: %s
-#Vil du åbne Downloads hjemmesiden?
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "En ny udgave af %s er tilgængelig."
+"Din nuværende version: %s"
+"Den nye version: %s"
+"Vil du åbne Downloads hjemmesiden?"
 
-#Abort
-#Stop
+msgid "Abort"
+msgstr "Stop"
 
-#Authentication
-#Godkendelse
+msgid "Authentication"
+msgstr "Godkendelse"
 
-#Browse
-#Gennemse
+msgid "Browse"
+msgstr "Gennemse"
 
-#Check for new version every
-#Check for opdateringer hver
+msgid "Check for new version every"
+msgstr "Check for opdateringer hver"
 
-#Comment
-#Kommentar
+msgid "Comment"
+msgstr "Kommentar"
 
-#Confirmation
-#Bekræft
+msgid "Confirmation"
+msgstr "Bekræft"
 
-#Connecting to daemon
-#Forbinder til daemon
+msgid "Connecting to daemon"
+msgstr "Forbinder til daemon"
 
-#Connection error occurred
-#Forbindelsesfejl opstod
+msgid "Connection error occurred"
+msgstr "Forbindelsesfejl opstod"
 
-#Connection name
-#Forbindelsesnavn
+msgid "Connection name"
+msgstr "Forbindelsesnavn"
 
-#Consider active torrents as stalled when idle for
-#Betragt aktive torrents som gået i stå, når de har været inaktive i
+msgid "Consider active torrents as stalled when idle for"
+msgstr "Betragt aktive torrents som gået i stå, når de har været inaktive i"
 
-#Could not connect to tracker
-#Kunne ikke forbinde til tracker
+msgid "Could not connect to tracker"
+msgstr "Kunne ikke forbinde til tracker"
 
-#Created on
-#Oprettet den
+msgid "Created on"
+msgstr "Oprettet den"
 
-#Data refresh interval when minimized
-#Dataopdateringsinterval når minimeret
+msgid "Data refresh interval when minimized"
+msgstr "Dataopdateringsinterval når minimeret"
 
-#Data refresh interval
-#Dataopdateringsinterval
+msgid "Data refresh interval"
+msgstr "Dataopdateringsinterval"
 
-#Days
-#Dage
+msgid "Days"
+msgstr "Dage"
 
-#Default download folder on remote host
-#Standard download-mappe på fjernvært
+msgid "Default download folder on remote host"
+msgstr "Standard download-mappe på fjernvært"
 
-#Destination folder
-#Destinations mappe
+msgid "Destination folder"
+msgstr "Destinations mappe"
 
-#Directory for incomplete files
-#Mappe til ukomplette filer
+msgid "Directory for incomplete files"
+msgstr "Mappe til ukomplette filer"
 
-#Disk cache size
-#Disk cache størrelse
+msgid "Disk cache size"
+msgstr "Disk cache størrelse"
 
-#Donate to support further development
-#Doner penge
+msgid "Donate to support further development"
+msgstr "Doner penge"
 
-#Donate via PayPal,WebMoney,Credit card
-#Doner via PayPal,WebMoney,Credit card
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "Doner via PayPal,WebMoney,Credit card"
 
-#Donate!
-#Donér!
+msgid "Donate!"
+msgstr "Donér!"
 
-#Down limit
-#Download grænse
+msgid "Down limit"
+msgstr "Download grænse"
 
-#Download queue size
-#Download-køstørrelse
+msgid "Download queue size"
+msgstr "Download-køstørrelse"
 
-#Download speed
-#Download hastighed
+msgid "Download speed"
+msgstr "Download hastighed"
 
-#Download speeds (KB/s)
-#Downloadhastigheder (KB/s)
+msgid "Download speeds (KB/s)"
+msgstr "Downloadhastigheder (KB/s)"
 
-#Downloading torrent file
-#Downloader torrentfil
+msgid "Downloading torrent file"
+msgstr "Downloader torrentfil"
 
-#Edit tracker
-#Rediger tracker
+msgid "Edit tracker"
+msgstr "Rediger tracker"
 
-#Enable blocklist
-#Tillad blockliste
+msgid "Enable blocklist"
+msgstr "Tillad blockliste"
 
-#Encryption
-#Kryptering
+msgid "Encryption"
+msgstr "Kryptering"
 
-#Error checking for new version
-#Fejl ved check efter ny udgave
+msgid "Error checking for new version"
+msgstr "Fejl ved check efter ny udgave"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#Mangler flagarkiv for at vise flag.
-#Download arkivet nu?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "Mangler flagarkiv for at vise flag."
+"Download arkivet nu?"
 
-#Font size
-#Skriftstørrelse
+msgid "Font size"
+msgstr "Skriftstørrelse"
 
-#Free disk space
-#Ledig disk plads
+msgid "Free disk space"
+msgstr "Ledig disk plads"
 
-#From
-#Fra
+msgid "From"
+msgstr "Fra"
 
-#Global peer limit
-#Global peer grænse
+msgid "Global peer limit"
+msgstr "Global peer grænse"
 
-#Global statistics
-#Globale statistikker
+msgid "Global statistics"
+msgstr "Globale statistikker"
 
-#Hash
-#Hash
+msgid "Hash"
+msgstr "Hash"
 
-#Incoming port is closed. Check your firewall settings
-#Indgående port er lukket. Kontroller firewall'ens indstillinger
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "Indgående port er lukket. Kontroller firewall'ens indstillinger"
 
-#Incoming port tested successfully
-#Indgående port blev succesfuldt testet
+msgid "Incoming port tested successfully"
+msgstr "Indgående port blev succesfuldt testet"
 
-#Incoming port
-#Indgående port
+msgid "Incoming port"
+msgstr "Indgående port"
 
-#Information
-#Information
+msgid "Information"
+msgstr "Information"
 
-#Invalid name specified
-#Ugyldigt navn specificeret
+msgid "Invalid name specified"
+msgstr "Ugyldigt navn specificeret"
 
-#Language
-#Sprog
+msgid "Language"
+msgstr "Sprog"
 
-#Manage connections
-#Styr forbindelser
+msgid "Manage connections"
+msgstr "Styr forbindelser"
 
-#Max peers
-#Max peers
+msgid "Max peers"
+msgstr "Max peers"
 
-#Modify trackers
-#Modificer trackere
+msgid "Modify trackers"
+msgstr "Modificer trackere"
 
-#New connection
-#Ny forbindelse
+msgid "New connection"
+msgstr "Ny forbindelse"
 
-#New location for torrent data
-#Ny placering for torrent data
+msgid "New location for torrent data"
+msgstr "Ny placering for torrent data"
 
-#No host name specified
-#Intet specificeret host navn
+msgid "No host name specified"
+msgstr "Intet specificeret host navn"
 
-#No link was specified
-#Der blev ikke specificeret et link
+msgid "No link was specified"
+msgstr "Der blev ikke specificeret et link"
 
-#No proxy server specified
-#Ingen proxyserver specificeret
+msgid "No proxy server specified"
+msgstr "Ingen proxyserver specificeret"
 
-#No to all
-#Nej til alt
+msgid "No to all"
+msgstr "Nej til alt"
 
-#No torrent location was specified
-#Der blev ikke specificeret en torrent placering
+msgid "No torrent location was specified"
+msgstr "Der blev ikke specificeret en torrent placering"
 
-#No tracker URL was specified
-#Der blev ikke specificeret en tracker URL
+msgid "No tracker URL was specified"
+msgstr "Der blev ikke specificeret en tracker URL"
 
-#No updates have been found.~You are running the latest version of %s
-#Der var ingen opdateringer.
-#Du er på den seneste udgave af %s
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "Der var ingen opdateringer."
+"Du er på den seneste udgave af %s"
 
-#Password
-#Løsen
+msgid "Password"
+msgstr "Løsen"
 
-#Peer limit
-#Peer grænse
+msgid "Peer limit"
+msgstr "Peer grænse"
 
-#Pieces
-#Dele
+msgid "Pieces"
+msgstr "Dele"
 
-#Please enter a password to connect to %s
-#Indtast venligst et løsen for at forbinde til %s
+msgid "Please enter a password to connect to %s"
+msgstr "Indtast venligst et løsen for at forbinde til %s"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#Specificer venligst hvordan %s skal forbinde til fjernværten som kører Transmission daemon (service)
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "Specificer venligst hvordan %s skal forbinde til fjernværten som kører Transmission daemon (service)"
 
-#Properties
-#Egenskaber
+msgid "Properties"
+msgstr "Egenskaber"
 
-#Proxy password
-#Proxy løsen
+msgid "Proxy password"
+msgstr "Proxy løsen"
 
-#Proxy port
-#Proxy port
+msgid "Proxy port"
+msgstr "Proxy port"
 
-#Proxy server
-#Proxy server
+msgid "Proxy server"
+msgstr "Proxy server"
 
-#Proxy user name
-#Proxy brugernavn
+msgid "Proxy user name"
+msgstr "Proxy brugernavn"
 
-#Reconnect in %d seconds
-#Forbinder igen om %d sekunder
+msgid "Reconnect in %d seconds"
+msgstr "Forbinder igen om %d sekunder"
 
-#Remaining
-#Tilbage
+msgid "Remaining"
+msgstr "Tilbage"
 
-#Remote host
-#Fjern host
+msgid "Remote host"
+msgstr "Fjern host"
 
-#RPC path
-#RPC sti
+msgid "RPC path"
+msgstr "RPC sti"
 
-#Save as
-#Gem som
+msgid "Save as"
+msgstr "Gem som"
 
-#Seed ratio
-#Seed ratio
+msgid "Seed ratio"
+msgstr "Seed ratio"
 
-#Set data location
-#Set dataplacering
+msgid "Set data location"
+msgstr "Set dataplacering"
 
-#Setup columns
-#Indstil kolonner
+msgid "Setup columns"
+msgstr "Indstil kolonner"
 
-#Share ratio
-#Dele ratio
+msgid "Share ratio"
+msgstr "Dele ratio"
 
-#Stop seeding when inactive for
-#Stop seeding efter inaktivitet i
+msgid "Stop seeding when inactive for"
+msgstr "Stop seeding efter inaktivitet i"
 
-#The block list has been updated successfully.~The list entries count: %d
-#Blocklisten er blevet opdateret.
-#Listen indeholder: %d elementer
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "Blocklisten er blevet opdateret."
+"Listen indeholder: %d elementer"
 
-#The directory for incomplete files was not specified
-#Mappen til ukomplette filer blev ikke specificeret
+msgid "The directory for incomplete files was not specified"
+msgstr "Mappen til ukomplette filer blev ikke specificeret"
 
-#The downloads directory was not specified
-#Mappen til downloads blev ikke specificeret
+msgid "The downloads directory was not specified"
+msgstr "Mappen til downloads blev ikke specificeret"
 
-#The invalid time value was entered
-#Den indtastede tidsværdi var ugyldig
+msgid "The invalid time value was entered"
+msgstr "Den indtastede tidsværdi var ugyldig"
 
-#to
-#til
+msgid "to"
+msgstr "til"
 
-#Torrent not registered with this tracker
-#Torrenten er ikke registreret hos trackeren
+msgid "Torrent not registered with this tracker"
+msgstr "Torrenten er ikke registreret hos trackeren"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Torrents (*.torrent)|*.torrent|Alle filer (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Torrents (*.torrent)|*.torrent|Alle filer (*.*)|*.*"
 
-#Total size
-#Samlet størelse
+msgid "Total size"
+msgstr "Samlet størelse"
 
-#Tracker announce URL
-#Trackerannoncerings URL
+msgid "Tracker announce URL"
+msgstr "Trackerannoncerings URL"
 
-#Tracker update on
-#Trackeropdatering om
+msgid "Tracker update on"
+msgstr "Trackeropdatering om"
 
-#Unable to execute "%s"
-#Kunne ikke afvikle "%s"
+msgid "Unable to execute "%s""
+msgstr "Kunne ikke afvikle "%s""
 
-#Unable to extract flag image
-#Kan ikke udpakke flag
+msgid "Unable to extract flag image"
+msgstr "Kan ikke udpakke flag"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#Kan ikke finde sti mapping.
-#Brug programmets indstillinger for at sætte sti mappings
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "Kan ikke finde sti mapping."
+"Brug programmets indstillinger for at sætte sti mappings"
 
-#Up limit
-#Uploadgrænse
+msgid "Up limit"
+msgstr "Uploadgrænse"
 
-#Update complete
-#Opdatering færdig
+msgid "Update complete"
+msgstr "Opdatering færdig"
 
-#Upload queue size
-#Upload-køstørrelse
+msgid "Upload queue size"
+msgstr "Upload-køstørrelse"
 
-#Upload speed
-#Uploadhastighed
+msgid "Upload speed"
+msgstr "Uploadhastighed"
 
-#Upload speeds (KB/s)
-#Uploadhastigheder (KB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "Uploadhastigheder (KB/s)"
 
-#URL of a .torrent file or a magnet link
-#URL til en .torrent file eller et magnet link
+msgid "URL of a .torrent file or a magnet link"
+msgstr "URL til en .torrent file eller et magnet link"
 
-#User name
-#Brugernavn
+msgid "User name"
+msgstr "Brugernavn"
 
-#Warning
-#Advarsel
+msgid "Warning"
+msgstr "Advarsel"
 
-#Wasted
-#Spildt
+msgid "Wasted"
+msgstr "Spildt"
 
-#Yes to &All
-#Ja til &Alt
+msgid "Yes to &All"
+msgstr "Ja til &Alt"
 
-#You need to restart the application to apply changes
-#Du bliver nødt til at genstarte programmet før ændringerne træder i kraft.
+msgid "You need to restart the application to apply changes"
+msgstr "Du bliver nødt til at genstarte programmet før ændringerne træder i kraft."
 

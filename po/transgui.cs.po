@@ -2191,349 +2191,349 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#Česky
+msgid "TranslationLanguage"
+msgstr "Česky"
 
-#&All
-#&Vše
+msgid "&All"
+msgstr "&Vše"
 
-#&Ignore
-#&Ignorovat
+msgid "&Ignore"
+msgstr "&Ignorovat"
 
-#&No
-#&Ne
+msgid "&No"
+msgstr "&Ne"
 
-#&OK
-#&OK
+msgid "&OK"
+msgstr "&OK"
 
-#&Open
-#&Otevřít
+msgid "&Open"
+msgstr "&Otevřít"
 
-#&Retry
-#&Znovu
+msgid "&Retry"
+msgstr "&Znovu"
 
-#&Save
-#&Uložit
+msgid "&Save"
+msgstr "&Uložit"
 
-#&Unlock
-#&Odemknout
+msgid "&Unlock"
+msgstr "&Odemknout"
 
-#&Yes
-#&Ano
+msgid "&Yes"
+msgstr "&Ano"
 
-#Abort
-#Zrušit
+msgid "Abort"
+msgstr "Zrušit"
 
-#&Add torrent
-#Přidat torrent
+msgid "&Add torrent"
+msgstr "Přidat torrent"
 
-#Authentication
-#Autentizace
+msgid "Authentication"
+msgstr "Autentizace"
 
-#Comment
-#Komentář
+msgid "Comment"
+msgstr "Komentář"
 
-#Confirmation
-#Potvrzení
+msgid "Confirmation"
+msgstr "Potvrzení"
 
-#Connecting to daemon
-#Připojování k démonovi
+msgid "Connecting to daemon"
+msgstr "Připojování k démonovi"
 
-#Connection error occurred
-#Chyba připojení
+msgid "Connection error occurred"
+msgstr "Chyba připojení"
 
-#Created on
-#Vytvořeno
+msgid "Created on"
+msgstr "Vytvořeno"
 
-#Destination folder
-#Cílový adresář
+msgid "Destination folder"
+msgstr "Cílový adresář"
 
-#Donate to support further development
-#Podpořte další vývoj
+msgid "Donate to support further development"
+msgstr "Podpořte další vývoj"
 
-#Donate via PayPal,WebMoney,Credit card
-#Darujte skrze PayPal,WebMoney,Credit card
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "Darujte skrze PayPal,WebMoney,Credit card"
 
-#Down limit
-#Limit stahování
+msgid "Down limit"
+msgstr "Limit stahování"
 
-#Download speed
-#Rychlost stahování
+msgid "Download speed"
+msgstr "Rychlost stahování"
 
-#Encryption
-#Šifrování
+msgid "Encryption"
+msgstr "Šifrování"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#Archív vlajek je potřeba k zobrazení vlajek států.
-#Stáhnout nyní tento archív?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "Archív vlajek je potřeba k zobrazení vlajek států."
+"Stáhnout nyní tento archív?"
 
-#Global peer limit
-#Globální limit peerů
+msgid "Global peer limit"
+msgstr "Globální limit peerů"
 
-#Hash
-#Hash
+msgid "Hash"
+msgstr "Hash"
 
-#Incoming port is closed. Check your firewall settings
-#Příchozí port je zavřený. Zkontrolujte vaše nastavení firewallu
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "Příchozí port je zavřený. Zkontrolujte vaše nastavení firewallu"
 
-#Incoming port tested successfully
-#Příchozí port úspěšně otestován
+msgid "Incoming port tested successfully"
+msgstr "Příchozí port úspěšně otestován"
 
-#Incoming port
-#Příchozí port
+msgid "Incoming port"
+msgstr "Příchozí port"
 
-#Information
-#Informace
+msgid "Information"
+msgstr "Informace"
 
-#Language
-#Jazyk
+msgid "Language"
+msgstr "Jazyk"
 
-#Max peers
-#Maximum peerů
+msgid "Max peers"
+msgstr "Maximum peerů"
 
-#No host name specified
-#Nenastevené jméno hosta
+msgid "No host name specified"
+msgstr "Nenastevené jméno hosta"
 
-#No proxy server specified
-#Nenastavnená proxy
+msgid "No proxy server specified"
+msgstr "Nenastavnená proxy"
 
-#No to all
-#Ne všem
+msgid "No to all"
+msgstr "Ne všem"
 
-#Password
-#Heslo
+msgid "Password"
+msgstr "Heslo"
 
-#Peer limit
-#Limit peerů
+msgid "Peer limit"
+msgstr "Limit peerů"
 
-#Pieces
-#Částí
+msgid "Pieces"
+msgstr "Částí"
 
-#Properties
-#Vlastnosti
+msgid "Properties"
+msgstr "Vlastnosti"
 
-#Proxy password
-#Heslo proxy
+msgid "Proxy password"
+msgstr "Heslo proxy"
 
-#Proxy port
-#Port proxy
+msgid "Proxy port"
+msgstr "Port proxy"
 
-#Proxy server
-#Proxy server
+msgid "Proxy server"
+msgstr "Proxy server"
 
-#Proxy user name
-#Uživatelské jméno proxy
+msgid "Proxy user name"
+msgstr "Uživatelské jméno proxy"
 
-#Reconnect in %d seconds
-#Znovupřipojení za %d sekund
+msgid "Reconnect in %d seconds"
+msgstr "Znovupřipojení za %d sekund"
 
-#Remaining
-#Zbývá
+msgid "Remaining"
+msgstr "Zbývá"
 
-#Remote host
-#Vzdálený host
+msgid "Remote host"
+msgstr "Vzdálený host"
 
-#Seed ratio
-#Ratio seedování
+msgid "Seed ratio"
+msgstr "Ratio seedování"
 
-#Setup columns
-#Nastavit sloupce
+msgid "Setup columns"
+msgstr "Nastavit sloupce"
 
-#Share ratio
-#Poměr sdílení
+msgid "Share ratio"
+msgstr "Poměr sdílení"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Torrenty (*.torrent)|*.torrent|Všechny soubory (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Torrenty (*.torrent)|*.torrent|Všechny soubory (*.*)|*.*"
 
-#Total size
-#Celková velikost
+msgid "Total size"
+msgstr "Celková velikost"
 
-#Tracker update on
-#Update trackeru za
+msgid "Tracker update on"
+msgstr "Update trackeru za"
 
-#Unable to extract flag image
-#Není možné rozbalit obrázek vlajky
+msgid "Unable to extract flag image"
+msgstr "Není možné rozbalit obrázek vlajky"
 
-#Up limit
-#Limit uploadu
+msgid "Up limit"
+msgstr "Limit uploadu"
 
-#Update complete
-#Obnovení dokončeno
+msgid "Update complete"
+msgstr "Obnovení dokončeno"
 
-#Upload speed
-#Rychlost uploadu
+msgid "Upload speed"
+msgstr "Rychlost uploadu"
 
-#User name
-#Uživatelské jméno
+msgid "User name"
+msgstr "Uživatelské jméno"
 
-#Warning
-#Varování
+msgid "Warning"
+msgstr "Varování"
 
-#Wasted
-#Zahozeno
+msgid "Wasted"
+msgstr "Zahozeno"
 
-#Yes to &All
-#Ano &Všem
+msgid "Yes to &All"
+msgstr "Ano &Všem"
 
-#Directory for incomplete files
-#Adresář pro nedokončené soubory
+msgid "Directory for incomplete files"
+msgstr "Adresář pro nedokončené soubory"
 
-#Enable blocklist
-#Povolit blocklist
+msgid "Enable blocklist"
+msgstr "Povolit blocklist"
 
-#New location for torrent data
-#Nové umístění pro data torrentu
+msgid "New location for torrent data"
+msgstr "Nové umístění pro data torrentu"
 
-#No link was specified
-#Není uveden žádný link
+msgid "No link was specified"
+msgstr "Není uveden žádný link"
 
-#No torrent location was specified
-#Není uvedeno žádné umístění
+msgid "No torrent location was specified"
+msgstr "Není uvedeno žádné umístění"
 
-#Set data location
-#Nastavit umístění dat
+msgid "Set data location"
+msgstr "Nastavit umístění dat"
 
-#The block list has been updated successfully.~The list entries count: %d
-#Blocklist úspěšne aktualizován.
-#Počet položek: %d
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "Blocklist úspěšne aktualizován."
+"Počet položek: %d"
 
-#The directory for incomplete files was not specified
-#Adresář pro nedokončené soubory není uveden
+msgid "The directory for incomplete files was not specified"
+msgstr "Adresář pro nedokončené soubory není uveden"
 
-#The downloads directory was not specified
-#Adresář pro stahování není uveden
+msgid "The downloads directory was not specified"
+msgstr "Adresář pro stahování není uveden"
 
-#Unable to execute "%s"
-#Není možné spustit "%s"
+msgid "Unable to execute "%s""
+msgstr "Není možné spustit "%s""
 
-#URL of a .torrent file or a magnet link
-#URL .torrent souboru nebo magnet link
+msgid "URL of a .torrent file or a magnet link"
+msgstr "URL .torrent souboru nebo magnet link"
 
-#Days
-#Dny
+msgid "Days"
+msgstr "Dny"
 
-#Disk cache size
-#Velikost vyrovnávací paměti
+msgid "Disk cache size"
+msgstr "Velikost vyrovnávací paměti"
 
-#Download speeds (KB/s)
-#Rychlost stahování (KB/s)
+msgid "Download speeds (KB/s)"
+msgstr "Rychlost stahování (KB/s)"
 
-#Edit tracker
-#Upravit tracker
+msgid "Edit tracker"
+msgstr "Upravit tracker"
 
-#Free disk space
-#Volné místo na disku
+msgid "Free disk space"
+msgstr "Volné místo na disku"
 
-#From
-#Od
+msgid "From"
+msgstr "Od"
 
-#New connection
-#Nové spojení
+msgid "New connection"
+msgstr "Nové spojení"
 
-#No tracker URL was specified
-#Nebyla zadána URL trackeru
+msgid "No tracker URL was specified"
+msgstr "Nebyla zadána URL trackeru"
 
-#Stop seeding when inactive for
-#Přestat seedovat pokud je neaktivní déle jak
+msgid "Stop seeding when inactive for"
+msgstr "Přestat seedovat pokud je neaktivní déle jak"
 
-#The invalid time value was entered
-#Byl zadán chybný časový údaj
+msgid "The invalid time value was entered"
+msgstr "Byl zadán chybný časový údaj"
 
-#to
-#do
+msgid "to"
+msgstr "do"
 
-#Tracker announce URL
-#Announce URL trackeru
+msgid "Tracker announce URL"
+msgstr "Announce URL trackeru"
 
-#Upload speeds (KB/s)
-#Rychlost uploadu (KB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "Rychlost uploadu (KB/s)"
 
-#Browse
-#Procházet
+msgid "Browse"
+msgstr "Procházet"
 
-#&Close
-#&Zavřít
+msgid "&Close"
+msgstr "&Zavřít"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#Je dostupná nová verze %s.
-#Současná verze: %s
-#Nová verze: %s
-#Chtěli byste otevřít stránky se stažením?
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "Je dostupná nová verze %s."
+"Současná verze: %s"
+"Nová verze: %s"
+"Chtěli byste otevřít stránky se stažením?"
 
-#Check for new version every
-#Kontrolovat nové verze jednou za
+msgid "Check for new version every"
+msgstr "Kontrolovat nové verze jednou za"
 
-#Consider active torrents as stalled when idle for
-#Považovat aktivní torrenty za pozastavené pokud jsou nečinné
+msgid "Consider active torrents as stalled when idle for"
+msgstr "Považovat aktivní torrenty za pozastavené pokud jsou nečinné"
 
-#Donate!
-#Podpořte!
+msgid "Donate!"
+msgstr "Podpořte!"
 
-#Download queue size
-#Velikost fronty stahování
+msgid "Download queue size"
+msgstr "Velikost fronty stahování"
 
-#Error checking for new version
-#Chyba při kontrole nové verze
+msgid "Error checking for new version"
+msgstr "Chyba při kontrole nové verze"
 
-#Modify trackers
-#Upravit trackery
+msgid "Modify trackers"
+msgstr "Upravit trackery"
 
-#No updates have been found.~You are running the latest version of %s
-#Žádné updaty nenalezeny
-#Používáte nejnovější verzi %s
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "Žádné updaty nenalezeny"
+"Používáte nejnovější verzi %s"
 
-#Upload queue size
-#Velikost fronty odesílání
+msgid "Upload queue size"
+msgstr "Velikost fronty odesílání"
 
-#Global statistics
-#Globální statistiky
+msgid "Global statistics"
+msgstr "Globální statistiky"
 
-#Connection name
-#Jméno spojení
+msgid "Connection name"
+msgstr "Jméno spojení"
 
-#Could not connect to tracker
-#Nelze se spojit s trackerem
+msgid "Could not connect to tracker"
+msgstr "Nelze se spojit s trackerem"
 
-#Data refresh interval when minimized
-#Interval obnovení informací při minimalizaci
+msgid "Data refresh interval when minimized"
+msgstr "Interval obnovení informací při minimalizaci"
 
-#Data refresh interval
-#Interval obnovení informací
+msgid "Data refresh interval"
+msgstr "Interval obnovení informací"
 
-#Default download folder on remote host
-#Výchozí složka pro stahování na vzdáleném hostiteli
+msgid "Default download folder on remote host"
+msgstr "Výchozí složka pro stahování na vzdáleném hostiteli"
 
-#Downloading torrent file
-#Stahuji torrent soubor
+msgid "Downloading torrent file"
+msgstr "Stahuji torrent soubor"
 
-#Font size
-#Velikost fontu
+msgid "Font size"
+msgstr "Velikost fontu"
 
-#Invalid name specified
-#Zadáno neplatné jméno
+msgid "Invalid name specified"
+msgstr "Zadáno neplatné jméno"
 
-#Manage connections
-#Správa spojení
+msgid "Manage connections"
+msgstr "Správa spojení"
 
-#Please enter a password to connect to %s
-#Pro spojení s %s prosím vložte heslo
+msgid "Please enter a password to connect to %s"
+msgstr "Pro spojení s %s prosím vložte heslo"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#Určete jak se bude %s připojovat ke vzdálenému hostiteli s běžícím demonem (službou) Transmission
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "Určete jak se bude %s připojovat ke vzdálenému hostiteli s běžícím demonem (službou) Transmission"
 
-#RPC path
-#cesta RPC
+msgid "RPC path"
+msgstr "cesta RPC"
 
-#Save as
-#Uložit jako
+msgid "Save as"
+msgstr "Uložit jako"
 
-#Torrent not registered with this tracker
-#Torrent není na tomto trackeru registrován
+msgid "Torrent not registered with this tracker"
+msgstr "Torrent není na tomto trackeru registrován"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#Není možné najít mapování cest.
-#Nastavte mapování cest přes možnosti aplikace
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "Není možné najít mapování cest."
+"Nastavte mapování cest přes možnosti aplikace"
 
-#You need to restart the application to apply changes
-#Aby se projevily změny, je nutné aplikaci restartovat
+msgid "You need to restart the application to apply changes"
+msgstr "Aby se projevily změny, je nutné aplikaci restartovat"
 

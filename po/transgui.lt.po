@@ -2191,362 +2191,362 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#Lietuvių
+msgid "TranslationLanguage"
+msgstr "Lietuvių"
 
-#&Add torrent
-#&Įkelti torentą
+msgid "&Add torrent"
+msgstr "&Įkelti torentą"
 
-#&All
-#&Visi
+msgid "&All"
+msgstr "&Visi"
 
-#&Close
-#&Užverti
+msgid "&Close"
+msgstr "&Užverti"
 
-#&Yes
-#&Taip
+msgid "&Yes"
+msgstr "&Taip"
 
-#&Ignore
-#&Ignoruoti
+msgid "&Ignore"
+msgstr "&Ignoruoti"
 
-#&No
-#&Ne
+msgid "&No"
+msgstr "&Ne"
 
-#&OK
-#&Gerai
+msgid "&OK"
+msgstr "&Gerai"
 
-#&Open
-#&Atverti
+msgid "&Open"
+msgstr "&Atverti"
 
-#&Retry
-#&Pakartoti
+msgid "&Retry"
+msgstr "&Pakartoti"
 
-#&Save
-#&Išsaugoti
+msgid "&Save"
+msgstr "&Išsaugoti"
 
-#&Unlock
-#&Atrakinti
+msgid "&Unlock"
+msgstr "&Atrakinti"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#Galima nauja %s versija.
-#Jūsų dabartinė versija: %s
-#Nauja versija: %s
-#
-#Ar norite pereiti į parsiuntimo puslapį?
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "Galima nauja %s versija."
+"Jūsų dabartinė versija: %s"
+"Nauja versija: %s"
+""
+"Ar norite pereiti į parsiuntimo puslapį?"
 
-#Abort
-#Atšaukti
+msgid "Abort"
+msgstr "Atšaukti"
 
-#Authentication
-#Tapatybės nustatymas
+msgid "Authentication"
+msgstr "Tapatybės nustatymas"
 
-#Browse
-#Naršyti
+msgid "Browse"
+msgstr "Naršyti"
 
-#Check for new version every
-#Tikrinti, ar yra nauja versija kas
+msgid "Check for new version every"
+msgstr "Tikrinti, ar yra nauja versija kas"
 
-#Comment
-#Komentaras
+msgid "Comment"
+msgstr "Komentaras"
 
-#Confirmation
-#Patvirtinimas
+msgid "Confirmation"
+msgstr "Patvirtinimas"
 
-#Connecting to daemon
-#Jungiamasi prie tarnybos
+msgid "Connecting to daemon"
+msgstr "Jungiamasi prie tarnybos"
 
-#Connection error occurred
-#Prisijungimo klaida
+msgid "Connection error occurred"
+msgstr "Prisijungimo klaida"
 
-#Consider active torrents as stalled when idle for
-#Laikyti aktyvius torentus sulaikytais, kai jie neveiksnūs
+msgid "Consider active torrents as stalled when idle for"
+msgstr "Laikyti aktyvius torentus sulaikytais, kai jie neveiksnūs"
 
-#Created on
-#Sukurtas
+msgid "Created on"
+msgstr "Sukurtas"
 
-#Days
-#Dienos
+msgid "Days"
+msgstr "Dienos"
 
-#Destination folder
-#Parsiuntimų aplankas
+msgid "Destination folder"
+msgstr "Parsiuntimų aplankas"
 
-#Directory for incomplete files
-#Aplankas nebaigtiems failams
+msgid "Directory for incomplete files"
+msgstr "Aplankas nebaigtiems failams"
 
-#Disk cache size
-#Disko podėlio dydis
+msgid "Disk cache size"
+msgstr "Disko podėlio dydis"
 
-#Donate to support further development
-#Paremkite finansiškai tolesnį vystymą
+msgid "Donate to support further development"
+msgstr "Paremkite finansiškai tolesnį vystymą"
 
-#Donate via PayPal,WebMoney,Credit card
-#Paremkite per PayPal,WebMoney,kreditine kortele
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "Paremkite per PayPal,WebMoney,kreditine kortele"
 
-#Donate!
-#Paremti!
+msgid "Donate!"
+msgstr "Paremti!"
 
-#Down limit
-#Pars. ribojimas
+msgid "Down limit"
+msgstr "Pars. ribojimas"
 
-#Download queue size
-#Parsiuntimo eilės dydis
+msgid "Download queue size"
+msgstr "Parsiuntimo eilės dydis"
 
-#Download speed
-#Parsiuntimo greitis
+msgid "Download speed"
+msgstr "Parsiuntimo greitis"
 
-#Download speeds (KB/s)
-#Parsiuntimo greitis (КB/s)
+msgid "Download speeds (KB/s)"
+msgstr "Parsiuntimo greitis (КB/s)"
 
-#Edit tracker
-#Redaguoti seklį
+msgid "Edit tracker"
+msgstr "Redaguoti seklį"
 
-#Enable blocklist
-#Įjungti blokavomo sąrašą
+msgid "Enable blocklist"
+msgstr "Įjungti blokavomo sąrašą"
 
-#Encryption
-#Šifravimas
+msgid "Encryption"
+msgstr "Šifravimas"
 
-#Error checking for new version
-#Ieškant naujos versijos, įvyko klaida
+msgid "Error checking for new version"
+msgstr "Ieškant naujos versijos, įvyko klaida"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#Kad rodyti šalių vėliavas, reikalingas vėliavų archyvas.
-#Ar atsiųsti šį archyvą?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "Kad rodyti šalių vėliavas, reikalingas vėliavų archyvas."
+"Ar atsiųsti šį archyvą?"
 
-#Free disk space
-#Diske laisvos vietos
+msgid "Free disk space"
+msgstr "Diske laisvos vietos"
 
-#From
-#Nuo
+msgid "From"
+msgstr "Nuo"
 
-#Global peer limit
-#Bandras mazgų limitas
+msgid "Global peer limit"
+msgstr "Bandras mazgų limitas"
 
-#Global statistics
-#Bendroji statistika
+msgid "Global statistics"
+msgstr "Bendroji statistika"
 
-#Hash
-#Hešas
+msgid "Hash"
+msgstr "Hešas"
 
-#Yes to &All
-#Visiems taip
+msgid "Yes to &All"
+msgstr "Visiems taip"
 
-#Incoming port is closed. Check your firewall settings
-#Įėjimo prievadas uždarytas. Patikrinkite savo ugniasienės nustatymus.
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "Įėjimo prievadas uždarytas. Patikrinkite savo ugniasienės nustatymus."
 
-#Incoming port tested successfully
-#Įėjimo prievadas nukreiptas teisingai
+msgid "Incoming port tested successfully"
+msgstr "Įėjimo prievadas nukreiptas teisingai"
 
-#Incoming port
-#Įėjimo prievadas
+msgid "Incoming port"
+msgstr "Įėjimo prievadas"
 
-#Information
-#Informacija
+msgid "Information"
+msgstr "Informacija"
 
-#Language
-#Kalba
+msgid "Language"
+msgstr "Kalba"
 
-#Max peers
-#Daugiausiai mazgų
+msgid "Max peers"
+msgstr "Daugiausiai mazgų"
 
-#Modify trackers
-#Keisti seklius
+msgid "Modify trackers"
+msgstr "Keisti seklius"
 
-#New connection
-#Nauja jungtis
+msgid "New connection"
+msgstr "Nauja jungtis"
 
-#New location for torrent data
-#Nauja torento duomenų buvimo vieta
+msgid "New location for torrent data"
+msgstr "Nauja torento duomenų buvimo vieta"
 
-#No host name specified
-#Nenurodytas mazgo pavadinimas
+msgid "No host name specified"
+msgstr "Nenurodytas mazgo pavadinimas"
 
-#No link was specified
-#Nenurodyta nuoroda
+msgid "No link was specified"
+msgstr "Nenurodyta nuoroda"
 
-#No proxy server specified
-#Nenurodytas tarpinio serverio pavadinimas
+msgid "No proxy server specified"
+msgstr "Nenurodytas tarpinio serverio pavadinimas"
 
-#No to all
-#Visiems ne
+msgid "No to all"
+msgstr "Visiems ne"
 
-#No torrent location was specified
-#Nenurodyta torento buvimo vieta
+msgid "No torrent location was specified"
+msgstr "Nenurodyta torento buvimo vieta"
 
-#No tracker URL was specified
-#Nenurodytas joks seklio URL
+msgid "No tracker URL was specified"
+msgstr "Nenurodytas joks seklio URL"
 
-#No updates have been found.~You are running the latest version of %s
-#Atnaujinimų nerasta.
-#Naudojama naujausia „%s“ versija
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "Atnaujinimų nerasta."
+"Naudojama naujausia „%s“ versija"
 
-#Password
-#Slaptažodis
+msgid "Password"
+msgstr "Slaptažodis"
 
-#Peer limit
-#Mazgų limitas
+msgid "Peer limit"
+msgstr "Mazgų limitas"
 
-#Pieces
-#Turi dalių
+msgid "Pieces"
+msgstr "Turi dalių"
 
-#Properties
-#Savybės
+msgid "Properties"
+msgstr "Savybės"
 
-#Proxy password
-#Tarpinio serverio slaptažodis
+msgid "Proxy password"
+msgstr "Tarpinio serverio slaptažodis"
 
-#Proxy port
-#Tarpinio serverio prievadas
+msgid "Proxy port"
+msgstr "Tarpinio serverio prievadas"
 
-#Proxy server
-#Tarpinis serveris
+msgid "Proxy server"
+msgstr "Tarpinis serveris"
 
-#Proxy user name
-#Tarpinio serverio vartotojas
+msgid "Proxy user name"
+msgstr "Tarpinio serverio vartotojas"
 
-#Reconnect in %d seconds
-#Prisijungimo kartojimas po %d sek.
+msgid "Reconnect in %d seconds"
+msgstr "Prisijungimo kartojimas po %d sek."
 
-#Remaining
-#Liko
+msgid "Remaining"
+msgstr "Liko"
 
-#Remote host
-#Nutolęs mazgas
+msgid "Remote host"
+msgstr "Nutolęs mazgas"
 
-#Seed ratio
-#Sėjimo koeficientas
+msgid "Seed ratio"
+msgstr "Sėjimo koeficientas"
 
-#Set data location
-#Pakeisti duomenų buvimo vietą
+msgid "Set data location"
+msgstr "Pakeisti duomenų buvimo vietą"
 
-#Setup columns
-#Nustatyti stulpelius
+msgid "Setup columns"
+msgstr "Nustatyti stulpelius"
 
-#Share ratio
-#Dalijimosi santykis
+msgid "Share ratio"
+msgstr "Dalijimosi santykis"
 
-#Stop seeding when inactive for
-#Baigti sėti, kai neveikia
+msgid "Stop seeding when inactive for"
+msgstr "Baigti sėti, kai neveikia"
 
-#The block list has been updated successfully.~The list entries count: %d
-#Blokuojamų sąrašas buvo sėkmingai atnaujintas.
-#Sąraše įrašų: %d
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "Blokuojamų sąrašas buvo sėkmingai atnaujintas."
+"Sąraše įrašų: %d"
 
-#The directory for incomplete files was not specified
-#Nenurodytas aplankas nebaigtiems failams
+msgid "The directory for incomplete files was not specified"
+msgstr "Nenurodytas aplankas nebaigtiems failams"
 
-#The downloads directory was not specified
-#Nenurodytas parsiuntimų aplankas
+msgid "The downloads directory was not specified"
+msgstr "Nenurodytas parsiuntimų aplankas"
 
-#The invalid time value was entered
-#Įvesta netinkama laiko reikšmė
+msgid "The invalid time value was entered"
+msgstr "Įvesta netinkama laiko reikšmė"
 
-#to
-#iki
+msgid "to"
+msgstr "iki"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Тorentai (*.torrent)|*.torrent|Visi failai (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Тorentai (*.torrent)|*.torrent|Visi failai (*.*)|*.*"
 
-#Total size
-#Bendras dydis
+msgid "Total size"
+msgstr "Bendras dydis"
 
-#Tracker announce URL
-#Seklio informavimo URL
+msgid "Tracker announce URL"
+msgstr "Seklio informavimo URL"
 
-#Tracker update on
-#Seklio atnaujinimas
+msgid "Tracker update on"
+msgstr "Seklio atnaujinimas"
 
-#Unable to execute "%s"
-#Nepavyksta įvykdyti „%s“
+msgid "Unable to execute "%s""
+msgstr "Nepavyksta įvykdyti „%s“"
 
-#Unable to extract flag image
-# išskleisti vėliavos paveikslėlio
+msgid "Unable to extract flag image"
+msgstr " išskleisti vėliavos paveikslėlio"
 
-#Up limit
-#Išs. riba
+msgid "Up limit"
+msgstr "Išs. riba"
 
-#Update complete
-#Atnaujinimas baigtas
+msgid "Update complete"
+msgstr "Atnaujinimas baigtas"
 
-#Upload queue size
-#Išsiuntimo eilės dydis
+msgid "Upload queue size"
+msgstr "Išsiuntimo eilės dydis"
 
-#Upload speed
-#Išsiuntimo greitis
+msgid "Upload speed"
+msgstr "Išsiuntimo greitis"
 
-#Upload speeds (KB/s)
-#Išsiuntimo greitis (КB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "Išsiuntimo greitis (КB/s)"
 
-#URL of a .torrent file or a magnet link
-#.torrent failo internet. adresas, arba magnetinė nuoroda
+msgid "URL of a .torrent file or a magnet link"
+msgstr ".torrent failo internet. adresas, arba magnetinė nuoroda"
 
-#User name
-#Vartotojo vardas
+msgid "User name"
+msgstr "Vartotojo vardas"
 
-#Warning
-#Perspėjimas
+msgid "Warning"
+msgstr "Perspėjimas"
 
-#Wasted
-#Panaudota
+msgid "Wasted"
+msgstr "Panaudota"
 
-#Application Options
-#Programos nuostatos
+msgid "Application Options"
+msgstr "Programos nuostatos"
 
-#Connection name
-#Jungties pavadinimas
+msgid "Connection name"
+msgstr "Jungties pavadinimas"
 
-#Could not connect to tracker
-#=Prie seklio prisijungti nepavyksta
+msgid "Could not connect to tracker"
+msgstr "=Prie seklio prisijungti nepavyksta"
 
-#Data refresh interval when minimized
-#Duomenų atnaujinimo intervalas, kai sumažinta
+msgid "Data refresh interval when minimized"
+msgstr "Duomenų atnaujinimo intervalas, kai sumažinta"
 
-#Data refresh interval
-#Duomenų atnaujinimo intervalas
+msgid "Data refresh interval"
+msgstr "Duomenų atnaujinimo intervalas"
 
-#Default download folder on remote host
-#Numatytasis parsiuntimų aplankas nutolusiame taške
+msgid "Default download folder on remote host"
+msgstr "Numatytasis parsiuntimų aplankas nutolusiame taške"
 
-#Downloading torrent file
-#Parsiunčiamas torento failas
+msgid "Downloading torrent file"
+msgstr "Parsiunčiamas torento failas"
 
-#Export settings
-#Nustatymų eksportas
+msgid "Export settings"
+msgstr "Nustatymų eksportas"
 
-#Font size
-#Šrifto dydis
+msgid "Font size"
+msgstr "Šrifto dydis"
 
-#Import settings
-#Nustatymų importas
+msgid "Import settings"
+msgstr "Nustatymų importas"
 
-#Invalid name specified
-#Nurodytas neteisingas pavadinimas
+msgid "Invalid name specified"
+msgstr "Nurodytas neteisingas pavadinimas"
 
-#Magnet Link
-#Magnetinė nuoroda
+msgid "Magnet Link"
+msgstr "Magnetinė nuoroda"
 
-#Manage connections
-#Tvarkyti prisijungimus
+msgid "Manage connections"
+msgstr "Tvarkyti prisijungimus"
 
-#Please enter a password to connect to %s
-#Kad prisijungtumėte prie %s, įrašykite slaptažodį
+msgid "Please enter a password to connect to %s"
+msgstr "Kad prisijungtumėte prie %s, įrašykite slaptažodį"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#Nurodykite, kaip %s prisijungti prie nutolusio taško, kuriame veikia Transmission tarnyba
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "Nurodykite, kaip %s prisijungti prie nutolusio taško, kuriame veikia Transmission tarnyba"
 
-#RPC path
-#Kelias į /rpc
+msgid "RPC path"
+msgstr "Kelias į /rpc"
 
-#Save as
-#Išsaugoti, kaip
+msgid "Save as"
+msgstr "Išsaugoti, kaip"
 
-#Torrent not registered with this tracker
-#=Torentas šiame seklyje neregistruotas
+msgid "Torrent not registered with this tracker"
+msgstr "=Torentas šiame seklyje neregistruotas"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#Nepavyksta rasti kelių nuorodų.
-#Kelių nuorodas nustatykite programos nustatymuose (Keliai)
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "Nepavyksta rasti kelių nuorodų."
+"Kelių nuorodas nustatykite programos nustatymuose (Keliai)"
 
-#You need to restart the application to apply changes
-#Kad pasikeitimai įsigaliotų, programą reikia paleisti iš naujo
+msgid "You need to restart the application to apply changes"
+msgstr "Kad pasikeitimai įsigaliotų, programą reikia paleisti iš naujo"
 

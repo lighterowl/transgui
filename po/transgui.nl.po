@@ -2191,379 +2191,379 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#Nederlands
+msgid "TranslationLanguage"
+msgstr "Nederlands"
 
-#&All
-#&Alles
+msgid "&All"
+msgstr "&Alles"
 
-#&Close
-#&Sluiten
+msgid "&Close"
+msgstr "&Sluiten"
 
-#&Ignore
-#&Negeren
+msgid "&Ignore"
+msgstr "&Negeren"
 
-#&No
-#&Nee
+msgid "&No"
+msgstr "&Nee"
 
-#&OK
-#&OK
+msgid "&OK"
+msgstr "&OK"
 
-#&Open
-#&Open
+msgid "&Open"
+msgstr "&Open"
 
-#&Retry
-#&Opnieuw proberen
+msgid "&Retry"
+msgstr "&Opnieuw proberen"
 
-#&Save
-#&Opslaan
+msgid "&Save"
+msgstr "&Opslaan"
 
-#&Unlock
-#&Ontgrendel
+msgid "&Unlock"
+msgstr "&Ontgrendel"
 
-#&Yes
-#&Ja
+msgid "&Yes"
+msgstr "&Ja"
 
-#Abort
-#Afbreken
+msgid "Abort"
+msgstr "Afbreken"
 
-#&Add torrent
-#&Torrent toevoegen
+msgid "&Add torrent"
+msgstr "&Torrent toevoegen"
 
-#Authentication
-#Authenticatie
+msgid "Authentication"
+msgstr "Authenticatie"
 
-#Comment
-#Opmerking
+msgid "Comment"
+msgstr "Opmerking"
 
-#Confirmation
-#Bevestiging
+msgid "Confirmation"
+msgstr "Bevestiging"
 
-#Connecting to daemon
-#Verbinden met server
+msgid "Connecting to daemon"
+msgstr "Verbinden met server"
 
-#Connection error occurred
-#Verbindingsfout opgetreden
+msgid "Connection error occurred"
+msgstr "Verbindingsfout opgetreden"
 
-#Created on
-#Gemaakt op
+msgid "Created on"
+msgstr "Gemaakt op"
 
-#Destination folder
-#Doelmap
+msgid "Destination folder"
+msgstr "Doelmap"
 
-#Donate to support further development
-#Doneer om verdere ontwikkeling te ondersteunen
+msgid "Donate to support further development"
+msgstr "Doneer om verdere ontwikkeling te ondersteunen"
 
-#Donate via PayPal,WebMoney,Credit card
-#Doneer via PayPal, WebMoney, Credit card
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "Doneer via PayPal, WebMoney, Credit card"
 
-#Down limit
-#Down limiet
+msgid "Down limit"
+msgstr "Down limiet"
 
-#Download speed
-#Download snelheid
+msgid "Download speed"
+msgstr "Download snelheid"
 
-#Encryption
-#Encryptie
+msgid "Encryption"
+msgstr "Encryptie"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#Vlagafbeeldingen zijn nodig om de vlaggen van landen te tonen.
-#Wil je deze nu downloaden?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "Vlagafbeeldingen zijn nodig om de vlaggen van landen te tonen."
+"Wil je deze nu downloaden?"
 
-#Global peer limit
-#Algemene peer limiet
+msgid "Global peer limit"
+msgstr "Algemene peer limiet"
 
-#Hash
-#Hash
+msgid "Hash"
+msgstr "Hash"
 
-#Incoming port is closed. Check your firewall settings
-#Inkomende poort is gesloten. Controleer jouw firewall instellingen
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "Inkomende poort is gesloten. Controleer jouw firewall instellingen"
 
-#Incoming port tested successfully
-#Inkomende poort succesvol getest
+msgid "Incoming port tested successfully"
+msgstr "Inkomende poort succesvol getest"
 
-#Incoming port
-#Inkomende poort
+msgid "Incoming port"
+msgstr "Inkomende poort"
 
-#Information
-#Informatie
+msgid "Information"
+msgstr "Informatie"
 
-#Language
-#Taal
+msgid "Language"
+msgstr "Taal"
 
-#Max peers
-#Max peers
+msgid "Max peers"
+msgstr "Max peers"
 
-#No host name specified
-#Geen hostnaam opgegeven
+msgid "No host name specified"
+msgstr "Geen hostnaam opgegeven"
 
-#No proxy server specified
-#Geen proxyserver opgegeven
+msgid "No proxy server specified"
+msgstr "Geen proxyserver opgegeven"
 
-#No to all
-#Nee op alles
+msgid "No to all"
+msgstr "Nee op alles"
 
-#Password
-#Wachtwoord
+msgid "Password"
+msgstr "Wachtwoord"
 
-#Peer limit
-#Peer limiet
+msgid "Peer limit"
+msgstr "Peer limiet"
 
-#Pieces
-#Stukken
+msgid "Pieces"
+msgstr "Stukken"
 
-#Properties
-#Eigenschappen
+msgid "Properties"
+msgstr "Eigenschappen"
 
-#Proxy password
-#Proxy wachtwoord
+msgid "Proxy password"
+msgstr "Proxy wachtwoord"
 
-#Proxy port
-#Proxy poort
+msgid "Proxy port"
+msgstr "Proxy poort"
 
-#Proxy server
-#Proxy server
+msgid "Proxy server"
+msgstr "Proxy server"
 
-#Proxy user name
-#Proxy gebruikersnaam
+msgid "Proxy user name"
+msgstr "Proxy gebruikersnaam"
 
-#Reconnect in %d seconds
-#Opnieuw verbinden in %d seconden
+msgid "Reconnect in %d seconds"
+msgstr "Opnieuw verbinden in %d seconden"
 
-#Remaining
-#Resterend
+msgid "Remaining"
+msgstr "Resterend"
 
-#Remote host
-#Externe host
+msgid "Remote host"
+msgstr "Externe host"
 
-#Seed ratio
-#Seed ratio
+msgid "Seed ratio"
+msgstr "Seed ratio"
 
-#Setup columns
-#Kolommen instellen
+msgid "Setup columns"
+msgstr "Kolommen instellen"
 
-#Share ratio
-#Share ratio
+msgid "Share ratio"
+msgstr "Share ratio"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Torrents (*.torrent)|*.torrent|Alle bestanden (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Torrents (*.torrent)|*.torrent|Alle bestanden (*.*)|*.*"
 
-#Total size
-#Totale grootte
+msgid "Total size"
+msgstr "Totale grootte"
 
-#Tracker update on
-#Tracker update aan
+msgid "Tracker update on"
+msgstr "Tracker update aan"
 
-#Unable to extract flag image
-#Kan vlagafbeelding niet uitpakken
+msgid "Unable to extract flag image"
+msgstr "Kan vlagafbeelding niet uitpakken"
 
-#Up limit
-#Up limiet
+msgid "Up limit"
+msgstr "Up limiet"
 
-#Update complete
-#Bijwerken voltooid
+msgid "Update complete"
+msgstr "Bijwerken voltooid"
 
-#Upload speed
-#Upload snelheid
+msgid "Upload speed"
+msgstr "Upload snelheid"
 
-#User name
-#Gebruikersnaam
+msgid "User name"
+msgstr "Gebruikersnaam"
 
-#Warning
-#Waarschuwing
+msgid "Warning"
+msgstr "Waarschuwing"
 
-#Wasted
-#Verloren
+msgid "Wasted"
+msgstr "Verloren"
 
-#Yes to &All
-#Ja op &Alles
+msgid "Yes to &All"
+msgstr "Ja op &Alles"
 
-#Directory for incomplete files
-#Locatie voor onvolledige bestanden
+msgid "Directory for incomplete files"
+msgstr "Locatie voor onvolledige bestanden"
 
-#Enable blocklist
-#Blokkeerlijst inschakelen
+msgid "Enable blocklist"
+msgstr "Blokkeerlijst inschakelen"
 
-#New location for torrent data
-#Nieuwe locatie voor torrent data
+msgid "New location for torrent data"
+msgstr "Nieuwe locatie voor torrent data"
 
-#No link was specified
-#Geen link gespecificeerd
+msgid "No link was specified"
+msgstr "Geen link gespecificeerd"
 
-#No torrent location was specified
-#Geen torrent locatie gespecificeerd
+msgid "No torrent location was specified"
+msgstr "Geen torrent locatie gespecificeerd"
 
-#Set data location
-#Stel data locatie in
+msgid "Set data location"
+msgstr "Stel data locatie in"
 
-#The block list has been updated successfully.~The list entries count: %d
-#De blokkeerlijst is succesvol geüpdatet.
-#De lijst bevat %d vermeldingen
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "De blokkeerlijst is succesvol geüpdatet."
+"De lijst bevat %d vermeldingen"
 
-#The directory for incomplete files was not specified
-#De locatie voor onvolledige bestanden was niet gespecificeerd
+msgid "The directory for incomplete files was not specified"
+msgstr "De locatie voor onvolledige bestanden was niet gespecificeerd"
 
-#The downloads directory was not specified
-#De downloadlocatie was niet gespecificeerd
+msgid "The downloads directory was not specified"
+msgstr "De downloadlocatie was niet gespecificeerd"
 
-#Unable to execute "%s"
-#Kan "%s" niet uitvoeren
+msgid "Unable to execute "%s""
+msgstr "Kan "%s" niet uitvoeren"
 
-#URL of a .torrent file or a magnet link
-#URL van een .torrent bestand of een magnet link
+msgid "URL of a .torrent file or a magnet link"
+msgstr "URL van een .torrent bestand of een magnet link"
 
-#Days
-#Dagen
+msgid "Days"
+msgstr "Dagen"
 
-#Disk cache size
-#Schijf cache grootte
+msgid "Disk cache size"
+msgstr "Schijf cache grootte"
 
-#Download speeds (KB/s)
-#Download snelheid (KB/s)
+msgid "Download speeds (KB/s)"
+msgstr "Download snelheid (KB/s)"
 
-#Edit tracker
-#Bewerk tracker
+msgid "Edit tracker"
+msgstr "Bewerk tracker"
 
-#Free disk space
-#Beschikbare schijfruimte
+msgid "Free disk space"
+msgstr "Beschikbare schijfruimte"
 
-#From
-#Van
+msgid "From"
+msgstr "Van"
 
-#New connection
-#Nieuwe verbinding
+msgid "New connection"
+msgstr "Nieuwe verbinding"
 
-#No tracker URL was specified
-#Geen tracker URL gespecificeerd
+msgid "No tracker URL was specified"
+msgstr "Geen tracker URL gespecificeerd"
 
-#Stop seeding when inactive for
-#Stop met seeden wanneer inactief gedurende
+msgid "Stop seeding when inactive for"
+msgstr "Stop met seeden wanneer inactief gedurende"
 
-#The invalid time value was entered
-#De verkeerde tijdwaarde ingevoerd
+msgid "The invalid time value was entered"
+msgstr "De verkeerde tijdwaarde ingevoerd"
 
-#to
-#naar
+msgid "to"
+msgstr "naar"
 
-#Tracker announce URL
-#Tracker announce URL
+msgid "Tracker announce URL"
+msgstr "Tracker announce URL"
 
-#Upload speeds (KB/s)
-#Upload snelheden (KB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "Upload snelheden (KB/s)"
 
-#Browse
-#Bladeren
+msgid "Browse"
+msgstr "Bladeren"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#Een nieuwe versie van %s is beschikbaar.
-#Uw huidige versie: %s
-#De nieuwe versie: %s
-#Wenst u de Downloads webpagina te openen?
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "Een nieuwe versie van %s is beschikbaar."
+"Uw huidige versie: %s"
+"De nieuwe versie: %s"
+"Wenst u de Downloads webpagina te openen?"
 
-#Check for new version every
-#Controleer op nieuwe versie iedere
+msgid "Check for new version every"
+msgstr "Controleer op nieuwe versie iedere"
 
-#Consider active torrents as stalled when idle for
-#Beschouw actieve torrents als vastgelopen wanneer inactief gedurende
+msgid "Consider active torrents as stalled when idle for"
+msgstr "Beschouw actieve torrents als vastgelopen wanneer inactief gedurende"
 
-#Donate!
-#Doneer!
+msgid "Donate!"
+msgstr "Doneer!"
 
-#Download queue size
-#Download wachtrij grootte
+msgid "Download queue size"
+msgstr "Download wachtrij grootte"
 
-#Error checking for new version
-#Fout bij controleren op nieuwe versie
+msgid "Error checking for new version"
+msgstr "Fout bij controleren op nieuwe versie"
 
-#Modify trackers
-#Trackers aanpassen
+msgid "Modify trackers"
+msgstr "Trackers aanpassen"
 
-#No updates have been found.~You are running the latest version of %s
-#Geen updates gevonden.
-#U gebruikt de recentste versie van %s
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "Geen updates gevonden."
+"U gebruikt de recentste versie van %s"
 
-#Upload queue size
-#Upload wachtrij grootte
+msgid "Upload queue size"
+msgstr "Upload wachtrij grootte"
 
-#Global statistics
-#Algemene statistieken
+msgid "Global statistics"
+msgstr "Algemene statistieken"
 
-#Connection name
-#Verbindingsnaam
+msgid "Connection name"
+msgstr "Verbindingsnaam"
 
-#Could not connect to tracker
-#Kon niet verbinden met tracker
+msgid "Could not connect to tracker"
+msgstr "Kon niet verbinden met tracker"
 
-#Data refresh interval when minimized
-#Verversingsinterval data wanneer geminimaliseerd
+msgid "Data refresh interval when minimized"
+msgstr "Verversingsinterval data wanneer geminimaliseerd"
 
-#Data refresh interval
-#Verversingsinterval data
+msgid "Data refresh interval"
+msgstr "Verversingsinterval data"
 
-#Default download folder on remote host
-#Standaard download folder op externe host
+msgid "Default download folder on remote host"
+msgstr "Standaard download folder op externe host"
 
-#Downloading torrent file
-#Downloaden torrent bestand
+msgid "Downloading torrent file"
+msgstr "Downloaden torrent bestand"
 
-#Font size
-#Tekengrootte
+msgid "Font size"
+msgstr "Tekengrootte"
 
-#Invalid name specified
-#Ongeldige naam gespecificeerd
+msgid "Invalid name specified"
+msgstr "Ongeldige naam gespecificeerd"
 
-#Manage connections
-#Beheer verbindingen
+msgid "Manage connections"
+msgstr "Beheer verbindingen"
 
-#Please enter a password to connect to %s
-#Gelieve een wachtwoord in te voeren om te verbinden met %s
+msgid "Please enter a password to connect to %s"
+msgstr "Gelieve een wachtwoord in te voeren om te verbinden met %s"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#Gelieve op te geven hoe %s zal verbinden met een Transmission server
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "Gelieve op te geven hoe %s zal verbinden met een Transmission server"
 
-#RPC path
-#RPC pad
+msgid "RPC path"
+msgstr "RPC pad"
 
-#Save as
-#Opslaan als
+msgid "Save as"
+msgstr "Opslaan als"
 
-#Torrent not registered with this tracker
-#Torrent niet geregistreerd bij deze tracker
+msgid "Torrent not registered with this tracker"
+msgstr "Torrent niet geregistreerd bij deze tracker"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#Kan pad mapping niet vinden.
-#Stel de pad mappings in via de opties.
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "Kan pad mapping niet vinden."
+"Stel de pad mappings in via de opties."
 
-#You need to restart the application to apply changes
-#U moet de toepassing herstarten om wijzigingen door te voeren
+msgid "You need to restart the application to apply changes"
+msgstr "U moet de toepassing herstarten om wijzigingen door te voeren"
 
-#Magnet Link
-#Magnet Koppeling
+msgid "Magnet Link"
+msgstr "Magnet Koppeling"
 
-#Export settings
-#Exporteer instellingen
+msgid "Export settings"
+msgstr "Exporteer instellingen"
 
-#Import settings
-#Importeer instellingen
+msgid "Import settings"
+msgstr "Importeer instellingen"
 
-#Template:
-#Sjabloon:
+msgid "Template:"
+msgstr "Sjabloon:"
 
-#Connection refused
-#Verbinding geweigerd
+msgid "Connection refused"
+msgstr "Verbinding geweigerd"
 
-#Access violation
-#Toegangsschending
+msgid "Access violation"
+msgstr "Toegangsschending"
 
-#Connection timed out
-#Verbinding time-out
+msgid "Connection timed out"
+msgstr "Verbinding time-out"
 
-#Other Winsock error
-#Andere Winsock fout
+msgid "Other Winsock error"
+msgstr "Andere Winsock fout"
 
-#Host not found
-#Host niet gevonden
+msgid "Host not found"
+msgstr "Host niet gevonden"
 
-#Unauthorized User
-#Onbevoegde Gebruiker
+msgid "Unauthorized User"
+msgstr "Onbevoegde Gebruiker"
 

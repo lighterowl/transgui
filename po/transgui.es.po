@@ -2191,376 +2191,376 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#Español
+msgid "TranslationLanguage"
+msgstr "Español"
 
-#&All
-#&Todos
+msgid "&All"
+msgstr "&Todos"
 
-#&Close
-#&Cerrar
+msgid "&Close"
+msgstr "&Cerrar"
 
-#&Ignore
-#&Ignorar
+msgid "&Ignore"
+msgstr "&Ignorar"
 
-#&No
-#&No
+msgid "&No"
+msgstr "&No"
 
-#&OK
-#&Aceptar
+msgid "&OK"
+msgstr "&Aceptar"
 
-#&Open
-#&Abrir
+msgid "&Open"
+msgstr "&Abrir"
 
-#&Retry
-#&Reintentar
+msgid "&Retry"
+msgstr "&Reintentar"
 
-#&Save
-#&Salvar
+msgid "&Save"
+msgstr "&Salvar"
 
-#&Unlock
-#&Desbloquear
+msgid "&Unlock"
+msgstr "&Desbloquear"
 
-#&Yes
-#&Sí
+msgid "&Yes"
+msgstr "&Sí"
 
-#Abort
-#Cancelar
+msgid "Abort"
+msgstr "Cancelar"
 
-#&Add torrent
-#Añadir torrent
+msgid "&Add torrent"
+msgstr "Añadir torrent"
 
-#Authentication
-#Authenticación
+msgid "Authentication"
+msgstr "Authenticación"
 
-#Comment
-#Comentario
+msgid "Comment"
+msgstr "Comentario"
 
-#Confirmation
-#Confirmación
+msgid "Confirmation"
+msgstr "Confirmación"
 
-#Connecting to daemon
-#Connectando con el demonio
+msgid "Connecting to daemon"
+msgstr "Connectando con el demonio"
 
-#Connection error occurred
-#Ocurrió un error al conectar
+msgid "Connection error occurred"
+msgstr "Ocurrió un error al conectar"
 
-#Created on
-#Creado el
+msgid "Created on"
+msgstr "Creado el"
 
-#Destination folder
-#Carpeta destino
+msgid "Destination folder"
+msgstr "Carpeta destino"
 
-#Donate to support further development
-#Dona para soportar el futuro desarrollo
+msgid "Donate to support further development"
+msgstr "Dona para soportar el futuro desarrollo"
 
-#Donate via PayPal,WebMoney,Credit card
-#Donar via PayPal,WebMoney,Credit card
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "Donar via PayPal,WebMoney,Credit card"
 
-#Down limit
-#Límite de descarga
+msgid "Down limit"
+msgstr "Límite de descarga"
 
-#Download speed
-#Velocidad de descarga
+msgid "Download speed"
+msgstr "Velocidad de descarga"
 
-#Encryption
-#Cifrado
+msgid "Encryption"
+msgstr "Cifrado"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#Es necesario el archivo de imágenes banderas para mostrar banderas de países.
-#¿Descargar este archivo ahora?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "Es necesario el archivo de imágenes banderas para mostrar banderas de países."
+"¿Descargar este archivo ahora?"
 
-#Global peer limit
-#Límite global de pares
+msgid "Global peer limit"
+msgstr "Límite global de pares"
 
-#Hash
-#Hash
+msgid "Hash"
+msgstr "Hash"
 
-#Incoming port is closed. Check your firewall settings
-#El puerto entrante está cerrado. Comprueba la configuración de tu firewall
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "El puerto entrante está cerrado. Comprueba la configuración de tu firewall"
 
-#Incoming port tested successfully
-#Comprobado el puerto de entrada con éxito
+msgid "Incoming port tested successfully"
+msgstr "Comprobado el puerto de entrada con éxito"
 
-#Incoming port
-#Puerto de entrada
+msgid "Incoming port"
+msgstr "Puerto de entrada"
 
-#Information
-#Informacion
+msgid "Information"
+msgstr "Informacion"
 
-#Language
-#Idioma
+msgid "Language"
+msgstr "Idioma"
 
-#Max peers
-#Pares máximos
+msgid "Max peers"
+msgstr "Pares máximos"
 
-#No host name specified
-#No se especificó nombre del host
+msgid "No host name specified"
+msgstr "No se especificó nombre del host"
 
-#No proxy server specified
-#No se especificó servidor proxy
+msgid "No proxy server specified"
+msgstr "No se especificó servidor proxy"
 
-#No to all
-#No a todo
+msgid "No to all"
+msgstr "No a todo"
 
-#Password
-#Contraseña
+msgid "Password"
+msgstr "Contraseña"
 
-#Peer limit
-#Límite de pares
+msgid "Peer limit"
+msgstr "Límite de pares"
 
-#Pieces
-#Partes
+msgid "Pieces"
+msgstr "Partes"
 
-#Properties
-#Propiedades
+msgid "Properties"
+msgstr "Propiedades"
 
-#Proxy password
-#Contraseña del proxy
+msgid "Proxy password"
+msgstr "Contraseña del proxy"
 
-#Proxy port
-#Puerto del proxy
+msgid "Proxy port"
+msgstr "Puerto del proxy"
 
-#Proxy server
-#Servidor proxy
+msgid "Proxy server"
+msgstr "Servidor proxy"
 
-#Proxy user name
-#Usuario del proxy
+msgid "Proxy user name"
+msgstr "Usuario del proxy"
 
-#Reconnect in %d seconds
-#Reconectar en %d segundos
+msgid "Reconnect in %d seconds"
+msgstr "Reconectar en %d segundos"
 
-#Remaining
-#Renombrado
+msgid "Remaining"
+msgstr "Renombrado"
 
-#Remote host
-#Host remoto
+msgid "Remote host"
+msgstr "Host remoto"
 
-#Seed ratio
-#Ratio de siembra
+msgid "Seed ratio"
+msgstr "Ratio de siembra"
 
-#Setup columns
-#Configurar columnas
+msgid "Setup columns"
+msgstr "Configurar columnas"
 
-#Share ratio
-#Ratio de compartición
+msgid "Share ratio"
+msgstr "Ratio de compartición"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Torrents (*.torrent)|*.torrent|Todos los archivos (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Torrents (*.torrent)|*.torrent|Todos los archivos (*.*)|*.*"
 
-#Total size
-#Tamaño total
+msgid "Total size"
+msgstr "Tamaño total"
 
-#Tracker update on
-#Tracker actualizado
+msgid "Tracker update on"
+msgstr "Tracker actualizado"
 
-#Unable to extract flag image
-#No se pudo extraer imagen de bandera
+msgid "Unable to extract flag image"
+msgstr "No se pudo extraer imagen de bandera"
 
-#Up limit
-#Límite de subida
+msgid "Up limit"
+msgstr "Límite de subida"
 
-#Update complete
-#Actualización completa
+msgid "Update complete"
+msgstr "Actualización completa"
 
-#Upload speed
-#Velocidad de subida
+msgid "Upload speed"
+msgstr "Velocidad de subida"
 
-#User name
-#Nombre de usuario
+msgid "User name"
+msgstr "Nombre de usuario"
 
-#Warning
-#Aviso
+msgid "Warning"
+msgstr "Aviso"
 
-#Wasted
-#Desperdiciado
+msgid "Wasted"
+msgstr "Desperdiciado"
 
-#Yes to &All
-#Sí a &Todo
+msgid "Yes to &All"
+msgstr "Sí a &Todo"
 
-#Directory for incomplete files
-#Directorio para los archivos incompletos
+msgid "Directory for incomplete files"
+msgstr "Directorio para los archivos incompletos"
 
-#Enable blocklist
-#Activar lista negra
+msgid "Enable blocklist"
+msgstr "Activar lista negra"
 
-#New location for torrent data
-#Nueva ruta para los datos del torrent
+msgid "New location for torrent data"
+msgstr "Nueva ruta para los datos del torrent"
 
-#No link was specified
-#No se especificó ningún enlace
+msgid "No link was specified"
+msgstr "No se especificó ningún enlace"
 
-#No torrent location was specified
-#No se especificó ninguna ruta de torrent
+msgid "No torrent location was specified"
+msgstr "No se especificó ninguna ruta de torrent"
 
-#Set data location
-#Definir ruta para los datos
+msgid "Set data location"
+msgstr "Definir ruta para los datos"
 
-#The block list has been updated successfully.~The list entries count: %d
-#La lista negra se ha actualizado correctamente.
-#Entradas en la lista: %d
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "La lista negra se ha actualizado correctamente."
+"Entradas en la lista: %d"
 
-#The directory for incomplete files was not specified
-#No se especificó directorio para los archivos incompletos
+msgid "The directory for incomplete files was not specified"
+msgstr "No se especificó directorio para los archivos incompletos"
 
-#The downloads directory was not specified
-#No se especificó directorio para las descargas
+msgid "The downloads directory was not specified"
+msgstr "No se especificó directorio para las descargas"
 
-#Unable to execute "%s"
-#No se pudo ejecutar "%s"
+msgid "Unable to execute "%s""
+msgstr "No se pudo ejecutar "%s""
 
-#URL of a .torrent file or a magnet link
-#URL de archivo .torrent o enlace magnético
+msgid "URL of a .torrent file or a magnet link"
+msgstr "URL de archivo .torrent o enlace magnético"
 
-#Days
-#Días
+msgid "Days"
+msgstr "Días"
 
-#Disk cache size
-#Tamaño de caché de disco
+msgid "Disk cache size"
+msgstr "Tamaño de caché de disco"
 
-#Download speeds (KB/s)
-#Velocidad de descarga (KB/s)
+msgid "Download speeds (KB/s)"
+msgstr "Velocidad de descarga (KB/s)"
 
-#Edit tracker
-#Editar tracker
+msgid "Edit tracker"
+msgstr "Editar tracker"
 
-#Free disk space
-#Espacio libre en disco
+msgid "Free disk space"
+msgstr "Espacio libre en disco"
 
-#From
-#Desde
+msgid "From"
+msgstr "Desde"
 
-#New connection
-#Nueva conexión
+msgid "New connection"
+msgstr "Nueva conexión"
 
-#No tracker URL was specified
-#No se especificó URL de tracker
+msgid "No tracker URL was specified"
+msgstr "No se especificó URL de tracker"
 
-#Stop seeding when inactive for
-#Dejar de compartir cuando esté inactivo durante
+msgid "Stop seeding when inactive for"
+msgstr "Dejar de compartir cuando esté inactivo durante"
 
-#The invalid time value was entered
-#El valor de tiempo introducido no es válido
+msgid "The invalid time value was entered"
+msgstr "El valor de tiempo introducido no es válido"
 
-#to
-#a
+msgid "to"
+msgstr "a"
 
-#Tracker announce URL
-#URL de anuncio del tracker
+msgid "Tracker announce URL"
+msgstr "URL de anuncio del tracker"
 
-#Upload speeds (KB/s)
-#Velocidad de subida (KB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "Velocidad de subida (KB/s)"
 
-#Browse
-#Explorar
+msgid "Browse"
+msgstr "Explorar"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#Una nueva versión de %s está disponible.
-#La versión actual es: %s
-#La nueva versión es: %s
-#¿Desea abrir la web de descarga?
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "Una nueva versión de %s está disponible."
+"La versión actual es: %s"
+"La nueva versión es: %s"
+"¿Desea abrir la web de descarga?"
 
-#Check for new version every
-#Comprobar nuevas versiones cada
+msgid "Check for new version every"
+msgstr "Comprobar nuevas versiones cada"
 
-#Consider active torrents as stalled when idle for
-#Considerar torrents activos como detenido cuando esté inactivo durante
+msgid "Consider active torrents as stalled when idle for"
+msgstr "Considerar torrents activos como detenido cuando esté inactivo durante"
 
-#Donate!
-#¡Donar!
+msgid "Donate!"
+msgstr "¡Donar!"
 
-#Download queue size
-#Tamaño de la cola de descargas
+msgid "Download queue size"
+msgstr "Tamaño de la cola de descargas"
 
-#Error checking for new version
-#Error buscando nuevas versiones
+msgid "Error checking for new version"
+msgstr "Error buscando nuevas versiones"
 
-#Modify trackers
-#Modificar trackers
+msgid "Modify trackers"
+msgstr "Modificar trackers"
 
-#No updates have been found.~You are running the latest version of %s
-#No se han encontrado actualizaciones.
-#Está usanto la última versión de %s
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "No se han encontrado actualizaciones."
+"Está usanto la última versión de %s"
 
-#Upload queue size
-#Tamaño de la cola de subida
+msgid "Upload queue size"
+msgstr "Tamaño de la cola de subida"
 
-#Global statistics
-#Estadisticas globales
+msgid "Global statistics"
+msgstr "Estadisticas globales"
 
-#Connection name
-#Nombre de la conexión
+msgid "Connection name"
+msgstr "Nombre de la conexión"
 
-#Could not connect to tracker
-#=No se pudo conectar al tracker
+msgid "Could not connect to tracker"
+msgstr "=No se pudo conectar al tracker"
 
-#Data refresh interval when minimized
-#Intervalo de actualización de datos al minimizar
+msgid "Data refresh interval when minimized"
+msgstr "Intervalo de actualización de datos al minimizar"
 
-#Data refresh interval
-#Intervalo de actualización de datos
+msgid "Data refresh interval"
+msgstr "Intervalo de actualización de datos"
 
-#Default download folder on remote host
-#Carpeta de descarga por defecto en el host remoto
+msgid "Default download folder on remote host"
+msgstr "Carpeta de descarga por defecto en el host remoto"
 
-#Downloading torrent file
-#Descargando archivo torrent
+msgid "Downloading torrent file"
+msgstr "Descargando archivo torrent"
 
-#Font size
-#Tamaño de la fuente
+msgid "Font size"
+msgstr "Tamaño de la fuente"
 
-#Invalid name specified
-#Nombre especificado inválido
+msgid "Invalid name specified"
+msgstr "Nombre especificado inválido"
 
-#Manage connections
-#Administrar conexiones
+msgid "Manage connections"
+msgstr "Administrar conexiones"
 
-#Please enter a password to connect to %s
-#Por favor, intrduzca una contraseña para conectar a %s
+msgid "Please enter a password to connect to %s"
+msgstr "Por favor, intrduzca una contraseña para conectar a %s"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#Por favor, especifique cómo se conectará %s al host remoto que ejecuta el demonio de Transmission
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "Por favor, especifique cómo se conectará %s al host remoto que ejecuta el demonio de Transmission"
 
-#RPC path
-#Ruta RPC
+msgid "RPC path"
+msgstr "Ruta RPC"
 
-#Save as
-#Guardar como
+msgid "Save as"
+msgstr "Guardar como"
 
-#Torrent not registered with this tracker
-#=Torrent no registrado en este tracker
+msgid "Torrent not registered with this tracker"
+msgstr "=Torrent no registrado en este tracker"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#No se ha podido encontrar la ruta.
-#Utilice las opciones de la aplicación para asignar la ruta
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "No se ha podido encontrar la ruta."
+"Utilice las opciones de la aplicación para asignar la ruta"
 
-#You need to restart the application to apply changes
-#Es necesario reiniciar la aplicación para aplicar los cambios
+msgid "You need to restart the application to apply changes"
+msgstr "Es necesario reiniciar la aplicación para aplicar los cambios"
 
-#Magnet Link
-#Enlace Magnet
+msgid "Magnet Link"
+msgstr "Enlace Magnet"
 
-#Export settings
-#Exportar Configuración
+msgid "Export settings"
+msgstr "Exportar Configuración"
 
-#Import settings
-#Importar Configuración
+msgid "Import settings"
+msgstr "Importar Configuración"
 
-#Template:
-#Plantilla:
+msgid "Template:"
+msgstr "Plantilla:"
 
-#Connection refused
-#Conexión rechazada
+msgid "Connection refused"
+msgstr "Conexión rechazada"
 
-#Access violation
-#Violación de acceso
+msgid "Access violation"
+msgstr "Violación de acceso"
 
-#Connection timed out
-#Conexión caducada
+msgid "Connection timed out"
+msgstr "Conexión caducada"
 
-#Other Winsock error
-#Otro error de Winsock
+msgid "Other Winsock error"
+msgstr "Otro error de Winsock"
 
-#Host not found
-#Host no encontrado
+msgid "Host not found"
+msgstr "Host no encontrado"
 

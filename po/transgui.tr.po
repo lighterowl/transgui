@@ -2191,355 +2191,355 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#Turkish
+msgid "TranslationLanguage"
+msgstr "Turkish"
 
-#&All
-#&Tümü
+msgid "&All"
+msgstr "&Tümü"
 
-#&Close
-#&Kapat
+msgid "&Close"
+msgstr "&Kapat"
 
-#&Ignore
-#&Yoksay
+msgid "&Ignore"
+msgstr "&Yoksay"
 
-#&No
-#&Hayır
+msgid "&No"
+msgstr "&Hayır"
 
-#&OK
-#&Tamam
+msgid "&OK"
+msgstr "&Tamam"
 
-#&Open
-#&Aç
+msgid "&Open"
+msgstr "&Aç"
 
-#&Retry
-#&Tekrar
+msgid "&Retry"
+msgstr "&Tekrar"
 
-#&Save
-#&Kaydet
+msgid "&Save"
+msgstr "&Kaydet"
 
-#&Unlock
-#&Kilit aç
+msgid "&Unlock"
+msgstr "&Kilit aç"
 
-#&Yes
-#&Evet
+msgid "&Yes"
+msgstr "&Evet"
 
-#Abort
-#İptal
+msgid "Abort"
+msgstr "İptal"
 
-#&Add torrent
-#Torrent ekle
+msgid "&Add torrent"
+msgstr "Torrent ekle"
 
-#Authentication
-#Kimlik doğrulama
+msgid "Authentication"
+msgstr "Kimlik doğrulama"
 
-#Comment
-#Yorum
+msgid "Comment"
+msgstr "Yorum"
 
-#Confirmation
-#Onay
+msgid "Confirmation"
+msgstr "Onay"
 
-#Connecting to daemon
-#Sunucuya bağlanılıyor
+msgid "Connecting to daemon"
+msgstr "Sunucuya bağlanılıyor"
 
-#Connection error occurred
-#Bağlantı problemi oluştu
+msgid "Connection error occurred"
+msgstr "Bağlantı problemi oluştu"
 
-#Created on
-#Oluşturulduğu tarih
+msgid "Created on"
+msgstr "Oluşturulduğu tarih"
 
-#Destination folder
-#Hedef klasör
+msgid "Destination folder"
+msgstr "Hedef klasör"
 
-#Donate to support further development
-#Gelecekte ki geliştirmeler için bağışta bulunun
+msgid "Donate to support further development"
+msgstr "Gelecekte ki geliştirmeler için bağışta bulunun"
 
-#Donate via PayPal,WebMoney,Credit card
-#PayPal,WebMoney,Kredi kartı ile bağışta bulunun
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "PayPal,WebMoney,Kredi kartı ile bağışta bulunun"
 
-#Down limit
-#İndirme limiti
+msgid "Down limit"
+msgstr "İndirme limiti"
 
-#Download speed
-#İndirme hızı
+msgid "Download speed"
+msgstr "İndirme hızı"
 
-#Encryption
-#Şifreleme
+msgid "Encryption"
+msgstr "Şifreleme"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#Ülke bayrak paketi, ülke bayraklarının gösterilmesi için gereklidir.
-#Paketi indirilsin mi?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "Ülke bayrak paketi, ülke bayraklarının gösterilmesi için gereklidir."
+"Paketi indirilsin mi?"
 
-#Global peer limit
-#Genel eş limiti
+msgid "Global peer limit"
+msgstr "Genel eş limiti"
 
-#Hash
-#Hash
+msgid "Hash"
+msgstr "Hash"
 
-#Incoming port is closed. Check your firewall settings
-#Geliş portu kapalı. Firewall ayarlarını kontrol edin
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "Geliş portu kapalı. Firewall ayarlarını kontrol edin"
 
-#Incoming port tested successfully
-#Geliş portu testi başarıyla tamamlandı
+msgid "Incoming port tested successfully"
+msgstr "Geliş portu testi başarıyla tamamlandı"
 
-#Incoming port
-#Geliş portu
+msgid "Incoming port"
+msgstr "Geliş portu"
 
-#Information
-#Bilgi
+msgid "Information"
+msgstr "Bilgi"
 
-#Language
-#Dil
+msgid "Language"
+msgstr "Dil"
 
-#Max peers
-#Azami eş sayısı
+msgid "Max peers"
+msgstr "Azami eş sayısı"
 
-#No host name specified
-#Sunucu ismi tanımlanmamış
+msgid "No host name specified"
+msgstr "Sunucu ismi tanımlanmamış"
 
-#No proxy server specified
-#Proxy sunucu tanımlanmamış
+msgid "No proxy server specified"
+msgstr "Proxy sunucu tanımlanmamış"
 
-#No to all
-#Hepsine hayır
+msgid "No to all"
+msgstr "Hepsine hayır"
 
-#Password
-#Şifre
+msgid "Password"
+msgstr "Şifre"
 
-#Peer limit
-#Eş limiti
+msgid "Peer limit"
+msgstr "Eş limiti"
 
-#Pieces
-#Parçalar
+msgid "Pieces"
+msgstr "Parçalar"
 
-#Properties
-#Özellikler
+msgid "Properties"
+msgstr "Özellikler"
 
-#Proxy password
-#Proxy şifresi
+msgid "Proxy password"
+msgstr "Proxy şifresi"
 
-#Proxy port
-#Proxy portu
+msgid "Proxy port"
+msgstr "Proxy portu"
 
-#Proxy server
-#Proxy sunucusu
+msgid "Proxy server"
+msgstr "Proxy sunucusu"
 
-#Proxy user name
-#Proxy kullanıcı adı
+msgid "Proxy user name"
+msgstr "Proxy kullanıcı adı"
 
-#Reconnect in %d seconds
-#%d saniye içerisinde tekrar bağlan
+msgid "Reconnect in %d seconds"
+msgstr "%d saniye içerisinde tekrar bağlan"
 
-#Remaining
-#Kalan
+msgid "Remaining"
+msgstr "Kalan"
 
-#Remote host
-#Uzak sunucu
+msgid "Remote host"
+msgstr "Uzak sunucu"
 
-#Seed ratio
-#Kaynak kalma oranı
+msgid "Seed ratio"
+msgstr "Kaynak kalma oranı"
 
-#Setup columns
-#Sütunları ayarla
+msgid "Setup columns"
+msgstr "Sütunları ayarla"
 
-#Share ratio
-#Paylaşım oranı
+msgid "Share ratio"
+msgstr "Paylaşım oranı"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Torrentler (*.torrent)|*.torrent|Tüm dosyalar (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Torrentler (*.torrent)|*.torrent|Tüm dosyalar (*.*)|*.*"
 
-#Total size
-#Toplam boyut
+msgid "Total size"
+msgstr "Toplam boyut"
 
-#Tracker update on
-#İzleyici güncellemesi
+msgid "Tracker update on"
+msgstr "İzleyici güncellemesi"
 
-#Unable to extract flag image
-#Bayrak görüntüsü açılmıyor
+msgid "Unable to extract flag image"
+msgstr "Bayrak görüntüsü açılmıyor"
 
-#Up limit
-#Gönderme limiti
+msgid "Up limit"
+msgstr "Gönderme limiti"
 
-#Update complete
-#Güncelleme tamamlandı
+msgid "Update complete"
+msgstr "Güncelleme tamamlandı"
 
-#Upload speed
-#Gönderme hızı
+msgid "Upload speed"
+msgstr "Gönderme hızı"
 
-#User name
-#Kullanıcı adı
+msgid "User name"
+msgstr "Kullanıcı adı"
 
-#Warning
-#Uyarı
+msgid "Warning"
+msgstr "Uyarı"
 
-#Wasted
-#Boşa giden
+msgid "Wasted"
+msgstr "Boşa giden"
 
-#Yes to &All
-#&All evet de
+msgid "Yes to &All"
+msgstr "&All evet de"
 
-#Directory for incomplete files
-#Tamamlanmamış dosya klasörü
+msgid "Directory for incomplete files"
+msgstr "Tamamlanmamış dosya klasörü"
 
-#Enable blocklist
-#Engelleme listesini aktif et
+msgid "Enable blocklist"
+msgstr "Engelleme listesini aktif et"
 
-#New location for torrent data
-#Torrent dosyaları için yeni dizin
+msgid "New location for torrent data"
+msgstr "Torrent dosyaları için yeni dizin"
 
-#No link was specified
-#Hiçbir link tanımlanmamış
+msgid "No link was specified"
+msgstr "Hiçbir link tanımlanmamış"
 
-#No torrent location was specified
-#Hiçbir torrent dizini tanımlanmamış
+msgid "No torrent location was specified"
+msgstr "Hiçbir torrent dizini tanımlanmamış"
 
-#Set data location
-#Dosya dizinini ayarla
+msgid "Set data location"
+msgstr "Dosya dizinini ayarla"
 
-#The block list has been updated successfully.~The list entries count: %d
-#Engelleme listesi başarıyla güncellendi.
-#Engelleme listesinde ki içerik sayısı: %d
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "Engelleme listesi başarıyla güncellendi."
+"Engelleme listesinde ki içerik sayısı: %d"
 
-#The directory for incomplete files was not specified
-#Tamamlanmamış dosya klasörü tanımlanmamış
+msgid "The directory for incomplete files was not specified"
+msgstr "Tamamlanmamış dosya klasörü tanımlanmamış"
 
-#The downloads directory was not specified
-#İndirme klasörü tanımlanmamış
+msgid "The downloads directory was not specified"
+msgstr "İndirme klasörü tanımlanmamış"
 
-#Unable to execute "%s"
-#%s
+msgid "Unable to execute "%s""
+msgstr "%s"
 
-#URL of a .torrent file or a magnet link
-#.torrent dosyası adresi veya magnet bağlantısı
+msgid "URL of a .torrent file or a magnet link"
+msgstr ".torrent dosyası adresi veya magnet bağlantısı"
 
-#Days
-#Günler
+msgid "Days"
+msgstr "Günler"
 
-#Disk cache size
-#Disk önbellek boyutu
+msgid "Disk cache size"
+msgstr "Disk önbellek boyutu"
 
-#Download speeds (KB/s)
-#İndirme hızı (KB/s)
+msgid "Download speeds (KB/s)"
+msgstr "İndirme hızı (KB/s)"
 
-#Edit tracker
-#İzleyiciyi düzenle
+msgid "Edit tracker"
+msgstr "İzleyiciyi düzenle"
 
-#Free disk space
-#Boş disk alanı
+msgid "Free disk space"
+msgstr "Boş disk alanı"
 
-#From
-#Kimden
+msgid "From"
+msgstr "Kimden"
 
-#New connection
-#Yeni bağlantı
+msgid "New connection"
+msgstr "Yeni bağlantı"
 
-#No tracker URL was specified
-#İzleyici adresi tanımlanmamış
+msgid "No tracker URL was specified"
+msgstr "İzleyici adresi tanımlanmamış"
 
-#Stop seeding when inactive for
-#Belli bir süre aktif olmayan göndermeyi durdur
+msgid "Stop seeding when inactive for"
+msgstr "Belli bir süre aktif olmayan göndermeyi durdur"
 
-#The invalid time value was entered
-#Geçersiz zaman değeri girildi
+msgid "The invalid time value was entered"
+msgstr "Geçersiz zaman değeri girildi"
 
-#to
-#buna
+msgid "to"
+msgstr "buna"
 
-#Tracker announce URL
-#İzleyici anons adresi
+msgid "Tracker announce URL"
+msgstr "İzleyici anons adresi"
 
-#Upload speeds (KB/s)
-#Gönderme hızı (KB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "Gönderme hızı (KB/s)"
 
-#Browse
-#Tara
+msgid "Browse"
+msgstr "Tara"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#%s yeni bir sürümü kullanılabilinir.
-#Sizin sürümünüz: %s
-#Yeni sürüm: %s
-#İndirme sayfasını açmak ister misiniz?
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "%s yeni bir sürümü kullanılabilinir."
+"Sizin sürümünüz: %s"
+"Yeni sürüm: %s"
+"İndirme sayfasını açmak ister misiniz?"
 
-#Check for new version every
-#Yeni sürüm kaç günde bir kontrol edilsin
+msgid "Check for new version every"
+msgstr "Yeni sürüm kaç günde bir kontrol edilsin"
 
-#Consider active torrents as stalled when idle for
-#Belli bir süre beklemede kalmış aktif torrentleri durdur
+msgid "Consider active torrents as stalled when idle for"
+msgstr "Belli bir süre beklemede kalmış aktif torrentleri durdur"
 
-#Donate!
-#Bağışta bulun!
+msgid "Donate!"
+msgstr "Bağışta bulun!"
 
-#Download queue size
-#İndirme sırası boyutu
+msgid "Download queue size"
+msgstr "İndirme sırası boyutu"
 
-#Error checking for new version
-#Yeni sürümü kontrol ederken hata oluştu
+msgid "Error checking for new version"
+msgstr "Yeni sürümü kontrol ederken hata oluştu"
 
-#Modify trackers
-#İzleyicileri değiştir
+msgid "Modify trackers"
+msgstr "İzleyicileri değiştir"
 
-#No updates have been found.~You are running the latest version of %s
-#Hiçbir güncelleme bulunamadı.
-#%s ile en son sürümü kullanıyorsunuz
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "Hiçbir güncelleme bulunamadı."
+"%s ile en son sürümü kullanıyorsunuz"
 
-#Upload queue size
-#Gönderme sırası boyutu
+msgid "Upload queue size"
+msgstr "Gönderme sırası boyutu"
 
-#Global statistics
-#Genel istatistikler
+msgid "Global statistics"
+msgstr "Genel istatistikler"
 
-#Connection name
-#Bağlantı adı
+msgid "Connection name"
+msgstr "Bağlantı adı"
 
-#Could not connect to tracker
-#=İzleyiciye bağlanılamıyor
+msgid "Could not connect to tracker"
+msgstr "=İzleyiciye bağlanılamıyor"
 
-#Data refresh interval when minimized
-#Görev çubuğuna küçültüldüğünde ki uygulama yenileme hızı
+msgid "Data refresh interval when minimized"
+msgstr "Görev çubuğuna küçültüldüğünde ki uygulama yenileme hızı"
 
-#Data refresh interval
-#Uygulama yenileme hızı
+msgid "Data refresh interval"
+msgstr "Uygulama yenileme hızı"
 
-#Default download folder on remote host
-#Uzak sunucuda ki indirme klasörü
+msgid "Default download folder on remote host"
+msgstr "Uzak sunucuda ki indirme klasörü"
 
-#Downloading torrent file
-#Torrent dosyası indiriliyor
+msgid "Downloading torrent file"
+msgstr "Torrent dosyası indiriliyor"
 
-#Font size
-#Font boyutu
+msgid "Font size"
+msgstr "Font boyutu"
 
-#Invalid name specified
-#Geçersiz isim girildi
+msgid "Invalid name specified"
+msgstr "Geçersiz isim girildi"
 
-#Manage connections
-#Bağlantıları yönet
+msgid "Manage connections"
+msgstr "Bağlantıları yönet"
 
-#Please enter a password to connect to %s
-#%s bağlanmak için lütfen bir parola girin
+msgid "Please enter a password to connect to %s"
+msgstr "%s bağlanmak için lütfen bir parola girin"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#Uzak transmission daemon servisine, %s ile nasıl bağlanacağını ayarlayın
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "Uzak transmission daemon servisine, %s ile nasıl bağlanacağını ayarlayın"
 
-#RPC path
-#RPC yolu
+msgid "RPC path"
+msgstr "RPC yolu"
 
-#Save as
-#Farklı kaydet
+msgid "Save as"
+msgstr "Farklı kaydet"
 
-#Torrent not registered with this tracker
-#=Torrent bu izleyiciye kayıtlı değil
+msgid "Torrent not registered with this tracker"
+msgstr "=Torrent bu izleyiciye kayıtlı değil"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#Uzak yol bulunamadı.
-#Uzak yol ayarlamak için uygulama ayarlarını kullanın
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "Uzak yol bulunamadı."
+"Uzak yol ayarlamak için uygulama ayarlarını kullanın"
 
-#You need to restart the application to apply changes
-#Değişikliklerin aktif olabilmesi için uygulamayı tekrar başlatın
+msgid "You need to restart the application to apply changes"
+msgstr "Değişikliklerin aktif olabilmesi için uygulamayı tekrar başlatın"
 
-#Export settings
-#Ayarları dışarı aktar
+msgid "Export settings"
+msgstr "Ayarları dışarı aktar"
 
-#Import settings
-#Ayarları içeri aktar
+msgid "Import settings"
+msgstr "Ayarları içeri aktar"
 

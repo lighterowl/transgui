@@ -2191,382 +2191,382 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#한국어
+msgid "TranslationLanguage"
+msgstr "한국어"
 
-#&All
-#&모든
+msgid "&All"
+msgstr "&모든"
 
-#&Close
-#&닫기
+msgid "&Close"
+msgstr "&닫기"
 
-#&Ignore
-#&무시
+msgid "&Ignore"
+msgstr "&무시"
 
-#&No
-#&아니요
+msgid "&No"
+msgstr "&아니요"
 
-#&OK
-#&확인
+msgid "&OK"
+msgstr "&확인"
 
-#&Open
-#&열기
+msgid "&Open"
+msgstr "&열기"
 
-#&Retry
-#&다시
+msgid "&Retry"
+msgstr "&다시"
 
-#&Save
-#&저장
+msgid "&Save"
+msgstr "&저장"
 
-#&Unlock
-#&잠금풀기
+msgid "&Unlock"
+msgstr "&잠금풀기"
 
-#&Yes
-#&예
+msgid "&Yes"
+msgstr "&예"
 
-#Abort
-#중단
+msgid "Abort"
+msgstr "중단"
 
-#&Add torrent
-#토렌트 추가
+msgid "&Add torrent"
+msgstr "토렌트 추가"
 
-#Authentication
-#인증
+msgid "Authentication"
+msgstr "인증"
 
-#Comment
-#설명
+msgid "Comment"
+msgstr "설명"
 
-#Confirmation
-#확인
+msgid "Confirmation"
+msgstr "확인"
 
-#Connecting to daemon
-#서버에 연결중
+msgid "Connecting to daemon"
+msgstr "서버에 연결중"
 
-#Connection error occurred
-#연결 오류
+msgid "Connection error occurred"
+msgstr "연결 오류"
 
-#Created on
-#생성
+msgid "Created on"
+msgstr "생성"
 
-#Destination folder
-#대상 폴더
+msgid "Destination folder"
+msgstr "대상 폴더"
 
-#Donate to support further development
-#개발 지원을 위한 기부
+msgid "Donate to support further development"
+msgstr "개발 지원을 위한 기부"
 
-#Donate via PayPal,WebMoney,Credit card
-#페이팔, 웹머니, 신용카드를 통한 기부
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "페이팔, 웹머니, 신용카드를 통한 기부"
 
-#Down limit
-#다운 제한
+msgid "Down limit"
+msgstr "다운 제한"
 
-#Download speed
-#다운로드 속도
+msgid "Download speed"
+msgstr "다운로드 속도"
 
-#Encryption
-#암호화
+msgid "Encryption"
+msgstr "암호화"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#국기를 표시하기 위해 국기 이미지 모음이 필요합니다.
-#지금 다운로드 할까요?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "국기를 표시하기 위해 국기 이미지 모음이 필요합니다."
+"지금 다운로드 할까요?"
 
-#Global peer limit
-#전체 피어 제한
+msgid "Global peer limit"
+msgstr "전체 피어 제한"
 
-#Hash
-#해쉬
+msgid "Hash"
+msgstr "해쉬"
 
-#Incoming port is closed. Check your firewall settings
-#들어오는 포트 닫힘. 방화벽 설정을 점검하세요
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "들어오는 포트 닫힘. 방화벽 설정을 점검하세요"
 
-#Incoming port tested successfully
-#들어오는 포트 시험 성공
+msgid "Incoming port tested successfully"
+msgstr "들어오는 포트 시험 성공"
 
-#Incoming port
-#들어오는 포트
+msgid "Incoming port"
+msgstr "들어오는 포트"
 
-#Information
-#정보
+msgid "Information"
+msgstr "정보"
 
-#Language
-#언어
+msgid "Language"
+msgstr "언어"
 
-#Max peers
-#최대 피어수
+msgid "Max peers"
+msgstr "최대 피어수"
 
-#No host name specified
-#호스트 이름 명시되지 않음
+msgid "No host name specified"
+msgstr "호스트 이름 명시되지 않음"
 
-#No proxy server specified
-#프록시 서버 명시되지 않음
+msgid "No proxy server specified"
+msgstr "프록시 서버 명시되지 않음"
 
-#No to all
-#모두 아니요
+msgid "No to all"
+msgstr "모두 아니요"
 
-#Password
-#비밀번호
+msgid "Password"
+msgstr "비밀번호"
 
-#Peer limit
-#피어 제한
+msgid "Peer limit"
+msgstr "피어 제한"
 
-#Pieces
-#조각
+msgid "Pieces"
+msgstr "조각"
 
-#Properties
-#설정
+msgid "Properties"
+msgstr "설정"
 
-#Proxy password
-#프록시 비밀번호
+msgid "Proxy password"
+msgstr "프록시 비밀번호"
 
-#Proxy port
-#프록시 포트
+msgid "Proxy port"
+msgstr "프록시 포트"
 
-#Proxy server
-#프록시 서버
+msgid "Proxy server"
+msgstr "프록시 서버"
 
-#Proxy user name
-#프록시 유저 이름
+msgid "Proxy user name"
+msgstr "프록시 유저 이름"
 
-#Reconnect in %d seconds
-#%d 초 안에 재접속
+msgid "Reconnect in %d seconds"
+msgstr "%d 초 안에 재접속"
 
-#Remaining
-#남음
+msgid "Remaining"
+msgstr "남음"
 
-#Remote host
-#원격 호스트
+msgid "Remote host"
+msgstr "원격 호스트"
 
-#Seed ratio
-#시드 비율
+msgid "Seed ratio"
+msgstr "시드 비율"
 
-#Setup columns
-#세로줄 설정
+msgid "Setup columns"
+msgstr "세로줄 설정"
 
-#Share ratio
-#공유 비율
+msgid "Share ratio"
+msgstr "공유 비율"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#토렌트 (*.torrent)|*.torrent|모든 파일 (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "토렌트 (*.torrent)|*.torrent|모든 파일 (*.*)|*.*"
 
-#Total size
-#전체 크기
+msgid "Total size"
+msgstr "전체 크기"
 
-#Tracker update on
-#트래커 업데이트 중
+msgid "Tracker update on"
+msgstr "트래커 업데이트 중"
 
-#Unable to extract flag image
-#국기 이미지를 추출 할 수 없습니다
+msgid "Unable to extract flag image"
+msgstr "국기 이미지를 추출 할 수 없습니다"
 
-#Up limit
-#업로드 제한
+msgid "Up limit"
+msgstr "업로드 제한"
 
-#Update complete
-#업데이트 완료
+msgid "Update complete"
+msgstr "업데이트 완료"
 
-#Upload speed
-#업로드 속도
+msgid "Upload speed"
+msgstr "업로드 속도"
 
-#User name
-#사용자 이름
+msgid "User name"
+msgstr "사용자 이름"
 
-#Warning
-#경고
+msgid "Warning"
+msgstr "경고"
 
-#Wasted
-#버려짐
+msgid "Wasted"
+msgstr "버려짐"
 
-#Yes to &All
-#모두 예
+msgid "Yes to &All"
+msgstr "모두 예"
 
-#Directory for incomplete files
-#진행중인 파일 디렉토리
+msgid "Directory for incomplete files"
+msgstr "진행중인 파일 디렉토리"
 
-#Enable blocklist
-#차단 목록 사용하기
+msgid "Enable blocklist"
+msgstr "차단 목록 사용하기"
 
-#New location for torrent data
-#토렌트 데이터 새 위치
+msgid "New location for torrent data"
+msgstr "토렌트 데이터 새 위치"
 
-#No link was specified
-#연결이 명시되지 않음
+msgid "No link was specified"
+msgstr "연결이 명시되지 않음"
 
-#No torrent location was specified
-#토렌트 위치가 명시되지 않음
+msgid "No torrent location was specified"
+msgstr "토렌트 위치가 명시되지 않음"
 
-#Set data location
-#데이터 위치 설정
+msgid "Set data location"
+msgstr "데이터 위치 설정"
 
-#The block list has been updated successfully.~The list entries count: %d
-#차단 목록이 업데이트 되었습니다.
-#목록 갯수: %d
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "차단 목록이 업데이트 되었습니다."
+"목록 갯수: %d"
 
-#The directory for incomplete files was not specified
-#진행중인 파일의 디렉토리가 명시되지 않았습니다
+msgid "The directory for incomplete files was not specified"
+msgstr "진행중인 파일의 디렉토리가 명시되지 않았습니다"
 
-#The downloads directory was not specified
-#다운로드 디렉토리가 명시되지 않았습니다
+msgid "The downloads directory was not specified"
+msgstr "다운로드 디렉토리가 명시되지 않았습니다"
 
-#Unable to execute "%s"
-#"%s" 실행 불가
+msgid "Unable to execute "%s""
+msgstr ""%s" 실행 불가"
 
-#URL of a .torrent file or a magnet link
-#.torrent 파일 또는 마그넷 링크의 URL
+msgid "URL of a .torrent file or a magnet link"
+msgstr ".torrent 파일 또는 마그넷 링크의 URL"
 
-#Days
-#요일
+msgid "Days"
+msgstr "요일"
 
-#Disk cache size
-#디스크 캐쉬 크기
+msgid "Disk cache size"
+msgstr "디스크 캐쉬 크기"
 
-#Download speeds (KB/s)
-#다운로드 속도 (KB/s)
+msgid "Download speeds (KB/s)"
+msgstr "다운로드 속도 (KB/s)"
 
-#Edit tracker
-#트래커 편집
+msgid "Edit tracker"
+msgstr "트래커 편집"
 
-#Free disk space
-#남은 디스크 공간
+msgid "Free disk space"
+msgstr "남은 디스크 공간"
 
-#From
-#시작
+msgid "From"
+msgstr "시작"
 
-#New connection
-#새 연결
+msgid "New connection"
+msgstr "새 연결"
 
-#No tracker URL was specified
-#트래커 URL이 명시되지 않음
+msgid "No tracker URL was specified"
+msgstr "트래커 URL이 명시되지 않음"
 
-#Stop seeding when inactive for
-#다음시간 동안 비활성화시 시딩 멈춤
+msgid "Stop seeding when inactive for"
+msgstr "다음시간 동안 비활성화시 시딩 멈춤"
 
-#The invalid time value was entered
-#잘못된 시간값이 입력됨
+msgid "The invalid time value was entered"
+msgstr "잘못된 시간값이 입력됨"
 
-#to
-#종료
+msgid "to"
+msgstr "종료"
 
-#Tracker announce URL
-#트래커 알림 URL
+msgid "Tracker announce URL"
+msgstr "트래커 알림 URL"
 
-#Upload speeds (KB/s)
-#업로드 속도 (KB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "업로드 속도 (KB/s)"
 
-#Browse
-#찾아보기
+msgid "Browse"
+msgstr "찾아보기"
 
-#Enable μTP
-#μTP 사용
+msgid "Enable μTP"
+msgstr "μTP 사용"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#%s의 새 버전이 나왔습니다.
-#현재 버젼: %s
-#새 버젼: %s
-#다운로드 페이지로 접속하시겠습니까?
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "%s의 새 버전이 나왔습니다."
+"현재 버젼: %s"
+"새 버젼: %s"
+"다운로드 페이지로 접속하시겠습니까?"
 
-#Check for new version every
-#새 버전 확인 간격
+msgid "Check for new version every"
+msgstr "새 버전 확인 간격"
 
-#Consider active torrents as stalled when idle for
-#다음 시간동안 유휴상태일 경우 활성화된 토렌트가 멈춘것으로 간주합니다
+msgid "Consider active torrents as stalled when idle for"
+msgstr "다음 시간동안 유휴상태일 경우 활성화된 토렌트가 멈춘것으로 간주합니다"
 
-#Donate!
-#기부하기!
+msgid "Donate!"
+msgstr "기부하기!"
 
-#Download queue size
-#다운로드 큐 크기
+msgid "Download queue size"
+msgstr "다운로드 큐 크기"
 
-#Error checking for new version
-#새 버전 확인 오류
+msgid "Error checking for new version"
+msgstr "새 버전 확인 오류"
 
-#Modify trackers
-#트래커 수정
+msgid "Modify trackers"
+msgstr "트래커 수정"
 
-#No updates have been found.~You are running the latest version of %s
-#업데이트가 없습니다.
-#%s의 최신 버전을 사용중입니다
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "업데이트가 없습니다."
+"%s의 최신 버전을 사용중입니다"
 
-#Upload queue size
-#업로드 큐 크기
+msgid "Upload queue size"
+msgstr "업로드 큐 크기"
 
-#Global statistics
-#전체 통계
+msgid "Global statistics"
+msgstr "전체 통계"
 
-#Connection name
-#연결 이름
+msgid "Connection name"
+msgstr "연결 이름"
 
-#Could not connect to tracker
-#트래커에 연결할 수 없습니다
+msgid "Could not connect to tracker"
+msgstr "트래커에 연결할 수 없습니다"
 
-#Data refresh interval when minimized
-#최소화시 데이터 갱신 주기
+msgid "Data refresh interval when minimized"
+msgstr "최소화시 데이터 갱신 주기"
 
-#Data refresh interval
-#데이터 갱신 주기
+msgid "Data refresh interval"
+msgstr "데이터 갱신 주기"
 
-#Default download folder on remote host
-#원격 호스트의 기본 다운로드 폴더
+msgid "Default download folder on remote host"
+msgstr "원격 호스트의 기본 다운로드 폴더"
 
-#Downloading torrent file
-#다운로드중인 토런트 파일
+msgid "Downloading torrent file"
+msgstr "다운로드중인 토런트 파일"
 
-#Font size
-#폰트 크기
+msgid "Font size"
+msgstr "폰트 크기"
 
-#Invalid name specified
-#비정상적인 이름이 지정되었습니다
+msgid "Invalid name specified"
+msgstr "비정상적인 이름이 지정되었습니다"
 
-#Manage connections
-#연결 관리하기
+msgid "Manage connections"
+msgstr "연결 관리하기"
 
-#Please enter a password to connect to %s
-#%s 에 연결하기 위해 비밀번호를 입력하세요
+msgid "Please enter a password to connect to %s"
+msgstr "%s 에 연결하기 위해 비밀번호를 입력하세요"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#%s 가 트랜스미션 데몬(서비스)이 가동중인 원격 호스트에 어떻게 접속할 지를 지정하세요
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "%s 가 트랜스미션 데몬(서비스)이 가동중인 원격 호스트에 어떻게 접속할 지를 지정하세요"
 
-#RPC path
-#RPC 경로
+msgid "RPC path"
+msgstr "RPC 경로"
 
-#Save as
-#다른 이름으로 저장
+msgid "Save as"
+msgstr "다른 이름으로 저장"
 
-#Torrent not registered with this tracker
-#이 트래커에 해당 토렌트 정보가 등록되어 있지 않습니다
+msgid "Torrent not registered with this tracker"
+msgstr "이 트래커에 해당 토렌트 정보가 등록되어 있지 않습니다"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#맵핑된 경로를 찾을수 없습니다.
-#어플리케이션 옵션에서 경로를 확인하세요
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "맵핑된 경로를 찾을수 없습니다."
+"어플리케이션 옵션에서 경로를 확인하세요"
 
-#You need to restart the application to apply changes
-#변경 사항을 적용하려면 프로그램을 다시 시작해야 합니다
+msgid "You need to restart the application to apply changes"
+msgstr "변경 사항을 적용하려면 프로그램을 다시 시작해야 합니다"
 
-#Magnet Link
-#마그넷 링크
+msgid "Magnet Link"
+msgstr "마그넷 링크"
 
-#Export settings
-#설정 내보내기
+msgid "Export settings"
+msgstr "설정 내보내기"
 
-#Import settings
-#설정 읽기
+msgid "Import settings"
+msgstr "설정 읽기"
 
-#Template:
-#템플릿:
+msgid "Template:"
+msgstr "템플릿:"
 
-#Connection refused
-#연결 거부됨
+msgid "Connection refused"
+msgstr "연결 거부됨"
 
-#Access violation
-#액세스 위반
+msgid "Access violation"
+msgstr "액세스 위반"
 
-#Connection timed out
-#연결 시간 초과
+msgid "Connection timed out"
+msgstr "연결 시간 초과"
 
-#Other Winsock error
-#기타 Winsock 오류
+msgid "Other Winsock error"
+msgstr "기타 Winsock 오류"
 
-#Host not found
-#호스트를 찾을 수 없음
+msgid "Host not found"
+msgstr "호스트를 찾을 수 없음"
 
-#Unauthorized User
-#비인가 사용자
+msgid "Unauthorized User"
+msgstr "비인가 사용자"
 

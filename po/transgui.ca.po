@@ -2191,358 +2191,358 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#Català
+msgid "TranslationLanguage"
+msgstr "Català"
 
-#&All
-#&Tots
+msgid "&All"
+msgstr "&Tots"
 
-#&Close
-#&Tancar
+msgid "&Close"
+msgstr "&Tancar"
 
-#&Ignore
-#&Ignorar
+msgid "&Ignore"
+msgstr "&Ignorar"
 
-#&No
-#&No
+msgid "&No"
+msgstr "&No"
 
-#&OK
-#&Acceptar
+msgid "&OK"
+msgstr "&Acceptar"
 
-#&Open
-#&Obrir
+msgid "&Open"
+msgstr "&Obrir"
 
-#&Retry
-#&Reintentar
+msgid "&Retry"
+msgstr "&Reintentar"
 
-#&Save
-#&Guardar
+msgid "&Save"
+msgstr "&Guardar"
 
-#&Unlock
-#&Desbloquejar
+msgid "&Unlock"
+msgstr "&Desbloquejar"
 
-#&Yes
-#&Si
+msgid "&Yes"
+msgstr "&Si"
 
-#Abort
-#Cancel·lar
+msgid "Abort"
+msgstr "Cancel·lar"
 
-#&Add torrent
-#Afegir torrent
+msgid "&Add torrent"
+msgstr "Afegir torrent"
 
-#Authentication
-#Autenticació
+msgid "Authentication"
+msgstr "Autenticació"
 
-#Comment
-#Comentari
+msgid "Comment"
+msgstr "Comentari"
 
-#Confirmation
-#Confirmació
+msgid "Confirmation"
+msgstr "Confirmació"
 
-#Connecting to daemon
-#Connectant amb el dimoni
+msgid "Connecting to daemon"
+msgstr "Connectant amb el dimoni"
 
-#Connection error occurred
-#Error al connectar
+msgid "Connection error occurred"
+msgstr "Error al connectar"
 
-#Created on
-#Creat el
+msgid "Created on"
+msgstr "Creat el"
 
-#Destination folder
-#Carpeta destinació
+msgid "Destination folder"
+msgstr "Carpeta destinació"
 
-#Donate to support further development
-#Dóna per suport al desenvolupament
+msgid "Donate to support further development"
+msgstr "Dóna per suport al desenvolupament"
 
-#Donate via PayPal,WebMoney,Credit card
-#Donar via PayPal,WebMoney,Targeta crèdit
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "Donar via PayPal,WebMoney,Targeta crèdit"
 
-#Down limit
-#Límit de descàrrega
+msgid "Down limit"
+msgstr "Límit de descàrrega"
 
-#Download speed
-#Velocitat de descàrrega
+msgid "Download speed"
+msgstr "Velocitat de descàrrega"
 
-#Encryption
-#Xifrat
+msgid "Encryption"
+msgstr "Xifrat"
 
-#Exit
-#Sortir
+msgid "Exit"
+msgstr "Sortir"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#Es necessari l'arxiu de imatges de banderas per mostrar banderes de països.
-#Descarregar aquest arxiu ara?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "Es necessari l'arxiu de imatges de banderas per mostrar banderes de països."
+"Descarregar aquest arxiu ara?"
 
-#Global peer limit
-#Límit global de clients
+msgid "Global peer limit"
+msgstr "Límit global de clients"
 
-#Hash
-#Hash
+msgid "Hash"
+msgstr "Hash"
 
-#Incoming port is closed. Check your firewall settings
-#El port entrant està tancat. Comprova la configuració del teu firewall
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "El port entrant està tancat. Comprova la configuració del teu firewall"
 
-#Incoming port tested successfully
-#Provat el port entrant amb èxit
+msgid "Incoming port tested successfully"
+msgstr "Provat el port entrant amb èxit"
 
-#Incoming port
-#Port entrant
+msgid "Incoming port"
+msgstr "Port entrant"
 
-#Information
-#Informació
+msgid "Information"
+msgstr "Informació"
 
-#Language
-#Llengua
+msgid "Language"
+msgstr "Llengua"
 
-#Max peers
-#Clients máxims
+msgid "Max peers"
+msgstr "Clients máxims"
 
-#No host name specified
-#No s'ha especificat nom del host
+msgid "No host name specified"
+msgstr "No s'ha especificat nom del host"
 
-#No proxy server specified
-#No s'ha especificat servidor proxy
+msgid "No proxy server specified"
+msgstr "No s'ha especificat servidor proxy"
 
-#No to all
-#No a tot
+msgid "No to all"
+msgstr "No a tot"
 
-#Password
-#Contrasenya
+msgid "Password"
+msgstr "Contrasenya"
 
-#Peer limit
-#Limit de clients
+msgid "Peer limit"
+msgstr "Limit de clients"
 
-#Pieces
-#Parts
+msgid "Pieces"
+msgstr "Parts"
 
-#Properties
-#Propietats
+msgid "Properties"
+msgstr "Propietats"
 
-#Proxy password
-#Contrasenya del proxy
+msgid "Proxy password"
+msgstr "Contrasenya del proxy"
 
-#Proxy port
-#Port del proxy
+msgid "Proxy port"
+msgstr "Port del proxy"
 
-#Proxy server
-#Servidor proxy
+msgid "Proxy server"
+msgstr "Servidor proxy"
 
-#Proxy user name
-#Nom d'usuari del proxy
+msgid "Proxy user name"
+msgstr "Nom d'usuari del proxy"
 
-#Reconnect in %d seconds
-#Reconnectar en %d segons
+msgid "Reconnect in %d seconds"
+msgstr "Reconnectar en %d segons"
 
-#Remaining
-#Renombrat
+msgid "Remaining"
+msgstr "Renombrat"
 
-#Remote host
-#Host remot
+msgid "Remote host"
+msgstr "Host remot"
 
-#Seed ratio
-#Ràtio de compartició
+msgid "Seed ratio"
+msgstr "Ràtio de compartició"
 
-#Setup columns
-#Configurar columnes
+msgid "Setup columns"
+msgstr "Configurar columnes"
 
-#Share ratio
-#Ràtio de compartició
+msgid "Share ratio"
+msgstr "Ràtio de compartició"
 
-#Tools
-#Eines
+msgid "Tools"
+msgstr "Eines"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Torrents (*.torrent)|*.torrent|Tots els arxius (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Torrents (*.torrent)|*.torrent|Tots els arxius (*.*)|*.*"
 
-#Total size
-#Mida total
+msgid "Total size"
+msgstr "Mida total"
 
-#Tracker update on
-#Tracker actualitzat
+msgid "Tracker update on"
+msgstr "Tracker actualitzat"
 
-#Unable to extract flag image
-#No s'ha pogut extreure imatge de bandera
+msgid "Unable to extract flag image"
+msgstr "No s'ha pogut extreure imatge de bandera"
 
-#Up limit
-#Límit de pujada
+msgid "Up limit"
+msgstr "Límit de pujada"
 
-#Update complete
-#Actualització completa
+msgid "Update complete"
+msgstr "Actualització completa"
 
-#Upload speed
-#Velocitat de pujada
+msgid "Upload speed"
+msgstr "Velocitat de pujada"
 
-#User name
-#Nom d'usuari
+msgid "User name"
+msgstr "Nom d'usuari"
 
-#Warning
-#Avís
+msgid "Warning"
+msgstr "Avís"
 
-#Wasted
-#Malgastat
+msgid "Wasted"
+msgstr "Malgastat"
 
-#Yes to &All
-#Sí a &Tot
+msgid "Yes to &All"
+msgstr "Sí a &Tot"
 
-#Directory for incomplete files
-#Directori per els arxius incomplerts
+msgid "Directory for incomplete files"
+msgstr "Directori per els arxius incomplerts"
 
-#Enable blocklist
-#Activar llista negra
+msgid "Enable blocklist"
+msgstr "Activar llista negra"
 
-#New location for torrent data
-#Nova ruta per les dades del torrent
+msgid "New location for torrent data"
+msgstr "Nova ruta per les dades del torrent"
 
-#No link was specified
-#No s'ha especificat cap enllaç
+msgid "No link was specified"
+msgstr "No s'ha especificat cap enllaç"
 
-#No torrent location was specified
-#No s'ha especificat cap ruta de torrent
+msgid "No torrent location was specified"
+msgstr "No s'ha especificat cap ruta de torrent"
 
-#Set data location
-#Definir ruta per les dades
+msgid "Set data location"
+msgstr "Definir ruta per les dades"
 
-#The block list has been updated successfully.~The list entries count: %d
-#La llista negra s'ha actualizat correctament.
-#Entrades a la llista: %d
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "La llista negra s'ha actualizat correctament."
+"Entrades a la llista: %d"
 
-#The directory for incomplete files was not specified
-#No s'ha especificat carpeta per els arxius incomplets
+msgid "The directory for incomplete files was not specified"
+msgstr "No s'ha especificat carpeta per els arxius incomplets"
 
-#The downloads directory was not specified
-#No s'ha especificat carpeta per les descàrregues
+msgid "The downloads directory was not specified"
+msgstr "No s'ha especificat carpeta per les descàrregues"
 
-#Unable to execute "%s"
-#No s'ha pogut executar "%s"
+msgid "Unable to execute "%s""
+msgstr "No s'ha pogut executar "%s""
 
-#URL of a .torrent file or a magnet link
-#URL d'arxiu .torrent o enllaç magnet
+msgid "URL of a .torrent file or a magnet link"
+msgstr "URL d'arxiu .torrent o enllaç magnet"
 
-#Days
-#Dies
+msgid "Days"
+msgstr "Dies"
 
-#Disk cache size
-#Mida de caché de disc
+msgid "Disk cache size"
+msgstr "Mida de caché de disc"
 
-#Download speeds (KB/s)
-#Velocitat de descarrega (KB/s)
+msgid "Download speeds (KB/s)"
+msgstr "Velocitat de descarrega (KB/s)"
 
-#Edit tracker
-#Editar tracker
+msgid "Edit tracker"
+msgstr "Editar tracker"
 
-#Free disk space
-#Espai lliure al disc
+msgid "Free disk space"
+msgstr "Espai lliure al disc"
 
-#From
-#Des de
+msgid "From"
+msgstr "Des de"
 
-#New connection
-#Nova connexió
+msgid "New connection"
+msgstr "Nova connexió"
 
-#No tracker URL was specified
-#No s'ha especificat URL de tracker
+msgid "No tracker URL was specified"
+msgstr "No s'ha especificat URL de tracker"
 
-#Stop seeding when inactive for
-#Deixar de compartir quan estigui inactiu
+msgid "Stop seeding when inactive for"
+msgstr "Deixar de compartir quan estigui inactiu"
 
-#The invalid time value was entered
-#El valor de temps introduït no és vàlid
+msgid "The invalid time value was entered"
+msgstr "El valor de temps introduït no és vàlid"
 
-#to
-#a
+msgid "to"
+msgstr "a"
 
-#Tracker announce URL
-#URL d'anunci del tracker
+msgid "Tracker announce URL"
+msgstr "URL d'anunci del tracker"
 
-#Upload speeds (KB/s)
-#Velocitat de pujada (KB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "Velocitat de pujada (KB/s)"
 
-#Browse
-#buscar
+msgid "Browse"
+msgstr "buscar"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#Una versió nova de %s està disponible.
-#La teva actual versió: %s
-#La nova versió: %s
-#Vols obrir la pàgina web de descàrregues?
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "Una versió nova de %s està disponible."
+"La teva actual versió: %s"
+"La nova versió: %s"
+"Vols obrir la pàgina web de descàrregues?"
 
-#Check for new version every
-#Cerca una nova versió cada
+msgid "Check for new version every"
+msgstr "Cerca una nova versió cada"
 
-#Consider active torrents as stalled when idle for
-#Considereu els torrents actius com a estancats, quan està inactiu per
+msgid "Consider active torrents as stalled when idle for"
+msgstr "Considereu els torrents actius com a estancats, quan està inactiu per"
 
-#Donate!
-#Doneu!
+msgid "Donate!"
+msgstr "Doneu!"
 
-#Download queue size
-#Nombre de descarregues en cua
+msgid "Download queue size"
+msgstr "Nombre de descarregues en cua"
 
-#Error checking for new version
-#Error comprovant nova versió
+msgid "Error checking for new version"
+msgstr "Error comprovant nova versió"
 
-#Modify trackers
-#Modificar trackers
+msgid "Modify trackers"
+msgstr "Modificar trackers"
 
-#No updates have been found.~You are running the latest version of %s
-#No s'han trobat actualitzacions.
-#Tens la darrera versió de %s
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "No s'han trobat actualitzacions."
+"Tens la darrera versió de %s"
 
-#Torrents that are idle for N minutes aren't counted toward the Download queue or Upload queue
-#Torrents que són inactius durant N minuts no es conten a la cua de descàrrega o pujada
+msgid "Torrents that are idle for N minutes aren't counted toward the Download queue or Upload queue"
+msgstr "Torrents que són inactius durant N minuts no es conten a la cua de descàrrega o pujada"
 
-#Upload queue size
-#Nombre de pujades en cua
+msgid "Upload queue size"
+msgstr "Nombre de pujades en cua"
 
-#Global statistics
-#Estadístiques globals
+msgid "Global statistics"
+msgstr "Estadístiques globals"
 
-#Connection name
-#Nom de la connexió
+msgid "Connection name"
+msgstr "Nom de la connexió"
 
-#Could not connect to tracker
-#No es pot connectar al tracker
+msgid "Could not connect to tracker"
+msgstr "No es pot connectar al tracker"
 
-#Data refresh interval when minimized
-#Inteval de refresc de les dades estant minimitzat
+msgid "Data refresh interval when minimized"
+msgstr "Inteval de refresc de les dades estant minimitzat"
 
-#Data refresh interval
-#Inteval de refresc de les dades
+msgid "Data refresh interval"
+msgstr "Inteval de refresc de les dades"
 
-#Default download folder on remote host
-#Carpeta descàrregues per defecte al host remot
+msgid "Default download folder on remote host"
+msgstr "Carpeta descàrregues per defecte al host remot"
 
-#Downloading torrent file
-#Descarregant fitxer torrent
+msgid "Downloading torrent file"
+msgstr "Descarregant fitxer torrent"
 
-#Font size
-#Mida de la font
+msgid "Font size"
+msgstr "Mida de la font"
 
-#Invalid name specified
-#Especificat nom invàlid
+msgid "Invalid name specified"
+msgstr "Especificat nom invàlid"
 
-#Manage connections
-#Gestiona connexions
+msgid "Manage connections"
+msgstr "Gestiona connexions"
 
-#Please enter a password to connect to %s
-#Entra password per connectar a %s
+msgid "Please enter a password to connect to %s"
+msgstr "Entra password per connectar a %s"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#Especifiqueu com %s es connectará al host remot amb el dimoni Transmission actiu (servei)
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "Especifiqueu com %s es connectará al host remot amb el dimoni Transmission actiu (servei)"
 
-#RPC path
-#RPC path
+msgid "RPC path"
+msgstr "RPC path"
 
-#Save as
-#Guarda com
+msgid "Save as"
+msgstr "Guarda com"
 
-#Torrent not registered with this tracker
-#Torrent no registrat a aquest tracker
+msgid "Torrent not registered with this tracker"
+msgstr "Torrent no registrat a aquest tracker"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#No s'ha pogut trobar la ruta.
-#Utilitza les opcions de l'aplicació per asignar la ruta
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "No s'ha pogut trobar la ruta."
+"Utilitza les opcions de l'aplicació per asignar la ruta"
 
-#You need to restart the application to apply changes
-#Necessites reiniciar la aplicació per aplicar els canvis
+msgid "You need to restart the application to apply changes"
+msgstr "Necessites reiniciar la aplicació per aplicar els canvis"
 

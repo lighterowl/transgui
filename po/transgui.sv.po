@@ -2191,379 +2191,379 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#Svenska
+msgid "TranslationLanguage"
+msgstr "Svenska"
 
-#&All
-#&Alla
+msgid "&All"
+msgstr "&Alla"
 
-#&Close
-#&Stäng
+msgid "&Close"
+msgstr "&Stäng"
 
-#&Ignore
-#&Ignorera
+msgid "&Ignore"
+msgstr "&Ignorera"
 
-#&No
-#&Nej
+msgid "&No"
+msgstr "&Nej"
 
-#&OK
-#&OK
+msgid "&OK"
+msgstr "&OK"
 
-#&Open
-#&Öppna
+msgid "&Open"
+msgstr "&Öppna"
 
-#&Retry
-#&Försök igen
+msgid "&Retry"
+msgstr "&Försök igen"
 
-#&Save
-#&Spara
+msgid "&Save"
+msgstr "&Spara"
 
-#&Unlock
-#Lås upp
+msgid "&Unlock"
+msgstr "Lås upp"
 
-#&Yes
-#&Ja
+msgid "&Yes"
+msgstr "&Ja"
 
-#Abort
-#Avbryt
+msgid "Abort"
+msgstr "Avbryt"
 
-#&Add torrent
-#Lägg till torrent
+msgid "&Add torrent"
+msgstr "Lägg till torrent"
 
-#Authentication
-#Autentisering
+msgid "Authentication"
+msgstr "Autentisering"
 
-#Comment
-#Kommentar
+msgid "Comment"
+msgstr "Kommentar"
 
-#Confirmation
-#Bekräftelse
+msgid "Confirmation"
+msgstr "Bekräftelse"
 
-#Connecting to daemon
-#Ansluter till server
+msgid "Connecting to daemon"
+msgstr "Ansluter till server"
 
-#Connection error occurred
-#Anslutningsfel har inträffat
+msgid "Connection error occurred"
+msgstr "Anslutningsfel har inträffat"
 
-#Created on
-#Skapad
+msgid "Created on"
+msgstr "Skapad"
 
-#Destination folder
-#Destinationsmapp
+msgid "Destination folder"
+msgstr "Destinationsmapp"
 
-#Donate to support further development
-#Donera för att stödja fortsatt utveckling
+msgid "Donate to support further development"
+msgstr "Donera för att stödja fortsatt utveckling"
 
-#Donate via PayPal,WebMoney,Credit card
-#Donera via PayPal,WebMoney,Credit card
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "Donera via PayPal,WebMoney,Credit card"
 
-#Down limit
-#Nedladdningsgräns
+msgid "Down limit"
+msgstr "Nedladdningsgräns"
 
-#Download speed
-#Nedladdingshastighet
+msgid "Download speed"
+msgstr "Nedladdingshastighet"
 
-#Encryption
-#Kryptering
+msgid "Encryption"
+msgstr "Kryptering"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#Ett arkiv med flaggbilder är nödvändigt för att visa landsflaggor.
-#Vill du ladda ner denna nu?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "Ett arkiv med flaggbilder är nödvändigt för att visa landsflaggor."
+"Vill du ladda ner denna nu?"
 
-#Global peer limit
-#Max antal globala kamrater
+msgid "Global peer limit"
+msgstr "Max antal globala kamrater"
 
-#Hash
-#Hash
+msgid "Hash"
+msgstr "Hash"
 
-#Incoming port is closed. Check your firewall settings
-#Inkommande port är stängd. Kontrollera brandväggs inställningarna
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "Inkommande port är stängd. Kontrollera brandväggs inställningarna"
 
-#Incoming port tested successfully
-#Inkommande port är öppen
+msgid "Incoming port tested successfully"
+msgstr "Inkommande port är öppen"
 
-#Incoming port
-#Inkommande port
+msgid "Incoming port"
+msgstr "Inkommande port"
 
-#Information
-#Information
+msgid "Information"
+msgstr "Information"
 
-#Language
-#Språk
+msgid "Language"
+msgstr "Språk"
 
-#Max peers
-#Max antal peers
+msgid "Max peers"
+msgstr "Max antal peers"
 
-#No host name specified
-#Inget värdnamn specifierat
+msgid "No host name specified"
+msgstr "Inget värdnamn specifierat"
 
-#No proxy server specified
-#Ingen proxyserver specifierad
+msgid "No proxy server specified"
+msgstr "Ingen proxyserver specifierad"
 
-#No to all
-#Nej till alla
+msgid "No to all"
+msgstr "Nej till alla"
 
-#Password
-#Lösenord
+msgid "Password"
+msgstr "Lösenord"
 
-#Peer limit
-#Peer begränsning
+msgid "Peer limit"
+msgstr "Peer begränsning"
 
-#Pieces
-#Delar
+msgid "Pieces"
+msgstr "Delar"
 
-#Properties
-#Egenskaper
+msgid "Properties"
+msgstr "Egenskaper"
 
-#Proxy password
-#Proxylösenord
+msgid "Proxy password"
+msgstr "Proxylösenord"
 
-#Proxy port
-#Proxyport
+msgid "Proxy port"
+msgstr "Proxyport"
 
-#Proxy server
-#Proxyserver
+msgid "Proxy server"
+msgstr "Proxyserver"
 
-#Proxy user name
-#Proxyanvändarnamn
+msgid "Proxy user name"
+msgstr "Proxyanvändarnamn"
 
-#Reconnect in %d seconds
-#Anslut på nytt om %d sekunder
+msgid "Reconnect in %d seconds"
+msgstr "Anslut på nytt om %d sekunder"
 
-#Remaining
-#Återstående
+msgid "Remaining"
+msgstr "Återstående"
 
-#Remote host
-#Fjärrserver
+msgid "Remote host"
+msgstr "Fjärrserver"
 
-#Seed ratio
-#Delningsförhållande
+msgid "Seed ratio"
+msgstr "Delningsförhållande"
 
-#Setup columns
-#Ställ in kolumner
+msgid "Setup columns"
+msgstr "Ställ in kolumner"
 
-#Share ratio
-#Delningsförhållande
+msgid "Share ratio"
+msgstr "Delningsförhållande"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Torrenter (*.torrent)|*.torrent|Alla filar (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Torrenter (*.torrent)|*.torrent|Alla filar (*.*)|*.*"
 
-#Total size
-#Total storlek
+msgid "Total size"
+msgstr "Total storlek"
 
-#Tracker update on
-#Tracker uppdaterad den
+msgid "Tracker update on"
+msgstr "Tracker uppdaterad den"
 
-#Unable to extract flag image
-#Kunde inte hämta flaggbild
+msgid "Unable to extract flag image"
+msgstr "Kunde inte hämta flaggbild"
 
-#Up limit
-#Uppladdningsgräns
+msgid "Up limit"
+msgstr "Uppladdningsgräns"
 
-#Update complete
-#Uppdatering genomförd
+msgid "Update complete"
+msgstr "Uppdatering genomförd"
 
-#Upload speed
-#Uppladdningshastighet
+msgid "Upload speed"
+msgstr "Uppladdningshastighet"
 
-#User name
-#Användarnamn
+msgid "User name"
+msgstr "Användarnamn"
 
-#Warning
-#Varning
+msgid "Warning"
+msgstr "Varning"
 
-#Wasted
-#Bortkastat
+msgid "Wasted"
+msgstr "Bortkastat"
 
-#Yes to &All
-#Ja till &allt
+msgid "Yes to &All"
+msgstr "Ja till &allt"
 
-#Directory for incomplete files
-#Mapp för ofullständiga filer
+msgid "Directory for incomplete files"
+msgstr "Mapp för ofullständiga filer"
 
-#Enable blocklist
-#Aktivera blockeringslistan
+msgid "Enable blocklist"
+msgstr "Aktivera blockeringslistan"
 
-#New location for torrent data
-#Ny plats för torrent data
+msgid "New location for torrent data"
+msgstr "Ny plats för torrent data"
 
-#No link was specified
-#Ingen länk specifierad
+msgid "No link was specified"
+msgstr "Ingen länk specifierad"
 
-#No torrent location was specified
-#Ingen torrentplats var specifierad
+msgid "No torrent location was specified"
+msgstr "Ingen torrentplats var specifierad"
 
-#Set data location
-#Sätt dataplats
+msgid "Set data location"
+msgstr "Sätt dataplats"
 
-#The block list has been updated successfully.~The list entries count: %d
-#Blockeringslistan blev uppdaterad.
-#Det är %d registrerade i listan
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "Blockeringslistan blev uppdaterad."
+"Det är %d registrerade i listan"
 
-#The directory for incomplete files was not specified
-#Mappen för ofullständiga filer var inte specifierad
+msgid "The directory for incomplete files was not specified"
+msgstr "Mappen för ofullständiga filer var inte specifierad"
 
-#The downloads directory was not specified
-#Nedladdningsmappen var inte specificerad
+msgid "The downloads directory was not specified"
+msgstr "Nedladdningsmappen var inte specificerad"
 
-#Unable to execute "%s"
-#Kunde inte köra "%s"
+msgid "Unable to execute "%s""
+msgstr "Kunde inte köra "%s""
 
-#URL of a .torrent file or a magnet link
-#Adressen till en .torrent-fil eller en magnet-länk
+msgid "URL of a .torrent file or a magnet link"
+msgstr "Adressen till en .torrent-fil eller en magnet-länk"
 
-#Days
-#Dagar
+msgid "Days"
+msgstr "Dagar"
 
-#Disk cache size
-#Storlek på diskcachen
+msgid "Disk cache size"
+msgstr "Storlek på diskcachen"
 
-#  Download speeds (KB/s)
-#Nedladdingshastighet (KB/s)
+msgid "  Download speeds (KB/s)"
+msgstr "Nedladdingshastighet (KB/s)"
 
-#Edit tracker
-#Redigera tracker
+msgid "Edit tracker"
+msgstr "Redigera tracker"
 
-#Free disk space
-#Ledigt diskutrymme
+msgid "Free disk space"
+msgstr "Ledigt diskutrymme"
 
-#From
-#Från
+msgid "From"
+msgstr "Från"
 
-#New connection
-#Ny anslutning
+msgid "New connection"
+msgstr "Ny anslutning"
 
-#No tracker URL was specified
-#Ingen trackeradress var specifierad
+msgid "No tracker URL was specified"
+msgstr "Ingen trackeradress var specifierad"
 
-#Stop seeding when inactive for
-#Avsluta delning när inaktiv i
+msgid "Stop seeding when inactive for"
+msgstr "Avsluta delning när inaktiv i"
 
-#The invalid time value was entered
-#Ett ogiltig tidsvärde angavs
+msgid "The invalid time value was entered"
+msgstr "Ett ogiltig tidsvärde angavs"
 
-#to
-#till
+msgid "to"
+msgstr "till"
 
-#Tracker announce URL
-#Trackerns annonseringsadress
+msgid "Tracker announce URL"
+msgstr "Trackerns annonseringsadress"
 
-#Upload speeds (KB/s)
-#Uppladdningshastighet (KB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "Uppladdningshastighet (KB/s)"
 
-#Browse
-#Bläddra
+msgid "Browse"
+msgstr "Bläddra"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#A new version of %s is available.
-#Your current version: %s
-#The new version: %s
-#Do you wish to open the Downloads web page?
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "A new version of %s is available."
+"Your current version: %s"
+"The new version: %s"
+"Do you wish to open the Downloads web page?"
 
-#Check for new version every
-#Sök efter nya versioner varje
+msgid "Check for new version every"
+msgstr "Sök efter nya versioner varje"
 
-#Consider active torrents as stalled when idle for
-#Anse att aktiva torrents är inaktiva efter
+msgid "Consider active torrents as stalled when idle for"
+msgstr "Anse att aktiva torrents är inaktiva efter"
 
-#Donate!
-#Donera!
+msgid "Donate!"
+msgstr "Donera!"
 
-#Download queue size
-#Storlek på nedladdningskön
+msgid "Download queue size"
+msgstr "Storlek på nedladdningskön"
 
-#Error checking for new version
-#Fel vid koll efter ny version
+msgid "Error checking for new version"
+msgstr "Fel vid koll efter ny version"
 
-#Modify trackers
-#Ändra trackers
+msgid "Modify trackers"
+msgstr "Ändra trackers"
 
-#No updates have been found.~You are running the latest version of %s
-#Inga uppdateringar hittades.
-#Du kör senaste versionen av %s
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "Inga uppdateringar hittades."
+"Du kör senaste versionen av %s"
 
-#Upload queue size
-#Storlek på uppladdningskön
+msgid "Upload queue size"
+msgstr "Storlek på uppladdningskön"
 
-#Global statistics
-#Global statistik
+msgid "Global statistics"
+msgstr "Global statistik"
 
-#Connection name
-#Namn på anslutningen
+msgid "Connection name"
+msgstr "Namn på anslutningen"
 
-#Could not connect to tracker
-#=Kunde inte ansluta till tracker
+msgid "Could not connect to tracker"
+msgstr "=Kunde inte ansluta till tracker"
 
-#Data refresh interval when minimized
-#Uppdateringsintervall av data vid minimerad
+msgid "Data refresh interval when minimized"
+msgstr "Uppdateringsintervall av data vid minimerad"
 
-#Data refresh interval
-#Uppdateringsintervall av data
+msgid "Data refresh interval"
+msgstr "Uppdateringsintervall av data"
 
-#Default download folder on remote host
-#Nedladdningskatalog på Transmission-servern
+msgid "Default download folder on remote host"
+msgstr "Nedladdningskatalog på Transmission-servern"
 
-#Downloading torrent file
-#Laddar ner torrentfil
+msgid "Downloading torrent file"
+msgstr "Laddar ner torrentfil"
 
-#Font size
-#Storlek på typsnittet
+msgid "Font size"
+msgstr "Storlek på typsnittet"
 
-#Invalid name specified
-#Felaktigt namn angivet
+msgid "Invalid name specified"
+msgstr "Felaktigt namn angivet"
 
-#Manage connections
-#Hantera anslutningar
+msgid "Manage connections"
+msgstr "Hantera anslutningar"
 
-#Please enter a password to connect to %s
-#Ange ett lösenord för att ansluta till %s
+msgid "Please enter a password to connect to %s"
+msgstr "Ange ett lösenord för att ansluta till %s"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#Ange hur %s kommer ansluta till maskinen som kör Transmission-servern (service)
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "Ange hur %s kommer ansluta till maskinen som kör Transmission-servern (service)"
 
-#RPC path
-#RPC-sökväg
+msgid "RPC path"
+msgstr "RPC-sökväg"
 
-#Save as
-#Spara som
+msgid "Save as"
+msgstr "Spara som"
 
-#Torrent not registered with this tracker
-#=Torrenten är inte registrerad hos denna tracker
+msgid "Torrent not registered with this tracker"
+msgstr "=Torrenten är inte registrerad hos denna tracker"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#Hittar inte katalogen.
-#Använd inställningarna under alternativ för detta programmet för att justera katalogen (path)
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "Hittar inte katalogen."
+"Använd inställningarna under alternativ för detta programmet för att justera katalogen (path)"
 
-#You need to restart the application to apply changes
-#Du måste starta om programmet för att verkställa ändringarna
+msgid "You need to restart the application to apply changes"
+msgstr "Du måste starta om programmet för att verkställa ändringarna"
 
-#Magnet Link
-#Magnetlänk
+msgid "Magnet Link"
+msgstr "Magnetlänk"
 
-#Export settings
-#Exportera inställningar
+msgid "Export settings"
+msgstr "Exportera inställningar"
 
-#Import settings
-#Importera inställningar
+msgid "Import settings"
+msgstr "Importera inställningar"
 
-#Template:
-#Mall:
+msgid "Template:"
+msgstr "Mall:"
 
-#Connection refused
-#Anslutning avvisad
+msgid "Connection refused"
+msgstr "Anslutning avvisad"
 
-#Access violation
-#Åtkomstfel
+msgid "Access violation"
+msgstr "Åtkomstfel"
 
-#Connection timed out
-#Anslutningstidsavbrott
+msgid "Connection timed out"
+msgstr "Anslutningstidsavbrott"
 
-#Other Winsock error
-#Annat Winsock-fel
+msgid "Other Winsock error"
+msgstr "Annat Winsock-fel"
 
-#Host not found
-#Värden kunde inte hittas
+msgid "Host not found"
+msgstr "Värden kunde inte hittas"
 
-#Unauthorized User
-#Obehörig användare
+msgid "Unauthorized User"
+msgstr "Obehörig användare"
 

@@ -2191,349 +2191,349 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#Română
+msgid "TranslationLanguage"
+msgstr "Română"
 
-#&All
-#&All
+msgid "&All"
+msgstr "&All"
 
-#&Close
-#&Închide
+msgid "&Close"
+msgstr "&Închide"
 
-#&Ignore
-#&Ignoră
+msgid "&Ignore"
+msgstr "&Ignoră"
 
-#&No
-#&Nu
+msgid "&No"
+msgstr "&Nu"
 
-#&OK
-#&OK
+msgid "&OK"
+msgstr "&OK"
 
-#&Open
-#&Deschide
+msgid "&Open"
+msgstr "&Deschide"
 
-#&Retry
-#&Reîncearcă
+msgid "&Retry"
+msgstr "&Reîncearcă"
 
-#&Save
-#&Salvează
+msgid "&Save"
+msgstr "&Salvează"
 
-#&Unlock
-#&Deblochează
+msgid "&Unlock"
+msgstr "&Deblochează"
 
-#&Yes
-#&Da
+msgid "&Yes"
+msgstr "&Da"
 
-#Abort
-#Anulează
+msgid "Abort"
+msgstr "Anulează"
 
-#&Add torrent
-#Adaugă torent
+msgid "&Add torrent"
+msgstr "Adaugă torent"
 
-#Authentication
-#Autentificare
+msgid "Authentication"
+msgstr "Autentificare"
 
-#Comment
-#Comentariu
+msgid "Comment"
+msgstr "Comentariu"
 
-#Confirmation
-#Confirmare
+msgid "Confirmation"
+msgstr "Confirmare"
 
-#Connecting to daemon
-#Se conectează la proces
+msgid "Connecting to daemon"
+msgstr "Se conectează la proces"
 
-#Connection error occurred
-#A apărut eroare de conexiune
+msgid "Connection error occurred"
+msgstr "A apărut eroare de conexiune"
 
-#Created on
-#Creat pe
+msgid "Created on"
+msgstr "Creat pe"
 
-#Destination folder
-#Director destinaţie
+msgid "Destination folder"
+msgstr "Director destinaţie"
 
-#Donate to support further development
-#Donaţi pentru susţinerea dezvoltării
+msgid "Donate to support further development"
+msgstr "Donaţi pentru susţinerea dezvoltării"
 
-#Down limit
-#Limita descărcare
+msgid "Down limit"
+msgstr "Limita descărcare"
 
-#Encryption
-#Criptare
+msgid "Encryption"
+msgstr "Criptare"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#Arhiva imaginilor cu etichete este necesară pentru afişarea simbolurilor de ţară.
-#Descărcaţi această arhivă acum?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "Arhiva imaginilor cu etichete este necesară pentru afişarea simbolurilor de ţară."
+"Descărcaţi această arhivă acum?"
 
-#Global peer limit
-#Limită generală de parteneri
+msgid "Global peer limit"
+msgstr "Limită generală de parteneri"
 
-#Hash
-#Hash
+msgid "Hash"
+msgstr "Hash"
 
-#Incoming port is closed. Check your firewall settings
-#Portul intrărilor este închis. Verificaţi setările din firewall
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "Portul intrărilor este închis. Verificaţi setările din firewall"
 
-#Incoming port tested successfully
-#Portul intrărilor testat cu succes
+msgid "Incoming port tested successfully"
+msgstr "Portul intrărilor testat cu succes"
 
-#Incoming port
-#Port intrări
+msgid "Incoming port"
+msgstr "Port intrări"
 
-#Information
-#Informaţie
+msgid "Information"
+msgstr "Informaţie"
 
-#Language
-#Limba
+msgid "Language"
+msgstr "Limba"
 
-#Max peers
-#Nr maxim de parteneri
+msgid "Max peers"
+msgstr "Nr maxim de parteneri"
 
-#No host name specified
-#Nume gazdă nespecificat
+msgid "No host name specified"
+msgstr "Nume gazdă nespecificat"
 
-#No proxy server specified
-#Server proxy nespecificat
+msgid "No proxy server specified"
+msgstr "Server proxy nespecificat"
 
-#No to all
-#Nu tuturor
+msgid "No to all"
+msgstr "Nu tuturor"
 
-#Password
-#Parolă
+msgid "Password"
+msgstr "Parolă"
 
-#Peer limit
-#Limită parteneri
+msgid "Peer limit"
+msgstr "Limită parteneri"
 
-#Pieces
-#Părţi
+msgid "Pieces"
+msgstr "Părţi"
 
-#Properties
-#Proprietăţi
+msgid "Properties"
+msgstr "Proprietăţi"
 
-#Proxy password
-#Parolă proxy
+msgid "Proxy password"
+msgstr "Parolă proxy"
 
-#Proxy port
-#Port proxy
+msgid "Proxy port"
+msgstr "Port proxy"
 
-#Proxy server
-#Server proxy
+msgid "Proxy server"
+msgstr "Server proxy"
 
-#Proxy user name
-#Utilizator proxy
+msgid "Proxy user name"
+msgstr "Utilizator proxy"
 
-#Reconnect in %d seconds
-#Reconectare în %d secunde
+msgid "Reconnect in %d seconds"
+msgstr "Reconectare în %d secunde"
 
-#Remaining
-#Au rămas
+msgid "Remaining"
+msgstr "Au rămas"
 
-#Remote host
-#Gazdă la distanţă
+msgid "Remote host"
+msgstr "Gazdă la distanţă"
 
-#Seed ratio
-#Rație partajare
+msgid "Seed ratio"
+msgstr "Rație partajare"
 
-#Setup columns
-#Setare coloane
+msgid "Setup columns"
+msgstr "Setare coloane"
 
-#Share ratio
-#Rație de
+msgid "Share ratio"
+msgstr "Rație de"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Torenţi (*.torrent)|*.torrent|Toate fişierele (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Torenţi (*.torrent)|*.torrent|Toate fişierele (*.*)|*.*"
 
-#Total size
-#Mărime totală
+msgid "Total size"
+msgstr "Mărime totală"
 
-#Tracker update on
-#Actualizare tracker pe
+msgid "Tracker update on"
+msgstr "Actualizare tracker pe"
 
-#Unable to extract flag image
-#Imposibil de extras imagine steag
+msgid "Unable to extract flag image"
+msgstr "Imposibil de extras imagine steag"
 
-#Up limit
-#Limită încărcare
+msgid "Up limit"
+msgstr "Limită încărcare"
 
-#Update complete
-#Actualizare completă
+msgid "Update complete"
+msgstr "Actualizare completă"
 
-#Upload speed
-#Viteză încărcare
+msgid "Upload speed"
+msgstr "Viteză încărcare"
 
-#User name
-#Nume utilizator
+msgid "User name"
+msgstr "Nume utilizator"
 
-#Warning
-#Avertizare
+msgid "Warning"
+msgstr "Avertizare"
 
-#Wasted
-#Pierdut
+msgid "Wasted"
+msgstr "Pierdut"
 
-#Yes to &All
-#Da &All
+msgid "Yes to &All"
+msgstr "Da &All"
 
-#Directory for incomplete files
-#Director pentru fişiere incomplete
+msgid "Directory for incomplete files"
+msgstr "Director pentru fişiere incomplete"
 
-#Enable blocklist
-#Activează lista neagră
+msgid "Enable blocklist"
+msgstr "Activează lista neagră"
 
-#New location for torrent data
-#Noua locaţie pentru datele torentului
+msgid "New location for torrent data"
+msgstr "Noua locaţie pentru datele torentului"
 
-#No link was specified
-#Nicio legătură specificată
+msgid "No link was specified"
+msgstr "Nicio legătură specificată"
 
-#No torrent location was specified
-#Nicio locaţie a torentului specificată
+msgid "No torrent location was specified"
+msgstr "Nicio locaţie a torentului specificată"
 
-#Set data location
-#Setează destinaţia fişierelor
+msgid "Set data location"
+msgstr "Setează destinaţia fişierelor"
 
-#The block list has been updated successfully.~The list entries count: %d
-#Lista neagră a fost actualizată cu succes.
-#Numărul de intrări în listă: %d
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "Lista neagră a fost actualizată cu succes."
+"Numărul de intrări în listă: %d"
 
-#The directory for incomplete files was not specified
-#Directorul pentru fişiere incomplete nu a fost specificat
+msgid "The directory for incomplete files was not specified"
+msgstr "Directorul pentru fişiere incomplete nu a fost specificat"
 
-#The downloads directory was not specified
-#Directorul pentru descărcări nu a fost specificat
+msgid "The downloads directory was not specified"
+msgstr "Directorul pentru descărcări nu a fost specificat"
 
-#Unable to execute "%s"
-#Imposibil de executat "%s"
+msgid "Unable to execute "%s""
+msgstr "Imposibil de executat "%s""
 
-#URL of a .torrent file or a magnet link
-#URL al unui fişier .torrent sau legătură
+msgid "URL of a .torrent file or a magnet link"
+msgstr "URL al unui fişier .torrent sau legătură"
 
-#Days
-#Zile
+msgid "Days"
+msgstr "Zile"
 
-#Disk cache size
-#Mărime cache disc
+msgid "Disk cache size"
+msgstr "Mărime cache disc"
 
-#Download speeds (KB/s)
-#Viteze descărcare (KB/s)
+msgid "Download speeds (KB/s)"
+msgstr "Viteze descărcare (KB/s)"
 
-#Edit tracker
-#Editează tracker
+msgid "Edit tracker"
+msgstr "Editează tracker"
 
-#Free disk space
-#Spațiu liber pe disc
+msgid "Free disk space"
+msgstr "Spațiu liber pe disc"
 
-#From
-#De la
+msgid "From"
+msgstr "De la"
 
-#New connection
-#Conexiune nouă
+msgid "New connection"
+msgstr "Conexiune nouă"
 
-#No tracker URL was specified
-#URL Tracker nespecificat
+msgid "No tracker URL was specified"
+msgstr "URL Tracker nespecificat"
 
-#Stop seeding when inactive for
-#Oprește partajarea după inactivitatea de
+msgid "Stop seeding when inactive for"
+msgstr "Oprește partajarea după inactivitatea de"
 
-#The invalid time value was entered
-#A fost introdusă o valoare de timp invalidă
+msgid "The invalid time value was entered"
+msgstr "A fost introdusă o valoare de timp invalidă"
 
-#to
-#către
+msgid "to"
+msgstr "către"
 
-#Tracker announce URL
-#Tracker anunță URL
+msgid "Tracker announce URL"
+msgstr "Tracker anunță URL"
 
-#Upload speeds (KB/s)
-#Viteze încărcare (KB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "Viteze încărcare (KB/s)"
 
-#Browse
-#Navighează
+msgid "Browse"
+msgstr "Navighează"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#A new version of %s is available.
-#Your current version: %s
-#The new version: %s
-#Do you wish to open the Downloads web page?
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "A new version of %s is available."
+"Your current version: %s"
+"The new version: %s"
+"Do you wish to open the Downloads web page?"
 
-#Check for new version every
-#Check for new version every
+msgid "Check for new version every"
+msgstr "Check for new version every"
 
-#Consider active torrents as stalled when idle for
-#Consider active torrents as stalled when idle for
+msgid "Consider active torrents as stalled when idle for"
+msgstr "Consider active torrents as stalled when idle for"
 
-#Donate!
-#Donate!
+msgid "Donate!"
+msgstr "Donate!"
 
-#Download queue size
-#Download queue size
+msgid "Download queue size"
+msgstr "Download queue size"
 
-#Error checking for new version
-#Error checking for new version
+msgid "Error checking for new version"
+msgstr "Error checking for new version"
 
-#Modify trackers
-#Modify trackers
+msgid "Modify trackers"
+msgstr "Modify trackers"
 
-#No updates have been found.~You are running the latest version of %s
-#No updates have been found.
-#You are running the latest version of %s
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "No updates have been found."
+"You are running the latest version of %s"
 
-#Upload queue size
-#Upload queue size
+msgid "Upload queue size"
+msgstr "Upload queue size"
 
-#Donate via PayPal,WebMoney,Credit card
-#Donate via PayPal,WebMoney,Credit card
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "Donate via PayPal,WebMoney,Credit card"
 
-#Download speed
-#Download speed
+msgid "Download speed"
+msgstr "Download speed"
 
-#Global statistics
-#Global statistics
+msgid "Global statistics"
+msgstr "Global statistics"
 
-#Connection name
-#Connection name
+msgid "Connection name"
+msgstr "Connection name"
 
-#Could not connect to tracker
-#=Could not connect to tracker
+msgid "Could not connect to tracker"
+msgstr "=Could not connect to tracker"
 
-#Data refresh interval when minimized
-#Data refresh interval when minimized
+msgid "Data refresh interval when minimized"
+msgstr "Data refresh interval when minimized"
 
-#Data refresh interval
-#Data refresh interval
+msgid "Data refresh interval"
+msgstr "Data refresh interval"
 
-#Default download folder on remote host
-#Default download folder on remote host
+msgid "Default download folder on remote host"
+msgstr "Default download folder on remote host"
 
-#Downloading torrent file
-#Downloading torrent file
+msgid "Downloading torrent file"
+msgstr "Downloading torrent file"
 
-#Font size
-#Font size
+msgid "Font size"
+msgstr "Font size"
 
-#Invalid name specified
-#Invalid name specified
+msgid "Invalid name specified"
+msgstr "Invalid name specified"
 
-#Manage connections
-#Manage connections
+msgid "Manage connections"
+msgstr "Manage connections"
 
-#Please enter a password to connect to %s
-#Please enter a password to connect to %s
+msgid "Please enter a password to connect to %s"
+msgstr "Please enter a password to connect to %s"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "Please specify how %s will connect to a remote host running Transmission daemon (service)"
 
-#RPC path
-#RPC path
+msgid "RPC path"
+msgstr "RPC path"
 
-#Save as
-#Save as
+msgid "Save as"
+msgstr "Save as"
 
-#Torrent not registered with this tracker
-#=Torrent not registered with this tracker
+msgid "Torrent not registered with this tracker"
+msgstr "=Torrent not registered with this tracker"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#Unable to find path mapping.
-#Use the application's options to setup path mappings
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "Unable to find path mapping."
+"Use the application's options to setup path mappings"
 
-#You need to restart the application to apply changes
-#You need to restart the application to apply changes
+msgid "You need to restart the application to apply changes"
+msgstr "You need to restart the application to apply changes"
 

@@ -2188,383 +2188,383 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#正體中文
+msgid "TranslationLanguage"
+msgstr "正體中文"
 
-#&All
-#所有(&A)
+msgid "&All"
+msgstr "所有(&A)"
 
-#&Close
-#關閉(&C)
+msgid "&Close"
+msgstr "關閉(&C)"
 
-#&Ignore
-#忽略(&I)
+msgid "&Ignore"
+msgstr "忽略(&I)"
 
-#&No
-#否(&N)
+msgid "&No"
+msgstr "否(&N)"
 
-#&OK
-#確認(&O)
+msgid "&OK"
+msgstr "確認(&O)"
 
-#&Open
-#開啟(&O)
+msgid "&Open"
+msgstr "開啟(&O)"
 
-#&Retry
-#重試(&R)
+msgid "&Retry"
+msgstr "重試(&R)"
 
-#&Save
-#儲存(&S)
+msgid "&Save"
+msgstr "儲存(&S)"
 
-#&Unlock
-#解鎖(&U)
+msgid "&Unlock"
+msgstr "解鎖(&U)"
 
-#&Yes
-#確認(&Y)
+msgid "&Yes"
+msgstr "確認(&Y)"
 
-#Abort
-#中止
+msgid "Abort"
+msgstr "中止"
 
-#&Add torrent
-#新增 Torrent(&A)
+msgid "&Add torrent"
+msgstr "新增 Torrent(&A)"
 
-#Authentication
-#認證
+msgid "Authentication"
+msgstr "認證"
 
-#Comment
-#備註
+msgid "Comment"
+msgstr "備註"
 
-#Confirmation
-#確認
+msgid "Confirmation"
+msgstr "確認"
 
-#Connecting to daemon
-#連線中
+msgid "Connecting to daemon"
+msgstr "連線中"
 
-#Connection error occurred
-#連線發生錯誤
+msgid "Connection error occurred"
+msgstr "連線發生錯誤"
 
-#Created on
-#建立於
+msgid "Created on"
+msgstr "建立於"
 
-#Destination folder
-#目標資料夾
+msgid "Destination folder"
+msgstr "目標資料夾"
 
-#Donate to support further development
-#請贊助後續程式開發
+msgid "Donate to support further development"
+msgstr "請贊助後續程式開發"
 
-#Donate via PayPal,WebMoney,Credit card
-#透過 PayPal, WebMoney, Credit Card 贊助
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "透過 PayPal, WebMoney, Credit Card 贊助"
 
-#Down limit
-#下載限速
+msgid "Down limit"
+msgstr "下載限速"
 
-#Download speed
-#下載速度
+msgid "Download speed"
+msgstr "下載速度"
 
-#Encryption
-#加密
+msgid "Encryption"
+msgstr "加密"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#是否要下載用以顯示 IP 國別的國旗圖檔?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "是否要下載用以顯示 IP 國別的國旗圖檔?"
 
-#Global peer limit
-#總體連線限制
+msgid "Global peer limit"
+msgstr "總體連線限制"
 
-#Hash
-#校驗值
+msgid "Hash"
+msgstr "校驗值"
 
-#Incoming port is closed. Check your firewall settings
-#連接埠未開啟，請檢查防火牆設定
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "連接埠未開啟，請檢查防火牆設定"
 
-#Incoming port tested successfully
-#連接埠測試成功
+msgid "Incoming port tested successfully"
+msgstr "連接埠測試成功"
 
-#Incoming port
-#連接埠
+msgid "Incoming port"
+msgstr "連接埠"
 
-#Information
-#訊息
+msgid "Information"
+msgstr "訊息"
 
-#Language
-#語言
+msgid "Language"
+msgstr "語言"
 
-#Max peers
-#最大節點連線數
+msgid "Max peers"
+msgstr "最大節點連線數"
 
-#No host name specified
-#未指定主機名稱
+msgid "No host name specified"
+msgstr "未指定主機名稱"
 
-#No proxy server specified
-#未指定代理伺服器名稱
+msgid "No proxy server specified"
+msgstr "未指定代理伺服器名稱"
 
-#No to all
-#全部皆否
+msgid "No to all"
+msgstr "全部皆否"
 
-#Password
-#密碼
+msgid "Password"
+msgstr "密碼"
 
-#Peer limit
-#節點連線數限制
+msgid "Peer limit"
+msgstr "節點連線數限制"
 
-#Pieces
-#區塊
+msgid "Pieces"
+msgstr "區塊"
 
-#Properties
-#屬性
+msgid "Properties"
+msgstr "屬性"
 
-#Proxy password
-#代理伺服器密碼
+msgid "Proxy password"
+msgstr "代理伺服器密碼"
 
-#Proxy port
-#代理伺服器連接埠
+msgid "Proxy port"
+msgstr "代理伺服器連接埠"
 
-#Proxy server
-#代理伺服器主機
+msgid "Proxy server"
+msgstr "代理伺服器主機"
 
-#Proxy user name
-#代理伺服器使用者名稱
+msgid "Proxy user name"
+msgstr "代理伺服器使用者名稱"
 
-#Reconnect in %d seconds
-#在 %d 秒後重新連線
+msgid "Reconnect in %d seconds"
+msgstr "在 %d 秒後重新連線"
 
-#Remaining
-#剩餘
+msgid "Remaining"
+msgstr "剩餘"
 
-#Remote host
-#遠端主機
+msgid "Remote host"
+msgstr "遠端主機"
 
-#Seed ratio
-#到達設定分享率後停止作種
+msgid "Seed ratio"
+msgstr "到達設定分享率後停止作種"
 
-#Setup columns
-#設定顯示選項
+msgid "Setup columns"
+msgstr "設定顯示選項"
 
-#Share ratio
-#分享率
+msgid "Share ratio"
+msgstr "分享率"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Torrent檔案 (*.torrent)|*.torrent|所有檔案 (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Torrent檔案 (*.torrent)|*.torrent|所有檔案 (*.*)|*.*"
 
-#Total size
-#總計大小
+msgid "Total size"
+msgstr "總計大小"
 
-#Tracker update on
-#Tracker 更新於
+msgid "Tracker update on"
+msgstr "Tracker 更新於"
 
-#Unable to extract flag image
-#無法解壓縮國旗圖檔
+msgid "Unable to extract flag image"
+msgstr "無法解壓縮國旗圖檔"
 
-#Up limit
-#上傳限制
+msgid "Up limit"
+msgstr "上傳限制"
 
-#Update complete
-#更新完畢
+msgid "Update complete"
+msgstr "更新完畢"
 
-#Upload speed
-#上傳速度
+msgid "Upload speed"
+msgstr "上傳速度"
 
-#User name
-#使用者名稱
+msgid "User name"
+msgstr "使用者名稱"
 
-#Warning
-#警告
+msgid "Warning"
+msgstr "警告"
 
-#Wasted
-#捨棄
+msgid "Wasted"
+msgstr "捨棄"
 
-#Yes to &All
-#全部確認(&A)
+msgid "Yes to &All"
+msgstr "全部確認(&A)"
 
-#Directory for incomplete files
-#未完成檔案
+msgid "Directory for incomplete files"
+msgstr "未完成檔案"
 
-#Enable blocklist
-#啟用黑名單
+msgid "Enable blocklist"
+msgstr "啟用黑名單"
 
-#New location for torrent data
-#Torrent 檔案資料新位置
+msgid "New location for torrent data"
+msgstr "Torrent 檔案資料新位置"
 
-#No link was specified
-#未指定連結
+msgid "No link was specified"
+msgstr "未指定連結"
 
-#No torrent location was specified
-#Torrent 檔案位置未指定
+msgid "No torrent location was specified"
+msgstr "Torrent 檔案位置未指定"
 
-#Set data location
-#設定資料位置
+msgid "Set data location"
+msgstr "設定資料位置"
 
-#The block list has been updated successfully.~The list entries count: %d
-#黑名單更新成功.
-#共有: %d 筆
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "黑名單更新成功."
+"共有: %d 筆"
 
-#The directory for incomplete files was not specified
-#未完成檔案的目錄未指定
+msgid "The directory for incomplete files was not specified"
+msgstr "未完成檔案的目錄未指定"
 
-#The downloads directory was not specified
-#下載目錄未指定
+msgid "The downloads directory was not specified"
+msgstr "下載目錄未指定"
 
-#Unable to execute "%s"
-#無法執行 "%s"
+msgid "Unable to execute "%s""
+msgstr "無法執行 "%s""
 
-#URL of a .torrent file or a magnet link
-#Torrent 檔案網址或是 Magnet 磁力連結
+msgid "URL of a .torrent file or a magnet link"
+msgstr "Torrent 檔案網址或是 Magnet 磁力連結"
 
-#Days
-#日
+msgid "Days"
+msgstr "日"
 
-#Disk cache size
-#磁碟快取大小
+msgid "Disk cache size"
+msgstr "磁碟快取大小"
 
-#Download speeds (KB/s)
-#下載速度 (KB/s)
+msgid "Download speeds (KB/s)"
+msgstr "下載速度 (KB/s)"
 
-#Edit tracker
-#編輯Tracker
+msgid "Edit tracker"
+msgstr "編輯Tracker"
 
-#Free disk space
-#磁碟可用空間
+msgid "Free disk space"
+msgstr "磁碟可用空間"
 
-#From
-#來自
+msgid "From"
+msgstr "來自"
 
-#New connection
-#新連線
+msgid "New connection"
+msgstr "新連線"
 
-#No tracker URL was specified
-#沒有指定 Tracker
+msgid "No tracker URL was specified"
+msgstr "沒有指定 Tracker"
 
-#Stop seeding when inactive for
-#當到達指定閒置時間後停止做種
+msgid "Stop seeding when inactive for"
+msgstr "當到達指定閒置時間後停止做種"
 
-#The invalid time value was entered
-#輸入的時間無效
+msgid "The invalid time value was entered"
+msgstr "輸入的時間無效"
 
-#to
-#到
+msgid "to"
+msgstr "到"
 
-#Tracker announce URL
-#Tracker 通告連結
+msgid "Tracker announce URL"
+msgstr "Tracker 通告連結"
 
-#Upload speeds (KB/s)
-#上傳速度 (KB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "上傳速度 (KB/s)"
 
-#Browse
-#瀏覽
+msgid "Browse"
+msgstr "瀏覽"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#新版本 %s 已經可以下載
-#現在的版本為: %s
-#新版本為: %s
-#是否要開啟下載網頁?
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "新版本 %s 已經可以下載"
+"現在的版本為: %s"
+"新版本為: %s"
+"是否要開啟下載網頁?"
 
-#Check for new version every
-#檢查新版本間隔時間
+msgid "Check for new version every"
+msgstr "檢查新版本間隔時間"
 
-#Consider active torrents as stalled when idle for
-#超過多久閒置時間後，設定 Torrent 為暫停
+msgid "Consider active torrents as stalled when idle for"
+msgstr "超過多久閒置時間後，設定 Torrent 為暫停"
 
-#Donate!
-#贊助!
+msgid "Donate!"
+msgstr "贊助!"
 
-#Download queue size
-#下載佇列
+msgid "Download queue size"
+msgstr "下載佇列"
 
-#Error checking for new version
-#新版本檢查錯誤
+msgid "Error checking for new version"
+msgstr "新版本檢查錯誤"
 
-#Modify trackers
-#變更 Trackers
+msgid "Modify trackers"
+msgstr "變更 Trackers"
 
-#No updates have been found.~You are running the latest version of %s
-#未發現新版本
-#您正在使用最新版本的 %s
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "未發現新版本"
+"您正在使用最新版本的 %s"
 
-#Upload queue size
-#上傳佇列大小
+msgid "Upload queue size"
+msgstr "上傳佇列大小"
 
-#Global statistics
-#整體統計
+msgid "Global statistics"
+msgstr "整體統計"
 
-#Connection name
-#連線名稱
+msgid "Connection name"
+msgstr "連線名稱"
 
-#Could not connect to tracker
-#=無法連線到 tracker
+msgid "Could not connect to tracker"
+msgstr "=無法連線到 tracker"
 
-#Data refresh interval when minimized
-#最小化時資料更新間隔
+msgid "Data refresh interval when minimized"
+msgstr "最小化時資料更新間隔"
 
-#Data refresh interval
-#資料更新間隔
+msgid "Data refresh interval"
+msgstr "資料更新間隔"
 
-#Default download folder on remote host
-#遠端預設下載路徑
+msgid "Default download folder on remote host"
+msgstr "遠端預設下載路徑"
 
-#Downloading torrent file
-#下載 torrent 檔案
+msgid "Downloading torrent file"
+msgstr "下載 torrent 檔案"
 
-#Font size
-#字型大小
+msgid "Font size"
+msgstr "字型大小"
 
-#Invalid name specified
-#無效的名稱
+msgid "Invalid name specified"
+msgstr "無效的名稱"
 
-#Manage connections
-#管理連線
+msgid "Manage connections"
+msgstr "管理連線"
 
-#Please enter a password to connect to %s
-#請輸入連線到 %s 的密碼
+msgid "Please enter a password to connect to %s"
+msgstr "請輸入連線到 %s 的密碼"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#請指定 %s 的連線方式
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "請指定 %s 的連線方式"
 
-#RPC path
-#RPC 路徑
+msgid "RPC path"
+msgstr "RPC 路徑"
 
-#Save as
-#另存新檔
+msgid "Save as"
+msgstr "另存新檔"
 
-#Torrent not registered with this tracker
-#=Torrent 尚未在這個 tracker 註冊
+msgid "Torrent not registered with this tracker"
+msgstr "=Torrent 尚未在這個 tracker 註冊"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#無法找到路徑對應，請手動在選項中設定路徑對應
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "無法找到路徑對應，請手動在選項中設定路徑對應"
 
-#You need to restart the application to apply changes
-#您需要重新啟動程式以套用變更
+msgid "You need to restart the application to apply changes"
+msgstr "您需要重新啟動程式以套用變更"
 
-#Magnet Link
-#Magnet 磁力連結
+msgid "Magnet Link"
+msgstr "Magnet 磁力連結"
 
-#Export settings
-#匯出設定
+msgid "Export settings"
+msgstr "匯出設定"
 
-#Import settings
-#匯入設定
+msgid "Import settings"
+msgstr "匯入設定"
 
-#Template:
-#樣本:
+msgid "Template:"
+msgstr "樣本:"
 
-#Connection refused
-#無法建立連線：連線被拒絕
+msgid "Connection refused"
+msgstr "無法建立連線：連線被拒絕"
 
-#Access violation
-#記憶體存取異常
+msgid "Access violation"
+msgstr "記憶體存取異常"
 
-#Connection timed out
-#連線逾時
+msgid "Connection timed out"
+msgstr "連線逾時"
 
-#Other Winsock error
-#未知的 Winsock 錯誤
+msgid "Other Winsock error"
+msgstr "未知的 Winsock 錯誤"
 
-#Host not found
-#找不到遠端主機
+msgid "Host not found"
+msgstr "找不到遠端主機"
 
-#Unauthorized User
-#使用者驗證失敗
+msgid "Unauthorized User"
+msgstr "使用者驗證失敗"
 
-#Client Certificate
-#用戶端憑證
+msgid "Client Certificate"
+msgstr "用戶端憑證"
 
-#Private Key
-#私密金鑰
+msgid "Private Key"
+msgstr "私密金鑰"
 

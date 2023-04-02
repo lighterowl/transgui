@@ -2195,373 +2195,373 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#Magyar
+msgid "TranslationLanguage"
+msgstr "Magyar"
 
-#&All
-#&Minden
+msgid "&All"
+msgstr "&Minden"
 
-#&Close
-#&Bezár
+msgid "&Close"
+msgstr "&Bezár"
 
-#&Ignore
-#&Elutasít
+msgid "&Ignore"
+msgstr "&Elutasít"
 
-#&No
-#&Nem
+msgid "&No"
+msgstr "&Nem"
 
-#&OK
-#&OK
+msgid "&OK"
+msgstr "&OK"
 
-#&Open
-#&Megnyitás
+msgid "&Open"
+msgstr "&Megnyitás"
 
-#&Retry
-#&Újra
+msgid "&Retry"
+msgstr "&Újra"
 
-#&Save
-#&Mentés
+msgid "&Save"
+msgstr "&Mentés"
 
-#&Unlock
-#&Kiold
+msgid "&Unlock"
+msgstr "&Kiold"
 
-#&Yes
-#&Igen
+msgid "&Yes"
+msgstr "&Igen"
 
-#Abort
-#Leállít
+msgid "Abort"
+msgstr "Leállít"
 
-#&Add torrent
-#Torrent hozzáadás
+msgid "&Add torrent"
+msgstr "Torrent hozzáadás"
 
-#Authentication
-#Azonosítás
+msgid "Authentication"
+msgstr "Azonosítás"
 
-#Comment
-#Megjegyzés
+msgid "Comment"
+msgstr "Megjegyzés"
 
-#Confirmation
-#Megerősítés
+msgid "Confirmation"
+msgstr "Megerősítés"
 
-#Connecting to daemon
-#Csatlakozás a démonhoz folyamatban
+msgid "Connecting to daemon"
+msgstr "Csatlakozás a démonhoz folyamatban"
 
-#Connection error occurred
-#Csatlakozási hiba
+msgid "Connection error occurred"
+msgstr "Csatlakozási hiba"
 
-#Created on
-#Létrehozva ekkor
+msgid "Created on"
+msgstr "Létrehozva ekkor"
 
-#Destination folder
-#Célmappa
+msgid "Destination folder"
+msgstr "Célmappa"
 
-#Donate to support further development
-#Adományoddal támogasd a további fejlesztést!
+msgid "Donate to support further development"
+msgstr "Adományoddal támogasd a további fejlesztést!"
 
-#Donate via PayPal,WebMoney,Credit card
-#Támogatás PayPal,WebMoney,Credit card keresztül
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "Támogatás PayPal,WebMoney,Credit card keresztül"
 
-#Down limit
-#Letöltési korlát
+msgid "Down limit"
+msgstr "Letöltési korlát"
 
-#Download speed
-#Letöltési sebesség
+msgid "Download speed"
+msgstr "Letöltési sebesség"
 
-#Encryption
-#Titkosítás
+msgid "Encryption"
+msgstr "Titkosítás"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#Az országzászlók kijelzéséhez szükség van a Zászlókép csomagra.
-#Letöltsem ezt a csomagot most?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "Az országzászlók kijelzéséhez szükség van a Zászlókép csomagra."
+"Letöltsem ezt a csomagot most?"
 
-#Global peer limit
-#Globális partner korlát
+msgid "Global peer limit"
+msgstr "Globális partner korlát"
 
-#Hash
-#Hash
+msgid "Hash"
+msgstr "Hash"
 
-#Incoming port is closed. Check your firewall settings
-#Bejövő port zárva. Ellenőrízd a tűzfal beállításokat
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "Bejövő port zárva. Ellenőrízd a tűzfal beállításokat"
 
-#Incoming port tested successfully
-#Bejövő port próbája sikerült
+msgid "Incoming port tested successfully"
+msgstr "Bejövő port próbája sikerült"
 
-#Incoming port
-#Bejövő port
+msgid "Incoming port"
+msgstr "Bejövő port"
 
-#Information
-#Információ
+msgid "Information"
+msgstr "Információ"
 
-#Language
-#Nyelv
+msgid "Language"
+msgstr "Nyelv"
 
-#Max peers
-#Max peer szám
+msgid "Max peers"
+msgstr "Max peer szám"
 
-#No host name specified
-#Host név nem adott
+msgid "No host name specified"
+msgstr "Host név nem adott"
 
-#No proxy server specified
-#Proxy server nincs beállítva
+msgid "No proxy server specified"
+msgstr "Proxy server nincs beállítva"
 
-#No to all
-#Mindenre nem
+msgid "No to all"
+msgstr "Mindenre nem"
 
-#Password
-#Jelszó
+msgid "Password"
+msgstr "Jelszó"
 
-#Peer limit
-#Partnerszám korlát
+msgid "Peer limit"
+msgstr "Partnerszám korlát"
 
-#Pieces
-#Darabok
+msgid "Pieces"
+msgstr "Darabok"
 
-#Properties
-#Tulajdonságok
+msgid "Properties"
+msgstr "Tulajdonságok"
 
-#Proxy password
-#Proxy jelszó
+msgid "Proxy password"
+msgstr "Proxy jelszó"
 
-#Proxy port
-#Proxy port
+msgid "Proxy port"
+msgstr "Proxy port"
 
-#Proxy server
-#Proxy szerver
+msgid "Proxy server"
+msgstr "Proxy szerver"
 
-#Proxy user name
-#Proxy felhasználónév
+msgid "Proxy user name"
+msgstr "Proxy felhasználónév"
 
-#Reconnect in %d seconds
-#Újracsatlakozás %d mp-en belül
+msgid "Reconnect in %d seconds"
+msgstr "Újracsatlakozás %d mp-en belül"
 
-#Remaining
-#Hátravan
+msgid "Remaining"
+msgstr "Hátravan"
 
-#Remote host
-#Távoli kiszolgáló
+msgid "Remote host"
+msgstr "Távoli kiszolgáló"
 
-#Seed ratio
-#Megosztás eddig az arányig
+msgid "Seed ratio"
+msgstr "Megosztás eddig az arányig"
 
-#Setup columns
-#Oszlopok beállítása
+msgid "Setup columns"
+msgstr "Oszlopok beállítása"
 
-#Share ratio
-#Megosztási arány
+msgid "Share ratio"
+msgstr "Megosztási arány"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Torrents (*.torrent)|*.torrent|Minden fájl (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Torrents (*.torrent)|*.torrent|Minden fájl (*.*)|*.*"
 
-#Total size
-#Teljes méret
+msgid "Total size"
+msgstr "Teljes méret"
 
-#Tracker update on
-#Tracker frissítve ekkor
+msgid "Tracker update on"
+msgstr "Tracker frissítve ekkor"
 
-#Unable to extract flag image
-#Nem lehet kibontani a zászló képet
+msgid "Unable to extract flag image"
+msgstr "Nem lehet kibontani a zászló képet"
 
-#Up limit
-#Feltöltési korlát
+msgid "Up limit"
+msgstr "Feltöltési korlát"
 
-#Update complete
-#Frissítés kész
+msgid "Update complete"
+msgstr "Frissítés kész"
 
-#Upload speed
-#Feltöltési sebesség
+msgid "Upload speed"
+msgstr "Feltöltési sebesség"
 
-#User name
-#Felhasználónév
+msgid "User name"
+msgstr "Felhasználónév"
 
-#Warning
-#Figyelmeztetés
+msgid "Warning"
+msgstr "Figyelmeztetés"
 
-#Wasted
-#Kárbaveszett
+msgid "Wasted"
+msgstr "Kárbaveszett"
 
-#Yes to &All
-#Igen &Mindenre
+msgid "Yes to &All"
+msgstr "Igen &Mindenre"
 
-#Directory for incomplete files
-#A félkész fájlok mappája
+msgid "Directory for incomplete files"
+msgstr "A félkész fájlok mappája"
 
-#Enable blocklist
-#Tiltólista engedélyezése
+msgid "Enable blocklist"
+msgstr "Tiltólista engedélyezése"
 
-#New location for torrent data
-#Torrent adatok új helye
+msgid "New location for torrent data"
+msgstr "Torrent adatok új helye"
 
-#No link was specified
-#Nincs link megadva
+msgid "No link was specified"
+msgstr "Nincs link megadva"
 
-#No torrent location was specified
-#Nincs torrent hely megadva
+msgid "No torrent location was specified"
+msgstr "Nincs torrent hely megadva"
 
-#Set data location
-#Adatok helyének beállítása
+msgid "Set data location"
+msgstr "Adatok helyének beállítása"
 
-#The block list has been updated successfully.~The list entries count: %d
-#A tiltólista sikeresen frissült.
-#A lista elemeinek száma: %d
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "A tiltólista sikeresen frissült."
+"A lista elemeinek száma: %d"
 
-#The directory for incomplete files was not specified
-#A félkész fájlok mappája nincs megadva
+msgid "The directory for incomplete files was not specified"
+msgstr "A félkész fájlok mappája nincs megadva"
 
-#The downloads directory was not specified
-#Letöltések mappa nincs megadva
+msgid "The downloads directory was not specified"
+msgstr "Letöltések mappa nincs megadva"
 
-#Unable to execute "%s"
-#Nem sikerült futtatni: "%s"
+msgid "Unable to execute "%s""
+msgstr "Nem sikerült futtatni: "%s""
 
-#URL of a .torrent file or a magnet link
-#Egy .torrent fájl vagy mágneslink URL-je
+msgid "URL of a .torrent file or a magnet link"
+msgstr "Egy .torrent fájl vagy mágneslink URL-je"
 
-#Days
-#Napok
+msgid "Days"
+msgstr "Napok"
 
-#Disk cache size
-#Gyorsítótár mérete
+msgid "Disk cache size"
+msgstr "Gyorsítótár mérete"
 
-#Download speeds (KB/s)
-#Letöltés sebessége (KB/s)
+msgid "Download speeds (KB/s)"
+msgstr "Letöltés sebessége (KB/s)"
 
-#Edit tracker
-#Tracker módosítás
+msgid "Edit tracker"
+msgstr "Tracker módosítás"
 
-#Free disk space
-#Szabad lemez terület
+msgid "Free disk space"
+msgstr "Szabad lemez terület"
 
-#From
-#Ettől
+msgid "From"
+msgstr "Ettől"
 
-#New connection
-#Új kapcsolat
+msgid "New connection"
+msgstr "Új kapcsolat"
 
-#No tracker URL was specified
-#Nincs tracker URL megadva
+msgid "No tracker URL was specified"
+msgstr "Nincs tracker URL megadva"
 
-#Stop seeding when inactive for
-#Megosztás megszüntetése, ha nincs használatban
+msgid "Stop seeding when inactive for"
+msgstr "Megosztás megszüntetése, ha nincs használatban"
 
-#The invalid time value was entered
-#Érvénytelen időérték van beírva
+msgid "The invalid time value was entered"
+msgstr "Érvénytelen időérték van beírva"
 
-#to
-#eddig
+msgid "to"
+msgstr "eddig"
 
-#Tracker announce URL
-#Tracker bejelentő URL
+msgid "Tracker announce URL"
+msgstr "Tracker bejelentő URL"
 
-#Upload speeds (KB/s)
-#Feltöltési sebesség (KB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "Feltöltési sebesség (KB/s)"
 
-#Browse
-#Tallózás
+msgid "Browse"
+msgstr "Tallózás"
 
-#Check for new version every
-#Új programverzió keresése
+msgid "Check for new version every"
+msgstr "Új programverzió keresése"
 
-#Consider active torrents as stalled when idle for
-#Elakadtnak tekinti azt az aktív torrentet, ami tétlen több mint
+msgid "Consider active torrents as stalled when idle for"
+msgstr "Elakadtnak tekinti azt az aktív torrentet, ami tétlen több mint"
 
-#Donate!
-#Adakozz!
+msgid "Donate!"
+msgstr "Adakozz!"
 
-#Download queue size
-#Letöltési sor hossza
+msgid "Download queue size"
+msgstr "Letöltési sor hossza"
 
-#Error checking for new version
-#Hiba új verzió keresése közben
+msgid "Error checking for new version"
+msgstr "Hiba új verzió keresése közben"
 
-#Modify trackers
-#Trackerek módosítása
+msgid "Modify trackers"
+msgstr "Trackerek módosítása"
 
-#No updates have been found.~You are running the latest version of %s
-#Nem található a programhoz frissítés.
-#Ez a %s legújabb verziója
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "Nem található a programhoz frissítés."
+"Ez a %s legújabb verziója"
 
-#Upload queue size
-#Feltöltési sor hossza
+msgid "Upload queue size"
+msgstr "Feltöltési sor hossza"
 
-#Global statistics
-#Globális statisztikák
+msgid "Global statistics"
+msgstr "Globális statisztikák"
 
-#Connection name
-#Kapcsolat neve
+msgid "Connection name"
+msgstr "Kapcsolat neve"
 
-#Could not connect to tracker
-#=Nem tudok kapcsolódni a tracker-hez
+msgid "Could not connect to tracker"
+msgstr "=Nem tudok kapcsolódni a tracker-hez"
 
-#Data refresh interval when minimized
-#Adatfrissítési gyakoriság, mikor a kliens minimalizálva van a tálcára
+msgid "Data refresh interval when minimized"
+msgstr "Adatfrissítési gyakoriság, mikor a kliens minimalizálva van a tálcára"
 
-#Data refresh interval
-#Adatfrissítési gyakoriság
+msgid "Data refresh interval"
+msgstr "Adatfrissítési gyakoriság"
 
-#Default download folder on remote host
-#Letöltés könyvtára a távoli gépen
+msgid "Default download folder on remote host"
+msgstr "Letöltés könyvtára a távoli gépen"
 
-#Downloading torrent file
-#Torrent fájl letölése
+msgid "Downloading torrent file"
+msgstr "Torrent fájl letölése"
 
-#Font size
-#Betű méret
+msgid "Font size"
+msgstr "Betű méret"
 
-#Invalid name specified
-#Hibás név
+msgid "Invalid name specified"
+msgstr "Hibás név"
 
-#Manage connections
-#Kapcsolatkezelő
+msgid "Manage connections"
+msgstr "Kapcsolatkezelő"
 
-#Please enter a password to connect to %s
-#Kérlek, add meg a jelszót a következőhöz való kapcsolódáshoz: %s
+msgid "Please enter a password to connect to %s"
+msgstr "Kérlek, add meg a jelszót a következőhöz való kapcsolódáshoz: %s"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#Itt állíthatod be a távoli kiszolgálóhoz kapcsolódás paramétereit (Transmission démon)
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "Itt állíthatod be a távoli kiszolgálóhoz kapcsolódás paramétereit (Transmission démon)"
 
-#RPC path
-#RPC útvonal
+msgid "RPC path"
+msgstr "RPC útvonal"
 
-#Save as
-#Mentés másként
+msgid "Save as"
+msgstr "Mentés másként"
 
-#Torrent not registered with this tracker
-#A torrent nincs regisztrálva ezen a trackeren
+msgid "Torrent not registered with this tracker"
+msgstr "A torrent nincs regisztrálva ezen a trackeren"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#Nem található az útvonal.
-#Használd az alkalmazás beállításai opciót az útvonalak beállításához
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "Nem található az útvonal."
+"Használd az alkalmazás beállításai opciót az útvonalak beállításához"
 
-#You need to restart the application to apply changes
-#Újra kell indítanod az alkalmazást a beállítások érvénybelépéséhez
+msgid "You need to restart the application to apply changes"
+msgstr "Újra kell indítanod az alkalmazást a beállítások érvénybelépéséhez"
 
-#Magnet Link
-#Mágneslink
+msgid "Magnet Link"
+msgstr "Mágneslink"
 
-#Export settings
-#Beállítások mentése
+msgid "Export settings"
+msgstr "Beállítások mentése"
 
-#Import settings
-#Beállítások visszatöltése
+msgid "Import settings"
+msgstr "Beállítások visszatöltése"
 
-#Template:
-#Sablon:
+msgid "Template:"
+msgstr "Sablon:"
 
-#Connection refused
-#Kapcsolódás elutasítva
+msgid "Connection refused"
+msgstr "Kapcsolódás elutasítva"
 
-#Access violation
-#Hozzáférés megtagadva
+msgid "Access violation"
+msgstr "Hozzáférés megtagadva"
 
-#Connection timed out
-#Időtúllépés a kapcsolódás során
+msgid "Connection timed out"
+msgstr "Időtúllépés a kapcsolódás során"
 
-#Other Winsock error
-#Egyéb Winsock hiba
+msgid "Other Winsock error"
+msgstr "Egyéb Winsock hiba"
 
-#Host not found
-#A hoszt nem található
+msgid "Host not found"
+msgstr "A hoszt nem található"
 
-#Unauthorized User
-#Nem azonosított felhasználó
+msgid "Unauthorized User"
+msgstr "Nem azonosított felhasználó"
 

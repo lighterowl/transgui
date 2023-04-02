@@ -2194,349 +2194,349 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#Беларуская
+msgid "TranslationLanguage"
+msgstr "Беларуская"
 
-#&All
-#Усё
+msgid "&All"
+msgstr "Усё"
 
-#&Close
-#Зачыніць
+msgid "&Close"
+msgstr "Зачыніць"
 
-#&Ignore
-#Ігнараваць
+msgid "&Ignore"
+msgstr "Ігнараваць"
 
-#&No
-#Не
+msgid "&No"
+msgstr "Не"
 
-#&OK
-#&OK
+msgid "&OK"
+msgstr "&OK"
 
-#&Open
-#&Адчыніць
+msgid "&Open"
+msgstr "&Адчыніць"
 
-#&Retry
-#Паўтор
+msgid "&Retry"
+msgstr "Паўтор"
 
-#&Save
-#Захаваць
+msgid "&Save"
+msgstr "Захаваць"
 
-#&Unlock
-#&Адамкнуць
+msgid "&Unlock"
+msgstr "&Адамкнуць"
 
-#&Yes
-#Так
+msgid "&Yes"
+msgstr "Так"
 
-#Abort
-#Адмена
+msgid "Abort"
+msgstr "Адмена"
 
-#&Add torrent
-#Дадаць торэнт
+msgid "&Add torrent"
+msgstr "Дадаць торэнт"
 
-#Authentication
-#Аўтэнтыфікацыя
+msgid "Authentication"
+msgstr "Аўтэнтыфікацыя"
 
-#Comment
-#Камэнтар
+msgid "Comment"
+msgstr "Камэнтар"
 
-#Confirmation
-#Пацьцвержаньне
+msgid "Confirmation"
+msgstr "Пацьцвержаньне"
 
-#Connecting to daemon
-#Падлучэньне да дэману Transmission
+msgid "Connecting to daemon"
+msgstr "Падлучэньне да дэману Transmission"
 
-#Connection error occurred
-#Памылка падлучэньня
+msgid "Connection error occurred"
+msgstr "Памылка падлучэньня"
 
-#Created on
-#Створаны
+msgid "Created on"
+msgstr "Створаны"
 
-#Destination folder
-#Тэчка для запампоўкі
+msgid "Destination folder"
+msgstr "Тэчка для запампоўкі"
 
-#Donate to support further development
-#Калі-ласка, падтрымайце далейшае разьвіцьцё праекту
+msgid "Donate to support further development"
+msgstr "Калі-ласка, падтрымайце далейшае разьвіцьцё праекту"
 
-#Donate via PayPal,WebMoney,Credit card
-#Пералічыць сродкі праз PayPal,WebMoney,Credit card
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "Пералічыць сродкі праз PayPal,WebMoney,Credit card"
 
-#Down limit
-#Ліміт запампоўкі
+msgid "Down limit"
+msgstr "Ліміт запампоўкі"
 
-#Download speed
-#Хуткасьць запампоўкі
+msgid "Download speed"
+msgstr "Хуткасьць запампоўкі"
 
-#Encryption
-#Шыфраваньне
+msgid "Encryption"
+msgstr "Шыфраваньне"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#Дзеля адлюстраваньня сьцягаў краін неабходны архіў зь выявамі сьцягаў.
-#Запампаваць гэты архіў зараз?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "Дзеля адлюстраваньня сьцягаў краін неабходны архіў зь выявамі сьцягаў."
+"Запампаваць гэты архіў зараз?"
 
-#Global peer limit
-#Агульны ліміт піраў
+msgid "Global peer limit"
+msgstr "Агульны ліміт піраў"
 
-#Hash
-#Хэш
+msgid "Hash"
+msgstr "Хэш"
 
-#Incoming port
-#Уваходзячы порт
+msgid "Incoming port"
+msgstr "Уваходзячы порт"
 
-#Information
-#Інфармацыя
+msgid "Information"
+msgstr "Інфармацыя"
 
-#Max peers
-#Ліміт колькасьці піраў
+msgid "Max peers"
+msgstr "Ліміт колькасьці піраў"
 
-#No to all
-#НЕ для ўсіх
+msgid "No to all"
+msgstr "НЕ для ўсіх"
 
-#Password
-#Пароль
+msgid "Password"
+msgstr "Пароль"
 
-#Peer limit
-#Ліміт піраў
+msgid "Peer limit"
+msgstr "Ліміт піраў"
 
-#Pieces
-#Частак
+msgid "Pieces"
+msgstr "Частак"
 
-#Properties
-#Уласьцівасьці
+msgid "Properties"
+msgstr "Уласьцівасьці"
 
-#Proxy password
-#Пароль проксі
+msgid "Proxy password"
+msgstr "Пароль проксі"
 
-#Proxy port
-#Порт проксі
+msgid "Proxy port"
+msgstr "Порт проксі"
 
-#Proxy server
-#Проксі-сэрвэр
+msgid "Proxy server"
+msgstr "Проксі-сэрвэр"
 
-#Proxy user name
-#Карыстальнік проксі
+msgid "Proxy user name"
+msgstr "Карыстальнік проксі"
 
-#Reconnect in %d seconds
-#Спроба падлучэньня празь %d сэкундаў
+msgid "Reconnect in %d seconds"
+msgstr "Спроба падлучэньня празь %d сэкундаў"
 
-#Remaining
-#Засталося
+msgid "Remaining"
+msgstr "Засталося"
 
-#Remote host
-#Аддалены хост
+msgid "Remote host"
+msgstr "Аддалены хост"
 
-#Seed ratio
-#Каэфіцыент аддачы
+msgid "Seed ratio"
+msgstr "Каэфіцыент аддачы"
 
-#Setup columns
-#Наладзіць слупкі
+msgid "Setup columns"
+msgstr "Наладзіць слупкі"
 
-#Share ratio
-#Рэйтынг
+msgid "Share ratio"
+msgstr "Рэйтынг"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Торэнты (*.torrent)|*.torrent|Усе файлы (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Торэнты (*.torrent)|*.torrent|Усе файлы (*.*)|*.*"
 
-#Total size
-#Агульны памер
+msgid "Total size"
+msgstr "Агульны памер"
 
-#Tracker update on
-#Абнаўленьне трэкеру
+msgid "Tracker update on"
+msgstr "Абнаўленьне трэкеру"
 
-#Unable to extract flag image
-#Немагчыма выняць выяву сьцягу
+msgid "Unable to extract flag image"
+msgstr "Немагчыма выняць выяву сьцягу"
 
-#Up limit
-#Ліміт аддачы
+msgid "Up limit"
+msgstr "Ліміт аддачы"
 
-#Update complete
-#Абнаўленьне завершана
+msgid "Update complete"
+msgstr "Абнаўленьне завершана"
 
-#Upload speed
-#Хуткасьць аддачы
+msgid "Upload speed"
+msgstr "Хуткасьць аддачы"
 
-#User name
-#Карыстальнік
+msgid "User name"
+msgstr "Карыстальнік"
 
-#Warning
-#Папярэджаньне
+msgid "Warning"
+msgstr "Папярэджаньне"
 
-#Wasted
-#Запампавана дарэмна
+msgid "Wasted"
+msgstr "Запампавана дарэмна"
 
-#Yes to &All
-#Так, для ўсіх
+msgid "Yes to &All"
+msgstr "Так, для ўсіх"
 
-#Incoming port is closed. Check your firewall settings
-#Уваходзячы порт зачынены. Праверце налады вашае сетказаслоны.
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "Уваходзячы порт зачынены. Праверце налады вашае сетказаслоны."
 
-#Incoming port tested successfully
-#Уваходзячы порт правераны пасьпяхова.
+msgid "Incoming port tested successfully"
+msgstr "Уваходзячы порт правераны пасьпяхова."
 
-#No host name specified
-#Не вызначаны вузел.
+msgid "No host name specified"
+msgstr "Не вызначаны вузел."
 
-#No proxy server specified
-#Не вызначаны проксі-сэрвэр.
+msgid "No proxy server specified"
+msgstr "Не вызначаны проксі-сэрвэр."
 
-#Language
-#мова
+msgid "Language"
+msgstr "мова"
 
-#Directory for incomplete files
-#Тэчка для часткова запампаваных файлаў
+msgid "Directory for incomplete files"
+msgstr "Тэчка для часткова запампаваных файлаў"
 
-#Enable blocklist
-#Задзейнічаць сьпіс блакіровак
+msgid "Enable blocklist"
+msgstr "Задзейнічаць сьпіс блакіровак"
 
-#No link was specified
-#Не вызначана спасылка
+msgid "No link was specified"
+msgstr "Не вызначана спасылка"
 
-#No torrent location was specified
-#Не вызначана месца захоўваньня торэнту
+msgid "No torrent location was specified"
+msgstr "Не вызначана месца захоўваньня торэнту"
 
-#Set data location
-#Задаць новае месцазнаходжаньне файлаў
+msgid "Set data location"
+msgstr "Задаць новае месцазнаходжаньне файлаў"
 
-#The block list has been updated successfully.~The list entries count: %d
-#Сьпіс блакіровак пасьпяхова абноўлены.
-#Колькасьць элементаў у сьпісе: %d
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "Сьпіс блакіровак пасьпяхова абноўлены."
+"Колькасьць элементаў у сьпісе: %d"
 
-#The directory for incomplete files was not specified
-#Ня вызначана тэчка для недапампаваных файлаў
+msgid "The directory for incomplete files was not specified"
+msgstr "Ня вызначана тэчка для недапампаваных файлаў"
 
-#The downloads directory was not specified
-#Ня вызначана тэчка для запампоўкі файлаў
+msgid "The downloads directory was not specified"
+msgstr "Ня вызначана тэчка для запампоўкі файлаў"
 
-#Unable to execute "%s"
-#Немагчыма выканаць "%s"
+msgid "Unable to execute "%s""
+msgstr "Немагчыма выканаць "%s""
 
-#URL of a .torrent file or a magnet link
-#URL для .torrent файлу ці magnet link
+msgid "URL of a .torrent file or a magnet link"
+msgstr "URL для .torrent файлу ці magnet link"
 
-#New location for torrent data
-#Новае размяшчэньне дадзеных торэнту
+msgid "New location for torrent data"
+msgstr "Новае размяшчэньне дадзеных торэнту"
 
-#Days
-#Дзён
+msgid "Days"
+msgstr "Дзён"
 
-#Disk cache size
-#Памер дыскавага кэшу
+msgid "Disk cache size"
+msgstr "Памер дыскавага кэшу"
 
-#Download speeds (KB/s)
-#Хуткасьць запампоўкі (Kб/с)
+msgid "Download speeds (KB/s)"
+msgstr "Хуткасьць запампоўкі (Kб/с)"
 
-#Edit tracker
-#Рэдагаваць трэкер
+msgid "Edit tracker"
+msgstr "Рэдагаваць трэкер"
 
-#Free disk space
-#Вольная дыскавая прастора
+msgid "Free disk space"
+msgstr "Вольная дыскавая прастора"
 
-#From
-#з
+msgid "From"
+msgstr "з"
 
-#New connection
-#Новае злучэньне
+msgid "New connection"
+msgstr "Новае злучэньне"
 
-#No tracker URL was specified
-#Ня вызначаны URL трэкеру
+msgid "No tracker URL was specified"
+msgstr "Ня вызначаны URL трэкеру"
 
-#Stop seeding when inactive for
-#Спыніць сідаваньне калі неактыўна
+msgid "Stop seeding when inactive for"
+msgstr "Спыніць сідаваньне калі неактыўна"
 
-#The invalid time value was entered
-#Уведзена няслушнае значэньне часу
+msgid "The invalid time value was entered"
+msgstr "Уведзена няслушнае значэньне часу"
 
-#to
-#па
+msgid "to"
+msgstr "па"
 
-#Tracker announce URL
-#Абвешчаньне URL трэкеру
+msgid "Tracker announce URL"
+msgstr "Абвешчаньне URL трэкеру"
 
-#Upload speeds (KB/s)
-#Хуткасьць аддачы (Kб/с)
+msgid "Upload speeds (KB/s)"
+msgstr "Хуткасьць аддачы (Kб/с)"
 
-#Browse
-#Агляд
+msgid "Browse"
+msgstr "Агляд"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#Дасяжна новая вэрсія %s.
-#Вашая бягучая вэрсія: %s
-#Новая вэрсія: %s
-#Перайсьці на старонку запампоўкі?
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "Дасяжна новая вэрсія %s."
+"Вашая бягучая вэрсія: %s"
+"Новая вэрсія: %s"
+"Перайсьці на старонку запампоўкі?"
 
-#Check for new version every
-#Правяраць наяўнасьць абнаўленьняў кожныя
+msgid "Check for new version every"
+msgstr "Правяраць наяўнасьць абнаўленьняў кожныя"
 
-#Consider active torrents as stalled when idle for
-#Лічыць торэнты завіслымі, калі яны неактыўныя
+msgid "Consider active torrents as stalled when idle for"
+msgstr "Лічыць торэнты завіслымі, калі яны неактыўныя"
 
-#Donate!
-#Ахвяраваць сродкі!
+msgid "Donate!"
+msgstr "Ахвяраваць сродкі!"
 
-#Download queue size
-#Памер чаргі запамповак
+msgid "Download queue size"
+msgstr "Памер чаргі запамповак"
 
-#Error checking for new version
-#Памылка праверкі абнаўленьня
+msgid "Error checking for new version"
+msgstr "Памылка праверкі абнаўленьня"
 
-#Modify trackers
-#Зьмяніць трэкеры
+msgid "Modify trackers"
+msgstr "Зьмяніць трэкеры"
 
-#No updates have been found.~You are running the latest version of %s
-#Абнаўленьні ня знойдзеныя.
-#Вы маеце найноўшую вэрсію %s
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "Абнаўленьні ня знойдзеныя."
+"Вы маеце найноўшую вэрсію %s"
 
-#Upload queue size
-#Памер чэргі аддачы
+msgid "Upload queue size"
+msgstr "Памер чэргі аддачы"
 
-#Global statistics
-#Агульная статыстыка
+msgid "Global statistics"
+msgstr "Агульная статыстыка"
 
-#Connection name
-#Назва злучэньня
+msgid "Connection name"
+msgstr "Назва злучэньня"
 
-#Could not connect to tracker
-#=Немагчыма падлучыцца да трэкеру
+msgid "Could not connect to tracker"
+msgstr "=Немагчыма падлучыцца да трэкеру"
 
-#Data refresh interval when minimized
-#Інтэрвал абнаўленьня дадзеных у згорнутым стане
+msgid "Data refresh interval when minimized"
+msgstr "Інтэрвал абнаўленьня дадзеных у згорнутым стане"
 
-#Data refresh interval
-#Інтэрвал абнаўленьня дадзеных
+msgid "Data refresh interval"
+msgstr "Інтэрвал абнаўленьня дадзеных"
 
-#Default download folder on remote host
-#Звычайная тэчка для запампоўкі на адлеглым вузле
+msgid "Default download folder on remote host"
+msgstr "Звычайная тэчка для запампоўкі на адлеглым вузле"
 
-#Downloading torrent file
-#Запампоўка торэнт файлу
+msgid "Downloading torrent file"
+msgstr "Запампоўка торэнт файлу"
 
-#Font size
-#Памер шрыфту
+msgid "Font size"
+msgstr "Памер шрыфту"
 
-#Invalid name specified
-#Вызначана неправільнае імя
+msgid "Invalid name specified"
+msgstr "Вызначана неправільнае імя"
 
-#Manage connections
-#Кіраваньне падлучэньнямі
+msgid "Manage connections"
+msgstr "Кіраваньне падлучэньнямі"
 
-#Please enter a password to connect to %s
-#Калі-ласка, увядзіце пароль для падлучэньня да %s
+msgid "Please enter a password to connect to %s"
+msgstr "Калі-ласка, увядзіце пароль для падлучэньня да %s"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#Калі-ласка, вызначце якім чынам %s будзе падлучацца да адлеглага хосту, дзе працуе дэман Transmission
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "Калі-ласка, вызначце якім чынам %s будзе падлучацца да адлеглага хосту, дзе працуе дэман Transmission"
 
-#RPC path
-#Шлях RPC
+msgid "RPC path"
+msgstr "Шлях RPC"
 
-#Save as
-#Захаваць як
+msgid "Save as"
+msgstr "Захаваць як"
 
-#Torrent not registered with this tracker
-#=Торэнт не зарэгістраваны на гэтым трэкеры
+msgid "Torrent not registered with this tracker"
+msgstr "=Торэнт не зарэгістраваны на гэтым трэкеры"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#Немагчыма знайсьці адпаведнасьць шляхоў.
-#Скарыстайцеся парамэтрамі прыкладаньня для наладжваньня адпаведнасьці шляхоў
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "Немагчыма знайсьці адпаведнасьць шляхоў."
+"Скарыстайцеся парамэтрамі прыкладаньня для наладжваньня адпаведнасьці шляхоў"
 
-#You need to restart the application to apply changes
-#Неабходны перазапуск прыкладаньня, каб ужыць зьмены
+msgid "You need to restart the application to apply changes"
+msgstr "Неабходны перазапуск прыкладаньня, каб ужыць зьмены"
 

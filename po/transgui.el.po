@@ -2191,349 +2191,349 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#Ελληνικά
+msgid "TranslationLanguage"
+msgstr "Ελληνικά"
 
-#&All
-#&Όλα
+msgid "&All"
+msgstr "&Όλα"
 
-#&Close
-#&Κλείσιμο
+msgid "&Close"
+msgstr "&Κλείσιμο"
 
-#&Ignore
-#&Αγνόησε
+msgid "&Ignore"
+msgstr "&Αγνόησε"
 
-#&No
-#&Όχι
+msgid "&No"
+msgstr "&Όχι"
 
-#&OK
-#&OK
+msgid "&OK"
+msgstr "&OK"
 
-#&Open
-#&Άνοιγμα
+msgid "&Open"
+msgstr "&Άνοιγμα"
 
-#&Retry
-#&Επανάληψη
+msgid "&Retry"
+msgstr "&Επανάληψη"
 
-#&Save
-#&Αποθήκευση
+msgid "&Save"
+msgstr "&Αποθήκευση"
 
-#&Unlock
-#&Ξεκλείδωμα
+msgid "&Unlock"
+msgstr "&Ξεκλείδωμα"
 
-#&Yes
-#&Ναι
+msgid "&Yes"
+msgstr "&Ναι"
 
-#Abort
-#Ματαίωση
+msgid "Abort"
+msgstr "Ματαίωση"
 
-#&Add torrent
-#Προσθήκη torrent
+msgid "&Add torrent"
+msgstr "Προσθήκη torrent"
 
-#Authentication
-#Πιστοποίηση
+msgid "Authentication"
+msgstr "Πιστοποίηση"
 
-#Comment
-#Σχόλια
+msgid "Comment"
+msgstr "Σχόλια"
 
-#Confirmation
-#Επικύρωση
+msgid "Confirmation"
+msgstr "Επικύρωση"
 
-#Connecting to daemon
-#Συνδέεται στο δαίμονα
+msgid "Connecting to daemon"
+msgstr "Συνδέεται στο δαίμονα"
 
-#Connection error occurred
-#Σφάλμα σύνδεσης
+msgid "Connection error occurred"
+msgstr "Σφάλμα σύνδεσης"
 
-#Created on
-#Δημιουργήθηκε την
+msgid "Created on"
+msgstr "Δημιουργήθηκε την"
 
-#Destination folder
-#Φάκελος προορισμού
+msgid "Destination folder"
+msgstr "Φάκελος προορισμού"
 
-#Donate to support further development
-#Υποστηρίξτε την περαιτέρω ανάπτυξη μέσω ΔΩΡΕΑΣ
+msgid "Donate to support further development"
+msgstr "Υποστηρίξτε την περαιτέρω ανάπτυξη μέσω ΔΩΡΕΑΣ"
 
-#Donate via PayPal,WebMoney,Credit card
-#Δωρίστε μέσω PayPal,WebMoney,Πιστωτικής Κάρτας
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "Δωρίστε μέσω PayPal,WebMoney,Πιστωτικής Κάρτας"
 
-#Down limit
-#Όριο λήψης
+msgid "Down limit"
+msgstr "Όριο λήψης"
 
-#Download speed
-#Ταχύτητα λήψης
+msgid "Download speed"
+msgstr "Ταχύτητα λήψης"
 
-#Encryption
-#Κρυπτογράφηση
+msgid "Encryption"
+msgstr "Κρυπτογράφηση"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#Απαιτούνται αρχεία εικόνας για προβολή της σημαίας κάθε χώρας.
-#Να ξεκινήσει η λήψη των αρχείων εικόνας τώρα;
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "Απαιτούνται αρχεία εικόνας για προβολή της σημαίας κάθε χώρας."
+"Να ξεκινήσει η λήψη των αρχείων εικόνας τώρα;"
 
-#Global peer limit
-#Γενικό όριο κόμβων
+msgid "Global peer limit"
+msgstr "Γενικό όριο κόμβων"
 
-#Hash
-#Hash
+msgid "Hash"
+msgstr "Hash"
 
-#Incoming port is closed. Check your firewall settings
-#Η θύρα εισερχομένων συνδέσεων είναι κλειστή.Ελέγξτε τις ρυθμίσεις του τείχους προστασίας
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "Η θύρα εισερχομένων συνδέσεων είναι κλειστή.Ελέγξτε τις ρυθμίσεις του τείχους προστασίας"
 
-#Incoming port tested successfully
-#Η θύρα εισερχομένων συνδέσεων δοκιμάστηκε με επιτυχία
+msgid "Incoming port tested successfully"
+msgstr "Η θύρα εισερχομένων συνδέσεων δοκιμάστηκε με επιτυχία"
 
-#Incoming port
-#Θύρα εισερχομένων συνδέσεων
+msgid "Incoming port"
+msgstr "Θύρα εισερχομένων συνδέσεων"
 
-#Information
-#Πληροφορίες
+msgid "Information"
+msgstr "Πληροφορίες"
 
-#Language
-#Γλώσσα
+msgid "Language"
+msgstr "Γλώσσα"
 
-#Max peers
-#Μέγιστος αριθμός κόμβων
+msgid "Max peers"
+msgstr "Μέγιστος αριθμός κόμβων"
 
-#No host name specified
-#Δεν έχει οριστεί όνομα εξυπηρετητή
+msgid "No host name specified"
+msgstr "Δεν έχει οριστεί όνομα εξυπηρετητή"
 
-#No proxy server specified
-#Δεν έχει οριστεί proxy server
+msgid "No proxy server specified"
+msgstr "Δεν έχει οριστεί proxy server"
 
-#No to all
-#Όχι σε όλα
+msgid "No to all"
+msgstr "Όχι σε όλα"
 
-#Password
-#Συνθηματικό
+msgid "Password"
+msgstr "Συνθηματικό"
 
-#Peer limit
-#Όριο κόμβων
+msgid "Peer limit"
+msgstr "Όριο κόμβων"
 
-#Pieces
-#Τμήματα
+msgid "Pieces"
+msgstr "Τμήματα"
 
-#Properties
-#Ιδιότητες
+msgid "Properties"
+msgstr "Ιδιότητες"
 
-#Proxy password
-#Συνθηματικό proxy
+msgid "Proxy password"
+msgstr "Συνθηματικό proxy"
 
-#Proxy port
-#Θύρα Proxy
+msgid "Proxy port"
+msgstr "Θύρα Proxy"
 
-#Proxy server
-#Proxy server
+msgid "Proxy server"
+msgstr "Proxy server"
 
-#Proxy user name
-#Όνομα χρήστη Proxy
+msgid "Proxy user name"
+msgstr "Όνομα χρήστη Proxy"
 
-#Reconnect in %d seconds
-#Επανασύνδεση σε %d δευτερόλεπτα
+msgid "Reconnect in %d seconds"
+msgstr "Επανασύνδεση σε %d δευτερόλεπτα"
 
-#Remaining
-#Υπολείπονται
+msgid "Remaining"
+msgstr "Υπολείπονται"
 
-#Remote host
-#Δ/νση υπολογιστή
+msgid "Remote host"
+msgstr "Δ/νση υπολογιστή"
 
-#Seed ratio
-#Αναλογία αποστολής
+msgid "Seed ratio"
+msgstr "Αναλογία αποστολής"
 
-#Setup columns
-#Επιλογή στηλών
+msgid "Setup columns"
+msgstr "Επιλογή στηλών"
 
-#Share ratio
-#Αναλογία διαμοιρασμού
+msgid "Share ratio"
+msgstr "Αναλογία διαμοιρασμού"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Torrents (*.torrent)|*.torrent|Όλα τα αρχεία (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Torrents (*.torrent)|*.torrent|Όλα τα αρχεία (*.*)|*.*"
 
-#Total size
-#Συνολικό μέγεθος
+msgid "Total size"
+msgstr "Συνολικό μέγεθος"
 
-#Tracker update on
-#Ενημέρωση ιχνηλάτη σε
+msgid "Tracker update on"
+msgstr "Ενημέρωση ιχνηλάτη σε"
 
-#Unable to extract flag image
-#Αδυναμία ανεύρεσης εικονιδίου σημαίας
+msgid "Unable to extract flag image"
+msgstr "Αδυναμία ανεύρεσης εικονιδίου σημαίας"
 
-#Up limit
-#Όριο αποστολής
+msgid "Up limit"
+msgstr "Όριο αποστολής"
 
-#Update complete
-#Ολοκλήρωση ενημέρωσης
+msgid "Update complete"
+msgstr "Ολοκλήρωση ενημέρωσης"
 
-#Upload speed
-#Ταχύτητα αποστολής
+msgid "Upload speed"
+msgstr "Ταχύτητα αποστολής"
 
-#User name
-#Όνομα χρήστη
+msgid "User name"
+msgstr "Όνομα χρήστη"
 
-#Warning
-#Προειδοποίηση
+msgid "Warning"
+msgstr "Προειδοποίηση"
 
-#Wasted
-#Χάθηκαν
+msgid "Wasted"
+msgstr "Χάθηκαν"
 
-#Yes to &All
-#Ναι σε &Όλα
+msgid "Yes to &All"
+msgstr "Ναι σε &Όλα"
 
-#Directory for incomplete files
-#Φάκελος για μη ολοκληρωμένα αρχεία
+msgid "Directory for incomplete files"
+msgstr "Φάκελος για μη ολοκληρωμένα αρχεία"
 
-#Enable blocklist
-#Ενεργοποίηση της λίστας αποκλεισμού
+msgid "Enable blocklist"
+msgstr "Ενεργοποίηση της λίστας αποκλεισμού"
 
-#New location for torrent data
-#Νέα θέση για τα αρχεία
+msgid "New location for torrent data"
+msgstr "Νέα θέση για τα αρχεία"
 
-#No link was specified
-#Δέν ορίστηκε σύνδεση
+msgid "No link was specified"
+msgstr "Δέν ορίστηκε σύνδεση"
 
-#No torrent location was specified
-#Δεν ορίστηκε η θέση των torrent
+msgid "No torrent location was specified"
+msgstr "Δεν ορίστηκε η θέση των torrent"
 
-#Set data location
-#Όρισε θέση αρχείων
+msgid "Set data location"
+msgstr "Όρισε θέση αρχείων"
 
-#The block list has been updated successfully.~The list entries count: %d
-#Η λίστα αποκλεισμού ενημερώθηκε επιτυχώς.
-#Η λίστα περιέχει %d καταχωρήσεις
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "Η λίστα αποκλεισμού ενημερώθηκε επιτυχώς."
+"Η λίστα περιέχει %d καταχωρήσεις"
 
-#The directory for incomplete files was not specified
-#Δεν ορίστηκε ο φάκελος για μη ολοκληρωμένα αρχεία
+msgid "The directory for incomplete files was not specified"
+msgstr "Δεν ορίστηκε ο φάκελος για μη ολοκληρωμένα αρχεία"
 
-#The downloads directory was not specified
-#Δεν ορίστηκε ο φάκελος για τις λήψεις
+msgid "The downloads directory was not specified"
+msgstr "Δεν ορίστηκε ο φάκελος για τις λήψεις"
 
-#Unable to execute "%s"
-#Αδυναμία εκτέλεσης "%s"
+msgid "Unable to execute "%s""
+msgstr "Αδυναμία εκτέλεσης "%s""
 
-#URL of a .torrent file or a magnet link
-#URL ενός αρχείου .torrent ή ένα magnet link
+msgid "URL of a .torrent file or a magnet link"
+msgstr "URL ενός αρχείου .torrent ή ένα magnet link"
 
-#Days
-#Ημέρες
+msgid "Days"
+msgstr "Ημέρες"
 
-#Disk cache size
-#Μέγεθος cache του δίσκου
+msgid "Disk cache size"
+msgstr "Μέγεθος cache του δίσκου"
 
-#Download speeds (KB/s)
-#Ταχύτητες λήψης (KB/s)
+msgid "Download speeds (KB/s)"
+msgstr "Ταχύτητες λήψης (KB/s)"
 
-#Edit tracker
-#Επεξεργασία ιχνηλάτη
+msgid "Edit tracker"
+msgstr "Επεξεργασία ιχνηλάτη"
 
-#Free disk space
-#Ελεύθερος χώρος στο δίσκο
+msgid "Free disk space"
+msgstr "Ελεύθερος χώρος στο δίσκο"
 
-#From
-#από
+msgid "From"
+msgstr "από"
 
-#New connection
-#Νέα σύνδεση
+msgid "New connection"
+msgstr "Νέα σύνδεση"
 
-#No tracker URL was specified
-#Δεν καθορίστηκε URL ιχνηλάτη
+msgid "No tracker URL was specified"
+msgstr "Δεν καθορίστηκε URL ιχνηλάτη"
 
-#Stop seeding when inactive for
-#Διακοπή αποστολής ανενεργού
+msgid "Stop seeding when inactive for"
+msgstr "Διακοπή αποστολής ανενεργού"
 
-#The invalid time value was entered
-#Εισήχθη μη έγκυρη τιμή ώρας
+msgid "The invalid time value was entered"
+msgstr "Εισήχθη μη έγκυρη τιμή ώρας"
 
-#to
-#έως
+msgid "to"
+msgstr "έως"
 
-#Tracker announce URL
-#URL εκφώνησης ιχνηλάτη
+msgid "Tracker announce URL"
+msgstr "URL εκφώνησης ιχνηλάτη"
 
-#Upload speeds (KB/s)
-#Ταχύτητες αποστολής (KB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "Ταχύτητες αποστολής (KB/s)"
 
-#Browse
-#Αναζήτηση
+msgid "Browse"
+msgstr "Αναζήτηση"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#Μια νέα έκδοση του %s είναι διαθέσιμη.
-#Εγκατεστημένη έκδοση : %s
-#Νέα έκδοση: %s
-#Να ανοίξει η ιστοσελίδα λήψης της νέας έκδοσης;
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "Μια νέα έκδοση του %s είναι διαθέσιμη."
+"Εγκατεστημένη έκδοση : %s"
+"Νέα έκδοση: %s"
+"Να ανοίξει η ιστοσελίδα λήψης της νέας έκδοσης;"
 
-#Check for new version every
-#Έλεγχος για νέα έκδοση κάθε
+msgid "Check for new version every"
+msgstr "Έλεγχος για νέα έκδοση κάθε"
 
-#Consider active torrents as stalled when idle for
-#Θεώρησε τα ενεργά torrent ως στάσιμα εάν είναι ανενεργά για
+msgid "Consider active torrents as stalled when idle for"
+msgstr "Θεώρησε τα ενεργά torrent ως στάσιμα εάν είναι ανενεργά για"
 
-#Donate!
-#Δωρεές!
+msgid "Donate!"
+msgstr "Δωρεές!"
 
-#Download queue size
-#Μέγεθος ουράς λήψεων
+msgid "Download queue size"
+msgstr "Μέγεθος ουράς λήψεων"
 
-#Error checking for new version
-#Σφάλμα ελέγχου νέας έκδοσης
+msgid "Error checking for new version"
+msgstr "Σφάλμα ελέγχου νέας έκδοσης"
 
-#Modify trackers
-#Τροποποίηση ιχνηλατών
+msgid "Modify trackers"
+msgstr "Τροποποίηση ιχνηλατών"
 
-#No updates have been found.~You are running the latest version of %s
-#Δεν βρέθηκαν ενημερώσεις.
-#Χρησιμοποιείτε τη νεώτερη έκδοση του %s
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "Δεν βρέθηκαν ενημερώσεις."
+"Χρησιμοποιείτε τη νεώτερη έκδοση του %s"
 
-#Upload queue size
-#Μέγεθος ουράς αποστολών
+msgid "Upload queue size"
+msgstr "Μέγεθος ουράς αποστολών"
 
-#Global statistics
-#Συνολικά στατιστικά
+msgid "Global statistics"
+msgstr "Συνολικά στατιστικά"
 
-#Connection name
-#Όνομα σύνδεσης
+msgid "Connection name"
+msgstr "Όνομα σύνδεσης"
 
-#Could not connect to tracker
-#=Αδύνατη η σύνδεση στον ιχνηλάτη
+msgid "Could not connect to tracker"
+msgstr "=Αδύνατη η σύνδεση στον ιχνηλάτη"
 
-#Data refresh interval when minimized
-#Ανανέωση δεδομένων υπό ελαχιστοποίηση
+msgid "Data refresh interval when minimized"
+msgstr "Ανανέωση δεδομένων υπό ελαχιστοποίηση"
 
-#Data refresh interval
-#Διάστημα ανανέωσης δεδομένων
+msgid "Data refresh interval"
+msgstr "Διάστημα ανανέωσης δεδομένων"
 
-#Default download folder on remote host
-#Προεπιλεγμένος φάκελος λήψεων στον απομακρυσμένο υπολογιστή
+msgid "Default download folder on remote host"
+msgstr "Προεπιλεγμένος φάκελος λήψεων στον απομακρυσμένο υπολογιστή"
 
-#Downloading torrent file
-#Λήψη αρχείου torrent
+msgid "Downloading torrent file"
+msgstr "Λήψη αρχείου torrent"
 
-#Font size
-#Μέγεθος γραμματοσειράς
+msgid "Font size"
+msgstr "Μέγεθος γραμματοσειράς"
 
-#Invalid name specified
-#Μη έγκυρο όνομα
+msgid "Invalid name specified"
+msgstr "Μη έγκυρο όνομα"
 
-#Manage connections
-#Διαχείριση συνδέσεων
+msgid "Manage connections"
+msgstr "Διαχείριση συνδέσεων"
 
-#Please enter a password to connect to %s
-#Παρακαλώ εισάγετε το συνθηματικό για να συνδεθείτε στο %s
+msgid "Please enter a password to connect to %s"
+msgstr "Παρακαλώ εισάγετε το συνθηματικό για να συνδεθείτε στο %s"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#Παρακαλώ καθορίστε πως το %s θα συνδέεται σε έναν απομακρυσμένο υπολογιστή όπου εκτελείται ο δαίμονας του Transmission (υπηρεσία)
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "Παρακαλώ καθορίστε πως το %s θα συνδέεται σε έναν απομακρυσμένο υπολογιστή όπου εκτελείται ο δαίμονας του Transmission (υπηρεσία)"
 
-#RPC path
-#Μονοπάτι RPC
+msgid "RPC path"
+msgstr "Μονοπάτι RPC"
 
-#Save as
-#Αποθήκευση ως
+msgid "Save as"
+msgstr "Αποθήκευση ως"
 
-#Torrent not registered with this tracker
-#=Το torrent δεν είναι εγγεγραμμένο στον ιχνηλάτη
+msgid "Torrent not registered with this tracker"
+msgstr "=Το torrent δεν είναι εγγεγραμμένο στον ιχνηλάτη"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#Αδύνατη η εύρεση του μονοπατιού.
-#Χρησιμοποιήστε τις επιλογές της εφαρμογής για καθορισμό των μονοπατιών
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "Αδύνατη η εύρεση του μονοπατιού."
+"Χρησιμοποιήστε τις επιλογές της εφαρμογής για καθορισμό των μονοπατιών"
 
-#You need to restart the application to apply changes
-#Απαιτείται επανεκκίνηση για εφαρμογή των αλλαγών
+msgid "You need to restart the application to apply changes"
+msgstr "Απαιτείται επανεκκίνηση για εφαρμογή των αλλαγών"
 

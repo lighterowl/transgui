@@ -2191,379 +2191,379 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#简体中文
+msgid "TranslationLanguage"
+msgstr "简体中文"
 
-#&All
-#所有(&A)
+msgid "&All"
+msgstr "所有(&A)"
 
-#&Close
-#关闭(&C)
+msgid "&Close"
+msgstr "关闭(&C)"
 
-#&Ignore
-#忽略(&I)
+msgid "&Ignore"
+msgstr "忽略(&I)"
 
-#&No
-#否(&N)
+msgid "&No"
+msgstr "否(&N)"
 
-#&OK
-#确定(&O)
+msgid "&OK"
+msgstr "确定(&O)"
 
-#&Open
-#打开(&O)
+msgid "&Open"
+msgstr "打开(&O)"
 
-#&Retry
-#重试(&R)
+msgid "&Retry"
+msgstr "重试(&R)"
 
-#&Save
-#保存(&S)
+msgid "&Save"
+msgstr "保存(&S)"
 
-#&Unlock
-#解锁(&U)
+msgid "&Unlock"
+msgstr "解锁(&U)"
 
-#&Yes
-#是(&Y)
+msgid "&Yes"
+msgstr "是(&Y)"
 
-#Abort
-#中止
+msgid "Abort"
+msgstr "中止"
 
-#&Add torrent
-#添加 Torrent(&A)
+msgid "&Add torrent"
+msgstr "添加 Torrent(&A)"
 
-#Authentication
-#认证
+msgid "Authentication"
+msgstr "认证"
 
-#Comment
-#注释
+msgid "Comment"
+msgstr "注释"
 
-#Confirmation
-#确认
+msgid "Confirmation"
+msgstr "确认"
 
-#Connecting to daemon
-#连接中
+msgid "Connecting to daemon"
+msgstr "连接中"
 
-#Connection error occurred
-#连接发生错误
+msgid "Connection error occurred"
+msgstr "连接发生错误"
 
-#Created on
-#创建信息
+msgid "Created on"
+msgstr "创建信息"
 
-#Destination folder
-#保存目录
+msgid "Destination folder"
+msgstr "保存目录"
 
-#Donate to support further development
-#捐赠
+msgid "Donate to support further development"
+msgstr "捐赠"
 
-#Donate via PayPal,WebMoney,Credit card
-#使用 PayPal, WebMoney 或信用卡捐赠
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "使用 PayPal, WebMoney 或信用卡捐赠"
 
-#Down limit
-#下载限速
+msgid "Down limit"
+msgstr "下载限速"
 
-#Download speed
-#下载速度
+msgid "Download speed"
+msgstr "下载速度"
 
-#Encryption
-#加密
+msgid "Encryption"
+msgstr "加密"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#显示旗帜图标需要下载图片数据。
-#是否现在下载？
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "显示旗帜图标需要下载图片数据。"
+"是否现在下载？"
 
-#Global peer limit
-#全局连接限制
+msgid "Global peer limit"
+msgstr "全局连接限制"
 
-#Hash
-#哈希值
+msgid "Hash"
+msgstr "哈希值"
 
-#Incoming port is closed. Check your firewall settings
-#端口已关闭，请检查防火墙设置
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "端口已关闭，请检查防火墙设置"
 
-#Incoming port tested successfully
-#端口测试成功
+msgid "Incoming port tested successfully"
+msgstr "端口测试成功"
 
-#Incoming port
-#端口
+msgid "Incoming port"
+msgstr "端口"
 
-#Information
-#信息
+msgid "Information"
+msgstr "信息"
 
-#Language
-#语言
+msgid "Language"
+msgstr "语言"
 
-#Max peers
-#最大连接数
+msgid "Max peers"
+msgstr "最大连接数"
 
-#No host name specified
-#没有指定主机名
+msgid "No host name specified"
+msgstr "没有指定主机名"
 
-#No proxy server specified
-#没有指定代理服务器名
+msgid "No proxy server specified"
+msgstr "没有指定代理服务器名"
 
-#No to all
-#全否
+msgid "No to all"
+msgstr "全否"
 
-#Password
-#密码
+msgid "Password"
+msgstr "密码"
 
-#Peer limit
-#连接限制
+msgid "Peer limit"
+msgstr "连接限制"
 
-#Pieces
-#分块
+msgid "Pieces"
+msgstr "分块"
 
-#Properties
-#属性
+msgid "Properties"
+msgstr "属性"
 
-#Proxy password
-#代理密码
+msgid "Proxy password"
+msgstr "代理密码"
 
-#Proxy port
-#代理端口
+msgid "Proxy port"
+msgstr "代理端口"
 
-#Proxy server
-#代理服务器
+msgid "Proxy server"
+msgstr "代理服务器"
 
-#Proxy user name
-#代理用户名
+msgid "Proxy user name"
+msgstr "代理用户名"
 
-#Reconnect in %d seconds
-#%d 秒后重新连接
+msgid "Reconnect in %d seconds"
+msgstr "%d 秒后重新连接"
 
-#Remaining
-#剩余
+msgid "Remaining"
+msgstr "剩余"
 
-#Remote host
-#远程主机
+msgid "Remote host"
+msgstr "远程主机"
 
-#Seed ratio
-#做种分享率
+msgid "Seed ratio"
+msgstr "做种分享率"
 
-#Setup columns
-#设置显示字段
+msgid "Setup columns"
+msgstr "设置显示字段"
 
-#Share ratio
-#分享率
+msgid "Share ratio"
+msgstr "分享率"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Torrent 文件 (*.torrent)|*.torrent|所有文件|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Torrent 文件 (*.torrent)|*.torrent|所有文件|*.*"
 
-#Total size
-#总大小
+msgid "Total size"
+msgstr "总大小"
 
-#Tracker update on
-#Tracker 汇报时间
+msgid "Tracker update on"
+msgstr "Tracker 汇报时间"
 
-#Unable to extract flag image
-#无法解压旗帜图像
+msgid "Unable to extract flag image"
+msgstr "无法解压旗帜图像"
 
-#Up limit
-#上传限制
+msgid "Up limit"
+msgstr "上传限制"
 
-#Update complete
-#更新完毕
+msgid "Update complete"
+msgstr "更新完毕"
 
-#Upload speed
-#上传速度
+msgid "Upload speed"
+msgstr "上传速度"
 
-#User name
-#用户名
+msgid "User name"
+msgstr "用户名"
 
-#Warning
-#警告
+msgid "Warning"
+msgstr "警告"
 
-#Wasted
-#丢弃
+msgid "Wasted"
+msgstr "丢弃"
 
-#Yes to &All
-#全部确认(&A)
+msgid "Yes to &All"
+msgstr "全部确认(&A)"
 
-#Directory for incomplete files
-#未完成文件目录
+msgid "Directory for incomplete files"
+msgstr "未完成文件目录"
 
-#Enable blocklist
-#开启黑名单
+msgid "Enable blocklist"
+msgstr "开启黑名单"
 
-#New location for torrent data
-#Torrent 数据新位置
+msgid "New location for torrent data"
+msgstr "Torrent 数据新位置"
 
-#No link was specified
-#没有指定链接
+msgid "No link was specified"
+msgstr "没有指定链接"
 
-#No torrent location was specified
-#没有指定 Torrent 位置
+msgid "No torrent location was specified"
+msgstr "没有指定 Torrent 位置"
 
-#Set data location
-#设置数据位置
+msgid "Set data location"
+msgstr "设置数据位置"
 
-#The block list has been updated successfully.~The list entries count: %d
-#黑名单更新成功。
-#列表条目数：%d
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "黑名单更新成功。"
+"列表条目数：%d"
 
-#The directory for incomplete files was not specified
-#未指定未完成文件的目录
+msgid "The directory for incomplete files was not specified"
+msgstr "未指定未完成文件的目录"
 
-#The downloads directory was not specified
-#未指定下载目录
+msgid "The downloads directory was not specified"
+msgstr "未指定下载目录"
 
-#Unable to execute "%s"
-#无法执行 "%s"
+msgid "Unable to execute "%s""
+msgstr "无法执行 "%s""
 
-#URL of a .torrent file or a magnet link
-#.torrent 文件链接或磁力链接
+msgid "URL of a .torrent file or a magnet link"
+msgstr ".torrent 文件链接或磁力链接"
 
-#Days
-#天
+msgid "Days"
+msgstr "天"
 
-#Disk cache size
-#磁盘缓存大小
+msgid "Disk cache size"
+msgstr "磁盘缓存大小"
 
-#Download speeds (KB/s)
-#下载速度 (KB/s)
+msgid "Download speeds (KB/s)"
+msgstr "下载速度 (KB/s)"
 
-#Edit tracker
-#编辑 Tracker
+msgid "Edit tracker"
+msgstr "编辑 Tracker"
 
-#Free disk space
-#可用磁盘空间
+msgid "Free disk space"
+msgstr "可用磁盘空间"
 
-#From
-#来自
+msgid "From"
+msgstr "来自"
 
-#New connection
-#新建连接配置
+msgid "New connection"
+msgstr "新建连接配置"
 
-#No tracker URL was specified
-#没有指定 Tracker 链接
+msgid "No tracker URL was specified"
+msgstr "没有指定 Tracker 链接"
 
-#Stop seeding when inactive for
-#当 Torrent 超过这个时间没有流量时，自动停止做种
+msgid "Stop seeding when inactive for"
+msgstr "当 Torrent 超过这个时间没有流量时，自动停止做种"
 
-#The invalid time value was entered
-#输入的时间无效
+msgid "The invalid time value was entered"
+msgstr "输入的时间无效"
 
-#to
-#到
+msgid "to"
+msgstr "到"
 
-#Tracker announce URL
-#Tracker 链接
+msgid "Tracker announce URL"
+msgstr "Tracker 链接"
 
-#Upload speeds (KB/s)
-#上传速度 (KB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "上传速度 (KB/s)"
 
-#Browse
-#浏览
+msgid "Browse"
+msgstr "浏览"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#%s 的更新已发布。
-#当前版本号: %s
-#新版本: %s
-#是否要打开下载页面？
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "%s 的更新已发布。"
+"当前版本号: %s"
+"新版本: %s"
+"是否要打开下载页面？"
 
-#Check for new version every
-#启用自动检查更新，检查间隔
+msgid "Check for new version every"
+msgstr "启用自动检查更新，检查间隔"
 
-#Consider active torrents as stalled when idle for
-#当未完成的 Torrent 超过这个时间没有收到数据时，自动停止下载
+msgid "Consider active torrents as stalled when idle for"
+msgstr "当未完成的 Torrent 超过这个时间没有收到数据时，自动停止下载"
 
-#Donate!
-#捐赠
+msgid "Donate!"
+msgstr "捐赠"
 
-#Download queue size
-#同时下载的任务数
+msgid "Download queue size"
+msgstr "同时下载的任务数"
 
-#Error checking for new version
-#检查更新发生错误
+msgid "Error checking for new version"
+msgstr "检查更新发生错误"
 
-#Modify trackers
-#修改 Tracker 列表
+msgid "Modify trackers"
+msgstr "修改 Tracker 列表"
 
-#No updates have been found.~You are running the latest version of %s
-#没有发现更新。
-#你使用的 %s 是最新版本。
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "没有发现更新。"
+"你使用的 %s 是最新版本。"
 
-#Upload queue size
-#同时上传的任务数
+msgid "Upload queue size"
+msgstr "同时上传的任务数"
 
-#Global statistics
-#全局统计
+msgid "Global statistics"
+msgstr "全局统计"
 
-#Connection name
-#连接名称
+msgid "Connection name"
+msgstr "连接名称"
 
-#Could not connect to tracker
-#无法连接到 Tracker
+msgid "Could not connect to tracker"
+msgstr "无法连接到 Tracker"
 
-#Data refresh interval when minimized
-#数据刷新频率 (最小化时)
+msgid "Data refresh interval when minimized"
+msgstr "数据刷新频率 (最小化时)"
 
-#Data refresh interval
-#数据刷新频率
+msgid "Data refresh interval"
+msgstr "数据刷新频率"
 
-#Default download folder on remote host
-#默认下载文件夹 (远程主机)
+msgid "Default download folder on remote host"
+msgstr "默认下载文件夹 (远程主机)"
 
-#Downloading torrent file
-#正在下载 Torrent 文件
+msgid "Downloading torrent file"
+msgstr "正在下载 Torrent 文件"
 
-#Font size
-#字体大小
+msgid "Font size"
+msgstr "字体大小"
 
-#Invalid name specified
-#指定的名称无效
+msgid "Invalid name specified"
+msgstr "指定的名称无效"
 
-#Manage connections
-#管理连接配置
+msgid "Manage connections"
+msgstr "管理连接配置"
 
-#Please enter a password to connect to %s
-#请输入连接到 %s 的密码
+msgid "Please enter a password to connect to %s"
+msgstr "请输入连接到 %s 的密码"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#请设定 %s 将要连接的 Transmission 远程主机
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "请设定 %s 将要连接的 Transmission 远程主机"
 
-#RPC path
-#RPC 路径
+msgid "RPC path"
+msgstr "RPC 路径"
 
-#Save as
-#另存为
+msgid "Save as"
+msgstr "另存为"
 
-#Torrent not registered with this tracker
-#Torrent 未在此 Tracker 发布
+msgid "Torrent not registered with this tracker"
+msgstr "Torrent 未在此 Tracker 发布"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#找不到路径映射。
-#请在“应用程序选项”中设置路径映射。
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "找不到路径映射。"
+"请在“应用程序选项”中设置路径映射。"
 
-#You need to restart the application to apply changes
-#请重新启动应用程序以使更改生效
+msgid "You need to restart the application to apply changes"
+msgstr "请重新启动应用程序以使更改生效"
 
-#Magnet Link
-#磁力链接
+msgid "Magnet Link"
+msgstr "磁力链接"
 
-#Export settings
-#导出设置
+msgid "Export settings"
+msgstr "导出设置"
 
-#Import settings
-#导入设置
+msgid "Import settings"
+msgstr "导入设置"
 
-#Template:
-#模板:
+msgid "Template:"
+msgstr "模板:"
 
-#Connection refused
-#连接被拒绝
+msgid "Connection refused"
+msgstr "连接被拒绝"
 
-#Access violation
-#非法访问
+msgid "Access violation"
+msgstr "非法访问"
 
-#Connection timed out
-#连接超时
+msgid "Connection timed out"
+msgstr "连接超时"
 
-#Other Winsock error
-#其他 Winsock 错误
+msgid "Other Winsock error"
+msgstr "其他 Winsock 错误"
 
-#Host not found
-#主机未找到
+msgid "Host not found"
+msgstr "主机未找到"
 
-#Unauthorized User
-#未认证用户
+msgid "Unauthorized User"
+msgstr "未认证用户"
 

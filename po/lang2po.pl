@@ -106,11 +106,12 @@ sub langfile_to_msgstr {
           my $entry          = $msgid_hash->{$msgid};
           my @decoded_msgstr = split( /\s*~\s*/, $msgstr );
           if ( defined($entry) ) {
-            $entry->{msgstr} = [@decoded_msgstr];
+            $entry->{msgstr} = [ @decoded_msgstr ];
           }
           else {
             $entry = new_entry();
-            $entry->{comments} = [ $msgid, @decoded_msgstr ];
+            $entry->{msgid} = [ $msgid ];
+            $entry->{msgstr} = [ @decoded_msgstr ];
             push @{$po_entries}, $entry;
           }
         }

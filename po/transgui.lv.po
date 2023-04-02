@@ -2191,349 +2191,349 @@ msgstr ""
 msgid "Trackers:"
 msgstr ""
 
-#TranslationLanguage
-#Latviešu
+msgid "TranslationLanguage"
+msgstr "Latviešu"
 
-#&All
-#Visi
+msgid "&All"
+msgstr "Visi"
 
-#&Close
-#Aizvērt
+msgid "&Close"
+msgstr "Aizvērt"
 
-#&Ignore
-#Ignorēt
+msgid "&Ignore"
+msgstr "Ignorēt"
 
-#&No
-#Nē
+msgid "&No"
+msgstr "Nē"
 
-#&OK
-#&OK
+msgid "&OK"
+msgstr "&OK"
 
-#&Open
-#&Atvērt
+msgid "&Open"
+msgstr "&Atvērt"
 
-#&Retry
-#Atkārtot
+msgid "&Retry"
+msgstr "Atkārtot"
 
-#&Save
-#Saglabāt
+msgid "&Save"
+msgstr "Saglabāt"
 
-#&Unlock
-#&Atbloķēt
+msgid "&Unlock"
+msgstr "&Atbloķēt"
 
-#&Yes
-#Jā
+msgid "&Yes"
+msgstr "Jā"
 
-#Abort
-#Abort
+msgid "Abort"
+msgstr "Abort"
 
-#&Add torrent
-#Pievienot jaunu torrentu
+msgid "&Add torrent"
+msgstr "Pievienot jaunu torrentu"
 
-#Authentication
-#Autentifikācija
+msgid "Authentication"
+msgstr "Autentifikācija"
 
-#Comment
-#Komentārs
+msgid "Comment"
+msgstr "Komentārs"
 
-#Confirmation
-#Apstiprinājums
+msgid "Confirmation"
+msgstr "Apstiprinājums"
 
-#Connecting to daemon
-#Savienojas ar Transmission
+msgid "Connecting to daemon"
+msgstr "Savienojas ar Transmission"
 
-#Connection error occurred
-#Savienošanās kļūda
+msgid "Connection error occurred"
+msgstr "Savienošanās kļūda"
 
-#Created on
-#Izveidots
+msgid "Created on"
+msgstr "Izveidots"
 
-#Destination folder
-#Mape saglabāšanai
+msgid "Destination folder"
+msgstr "Mape saglabāšanai"
 
-#Donate to support further development
-#Atbalstiet finansiāli tālāko attīstību
+msgid "Donate to support further development"
+msgstr "Atbalstiet finansiāli tālāko attīstību"
 
-#Donate via PayPal,WebMoney,Credit card
-#Pārskaitīt naudu caur PayPal,WebMoney,Credit card
+msgid "Donate via PayPal,WebMoney,Credit card"
+msgstr "Pārskaitīt naudu caur PayPal,WebMoney,Credit card"
 
-#Down limit
-#Vilk. limits
+msgid "Down limit"
+msgstr "Vilk. limits"
 
-#Download speed
-#Vilkšanas ātrums
+msgid "Download speed"
+msgstr "Vilkšanas ātrums"
 
-#Encryption
-#Šifrēšana
+msgid "Encryption"
+msgstr "Šifrēšana"
 
-#Flag images archive is needed to display country flags.~Download this archive now?
-#Lai attēlotu valsts karogus nepieciešams karogu attēlu arhīvs.
-#Lejuplādēt arhīvu?
+msgid "Flag images archive is needed to display country flags.~Download this archive now?"
+msgstr "Lai attēlotu valsts karogus nepieciešams karogu attēlu arhīvs."
+"Lejuplādēt arhīvu?"
 
-#Global peer limit
-#Kopējais iesaistīto skaits
+msgid "Global peer limit"
+msgstr "Kopējais iesaistīto skaits"
 
-#Hash
-#Hash
+msgid "Hash"
+msgstr "Hash"
 
-#Incoming port
-#Ieejas ports
+msgid "Incoming port"
+msgstr "Ieejas ports"
 
-#Information
-#Informācija
+msgid "Information"
+msgstr "Informācija"
 
-#Max peers
-#Iesaistīto skaits
+msgid "Max peers"
+msgstr "Iesaistīto skaits"
 
-#No to all
-#Nē visiem
+msgid "No to all"
+msgstr "Nē visiem"
 
-#Password
-#Parole
+msgid "Password"
+msgstr "Parole"
 
-#Peer limit
-#Iesaistīto skaits
+msgid "Peer limit"
+msgstr "Iesaistīto skaits"
 
-#Pieces
-#Daļiņas
+msgid "Pieces"
+msgstr "Daļiņas"
 
-#Properties
-#Īpašības
+msgid "Properties"
+msgstr "Īpašības"
 
-#Proxy password
-#Proksi parole
+msgid "Proxy password"
+msgstr "Proksi parole"
 
-#Proxy port
-#Proksi ports
+msgid "Proxy port"
+msgstr "Proksi ports"
 
-#Proxy server
-#Proksi serveris
+msgid "Proxy server"
+msgstr "Proksi serveris"
 
-#Proxy user name
-#Proksi lietotājs
+msgid "Proxy user name"
+msgstr "Proksi lietotājs"
 
-#Reconnect in %d seconds
-#Atkārtoti savienoties pēc %d sekundēm
+msgid "Reconnect in %d seconds"
+msgstr "Atkārtoti savienoties pēc %d sekundēm"
 
-#Remaining
-#Atlicis
+msgid "Remaining"
+msgstr "Atlicis"
 
-#Remote host
-#IP
+msgid "Remote host"
+msgstr "IP"
 
-#Seed ratio
-#Attiecība
+msgid "Seed ratio"
+msgstr "Attiecība"
 
-#Setup columns
-#Uzstādīt kolonnas
+msgid "Setup columns"
+msgstr "Uzstādīt kolonnas"
 
-#Share ratio
-#Attiecība
+msgid "Share ratio"
+msgstr "Attiecība"
 
-#Torrents (*.torrent)|*.torrent|All files (*.*)|*.*
-#Torrenti (*.torrent)|*.torrent|Visi faili (*.*)|*.*
+msgid "Torrents (*.torrent)|*.torrent|All files (*.*)|*.*"
+msgstr "Torrenti (*.torrent)|*.torrent|Visi faili (*.*)|*.*"
 
-#Total size
-#Kopējais izmērs
+msgid "Total size"
+msgstr "Kopējais izmērs"
 
-#Tracker update on
-#Trakera atjaunošana
+msgid "Tracker update on"
+msgstr "Trakera atjaunošana"
 
-#Unable to extract flag image
-#Nav iespējams atpakot karoga attēlu
+msgid "Unable to extract flag image"
+msgstr "Nav iespējams atpakot karoga attēlu"
 
-#Up limit
-#Atd. limits
+msgid "Up limit"
+msgstr "Atd. limits"
 
-#Update complete
-#Atjaunošana pabeigta
+msgid "Update complete"
+msgstr "Atjaunošana pabeigta"
 
-#Upload speed
-#Atdošanas ātrums
+msgid "Upload speed"
+msgstr "Atdošanas ātrums"
 
-#User name
-#Lietotājs
+msgid "User name"
+msgstr "Lietotājs"
 
-#Warning
-#Brīdinājums
+msgid "Warning"
+msgstr "Brīdinājums"
 
-#Wasted
-#Izniekoti
+msgid "Wasted"
+msgstr "Izniekoti"
 
-#Yes to &All
-#Jā visiem
+msgid "Yes to &All"
+msgstr "Jā visiem"
 
-#Incoming port is closed. Check your firewall settings
-#Ieejošais ports slēgts. Pārbaudiet jūsu ugunsmūra uzstādījumus
+msgid "Incoming port is closed. Check your firewall settings"
+msgstr "Ieejošais ports slēgts. Pārbaudiet jūsu ugunsmūra uzstādījumus"
 
-#Incoming port tested successfully
-#Ieejošais ports darbojas
+msgid "Incoming port tested successfully"
+msgstr "Ieejošais ports darbojas"
 
-#No host name specified
-#IP nav norādīta
+msgid "No host name specified"
+msgstr "IP nav norādīta"
 
-#No proxy server specified
-#Proksi serveris nav norādīts
+msgid "No proxy server specified"
+msgstr "Proksi serveris nav norādīts"
 
-#Language
-#Valoda
+msgid "Language"
+msgstr "Valoda"
 
-#Directory for incomplete files
-#Mape pilnībā nenovilktiem failiem
+msgid "Directory for incomplete files"
+msgstr "Mape pilnībā nenovilktiem failiem"
 
-#Enable blocklist
-#Atļaut bloķēto sarakstu
+msgid "Enable blocklist"
+msgstr "Atļaut bloķēto sarakstu"
 
-#No link was specified
-#Nav norādīta saite
+msgid "No link was specified"
+msgstr "Nav norādīta saite"
 
-#No torrent location was specified
-#Nav norādīta torrenta atrašanās vieta
+msgid "No torrent location was specified"
+msgstr "Nav norādīta torrenta atrašanās vieta"
 
-#Set data location
-#Norādīt atrašanās vietu
+msgid "Set data location"
+msgstr "Norādīt atrašanās vietu"
 
-#The block list has been updated successfully.~The list entries count: %d
-#Bloķēšanas saraksts atjaunots veigsmīgi.
-#Ierakstu sakits: %d
+msgid "The block list has been updated successfully.~The list entries count: %d"
+msgstr "Bloķēšanas saraksts atjaunots veigsmīgi."
+"Ierakstu sakits: %d"
 
-#The directory for incomplete files was not specified
-#Nav norādīta mape pilnībā nenovilktiem failiem
+msgid "The directory for incomplete files was not specified"
+msgstr "Nav norādīta mape pilnībā nenovilktiem failiem"
 
-#The downloads directory was not specified
-#Nav norādīta mape failu lejupielādei
+msgid "The downloads directory was not specified"
+msgstr "Nav norādīta mape failu lejupielādei"
 
-#Unable to execute "%s"
-#Nav iespējams izpildīt "%s"
+msgid "Unable to execute "%s""
+msgstr "Nav iespējams izpildīt "%s""
 
-#URL of a .torrent file or a magnet link
-#URL .torrent failam vai magnet saite
+msgid "URL of a .torrent file or a magnet link"
+msgstr "URL .torrent failam vai magnet saite"
 
-#New location for torrent data
-#Jaunā torrenta datu atrašanās vieta
+msgid "New location for torrent data"
+msgstr "Jaunā torrenta datu atrašanās vieta"
 
-#Days
-#Days
+msgid "Days"
+msgstr "Days"
 
-#Disk cache size
-#Disk cache size
+msgid "Disk cache size"
+msgstr "Disk cache size"
 
-#Download speeds (KB/s)
-#Download speeds (KB/s)
+msgid "Download speeds (KB/s)"
+msgstr "Download speeds (KB/s)"
 
-#Edit tracker
-#Edit tracker
+msgid "Edit tracker"
+msgstr "Edit tracker"
 
-#Free disk space
-#Free disk space
+msgid "Free disk space"
+msgstr "Free disk space"
 
-#From
-#From
+msgid "From"
+msgstr "From"
 
-#New connection
-#New connection
+msgid "New connection"
+msgstr "New connection"
 
-#No tracker URL was specified
-#No tracker URL was specified
+msgid "No tracker URL was specified"
+msgstr "No tracker URL was specified"
 
-#Stop seeding when inactive for
-#Stop seeding when inactive for
+msgid "Stop seeding when inactive for"
+msgstr "Stop seeding when inactive for"
 
-#The invalid time value was entered
-#The invalid time value was entered
+msgid "The invalid time value was entered"
+msgstr "The invalid time value was entered"
 
-#to
-#to
+msgid "to"
+msgstr "to"
 
-#Tracker announce URL
-#Tracker announce URL
+msgid "Tracker announce URL"
+msgstr "Tracker announce URL"
 
-#Upload speeds (KB/s)
-#Upload speeds (KB/s)
+msgid "Upload speeds (KB/s)"
+msgstr "Upload speeds (KB/s)"
 
-#Browse
-#Browse
+msgid "Browse"
+msgstr "Browse"
 
-#A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?
-#A new version of %s is available.
-#Your current version: %s
-#The new version: %s
-#Do you wish to open the Downloads web page?
+msgid "A new version of %s is available.~Your current version: %s~The new version: %s~Do you wish to open the Downloads web page?"
+msgstr "A new version of %s is available."
+"Your current version: %s"
+"The new version: %s"
+"Do you wish to open the Downloads web page?"
 
-#Check for new version every
-#Check for new version every
+msgid "Check for new version every"
+msgstr "Check for new version every"
 
-#Consider active torrents as stalled when idle for
-#Consider active torrents as stalled when idle for
+msgid "Consider active torrents as stalled when idle for"
+msgstr "Consider active torrents as stalled when idle for"
 
-#Donate!
-#Donate!
+msgid "Donate!"
+msgstr "Donate!"
 
-#Download queue size
-#Download queue size
+msgid "Download queue size"
+msgstr "Download queue size"
 
-#Error checking for new version
-#Error checking for new version
+msgid "Error checking for new version"
+msgstr "Error checking for new version"
 
-#Modify trackers
-#Modify trackers
+msgid "Modify trackers"
+msgstr "Modify trackers"
 
-#No updates have been found.~You are running the latest version of %s
-#No updates have been found.
-#You are running the latest version of %s
+msgid "No updates have been found.~You are running the latest version of %s"
+msgstr "No updates have been found."
+"You are running the latest version of %s"
 
-#Upload queue size
-#Upload queue size
+msgid "Upload queue size"
+msgstr "Upload queue size"
 
-#Global statistics
-#Global statistics
+msgid "Global statistics"
+msgstr "Global statistics"
 
-#Connection name
-#Connection name
+msgid "Connection name"
+msgstr "Connection name"
 
-#Could not connect to tracker
-#=Could not connect to tracker
+msgid "Could not connect to tracker"
+msgstr "=Could not connect to tracker"
 
-#Data refresh interval when minimized
-#Data refresh interval when minimized
+msgid "Data refresh interval when minimized"
+msgstr "Data refresh interval when minimized"
 
-#Data refresh interval
-#Data refresh interval
+msgid "Data refresh interval"
+msgstr "Data refresh interval"
 
-#Default download folder on remote host
-#Default download folder on remote host
+msgid "Default download folder on remote host"
+msgstr "Default download folder on remote host"
 
-#Downloading torrent file
-#Downloading torrent file
+msgid "Downloading torrent file"
+msgstr "Downloading torrent file"
 
-#Font size
-#Font size
+msgid "Font size"
+msgstr "Font size"
 
-#Invalid name specified
-#Invalid name specified
+msgid "Invalid name specified"
+msgstr "Invalid name specified"
 
-#Manage connections
-#Manage connections
+msgid "Manage connections"
+msgstr "Manage connections"
 
-#Please enter a password to connect to %s
-#Please enter a password to connect to %s
+msgid "Please enter a password to connect to %s"
+msgstr "Please enter a password to connect to %s"
 
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
-#Please specify how %s will connect to a remote host running Transmission daemon (service)
+msgid "Please specify how %s will connect to a remote host running Transmission daemon (service)"
+msgstr "Please specify how %s will connect to a remote host running Transmission daemon (service)"
 
-#RPC path
-#RPC path
+msgid "RPC path"
+msgstr "RPC path"
 
-#Save as
-#Save as
+msgid "Save as"
+msgstr "Save as"
 
-#Torrent not registered with this tracker
-#=Torrent not registered with this tracker
+msgid "Torrent not registered with this tracker"
+msgstr "=Torrent not registered with this tracker"
 
-#Unable to find path mapping.~Use the application's options to setup path mappings
-#Unable to find path mapping.
-#Use the application's options to setup path mappings
+msgid "Unable to find path mapping.~Use the application's options to setup path mappings"
+msgstr "Unable to find path mapping."
+"Use the application's options to setup path mappings"
 
-#You need to restart the application to apply changes
-#You need to restart the application to apply changes
+msgid "You need to restart the application to apply changes"
+msgstr "You need to restart the application to apply changes"
 
