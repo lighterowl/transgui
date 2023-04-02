@@ -44,6 +44,9 @@ else
   cd "$repo_dir"
 fi
 
+build=$(git rev-list --abbrev-commit --max-count=1 HEAD)
+sed -i "s/@GIT_COMMIT@/$build/" about.lfm
+
 lazbuild transgui.lpi --ws=qt5 --build-mode=Release --lazarusdir=${sdk_dir}/lazarus
 cd units
 

@@ -68,6 +68,8 @@ else
 }
 
 cd $repodir
+$build = git rev-list --abbrev-commit --max-count=1 HEAD
+((Get-Content -path about.lfm -Raw) -replace '@GIT_COMMIT',${build}) | Set-Content -Path about.lfm
 lazbuild --build-mode=Release --lazarusdir=${sdk_dir}\lazarus transgui.lpi
 
 mkdir Release
