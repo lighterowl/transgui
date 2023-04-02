@@ -60,7 +60,7 @@ else
 fi
 
 build=$(git rev-list --abbrev-commit --max-count=1 HEAD)
-sed -i "s/@GIT_COMMIT@/$build/" about.lfm
+sed -i.bak -e "s/@GIT_COMMIT@/$build/" about.lfm
 
 cd "${repo_dir}/.github/macosx"
 source create_app_new.sh
