@@ -36,8 +36,9 @@ unit About;
 interface
 
 uses
-  BaseForm, Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls, ExtCtrls, ButtonPanel, lclversion,
-    ssl_openssl3, ssl_openssl3_lib;
+  BaseForm, Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics,
+  Dialogs, StdCtrls, ComCtrls, ExtCtrls, ButtonPanel, lclversion, BuildInfo,
+  ssl_openssl3, ssl_openssl3_lib;
 
 resourcestring
   SErrorCheckingVersion = 'Error checking for new version.';
@@ -239,7 +240,7 @@ begin
   txHomePage.Font.Size:=Font.Size;
   BorderStyle:=bsSizeable;
   txAppName.Caption:=AppName;
-  txVersion.Caption:=Format(txVersion.Caption, [AppVersion]);
+  txVersion.Caption:=Format(txVersion.Caption, [AppVersion, BuildInfo.GIT_COMMIT]);
   Page.ActivePageIndex:=0;
 
   txVersFPC.caption := 'Fpc : ' + {$I %FPCVERSION%} + '   Lazarus : ' +lcl_version;
