@@ -500,7 +500,7 @@ inherited AboutForm: TAboutForm
         Height = 15
         Top = 38
         Width = 57
-        Caption = 'Version %s'
+        Caption = 'Version %s, Build @GIT_COMMIT@'
         ParentColor = False
       end
       object Bevel1: TBevel

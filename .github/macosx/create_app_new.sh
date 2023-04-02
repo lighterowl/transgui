@@ -34,8 +34,6 @@ package_openssl() {
 
 prog_ver="$(cat ../../VERSION.txt)"
 build="$(git rev-list --abbrev-commit --max-count=1 HEAD ../..)"
-lazarus_ver="$(lazbuild -v)"
-fpc_ver="$(fpc -i V | head -n 1)"
 exename=../../units/transgui
 appname="Transmission Remote GUI"
 dmg_dist_file="../../Release/transgui.dmg"
@@ -43,7 +41,6 @@ dmgfolder=./Release
 appfolder="$dmgfolder/$appname.app"
 
 mkdir -p ../../Release/
-sed -i.bak "s/'Version %s'/'Version %s Build $build'#13#10'Compiled by: $fpc_ver, Lazarus v$lazarus_ver'/" ../../about.lfm
 
 pushd ../..
 lazbuild --compiler=${fpc_installdir}/lib/fpc/3.2.3/ppcx64 --build-mode=Release \
