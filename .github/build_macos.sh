@@ -59,5 +59,8 @@ else
   fpc_lazarus_build_install
 fi
 
+build=$(git rev-list --abbrev-commit --max-count=1 HEAD)
+sed -i.bak -e "s/@GIT_COMMIT@/$build/" about.lfm
+
 cd "${repo_dir}/.github/macosx"
 source create_app_new.sh
