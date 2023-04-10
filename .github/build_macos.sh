@@ -59,6 +59,8 @@ else
   fpc_lazarus_build_install
 fi
 
+cd "$repo_dir"
+
 build=$(git rev-list --abbrev-commit --max-count=1 HEAD)
 sed -i.bak -e "s/@GIT_COMMIT@/$build/" buildinfo.pas
 
