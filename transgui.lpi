@@ -408,6 +408,11 @@
         <UnitName Value="IpResolver"/>
       </Unit>
       <Unit>
+        <Filename Value="buildinfo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BuildInfo"/>
+      </Unit>
+      <Unit>
         <Filename Value="download.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="DownloadForm"/>

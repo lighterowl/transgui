@@ -999,7 +999,7 @@ procedure ReadVersionInfo;
 var
   file_ver_info : TFileVersionInfo;
 begin
-  {{ https://wiki.lazarus.freepascal.org/Show_Application_Title,_Version,_and_Company }}
+  { https://wiki.lazarus.freepascal.org/Show_Application_Title,_Version,_and_Company }
   file_ver_info := TFileVersionInfo.Create(nil);
   try
     file_ver_info.ReadFileInfo;

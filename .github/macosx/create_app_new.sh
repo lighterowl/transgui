@@ -81,7 +81,3 @@ SetFile -a C "$mount_volume"
 hdiutil detach "$mount_device"
 rm -f "$dmg_dist_file"
 hdiutil convert tmp.dmg -format UDBZ -imagekey zlib-level=9 -o "$dmg_dist_file"
-
-rm tmp.dmg
-rm -rf "$dmgfolder"
-mv ../../about.lfm.bak ../../about.lfm
