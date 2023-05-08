@@ -3704,7 +3704,7 @@ begin
       for i:=VarArrayLowBound(ids, 1) to VarArrayHighBound(ids, 1) do
             aids.Add(integer(ids[i]));
       args.Add('ids', aids);
-      SplitRegExpr(',', input, slabels);
+      if input <> '' then SplitRegExpr(',', input, slabels);
       slabels.Sort;
       for s in slabels do begin
         alabels.Add(trim(s));
