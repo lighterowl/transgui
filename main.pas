@@ -1018,6 +1018,7 @@ function IsCopyKeySequence(var Key: Word; Shift: TShiftState) : boolean;
 var
   WantedShiftState : TShiftStateEnum;
 begin
+  { https://wiki.freepascal.org/macOS_Programming_Tips#Detecting_the_Apple_Command_key }
 {$ifdef darwin}
   WantedShiftState := ssMeta;
 {$else}
