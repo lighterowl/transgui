@@ -592,11 +592,15 @@ type
     procedure acStatusBarSizesExecute(Sender: TObject);
     procedure acStopAllTorrentsExecute(Sender: TObject);
     procedure acStopTorrentExecute(Sender: TObject);
+    procedure gTorrentsKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
     procedure gTorrentsMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
     procedure gTorrentsMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure LocalWatchTimerTimer(Sender: TObject);
+    procedure lvFilesKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
+      );
     procedure lvFilesMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure MenuShowExecute(Sender: TObject);
@@ -1008,6 +1012,18 @@ begin
   finally
     file_ver_info.Free;
   end;
+end;
+
+function IsCopyKeySequence(var Key: Word; Shift: TShiftState) : boolean;
+var
+  WantedShiftState : TShiftStateEnum;
+begin
+{$ifdef darwin}
+  WantedShiftState := ssMeta;
+{$else}
+  WantedShiftState := ssCtrl;
+{$endif}
+  Result := ((Key = VK_C) and (WantedShiftState in Shift))
 end;
 
 {$ifdef windows}
@@ -3820,6 +3836,15 @@ begin
   TorrentAction(GetSelectedTorrents, 'torrent-stop');
 end;
 
+procedure TMainForm.gTorrentsKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if IsCopyKeySequence(Key, Shift) then
+    begin
+      writeln('copy from torrents');
+    end;
+end;
+
 procedure TMainForm.gTorrentsMouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 var r, c, ADatacol: integer;
@@ -3856,6 +3881,15 @@ begin
     begin
       FWatchDownloading := true;
       TickTimerTimer(nil);
+    end;
+end;
+
+procedure TMainForm.lvFilesKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if IsCopyKeySequence(Key, Shift) then
+    begin
+      writeln('copy from files');
     end;
 end;
 
