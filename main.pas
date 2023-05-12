@@ -3842,7 +3842,7 @@ procedure TMainForm.gTorrentsKeyDown(Sender: TObject; var Key: Word;
 begin
   if IsCopyKeySequence(Key, Shift) then
     begin
-      writeln('copy from torrents');
+      Clipboard.AsText := gTorrents.Items[idxName, gTorrents.Row];
     end;
 end;
 
@@ -3890,7 +3890,7 @@ procedure TMainForm.lvFilesKeyDown(Sender: TObject; var Key: Word;
 begin
   if IsCopyKeySequence(Key, Shift) then
     begin
-      writeln('copy from files');
+      Clipboard.AsText := FFilesTree.GetFullPath(lvFiles.Row);
     end;
 end;
 
