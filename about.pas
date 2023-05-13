@@ -125,14 +125,14 @@ end;
 procedure GoHomePage;
 begin
   AppBusy;
-  OpenURL('https://github.com/transmission-remote-gui/transgui/releases');
+  OpenURL('https://github.com/xavery/transgui/releases');
   AppNormal;
 end;
 
 procedure GoGitHub;
 begin
   AppBusy;
-  OpenURL('https://github.com/transmission-remote-gui/transgui');
+  OpenURL('https://github.com/xavery/transgui');
   AppNormal;
 end;
 
@@ -156,7 +156,7 @@ begin
 
   Application.ProcessMessages;
   AppBusy;
-  OpenURL('https://github.com/transmission-remote-gui/transgui/releases');
+  OpenURL('https://github.com/xavery/transgui/releases');
   AppNormal;
 end;
 
@@ -193,7 +193,7 @@ begin
           FHttp.ProxyUser:=RpcObj.Http.ProxyUser;
           FHttp.ProxyPass:=RpcObj.Http.ProxyPass;
         end;
-        if FHttp.HTTPMethod('GET', 'https://raw.githubusercontent.com/transmission-remote-gui/transgui/master/VERSION.txt') then begin
+        if FHttp.HTTPMethod('GET', 'https://raw.githubusercontent.com/xavery/transgui/master/VERSION.txt') then begin
           if FHttp.ResultCode = 200 then begin
             SetString(FVersion, FHttp.Document.Memory, FHttp.Document.Size);
             FVersion:=Trim(FVersion);

@@ -259,6 +259,7 @@ type
     MenuItem104: TMenuItem;
     MenuItem105: TMenuItem;
     MenuItem106: TMenuItem;
+    MenuItem107: TMenuItem;
     MenuShow: TAction;
     ActionList1: TActionList;
     acToolbarShow :  TAction;
@@ -3707,9 +3708,9 @@ begin
   i:=gTorrents.Items.IndexOf(idxTorrentId, ids[0]);
   if VarIsEmpty(gTorrents.Items[idxPath, i]) then
     exit;
-  if InputQuery('Set tags',
-      'This will overwrite any existing tags.' + sLineBreak +
-      'You can set multiple tags separated by a comma or leave empty to clear tags.',
+  if InputQuery('Set labels',
+      'This will overwrite any existing labels.' + sLineBreak +
+      'You can set multiple labels separated by a comma or leave empty to clear labels.',
       input) then begin
     AppBusy;
     req := TJSONObject.Create;
@@ -3722,8 +3723,10 @@ begin
       for i:=VarArrayLowBound(ids, 1) to VarArrayHighBound(ids, 1) do
             aids.Add(integer(ids[i]));
       args.Add('ids', aids);
-      if input <> '' then SplitRegExpr(',', input, slabels);
-      slabels.Sort;
+      if trim(input) <> '' then begin
+        SplitRegExpr(',', input, slabels);
+        slabels.Sort;
+      end;
       for s in slabels do begin
         alabels.Add(trim(s));
       end;
@@ -5766,6 +5769,7 @@ begin
   try
   Paths.Sorted:=True;
   Labels.Sorted:=True;
+  Labels.CaseSensitive:=True;
   OldId:=RpcObj.CurTorrentId;
   IsActive:=gTorrents.Enabled;
   gTorrents.Enabled:=True;
