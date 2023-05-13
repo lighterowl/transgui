@@ -3840,10 +3840,19 @@ end;
 
 procedure TMainForm.gTorrentsKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
+var
+  clipboardText: string;
+
+procedure SaveTorrentName(Torrents: TVarGrid; Row: Integer);
+begin
+  clipboardText := clipboardText + Torrents.Items[idxName, Row] + LineEnding;
+end;
+
 begin
   if IsCopyKeySequence(Key, Shift) then
     begin
-      Clipboard.AsText := gTorrents.Items[idxName, gTorrents.Row];
+      gTorrents.ForEachSelectedRow(@SaveTorrentName);
+      Clipboard.AsText := clipboardText;
     end;
 end;
 
@@ -3888,13 +3897,21 @@ end;
 
 procedure TMainForm.lvFilesKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
+var
+  clipboardText: string;
+
+procedure SaveFilePath(Torrents: TVarGrid; Row: Integer);
+begin
+  clipboardText := clipboardText + FFilesTree.GetFullPath(Row) + LineEnding;
+end;
+
 begin
   if IsCopyKeySequence(Key, Shift) then
     begin
-      Clipboard.AsText := FFilesTree.GetFullPath(lvFiles.Row);
+      lvFiles.ForEachSelectedRow(@SaveFilePath);
+      Clipboard.AsText := clipboardText;
     end;
 end;
-
 
 procedure TMainForm.lvFilesMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
