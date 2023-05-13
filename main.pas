@@ -30,6 +30,7 @@
 *************************************************************************************}
 unit Main;
 {$mode objfpc}{$H+}
+{$modeswitch nestedprocvars}
 
 interface
 
@@ -7276,25 +7277,24 @@ end;
 
 function TMainForm.GetSelectedTorrents: variant;
 var
-  i, j: integer;
+  numRows, i: Integer;
+  ids: variant;
+
+procedure SaveTorrentId(Sender: TVarGrid; Row: Integer);
 begin
-  with gTorrents do begin
-    if Items.Count = 0 then begin
-      Result:=Unassigned;
-      exit;
-    end;
-    if SelCount = 0 then
-      Result:=VarArrayOf([Items[idxTorrentId, Row]])
-    else begin
-      Result:=VarArrayCreate([0, SelCount - 1], varinteger);
-      j:=0;
-      for i:=0 to gTorrents.Items.Count - 1 do
-        if gTorrents.RowSelected[i] then begin
-          Result[j]:=Items[idxTorrentId, i];
-          Inc(j);
-        end;
-    end;
-  end;
+  ids[i] := Sender.Items[idxTorrentId, Row];
+  Inc(i);
+end;
+
+begin
+  if gTorrents.Items.Count = 0 then
+    exit(Unassigned);
+
+  i := 0;
+  if gTorrents.SelCount = 0 then numRows := 1 else numRows := gTorrents.SelCount;
+  ids := VarArrayCreate([0, numRows], varinteger);
+  gTorrents.ForEachSelectedRow(@SaveTorrentId);
+  Result := ids;
 end;
 
 function TMainForm.GetDisplayedTorrents: variant;
