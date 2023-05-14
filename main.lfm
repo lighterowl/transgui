@@ -230,6 +230,7 @@ inherited MainForm: TMainForm
       TabOrder = 0
       OnClick = gTorrentsClick
       OnDblClick = gTorrentsDblClick
+      OnKeyDown = gTorrentsKeyDown
       OnMouseMove = gTorrentsMouseMove
       OnMouseUp = gTorrentsMouseUp
       OnResize = gTorrentsResize
@@ -1017,6 +1018,7 @@ inherited MainForm: TMainForm
         RowCount = 1
         TabOrder = 0
         OnDblClick = lvFilesDblClick
+        OnKeyDown = lvFilesKeyDown
         OnMouseUp = lvFilesMouseUp
         OnSetEditText = lvFilesSetEditText
         Images = ImageList16

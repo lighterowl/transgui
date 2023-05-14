@@ -31,6 +31,7 @@
 unit VarGrid;
 
 {$mode objfpc}{$H+}
+{$modeswitch nestedprocvars}
 
 interface
 
@@ -57,6 +58,7 @@ type
   TOnSortColumnEvent = procedure (Sender: TVarGrid; var ASortCol: integer) of object;
   TCellNotifyEvent = procedure (Sender: TVarGrid; ACol, ARow, ADataCol: integer) of object;
   TOnQuickSearch = procedure (Sender: TVarGrid; var SearchText: string; var ARow: integer) of object;
+  TRowCallback = procedure (Sender: TVarGrid; Row: Integer) is nested;
 
   { TVarGridStringEditor }
 
@@ -162,6 +164,7 @@ type
     procedure BeginUpdate; reintroduce;
     procedure EndUpdate(aRefresh: boolean = true); reintroduce;
     procedure EditCell(ACol, ARow: integer);
+    procedure ForEachSelectedRow(Cbk: TRowCallback);
 
     property Items: TVarList read FItems;
     property RowSelected[RowIndex: integer]: boolean read GetRowSelected write SetRowSelected;
@@ -289,6 +292,19 @@ begin
 end;
 
 { TVarGrid }
+
+procedure TVarGrid.ForEachSelectedRow(Cbk: TRowCallback);
+var
+  i: Integer;
+begin
+  if SelCount = 0 then begin
+    Cbk(Self, Row);
+  end
+  else
+    for i:=0 to Items.Count - 1 do
+      if RowSelected[i] then
+        Cbk(Self, i);
+end;
 
 procedure TVarGrid.ItemsChanged(Sender: TObject);
 var

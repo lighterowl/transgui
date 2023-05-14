@@ -30,6 +30,7 @@
 *************************************************************************************}
 unit Main;
 {$mode objfpc}{$H+}
+{$modeswitch nestedprocvars}
 
 interface
 
@@ -593,11 +594,15 @@ type
     procedure acStatusBarSizesExecute(Sender: TObject);
     procedure acStopAllTorrentsExecute(Sender: TObject);
     procedure acStopTorrentExecute(Sender: TObject);
+    procedure gTorrentsKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
     procedure gTorrentsMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
     procedure gTorrentsMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure LocalWatchTimerTimer(Sender: TObject);
+    procedure lvFilesKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
+      );
     procedure lvFilesMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure MenuShowExecute(Sender: TObject);
@@ -1009,6 +1014,19 @@ begin
   finally
     file_ver_info.Free;
   end;
+end;
+
+function IsCopyKeySequence(var Key: Word; Shift: TShiftState) : boolean;
+var
+  WantedShiftState : TShiftStateEnum;
+begin
+  { https://wiki.freepascal.org/macOS_Programming_Tips#Detecting_the_Apple_Command_key }
+{$ifdef darwin}
+  WantedShiftState := ssMeta;
+{$else}
+  WantedShiftState := ssCtrl;
+{$endif}
+  Result := ((Key = VK_C) and (WantedShiftState in Shift))
 end;
 
 {$ifdef windows}
@@ -3823,6 +3841,24 @@ begin
   TorrentAction(GetSelectedTorrents, 'torrent-stop');
 end;
 
+procedure TMainForm.gTorrentsKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+var
+  clipboardText: string;
+
+procedure SaveTorrentName(Torrents: TVarGrid; Row: Integer);
+begin
+  clipboardText := clipboardText + Torrents.Items[idxName, Row] + LineEnding;
+end;
+
+begin
+  if IsCopyKeySequence(Key, Shift) then
+    begin
+      gTorrents.ForEachSelectedRow(@SaveTorrentName);
+      Clipboard.AsText := clipboardText;
+    end;
+end;
+
 procedure TMainForm.gTorrentsMouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 var r, c, ADatacol: integer;
@@ -3862,6 +3898,27 @@ begin
     end;
 end;
 
+procedure TMainForm.lvFilesKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+var
+  clipboardText: string;
+
+procedure SaveFilePath(Torrents: TVarGrid; Row: Integer);
+var
+  filePath: string;
+begin
+  filePath := Copy(FFilesTree.GetFullPath(Row, False), FFilesTree.CommonPathLen + 1);
+  clipboardText += filePath;
+  clipboardText += LineEnding;
+end;
+
+begin
+  if IsCopyKeySequence(Key, Shift) then
+    begin
+      lvFiles.ForEachSelectedRow(@SaveFilePath);
+      Clipboard.AsText := clipboardText;
+    end;
+end;
 
 procedure TMainForm.lvFilesMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
@@ -7245,25 +7302,24 @@ end;
 
 function TMainForm.GetSelectedTorrents: variant;
 var
-  i, j: integer;
+  numRows, i: Integer;
+  ids: variant;
+
+procedure SaveTorrentId(Sender: TVarGrid; Row: Integer);
 begin
-  with gTorrents do begin
-    if Items.Count = 0 then begin
-      Result:=Unassigned;
-      exit;
-    end;
-    if SelCount = 0 then
-      Result:=VarArrayOf([Items[idxTorrentId, Row]])
-    else begin
-      Result:=VarArrayCreate([0, SelCount - 1], varinteger);
-      j:=0;
-      for i:=0 to gTorrents.Items.Count - 1 do
-        if gTorrents.RowSelected[i] then begin
-          Result[j]:=Items[idxTorrentId, i];
-          Inc(j);
-        end;
-    end;
-  end;
+  ids[i] := Sender.Items[idxTorrentId, Row];
+  Inc(i);
+end;
+
+begin
+  if gTorrents.Items.Count = 0 then
+    exit(Unassigned);
+
+  i := 0;
+  if gTorrents.SelCount = 0 then numRows := 1 else numRows := gTorrents.SelCount;
+  ids := VarArrayCreate([0, numRows], varinteger);
+  gTorrents.ForEachSelectedRow(@SaveTorrentId);
+  Result := ids;
 end;
 
 function TMainForm.GetDisplayedTorrents: variant;
