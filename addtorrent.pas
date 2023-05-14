@@ -164,6 +164,7 @@ type
     property Checked[ARow: integer]: TCheckBoxState read GetChecked write SetChecked;
     property RowLevel[ARow: integer]: integer read GetLevel;
     property OnStateChange: TNotifyEvent read FOnStateChange write FOnStateChange;
+    property CommonPathLen: integer read FCommonPathLen;
   end;
 
 const
@@ -456,7 +457,8 @@ begin
   end
   else
     Result:='';
-    Result:=Result + UTF8Encode(widestring(FFiles[idxFileFullPath, ARow]));
+
+  Result:=Result + UTF8Encode(widestring(FFiles[idxFileFullPath, ARow]));
 
   if IsFolder(ARow) then
       Result:=Copy(Result, 1, Length(Result) - 1)

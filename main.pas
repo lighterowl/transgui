@@ -3904,8 +3904,12 @@ var
   clipboardText: string;
 
 procedure SaveFilePath(Torrents: TVarGrid; Row: Integer);
+var
+  filePath: string;
 begin
-  clipboardText := clipboardText + FFilesTree.GetFullPath(Row) + LineEnding;
+  filePath := Copy(FFilesTree.GetFullPath(Row, False), FFilesTree.CommonPathLen + 1);
+  clipboardText += filePath;
+  clipboardText += LineEnding;
 end;
 
 begin
