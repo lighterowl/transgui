@@ -20,13 +20,13 @@ Due to issues with fpc 3.2.2 mentioned below, it is recommended to build transgu
 
 # Changes made
 
+This list applies to the first release of this fork : please look into release notes for individual releases in order to see what else changed since then.
+
  * transgui is now compiled with Free Pascal 3.2.3 and Lazarus 2.2.6 due to two rather serious bugs in parsing JSON in older versions ([38618](https://gitlab.com/freepascal.org/fpc/source/-/issues/38618) and [38624](https://gitlab.com/freepascal.org/fpc/source/-/issues/38624)).
  * The program binary is now compiled in Release mode.
  * Old makefiles were removed and all compilation is now handled via `lazbuild`.
  * Gzip compression is now used when talking to the daemon.
  * OpenSSL version was switched to version 3.0, making it possible to use TLS 1.3.
-
-Whenever possible, those fixes are also submitted as pull requests against the community-maintained fork.
 
 # Disclaimer
 
