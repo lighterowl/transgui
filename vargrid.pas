@@ -98,6 +98,7 @@ type
     FOldOpt: TGridOptions;
     FNoDblClick: boolean;
     FStrEditor: TVarGridStringEditor;
+    FPreserveSelectionOnSort: boolean;
 
     function GetRow: integer;
     function GetRowSelected(RowIndex: integer): boolean;
@@ -172,6 +173,7 @@ type
     property SelCount: integer read FSelCount;
     property Row: integer read GetRow write SetRow;
     property FirstVisibleColumn: integer read FFirstVisibleColumn;
+    property PreserveSelectionOnSort: boolean read FPreserveSelectionOnSort write FPreserveSelectionOnSort;
   published
     property Align;
     property AlternateColor;
@@ -1209,6 +1211,7 @@ begin
   end;
   FastEditing:=False;
   EditorBorderStyle:=bsSingle;
+  FPreserveSelectionOnSort:=True;
 end;
 
 destructor TVarGrid.Destroy;
@@ -1253,26 +1256,34 @@ end;
 
 procedure TVarGrid.Sort;
 var
-  i, c: integer;
+  i : integer;
 begin
-  if (FSortColumn >= 0) and (FItems.Count > 0) then begin
-    c:=FSortColumn;
-    if Assigned(FOnSortColumn) then
-      FOnSortColumn(Self, c);
-    if not FItems.IsUpdating and (Row >= 0) and (Row < FItems.Count) then
-      FItems.RowOptions[Row]:=FItems.RowOptions[Row] or roCurRow;
-    FItems.Sort(c, SortOrder = soDescending);
-    if not FItems.IsUpdating then begin
-      if Assigned(FOnAfterSort) then
-        FOnAfterSort(Self);
+  if (FSortColumn < 0) or (FItems.Count <= 0) then exit;
+
+  if Assigned(FOnSortColumn) then
+    FOnSortColumn(Self, FSortColumn);
+
+  if not FItems.IsUpdating and (Row >= 0) and (Row < FItems.Count) and FPreserveSelectionOnSort then
+    FItems.RowOptions[Row]:=FItems.RowOptions[Row] or roCurRow;
+
+  FItems.Sort(FSortColumn, SortOrder = soDescending);
+
+  if not FItems.IsUpdating then begin
+    if Assigned(FOnAfterSort) then
+      FOnAfterSort(Self);
+
+    if FPreserveSelectionOnSort then begin
       for i:=0 to FItems.Count - 1 do
         if LongBool(FItems.RowOptions[i] and roCurRow) then begin
           FItems.RowOptions[i]:=FItems.RowOptions[i] and not roCurRow;
           Row:=i;
           break;
         end;
-      Invalidate;
-    end;
+    end
+    else
+      Row:=-1;
+
+    Invalidate;
   end;
 end;
 
