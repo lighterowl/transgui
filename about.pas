@@ -38,7 +38,7 @@ interface
 uses
   BaseForm, Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics,
   Dialogs, StdCtrls, ComCtrls, ExtCtrls, ButtonPanel, lclversion, BuildInfo,
-  ssl_openssl3, ssl_openssl3_lib;
+  ssl_openssl3, ssl_openssl3_lib, fpjson;
 
 resourcestring
   SErrorCheckingVersion = 'Error checking for new version.';
@@ -125,7 +125,7 @@ end;
 procedure GoHomePage;
 begin
   AppBusy;
-  OpenURL('https://github.com/xavery/transgui/releases');
+  OpenURL('https://github.com/xavery/transgui/releases/latest');
   AppNormal;
 end;
 
@@ -182,6 +182,8 @@ begin
 end;
 
 procedure TCheckVersionThread.Execute;
+var
+  parsed: TJSONObject;
 begin
   if not FExit then begin
     try
@@ -193,10 +195,11 @@ begin
           FHttp.ProxyUser:=RpcObj.Http.ProxyUser;
           FHttp.ProxyPass:=RpcObj.Http.ProxyPass;
         end;
-        if FHttp.HTTPMethod('GET', 'https://raw.githubusercontent.com/xavery/transgui/master/VERSION.txt') then begin
+        if FHttp.HTTPMethod('GET', 'https://api.github.com/repos/xavery/transgui/releases/latest') then begin
           if FHttp.ResultCode = 200 then begin
-            SetString(FVersion, FHttp.Document.Memory, FHttp.Document.Size);
-            FVersion:=Trim(FVersion);
+            parsed := GetJSON(FHttp.Document) as TJSONObject;
+            FVersion := Copy(parsed.Strings['name'], 2);
+            parsed.Free;
           end
           else
             FError:=Format('HTTP error: %d', [FHttp.ResultCode]);
