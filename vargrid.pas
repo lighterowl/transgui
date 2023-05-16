@@ -1279,11 +1279,11 @@ begin
           Row:=i;
           break;
         end;
+      Invalidate;
     end
     else
       Row:=-1;
 
-    Invalidate;
   end;
 end;
 
