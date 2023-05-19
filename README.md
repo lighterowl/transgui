@@ -35,3 +35,5 @@ This list applies to the first release of this fork : please look into release n
  * Neither Windows nor macOS are platforms that I use daily.
 
 `tl;dr` Please don't expect swooping changes to the program's behaviour or UI here, just hacks upon hacks at best.
+
+
