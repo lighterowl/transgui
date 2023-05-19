@@ -47,6 +47,7 @@ function FPC-Lazarus-Build-Install {
     My-Download -Uri "https://sourceforge.net/projects/lazarus/files/Lazarus%20Zip%20_%20GZip/Lazarus%202.2.6/lazarus-2.2.6-0.zip/download" -OutFile lazarus-src.zip
     7z x lazarus-src.zip
 
+    patch -p0 -i "${repodir}/.github/lcl-grid-no-scroll-after-set-row.diff"
     cd lazarus
     make bigide
     $env:Path = "${lazarus};" + $env:Path

@@ -1,0 +1,12 @@
+--- lazarus/lcl/grids.pas.ori	2023-05-20 01:14:36.293446385 +0200
++++ lazarus/lcl/grids.pas	2023-05-20 01:42:13.886797901 +0200
+@@ -7825,8 +7825,7 @@
+     end else
+       FRange:=NormalizarRect(Rect(Fpivot.x,FPivot.y, DCol, DRow));
+ 
+-  if not ScrollToCell(DCol, DRow, ForceFullyVisible) then
+-    InvalidateMovement(DCol, DRow, OldRange);
++  InvalidateMovement(DCol, DRow, OldRange);
+ 
+   FCol := DCol;
+   FRow := DRow;

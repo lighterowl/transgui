@@ -28,6 +28,7 @@ fpc_lazarus_build_install() {
   cd "$sdk_dir"
   curl -L -o lazarus-src.tar.gz 'https://sourceforge.net/projects/lazarus/files/Lazarus%20Zip%20_%20GZip/Lazarus%202.2.6/lazarus-2.2.6-0.tar.gz/download'
   tar xf lazarus-src.tar.gz
+  patch -p0 -i "${repo_dir}/.github/lcl-grid-no-scroll-after-set-row.diff"
   cd lazarus
   make bigide LCL_PLATFORM=qt5
   export PATH=$PWD:$PATH
