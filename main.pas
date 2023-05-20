@@ -4654,16 +4654,15 @@ begin
       6: ImageIndex:=imgError;
       7: ImageIndex:=imgWaiting
       else
-        if Text <> '' then
-          if VarIsNull(Sender.Items[-1, ARow]) then
-            ImageIndex:=5
-          else begin
-            t:=Integer(Sender.Items[-2, ARow]);
-            if t = 1 then
-              ImageIndex:=22
-            else
-              ImageIndex:=44;
-          end;
+        if Text <> '' then begin
+          t:=Integer(Sender.Items[-2, ARow]);
+          if t = 1 then
+            ImageIndex:=22 // folder
+          else if t = 2 then
+            ImageIndex:=44 // label
+          else if t = 3 then
+            ImageIndex:=5; // tracker
+        end;
     end;
   end;
 end;
@@ -5817,21 +5816,14 @@ begin
   if VarIsNull(lvFilter.Items[0, FilterIdx]) then
     Dec(FilterIdx);
   if FilterIdx >= StatusFiltersCount then
-    if not VarIsNull(lvFilter.Items[-1, FilterIdx]) then begin
-      ft := Integer(lvFilter.Items[-2, FilterIdx]);
-      if ft = 1 then
-        PathFilter:=UTF8Encode(widestring(lvFilter.Items[-1, FilterIdx]))
-      else
-        LabelFilter:=UTF8Encode(widestring(lvFilter.Items[-1, FilterIdx]));
-      FilterIdx:=fltAll;
-    end
-    else begin
-      TrackerFilter:=UTF8Encode(widestring(lvFilter.Items[0, FilterIdx]));
-      FilterIdx:=fltAll;
-      i:=RPos('(', TrackerFilter);
-      if i > 0 then
-        TrackerFilter:=Trim(Copy(TrackerFilter, 1, i - 1));
-    end;
+    ft := Integer(lvFilter.Items[-2, FilterIdx]);
+    if ft = 1 then
+      PathFilter:=UTF8Encode(widestring(lvFilter.Items[-1, FilterIdx]))
+    else if ft = 2 then
+      LabelFilter:=UTF8Encode(widestring(lvFilter.Items[-1, FilterIdx]))
+    else if ft = 3 then
+      TrackerFilter:=UTF8Encode(widestring(lvFilter.Items[-1, FilterIdx]));
+    FilterIdx:=fltAll;
 
   for i:=0 to FTorrents.Count - 1 do
     FTorrents[idxTag, i]:=0;
@@ -6250,7 +6242,7 @@ begin
         j:=ptruint(FTrackers.Objects[i]);
         if j > 0 then begin
           lvFilter.Items[ 0, row]:=UTF8Decode(Format('%s (%d)', [FTrackers[i], j]));
-          lvFilter.Items[-1, row]:=NULL;
+          lvFilter.Items[-1, row]:=UTF8Decode(FTrackers[i]);
           lvFilter.Items[-2, row]:=3;
           if FTrackers[i] = TrackerFilter then
             crow:=row;
