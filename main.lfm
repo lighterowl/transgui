@@ -76,6 +76,7 @@ inherited MainForm: TMainForm
         OnClick = lvFilterClick
         OnResize = lvFilterResize
         Images = ImageList16
+        MultiSelect = True
         OnCellAttributes = lvFilterCellAttributes
         OnDrawCell = lvFilterDrawCell
       end
