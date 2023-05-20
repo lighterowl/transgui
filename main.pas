@@ -1031,6 +1031,19 @@ end;
 
 type TFilterType = (ftPath, ftLabel, ftTracker);
 
+// definitions of column indices in lvFilter.Items
+{ the thing displayed in the table. the number of matching torrents in the
+  given group in parentheses is appended on each update }
+const fcolDisplayText = 0;
+
+{ the raw string to be used for matching torrents, i.e. without the count }
+const fcolRawData = -1;
+
+{ a TFilterType value instructing code on what to filter on }
+const fcolFilterType = -2;
+
+const lvFilterNumExtraColumns = 2;
+
 {$ifdef windows}
 function WndCallback(Ahwnd: HWND; uMsg: UINT; wParam: WParam; lParam: LParam):LRESULT; stdcall;
 begin
@@ -1600,7 +1613,7 @@ begin
   FTrackers.Sorted:=True;
   FReconnectTimeOut:=-1;
   FAlterColor:=GetLikeColor(gTorrents.Color, -$10);
-  lvFilter.Items.ExtraColumns:=2;
+  lvFilter.Items.ExtraColumns:=lvFilterNumExtraColumns;
   gTorrents.AlternateColor:=FAlterColor;
   lvPeers.AlternateColor:=FAlterColor;
   lvTrackers.AlternateColor:=FAlterColor;
@@ -4657,7 +4670,7 @@ begin
       7: ImageIndex:=imgWaiting
       else
         if Text <> '' then
-          case TFilterType(Sender.Items[-2, ARow]) of
+          case TFilterType(Sender.Items[fcolFilterType, ARow]) of
             ftPath:    ImageIndex:=22;
             ftLabel:   ImageIndex:=44;
             ftTracker: ImageIndex:=5;
@@ -4668,7 +4681,7 @@ end;
 
 procedure TMainForm.lvFilterClick(Sender: TObject);
 begin
-  if VarIsNull(lvFilter.Items[0, lvFilter.Row]) then
+  if VarIsNull(lvFilter.Items[fcolDisplayText, lvFilter.Row]) then
     if (FLastFilerIndex > lvFilter.Row) or (lvFilter.Row = lvFilter.Items.Count - 1) then
       lvFilter.Row:=lvFilter.Row - 1
     else
@@ -5178,14 +5191,14 @@ begin
   lvFilter.Enabled:=False;
   lvFilter.Color:=gTorrents.Color;
   with lvFilter do begin
-    Items[0, 0]:=UTF8Decode(SAll); // ALERT - VERIFY - PETROV
-    Items[0, 1]:=UTF8Decode(SDownloading);
-    Items[0, 2]:=UTF8Decode(SCompleted);
-    Items[0, 3]:=UTF8Decode(SActive);
-    Items[0, 4]:=UTF8Decode(SInactive);
-    Items[0, 5]:=UTF8Decode(sStopped);
-    Items[0, 6]:=UTF8Decode(sErrorState);
-    Items[0, 7]:=UTF8Decode(sWaiting);
+    Items[fcolDisplayText, 0]:=UTF8Decode(SAll); // ALERT - VERIFY - PETROV
+    Items[fcolDisplayText, 1]:=UTF8Decode(SDownloading);
+    Items[fcolDisplayText, 2]:=UTF8Decode(SCompleted);
+    Items[fcolDisplayText, 3]:=UTF8Decode(SActive);
+    Items[fcolDisplayText, 4]:=UTF8Decode(SInactive);
+    Items[fcolDisplayText, 5]:=UTF8Decode(sStopped);
+    Items[fcolDisplayText, 6]:=UTF8Decode(sErrorState);
+    Items[fcolDisplayText, 7]:=UTF8Decode(sWaiting);
   end;
   edSearch.Enabled:=False;
   edSearch.Color:=gTorrents.Color;
@@ -5812,13 +5825,13 @@ begin
   WaitingCnt:=0;
 
   FilterIdx:=lvFilter.Row;
-  if VarIsNull(lvFilter.Items[0, FilterIdx]) then
+  if VarIsNull(lvFilter.Items[fcolDisplayText, FilterIdx]) then
     Dec(FilterIdx);
   if FilterIdx >= StatusFiltersCount then begin
-    case TFilterType(lvFilter.Items[-2, FilterIdx]) of
-      ftPath  :  PathFilter:=UTF8Encode(widestring(lvFilter.Items[-1, FilterIdx]));
-      ftLabel:   LabelFilter:=UTF8Encode(widestring(lvFilter.Items[-1, FilterIdx]));
-      ftTracker: TrackerFilter:=UTF8Encode(widestring(lvFilter.Items[-1, FilterIdx]));
+    case TFilterType(lvFilter.Items[fcolFilterType, FilterIdx]) of
+      ftPath:    PathFilter:=UTF8Encode(widestring(lvFilter.Items[fcolRawData, FilterIdx]));
+      ftLabel:   LabelFilter:=UTF8Encode(widestring(lvFilter.Items[fcolRawData, FilterIdx]));
+      ftTracker: TrackerFilter:=UTF8Encode(widestring(lvFilter.Items[fcolRawData, FilterIdx]));
     end;
     FilterIdx:=fltAll;
   end;
@@ -6181,31 +6194,31 @@ begin
   crow:=-1;
   lvFilter.Items.BeginUpdate;
   try
-    lvFilter.Items[0, 0]:=UTF8Decode(Format('%s (%d)', [SAll, list.Count]));
-    lvFilter.Items[0, 1]:=UTF8Decode(Format('%s (%d)', [SDownloading, DownCnt]));
-    lvFilter.Items[0, 2]:=UTF8Decode(Format('%s (%d)', [SCompleted, CompletedCnt]));
-    lvFilter.Items[0, 3]:=UTF8Decode(Format('%s (%d)', [SActive, ActiveCnt]));
-    lvFilter.Items[0, 4]:=UTF8Decode(Format('%s (%d)', [SInactive, FTorrents.Count - ActiveCnt - StoppedCnt]));
-    lvFilter.Items[0, 5]:=UTF8Decode(Format('%s (%d)', [sStopped, StoppedCnt]));
-    lvFilter.Items[0, 6]:=UTF8Decode(Format('%s (%d)', [sErrorState, ErrorCnt]));
-    lvFilter.Items[0, 7]:=UTF8Decode(Format('%s (%d)', [sWaiting, WaitingCnt]));
+    lvFilter.Items[fcolDisplayText, 0]:=UTF8Decode(Format('%s (%d)', [SAll, list.Count]));
+    lvFilter.Items[fcolDisplayText, 1]:=UTF8Decode(Format('%s (%d)', [SDownloading, DownCnt]));
+    lvFilter.Items[fcolDisplayText, 2]:=UTF8Decode(Format('%s (%d)', [SCompleted, CompletedCnt]));
+    lvFilter.Items[fcolDisplayText, 3]:=UTF8Decode(Format('%s (%d)', [SActive, ActiveCnt]));
+    lvFilter.Items[fcolDisplayText, 4]:=UTF8Decode(Format('%s (%d)', [SInactive, FTorrents.Count - ActiveCnt - StoppedCnt]));
+    lvFilter.Items[fcolDisplayText, 5]:=UTF8Decode(Format('%s (%d)', [sStopped, StoppedCnt]));
+    lvFilter.Items[fcolDisplayText, 6]:=UTF8Decode(Format('%s (%d)', [sErrorState, ErrorCnt]));
+    lvFilter.Items[fcolDisplayText, 7]:=UTF8Decode(Format('%s (%d)', [sWaiting, WaitingCnt]));
 
     j:=StatusFiltersCount;
 
     if acFolderGrouping.Checked then begin
-      lvFilter.Items[0, j]:=NULL;
+      lvFilter.Items[fcolDisplayText, j]:=NULL;
       Inc(j);
 
       for i:=0 to Paths.Count - 1 do begin
         s:=ExtractFileName(Paths[i]);
         for row:=StatusFiltersCount + 1 to j - 1 do
-          if ExtractFileName(UTF8Encode(widestring(lvFilter.Items[-1, row]))) = s then begin
+          if ExtractFileName(UTF8Encode(widestring(lvFilter.Items[fcolRawData, row]))) = s then begin
             s:=Paths[i];
-            lvFilter.Items[0, row]:=UTF8Decode(Format('%s (%d)', [UTF8Encode(widestring(lvFilter.Items[-1, row])), ptruint(Paths.Objects[row - StatusFiltersCount - 1])]));
+            lvFilter.Items[fcolDisplayText, row]:=UTF8Decode(Format('%s (%d)', [UTF8Encode(widestring(lvFilter.Items[-1, row])), ptruint(Paths.Objects[row - StatusFiltersCount - 1])]));
           end;
-        lvFilter.Items[ 0, j]:=UTF8Decode(Format('%s (%d)', [s, ptruint(Paths.Objects[i])]));
-        lvFilter.Items[-1, j]:=UTF8Decode(Paths[i]);
-        lvFilter.Items[-2, j]:=ftPath;
+        lvFilter.Items[fcolDisplayText, j]:=UTF8Decode(Format('%s (%d)', [s, ptruint(Paths.Objects[i])]));
+        lvFilter.Items[fcolRawData, j]:=UTF8Decode(Paths[i]);
+        lvFilter.Items[fcolFilterType, j]:=ftPath;
         if Paths[i] = PathFilter then
           crow:=j;
         Inc(j);
@@ -6213,13 +6226,13 @@ begin
     end;
 
     if acLabelGrouping.Checked then begin
-      lvFilter.Items[0, j]:=NULL;
+      lvFilter.Items[fcolDisplayText, j]:=NULL;
       Inc(j);
 
       for i:=0 to Labels.Count - 1 do begin
-        lvFilter.Items[0, j]:=UTF8Decode(Format('%s (%d)', [Labels[i], ptruint(Labels.Objects[i])]));
-        lvFilter.Items[-1, j]:=UTF8Decode(Labels[i]);
-        lvFilter.Items[-2, j]:=ftLabel;
+        lvFilter.Items[fcolDisplayText, j]:=UTF8Decode(Format('%s (%d)', [Labels[i], ptruint(Labels.Objects[i])]));
+        lvFilter.Items[fcolRawData, j]:=UTF8Decode(Labels[i]);
+        lvFilter.Items[fcolFilterType, j]:=ftLabel;
         if Labels[i] = LabelFilter then
           crow:=j;
         Inc(j);
@@ -6230,8 +6243,8 @@ begin
     row:=j;
 
     if acTrackerGrouping.Checked then begin
-      if not VarIsNull(lvFilter.Items[0, row - 1]) then begin
-        lvFilter.Items[0, row]:=NULL;
+      if not VarIsNull(lvFilter.Items[fcolDisplayText, row - 1]) then begin
+        lvFilter.Items[fcolDisplayText, row]:=NULL;
         Inc(row);
       end;
 
@@ -6239,9 +6252,9 @@ begin
       while i < FTrackers.Count do begin
         j:=ptruint(FTrackers.Objects[i]);
         if j > 0 then begin
-          lvFilter.Items[ 0, row]:=UTF8Decode(Format('%s (%d)', [FTrackers[i], j]));
-          lvFilter.Items[-1, row]:=UTF8Decode(FTrackers[i]);
-          lvFilter.Items[-2, row]:=ftTracker;
+          lvFilter.Items[fcolDisplayText, row]:=UTF8Decode(Format('%s (%d)', [FTrackers[i], j]));
+          lvFilter.Items[fcolRawData, row]:=UTF8Decode(FTrackers[i]);
+          lvFilter.Items[fcolFilterType, row]:=ftTracker;
           if FTrackers[i] = TrackerFilter then
             crow:=row;
           Inc(i);
