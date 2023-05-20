@@ -1029,6 +1029,8 @@ begin
   Result := ((Key = VK_C) and (WantedShiftState in Shift))
 end;
 
+type TFilterType = (ftPath, ftLabel, ftTracker);
+
 {$ifdef windows}
 function WndCallback(Ahwnd: HWND; uMsg: UINT; wParam: WParam; lParam: LParam):LRESULT; stdcall;
 begin
@@ -4654,15 +4656,12 @@ begin
       6: ImageIndex:=imgError;
       7: ImageIndex:=imgWaiting
       else
-        if Text <> '' then begin
-          t:=Integer(Sender.Items[-2, ARow]);
-          if t = 1 then
-            ImageIndex:=22 // folder
-          else if t = 2 then
-            ImageIndex:=44 // label
-          else if t = 3 then
-            ImageIndex:=5; // tracker
-        end;
+        if Text <> '' then
+          case TFilterType(Sender.Items[-2, ARow]) of
+            ftPath:    ImageIndex:=22;
+            ftLabel:   ImageIndex:=44;
+            ftTracker: ImageIndex:=5;
+          end;
     end;
   end;
 end;
@@ -5742,7 +5741,7 @@ var
   FilterIdx, OldId: integer;
   TrackerFilter, PathFilter, LabelFilter: string;
   UpSpeed, DownSpeed: double;
-  DownCnt, SeedCnt, CompletedCnt, ActiveCnt, StoppedCnt, ErrorCnt, WaitingCnt, ft: integer;
+  DownCnt, SeedCnt, CompletedCnt, ActiveCnt, StoppedCnt, ErrorCnt, WaitingCnt : integer;
   IsActive: boolean;
   Paths, Labels: TStringList;
   v: variant;
@@ -5815,15 +5814,14 @@ begin
   FilterIdx:=lvFilter.Row;
   if VarIsNull(lvFilter.Items[0, FilterIdx]) then
     Dec(FilterIdx);
-  if FilterIdx >= StatusFiltersCount then
-    ft := Integer(lvFilter.Items[-2, FilterIdx]);
-    if ft = 1 then
-      PathFilter:=UTF8Encode(widestring(lvFilter.Items[-1, FilterIdx]))
-    else if ft = 2 then
-      LabelFilter:=UTF8Encode(widestring(lvFilter.Items[-1, FilterIdx]))
-    else if ft = 3 then
-      TrackerFilter:=UTF8Encode(widestring(lvFilter.Items[-1, FilterIdx]));
+  if FilterIdx >= StatusFiltersCount then begin
+    case TFilterType(lvFilter.Items[-2, FilterIdx]) of
+      ftPath  :  PathFilter:=UTF8Encode(widestring(lvFilter.Items[-1, FilterIdx]));
+      ftLabel:   LabelFilter:=UTF8Encode(widestring(lvFilter.Items[-1, FilterIdx]));
+      ftTracker: TrackerFilter:=UTF8Encode(widestring(lvFilter.Items[-1, FilterIdx]));
+    end;
     FilterIdx:=fltAll;
+  end;
 
   for i:=0 to FTorrents.Count - 1 do
     FTorrents[idxTag, i]:=0;
@@ -6207,7 +6205,7 @@ begin
           end;
         lvFilter.Items[ 0, j]:=UTF8Decode(Format('%s (%d)', [s, ptruint(Paths.Objects[i])]));
         lvFilter.Items[-1, j]:=UTF8Decode(Paths[i]);
-        lvFilter.Items[-2, j]:=1;
+        lvFilter.Items[-2, j]:=ftPath;
         if Paths[i] = PathFilter then
           crow:=j;
         Inc(j);
@@ -6221,7 +6219,7 @@ begin
       for i:=0 to Labels.Count - 1 do begin
         lvFilter.Items[0, j]:=UTF8Decode(Format('%s (%d)', [Labels[i], ptruint(Labels.Objects[i])]));
         lvFilter.Items[-1, j]:=UTF8Decode(Labels[i]);
-        lvFilter.Items[-2, j]:=2;
+        lvFilter.Items[-2, j]:=ftLabel;
         if Labels[i] = LabelFilter then
           crow:=j;
         Inc(j);
@@ -6243,7 +6241,7 @@ begin
         if j > 0 then begin
           lvFilter.Items[ 0, row]:=UTF8Decode(Format('%s (%d)', [FTrackers[i], j]));
           lvFilter.Items[-1, row]:=UTF8Decode(FTrackers[i]);
-          lvFilter.Items[-2, row]:=3;
+          lvFilter.Items[-2, row]:=ftTracker;
           if FTrackers[i] = TrackerFilter then
             crow:=row;
           Inc(i);
