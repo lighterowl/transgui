@@ -49,6 +49,15 @@ procedure CollectFilters(FilterVG: TVarGrid;
 function MatchStateFilter(Filters: TIntegerList; Torrents: TVarList;
 TorrentRow: Integer; RPCVer: Integer; IsActive: Boolean): Boolean;
 
+function MatchTrackerFilter(Trackers: TStringList; Torrents: TVarList;
+TorrentRow: Integer): Boolean;
+
+function MatchLabelFilter(Labels: TStringList; Torrents: TVarList;
+TorrentRow: Integer): Boolean;
+
+function MatchPathFilter(Paths: TStringList; Torrents: TVarList;
+TorrentRow: Integer): Boolean;
+
 type TFilterType = (ftPath, ftLabel, ftTracker);
 
 const
@@ -80,7 +89,7 @@ lvFilterNumExtraColumns = 2;
 
 implementation
 
-uses TorrentColumns, TorrentStateImages, RPCConstants;
+uses TorrentColumns, TorrentStateImages, RPCConstants, Variants;
 
 function MatchSingleStateFilter(Filter: Integer; Torrents: TVarList;
   TorrentRow: Integer; RPCVer: Integer; IsActive: Boolean): Boolean;
@@ -120,7 +129,7 @@ begin
     end;
 end;
 begin
-  StateFilters   := TIntegerList.Create;
+  StateFilters := TIntegerList.Create;
 
   PathFilters := TStringList.Create;
   PathFilters.Sorted := True;
@@ -137,6 +146,25 @@ begin
   FilterVG.ForEachSelectedRow(@FilterRowCbk);
 end;
 
+function MatchStringList(Wanted: TStringList; Torrents: TVarList;
+Row: Integer; Column: Integer): Boolean;
+var
+  v: variant;
+  s: string;
+begin
+  v := Torrents[Column, Row];
+  if VarIsEmpty(v) then
+    exit(True);
+
+  for s in Wanted do
+  begin
+    if v <> s then
+      exit(False);
+  end;
+
+  Result := True;
+end;
+
 function MatchStateFilter(Filters: TIntegerList; Torrents: TVarList;
 TorrentRow: Integer; RPCVer: Integer; IsActive: Boolean): Boolean;
 var
@@ -148,6 +176,24 @@ begin
       exit(False);
   end;
   Result := True;
+end;
+
+function MatchTrackerFilter(Trackers: TStringList; Torrents: TVarList;
+TorrentRow: Integer): Boolean;
+begin
+  Result := MatchStringList(Trackers, Torrents, TorrentRow, torcolTracker);
+end;
+
+function MatchLabelFilter(Labels: TStringList; Torrents: TVarList;
+TorrentRow: Integer): Boolean;
+begin
+  Result := MatchStringList(Labels, Torrents, TorrentRow, torcolLabels);
+end;
+
+function MatchPathFilter(Paths: TStringList; Torrents: TVarList;
+TorrentRow: Integer): Boolean;
+begin
+  Result := MatchStringList(Paths, Torrents, TorrentRow, torcolPath);
 end;
 
 end.

@@ -5668,6 +5668,7 @@ var
   v: variant;
   FieldExists: array of boolean;
   StateFilters: TIntegerList;
+  TrackerFilters, LabelFilters, PathFilters: TStringList;
 begin
   if gTorrents.Tag <> 0 then exit;
   if list = nil then begin
@@ -5689,6 +5690,7 @@ begin
   end;
 }
   StateFilters:=TIntegerList.Create;
+  TrackerFilters := TStringList.Create;
   Paths:=TStringList.Create;
   Labels:=TStringList.Create;
   try
@@ -6021,13 +6023,16 @@ begin
         if StateImg in [imgDownError, imgSeedError, imgError] then
           Inc(ErrorCnt);
 
+      if (TrackerFilter <> '') then
+        TrackerFilters.Add(TrackerFilter);
+
       if not VarIsEmpty(FTorrents[torcolTracker, i]) then begin
         s:=UTF8Encode(widestring(FTorrents[torcolTracker, i]));
         j:=FTrackers.IndexOf(s);
         if j < 0 then
           j:=FTrackers.Add(s);
         FTrackers.Objects[j]:=TObject(ptruint(FTrackers.Objects[j]) + 1);
-        if (TrackerFilter <> '') and (TrackerFilter <> s) then
+        if not Filtering.MatchTrackerFilter(TrackerFilters, FTorrents, i) then
           continue;
       end;
 
@@ -6178,6 +6183,7 @@ begin
         [RpcObj.InfoStatus, LineEnding, DownCnt, SeedCnt, LineEnding, StatusBar.Panels[1].Text, StatusBar.Panels[2].Text]);
   finally
     Paths.Free;
+    TrackerFilters.Free;
     StateFilters.Free;
     Labels.Free;
   end;
