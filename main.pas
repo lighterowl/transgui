@@ -779,6 +779,7 @@ type
     procedure FilesTreeStateChanged(Sender: TObject);
     function SelectTorrent(TorrentId, TimeOut: integer): integer;
     procedure OpenCurrentTorrent(OpenFolderOnly: boolean; UserDef: boolean=false);
+    procedure ProcessIniShortCuts;
   public
     procedure FillTorrentsList(list: TJSONArray);
     procedure FillPeersList(list: TJSONArray);
@@ -1454,6 +1455,53 @@ begin
   inherited Destroy;
 end;
 
+procedure TMainForm.ProcessIniShortCuts;
+
+  procedure FixupUnsupportedShortCutKeys;
+  begin
+    // mac keyboards don't have the insert key but default shortcut assignments
+    // in .lfm seem to be for all platforms so we have to fix at runtime.
+{$ifdef darwin}
+    if acAddTorrent.ShortCut = VK_INSERT then acAddTorrent.ShortCut := VK_F5;
+    if (acAddLink.ShortCut and 255) = VK_INSERT then acAddLink.ShortCut := scShift or VK_F5;
+{$endif}
+  end;
+
+var
+  shortcuts: TStringList;
+  i: integer;
+
+begin
+  FixupUnsupportedShortCutKeys;
+  shortcuts := TStringList.Create;
+  try
+    Ini.ReadSectionValues('ShortCuts', shortcuts);
+    if (shortcuts.Text = '') or (shortcuts.Count <> ActionList.ActionCount) then
+    begin
+      for i := 0 to ActionList.ActionCount - 1 do
+        Ini.WriteString('Shortcuts', StringReplace(
+          ActionList.Actions[i].Name, 'ac', '', []), ShortcutToText(
+          TAction(ActionList.Actions[i]).ShortCut));
+
+      if (i < shortcuts.Count - 1) and (shortcuts.Text <> '') and
+        (ActionList.ActionByName(shortcuts.Names[i]) = nil) then
+        Ini.WriteString('Shortcuts', StringReplace(ActionList.Actions[i].Name,
+          'ac', '', []),
+          ShortcutToText(TAction(ActionList.Actions[i]).ShortCut));
+    end
+    else
+      for i := 0 to shortcuts.Count - 1 do
+        try
+          TAction(ActionList.ActionbyName('ac' + shortcuts.Names[i])).ShortCut :=
+            TextToShortcut(shortcuts.ValueFromIndex[i]);
+        except
+        end;
+  finally
+    shortcuts.Free;
+  end;
+  FixupUnsupportedShortCutKeys;
+end;
+
 { TMainForm }
 
 procedure TMainForm.FormCreate(Sender: TObject);
@@ -1752,25 +1800,8 @@ begin
     Ini.WriteInteger('Interface','FileOpenDoc',FLinuxOpenDoc);
   {$endif windows}
 
-//Dynamic Associations of ShortCuts to Actions/Menus
-  SL := TStringList.Create;
-  try
-    Ini.ReadSectionValues('ShortCuts', SL);
-    if (SL.Text = '') or (SL.Count <> ActionList.ActionCount) then
-      begin
-          for i := 0 to ActionList.ActionCount-1 do
-          Ini.WriteString('Shortcuts',StringReplace(ActionList.Actions[i].Name,'ac','',[]),ShortcutToText(TAction(ActionList.Actions[i]).ShortCut));
-          if (i<SL.Count-1) and (SL.Text <> '') and (ActionList.ActionByName(SL.Names[i]) = nil) then Ini.WriteString('Shortcuts',StringReplace(ActionList.Actions[i].Name,'ac','',[]),ShortcutToText(TAction(ActionList.Actions[i]).ShortCut));
-      end
-      else
-        for i := 0 to SL.Count - 1 do
-              try
-                  TAction(ActionList.ActionbyName('ac'+SL.Names[i])).ShortCut := TextToShortcut(SL.ValueFromIndex[i]);
-              except
-              end;
-  finally
-    SL.Free;
-  end;
+  ProcessIniShortCuts;
+
   // StatusBar Panels width
   i := Ini.ReadInteger('StatusBarPanels','ScreenWidth',0);
   if Screen.Width <> i then
