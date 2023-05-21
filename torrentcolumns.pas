@@ -40,6 +40,33 @@ interface
 
 const
 
+torcolName = 0;
+torcolSize = 1;
+torcolDone = 2;
+torcolStatus = 3;
+torcolSeeds = 4;
+torcolPeers = 5;
+torcolDownSpeed = 6;
+torcolUpSpeed = 7;
+torcolETA = 8;
+torcolRatio = 9;
+torcolDownloaded = 10;
+torcolUploaded = 11;
+torcolTracker = 12;
+torcolTrackerStatus = 13;
+torcolAddedOn = 14;
+torcolCompletedOn = 15;
+torcolLastActive = 16;
+torcolPath = 17;
+torcolPriority = 18;
+torcolSizeToDowload = 19;
+torcolTorrentId = 20;
+torcolQueuePos = 21;
+torcolSeedingTime = 22;
+torcolSizeLeft = 23;
+torcolPrivate = 24;
+torcolLabels = 25;
+
 torcolTag = -1;
 torcolSeedsTotal = -2;
 torcolLeechersTotal = -3;

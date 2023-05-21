@@ -825,34 +825,6 @@ var
   {$endif windows}
 
 const
-  // Torrents list
-  idxName = 0;
-  idxSize = 1;
-  idxDone = 2;
-  idxStatus = 3;
-  idxSeeds = 4;
-  idxPeers = 5;
-  idxDownSpeed = 6;
-  idxUpSpeed = 7;
-  idxETA = 8;
-  idxRatio = 9;
-  idxDownloaded = 10;
-  idxUploaded = 11;
-  idxTracker = 12;
-  idxTrackerStatus = 13;
-  idxAddedOn = 14;
-  idxCompletedOn = 15;
-  idxLastActive = 16;
-  idxPath = 17;
-  idxPriority = 18;
-  idxSizeToDowload = 19;
-  idxTorrentId = 20;
-  idxQueuePos = 21;
-  idxSeedingTime = 22;
-  idxSizeLeft = 23;
-  idxPrivate = 24;
-  idxLabels = 25;
-
   // Peers list
   idxPeerHost = 0;
   idxPeerPort = 1;
