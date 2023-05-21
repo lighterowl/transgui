@@ -5659,7 +5659,7 @@ var
   end;
 
 var
-  FilterIdx, OldId: integer;
+  OldId: integer;
   TrackerFilter, PathFilter, LabelFilter: string;
   UpSpeed, DownSpeed: double;
   DownCnt, SeedCnt, CompletedCnt, ActiveCnt, StoppedCnt, ErrorCnt, WaitingCnt : integer;
@@ -5689,8 +5689,7 @@ begin
     list.Add(t);
   end;
 }
-  StateFilters:=TIntegerList.Create;
-  TrackerFilters := TStringList.Create;
+  Filtering.CollectFilters(lvFilter, StateFilters, PathFilters, TrackerFilters, LabelFilters);
   Paths:=TStringList.Create;
   Labels:=TStringList.Create;
   try
@@ -5736,17 +5735,8 @@ begin
   ErrorCnt:=0;
   WaitingCnt:=0;
 
-  FilterIdx:=lvFilter.Row;
-  if VarIsNull(lvFilter.Items[fcolDisplayText, FilterIdx]) then
-    Dec(FilterIdx);
-  if FilterIdx >= StatusFiltersCount then begin
-    case TFilterType(lvFilter.Items[fcolFilterType, FilterIdx]) of
-      ftPath:    PathFilter:=UTF8Encode(widestring(lvFilter.Items[fcolRawData, FilterIdx]));
-      ftLabel:   LabelFilter:=UTF8Encode(widestring(lvFilter.Items[fcolRawData, FilterIdx]));
-      ftTracker: TrackerFilter:=UTF8Encode(widestring(lvFilter.Items[fcolRawData, FilterIdx]));
-    end;
-    FilterIdx:=frowAll;
-  end;
+  if VarIsNull(lvFilter.Items[fcolDisplayText, lvFilter.Row]) then
+    StateFilters.Add(frowAll);
 
   for i:=0 to FTorrents.Count - 1 do
     FTorrents[torcolTag, i]:=0;
@@ -6036,15 +6026,12 @@ begin
           continue;
       end;
 
-      if (PathFilter <> '') and not VarIsEmpty(FTorrents[torcolPath, i]) and (UTF8Decode(PathFilter) <> FTorrents[torcolPath, i]) then
+      if not Filtering.MatchPathFilter(PathFilters, FTorrents, i) then
         continue;
 
-      if (LabelFilter <> '') and not VarIsEmpty(FTorrents[torcolLabels, i]) then begin
-        if not AnsiContainsStr(String(FTorrents[torcolLabels, i]), LabelFilter) then
-          continue;
-      end;
+      if not Filtering.MatchLabelFilter(LabelFilters, FTorrents, i) then
+        continue;
 
-      StateFilters.Add(FilterIdx);
       if not Filtering.MatchStateFilter(StateFilters, FTorrents, i, RpcObj.RpcVersion, IsActive) then
         continue;
 
@@ -6185,6 +6172,8 @@ begin
     Paths.Free;
     TrackerFilters.Free;
     StateFilters.Free;
+    PathFilters.Free;
+    LabelFilters.Free;
     Labels.Free;
   end;
   DetailsUpdated;

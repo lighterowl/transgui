@@ -89,7 +89,7 @@ lvFilterNumExtraColumns = 2;
 
 implementation
 
-uses TorrentColumns, TorrentStateImages, RPCConstants, Variants;
+uses TorrentColumns, TorrentStateImages, RPCConstants, Variants, StrUtils;
 
 function MatchSingleStateFilter(Filter: Integer; Torrents: TVarList;
   TorrentRow: Integer; RPCVer: Integer; IsActive: Boolean): Boolean;
@@ -146,8 +146,25 @@ begin
   FilterVG.ForEachSelectedRow(@FilterRowCbk);
 end;
 
+type VariantStringMatcher = function (value: variant; filter: string): Boolean;
+
+function MatchTracker(value: variant; filter: string): Boolean;
+begin
+  Result := (value = filter);
+end;
+
+function MatchLabel(value: variant; filter: string): Boolean;
+begin
+  Result := StrUtils.AnsiContainsStr(String(value), filter);
+end;
+
+function MatchPath(value: variant; filter: string): Boolean;
+begin
+  Result := (System.UTF8Decode(filter) = value);
+end;
+
 function MatchStringList(Wanted: TStringList; Torrents: TVarList;
-Row: Integer; Column: Integer): Boolean;
+Row: Integer; Column: Integer; Match: VariantStringMatcher): Boolean;
 var
   v: variant;
   s: string;
@@ -158,7 +175,7 @@ begin
 
   for s in Wanted do
   begin
-    if v <> s then
+    if not Match(v, s) then
       exit(False);
   end;
 
@@ -181,19 +198,22 @@ end;
 function MatchTrackerFilter(Trackers: TStringList; Torrents: TVarList;
 TorrentRow: Integer): Boolean;
 begin
-  Result := MatchStringList(Trackers, Torrents, TorrentRow, torcolTracker);
+  Result := MatchStringList(Trackers, Torrents, TorrentRow, torcolTracker,
+    @MatchTracker);
 end;
 
 function MatchLabelFilter(Labels: TStringList; Torrents: TVarList;
 TorrentRow: Integer): Boolean;
 begin
-  Result := MatchStringList(Labels, Torrents, TorrentRow, torcolLabels);
+  Result := MatchStringList(Labels, Torrents, TorrentRow, torcolLabels,
+    @MatchLabel);
 end;
 
 function MatchPathFilter(Paths: TStringList; Torrents: TVarList;
 TorrentRow: Integer): Boolean;
 begin
-  Result := MatchStringList(Paths, Torrents, TorrentRow, torcolPath);
+  Result := MatchStringList(Paths, Torrents, TorrentRow, torcolPath,
+    @MatchPath);
 end;
 
 end.
