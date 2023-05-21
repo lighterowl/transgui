@@ -479,6 +479,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
+      <Unit>
+        <Filename Value="filtering.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Filtering"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
