@@ -30,45 +30,29 @@
   source files in the program, then also delete it here.
 *************************************************************************************}
 
-unit Filtering;
+unit TorrentStateImages;
 
 {$mode ObjFPC}
 
 interface
 
-type TFilterType = (ftPath, ftLabel, ftTracker);
-
 const
 
-// always-available rows in lvFilter.Items
-fltAll      = 0;
-fltDown     = 1;
-fltDone     = 2;
-fltActive   = 3;
-fltInactive = 4;
-fltStopped  = 5;
-fltError    = 6;
-fltWaiting  = 7;
-
-StatusFiltersCount = fltWaiting + 1;
-
-// definitions of column indices in lvFilter.Items
-{ the thing displayed in the table. the number of matching torrents in the
-  given group in parentheses is appended on each update }
-fcolDisplayText = 0;
-
-{ the raw string to be used for matching torrents, i.e. without the count }
-fcolRawData = -1;
-
-{ a TFilterType value instructing code on what to filter on }
-fcolFilterType = -2;
-
-lvFilterNumExtraColumns = 2;
+// numbers must match the indices of the desired images in TMainForm.ImageList16
+imgDown      = 9;
+imgSeed      = 10;
+imgDownError = 11;
+imgSeedError = 12;
+imgError     = 13;
+imgDone      = 14;
+imgStopped   = 29;
+imgDownQueue = 16;
+imgSeedQueue = 17;
+imgAll       = 19;
+imgActive    = 20;
+imgInactive  = 15;
+imgWaiting   = 42;
 
 implementation
 
-uses
-  Classes, SysUtils;
-
 end.
-

@@ -45,6 +45,7 @@ uses
   httpsend, StdCtrls, fpjson, jsonparser, ExtCtrls, rpc, syncobjs, variants, varlist, IpResolver,
   zipper, ResTranslator, VarGrid, StrUtils, LCLProc, Grids, BaseForm, utils, AddTorrent, Types,
   LazFileUtils, LazUTF8, StringToVK, passwcon, GContnrs,lineinfo, RegExpr,
+  Filtering, TorrentStateImages,
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
@@ -884,33 +885,6 @@ const
   idxTrackerID = -2;
   TrackersExtraColumns = 2;
 
-  // Filter idices
-  fltAll      = 0;
-  fltDown     = 1;
-  fltDone     = 2;
-  fltActive   = 3;
-  fltInactive = 4;
-  fltStopped  = 5;
-  fltError  = 6;
-  fltWaiting = 7;
-
-  // Status images
-  imgDown      = 9;
-  imgSeed      = 10;
-  imgDownError = 11;
-  imgSeedError = 12;
-  imgError     = 13;
-  imgDone      = 14;
-  imgStopped   = 29;
-  imgDownQueue = 16;
-  imgSeedQueue = 17;
-  imgAll       = 19;
-  imgActive    = 20;
-  imgInactive  = 15;
-  imgWaiting   = 42;
-
-  StatusFiltersCount = 8;
-
   TorrentFieldsMap: array[idxName..idxLabels] of string =
     ('', 'totalSize', '', 'status', 'peersSendingToUs,seeders',
     'peersGettingFromUs,leechers', '', '', 'eta', 'uploadRatio',
@@ -1028,21 +1002,6 @@ begin
 {$endif}
   Result := ((Key = VK_C) and (WantedShiftState in Shift))
 end;
-
-type TFilterType = (ftPath, ftLabel, ftTracker);
-
-// definitions of column indices in lvFilter.Items
-{ the thing displayed in the table. the number of matching torrents in the
-  given group in parentheses is appended on each update }
-const fcolDisplayText = 0;
-
-{ the raw string to be used for matching torrents, i.e. without the count }
-const fcolRawData = -1;
-
-{ a TFilterType value instructing code on what to filter on }
-const fcolFilterType = -2;
-
-const lvFilterNumExtraColumns = 2;
 
 {$ifdef windows}
 function WndCallback(Ahwnd: HWND; uMsg: UINT; wParam: WParam; lParam: LParam):LRESULT; stdcall;

@@ -484,6 +484,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Filtering"/>
       </Unit>
+      <Unit>
+        <Filename Value="torrentstateimages.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TorrentStateImages"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

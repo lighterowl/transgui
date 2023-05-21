@@ -44,7 +44,7 @@ uses
   { you can add units after this }, BaseForm, Main, rpc, AddTorrent,
   ConnOptions, varlist, TorrProps, DaemonOptions, About, IpResolver, download,
   ColSetup, utils, ResTranslator, AddLink, MoveTorrent, AddTracker, Options,
-  passwcon, Filtering;
+  passwcon, Filtering, TorrentStateImages;
 
 //{$ifdef windows}
 {$R *.res}
