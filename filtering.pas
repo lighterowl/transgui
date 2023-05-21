@@ -41,16 +41,16 @@ type TFilterType = (ftPath, ftLabel, ftTracker);
 const
 
 // always-available rows in lvFilter.Items
-fltAll      = 0;
-fltDown     = 1;
-fltDone     = 2;
-fltActive   = 3;
-fltInactive = 4;
-fltStopped  = 5;
-fltError    = 6;
-fltWaiting  = 7;
+frowAll      = 0;
+frowDown     = 1;
+frowDone     = 2;
+frowActive   = 3;
+frowInactive = 4;
+frowStopped  = 5;
+frowError    = 6;
+frowWaiting  = 7;
 
-StatusFiltersCount = fltWaiting + 1;
+StatusFiltersCount = frowWaiting + 1;
 
 // definitions of column indices in lvFilter.Items
 { the thing displayed in the table. the number of matching torrents in the

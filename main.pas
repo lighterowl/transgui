@@ -4348,14 +4348,14 @@ begin
           VK_K: PageInfo.PageIndex:=1;
           VK_P: PageInfo.PageIndex:=2;
           VK_F: PageInfo.PageIndex:=3;
-          VK_1: lvFilter.Row:=fltAll;
-          VK_2: lvFilter.Row:=fltDown;
-          VK_3: lvFilter.Row:=fltDone;
-          VK_4: lvFilter.Row:=fltActive;
-          VK_5: lvFilter.Row:=fltInactive;
-          VK_6: lvFilter.Row:=fltStopped;
-          VK_7: lvFilter.Row:=fltError;
-          VK_8: lvFilter.Row:=fltWaiting;
+          VK_1: lvFilter.Row:=frowAll;
+          VK_2: lvFilter.Row:=frowDown;
+          VK_3: lvFilter.Row:=frowDone;
+          VK_4: lvFilter.Row:=frowActive;
+          VK_5: lvFilter.Row:=frowInactive;
+          VK_6: lvFilter.Row:=frowStopped;
+          VK_7: lvFilter.Row:=frowError;
+          VK_8: lvFilter.Row:=frowWaiting;
         else Key := KeyPressed;
         end;
     end;
@@ -5792,7 +5792,7 @@ begin
       ftLabel:   LabelFilter:=UTF8Encode(widestring(lvFilter.Items[fcolRawData, FilterIdx]));
       ftTracker: TrackerFilter:=UTF8Encode(widestring(lvFilter.Items[fcolRawData, FilterIdx]));
     end;
-    FilterIdx:=fltAll;
+    FilterIdx:=frowAll;
   end;
 
   for i:=0 to FTorrents.Count - 1 do
@@ -6089,25 +6089,25 @@ begin
       end;
 
       case FilterIdx of
-        fltActive:
+        frowActive:
           if not IsActive then
             continue;
-        fltInactive:
+        frowInactive:
           if (IsActive=true) or ((StateImg in [imgStopped, imgDone])=true) then // PETROV
             continue;
-        fltDown:
+        frowDown:
           if FTorrents[idxStatus, i] <> TR_STATUS_DOWNLOAD then
             continue;
-        fltDone:
+        frowDone:
           if (StateImg <> imgDone) and (FTorrents[idxStatus, i] <> TR_STATUS_SEED) then
             continue;
-        fltStopped:
+        frowStopped:
           if not (StateImg in [imgStopped, imgDone]) then
             continue;
-        fltError:
+        frowError:
           if not (StateImg in [imgDownError, imgSeedError, imgError]) then
             continue;
-        fltWaiting:
+        frowWaiting:
             if (FTorrents[idxStatus, i] <> TR_STATUS_CHECK) and (FTorrents[idxStatus, i] <> TR_STATUS_CHECK_WAIT) and (FTorrents[idxStatus, i] <> TR_STATUS_DOWNLOAD_WAIT)then
               continue;
       end;
