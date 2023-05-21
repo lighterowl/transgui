@@ -76,6 +76,7 @@ inherited MainForm: TMainForm
         OnClick = lvFilterClick
         OnResize = lvFilterResize
         Images = ImageList16
+        MultiSelect = True
         OnCellAttributes = lvFilterCellAttributes
         OnDrawCell = lvFilterDrawCell
       end
@@ -230,6 +231,7 @@ inherited MainForm: TMainForm
       TabOrder = 0
       OnClick = gTorrentsClick
       OnDblClick = gTorrentsDblClick
+      OnKeyDown = gTorrentsKeyDown
       OnMouseMove = gTorrentsMouseMove
       OnMouseUp = gTorrentsMouseUp
       OnResize = gTorrentsResize
@@ -1017,6 +1019,7 @@ inherited MainForm: TMainForm
         RowCount = 1
         TabOrder = 0
         OnDblClick = lvFilesDblClick
+        OnKeyDown = lvFilesKeyDown
         OnMouseUp = lvFilesMouseUp
         OnSetEditText = lvFilesSetEditText
         Images = ImageList16
@@ -2018,6 +2021,9 @@ inherited MainForm: TMainForm
       end
       object MenuItem41: TMenuItem
         Action = acFolderGrouping
+      end
+      object MenuItem107: TMenuItem
+        Action = acLabelGrouping
       end
       object MenuItem89: TMenuItem
         Action = acTrackerGrouping

@@ -44,9 +44,10 @@ function FPC-Lazarus-Build-Install {
     fpcmkcfg -d basepath=${fpc323} -o "${fpc323}\bin\i386-win32\fpc.cfg"
 
     cd "$sdk_dir"
-    My-Download -Uri "https://sourceforge.net/projects/lazarus/files/Lazarus%20Zip%20_%20GZip/Lazarus%202.2.6/lazarus-2.2.6-0.zip/download" -OutFile lazarus-src.zip
+    My-Download -Uri "https://gitlab.com/dkk089/lazarus/-/archive/transgui/lazarus-transgui.zip" -OutFile lazarus-src.zip
     7z x lazarus-src.zip
 
+    mv lazarus-transgui lazarus
     cd lazarus
     make bigide
     $env:Path = "${lazarus};" + $env:Path

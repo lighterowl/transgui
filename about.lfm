@@ -487,11 +487,11 @@ inherited AboutForm: TAboutForm
       end
       object txAuthor: TLabel
         Left = 86
-        Height = 32
+        Height = 60
         Top = 104
         Width = 307
         AutoSize = False
-        Caption = 'Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group'
+        Caption = 'Fork maintained by xavery.'#10'Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group'
         ParentColor = False
         WordWrap = True
       end
@@ -515,7 +515,7 @@ inherited AboutForm: TAboutForm
         Cursor = crHandPoint
         Left = 86
         Height = 15
-        Top = 134
+        Top = 164
         Width = 62
         Caption = 'Home page'
         Font.Color = clBlue

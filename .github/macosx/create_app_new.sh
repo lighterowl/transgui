@@ -63,8 +63,6 @@ install_name_tool -add_rpath '@executable_path' "$exename"
 mv "$exename" "$appfolder/Contents/MacOS"
 package_openssl "$appfolder/Contents/MacOS"
 
-cp ../../history.txt "$dmgfolder"
-cp ../../README.md "$dmgfolder"
 
 cp PkgInfo "$appfolder/Contents"
 cp transgui.icns "$appfolder/Contents/Resources"

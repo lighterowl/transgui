@@ -43,8 +43,9 @@ fpc_lazarus_build_install() {
   make_fpc_cfg
 
   cd "$sdk_dir"
-  curl -L -o lazarus-src.tar.gz 'https://sourceforge.net/projects/lazarus/files/Lazarus%20Zip%20_%20GZip/Lazarus%202.2.6/lazarus-2.2.6-0.tar.gz/download'
+  curl -L -o lazarus-src.tar.gz 'https://gitlab.com/dkk089/lazarus/-/archive/transgui/lazarus-transgui.tar.gz'
   tar xf lazarus-src.tar.gz
+  mv lazarus-transgui lazarus
   cd lazarus
   make bigide
   export PATH=$PWD:$PATH
