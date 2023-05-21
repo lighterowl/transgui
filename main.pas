@@ -5572,7 +5572,7 @@ end;
 
 procedure TMainForm.FillTorrentsList(list: TJSONArray);
 var
-  i, j, p, row, crow, id, StateImg: integer;
+  i, j, p, row, id, StateImg: integer;
   t: TJSONObject;
   a: TJSONArray;
   f: double;
@@ -5660,7 +5660,6 @@ var
 
 var
   OldId: integer;
-  TrackerFilter, PathFilter, LabelFilter: string;
   UpSpeed, DownSpeed: double;
   DownCnt, SeedCnt, CompletedCnt, ActiveCnt, StoppedCnt, ErrorCnt, WaitingCnt : integer;
   IsActive: boolean;
@@ -6013,9 +6012,6 @@ begin
         if StateImg in [imgDownError, imgSeedError, imgError] then
           Inc(ErrorCnt);
 
-      if (TrackerFilter <> '') then
-        TrackerFilters.Add(TrackerFilter);
-
       if not VarIsEmpty(FTorrents[torcolTracker, i]) then begin
         s:=UTF8Encode(widestring(FTorrents[torcolTracker, i]));
         j:=FTrackers.IndexOf(s);
@@ -6073,7 +6069,6 @@ begin
   end;
   gTorrentsClick(nil);
 
-  crow:=-1;
   lvFilter.Items.BeginUpdate;
   try
     lvFilter.Items[fcolDisplayText, 0]:=UTF8Decode(Format('%s (%d)', [SAll, list.Count]));
@@ -6101,8 +6096,6 @@ begin
         lvFilter.Items[fcolDisplayText, j]:=UTF8Decode(Format('%s (%d)', [s, ptruint(Paths.Objects[i])]));
         lvFilter.Items[fcolRawData, j]:=UTF8Decode(Paths[i]);
         lvFilter.Items[fcolFilterType, j]:=ftPath;
-        if Paths[i] = PathFilter then
-          crow:=j;
         Inc(j);
       end;
     end;
@@ -6115,8 +6108,6 @@ begin
         lvFilter.Items[fcolDisplayText, j]:=UTF8Decode(Format('%s (%d)', [Labels[i], ptruint(Labels.Objects[i])]));
         lvFilter.Items[fcolRawData, j]:=UTF8Decode(Labels[i]);
         lvFilter.Items[fcolFilterType, j]:=ftLabel;
-        if Labels[i] = LabelFilter then
-          crow:=j;
         Inc(j);
       end;
 
@@ -6137,8 +6128,6 @@ begin
           lvFilter.Items[fcolDisplayText, row]:=UTF8Decode(Format('%s (%d)', [FTrackers[i], j]));
           lvFilter.Items[fcolRawData, row]:=UTF8Decode(FTrackers[i]);
           lvFilter.Items[fcolFilterType, row]:=ftTracker;
-          if FTrackers[i] = TrackerFilter then
-            crow:=row;
           Inc(i);
           Inc(row);
         end
@@ -6151,11 +6140,6 @@ begin
   finally
     lvFilter.Items.EndUpdate;
   end;
-  if crow >= 0 then
-    lvFilter.Row:=crow
-  else
-    if lvFilter.Row >= StatusFiltersCount then
-      lvFilterClick(nil);
 
   CheckStatus;
 
