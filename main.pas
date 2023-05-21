@@ -1509,6 +1509,7 @@ begin
   FTorrents:=TVarList.Create(gTorrents.Columns.Count, 0);
   FTorrents.ExtraColumns:=TorrentsExtraColumns;
   gTorrents.Items.ExtraColumns:=TorrentsExtraColumns;
+  gTorrents.Options2:=[goNoScrollAfterSetRow];
   lvFiles.Items.ExtraColumns:=FilesExtraColumns;
   FFiles:=lvFiles.Items;
   FFilesTree:=TFilesTree.Create(lvFiles);
