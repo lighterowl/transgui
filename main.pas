@@ -6074,29 +6074,7 @@ begin
           continue;
       end;
 
-      case FilterIdx of
-        frowActive:
-          if not IsActive then
-            continue;
-        frowInactive:
-          if (IsActive=true) or ((StateImg in [imgStopped, imgDone])=true) then // PETROV
-            continue;
-        frowDown:
-          if FTorrents[idxStatus, i] <> TR_STATUS_DOWNLOAD(RpcObj.RPCVersion) then
-            continue;
-        frowDone:
-          if (StateImg <> imgDone) and (FTorrents[idxStatus, i] <> TR_STATUS_SEED(RpcObj.RPCVersion)) then
-            continue;
-        frowStopped:
-          if not (StateImg in [imgStopped, imgDone]) then
-            continue;
-        frowError:
-          if not (StateImg in [imgDownError, imgSeedError, imgError]) then
-            continue;
-        frowWaiting:
-            if (FTorrents[idxStatus, i] <> TR_STATUS_CHECK(RpcObj.RPCVersion)) and (FTorrents[idxStatus, i] <> TR_STATUS_CHECK_WAIT(RpcObj.RPCVersion)) and (FTorrents[idxStatus, i] <> TR_STATUS_DOWNLOAD_WAIT(RpcObj.RPCVersion))then
-              continue;
-      end;
+
 
       if edSearch.Text <> '' then
         if UTF8Pos(UTF8UpperCase(edSearch.Text), UTF8UpperCase(UTF8Encode(widestring(FTorrents[idxName, i])))) = 0 then

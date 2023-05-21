@@ -77,6 +77,38 @@ lvFilterNumExtraColumns = 2;
 
 implementation
 
+function MatchSingleStateFilter(Filter: Integer; Torrents: TVarList;
+  TorrentRow: Integer; RPCVer: Integer; IsActive: Boolean): Boolean;
+var
+  status, StateImg: Integer;
+begin
+  status := Torrents[idxStatus, TorrentRow];
+  StateImg := Torrents[idxStateImg, TorrentRow];
+  case Filter of
+    frowActive:
+      if not IsActive then
+        continue;
+    frowInactive:
+      if (IsActive=true) or ((StateImg in [imgStopped, imgDone])=true) then // PETROV
+        continue;
+    frowDown:
+      if status <> TR_STATUS_DOWNLOAD(RPCVer) then
+        continue;
+    frowDone:
+      if (StateImg <> imgDone) and (status <> TR_STATUS_SEED(RPCVer)) then
+        continue;
+    frowStopped:
+      if not (StateImg in [imgStopped, imgDone]) then
+        continue;
+    frowError:
+      if not (StateImg in [imgDownError, imgSeedError, imgError]) then
+        continue;
+    frowWaiting:
+        if (status <> TR_STATUS_CHECK(RPCVer)) and (status <> TR_STATUS_CHECK_WAIT(RPCVer)) and (status <> TR_STATUS_DOWNLOAD_WAIT(RPCVer))then
+          continue;
+  end;
+end;
+
 procedure CollectFilters(FilterVG: TVarGrid;
   var StateFilters: TIntegerList;
   var PathFilters, TrackerFilters, LabelFilters: TStringList
