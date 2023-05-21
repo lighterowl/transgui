@@ -169,17 +169,20 @@ var
   v: variant;
   s: string;
 begin
+  if Wanted.Count = 0 then
+    exit(True);
+
   v := Torrents[Column, Row];
   if VarIsEmpty(v) then
     exit(True);
 
   for s in Wanted do
   begin
-    if not Match(v, s) then
-      exit(False);
+    if Match(v, s) then
+      exit(True);
   end;
 
-  Result := True;
+  Result := False;
 end;
 
 function MatchStateFilter(Filters: TIntegerList; Torrents: TVarList;
@@ -187,12 +190,15 @@ TorrentRow: Integer; RPCVer: Integer; IsActive: Boolean): Boolean;
 var
   f: Integer;
 begin
+  if Filters.Count = 0 then
+    exit(True);
+
   for f in Filters do
   begin
-    if not MatchSingleStateFilter(f, Torrents, TorrentRow, RPCVer, IsActive) then
-      exit(False);
+    if MatchSingleStateFilter(f, Torrents, TorrentRow, RPCVer, IsActive) then
+      exit(True);
   end;
-  Result := True;
+  Result := False;
 end;
 
 function MatchTrackerFilter(Trackers: TStringList; Torrents: TVarList;
