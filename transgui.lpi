@@ -489,6 +489,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="TorrentStateImages"/>
       </Unit>
+      <Unit>
+        <Filename Value="rpc_constants.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="RPCConstants"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
