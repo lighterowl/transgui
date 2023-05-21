@@ -33,8 +33,18 @@
 unit Filtering;
 
 {$mode ObjFPC}
+{$modeswitch nestedprocvars}
 
 interface
+
+uses vargrid, fgl, classes;
+
+type TIntegerList = specialize TFPGList<Integer>;
+
+procedure CollectFilters(FilterVG: TVarGrid;
+  var StateFilters: TIntegerList;
+  var PathFilters, TrackerFilters, LabelFilters: TStringList
+);
 
 type TFilterType = (ftPath, ftLabel, ftTracker);
 
@@ -67,8 +77,30 @@ lvFilterNumExtraColumns = 2;
 
 implementation
 
-uses
-  Classes, SysUtils;
+procedure CollectFilters(FilterVG: TVarGrid;
+  var StateFilters: TIntegerList;
+  var PathFilters, TrackerFilters, LabelFilters: TStringList
+);
+procedure FilterRowCbk(Sender: TVarGrid; Row: Integer);
+begin
+  if Row < StatusFiltersCount then begin
+    StateFilters.Add(Row);
+  end
+  else
+    case TFilterType(Sender.Items[fcolFilterType, Row]) of
+      ftPath:    PathFilters.Add(Sender.Items[fcolRawData, Row]);
+      ftLabel:   LabelFilters.Add(Sender.Items[fcolRawData, Row]);
+      ftTracker: TrackerFilters.Add(Sender.Items[fcolRawData, Row]);
+    end;
+end;
+begin
+  StateFilters   := TIntegerList.Create;
+  PathFilters    := TStringList.Create;
+  TrackerFilters := TStringList.Create;
+  LabelFilters   := TStringList.Create;
+
+  FilterVG.ForEachSelectedRow(@FilterRowCbk);
+end;
 
 end.
 
