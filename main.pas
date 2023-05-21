@@ -853,15 +853,6 @@ const
   idxPrivate = 24;
   idxLabels = 25;
 
-  idxTag = -1;
-  idxSeedsTotal = -2;
-  idxLeechersTotal = -3;
-  idxStateImg = -4;
-  idxDeleted = -5;
-  idxDownSpeedHistory = -6;
-  idxUpSpeedHistory = -7;
-  TorrentsExtraColumns = 7;
-
   // Peers list
   idxPeerHost = 0;
   idxPeerPort = 1;
@@ -4365,9 +4356,9 @@ begin
   if ARow < 0 then exit;
   with CellAttribs do begin
     if ACol = gTorrents.FirstVisibleColumn then
-      ImageIndex:=integer(Sender.Items[idxStateImg, ARow]);
+      ImageIndex:=integer(Sender.Items[torcolStateImg, ARow]);
     if Text = '' then exit;
-    if not VarIsEmpty(Sender.Items[idxDeleted, ARow]) then
+    if not VarIsEmpty(Sender.Items[torcolDeleted, ARow]) then
       with Sender.Canvas.Font do
         Style:=Style + [fsStrikeOut];
     case ADataCol of
@@ -4378,10 +4369,10 @@ begin
       idxDone:
         Text:=Format('%.1f%%', [double(Sender.Items[idxDone, ARow])]);
       idxSeeds:
-        if not VarIsNull(Sender.Items[idxSeedsTotal, ARow]) then
-          Text:=GetSeedsText(Sender.Items[idxSeeds, ARow], Sender.Items[idxSeedsTotal, ARow]);
+        if not VarIsNull(Sender.Items[torcolSeedsTotal, ARow]) then
+          Text:=GetSeedsText(Sender.Items[idxSeeds, ARow], Sender.Items[torcolSeedsTotal, ARow]);
       idxPeers:
-        Text:=GetPeersText(Sender.Items[idxPeers, ARow], -1, Sender.Items[idxLeechersTotal, ARow]);
+        Text:=GetPeersText(Sender.Items[idxPeers, ARow], -1, Sender.Items[torcolLeechersTotal, ARow]);
       idxDownSpeed, idxUpSpeed:
         begin
           j:=Sender.Items[ADataCol, ARow];
@@ -4538,9 +4529,9 @@ end;
 procedure TMainForm.gTorrentsSortColumn(Sender: TVarGrid; var ASortCol: integer);
 begin
   if ASortCol = idxSeeds then
-    ASortCol:=idxSeedsTotal;
+    ASortCol:=torcolSeedsTotal;
   if ASortCol = idxPeers then
-    ASortCol:=idxLeechersTotal;
+    ASortCol:=torcolLeechersTotal;
 end;
 
 procedure TMainForm.HSplitterChangeBounds(Sender: TObject);
@@ -5782,7 +5773,7 @@ begin
   end;
 
   for i:=0 to FTorrents.Count - 1 do
-    FTorrents[idxTag, i]:=0;
+    FTorrents[torcolTag, i]:=0;
 
   for i:=0 to list.Count - 1 do begin
     StateImg:=-1;
@@ -5865,13 +5856,13 @@ begin
     if f < 0 then
       f:=0;
     FTorrents[idxDone, row]:=Int(f*10.0)/10.0;
-    FTorrents[idxStateImg, row]:=StateImg;
+    FTorrents[torcolStateImg, row]:=StateImg;
     GetTorrentValue(idxDownSpeed, 'rateDownload', vtInteger);
-    j:=StoreSpeed(FTorrents.ItemPtrs[idxDownSpeedHistory, row]^, FTorrents[idxDownSpeed, row]);
+    j:=StoreSpeed(FTorrents.ItemPtrs[torcolDownSpeedHistory, row]^, FTorrents[idxDownSpeed, row]);
     if FCalcAvg and (StateImg in [imgDown, imgDownError]) then
       FTorrents[idxDownSpeed, row]:=j;
     GetTorrentValue(idxUpSpeed, 'rateUpload', vtInteger);
-    j:=StoreSpeed(FTorrents.ItemPtrs[idxUpSpeedHistory, row]^, FTorrents[idxUpSpeed, row]);
+    j:=StoreSpeed(FTorrents.ItemPtrs[torcolUpSpeedHistory, row]^, FTorrents[idxUpSpeed, row]);
     if FCalcAvg and (StateImg in [imgSeed, imgSeedError]) then
       FTorrents[idxUpSpeed, row]:=j;
 
@@ -5899,12 +5890,12 @@ begin
     if RpcObj.RPCVersion >= 7 then begin
       if t.Arrays['trackerStats'].Count > 0 then
         with t.Arrays['trackerStats'].Objects[0] do begin
-          FTorrents[idxSeedsTotal, row]:=Integers['seederCount'];
-          FTorrents[idxLeechersTotal, row]:=Integers['leecherCount'];
+          FTorrents[torcolSeedsTotal, row]:=Integers['seederCount'];
+          FTorrents[torcolLeechersTotal, row]:=Integers['leecherCount'];
         end
       else begin
-        FTorrents[idxSeedsTotal, row]:=-1;
-        FTorrents[idxLeechersTotal, row]:=-1;
+        FTorrents[torcolSeedsTotal, row]:=-1;
+        FTorrents[torcolLeechersTotal, row]:=-1;
       end;
       if t.Floats['metadataPercentComplete'] <> 1.0 then begin
         FTorrents[idxSize, row]:=-1;
@@ -5912,8 +5903,8 @@ begin
       end;
     end
     else begin
-      GetTorrentValue(idxSeedsTotal, 'seeders', vtInteger);
-      GetTorrentValue(idxLeechersTotal, 'leechers', vtInteger);
+      GetTorrentValue(torcolSeedsTotal, 'seeders', vtInteger);
+      GetTorrentValue(torcolLeechersTotal, 'leechers', vtInteger);
     end;
     if FieldExists[idxRatio] then begin
       f:=t.Floats['uploadRatio'];
@@ -6012,12 +6003,12 @@ begin
     DownSpeed:=DownSpeed + FTorrents[idxDownSpeed, row];
     UpSpeed:=UpSpeed + FTorrents[idxUpSpeed, row];
 
-    FTorrents[idxTag, row]:=1;
+    FTorrents[torcolTag, row]:=1;
   end;
 
   i:=0;
   while i < FTorrents.Count do
-    if FTorrents[idxTag, i] = 0 then
+    if FTorrents[torcolTag, i] = 0 then
       FTorrents.Delete(i)
     else
       Inc(i);
@@ -6025,7 +6016,7 @@ begin
   gTorrents.Items.BeginUpdate;
   try
     for i:=0 to gTorrents.Items.Count - 1 do
-      gTorrents.Items[idxTag, i]:=0;
+      gTorrents.Items[torcolTag, i]:=0;
 
     gTorrents.Items.Sort(idxTorrentId);
 
@@ -6049,7 +6040,7 @@ begin
       if (j = TR_STATUS_CHECK(RpcObj.RPCVersion)) or (j = TR_STATUS_CHECK_WAIT(RpcObj.RPCVersion)) or (j = TR_STATUS_DOWNLOAD_WAIT(RpcObj.RPCVersion)) then
         inc(WaitingCnt);
 
-      StateImg:=FTorrents[idxStateImg, i];
+      StateImg:=FTorrents[torcolStateImg, i];
       if StateImg in [imgStopped, imgDone] then
         Inc(StoppedCnt)
       else
@@ -6083,14 +6074,14 @@ begin
       if not gTorrents.Items.Find(idxTorrentId, FTorrents[idxTorrentId, i], row) then
         gTorrents.Items.InsertRow(row);
       for j:=-TorrentsExtraColumns to FTorrents.ColCnt - 1 do
-        if (j <> idxDownSpeedHistory) and (j <> idxUpSpeedHistory) then
+        if (j <> torcolDownSpeedHistory) and (j <> torcolUpSpeedHistory) then
           gTorrents.Items[j, row]:=FTorrents[j, i];
-      gTorrents.Items[idxTag, row]:=1;
+      gTorrents.Items[torcolTag, row]:=1;
     end;
 
     i:=0;
     while i < gTorrents.Items.Count do
-      if gTorrents.Items[idxTag, i] = 0 then
+      if gTorrents.Items[torcolTag, i] = 0 then
         gTorrents.Items.Delete(i)
       else
         Inc(i);
@@ -6379,7 +6370,7 @@ begin
           id:=Items[idxTorrentId, i];
           for j:=0 to VarArrayHighBound(ids, 1) do
             if id = ids[j] then begin
-              Items.Items[idxDeleted, i]:=1;
+              Items.Items[torcolDeleted, i]:=1;
               break;
             end;
           Inc(i);
@@ -6741,7 +6732,7 @@ begin
         else begin
           if i = 0 then begin
             lvTrackers.Items[idxTrackersListStatus, row]:=gTorrents.Items[idxTrackerStatus, tidx];
-            lvTrackers.Items[idxTrackersListSeeds, row]:=gTorrents.Items[idxSeedsTotal, tidx];
+            lvTrackers.Items[idxTrackersListSeeds, row]:=gTorrents.Items[torcolSeedsTotal, tidx];
           end;
           f:=TrackersData.Floats['nextAnnounceTime'];
         end;

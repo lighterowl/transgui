@@ -494,6 +494,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="RPCConstants"/>
       </Unit>
+      <Unit>
+        <Filename Value="torrentcolumns.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TorrentColumns"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

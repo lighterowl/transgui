@@ -83,7 +83,7 @@ var
   status, StateImg: Integer;
 begin
   status := Torrents[idxStatus, TorrentRow];
-  StateImg := Torrents[idxStateImg, TorrentRow];
+  StateImg := Torrents[torcolStateImg, TorrentRow];
   case Filter of
     frowActive:
       if not IsActive then
