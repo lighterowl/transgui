@@ -47,7 +47,8 @@ function FPC-Lazarus-Build-Install {
     My-Download -Uri "https://gitlab.com/dkk089/lazarus/-/archive/transgui/lazarus-transgui.zip" -OutFile lazarus-src.zip
     7z x lazarus-src.zip
 
-    cd lazarus-transgui
+    mv lazarus-transgui lazarus
+    cd lazarus
     make bigide
     $env:Path = "${lazarus};" + $env:Path
 
