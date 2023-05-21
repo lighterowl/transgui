@@ -77,35 +77,25 @@ lvFilterNumExtraColumns = 2;
 
 implementation
 
+uses varlist, TorrentColumns, TorrentStateImages, RPCConstants;
+
 function MatchSingleStateFilter(Filter: Integer; Torrents: TVarList;
   TorrentRow: Integer; RPCVer: Integer; IsActive: Boolean): Boolean;
 var
   status, StateImg: Integer;
 begin
-  status := Torrents[idxStatus, TorrentRow];
+  Result := False;
+  status := Torrents[torcolStatus, TorrentRow];
   StateImg := Torrents[torcolStateImg, TorrentRow];
   case Filter of
-    frowActive:
-      if not IsActive then
-        continue;
-    frowInactive:
-      if (IsActive=true) or ((StateImg in [imgStopped, imgDone])=true) then // PETROV
-        continue;
-    frowDown:
-      if status <> TR_STATUS_DOWNLOAD(RPCVer) then
-        continue;
-    frowDone:
-      if (StateImg <> imgDone) and (status <> TR_STATUS_SEED(RPCVer)) then
-        continue;
-    frowStopped:
-      if not (StateImg in [imgStopped, imgDone]) then
-        continue;
-    frowError:
-      if not (StateImg in [imgDownError, imgSeedError, imgError]) then
-        continue;
+    frowActive: Result := IsActive;
+    frowInactive: Result := (IsActive=False) and ((StateImg in [imgStopped, imgDone])=False);
+    frowDown: Result := (status = TR_STATUS_DOWNLOAD(RPCVer));
+    frowDone: Result := (StateImg = imgDone) or (status = TR_STATUS_SEED(RPCVer));
+    frowStopped: Result := (StateImg in [imgStopped, imgDone]);
+    frowError: Result := (StateImg in [imgDownError, imgSeedError, imgError]);
     frowWaiting:
-        if (status <> TR_STATUS_CHECK(RPCVer)) and (status <> TR_STATUS_CHECK_WAIT(RPCVer)) and (status <> TR_STATUS_DOWNLOAD_WAIT(RPCVer))then
-          continue;
+      Result := (status in [TR_STATUS_CHECK(RPCVer), TR_STATUS_CHECK_WAIT(RPCVer), TR_STATUS_DOWNLOAD_WAIT(RPCVer)]);
   end;
 end;
 

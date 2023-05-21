@@ -45,7 +45,7 @@ uses
   httpsend, StdCtrls, fpjson, jsonparser, ExtCtrls, rpc, syncobjs, variants, varlist, IpResolver,
   zipper, ResTranslator, VarGrid, StrUtils, LCLProc, Grids, BaseForm, utils, AddTorrent, Types,
   LazFileUtils, LazUTF8, StringToVK, passwcon, GContnrs,lineinfo, RegExpr,
-  Filtering, TorrentStateImages, RPCConstants,
+  Filtering, TorrentStateImages, RPCConstants, TorrentColumns,
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
@@ -848,7 +848,7 @@ const
   idxTrackerID = -2;
   TrackersExtraColumns = 2;
 
-  TorrentFieldsMap: array[idxName..idxLabels] of string =
+  TorrentFieldsMap: array[torcolName..torcolLabels] of string =
     ('', 'totalSize', '', 'status', 'peersSendingToUs,seeders',
     'peersGettingFromUs,leechers', '', '', 'eta', 'uploadRatio',
     'downloadedEver', 'uploadedEver', '', '', 'addedDate', 'doneDate', 'activityDate', '', 'bandwidthPriority',
@@ -2016,16 +2016,16 @@ begin
     if gTorrents.SelCount = 0 then
       gTorrents.RowSelected[gTorrents.Row]:=True;
     ids:=GetSelectedTorrents;
-    i:=gTorrents.Items.IndexOf(idxTorrentId, ids[0]);
-    if VarIsEmpty(gTorrents.Items[idxPath, i]) then
+    i:=gTorrents.Items.IndexOf(torcolTorrentId, ids[0]);
+    if VarIsEmpty(gTorrents.Items[torcolPath, i]) then
       exit;
 
-    edTorrentDir.Text:=UTF8Encode(widestring(gTorrents.Items[idxPath, i]));
+    edTorrentDir.Text:=UTF8Encode(widestring(gTorrents.Items[torcolPath, i]));
 
     if gTorrents.SelCount > 1 then
       s:=Format(sSeveralTorrents, [gTorrents.SelCount])
     else
-      s:=UTF8Encode(widestring(gTorrents.Items[idxName, i]));
+      s:=UTF8Encode(widestring(gTorrents.Items[torcolName, i]));
 
 
     Caption:=Caption + ' - ' + s;
@@ -2066,7 +2066,7 @@ begin
             ok:=True;
             for i:=0 to Items.Count - 1 do
               if RowSelected[i] then begin
-                if VarIsEmpty(Items[idxPath, i]) or (AnsiCompareText(UTF8Encode(widestring(Items[idxPath, i])), edTorrentDir.Text) <> 0) then begin
+                if VarIsEmpty(Items[torcolPath, i]) or (AnsiCompareText(UTF8Encode(widestring(Items[torcolPath, i])), edTorrentDir.Text) <> 0) then begin
                   ok:=False;
                   break;
                 end;
@@ -2300,7 +2300,7 @@ var
     if TorrentId <> 0 then begin
       i:=SelectTorrent(TorrentId, 2000);
       if i >= 0 then
-        s:=Format(': %s', [UTF8Encode(widestring(gTorrents.Items[idxName, i]))]);
+        s:=Format(': %s', [UTF8Encode(widestring(gTorrents.Items[torcolName, i]))]);
 
     end;
     ForceAppNormal;
@@ -3042,7 +3042,7 @@ function TMainForm.GetTorrentStatus(TorrentIdx: integer): string;
 var
   i: integer;
 begin
-  i:=gTorrents.Items[idxStatus, TorrentIdx];
+  i:=gTorrents.Items[torcolStatus, TorrentIdx];
   if i = TR_STATUS_CHECK_WAIT(RpcObj.RpcVersion) then
     Result:=sWaiting
   else
@@ -3545,7 +3545,7 @@ begin
   if lvFiles.Focused then
     lvFiles.EditCell(idxFileName, lvFiles.Row)
   else
-    gTorrents.EditCell(idxName, gTorrents.Row);
+    gTorrents.EditCell(torcolName, gTorrents.Row);
 end;
 
 procedure TMainForm.acResolveCountryExecute(Sender: TObject);
@@ -3627,8 +3627,8 @@ begin
   if gTorrents.SelCount = 0 then
     gTorrents.RowSelected[gTorrents.Row]:=True;
   ids:=GetSelectedTorrents;
-  i:=gTorrents.Items.IndexOf(idxTorrentId, ids[0]);
-  if VarIsEmpty(gTorrents.Items[idxPath, i]) then
+  i:=gTorrents.Items.IndexOf(torcolTorrentId, ids[0]);
+  if VarIsEmpty(gTorrents.Items[torcolPath, i]) then
     exit;
   if InputQuery('Set labels',
       'This will overwrite any existing labels.' + sLineBreak +
@@ -3770,7 +3770,7 @@ var
 
 procedure SaveTorrentName(Torrents: TVarGrid; Row: Integer);
 begin
-  clipboardText := clipboardText + Torrents.Items[idxName, Row] + LineEnding;
+  clipboardText := clipboardText + Torrents.Items[torcolName, Row] + LineEnding;
 end;
 
 begin
@@ -3794,7 +3794,7 @@ begin
       FCol := ADataCol;
       FRow := r;
       case ADataCol of
-      idxAddedOn, idxCompletedOn, idxLastActive:
+      torcolAddedOn, torcolCompletedOn, torcolLastActive:
         begin
           Application.CancelHint;
           gTorrents.Hint := TorrentDateTimeToString(gTorrents.Items[ADataCol, FRow-1],not(FFromNow));
@@ -4180,7 +4180,7 @@ begin
     gTorrents.EnsureSelectionVisible;
     ids:=GetSelectedTorrents;
     if gTorrents.SelCount < 2 then
-      s:=Format(sTorrentVerification, [UTF8Encode(widestring(gTorrents.Items[idxName, gTorrents.Items.IndexOf(idxTorrentId, ids[0])]))])
+      s:=Format(sTorrentVerification, [UTF8Encode(widestring(gTorrents.Items[torcolName, gTorrents.Items.IndexOf(torcolTorrentId, ids[0])]))])
     else
       s:=Format(sTorrentsVerification, [gTorrents.SelCount]);
     if MessageDlg('', s, mtConfirmation, mbYesNo, 0, mbNo) <> mrYes then
@@ -4334,18 +4334,18 @@ begin
       with Sender.Canvas.Font do
         Style:=Style + [fsStrikeOut];
     case ADataCol of
-      idxStatus:
+      torcolStatus:
         Text:=GetTorrentStatus(ARow);
-      idxSize, idxDownloaded, idxUploaded, idxSizeToDowload, idxSizeLeft:
+      torcolSize, torcolDownloaded, torcolUploaded, torcolSizeToDowload, torcolSizeLeft:
         Text:=GetHumanSize(Sender.Items[ADataCol, ARow], 0, '?');
-      idxDone:
-        Text:=Format('%.1f%%', [double(Sender.Items[idxDone, ARow])]);
-      idxSeeds:
+      torcolDone:
+        Text:=Format('%.1f%%', [double(Sender.Items[torcolDone, ARow])]);
+      torcolSeeds:
         if not VarIsNull(Sender.Items[torcolSeedsTotal, ARow]) then
-          Text:=GetSeedsText(Sender.Items[idxSeeds, ARow], Sender.Items[torcolSeedsTotal, ARow]);
-      idxPeers:
-        Text:=GetPeersText(Sender.Items[idxPeers, ARow], -1, Sender.Items[torcolLeechersTotal, ARow]);
-      idxDownSpeed, idxUpSpeed:
+          Text:=GetSeedsText(Sender.Items[torcolSeeds, ARow], Sender.Items[torcolSeedsTotal, ARow]);
+      torcolPeers:
+        Text:=GetPeersText(Sender.Items[torcolPeers, ARow], -1, Sender.Items[torcolLeechersTotal, ARow]);
+      torcolDownSpeed, torcolUpSpeed:
         begin
           j:=Sender.Items[ADataCol, ARow];
           if j > 0 then
@@ -4353,32 +4353,32 @@ begin
           else
             Text:='';
         end;
-      idxETA:
-        Text:=EtaToString(Sender.Items[idxETA, ARow]);
-      idxRatio:
-        Text:=RatioToString(Sender.Items[idxRatio, ARow]);
-      idxAddedOn, idxCompletedOn, idxLastActive:
+      torcolETA:
+        Text:=EtaToString(Sender.Items[torcolETA, ARow]);
+      torcolRatio:
+        Text:=RatioToString(Sender.Items[torcolRatio, ARow]);
+      torcolAddedOn, torcolCompletedOn, torcolLastActive:
         Text:=TorrentDateTimeToString(Sender.Items[ADataCol, ARow],FFromNow);
-      idxPriority:
+      torcolPriority:
         Text:=PriorityToStr(Sender.Items[ADataCol, ARow], ImageIndex);
-      idxQueuePos:
+      torcolQueuePos:
         begin
           j:=Sender.Items[ADataCol, ARow];
           if j >= FinishedQueue then
             Dec(j, FinishedQueue);
           Text:=IntToStr(j);
         end;
-      idxSeedingTime:
+      torcolSeedingTime:
         begin
-          j:=Sender.Items[idxSeedingTime, ARow];
+          j:=Sender.Items[torcolSeedingTime, ARow];
           if j > 0 then
             Text:=EtaToString(j)
           else
             Text:='';
         end;
-      idxPrivate:
+      torcolPrivate:
         begin
-          j:=Sender.Items[idxPrivate, ARow];
+          j:=Sender.Items[torcolPrivate, ARow];
           if j >= 1 then
             Text:=sPrivateOn
           else
@@ -4396,7 +4396,7 @@ begin
   RpcObj.Lock;
   try
     if gTorrents.Items.Count > 0 then
-      i:=gTorrents.Items[idxTorrentId, gTorrents.Row]
+      i:=gTorrents.Items[torcolTorrentId, gTorrents.Row]
     else
       i:=0;
     if RpcObj.CurTorrentId = i then
@@ -4420,15 +4420,15 @@ var
 begin
   if gTorrents.Items.Count = 0 then
     exit;
-  if gTorrents.Items[idxDone, gTorrents.Row] = 100.0 then begin
+  if gTorrents.Items[torcolDone, gTorrents.Row] = 100.0 then begin
     // The torrent is finished. Check if it is possible to open its file/folder
     AppBusy;
     try
-      res:=RpcObj.RequestInfo(gTorrents.Items[idxTorrentId, gTorrents.Row], ['downloadDir']);
+      res:=RpcObj.RequestInfo(gTorrents.Items[torcolTorrentId, gTorrents.Row], ['downloadDir']);
       if res = nil then
         CheckStatus(False);
       with res.Arrays['torrents'].Objects[0] do
-        n:=IncludeProperTrailingPathDelimiter(UTF8Encode(Strings['downloadDir'])) + UTF8Encode(widestring(gTorrents.Items[idxName, gTorrents.Row]));
+        n:=IncludeProperTrailingPathDelimiter(UTF8Encode(Strings['downloadDir'])) + UTF8Encode(widestring(gTorrents.Items[torcolName, gTorrents.Row]));
       s:=MapRemoteToLocal(n);
       if s = '' then
         s:=n;
@@ -4447,7 +4447,7 @@ end;
 procedure TMainForm.gTorrentsDrawCell(Sender: TVarGrid; ACol, ARow, ADataCol: integer; AState: TGridDrawState; const R: TRect; var ADefaultDrawing: boolean);
 begin
   if ARow < 0 then exit;
-  if ADataCol = idxDone then begin
+  if ADataCol = torcolDone then begin
     ADefaultDrawing:=False;
     DrawProgressCell(Sender, ACol, ARow, ADataCol, AState, R);
   end;
@@ -4472,7 +4472,7 @@ var
 begin
   s:=UTF8UpperCase(SearchText);
   for i:=ARow to gTorrents.Items.Count - 1 do begin
-    v:=gTorrents.Items[idxName, i];
+    v:=gTorrents.Items[torcolName, i];
     if VarIsEmpty(v) or VarIsNull(v) then
       continue;
     if Pos(s, Trim(UTF8UpperCase(UTF8Encode(widestring(v))))) > 0 then begin
@@ -4492,17 +4492,17 @@ end;
 
 procedure TMainForm.gTorrentsSetEditText(Sender: TObject; ACol, ARow: Integer; const Value: string);
 begin
-  if RenameTorrent(gTorrents.Items[idxTorrentId, ARow], UTF8Encode(widestring(gTorrents.Items[idxName, ARow])), Trim(Value)) then begin
-    gTorrents.Items[idxName, ARow]:=UTF8Decode(Trim(Value));
+  if RenameTorrent(gTorrents.Items[torcolTorrentId, ARow], UTF8Encode(widestring(gTorrents.Items[torcolName, ARow])), Trim(Value)) then begin
+    gTorrents.Items[torcolName, ARow]:=UTF8Decode(Trim(Value));
     FFilesTree.Clear;
   end;
 end;
 
 procedure TMainForm.gTorrentsSortColumn(Sender: TVarGrid; var ASortCol: integer);
 begin
-  if ASortCol = idxSeeds then
+  if ASortCol = torcolSeeds then
     ASortCol:=torcolSeedsTotal;
-  if ASortCol = idxPeers then
+  if ASortCol = torcolPeers then
     ASortCol:=torcolLeechersTotal;
 end;
 
@@ -4539,7 +4539,7 @@ var
   i, lvl, len: integer;
 begin
   p:=FFilesTree.GetFullPath(ARow, False);
-  if RenameTorrent(gTorrents.Items[idxTorrentId, gTorrents.Row], p, Trim(Value)) then begin
+  if RenameTorrent(gTorrents.Items[torcolTorrentId, gTorrents.Row], p, Trim(Value)) then begin
     FFiles[idxFileName, ARow]:=UTF8Decode(Trim(Value));
     if FFilesTree.IsFolder(ARow) then begin
       // Updating path for child elements
@@ -5711,15 +5711,15 @@ begin
   SetLength(FieldExists, FTorrents.ColCnt);
   if list.Count > 0 then begin
     t:=list[0] as TJSONObject;
-    FieldExists[idxName]:=t.IndexOfName('name') >= 0;
-    FieldExists[idxRatio]:=t.IndexOfName('uploadRatio') >= 0;
-    FieldExists[idxTracker]:=t.IndexOfName('trackers') >= 0;
-    FieldExists[idxPath]:=t.IndexOfName('downloadDir') >= 0;
-    FieldExists[idxPriority]:=t.IndexOfName('bandwidthPriority') >= 0;
-    FieldExists[idxQueuePos]:=t.IndexOfName('queuePosition') >= 0;
-    FieldExists[idxSeedingTime]:=t.IndexOfName('secondsSeeding') >= 0;
-    FieldExists[idxPrivate]:=t.IndexOfName('isPrivate') >= 0;
-    FIeldExists[idxLabels]:=t.IndexOfName('labels') >= 0;
+    FieldExists[torcolName]:=t.IndexOfName('name') >= 0;
+    FieldExists[torcolRatio]:=t.IndexOfName('uploadRatio') >= 0;
+    FieldExists[torcolTracker]:=t.IndexOfName('trackers') >= 0;
+    FieldExists[torcolPath]:=t.IndexOfName('downloadDir') >= 0;
+    FieldExists[torcolPriority]:=t.IndexOfName('bandwidthPriority') >= 0;
+    FieldExists[torcolQueuePos]:=t.IndexOfName('queuePosition') >= 0;
+    FieldExists[torcolSeedingTime]:=t.IndexOfName('secondsSeeding') >= 0;
+    FieldExists[torcolPrivate]:=t.IndexOfName('isPrivate') >= 0;
+    FIeldExists[torcolLabels]:=t.IndexOfName('labels') >= 0;
   end;
 
   UpSpeed:=0;
@@ -5752,19 +5752,19 @@ begin
 
     t:=list[i] as TJSONObject;
     id:=t.Integers['id'];
-    ExistingRow:=FTorrents.Find(idxTorrentId, id, row);
+    ExistingRow:=FTorrents.Find(torcolTorrentId, id, row);
     if not ExistingRow then
       FTorrents.InsertRow(row);
 
-    FTorrents[idxTorrentId, row]:=t.Integers['id'];
+    FTorrents[torcolTorrentId, row]:=t.Integers['id'];
 
-    if FieldExists[idxName] then
-      FTorrents[idxName, row]:=t.Strings['name'];
+    if FieldExists[torcolName] then
+      FTorrents[torcolName, row]:=t.Strings['name'];
 
     j:=t.Integers['status'];
-    if ExistingRow and (j = TR_STATUS_SEED(RpcObj.RPCVersion)) and (FTorrents[idxStatus, row] = TR_STATUS_DOWNLOAD(RpcObj.RPCVersion)) then
-      DownloadFinished(UTF8Encode(widestring(FTorrents[idxName, row])));
-    FTorrents[idxStatus, row]:=j;
+    if ExistingRow and (j = TR_STATUS_SEED(RpcObj.RPCVersion)) and (FTorrents[torcolStatus, row] = TR_STATUS_DOWNLOAD(RpcObj.RPCVersion)) then
+      DownloadFinished(UTF8Encode(widestring(FTorrents[torcolName, row])));
+    FTorrents[torcolStatus, row]:=j;
     if j = TR_STATUS_CHECK_WAIT(RpcObj.RPCVersion)  then StateImg:=imgDownQueue else
     if j = TR_STATUS_CHECK(RpcObj.RPCVersion)  then StateImg:=imgDownQueue else
     if j = TR_STATUS_DOWNLOAD_WAIT(RpcObj.RPCVersion)  then StateImg:=imgDownQueue else
@@ -5811,9 +5811,9 @@ begin
     end
     else
       s:='';
-    FTorrents[idxTrackerStatus, row]:=UTF8Decode(s);
+    FTorrents[torcolTrackerStatus, row]:=UTF8Decode(s);
 
-    if FTorrents[idxStatus, row] = TR_STATUS_CHECK(RpcObj.RPCVersion) then
+    if FTorrents[torcolStatus, row] = TR_STATUS_CHECK(RpcObj.RPCVersion) then
       f:=t.Floats['recheckProgress']*100.0
     else begin
       f:=t.Floats['sizeWhenDone'];
@@ -5823,41 +5823,41 @@ begin
         if (t.Floats['leftUntilDone'] <> 0) or (t.Floats['sizeWhenDone'] = 0) then
           StateImg:=imgStopped
         else
-          FTorrents[idxStatus, row]:=TR_STATUS_FINISHED;
+          FTorrents[torcolStatus, row]:=TR_STATUS_FINISHED;
     end;
     if f < 0 then
       f:=0;
-    FTorrents[idxDone, row]:=Int(f*10.0)/10.0;
+    FTorrents[torcolDone, row]:=Int(f*10.0)/10.0;
     FTorrents[torcolStateImg, row]:=StateImg;
-    GetTorrentValue(idxDownSpeed, 'rateDownload', vtInteger);
-    j:=StoreSpeed(FTorrents.ItemPtrs[torcolDownSpeedHistory, row]^, FTorrents[idxDownSpeed, row]);
+    GetTorrentValue(torcolDownSpeed, 'rateDownload', vtInteger);
+    j:=StoreSpeed(FTorrents.ItemPtrs[torcolDownSpeedHistory, row]^, FTorrents[torcolDownSpeed, row]);
     if FCalcAvg and (StateImg in [imgDown, imgDownError]) then
-      FTorrents[idxDownSpeed, row]:=j;
-    GetTorrentValue(idxUpSpeed, 'rateUpload', vtInteger);
-    j:=StoreSpeed(FTorrents.ItemPtrs[torcolUpSpeedHistory, row]^, FTorrents[idxUpSpeed, row]);
+      FTorrents[torcolDownSpeed, row]:=j;
+    GetTorrentValue(torcolUpSpeed, 'rateUpload', vtInteger);
+    j:=StoreSpeed(FTorrents.ItemPtrs[torcolUpSpeedHistory, row]^, FTorrents[torcolUpSpeed, row]);
     if FCalcAvg and (StateImg in [imgSeed, imgSeedError]) then
-      FTorrents[idxUpSpeed, row]:=j;
+      FTorrents[torcolUpSpeed, row]:=j;
 
-    GetTorrentValue(idxSize, 'totalSize', vtExtended);
-    GetTorrentValue(idxSizeToDowload, 'sizeWhenDone', vtExtended);
-    GetTorrentValue(idxSeeds, 'peersSendingToUs', vtInteger);
-    GetTorrentValue(idxPeers, 'peersGettingFromUs', vtInteger);
-    GetTorrentValue(idxETA, 'eta', vtInteger);
-    v:=FTorrents[idxETA, row];
+    GetTorrentValue(torcolSize, 'totalSize', vtExtended);
+    GetTorrentValue(torcolSizeToDowload, 'sizeWhenDone', vtExtended);
+    GetTorrentValue(torcolSeeds, 'peersSendingToUs', vtInteger);
+    GetTorrentValue(torcolPeers, 'peersGettingFromUs', vtInteger);
+    GetTorrentValue(torcolETA, 'eta', vtInteger);
+    v:=FTorrents[torcolETA, row];
     if not VarIsNull(v) then
       if v < 0 then
-        FTorrents[idxETA, row]:=MaxInt
+        FTorrents[torcolETA, row]:=MaxInt
       else begin
-        f:=FTorrents[idxDownSpeed, row];
+        f:=FTorrents[torcolDownSpeed, row];
         if f > 0 then
-          FTorrents[idxETA, row]:=Round(t.Floats['leftUntilDone']/f);
+          FTorrents[torcolETA, row]:=Round(t.Floats['leftUntilDone']/f);
       end;
-    GetTorrentValue(idxDownloaded, 'downloadedEver', vtExtended);
-    GetTorrentValue(idxUploaded, 'uploadedEver', vtExtended);
-    GetTorrentValue(idxSizeLeft, 'leftUntilDone', vtExtended);
-    GetTorrentValue(idxAddedOn, 'addedDate', vtExtended);
-    GetTorrentValue(idxCompletedOn, 'doneDate', vtExtended);
-    GetTorrentValue(idxLastActive, 'activityDate', vtExtended);
+    GetTorrentValue(torcolDownloaded, 'downloadedEver', vtExtended);
+    GetTorrentValue(torcolUploaded, 'uploadedEver', vtExtended);
+    GetTorrentValue(torcolSizeLeft, 'leftUntilDone', vtExtended);
+    GetTorrentValue(torcolAddedOn, 'addedDate', vtExtended);
+    GetTorrentValue(torcolCompletedOn, 'doneDate', vtExtended);
+    GetTorrentValue(torcolLastActive, 'activityDate', vtExtended);
 
     if RpcObj.RPCVersion >= 7 then begin
       if t.Arrays['trackerStats'].Count > 0 then
@@ -5870,26 +5870,26 @@ begin
         FTorrents[torcolLeechersTotal, row]:=-1;
       end;
       if t.Floats['metadataPercentComplete'] <> 1.0 then begin
-        FTorrents[idxSize, row]:=-1;
-        FTorrents[idxSizeToDowload, row]:=-1;
+        FTorrents[torcolSize, row]:=-1;
+        FTorrents[torcolSizeToDowload, row]:=-1;
       end;
     end
     else begin
       GetTorrentValue(torcolSeedsTotal, 'seeders', vtInteger);
       GetTorrentValue(torcolLeechersTotal, 'leechers', vtInteger);
     end;
-    if FieldExists[idxRatio] then begin
+    if FieldExists[torcolRatio] then begin
       f:=t.Floats['uploadRatio'];
       if f = -2 then
         f:=MaxInt;
-      FTorrents[idxRatio, row]:=f;
+      FTorrents[torcolRatio, row]:=f;
     end
     else
-      FTorrents[idxRatio, row]:=NULL;
-    if FieldExists[idxSeedingTime] then
-      FTorrents[idxSeedingTime, row]:=t.Integers['secondsSeeding']
+      FTorrents[torcolRatio, row]:=NULL;
+    if FieldExists[torcolSeedingTime] then
+      FTorrents[torcolSeedingTime, row]:=t.Integers['secondsSeeding']
     else
-      FTorrents[idxSeedingTime, row]:=NULL;
+      FTorrents[torcolSeedingTime, row]:=NULL;
 
     if RpcObj.RPCVersion >= 7 then begin
       if t.Arrays['trackerStats'].Count > 0 then
@@ -5898,11 +5898,11 @@ begin
         s:=sNoTracker;
     end
     else
-      if FieldExists[idxTracker] then
+      if FieldExists[torcolTracker] then
         s:=UTF8Encode(t.Arrays['trackers'].Objects[0].Strings['announce'])
       else begin
         s:='';
-        if VarIsEmpty(FTorrents[idxTracker, row]) then
+        if VarIsEmpty(FTorrents[torcolTracker, row]) then
           RpcObj.RequestFullInfo:=True;
       end;
 
@@ -5925,17 +5925,17 @@ begin
       j:=Pos(':', s);
       if j > 0 then
         System.Delete(s, j, MaxInt);
-      FTorrents[idxTracker, row]:=UTF8Decode(s);
+      FTorrents[torcolTracker, row]:=UTF8Decode(s);
     end;
 
-    if FieldExists[idxPath] then
-      FTorrents[idxPath, row]:=UTF8Decode(ExcludeTrailingPathDelimiter(UTF8Encode(t.Strings['downloadDir'])))
+    if FieldExists[torcolPath] then
+      FTorrents[torcolPath, row]:=UTF8Decode(ExcludeTrailingPathDelimiter(UTF8Encode(t.Strings['downloadDir'])))
     else
-      if VarIsEmpty(FTorrents[idxPath, row]) then
+      if VarIsEmpty(FTorrents[torcolPath, row]) then
         RpcObj.RequestFullInfo:=True;
 
-    if not VarIsEmpty(FTorrents[idxPath, row]) then begin
-      s:=UTF8Encode(widestring(FTorrents[idxPath, row]));
+    if not VarIsEmpty(FTorrents[torcolPath, row]) then begin
+      s:=UTF8Encode(widestring(FTorrents[torcolPath, row]));
       j:=Paths.IndexOf(s);
       if j < 0 then
         Paths.AddObject(s, TObject(1))
@@ -5943,20 +5943,20 @@ begin
         Paths.Objects[j]:=TObject(PtrInt(Paths.Objects[j]) + 1);
     end;
 
-    if FieldExists[idxPriority] then
-      FTorrents[idxPriority, row]:=t.Integers['bandwidthPriority'];
+    if FieldExists[torcolPriority] then
+      FTorrents[torcolPriority, row]:=t.Integers['bandwidthPriority'];
 
-    if FieldExists[idxQueuePos] then begin
+    if FieldExists[torcolQueuePos] then begin
       j:=t.Integers['queuePosition'];
-      if FTorrents[idxStatus, row] = TR_STATUS_FINISHED then
+      if FTorrents[torcolStatus, row] = TR_STATUS_FINISHED then
         Inc(j, FinishedQueue);
-      FTorrents[idxQueuePos, row]:=j;
+      FTorrents[torcolQueuePos, row]:=j;
     end;
 
-    if FieldExists[idxPrivate] then
-      FTorrents[idxPrivate, row]:=t.Integers['isPrivate'];
+    if FieldExists[torcolPrivate] then
+      FTorrents[torcolPrivate, row]:=t.Integers['isPrivate'];
 
-    if FieldExists[idxLabels] then begin
+    if FieldExists[torcolLabels] then begin
       a := t.Arrays['labels'];
       s := '';
       for j:=0 to a.Count-1 do begin
@@ -5969,11 +5969,11 @@ begin
         else
           Labels.Objects[p]:=TObject(PtrInt(Labels.Objects[p]) + 1);
       end;
-      FTorrents[idxLabels, row] := s;
+      FTorrents[torcolLabels, row] := s;
     end;
 
-    DownSpeed:=DownSpeed + FTorrents[idxDownSpeed, row];
-    UpSpeed:=UpSpeed + FTorrents[idxUpSpeed, row];
+    DownSpeed:=DownSpeed + FTorrents[torcolDownSpeed, row];
+    UpSpeed:=UpSpeed + FTorrents[torcolUpSpeed, row];
 
     FTorrents[torcolTag, row]:=1;
   end;
@@ -5990,14 +5990,14 @@ begin
     for i:=0 to gTorrents.Items.Count - 1 do
       gTorrents.Items[torcolTag, i]:=0;
 
-    gTorrents.Items.Sort(idxTorrentId);
+    gTorrents.Items.Sort(torcolTorrentId);
 
     for i:=0 to FTorrents.Count - 1 do begin
-      IsActive:=(FTorrents[idxDownSpeed, i] <> 0) or (FTorrents[idxUpSpeed, i] <> 0);
+      IsActive:=(FTorrents[torcolDownSpeed, i] <> 0) or (FTorrents[torcolUpSpeed, i] <> 0);
       if IsActive then
         Inc(ActiveCnt);
 
-      j:=FTorrents[idxStatus, i];
+      j:=FTorrents[torcolStatus, i];
       if j = TR_STATUS_DOWNLOAD(RpcObj.RPCVersion) then
         Inc(DownCnt)
       else
@@ -6019,8 +6019,8 @@ begin
         if StateImg in [imgDownError, imgSeedError, imgError] then
           Inc(ErrorCnt);
 
-      if not VarIsEmpty(FTorrents[idxTracker, i]) then begin
-        s:=UTF8Encode(widestring(FTorrents[idxTracker, i]));
+      if not VarIsEmpty(FTorrents[torcolTracker, i]) then begin
+        s:=UTF8Encode(widestring(FTorrents[torcolTracker, i]));
         j:=FTrackers.IndexOf(s);
         if j < 0 then
           j:=FTrackers.Add(s);
@@ -6029,21 +6029,21 @@ begin
           continue;
       end;
 
-      if (PathFilter <> '') and not VarIsEmpty(FTorrents[idxPath, i]) and (UTF8Decode(PathFilter) <> FTorrents[idxPath, i]) then
+      if (PathFilter <> '') and not VarIsEmpty(FTorrents[torcolPath, i]) and (UTF8Decode(PathFilter) <> FTorrents[torcolPath, i]) then
         continue;
 
-      if (LabelFilter <> '') and not VarIsEmpty(FTorrents[idxLabels, i]) then begin
-        if not AnsiContainsStr(String(FTorrents[idxLabels, i]), LabelFilter) then
+      if (LabelFilter <> '') and not VarIsEmpty(FTorrents[torcolLabels, i]) then begin
+        if not AnsiContainsStr(String(FTorrents[torcolLabels, i]), LabelFilter) then
           continue;
       end;
 
 
 
       if edSearch.Text <> '' then
-        if UTF8Pos(UTF8UpperCase(edSearch.Text), UTF8UpperCase(UTF8Encode(widestring(FTorrents[idxName, i])))) = 0 then
+        if UTF8Pos(UTF8UpperCase(edSearch.Text), UTF8UpperCase(UTF8Encode(widestring(FTorrents[torcolName, i])))) = 0 then
           continue;
 
-      if not gTorrents.Items.Find(idxTorrentId, FTorrents[idxTorrentId, i], row) then
+      if not gTorrents.Items.Find(torcolTorrentId, FTorrents[torcolTorrentId, i], row) then
         gTorrents.Items.InsertRow(row);
       for j:=-TorrentsExtraColumns to FTorrents.ColCnt - 1 do
         if (j <> torcolDownSpeedHistory) and (j <> torcolUpSpeedHistory) then
@@ -6061,7 +6061,7 @@ begin
     gTorrents.Sort;
     if gTorrents.Items.Count > 0 then begin
       if OldId <> 0 then begin
-        i:=gTorrents.Items.IndexOf(idxTorrentId, OldId);
+        i:=gTorrents.Items.IndexOf(torcolTorrentId, OldId);
         if i >= 0 then
           gTorrents.Row:=i
         else
@@ -6320,7 +6320,7 @@ begin
     gTorrents.EnsureSelectionVisible;
     ids:=GetSelectedTorrents;
     if gTorrents.SelCount < 2 then
-      s:=Format(Msg, [UTF8Encode(widestring(gTorrents.Items[idxName, gTorrents.Items.IndexOf(idxTorrentId, ids[0])]))])
+      s:=Format(Msg, [UTF8Encode(widestring(gTorrents.Items[torcolName, gTorrents.Items.IndexOf(torcolTorrentId, ids[0])]))])
     else
       s:=Format(MsgMulti, [gTorrents.SelCount]);
 
@@ -6339,7 +6339,7 @@ begin
       try
         i:=0;
         while i < Items.Count do begin
-          id:=Items[idxTorrentId, i];
+          id:=Items[torcolTorrentId, i];
           for j:=0 to VarArrayHighBound(ids, 1) do
             if id = ids[j] then begin
               Items.Items[torcolDeleted, i]:=1;
@@ -6403,23 +6403,23 @@ begin
     ClearDetailsInfo;
     exit;
   end;
-  idx:=gTorrents.Items.IndexOf(idxTorrentId, t.Integers['id']);
+  idx:=gTorrents.Items.IndexOf(torcolTorrentId, t.Integers['id']);
   if idx = -1 then begin
     ClearDetailsInfo;
     exit;
   end;
 
-  txDownProgress.Caption:=Format('%.1f%%', [double(gTorrents.Items[idxDone, idx])]);
+  txDownProgress.Caption:=Format('%.1f%%', [double(gTorrents.Items[torcolDone, idx])]);
   txDownProgress.AutoSize:=True;
   if RpcObj.RPCVersion >= 5 then
     s:=t.Strings['pieces']
   else
     s:='';
-  ProcessPieces(s, t.Integers['pieceCount'], gTorrents.Items[idxDone, idx]);
+  ProcessPieces(s, t.Integers['pieceCount'], gTorrents.Items[torcolDone, idx]);
 
   panTransfer.ChildSizing.Layout:=cclNone;
   txStatus.Caption:=GetTorrentStatus(idx);
-  tr:=GetTorrentError(t, gTorrents.Items[idxStatus, idx]);
+  tr:=GetTorrentError(t, gTorrents.Items[torcolStatus, idx]);
   txError.Constraints.MinWidth:=400;
   if Ini.ReadBool('Translation', 'TranslateMsg', True) then
     txError.Caption:=TranslateString(tr, True)
@@ -6427,7 +6427,7 @@ begin
       txError.Caption:=tr;
 
   i:=t.Integers['eta'];
-  f:=gTorrents.Items[idxDownSpeed, idx];
+  f:=gTorrents.Items[torcolDownSpeed, idx];
   if f > 0 then
     i:=Round(t.Floats['leftUntilDone']/f);
   //txRemaining.Caption:=EtaToString(i);
@@ -6441,14 +6441,14 @@ begin
   else
     i:=0;
   txWasted.Caption:=Format(sHashfails, [GetHumanSize(t.Floats['corruptEver']), i]);
-  s:=GetHumanSize(gTorrents.Items[idxDownSpeed, idx], 1)+sPerSecond;
+  s:=GetHumanSize(gTorrents.Items[torcolDownSpeed, idx], 1)+sPerSecond;
   if t.IndexOfName('secondsDownloading') >= 0 then begin
     f:=t.Integers['secondsDownloading'];
     if f > 0 then
       s:=Format('%s (%s: %s)', [s, SAverage, GetHumanSize(t.Floats['downloadedEver']/f, 1) + sPerSecond]);
   end;
   txDownSpeed.Caption:=s;
-  txUpSpeed.Caption:=GetHumanSize(gTorrents.Items[idxUpSpeed, idx], 1)+sPerSecond;
+  txUpSpeed.Caption:=GetHumanSize(gTorrents.Items[torcolUpSpeed, idx], 1)+sPerSecond;
   s:=RatioToString(t.Floats['uploadRatio']);
   if t.IndexOfName('secondsSeeding') >= 0 then begin
     i:=t.Integers['secondsSeeding'];
@@ -6527,7 +6527,7 @@ begin
     s:=TorrentDateTimeToString(Trunc(f),FFromNow);
   txTrackerUpdate.Caption:=s;
   txTrackerUpdate.Hint:=TorrentDateTimeToString(Trunc(f),not(FFromNow));
-  txTracker.Caption:=UTF8Encode(widestring(gTorrents.Items[idxTracker, idx]));
+  txTracker.Caption:=UTF8Encode(widestring(gTorrents.Items[torcolTracker, idx]));
   if RpcObj.RPCVersion >= 7 then
     if t.Arrays['trackerStats'].Count > 0 then
       i:=t.Arrays['trackerStats'].Objects[0].Integers['seederCount']
@@ -6559,7 +6559,7 @@ begin
 
   panGeneralInfo.ChildSizing.Layout:=cclNone;
 
-  s:=UTF8Encode(widestring(gTorrents.Items[idxName, idx]));
+  s:=UTF8Encode(widestring(gTorrents.Items[torcolName, idx]));
   if RpcObj.RPCVersion >= 4 then
     s:=IncludeProperTrailingPathDelimiter(UTF8Encode(t.Strings['downloadDir'])) + s;
   txTorrentName.Caption:=s;
@@ -6568,7 +6568,7 @@ begin
     s:=' by ' + s;
   txCreated.Caption:=TorrentDateTimeToString(Trunc(t.Floats['dateCreated']),FFromNow) + s;
   txCreated.Hint   :=TorrentDateTimeToString(Trunc(t.Floats['dateCreated']),Not(FFromNow)) + s;
-  if gTorrents.Items[idxSize, idx] >= 0 then begin
+  if gTorrents.Items[torcolSize, idx] >= 0 then begin
     txTotalSize.Caption:=Format(sDone, [GetHumanSize(t.Floats['totalSize']), GetHumanSize(t.Floats['sizeWhenDone'] - t.Floats['leftUntilDone'])]);
     if t.Floats['totalSize'] = t.Floats['haveValid'] then
       i:=t.Integers['pieceCount']
@@ -6641,12 +6641,12 @@ begin
     TrackerStats:=TrackersData.Arrays['trackerStats']
   else
     TrackerStats:=nil;
-  tidx:=gTorrents.Items.IndexOf(idxTorrentId, TrackersData.Integers['id']);
+  tidx:=gTorrents.Items.IndexOf(torcolTorrentId, TrackersData.Integers['id']);
   if tidx = -1 then begin
     ClearDetailsInfo;
     exit;
   end;
-  i:=gTorrents.Items[idxStatus, tidx];
+  i:=gTorrents.Items[torcolStatus, tidx];
   NoInfo:=(i = TR_STATUS_STOPPED(RpcObj.RPCVersion)) or (i = TR_STATUS_FINISHED);
   WasEmpty:=lvTrackers.Items.Count = 0;
   lvTrackers.Items.BeginUpdate;
@@ -6703,7 +6703,7 @@ begin
         end
         else begin
           if i = 0 then begin
-            lvTrackers.Items[idxTrackersListStatus, row]:=gTorrents.Items[idxTrackerStatus, tidx];
+            lvTrackers.Items[idxTrackersListStatus, row]:=gTorrents.Items[torcolTrackerStatus, tidx];
             lvTrackers.Items[idxTrackersListSeeds, row]:=gTorrents.Items[torcolSeedsTotal, tidx];
           end;
           f:=TrackersData.Floats['nextAnnounceTime'];
@@ -7177,7 +7177,7 @@ var
 
 procedure SaveTorrentId(Sender: TVarGrid; Row: Integer);
 begin
-  ids[i] := Sender.Items[idxTorrentId, Row];
+  ids[i] := Sender.Items[torcolTorrentId, Row];
   Inc(i);
 end;
 
@@ -7205,7 +7205,7 @@ begin
         j:=0;
         for i:=0 to gTorrents.Items.Count - 1 do
           if gTorrents.RowVisible[i] then begin
-            Result[j]:=Items[idxTorrentId, i];
+            Result[j]:=Items[torcolTorrentId, i];
             Inc(j);
           end;
   end;
@@ -7232,15 +7232,15 @@ begin
         MMap := TMyHashMap.Create;
         for i:=0 to FTorrents.Count -1 do
         begin
-          MMap[StrToInt(Ftorrents.Items[idxTorrentId, i])] := i;
+          MMap[StrToInt(Ftorrents.Items[torcolTorrentId, i])] := i;
         end;
 
         for i:=VarArrayLowBound(ids, 1) to VarArrayHighBound(ids, 1) do
         begin
           cidx := MMap[ids[i]];
-          TotalSize             := TotalSize + FTorrents.Items[idxSize, cidx];
-          TorrentSizeToDownload := FTorrents.Items[idxSizetoDowload, cidx];
-          TorrentDownloaded     := TorrentSizeToDownload * (FTorrents.Items[idxDone, cidx] / 100);
+          TotalSize             := TotalSize + FTorrents.Items[torcolSize, cidx];
+          TorrentSizeToDownload := FTorrents.Items[torcolSizetoDowload, cidx];
+          TorrentDownloaded     := TorrentSizeToDownload * (FTorrents.Items[torcolDone, cidx] / 100);
           TotalSizeToDownload   := TotalSizeToDownload + TorrentSizeToDownload;
           TotalDownloaded       := TotalDownloaded + TorrentDownloaded;
         end;
@@ -7816,7 +7816,7 @@ begin
   tt:=Now;
   while True do begin
     Application.ProcessMessages;
-    Result:=gTorrents.Items.IndexOf(idxTorrentId, TorrentId);
+    Result:=gTorrents.Items.IndexOf(torcolTorrentId, TorrentId);
     if Result >= 0 then begin
       gTorrents.RemoveSelection;
       gTorrents.Row:=Result;
@@ -7847,7 +7847,7 @@ begin
   try
     sel:=False;
     gTorrents.RemoveSelection;
-    res:=RpcObj.RequestInfo(gTorrents.Items[idxTorrentId, gTorrents.Row], ['files', 'downloadDir']);
+    res:=RpcObj.RequestInfo(gTorrents.Items[torcolTorrentId, gTorrents.Row], ['files', 'downloadDir']);
     if res = nil then
       CheckStatus(False)
     else
