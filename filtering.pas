@@ -37,7 +37,7 @@ unit Filtering;
 
 interface
 
-uses vargrid, fgl, classes;
+uses vargrid, varlist, fgl, classes;
 
 type TIntegerList = specialize TFPGList<Integer>;
 
@@ -75,10 +75,14 @@ fcolFilterType = -2;
 
 lvFilterNumExtraColumns = 2;
 
+function MatchSingleStateFilter(Filter: Integer; Torrents: TVarList;
+  TorrentRow: Integer; RPCVer: Integer; IsActive: Boolean): Boolean;
+
 implementation
 
-uses varlist, TorrentColumns, TorrentStateImages, RPCConstants;
+uses TorrentColumns, TorrentStateImages, RPCConstants;
 
+// should be in implementation, this is just for testing
 function MatchSingleStateFilter(Filter: Integer; Torrents: TVarList;
   TorrentRow: Integer; RPCVer: Integer; IsActive: Boolean): Boolean;
 var
@@ -88,6 +92,7 @@ begin
   status := Torrents[torcolStatus, TorrentRow];
   StateImg := Torrents[torcolStateImg, TorrentRow];
   case Filter of
+    frowAll: Result := True;
     frowActive: Result := IsActive;
     frowInactive: Result := (IsActive=False) and ((StateImg in [imgStopped, imgDone])=False);
     frowDown: Result := (status = TR_STATUS_DOWNLOAD(RPCVer));

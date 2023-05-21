@@ -6037,7 +6037,8 @@ begin
           continue;
       end;
 
-
+      if not Filtering.MatchSingleStateFilter(FilterIdx, FTorrents, i, RpcObj.RpcVersion, IsActive) then
+        continue;
 
       if edSearch.Text <> '' then
         if UTF8Pos(UTF8UpperCase(edSearch.Text), UTF8UpperCase(UTF8Encode(widestring(FTorrents[torcolName, i])))) = 0 then
