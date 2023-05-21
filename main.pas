@@ -5573,7 +5573,8 @@ begin
       end;
   end;
 
-  if (Result = '') or (Status = TR_STATUS_STOPPED) or (Status = TR_STATUS_FINISHED) then
+  if (Result = '') or (Status = TR_STATUS_STOPPED(RpcObj.RPCVersion))
+     or (Status = TR_STATUS_FINISHED) then
     Result:=UTF8Encode(gerr);
 end;
 
@@ -5798,16 +5799,16 @@ begin
       FTorrents[idxName, row]:=t.Strings['name'];
 
     j:=t.Integers['status'];
-    if ExistingRow and (j = TR_STATUS_SEED) and (FTorrents[idxStatus, row] = TR_STATUS_DOWNLOAD) then
+    if ExistingRow and (j = TR_STATUS_SEED(RpcObj.RPCVersion)) and (FTorrents[idxStatus, row] = TR_STATUS_DOWNLOAD(RpcObj.RPCVersion)) then
       DownloadFinished(UTF8Encode(widestring(FTorrents[idxName, row])));
     FTorrents[idxStatus, row]:=j;
-    if j = TR_STATUS_CHECK_WAIT  then StateImg:=imgDownQueue else
-    if j = TR_STATUS_CHECK  then StateImg:=imgDownQueue else
-    if j = TR_STATUS_DOWNLOAD_WAIT  then StateImg:=imgDownQueue else
-    if j = TR_STATUS_DOWNLOAD  then StateImg:=imgDown else
-    if j = TR_STATUS_SEED_WAIT  then StateImg:=imgSeedQueue else
-    if j = TR_STATUS_SEED  then StateImg:=imgSeed else
-    if j = TR_STATUS_STOPPED  then StateImg:=imgDone;
+    if j = TR_STATUS_CHECK_WAIT(RpcObj.RPCVersion)  then StateImg:=imgDownQueue else
+    if j = TR_STATUS_CHECK(RpcObj.RPCVersion)  then StateImg:=imgDownQueue else
+    if j = TR_STATUS_DOWNLOAD_WAIT(RpcObj.RPCVersion)  then StateImg:=imgDownQueue else
+    if j = TR_STATUS_DOWNLOAD(RpcObj.RPCVersion)  then StateImg:=imgDown else
+    if j = TR_STATUS_SEED_WAIT(RpcObj.RPCVersion)  then StateImg:=imgSeedQueue else
+    if j = TR_STATUS_SEED(RpcObj.RPCVersion)  then StateImg:=imgSeed else
+    if j = TR_STATUS_STOPPED(RpcObj.RPCVersion)  then StateImg:=imgDone;
 
     if GetTorrentError(t, j) <> '' then
       if t.Strings['errorString'] <> '' then
@@ -5816,7 +5817,7 @@ begin
         if StateImg in [imgDown,imgSeed] then
           Inc(StateImg, 2);
 
-    if j <> TR_STATUS_STOPPED then begin
+    if j <> TR_STATUS_STOPPED(RpcObj.RPCVersion) then begin
       s:=GetTorrentError(t, j);
       if s <> '' then
         if t.Strings['errorString'] <> '' then
@@ -5849,7 +5850,7 @@ begin
       s:='';
     FTorrents[idxTrackerStatus, row]:=UTF8Decode(s);
 
-    if FTorrents[idxStatus, row] = TR_STATUS_CHECK then
+    if FTorrents[idxStatus, row] = TR_STATUS_CHECK(RpcObj.RPCVersion) then
       f:=t.Floats['recheckProgress']*100.0
     else begin
       f:=t.Floats['sizeWhenDone'];
@@ -6034,10 +6035,10 @@ begin
         Inc(ActiveCnt);
 
       j:=FTorrents[idxStatus, i];
-      if j = TR_STATUS_DOWNLOAD then
+      if j = TR_STATUS_DOWNLOAD(RpcObj.RPCVersion) then
         Inc(DownCnt)
       else
-      if j = TR_STATUS_SEED then begin
+      if j = TR_STATUS_SEED(RpcObj.RPCVersion) then begin
         Inc(SeedCnt);
         Inc(CompletedCnt);
       end
@@ -6045,7 +6046,7 @@ begin
       if j = TR_STATUS_FINISHED then
         Inc(CompletedCnt);
 
-      if (j = TR_STATUS_CHECK) or (j = TR_STATUS_CHECK_WAIT) or (j = TR_STATUS_DOWNLOAD_WAIT) then
+      if (j = TR_STATUS_CHECK(RpcObj.RPCVersion)) or (j = TR_STATUS_CHECK_WAIT(RpcObj.RPCVersion)) or (j = TR_STATUS_DOWNLOAD_WAIT(RpcObj.RPCVersion)) then
         inc(WaitingCnt);
 
       StateImg:=FTorrents[idxStateImg, i];
@@ -6081,10 +6082,10 @@ begin
           if (IsActive=true) or ((StateImg in [imgStopped, imgDone])=true) then // PETROV
             continue;
         frowDown:
-          if FTorrents[idxStatus, i] <> TR_STATUS_DOWNLOAD then
+          if FTorrents[idxStatus, i] <> TR_STATUS_DOWNLOAD(RpcObj.RPCVersion) then
             continue;
         frowDone:
-          if (StateImg <> imgDone) and (FTorrents[idxStatus, i] <> TR_STATUS_SEED) then
+          if (StateImg <> imgDone) and (FTorrents[idxStatus, i] <> TR_STATUS_SEED(RpcObj.RPCVersion)) then
             continue;
         frowStopped:
           if not (StateImg in [imgStopped, imgDone]) then
@@ -6093,7 +6094,7 @@ begin
           if not (StateImg in [imgDownError, imgSeedError, imgError]) then
             continue;
         frowWaiting:
-            if (FTorrents[idxStatus, i] <> TR_STATUS_CHECK) and (FTorrents[idxStatus, i] <> TR_STATUS_CHECK_WAIT) and (FTorrents[idxStatus, i] <> TR_STATUS_DOWNLOAD_WAIT)then
+            if (FTorrents[idxStatus, i] <> TR_STATUS_CHECK(RpcObj.RPCVersion)) and (FTorrents[idxStatus, i] <> TR_STATUS_CHECK_WAIT(RpcObj.RPCVersion)) and (FTorrents[idxStatus, i] <> TR_STATUS_DOWNLOAD_WAIT(RpcObj.RPCVersion))then
               continue;
       end;
 
@@ -6705,7 +6706,7 @@ begin
     exit;
   end;
   i:=gTorrents.Items[idxStatus, tidx];
-  NoInfo:=(i = TR_STATUS_STOPPED) or (i = TR_STATUS_FINISHED);
+  NoInfo:=(i = TR_STATUS_STOPPED(RpcObj.RPCVersion)) or (i = TR_STATUS_FINISHED);
   WasEmpty:=lvTrackers.Items.Count = 0;
   lvTrackers.Items.BeginUpdate;
   try
