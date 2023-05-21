@@ -5667,6 +5667,7 @@ var
   Paths, Labels: TStringList;
   v: variant;
   FieldExists: array of boolean;
+  StateFilters: TIntegerList;
 begin
   if gTorrents.Tag <> 0 then exit;
   if list = nil then begin
@@ -5687,6 +5688,7 @@ begin
     list.Add(t);
   end;
 }
+  StateFilters:=TIntegerList.Create;
   Paths:=TStringList.Create;
   Labels:=TStringList.Create;
   try
@@ -6037,7 +6039,8 @@ begin
           continue;
       end;
 
-      if not Filtering.MatchSingleStateFilter(FilterIdx, FTorrents, i, RpcObj.RpcVersion, IsActive) then
+      StateFilters.Add(FilterIdx);
+      if not Filtering.MatchStateFilter(StateFilters, FTorrents, i, RpcObj.RpcVersion, IsActive) then
         continue;
 
       if edSearch.Text <> '' then
@@ -6175,6 +6178,8 @@ begin
         [RpcObj.InfoStatus, LineEnding, DownCnt, SeedCnt, LineEnding, StatusBar.Panels[1].Text, StatusBar.Panels[2].Text]);
   finally
     Paths.Free;
+    StateFilters.Free;
+    Labels.Free;
   end;
   DetailsUpdated;
 end;

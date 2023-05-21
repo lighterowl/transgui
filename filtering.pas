@@ -46,6 +46,9 @@ procedure CollectFilters(FilterVG: TVarGrid;
   var PathFilters, TrackerFilters, LabelFilters: TStringList
 );
 
+function MatchStateFilter(Filters: TIntegerList; Torrents: TVarList;
+TorrentRow: Integer; RPCVer: Integer; IsActive: Boolean): Boolean;
+
 type TFilterType = (ftPath, ftLabel, ftTracker);
 
 const
@@ -75,14 +78,10 @@ fcolFilterType = -2;
 
 lvFilterNumExtraColumns = 2;
 
-function MatchSingleStateFilter(Filter: Integer; Torrents: TVarList;
-  TorrentRow: Integer; RPCVer: Integer; IsActive: Boolean): Boolean;
-
 implementation
 
 uses TorrentColumns, TorrentStateImages, RPCConstants;
 
-// should be in implementation, this is just for testing
 function MatchSingleStateFilter(Filter: Integer; Torrents: TVarList;
   TorrentRow: Integer; RPCVer: Integer; IsActive: Boolean): Boolean;
 var
@@ -138,5 +137,17 @@ begin
   FilterVG.ForEachSelectedRow(@FilterRowCbk);
 end;
 
-end.
+function MatchStateFilter(Filters: TIntegerList; Torrents: TVarList;
+TorrentRow: Integer; RPCVer: Integer; IsActive: Boolean): Boolean;
+var
+  f: Integer;
+begin
+  for f in Filters do
+  begin
+    if not MatchSingleStateFilter(f, Torrents, TorrentRow, RPCVer, IsActive) then
+      exit(False);
+  end;
+  Result := True;
+end;
 
+end.
