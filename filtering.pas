@@ -95,9 +95,18 @@ begin
 end;
 begin
   StateFilters   := TIntegerList.Create;
-  PathFilters    := TStringList.Create;
+
+  PathFilters := TStringList.Create;
+  PathFilters.Sorted := True;
+  PathFilters.Duplicates := dupIgnore;
+
   TrackerFilters := TStringList.Create;
-  LabelFilters   := TStringList.Create;
+  TrackerFilters.Sorted := True;
+  TrackerFilters.Duplicates := dupIgnore;
+
+  LabelFilters := TStringList.Create;
+  LabelFilters.Sorted := True;
+  LabelFilters.Duplicates := dupIgnore;
 
   FilterVG.ForEachSelectedRow(@FilterRowCbk);
 end;
