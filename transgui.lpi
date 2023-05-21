@@ -479,6 +479,26 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
+      <Unit>
+        <Filename Value="filtering.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Filtering"/>
+      </Unit>
+      <Unit>
+        <Filename Value="torrentstateimages.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TorrentStateImages"/>
+      </Unit>
+      <Unit>
+        <Filename Value="rpcconstants.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="RPCConstants"/>
+      </Unit>
+      <Unit>
+        <Filename Value="torrentcolumns.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TorrentColumns"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
