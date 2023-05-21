@@ -490,7 +490,7 @@
         <UnitName Value="TorrentStateImages"/>
       </Unit>
       <Unit>
-        <Filename Value="rpc_constants.pas"/>
+        <Filename Value="rpcconstants.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="RPCConstants"/>
       </Unit>

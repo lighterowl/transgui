@@ -45,7 +45,7 @@ uses
   httpsend, StdCtrls, fpjson, jsonparser, ExtCtrls, rpc, syncobjs, variants, varlist, IpResolver,
   zipper, ResTranslator, VarGrid, StrUtils, LCLProc, Grids, BaseForm, utils, AddTorrent, Types,
   LazFileUtils, LazUTF8, StringToVK, passwcon, GContnrs,lineinfo, RegExpr,
-  Filtering, TorrentStateImages,
+  Filtering, TorrentStateImages, RPCConstants,
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
@@ -935,20 +935,6 @@ uses
   end;
 
 const
-  TR_STATUS_CHECK_WAIT_1   = ( 1 shl 0 ); // Waiting in queue to check files
-  TR_STATUS_CHECK_1        = ( 1 shl 1 ); // Checking files
-  TR_STATUS_DOWNLOAD_1     = ( 1 shl 2 ); // Downloading
-  TR_STATUS_SEED_1         = ( 1 shl 3 ); // Seeding
-  TR_STATUS_STOPPED_1      = ( 1 shl 4 ); // Torrent is stopped
-
-  TR_STATUS_STOPPED_2       = 0;     // Torrent is stopped
-  TR_STATUS_CHECK_WAIT_2    = 1;     // Queued to check files
-  TR_STATUS_CHECK_2         = 2;     // Checking files
-  TR_STATUS_DOWNLOAD_WAIT_2 = 3;     // Queued to download
-  TR_STATUS_DOWNLOAD_2      = 4;     // Downloading
-  TR_STATUS_SEED_WAIT_2     = 5;     // Queued to seed
-  TR_STATUS_SEED_2          = 6;     // Seeding
-
   TR_STATUS_FINISHED        = $100; // Torrent is finished (pseudo status)
 
   TR_SPEEDLIMIT_GLOBAL    = 0;    // only follow the overall speed limit
@@ -963,7 +949,6 @@ const
 var
   FAppName: string;
   FAppVersion: string;
-  TR_STATUS_STOPPED, TR_STATUS_CHECK_WAIT, TR_STATUS_CHECK, TR_STATUS_DOWNLOAD_WAIT, TR_STATUS_DOWNLOAD, TR_STATUS_SEED_WAIT, TR_STATUS_SEED: integer;
 
 function AppName: string;
 begin
@@ -3095,25 +3080,25 @@ var
   i: integer;
 begin
   i:=gTorrents.Items[idxStatus, TorrentIdx];
-  if i = TR_STATUS_CHECK_WAIT then
+  if i = TR_STATUS_CHECK_WAIT(RpcObj.RpcVersion) then
     Result:=sWaiting
   else
-  if i = TR_STATUS_CHECK then
+  if i = TR_STATUS_CHECK(RpcObj.RpcVersion) then
     Result:=sVerifying
   else
-  if i = TR_STATUS_DOWNLOAD_WAIT then
+  if i = TR_STATUS_DOWNLOAD_WAIT(RpcObj.RpcVersion) then
     Result:=sWaiting
   else
-  if i = TR_STATUS_DOWNLOAD then
+  if i = TR_STATUS_DOWNLOAD(RpcObj.RpcVersion) then
     Result:=sDownloading
   else
-  if i = TR_STATUS_SEED_WAIT then
+  if i = TR_STATUS_SEED_WAIT(RpcObj.RpcVersion) then
     Result:=sWaiting
   else
-  if i = TR_STATUS_SEED then
+  if i = TR_STATUS_SEED(RpcObj.RpcVersion) then
     Result:=sSeeding
   else
-  if i = TR_STATUS_STOPPED then
+  if i = TR_STATUS_STOPPED(RpcObj.RpcVersion) then
     Result:=sStopped
   else
   if i = TR_STATUS_FINISHED then
@@ -6813,25 +6798,6 @@ procedure TMainForm.FillSessionInfo(s: TJSONObject);
 var
   d, u: integer;
 begin
-  if RpcObj.RPCVersion < 14 then begin
-    TR_STATUS_STOPPED:=TR_STATUS_STOPPED_1;
-    TR_STATUS_CHECK_WAIT:=TR_STATUS_CHECK_WAIT_1;
-    TR_STATUS_CHECK:=TR_STATUS_CHECK_1;
-    TR_STATUS_DOWNLOAD_WAIT:=-1;
-    TR_STATUS_DOWNLOAD:=TR_STATUS_DOWNLOAD_1;
-    TR_STATUS_SEED_WAIT:=-1;
-    TR_STATUS_SEED:=TR_STATUS_SEED_1;
-  end
-  else begin
-    TR_STATUS_STOPPED:=TR_STATUS_STOPPED_2;
-    TR_STATUS_CHECK_WAIT:=TR_STATUS_CHECK_WAIT_2;
-    TR_STATUS_CHECK:=TR_STATUS_CHECK_2;
-    TR_STATUS_DOWNLOAD_WAIT:=TR_STATUS_DOWNLOAD_WAIT_2;
-    TR_STATUS_DOWNLOAD:=TR_STATUS_DOWNLOAD_2;
-    TR_STATUS_SEED_WAIT:=TR_STATUS_SEED_WAIT_2;
-    TR_STATUS_SEED:=TR_STATUS_SEED_2;
-  end;
-
   UpdateUIRpcVersion(RpcObj.RPCVersion);
 
   if RpcObj.RPCVersion >= 5 then begin
