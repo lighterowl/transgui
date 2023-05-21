@@ -18,6 +18,10 @@ If you hit trouble, have a look at `build_` scripts in the `.github` folder. The
 
 Due to issues with fpc 3.2.2 mentioned below, it is recommended to build transgui with a development version of the Free Pascal compiler. The `build_` scripts include necessary code that downloads and compiles the development version from source.
 
+Also, due to the fix for [one issue](https://github.com/xavery/transgui/issues/25), there was a need to introduce a change to Lazarus code. This version of transgui thus now uses [my own fork of Lazarus](https://gitlab.com/dkk089/lazarus). If you don't want to use it, just remove the offending line when compiling with upstream Lazarus - stuff will still work.
+
+You're encouraged to read the [wiki](https://github.com/xavery/transgui/wiki) if you're looking into making changes yourself.
+
 # Changes made
 
 This list applies to the first release of this fork : please look into release notes for individual releases in order to see what else changed since then.
@@ -30,7 +34,7 @@ This list applies to the first release of this fork : please look into release n
 
 # Disclaimer
 
- * I last touched Pascal around 20 years ago.
+ * I last touched Pascal between 2001 and 2003.
  * I've never seriously worked with Lazarus.
  * Neither Windows nor macOS are platforms that I use daily.
 
