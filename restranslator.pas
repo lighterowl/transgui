@@ -32,7 +32,7 @@
 
 unit ResTranslator;
 
-{$MODE objfpc}{$H+}
+{$MODE objfpc}{$H+}{$J-}
 
 interface
 

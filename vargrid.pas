@@ -30,7 +30,7 @@
 *************************************************************************************}
 unit VarGrid;
 
-{$mode objfpc}{$H+}
+{$mode objfpc}{$H+}{$J-}
 {$modeswitch nestedprocvars}
 
 interface

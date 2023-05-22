@@ -32,7 +32,7 @@
 
 unit TorrentStateImages;
 
-{$mode ObjFPC}
+{$mode ObjFPC}{$H+}{$J-}
 
 interface
 

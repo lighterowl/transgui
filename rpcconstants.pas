@@ -32,7 +32,7 @@
 
 unit RPCConstants;
 
-{$mode ObjFPC}
+{$mode ObjFPC}{$H+}{$J-}
 
 interface
 

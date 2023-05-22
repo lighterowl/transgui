@@ -32,7 +32,7 @@
 
 unit TorrentColumns;
 
-{$mode ObjFPC}
+{$mode ObjFPC}{$H+}{$J-}
 
 // definitions of column indices in TMainForm.FTorrents
 

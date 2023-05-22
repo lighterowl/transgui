@@ -29,7 +29,7 @@
   source files in the program, then also delete it here.
 *************************************************************************************}
 unit URLListenerOSX;
-{$mode objfpc}{$H+}
+{$mode objfpc}{$H+}{$J-}
 {$modeswitch objectivec2}
 
 interface
