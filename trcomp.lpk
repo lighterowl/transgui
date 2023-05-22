@@ -11,6 +11,9 @@
       </SearchPaths>
       <Other>
         <CompilerPath Value="$(CompPath)"/>
+        <CompilerMessages>
+          <IgnoredMessages idx6058="True"/>
+        </CompilerMessages>
       </Other>
     </CompilerOptions>
     <Version Major="1"/>

@@ -302,6 +302,9 @@
             <Verbosity>
               <ShowHints Value="False"/>
             </Verbosity>
+            <CompilerMessages>
+              <IgnoredMessages idx6058="True"/>
+            </CompilerMessages>
             <CustomOptions Value="-Sa -CX -XX"/>
             <ExecuteBefore>
               <ShowAllMessages Value="True"/>
@@ -538,6 +541,9 @@
       <Verbosity>
         <ShowHints Value="False"/>
       </Verbosity>
+      <CompilerMessages>
+        <IgnoredMessages idx6058="True"/>
+      </CompilerMessages>
       <CustomOptions Value="-Sa -CX -XX"/>
       <ExecuteBefore>
         <ShowAllMessages Value="True"/>
