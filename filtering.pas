@@ -32,7 +32,7 @@
 
 unit Filtering;
 
-{$mode ObjFPC}
+{$mode ObjFPC}{$H+}{$J-}
 {$modeswitch nestedprocvars}
 
 interface

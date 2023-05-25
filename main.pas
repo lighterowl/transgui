@@ -29,7 +29,7 @@
   source files in the program, then also delete it here.
 *************************************************************************************}
 unit Main;
-{$mode objfpc}{$H+}
+{$mode objfpc}{$H+}{$J-}
 {$modeswitch nestedprocvars}
 
 interface
@@ -907,10 +907,8 @@ const
 
   SpeedHistorySize = 20;
 
-const
-  SizeNames: array[1..5] of string = (sByte, sKByte, sMByte, sGByte, sTByte);
-
 var
+  SizeNames: array[1..5] of string = (sByte, sKByte, sMByte, sGByte, sTByte);
   FAppName: string;
   FAppVersion: string;
 

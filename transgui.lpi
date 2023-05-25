@@ -270,7 +270,7 @@
       <UseVersionInfo Value="True"/>
       <MajorVersionNr Value="5"/>
       <MinorVersionNr Value="18"/>
-      <StringTable CompanyName="Transmission Remote GUI working group" FileDescription="Transmission Remote GUI" InternalName="transgui" LegalCopyright="Copyright (c) 2008-2019 by Yury Sidorov &amp; Transmission Remote GUI working group" OriginalFilename="transgui.exe" ProductName="Transmission Remote GUI" ProductVersion="5.18.2.f"/>
+      <StringTable CompanyName="Transmission Remote GUI working group" FileDescription="Transmission Remote GUI" InternalName="transgui" LegalCopyright="Copyright (c) 2008-2019 by Yury Sidorov &amp; Transmission Remote GUI working group" OriginalFilename="transgui.exe" ProductName="Transmission Remote GUI" ProductVersion="5.18.3.f"/>
     </VersionInfo>
     <BuildModes>
       <Item Name="Debug" Default="True"/>
@@ -306,6 +306,9 @@
             <Verbosity>
               <ShowHints Value="False"/>
             </Verbosity>
+            <CompilerMessages>
+              <IgnoredMessages idx6058="True"/>
+            </CompilerMessages>
             <CustomOptions Value="-Sa -CX -XX"/>
             <ExecuteBefore>
               <ShowAllMessages Value="True"/>
@@ -542,6 +545,9 @@
       <Verbosity>
         <ShowHints Value="False"/>
       </Verbosity>
+      <CompilerMessages>
+        <IgnoredMessages idx6058="True"/>
+      </CompilerMessages>
       <CustomOptions Value="-Sa -CX -XX"/>
       <ExecuteBefore>
         <ShowAllMessages Value="True"/>

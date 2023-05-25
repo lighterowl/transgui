@@ -9,9 +9,6 @@ trim_trailing_whitespace = true
 [*.{bat,iss,txt}]
 end_of_line = crlf
 
-[VERSION.txt]
-end_of_line = lf
-
 [PkgInfo]
 end_of_line = crlf
 
