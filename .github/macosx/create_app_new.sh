@@ -32,8 +32,7 @@ package_openssl() {
   install_name_tool -change "$libcrypto" '@executable_path/libcrypto.3.dylib' "${bindir}/libssl.3.dylib"
 }
 
-prog_ver="$(cat ../../VERSION.txt)"
-build="$(git rev-list --abbrev-commit --max-count=1 HEAD ../..)"
+prog_ver=$(xmllint --xpath 'string(//StringTable/@ProductVersion)' ../../transgui.lpi)
 exename=../../units/transgui
 appname="Transmission Remote GUI"
 dmg_dist_file="../../Release/transgui.dmg"
