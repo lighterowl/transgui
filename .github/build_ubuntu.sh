@@ -35,7 +35,7 @@ fpc_lazarus_build_install() {
 }
 
 sudo apt update -yqq
-sudo apt install -yqq build-essential libqt5pas-dev libfuse2 qtbase5-dev-tools qt5-qmake
+sudo apt install -yqq build-essential libqt5pas-dev libfuse2 qtbase5-dev-tools qt5-qmake libxml2-utils
 
 if [[ -d $sdk_dir ]]; then
   export PATH=${sdk_dir}/lazarus:${fpc_installdir}/bin:${fpc_basepath}:$PATH
