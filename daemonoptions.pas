@@ -79,6 +79,8 @@ type
     edDownQueue: TSpinEdit;
     edUpQueue: TSpinEdit;
     edStalledTime: TSpinEdit;
+    edMaxPeersPerTorrent: TSpinEdit;
+    txPerTorrentPeerLimit: TLabel;
     tabQueue: TTabSheet;
     txDays: TLabel;
     txFrom: TLabel;
