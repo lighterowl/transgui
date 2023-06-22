@@ -35,7 +35,7 @@ unit utils;
 interface
 
 uses
-  SysUtils, Classes, Controls, Forms, IniFiles,
+  SysUtils, Classes, Controls, Forms, IniFiles, StrUtils,
 {$ifdef windows}
   Windows, win32int, InterfaceBase
 {$endif}
@@ -98,6 +98,7 @@ procedure ForceAppNormal;
 function ParamStrUTF8(Param: Integer): utf8string;
 function ParamCount: integer;
 function GetCmdSwitchValue(const Switch: string): string;
+function CorrectPath (path: string): string;
 
 function Base32Decode(const s: ansistring): ansistring;
 
@@ -116,6 +117,20 @@ uses
   lineinfo2,
 {$endif CALLSTACK}
   FileUtil, LazUTF8, LazFileUtils, StdCtrls, Graphics;
+
+function CorrectPath (path: string): string; // PETROV
+var
+  l_old: integer;
+begin
+  path  := StringReplace(path, '//', '/', [rfReplaceAll, rfIgnoreCase]);
+  Result:= path;
+  l_old := length(path);
+  if l_old >= 1 then begin
+    if path[l_old]='/' then
+        path := MidStr(path,1,l_old-1);
+    Result:= path;
+  end;
+end;
 
 {$ifdef windows}
 function FileOpenUTF8(Const FileName : string; Mode : Integer) : THandle;
