@@ -3313,6 +3313,7 @@ begin
             edPort.Value:=args.Integers['peer-port'];
             cbPEX.Checked:=args.Integers['pex-enabled'] <> 0;
             edMaxPeers.Value:=args.Integers['peer-limit-global'];
+            edMaxPeersPerTorrent.Value:=args.Integers['peer-limit-per-torrent'];
             cbRandomPort.Checked:=args.Integers['peer-port-random-on-start'] <> 0;
             cbDHT.Checked:=args.Integers['dht-enabled'] <> 0;
             cbSeedRatio.Checked:=args.Integers['seedRatioLimited'] <> 0;
@@ -3338,6 +3339,7 @@ begin
             edPort.Value:=args.Integers['port'];
             cbPEX.Checked:=args.Integers['pex-allowed'] <> 0;
             edMaxPeers.Value:=args.Integers['peer-limit'];
+            edMaxPeersPerTorrent.Enabled:=False;
             cbRandomPort.Visible:=False;
             cbDHT.Visible:=False;
             cbSeedRatio.Visible:=False;
@@ -3460,6 +3462,7 @@ begin
           args.Add('speed-limit-up', edMaxUp.Value);
         if RpcObj.RPCVersion >= 5 then begin
           args.Add('peer-limit-global', edMaxPeers.Value);
+          args.Add('peer-limit-per-torrent', edMaxPeersPerTorrent.Value);
           args.Add('peer-port', edPort.Value);
           args.Add('pex-enabled', integer(cbPEX.Checked) and 1);
           args.Add('peer-port-random-on-start', integer(cbRandomPort.Checked) and 1);
