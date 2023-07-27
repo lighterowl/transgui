@@ -32,5 +32,5 @@ jobs:
 
     - uses: actions/upload-artifact@v3
       with:
-        name: TransGUI macOS
+        name: TransGUI macOS ${{ matrix.runson }}
         path: Release/transgui.dmg
