@@ -6,6 +6,7 @@ readonly repo_dir=$PWD
 readonly sdk_dir=~/.transgui_sdk
 readonly fpc_installdir="${sdk_dir}/fpc-3.2.3"
 readonly fpc_basepath="${fpc_installdir}/lib/fpc/3.2.3"
+readonly brew_prefix=$(brew --prefix)
 
 fixup_fpc_cfg() {
   local fpc_cfg_path=$1
@@ -22,7 +23,7 @@ make_fpc_cfg() {
 
 fpc_lazarus_build_install() {
   brew install fpc
-  cp /usr/local/etc/fpc.cfg ~/.fpc.cfg
+  cp "${brew_prefix}/etc/fpc.cfg" ~/.fpc.cfg
   fixup_fpc_cfg ~/.fpc.cfg
 
   mkdir -p "$sdk_dir"

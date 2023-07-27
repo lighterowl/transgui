@@ -41,8 +41,14 @@ appfolder="$dmgfolder/$appname.app"
 
 mkdir -p ../../Release/
 
+if [[ $(uname -m) == arm64 ]]; then
+  compiler=ppca64
+else
+  compiler=ppcx64
+fi
+
 pushd ../..
-lazbuild --compiler=${fpc_installdir}/lib/fpc/3.2.3/ppcx64 --build-mode=Release \
+lazbuild --compiler=${fpc_installdir}/lib/fpc/3.2.3/${compiler} --build-mode=Release \
   --ws=cocoa --lazarusdir=${sdk_dir}/lazarus transgui.lpi
 popd
 
@@ -68,6 +74,7 @@ cp PkgInfo "$appfolder/Contents"
 cp transgui.icns "$appfolder/Contents/Resources"
 sed -e "s/@prog_ver@/$prog_ver/" Info.plist > "$appfolder/Contents/Info.plist"
 
+[[ $compiler == ppca64 ]] && codesign --force --deep -s - "$appfolder"
 hdiutil create -ov -anyowners -volname "transgui-v$prog_ver" -format UDRW -srcfolder ./Release -fs HFS+ "tmp.dmg"
 
 mount_device="$(hdiutil attach -readwrite -noautoopen "tmp.dmg" | awk 'NR==1{print$1}')"
