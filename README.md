@@ -32,6 +32,12 @@ This list applies to the first release of this fork : please look into release n
  * Gzip compression is now used when talking to the daemon.
  * OpenSSL version was switched to version 3.0, making it possible to use TLS 1.3.
 
+# Sponsorships
+
+The author would like to thank [MacStadium](https://www.macstadium.com/opensource/members) for providing Apple Silicon hardware for making ARM64 builds and testing.
+
+![MacStadiumOpenSource](https://uploads-ssl.webflow.com/5ac3c046c82724970fc60918/5c019d917bba312af7553b49_MacStadium-developerlogo.png)
+
 # Disclaimer
 
  * I last touched Pascal between 2001 and 2003.
