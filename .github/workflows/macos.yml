@@ -10,8 +10,11 @@ on:
 
 jobs:
   build-macos:
+    strategy:
+      matrix:
+        runson: [macos-11, ARM64]
 
-    runs-on: macos-11
+    runs-on: ${{ matrix.runson }}
 
     steps:
     - uses: actions/checkout@v1
