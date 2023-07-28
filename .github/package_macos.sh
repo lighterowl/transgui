@@ -7,7 +7,7 @@ readonly appname="Transmission Remote GUI"
 readonly dmgfolder=./Release
 readonly macosx_dir='./.github/macosx'
 
-appfolder="${dmgfolder}/${appname}.app"
+readonly appfolder="${dmgfolder}/${appname}.app"
 
 mkdir -p "$appfolder/Contents/MacOS/lang"
 mkdir -p "$appfolder/Contents/Resources"
@@ -17,9 +17,9 @@ for i in libcrypto.3.dylib libssl.3.dylib transgui; do
 done
 
 cp lang/transgui.* "$appfolder/Contents/MacOS/lang"
-cp PkgInfo "$appfolder/Contents"
-cp transgui.icns "$appfolder/Contents/Resources"
-sed -e "s/@prog_ver@/$prog_ver/" Info.plist > "$appfolder/Contents/Info.plist"
+cp "${macosx_dir}/PkgInfo" "${appfolder}/Contents"
+cp "${macosx_dir}/transgui.icns" "${appfolder}/Contents/Resources"
+sed -e "s/@prog_ver@/$prog_ver/" "${macosx_dir}/Info.plist" > "${appfolder}/Contents/Info.plist"
 
 hdiutil create -ov -anyowners -volname "transgui-v${prog_ver}" -format UDRW -srcfolder "$dmgfolder" -fs HFS+ tmp.dmg
 
