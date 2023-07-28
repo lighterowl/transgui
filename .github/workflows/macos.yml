@@ -37,8 +37,9 @@ jobs:
     - uses: actions/download-artifact@v3
       with:
         name: TransGUI macOS arm64
+        path: transgui_ppca64
 
-    - run: .github/build_macos.sh
+    - run: .github/build_macos.sh && ls -lRa .
 
     - uses: actions/cache@v3
       with:
