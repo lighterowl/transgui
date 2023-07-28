@@ -117,6 +117,3 @@ if [[ $compiler == ppca64 ]]; then
     codesign --force -s - "$i"
   done
 fi
-
-#cd "${repo_dir}/.github/macosx"
-#source create_app_new.sh
