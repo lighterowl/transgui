@@ -52,6 +52,36 @@ fpc_lazarus_build_install() {
   export PATH=$PWD:$PATH
 }
 
+package_openssl() {
+  local bindir=$1
+  local libcrypto
+  local libssl
+
+  set +x
+  for i in $(brew ls openssl@3); do
+    if [[ $i =~ libcrypto\.3\.dylib$ ]]; then
+      libcrypto=$i
+    elif [[ $i =~ libssl\.3\.dylib$ ]]; then
+      libssl=$i
+    fi
+  done
+  set -x
+
+  if [[ -z $libcrypto || -z $libssl ]]; then
+    echo >&2 "libcrypto = '${libcrypto}' , libssl = '${libssl}' - quitting"
+    exit 1
+  fi
+
+  local libs=("$libcrypto" "$libssl")
+  for lib in "${libs[@]}"; do
+    local libname=${lib##*/}
+    cp "$lib" "$bindir"
+    install_name_tool -id "$libname" "${bindir}/${libname}"
+  done
+
+  install_name_tool -change "$libcrypto" '@executable_path/libcrypto.3.dylib' "${bindir}/libssl.3.dylib"
+}
+
 brew install openssl@3
 
 if [[ -d $sdk_dir ]]; then
@@ -66,5 +96,27 @@ cd "$repo_dir"
 build=$(git rev-list --abbrev-commit --max-count=1 HEAD)
 sed -i.bak -e "s/@GIT_COMMIT@/$build/" buildinfo.pas
 
-cd "${repo_dir}/.github/macosx"
-source create_app_new.sh
+if [[ $(uname -m) == arm64 ]]; then
+  compiler=ppca64
+else
+  compiler=ppcx64
+fi
+
+lazbuild --compiler=${fpc_installdir}/lib/fpc/3.2.3/${compiler} --build-mode=Release \
+  --ws=cocoa --lazarusdir=${sdk_dir}/lazarus transgui.lpi
+
+mkdir transgui_$compiler
+cd transgui_$compiler
+
+cp ../units/transgui .
+strip transgui
+install_name_tool -add_rpath '@executable_path' transgui
+package_openssl "$PWD"
+if [[ $compiler == ppca64 ]]; then
+  for i in transgui *.dylib; do
+    codesign --force -s - "$i"
+  done
+fi
+
+#cd "${repo_dir}/.github/macosx"
+#source create_app_new.sh

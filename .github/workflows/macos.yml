@@ -9,17 +9,36 @@ on:
       - master
 
 jobs:
-  build-macos:
-    strategy:
-      matrix:
-        runson: [macos-11, ARM64]
+  build-macos-arm64:
 
-    runs-on: ${{ matrix.runson }}
+    runs-on: [self-hosted, macOS, ARM64]
 
     steps:
     - uses: actions/checkout@v1
       with:
         submodules: recursive
+
+    - run: .github/build_macos.sh
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: TransGUI macOS arm64
+        path: transgui_ppca64
+
+  build-macos-x64:
+
+    runs-on: macos-11
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        submodules: recursive
+
+    - uses: actions/download-artifact@v3
+      with:
+        name: TransGUI macOS arm64
+
+    - run: .github/build_macos.sh
 
     - uses: actions/cache@v3
       with:
@@ -28,9 +47,8 @@ jobs:
           ~/.transgui_sdk/fpc-3.2.3
         key: macos-fpc-lazarus
 
-    - run: .github/build_macos.sh
-
     - uses: actions/upload-artifact@v3
       with:
-        name: TransGUI macOS ${{ matrix.runson }}
-        path: Release/transgui.dmg
+        name: TransGUI macOS x64
+        path: transgui_ppcx64
+
