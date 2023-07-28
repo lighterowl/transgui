@@ -50,7 +50,12 @@ jobs:
 
     - run: .github/package_macos.sh
 
+# keeping this around would just be confusing
+    - uses: geekyeggo/delete-artifact@v2
+      with:
+        name: TransGUI macOS arm64
+
     - uses: actions/upload-artifact@v3
       with:
-        name: TransGUI macOS x64
-        path: transgui_ppcx64
+        name: TransGUI macOS Universal Binary
+        path: Release/transgui.dmg
