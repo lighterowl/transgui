@@ -25,7 +25,7 @@ hdiutil create -ov -anyowners -volname "transgui-v${prog_ver}" -format UDRW -src
 
 mount_device=$(hdiutil attach -readwrite -noautoopen tmp.dmg | awk 'NR==1{print$1}')
 mount_volume=$(mount | grep "$mount_device" | sed 's/^[^ ]* on //;s/ ([^)]*)$//')
-cp transgui.icns "$mount_volume/.VolumeIcon.icns"
+cp "${macosx_dir}/transgui.icns" "$mount_volume/.VolumeIcon.icns"
 SetFile -c icnC "$mount_volume/.VolumeIcon.icns"
 SetFile -a C "$mount_volume"
 hdiutil detach "$mount_device"
