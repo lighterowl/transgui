@@ -7,13 +7,16 @@ readonly sdk_dir=~/.transgui_sdk
 readonly fpc_installdir="${sdk_dir}/fpc-3.2.3"
 readonly fpc_basepath="${fpc_installdir}/lib/fpc/3.2.3"
 readonly brew_prefix=$(brew --prefix)
+readonly macosx_libdir=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+readonly macosx_frameworkdir=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
+[[ $1 == cross ]] && readonly cross_build=1
 
 fixup_fpc_cfg() {
   local fpc_cfg_path=$1
   shift
 
-  echo '-Fl/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib' >> "$fpc_cfg_path"
-  echo '-k-F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks' >> "$fpc_cfg_path"
+  echo "-Fl${macosx_libdir}" >> "$fpc_cfg_path"
+  echo "-k-F${macosx_frameworkdir}" >> "$fpc_cfg_path"
 }
 
 make_fpc_cfg() {
@@ -33,12 +36,19 @@ fpc_lazarus_build_install() {
   tar xf "source-${fpc323_commit}.tar.gz"
   cd "source-${fpc323_commit}"
 
-  make \
-    COMPILER_LIBRARYDIR='/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib' \
-    COMPILER_OPTIONS=-k-F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks \
-    all
   mkdir -p "${fpc_installdir}"
+
+  make_opts_native=(
+    COMPILER_LIBRARYDIR=${macosx_libdir}
+    COMPILER_OPTIONS=-k-F${macosx_frameworkdir}
+  )
+  make "${make_opts_native[@]}" all
   make PREFIX=${fpc_installdir} install
+
+  make_opts_cross=("${make_opts_native[@]}" CPU_SOURCE=x86_64 CPU_TARGET=aarch64)
+  make "${make_opts_cross[@]}" all
+  make PREFIX=${fpc_installdir} "${make_opts_cross[@]}" crossinstall
+
   export PATH=${fpc_installdir}/bin:${fpc_basepath}:$PATH
 
   make_fpc_cfg
@@ -57,8 +67,20 @@ package_openssl() {
   local libcrypto
   local libssl
 
+  if [[ $cross_build ]]; then
+    local openssl_tgz=$(brew fetch --arch arm --os big_sur openssl@3 | perl -n -e 'print $2 if(/^(Already downloaded|Downloaded to): (.*?\.tar\.gz)/);')
+    local extract_dir=$(mktemp -d)
+    tar -C "$extract_dir" -x -f "$openssl_tgz"
+    cmd=find
+    cmd_args=("$extract_dir" -name '*.dylib')
+  else
+    brew install openssl@3
+    cmd=brew
+    cmd_args=(ls openssl@3)
+  fi
+
   set +x
-  for i in $(brew ls openssl@3); do
+  for i in $("$cmd" "${cmd_args[@]}"); do
     if [[ $i =~ libcrypto\.3\.dylib$ ]]; then
       libcrypto=$i
     elif [[ $i =~ libssl\.3\.dylib$ ]]; then
@@ -82,8 +104,6 @@ package_openssl() {
   install_name_tool -change "$libcrypto" '@executable_path/libcrypto.3.dylib' "${bindir}/libssl.3.dylib"
 }
 
-brew install openssl@3
-
 if [[ -d $sdk_dir ]]; then
   export PATH=${sdk_dir}/lazarus:${fpc_installdir}/bin:${fpc_basepath}:$PATH
   make_fpc_cfg
@@ -97,7 +117,13 @@ build=$(git rev-list --abbrev-commit --max-count=1 HEAD)
 sed -i.bak -e "s/@GIT_COMMIT@/$build/" buildinfo.pas
 
 if [[ $(uname -m) == arm64 ]]; then
+  if [[ $cross_build ]]; then
+    echo >&2 "Sorry, not supported"
+    exit 1
+  fi
   compiler=ppca64
+elif [[ $cross_build ]]; then
+  compiler=ppcrossa64
 else
   compiler=ppcx64
 fi
@@ -112,7 +138,7 @@ cp ../units/transgui .
 strip transgui
 install_name_tool -add_rpath '@executable_path' transgui
 package_openssl "$PWD"
-if [[ $compiler == ppca64 ]]; then
+if [[ $compiler == ppca64 || $compiler == ppcrossa64 ]]; then
   for i in transgui *.dylib; do
     codesign --force -s - "$i"
   done
