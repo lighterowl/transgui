@@ -18,13 +18,6 @@ jobs:
       with:
         submodules: recursive
 
-    - uses: actions/cache@v3
-      with:
-        path: |
-          ~/.transgui_sdk/lazarus
-          ~/.transgui_sdk/fpc-3.2.3
-        key: ubuntu-fpc-lazarus
-
     - run: .github/build_ubuntu.sh
 
     - uses: actions/upload-artifact@v3

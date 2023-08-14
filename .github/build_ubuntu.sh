@@ -30,12 +30,12 @@ fpc_lazarus_build_install() {
   tar xf lazarus-src.tar.gz
   mv lazarus-transgui lazarus
   cd lazarus
-  make bigide LCL_PLATFORM=qt5
+  make bigide LCL_PLATFORM=gtk2
   export PATH=$PWD:$PATH
 }
 
 sudo apt update -yqq
-sudo apt install -yqq build-essential libqt5pas-dev libfuse2 qtbase5-dev-tools qt5-qmake libxml2-utils
+sudo apt install -yqq build-essential libqt5pas-dev libfuse2 qtbase5-dev-tools qt5-qmake libxml2-utils libgtk2.0-dev
 
 if [[ -d $sdk_dir ]]; then
   export PATH=${sdk_dir}/lazarus:${fpc_installdir}/bin:${fpc_basepath}:$PATH
@@ -48,7 +48,7 @@ fi
 build=$(git rev-list --abbrev-commit --max-count=1 HEAD)
 sed -i "s/@GIT_COMMIT@/$build/" buildinfo.pas
 
-lazbuild transgui.lpi --ws=qt5 --build-mode=Release --lazarusdir=${sdk_dir}/lazarus
+lazbuild transgui.lpi --ws=gtk2 --build-mode=Release --lazarusdir=${sdk_dir}/lazarus
 cd units
 
 curl -L -O https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
@@ -58,6 +58,6 @@ chmod +x linuxdeploy-plugin-qt-x86_64.AppImage
 
 app_ver=$(xmllint --xpath 'string(//StringTable/@ProductVersion)' ../transgui.lpi)
 VERSION=$app_ver ./linuxdeploy-x86_64.AppImage -e transgui --create-desktop-file \
-  --appdir AppDir --output appimage -i ../transgui.png --plugin qt
+  --appdir AppDir --output appimage -i ../transgui.png
 sha256sum transgui-${app_ver}-x86_64.AppImage
 mv transgui-${app_ver}-x86_64.AppImage transgui-x86_64.AppImage
