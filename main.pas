@@ -6975,50 +6975,39 @@ var
   ids, cidx: variant;
   TotalSize, TotalDownloaded, TotalSizeToDownload, TorrentDownloaded, TorrentSizeToDownload: Int64;
   i: Integer;
-  a, b, c, d: Int64;
 begin
-    try
-    if gTorrents.Items.Count > 0 then
-      begin
-        if gTorrents.SelCount > 0 then
-            ids := GetSelectedTorrents
-        else  ids := GetDisplayedTorrents;
-        TotalSize := 0;
-        TotalDownloaded := 0;
-        TotalSizeToDownload := 0;
+  TotalSize := 0;
+  TotalDownloaded := 0;
+  TotalSizeToDownload := 0;
 
-        MMap := TMyHashMap.Create;
-        for i:=0 to FTorrents.Count -1 do
-        begin
-          MMap[StrToInt(Ftorrents.Items[torcolTorrentId, i])] := i;
-        end;
+  if gTorrents.Items.Count > 0 then begin
 
-        for i:=VarArrayLowBound(ids, 1) to VarArrayHighBound(ids, 1) do
-        begin
-          cidx := MMap[ids[i]];
-          TotalSize             := TotalSize + FTorrents.Items[torcolSize, cidx];
-          TorrentSizeToDownload := FTorrents.Items[torcolSizetoDowload, cidx];
-          TorrentDownloaded     := TorrentSizeToDownload * (FTorrents.Items[torcolDone, cidx] / 100);
-          TotalSizeToDownload   := TotalSizeToDownload + TorrentSizeToDownload;
-          TotalDownloaded       := TotalDownloaded + TorrentDownloaded;
-        end;
-        MMap.Free;
+    if gTorrents.SelCount > 0
+      then ids := GetSelectedTorrents
+      else ids := GetDisplayedTorrents;
 
-        StatusBar.Panels[4].Text:=Format(sTotalSize,[GetHumanSize(TotalSize, 0, '?')]);
-        StatusBar.Panels[5].Text:=Format(sTotalSizeToDownload,[GetHumanSize(TotalSizeToDownload, 0, '?')]);
-        StatusBar.Panels[6].Text:=Format(sTotalDownloaded,[GetHumanSize(TotalDownloaded, 0, '?')]);
-        StatusBar.Panels[7].Text:=Format(sTotalRemain,[GetHumanSize(TotalSizeToDownload - TotalDownloaded, 0, '?')]);
-    end
-    else
+    MMap := TMyHashMap.Create;
+    for i:=0 to FTorrents.Count -1 do
     begin
-      StatusBar.Panels[4].Text:=Format(sTotalSize,[GetHumanSize(0, 0, '?')]);
-      StatusBar.Panels[5].Text:=Format(sTotalSizeToDownload,[GetHumanSize(0, 0, '?')]);
-      StatusBar.Panels[6].Text:=Format(sTotalDownloaded,[GetHumanSize(0, 0, '?')]);
-      StatusBar.Panels[7].Text:=Format(sTotalRemain,[GetHumanSize(0, 0, '?')]);
+      MMap[StrToInt(Ftorrents.Items[torcolTorrentId, i])] := i;
     end;
-    except
-        gTorrents.Refresh;
+
+    for i:=VarArrayLowBound(ids, 1) to VarArrayHighBound(ids, 1) - 1 do
+    begin
+      cidx := MMap[ids[i]];
+      TotalSize             += FTorrents.Items[torcolSize, cidx];
+      TorrentSizeToDownload := FTorrents.Items[torcolSizetoDowload, cidx];
+      TorrentDownloaded     := TorrentSizeToDownload * (FTorrents.Items[torcolDone, cidx] / 100);
+      TotalSizeToDownload   += TorrentSizeToDownload;
+      TotalDownloaded       += TorrentDownloaded;
     end;
+    MMap.Free;
+  end;
+
+  StatusBar.Panels[4].Text:=Format(sTotalSize,[GetHumanSize(TotalSize, 0, '?')]);
+  StatusBar.Panels[5].Text:=Format(sTotalSizeToDownload,[GetHumanSize(TotalSizeToDownload, 0, '?')]);
+  StatusBar.Panels[6].Text:=Format(sTotalDownloaded,[GetHumanSize(TotalDownloaded, 0, '?')]);
+  StatusBar.Panels[7].Text:=Format(sTotalRemain,[GetHumanSize(TotalSizeToDownload - TotalDownloaded, 0, '?')]);
 
 end;
 
