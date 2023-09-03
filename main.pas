@@ -16,7 +16,7 @@
   along with Transmission Remote GUI; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-  In addition, as a special exception, the copyright holders give permission to 
+  In addition, as a special exception, the copyright holders give permission to
   link the code of portions of this program with the
   OpenSSL library under certain conditions as described in each individual
   source file, and distribute linked combinations including the two.
@@ -133,9 +133,9 @@ resourcestring
   SUploaded = 'Uploaded';
   SFilesAdded = 'Files added';
   SActiveTime = 'Active time';
-  STotalSize = 'Total: %s';
-  sTotalSizeToDownload = 'Selected: %s';
-  sTotalDownloaded = 'Done: %s';
+  sTotalSizeFiltered = 'Filtered: %s';
+  sTotalSizeSelected = 'Selected: %s';
+  sTotalDownloaded = 'Completed: %s';
   sTotalRemain = 'Remaining: %s';
 
   sUserMenu = 'User Menu';
@@ -3542,7 +3542,6 @@ begin
           StatusBar.Panels[4].Text:= '';
           StatusBar.Panels[5].Text:= '';
           StatusBar.Panels[6].Text:= '';
-          StatusBar.Panels[7].Text:= '';
         end;
         Ini.WriteBool('MainForm','StatusBarSizes',acStatusBarSizes.Checked);
 end;
@@ -6973,10 +6972,9 @@ procedure TMainform.StatusBarSizes;
 var
   MMap: TMyHashMap;
   ids, cidx: variant;
-  TotalSize, TotalDownloaded, TotalSizeToDownload, TorrentDownloaded, TorrentSizeToDownload: Int64;
+  TotalDownloaded, TotalSizeToDownload, TorrentDownloaded, TorrentSizeToDownload: Int64;
   i: Integer;
 begin
-  TotalSize := 0;
   TotalDownloaded := 0;
   TotalSizeToDownload := 0;
 
@@ -6995,7 +6993,6 @@ begin
     for i:=VarArrayLowBound(ids, 1) to VarArrayHighBound(ids, 1) - 1 do
     begin
       cidx := MMap[ids[i]];
-      TotalSize             += FTorrents.Items[torcolSize, cidx];
       TorrentSizeToDownload := FTorrents.Items[torcolSizetoDowload, cidx];
       TorrentDownloaded     := TorrentSizeToDownload * (FTorrents.Items[torcolDone, cidx] / 100);
       TotalSizeToDownload   += TorrentSizeToDownload;
@@ -7004,10 +7001,12 @@ begin
     MMap.Free;
   end;
 
-  StatusBar.Panels[4].Text:=Format(sTotalSize,[GetHumanSize(TotalSize, 0, '?')]);
-  StatusBar.Panels[5].Text:=Format(sTotalSizeToDownload,[GetHumanSize(TotalSizeToDownload, 0, '?')]);
-  StatusBar.Panels[6].Text:=Format(sTotalDownloaded,[GetHumanSize(TotalDownloaded, 0, '?')]);
-  StatusBar.Panels[7].Text:=Format(sTotalRemain,[GetHumanSize(TotalSizeToDownload - TotalDownloaded, 0, '?')]);
+  if gTorrents.SelCount > 0
+    then StatusBar.Panels[4].Text:=Format(sTotalSizeSelected,[GetHumanSize(TotalSizeToDownload, 0, '?')])
+    else StatusBar.Panels[4].Text:=Format(sTotalSizeFiltered,[GetHumanSize(TotalSizeToDownload, 0, '?')]);
+
+  StatusBar.Panels[5].Text:=Format(sTotalDownloaded,[GetHumanSize(TotalDownloaded, 0, '?')]);
+  StatusBar.Panels[6].Text:=Format(sTotalRemain,[GetHumanSize(TotalSizeToDownload - TotalDownloaded, 0, '?')]);
 
 end;
 
