@@ -4057,8 +4057,16 @@ end;
 
 procedure TMainForm.edSearchKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
+var
+  ctrl_or_cmd: TShiftStateEnum;
 begin
+{$ifdef darwin}
+  ctrl_or_cmd := ssMeta;
+{$else}
+  ctrl_or_cmd := ssCtrl;
+{$endif}
     if Key = VK_ESCAPE then edSearch.Text:='';
+    if (Key = VK_A) and (Shift = [ctrl_or_cmd]) then edSearch.SelectAll;
 end;
 
 procedure TMainForm.FormActivate(Sender: TObject);
