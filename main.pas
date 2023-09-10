@@ -1464,6 +1464,29 @@ procedure TMainForm.ProcessIniShortCuts;
 {$endif}
   end;
 
+  function SanitiseShortCutForPlatform(shortcut : TShortCut): TShortCut;
+  begin
+    // same idea as above but for replacing Ctrl with Meta (Command) on macos
+{$ifdef darwin}
+    if (shortcut and scCtrl) = scCtrl then begin
+      shortcut := (shortcut and (not scCtrl));
+      shortcut := (shortcut or scMeta);
+    end;
+{$endif}
+    Result := shortcut;
+  end;
+
+  procedure WriteShortCutToIni(action : TAction);
+  var
+    key_name: string;
+    shortcut: TShortCut;
+  begin
+    key_name := StringReplace(action.Name, 'ac', '', []);
+    shortcut := SanitiseShortCutForPlatform(action.ShortCut);
+    action.ShortCut := shortcut;
+    Ini.WriteString('Shortcuts', key_name, ShortcutToText(shortcut));
+  end;
+
 var
   shortcuts: TStringList;
   i: integer;
@@ -1476,21 +1499,17 @@ begin
     if (shortcuts.Text = '') or (shortcuts.Count <> ActionList.ActionCount) then
     begin
       for i := 0 to ActionList.ActionCount - 1 do
-        Ini.WriteString('Shortcuts', StringReplace(
-          ActionList.Actions[i].Name, 'ac', '', []), ShortcutToText(
-          TAction(ActionList.Actions[i]).ShortCut));
+          WriteShortCutToIni(TAction(ActionList.Actions[i]));
 
       if (i < shortcuts.Count - 1) and (shortcuts.Text <> '') and
         (ActionList.ActionByName(shortcuts.Names[i]) = nil) then
-        Ini.WriteString('Shortcuts', StringReplace(ActionList.Actions[i].Name,
-          'ac', '', []),
-          ShortcutToText(TAction(ActionList.Actions[i]).ShortCut));
+          WriteShortCutToIni(TAction(ActionList.Actions[i]));
     end
     else
       for i := 0 to shortcuts.Count - 1 do
         try
           TAction(ActionList.ActionbyName('ac' + shortcuts.Names[i])).ShortCut :=
-            TextToShortcut(shortcuts.ValueFromIndex[i]);
+            SanitiseShortCutForPlatform(TextToShortcut(shortcuts.ValueFromIndex[i]));
         except
         end;
   finally
