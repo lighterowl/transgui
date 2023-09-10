@@ -1492,6 +1492,9 @@ var
   i: integer;
 
 begin
+  for i := 0 to ActionList.ActionCount - 1 do
+    TAction(ActionList.Actions[i]).ShortCut := SanitiseShortCutForPlatform(TAction(ActionList.Actions[i]).ShortCut);
+  { this needs rewriting
   FixupUnsupportedShortCutKeys;
   shortcuts := TStringList.Create;
   try
@@ -1516,6 +1519,7 @@ begin
     shortcuts.Free;
   end;
   FixupUnsupportedShortCutKeys;
+  }
 end;
 
 { TMainForm }
