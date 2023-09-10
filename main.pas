@@ -1479,48 +1479,39 @@ procedure TMainForm.ProcessIniShortCuts;
   procedure WriteShortCutToIni(action : TAction);
   var
     key_name: string;
-    shortcut: TShortCut;
   begin
     key_name := StringReplace(action.Name, 'ac', '', []);
-    shortcut := SanitiseShortCutForPlatform(action.ShortCut);
-    action.ShortCut := shortcut;
-    Ini.WriteString('Shortcuts', key_name, ShortcutToText(shortcut));
+    Ini.WriteString('Shortcuts', key_name, ShortcutToText(action.shortcut));
   end;
 
 var
-  shortcuts: TStringList;
+  act: TAction;
+  ini_shortcut: TShortCut;
+  ini_shortcuts: TStringList;
   i: integer;
 
 begin
-  FixupUnsupportedShortCutKeys;
-  for i := 0 to ActionList.ActionCount - 1 do
-    TAction(ActionList.Actions[i]).ShortCut := SanitiseShortCutForPlatform(TAction(ActionList.Actions[i]).ShortCut);
-  { this needs rewriting
-  FixupUnsupportedShortCutKeys;
-  shortcuts := TStringList.Create;
+  ini_shortcuts := TStringList.Create;
   try
-    Ini.ReadSectionValues('ShortCuts', shortcuts);
-    if (shortcuts.Text = '') or (shortcuts.Count <> ActionList.ActionCount) then
-    begin
-      for i := 0 to ActionList.ActionCount - 1 do
-          WriteShortCutToIni(TAction(ActionList.Actions[i]));
+    Ini.ReadSectionValues('ShortCuts', ini_shortcuts);
+    for i := 0 to ini_shortcuts.Count - 1 do begin
+      ini_shortcut := TextToShortcut(ini_shortcuts.ValueFromIndex[i]);
+      if ini_shortcut <> scNone then begin
+        act := TAction(ActionList.ActionByName('ac' + ini_shortcuts.Names[i]));
+        if act <> Nil then act.ShortCut := ini_shortcut;
+      end;
+    end;
 
-      if (i < shortcuts.Count - 1) and (shortcuts.Text <> '') and
-        (ActionList.ActionByName(shortcuts.Names[i]) = nil) then
-          WriteShortCutToIni(TAction(ActionList.Actions[i]));
-    end
-    else
-      for i := 0 to shortcuts.Count - 1 do
-        try
-          TAction(ActionList.ActionbyName('ac' + shortcuts.Names[i])).ShortCut :=
-            SanitiseShortCutForPlatform(TextToShortcut(shortcuts.ValueFromIndex[i]));
-        except
-        end;
+    FixupUnsupportedShortCutKeys;
+    for i := 0 to ActionList.ActionCount - 1 do begin
+      act := TAction(ActionList.Actions[i]);
+      act.ShortCut := SanitiseShortCutForPlatform(act.ShortCut);
+      WriteShortCutToIni(act);
+    end;
+
   finally
-    shortcuts.Free;
+    ini_shortcuts.Free;
   end;
-  FixupUnsupportedShortCutKeys;
-  }
 end;
 
 { TMainForm }
