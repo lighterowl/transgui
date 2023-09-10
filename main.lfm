@@ -2030,15 +2030,12 @@ inherited MainForm: TMainForm
       end
       object MenuItem94: TMenuItem
         Action = acFilterPane
-        ShortCut = 122
       end
       object MenuItem95: TMenuItem
         Action = acInfoPane
-        ShortCut = 123
       end
       object MenuItem501: TMenuItem
         Action = acToolbarShow
-        ShortCut = 16506
       end
       object MenuItem103: TMenuItem
         Action = acBigToolbar
@@ -2046,7 +2043,6 @@ inherited MainForm: TMainForm
       end
       object MenuItem502: TMenuItem
         Action = acMenuShow
-        ShortCut = 16507
       end
       object MenuItem96: TMenuItem
         Action = acStatusBar
@@ -2514,12 +2510,14 @@ inherited MainForm: TMainForm
       Caption = 'Filter pane'
       Checked = True
       OnExecute = acFilterPaneExecute
+      ShortCut = 122
     end
     object acInfoPane: TAction
       Category = 'View'
       Caption = 'Info pane'
       Checked = True
       OnExecute = acInfoPaneExecute
+      ShortCut = 123
     end
     object acStatusBar: TAction
       Category = 'View'
@@ -2548,12 +2546,14 @@ inherited MainForm: TMainForm
       Caption = 'Toolbar'
       Checked = True
       OnExecute = acToolbarShowExecute
+      ShortCut = 16506
     end
     object acMenuShow: TAction
       Category = 'View'
       Caption = 'Menu'
       Checked = True
       OnExecute = acMenuShowExecute
+      ShortCut = 16507
     end
     object acBigToolbar: TAction
       Caption = 'acBigToolbar'
