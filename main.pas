@@ -45,7 +45,7 @@ uses
   httpsend, StdCtrls, fpjson, jsonparser, ExtCtrls, rpc, syncobjs, variants, varlist, IpResolver,
   zipper, ResTranslator, VarGrid, StrUtils, LCLProc, Grids, BaseForm, utils, AddTorrent, Types,
   LazFileUtils, LazUTF8, StringToVK, passwcon, GContnrs,lineinfo, RegExpr,
-  Filtering, TorrentStateImages, RPCConstants, TorrentColumns,
+  Filtering, TorrentStateImages, RPCConstants, TorrentColumns, trackeruri,
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
@@ -5695,25 +5695,7 @@ begin
       end;
 
     if s <> '' then begin
-      j:=Pos('://', s);
-      if j > 0 then
-        s:=Copy(s, j + 3, MaxInt);
-      j:=Pos('/', s);
-      if j > 0 then
-        s:=Copy(s, 1, j - 1);
-      j:=Pos('.', s);
-      if j > 0 then begin
-        ss:=Copy(s, 1, j - 1);
-        if AnsiCompareText(ss, 'bt') = 0 then
-          System.Delete(s, 1, 3)
-        else
-          if (Length(ss) = 3) and (AnsiCompareText(Copy(ss, 1, 2), 'bt') = 0) and (ss[3] in ['1'..'9']) then
-            System.Delete(s, 1, 4);
-      end;
-      j:=Pos(':', s);
-      if j > 0 then
-        System.Delete(s, j, MaxInt);
-      FTorrents[torcolTracker, row]:=UTF8Decode(s);
+      FTorrents[torcolTracker, row]:=trackeruri.Filter(s);
     end;
 
     if FieldExists[torcolPath] then

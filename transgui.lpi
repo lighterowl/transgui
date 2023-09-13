@@ -501,6 +501,10 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="TorrentColumns"/>
       </Unit>
+      <Unit>
+        <Filename Value="trackeruri.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
