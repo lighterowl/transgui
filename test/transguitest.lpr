@@ -30,50 +30,29 @@
   source files in the program, then also delete it here.
 *************************************************************************************}
 
-unit TrackerUri;
+program transguitest;
 
-{$mode ObjFPC}{$H+}{$J-}
+{$mode objfpc}{$H+}
 
-interface
+uses
+  Classes, consoletestrunner, trackeruritest;
 
-uses SysUtils;
+type
 
-function Filter(s : string) : string;
+  { TMyTestRunner }
 
-implementation
+  TMyTestRunner = class(TTestRunner)
+  protected
+  // override the protected methods of TTestRunner to customize its behavior
+  end;
 
-function Filter(s : string) : string;
 var
-  host_start, host_end: integer;
-  subdom_end: integer;
-  subdom: shortstring;
+  Application: TMyTestRunner;
+
 begin
-  host_start := Pos('://', s);
-  if host_start > 0 then host_start := host_start + 3
-  else                   host_start := 1;
-
-  host_end := Pos(':', s, host_start);
-  if host_end > 0 then begin
-    host_end := host_end - 1;
-  end
-  else begin
-    host_end := Pos('/', s, host_start);
-    if host_end > 0 then host_end := host_end - 1
-    else                 host_end := Length(s);
-  end;
-
-  subdom_end := Pos('.', s, host_start);
-  if subdom_end > 0 then begin
-    subdom:=LowerCase(Copy(s, host_start, subdom_end - host_start));
-    if (subdom = 'bt') or (subdom = 'www') or (subdom = 'tracker') then
-      host_start := subdom_end + 1
-    else
-      if (Length(subdom) = 3) and (subdom[1] = 'b') and (subdom[2] = 't') and (subdom[3] in ['0'..'9']) then
-        host_start := subdom_end + 1;
-  end;
-
-  Result := Copy(s, host_start, host_end - host_start + 1);
-end;
-
+  Application := TMyTestRunner.Create(nil);
+  Application.Initialize;
+  Application.Title := 'TransGUI Console test runner';
+  Application.Run;
+  Application.Free;
 end.
-
