@@ -71,7 +71,7 @@ else
 cd $repodir
 
 cd test
-lazbuild --build-mode=Release --lazarusdir=${sdk_dir}\lazarus transguitest.lpi
+lazbuild --lazarusdir=${sdk_dir}\lazarus transguitest.lpi
 units\transguitest.exe -a
 if(!$?) { Exit $LASTEXITCODE }
 cd ..
