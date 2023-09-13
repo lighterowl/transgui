@@ -69,6 +69,13 @@ else
 }
 
 cd $repodir
+
+cd test
+lazbuild --build-mode=Release --lazarusdir=${sdk_dir}\lazarus transguitest.lpi
+units\transguitest.exe -a
+if(!$?) { Exit $LASTEXITCODE }
+cd ..
+
 $build = git rev-list --abbrev-commit --max-count=1 HEAD
 ((Get-Content -path buildinfo.pas -Raw) -replace '@GIT_COMMIT@',${build}) | Set-Content -Path buildinfo.pas
 lazbuild --build-mode=Release --lazarusdir=${sdk_dir}\lazarus transgui.lpi
