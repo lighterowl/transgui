@@ -1521,7 +1521,6 @@ end;
 { TMainForm }
 procedure TMainForm.SetAlternateColor();
 begin
-  writeln(format('torrents color is %X', [gTorrents.Color]));
 {$ifdef darwin}
   if(MacOSThemeDetect.IsDarkMode) then FAlterColor:=$2e2e2e
   else FAlterColor:=$efefef;
