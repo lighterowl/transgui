@@ -6,8 +6,6 @@
     This unit is used to get format settings of the current
     Mac OS UI locale. Works on Mac OS X 10.3 or later.
 
-    Function CFStringToStr() has been taken from CarbonProc LCL unit.
-
     See the file COPYING.FPC, included in this distribution,
     for details about the copyright.
 
@@ -24,51 +22,11 @@ unit MacLocale;
 interface
 
 uses
-  SysUtils, MacOSAll;
+  SysUtils, CocoaUtils, MacOSAll;
 
 procedure GetMacFormatSettings(var ASettings: TFormatSettings);
 
 implementation
-
-{------------------------------------------------------------------------------
-  Name:    CFStringToStr
-  Params:  AString  - Core Foundation string ref
-          Encoding - Result data encoding format
-  Returns: UTF-8 string
-
-  Converts Core Foundation string to string
- ------------------------------------------------------------------------------}
-function CFStringToStr(AString: CFStringRef; Encoding: CFStringEncoding = kCFStringEncodingUTF8): String;
-var
-  Str: Pointer;
-  StrSize: CFIndex;
-  StrRange: CFRange;
-begin
-  if AString = nil then
-  begin
-    Result := '';
-    Exit;
-  end;
-
-  // Try the quick way first
-  Str := CFStringGetCStringPtr(AString, Encoding);
-  if Str <> nil then
-    Result := PChar(Str)
-  else
-  begin
-    // if that doesn't work this will
-    StrRange.location := 0;
-    StrRange.length := CFStringGetLength(AString);
-
-    CFStringGetBytes(AString, StrRange, Encoding,
-      Ord('?'), False, nil, 0, StrSize{%H-});
-    SetLength(Result, StrSize);
-
-    if StrSize > 0 then
-      CFStringGetBytes(AString, StrRange, Encoding,
-        Ord('?'), False, @Result[1], StrSize, StrSize);
-  end;
-end;
 
 function StrOfChar(c: AnsiChar; Count: integer): ansistring;
 begin

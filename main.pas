@@ -41,6 +41,9 @@ uses
   {$else}
   lclintf,
   {$endif windows}
+  {$ifdef darwin}
+  MacOSThemeDetect,
+  {$endif}
   Graphics, Dialogs, ComCtrls, Menus, ActnList, LCLVersion,
   httpsend, StdCtrls, fpjson, jsonparser, ExtCtrls, rpc, syncobjs, variants, varlist, IpResolver,
   zipper, ResTranslator, VarGrid, StrUtils, LCLProc, Grids, BaseForm, utils, AddTorrent, Types,
@@ -779,6 +782,7 @@ type
     function SelectTorrent(TorrentId, TimeOut: integer): integer;
     procedure OpenCurrentTorrent(OpenFolderOnly: boolean; UserDef: boolean=false);
     procedure ProcessIniShortCuts;
+    procedure SetAlternateColor;
   public
     procedure FillTorrentsList(list: TJSONArray);
     procedure FillPeersList(list: TJSONArray);
@@ -1515,6 +1519,20 @@ begin
 end;
 
 { TMainForm }
+procedure TMainForm.SetAlternateColor();
+begin
+  writeln(format('torrents color is %X', [gTorrents.Color]));
+{$ifdef darwin}
+  if(MacOSThemeDetect.IsDarkMode) then FAlterColor:=$2e2e2e
+  else FAlterColor:=$efefef;
+{$else}
+  FAlterColor:=GetLikeColor(gTorrents.Color, -$10);
+{$endif}
+  gTorrents.AlternateColor:=FAlterColor;
+  lvPeers.AlternateColor:=FAlterColor;
+  lvTrackers.AlternateColor:=FAlterColor;
+  gStats.AlternateColor:=FAlterColor;
+end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
 var
@@ -1549,6 +1567,7 @@ begin
   end;
 
   RegisterURLHandler(@AddTorrentFile);
+  MacOSThemeDetect.Callback := @SetAlternateColor;
 {$endif darwin}
 
 
@@ -1580,12 +1599,8 @@ begin
   FTrackers:=TStringList.Create;
   FTrackers.Sorted:=True;
   FReconnectTimeOut:=-1;
-  FAlterColor:=GetLikeColor(gTorrents.Color, -$10);
   lvFilter.Items.ExtraColumns:=lvFilterNumExtraColumns;
-  gTorrents.AlternateColor:=FAlterColor;
-  lvPeers.AlternateColor:=FAlterColor;
-  lvTrackers.AlternateColor:=FAlterColor;
-  gStats.AlternateColor:=FAlterColor;
+  SetAlternateColor;
   FPendingTorrents:=TStringList.Create;
   FFilesCapt:=tabFiles.Caption;
   FPasswords:=TStringList.Create;
