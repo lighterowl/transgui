@@ -783,6 +783,9 @@ type
     procedure OpenCurrentTorrent(OpenFolderOnly: boolean; UserDef: boolean=false);
     procedure ProcessIniShortCuts;
     procedure SetAlternateColor;
+    procedure SetCommentLinkColor;
+    procedure OnThemeChanged;
+    function CommentIsLink: Boolean;
   public
     procedure FillTorrentsList(list: TJSONArray);
     procedure FillPeersList(list: TJSONArray);
@@ -1519,6 +1522,21 @@ begin
 end;
 
 { TMainForm }
+function TMainForm.CommentIsLink() : Boolean;
+begin
+  Result := (AnsiCompareText(Copy(txComment.Caption, 1, 7), 'http://') = 0)
+    or (AnsiCompareText(Copy(txComment.Caption, 1, 8), 'https://') = 0);
+end;
+
+procedure TMainForm.SetCommentLinkColor();
+begin
+{$ifdef darwin}
+  if (MacOSThemeDetect.IsDarkMode) then txComment.Font.Color:=clAqua
+  else
+{$endif}
+  txComment.Font.Color:=clBlue;
+end;
+
 procedure TMainForm.SetAlternateColor();
 begin
 {$ifdef darwin}
@@ -1531,6 +1549,14 @@ begin
   lvPeers.AlternateColor:=FAlterColor;
   lvTrackers.AlternateColor:=FAlterColor;
   gStats.AlternateColor:=FAlterColor;
+  txTransferHeader.Color:=FAlterColor;
+  txTorrentHeader.Color:=FAlterColor;
+end;
+
+procedure TMainForm.OnThemeChanged();
+begin
+  SetAlternateColor;
+  if CommentIsLink then SetCommentLinkColor;
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
@@ -1566,7 +1592,7 @@ begin
   end;
 
   RegisterURLHandler(@AddTorrentFile);
-  MacOSThemeDetect.Callback := @SetAlternateColor;
+  MacOSThemeDetect.Callback := @OnThemeChanged;
 {$endif darwin}
 
 
@@ -1642,8 +1668,6 @@ begin
   acAltSpeed.ImageIndex:=-1;
   tbtAltSpeed.ImageIndex:=i;
 {$endif}
-  txTransferHeader.Color:=GetLikeColor(clBtnFace, -15);
-  txTorrentHeader.Color:=txTransferHeader.Color;
   txTransferHeader.Caption:=' ' + txTransferHeader.Caption;
   txTorrentHeader.Caption:=' ' + txTorrentHeader.Caption;
   txTransferHeader.Height:=txTransferHeader.Canvas.TextHeight(txTransferHeader.Caption) + 2;
@@ -6360,13 +6384,12 @@ begin
 
   txHash.Caption:=t.Strings['hashString'];
   txComment.Caption:=UTF8Encode(t.Strings['comment']);
-  if (AnsiCompareText(Copy(txComment.Caption, 1, 7), 'http://') = 0)
-    or (AnsiCompareText(Copy(txComment.Caption, 1, 8), 'https://') = 0)
+  if CommentIsLink
   then begin
     if not Assigned(txComment.OnClick) then begin
       txComment.OnClick:=@UrlLabelClick;
       txComment.Cursor:=crHandPoint;
-      txComment.Font.Color:=clBlue;
+      SetCommentLinkColor;
       txComment.Font.Style:=[fsUnderline];
     end;
   end
