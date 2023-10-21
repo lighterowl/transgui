@@ -6366,7 +6366,12 @@ begin
     if not Assigned(txComment.OnClick) then begin
       txComment.OnClick:=@UrlLabelClick;
       txComment.Cursor:=crHandPoint;
+{$ifdef darwin}
+      if (MacOSThemeDetect.IsDarkMode) then txComment.Font.Color:=$3173f0
+      else txComment.Font.Color:=clBlue;
+{$else}
       txComment.Font.Color:=clBlue;
+{$endif}
       txComment.Font.Style:=[fsUnderline];
     end;
   end
