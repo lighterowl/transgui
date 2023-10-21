@@ -1531,6 +1531,8 @@ begin
   lvPeers.AlternateColor:=FAlterColor;
   lvTrackers.AlternateColor:=FAlterColor;
   gStats.AlternateColor:=FAlterColor;
+  txTransferHeader.Color:=FAlterColor;
+  txTorrentHeader.Color:=FAlterColor;
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
@@ -1642,8 +1644,6 @@ begin
   acAltSpeed.ImageIndex:=-1;
   tbtAltSpeed.ImageIndex:=i;
 {$endif}
-  txTransferHeader.Color:=GetLikeColor(clBtnFace, -15);
-  txTorrentHeader.Color:=txTransferHeader.Color;
   txTransferHeader.Caption:=' ' + txTransferHeader.Caption;
   txTorrentHeader.Caption:=' ' + txTorrentHeader.Caption;
   txTransferHeader.Height:=txTransferHeader.Canvas.TextHeight(txTransferHeader.Caption) + 2;
