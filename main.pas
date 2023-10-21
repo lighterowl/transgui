@@ -783,6 +783,9 @@ type
     procedure OpenCurrentTorrent(OpenFolderOnly: boolean; UserDef: boolean=false);
     procedure ProcessIniShortCuts;
     procedure SetAlternateColor;
+    procedure SetCommentLinkColor;
+    procedure OnThemeChanged;
+    function CommentIsLink: Boolean;
   public
     procedure FillTorrentsList(list: TJSONArray);
     procedure FillPeersList(list: TJSONArray);
@@ -1519,6 +1522,21 @@ begin
 end;
 
 { TMainForm }
+function TMainForm.CommentIsLink() : Boolean;
+begin
+  Result := (AnsiCompareText(Copy(txComment.Caption, 1, 7), 'http://') = 0)
+    or (AnsiCompareText(Copy(txComment.Caption, 1, 8), 'https://') = 0);
+end;
+
+procedure TMainForm.SetCommentLinkColor();
+begin
+{$ifdef darwin}
+  if (MacOSThemeDetect.IsDarkMode) then txComment.Font.Color:=clAqua
+  else
+{$endif}
+  txComment.Font.Color:=clBlue;
+end;
+
 procedure TMainForm.SetAlternateColor();
 begin
 {$ifdef darwin}
@@ -1533,6 +1551,12 @@ begin
   gStats.AlternateColor:=FAlterColor;
   txTransferHeader.Color:=FAlterColor;
   txTorrentHeader.Color:=FAlterColor;
+end;
+
+procedure TMainForm.OnThemeChanged();
+begin
+  SetAlternateColor;
+  if CommentIsLink then SetCommentLinkColor;
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
@@ -1568,7 +1592,7 @@ begin
   end;
 
   RegisterURLHandler(@AddTorrentFile);
-  MacOSThemeDetect.Callback := @SetAlternateColor;
+  MacOSThemeDetect.Callback := @OnThemeChanged;
 {$endif darwin}
 
 
@@ -6360,18 +6384,12 @@ begin
 
   txHash.Caption:=t.Strings['hashString'];
   txComment.Caption:=UTF8Encode(t.Strings['comment']);
-  if (AnsiCompareText(Copy(txComment.Caption, 1, 7), 'http://') = 0)
-    or (AnsiCompareText(Copy(txComment.Caption, 1, 8), 'https://') = 0)
+  if CommentIsLink
   then begin
     if not Assigned(txComment.OnClick) then begin
       txComment.OnClick:=@UrlLabelClick;
       txComment.Cursor:=crHandPoint;
-{$ifdef darwin}
-      if (MacOSThemeDetect.IsDarkMode) then txComment.Font.Color:=$3173f0
-      else txComment.Font.Color:=clBlue;
-{$else}
-      txComment.Font.Color:=clBlue;
-{$endif}
+      SetCommentLinkColor;
       txComment.Font.Style:=[fsUnderline];
     end;
   end
