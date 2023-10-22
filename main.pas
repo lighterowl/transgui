@@ -928,6 +928,36 @@ begin
   Result := FAppVersion;
 end;
 
+function GetProgressBarColor: TColor;
+begin
+{$ifdef darwin}
+  if (MacOSThemeDetect.IsDarkMode) then Result := $8b6240
+  else Result := $ffd6b4;
+{$else}
+  Result := clHighlight;
+{$endif}
+end;
+
+function GetFormColor: TColor;
+begin
+{$ifdef darwin}
+  if (MacOSThemeDetect.IsDarkMode) then Result := $2f2f2f
+  else Result := $eeeeee;
+{$else}
+  Result := clForm;
+{$endif}
+end;
+
+function GetBtnShadowColor: TColor;
+begin
+{$ifdef darwin}
+  if (MacOSThemeDetect.IsDarkMode) then Result := $5b5b5b
+  else Result := $929292;
+{$else}
+  Result := clBtnShadow;
+{$endif}
+end;
+
 procedure ReadVersionInfo;
 var
   file_ver_info : TFileVersionInfo;
@@ -6819,9 +6849,9 @@ begin
         c:=1;
       end;
       bmp.Height:=12;
-      bmp.Canvas.Brush.Color:=clWindow;
+      bmp.Canvas.Brush.Color:=GetFormColor;
       bmp.Canvas.FillRect(0, 0, bmp.Width, bmp.Height);
-      bmp.Canvas.Brush.Color:=clHighlight;
+      bmp.Canvas.Brush.Color:=GetProgressBarColor;
       x:=0;
       s:=DecodeBase64(Pieces);
       for i:=1 to Length(s) do begin
@@ -6845,16 +6875,16 @@ begin
       if bmp <> nil then begin
         i:=bmp.Height div 3;
         FTorrentProgress.Height:=bmp.Height + 5 + i;
-        Brush.Color:=clWindow;
+        Brush.Color:=GetFormColor;
         FillRect(0, 0, FTorrentProgress.Width, FTorrentProgress.Height);
-        Brush.Color:=clBtnShadow;
+        Brush.Color:=GetBtnShadowColor;
         R:=Rect(0, i + 3, FTorrentProgress.Width, FTorrentProgress.Height);
         FillRect(R);
         InflateRect(R, -1, -1);
         if bmp.Width > 0 then
           StretchDraw(R, bmp)
         else begin
-          Brush.Color:=clWindow;
+          Brush.Color:=GetFormColor;
           FillRect(R);
         end;
         R:=Rect(0, 0, FTorrentProgress.Width, i + 2);
@@ -6863,13 +6893,13 @@ begin
         FTorrentProgress.Height:=14;
         R:=Rect(0, 0, FTorrentProgress.Width, FTorrentProgress.Height);
       end;
-      Brush.Color:=clBtnShadow;
+      Brush.Color:=GetBtnShadowColor;
       FillRect(R);
       InflateRect(R, -1, -1);
       x:=R.Left + Round((R.Right - R.Left)*Done/100.0);
-      Brush.Color:=clHighlight;
+      Brush.Color:=GetProgressBarColor;
       FillRect(R.Left, R.Top, x, R.Bottom);
-      Brush.Color:=clWindow;
+      Brush.Color:=GetFormColor;
       FillRect(x, R.Top, R.Right, R.Bottom);
     end;
     if pbDownloaded.Height <> FTorrentProgress.Height then begin
