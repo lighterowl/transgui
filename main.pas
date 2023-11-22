@@ -258,12 +258,14 @@ type
     acBigToolbar: TAction;
     acSetLabels: TAction;
     acLabelGrouping: TAction;
+    acKeepSelectionInTables: TAction;
     ImageList32: TImageList;
     MenuItem103: TMenuItem;
     MenuItem104: TMenuItem;
     MenuItem105: TMenuItem;
     MenuItem106: TMenuItem;
     MenuItem107: TMenuItem;
+    MenuItem108: TMenuItem;
     MenuShow: TAction;
     ActionList1: TActionList;
     acToolbarShow :  TAction;
@@ -282,6 +284,7 @@ type
     MenuItem501: TMenuItem;
     MenuItem502: TMenuItem;
     SearchToolbar: TToolBar;
+    Separator1: TMenuItem;
     tbSearchCancel: TToolButton;
     LocalWatchTimer: TTimer;
     ToolButton10: TToolButton;
@@ -598,6 +601,7 @@ type
     procedure acStatusBarSizesExecute(Sender: TObject);
     procedure acStopAllTorrentsExecute(Sender: TObject);
     procedure acStopTorrentExecute(Sender: TObject);
+    procedure acKeepSelectionInTablesExecute(Sender: TObject);
     procedure gTorrentsKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure gTorrentsMouseMove(Sender: TObject; Shift: TShiftState; X,
@@ -1643,7 +1647,6 @@ begin
   FTorrents:=TVarList.Create(gTorrents.Columns.Count, 0);
   FTorrents.ExtraColumns:=TorrentsExtraColumns;
   gTorrents.Items.ExtraColumns:=TorrentsExtraColumns;
-  gTorrents.Options2:=[goNoScrollAfterSetRow];
   lvFiles.Items.ExtraColumns:=FilesExtraColumns;
   FFiles:=lvFiles.Items;
   FFilesTree:=TFilesTree.Create(lvFiles);
@@ -1761,6 +1764,9 @@ begin
     acToolbarShow.Execute;
   if Ini.ReadBool('MainForm', 'BigToolbar', acBigToolBar.Checked)  <> acBigToolBar.Checked then
     acBigToolbar.Execute;
+
+  if Ini.ReadBool('Interface','KeepTableSelection', acKeepSelectionInTables.Checked) <> acKeepSelectionInTables.Checked then
+    acKeepSelectionInTables.Execute;
 
   FFromNow := Ini.ReadBool('MainForm','FromNow',false);
   FWatchLocalFolder := Ini.ReadString('Interface','WatchLocalFolder','');
@@ -3637,6 +3643,14 @@ end;
 procedure TMainForm.acStopTorrentExecute(Sender: TObject);
 begin
   TorrentAction(GetSelectedTorrents, 'torrent-stop');
+end;
+
+procedure TMainForm.acKeepSelectionInTablesExecute(Sender: TObject);
+begin
+  acKeepSelectionInTables.Checked := not acKeepSelectionInTables.Checked;
+  if acKeepSelectionInTables.Checked then gTorrents.Options2:=[]
+  else gTorrents.Options2:=[goNoScrollAfterSetRow];
+  Ini.WriteBool('Interface','KeepTableSelection',acKeepSelectionInTables.Checked);
 end;
 
 procedure TMainForm.gTorrentsKeyDown(Sender: TObject; var Key: Word;
