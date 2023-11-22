@@ -2050,6 +2050,12 @@ inherited MainForm: TMainForm
       object MenuItem102: TMenuItem
         Action = acStatusBarSizes
       end
+      object Separator1: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem108: TMenuItem
+        Action = acKeepSelectionInTables
+      end
     end
     object miTools: TMenuItem
       Caption = 'T&ools'
@@ -2569,6 +2575,11 @@ inherited MainForm: TMainForm
       Category = 'View'
       Caption = 'Label grouping'
       OnExecute = acLabelGroupingExecute
+    end
+    object acKeepSelectionInTables: TAction
+      Category = 'View'
+      Caption = 'Keep selection in tables'
+      OnExecute = acKeepSelectionInTablesExecute
     end
   end
   object TorrentsListTimer: TTimer[9]
