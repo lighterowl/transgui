@@ -16,7 +16,7 @@
   along with Transmission Remote GUI; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-  In addition, as a special exception, the copyright holders give permission to
+  In addition, as a special exception, the copyright holders give permission to 
   link the code of portions of this program with the
   OpenSSL library under certain conditions as described in each individual
   source file, and distribute linked combinations including the two.
