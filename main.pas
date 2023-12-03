@@ -3774,7 +3774,6 @@ var
 begin
   trlist:=TStringList.Create;
   if RpcObj.ShouldUseTrackerList then begin
-    writeln(torrentObj.Strings['trackerList']);
     trlist.SetText(PChar(torrentObj.Strings['trackerList']));
   end
   else begin
