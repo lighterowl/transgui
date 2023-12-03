@@ -16,7 +16,7 @@
   along with Transmission Remote GUI; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-  In addition, as a special exception, the copyright holders give permission to 
+  In addition, as a special exception, the copyright holders give permission to
   link the code of portions of this program with the
   OpenSSL library under certain conditions as described in each individual
   source file, and distribute linked combinations including the two.
@@ -140,6 +140,7 @@ type
     function SendRequest(req: TJSONObject; ReturnArguments: boolean = True; ATimeOut: integer = -1): TJSONObject;
     function RequestInfo(TorrentId: integer; const Fields: array of const; const ExtraFields: array of string): TJSONObject;
     function RequestInfo(TorrentId: integer; const Fields: array of const): TJSONObject;
+    function ShouldUseTrackerList(): boolean;
 
     property Status: string read GetStatus write SetStatus;
     property InfoStatus: string read GetInfoStatus write SetInfoStatus;
@@ -1050,6 +1051,11 @@ begin
   Status:='';
   RequestStartTime:=0;
   FRpcPath:='';
+end;
+
+function TRpc.ShouldUseTrackerList(): boolean;
+begin
+  Result := FRPCVersion >= 17;
 end;
 
 end.
