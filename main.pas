@@ -4345,8 +4345,8 @@ begin
       exit;
     RpcObj.CurTorrentId:=i;
   finally
-    RpcObj.Unlock;
     if acStatusBarSizes.Checked then StatusBarSizes;
+    RpcObj.Unlock;
   end;
 
   ClearDetailsInfo(GetPageInfoType(PageInfo.ActivePage));
