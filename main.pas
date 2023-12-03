@@ -152,6 +152,8 @@ resourcestring
   sPrivateOn = 'ON';
   sPrivateOff = 'OFF';
 
+  sSeparateTiersByEmptyLine = 'Separate tiers by an empty line:';
+
 type
 
   { TMyHashMap example from hashmapdemo }
@@ -3887,8 +3889,13 @@ begin
     gTorrents.Tag:=1;
     gTorrents.EnsureSelectionVisible;
     TorrentIds:=GetSelectedTorrents;
-    if RpcObj.ShouldUseTrackerList then trackerArg := 'trackerList'
+
+    if RpcObj.ShouldUseTrackerList then begin
+      trackerArg := 'trackerList';
+      txTrackers.Caption := sSeparateTiersByEmptyLine;
+    end
     else trackerArg := 'trackers';
+
     args:=RpcObj.RequestInfo(id, ['downloadLimit', 'downloadLimitMode', 'downloadLimited', 'uploadLimit', 'uploadLimitMode', 'uploadLimited',
                                   'name', 'maxConnectedPeers', 'seedRatioMode', 'seedRatioLimit', 'seedIdleLimit', 'seedIdleMode', trackerArg]);
     if args = nil then begin
