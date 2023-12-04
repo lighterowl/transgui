@@ -140,6 +140,7 @@ type
     function SendRequest(req: TJSONObject; ReturnArguments: boolean = True; ATimeOut: integer = -1): TJSONObject;
     function RequestInfo(TorrentId: integer; const Fields: array of const; const ExtraFields: array of string): TJSONObject;
     function RequestInfo(TorrentId: integer; const Fields: array of const): TJSONObject;
+    function ShouldUseTrackerList(): boolean;
 
     property Status: string read GetStatus write SetStatus;
     property InfoStatus: string read GetInfoStatus write SetInfoStatus;
@@ -1050,6 +1051,11 @@ begin
   Status:='';
   RequestStartTime:=0;
   FRpcPath:='';
+end;
+
+function TRpc.ShouldUseTrackerList(): boolean;
+begin
+  Result := FRPCVersion >= 17;
 end;
 
 end.

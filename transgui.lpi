@@ -505,6 +505,15 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="TorrentColumns"/>
       </Unit>
+      <Unit>
+        <Filename Value="trackeruri.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="macosthemedetect.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="MacOSThemeDetect"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

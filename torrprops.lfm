@@ -191,7 +191,7 @@ inherited TorrPropsForm: TTorrPropsForm
       end
     end
     object tabAdvanced: TTabSheet
-      Caption = 'Advanced'
+      Caption = 'Trackers'
       ClientHeight = 194
       ClientWidth = 488
       object edTrackers: TMemo
@@ -209,7 +209,7 @@ inherited TorrPropsForm: TTorrPropsForm
         Height = 14
         Top = 10
         Width = 46
-        Caption = 'Trackers:'
+        Caption = ''
         ParentColor = False
       end
     end

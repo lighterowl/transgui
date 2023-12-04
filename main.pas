@@ -16,7 +16,7 @@
   along with Transmission Remote GUI; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-  In addition, as a special exception, the copyright holders give permission to 
+  In addition, as a special exception, the copyright holders give permission to
   link the code of portions of this program with the
   OpenSSL library under certain conditions as described in each individual
   source file, and distribute linked combinations including the two.
@@ -41,11 +41,14 @@ uses
   {$else}
   lclintf,
   {$endif windows}
+  {$ifdef darwin}
+  MacOSThemeDetect,
+  {$endif}
   Graphics, Dialogs, ComCtrls, Menus, ActnList, LCLVersion,
   httpsend, StdCtrls, fpjson, jsonparser, ExtCtrls, rpc, syncobjs, variants, varlist, IpResolver,
   zipper, ResTranslator, VarGrid, StrUtils, LCLProc, Grids, BaseForm, utils, AddTorrent, Types,
   LazFileUtils, LazUTF8, StringToVK, passwcon, GContnrs,lineinfo, RegExpr,
-  Filtering, TorrentStateImages, RPCConstants, TorrentColumns,
+  Filtering, TorrentStateImages, RPCConstants, TorrentColumns, trackeruri,
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
@@ -133,9 +136,9 @@ resourcestring
   SUploaded = 'Uploaded';
   SFilesAdded = 'Files added';
   SActiveTime = 'Active time';
-  STotalSize = 'Total: %s';
-  sTotalSizeToDownload = 'Selected: %s';
-  sTotalDownloaded = 'Done: %s';
+  sTotalSizeFiltered = 'Filtered: %s';
+  sTotalSizeSelected = 'Selected: %s';
+  sTotalDownloaded = 'Completed: %s';
   sTotalRemain = 'Remaining: %s';
 
   sUserMenu = 'User Menu';
@@ -148,6 +151,8 @@ resourcestring
 
   sPrivateOn = 'ON';
   sPrivateOff = 'OFF';
+
+  sSeparateTiersByEmptyLine = 'Separate tiers by an empty line:';
 
 type
 
@@ -255,12 +260,14 @@ type
     acBigToolbar: TAction;
     acSetLabels: TAction;
     acLabelGrouping: TAction;
+    acKeepSelectionInTables: TAction;
     ImageList32: TImageList;
     MenuItem103: TMenuItem;
     MenuItem104: TMenuItem;
     MenuItem105: TMenuItem;
     MenuItem106: TMenuItem;
     MenuItem107: TMenuItem;
+    MenuItem108: TMenuItem;
     MenuShow: TAction;
     ActionList1: TActionList;
     acToolbarShow :  TAction;
@@ -279,6 +286,7 @@ type
     MenuItem501: TMenuItem;
     MenuItem502: TMenuItem;
     SearchToolbar: TToolBar;
+    Separator1: TMenuItem;
     tbSearchCancel: TToolButton;
     LocalWatchTimer: TTimer;
     ToolButton10: TToolButton;
@@ -595,6 +603,7 @@ type
     procedure acStatusBarSizesExecute(Sender: TObject);
     procedure acStopAllTorrentsExecute(Sender: TObject);
     procedure acStopTorrentExecute(Sender: TObject);
+    procedure acKeepSelectionInTablesExecute(Sender: TObject);
     procedure gTorrentsKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure gTorrentsMouseMove(Sender: TObject; Shift: TShiftState; X,
@@ -779,6 +788,12 @@ type
     function SelectTorrent(TorrentId, TimeOut: integer): integer;
     procedure OpenCurrentTorrent(OpenFolderOnly: boolean; UserDef: boolean=false);
     procedure ProcessIniShortCuts;
+    procedure SetAlternateColor;
+    procedure SetCommentLinkColor;
+    procedure OnThemeChanged;
+    function CommentIsLink: Boolean;
+    function ArgsToTrackerList(torrentObj: TJSONObject) : TStringList;
+    procedure TrackerListToArgs(parsedTrackers: TStringList; torrentSetArgs: TJSONObject; trackerEditField: TMemo);
   public
     procedure FillTorrentsList(list: TJSONArray);
     procedure FillPeersList(list: TJSONArray);
@@ -919,6 +934,36 @@ end;
 function AppVersion: string;
 begin
   Result := FAppVersion;
+end;
+
+function GetProgressBarColor: TColor;
+begin
+{$ifdef darwin}
+  if (MacOSThemeDetect.IsDarkMode) then Result := $8b6240
+  else Result := $ffd6b4;
+{$else}
+  Result := clHighlight;
+{$endif}
+end;
+
+function GetWindowColor: TColor;
+begin
+{$ifdef darwin}
+  if (MacOSThemeDetect.IsDarkMode) then Result := $2f2f2f
+  else Result := $eeeeee;
+{$else}
+  Result := clWindow;
+{$endif}
+end;
+
+function GetBtnShadowColor: TColor;
+begin
+{$ifdef darwin}
+  if (MacOSThemeDetect.IsDarkMode) then Result := $5b5b5b
+  else Result := $929292;
+{$else}
+  Result := clBtnShadow;
+{$endif}
 end;
 
 procedure ReadVersionInfo;
@@ -1464,42 +1509,93 @@ procedure TMainForm.ProcessIniShortCuts;
 {$endif}
   end;
 
+  function SanitiseShortCutForPlatform(shortcut : TShortCut): TShortCut;
+  begin
+    // same idea as above but for replacing Ctrl with Meta (Command) on macos
+{$ifdef darwin}
+    if (shortcut and scCtrl) = scCtrl then begin
+      shortcut := (shortcut and (not scCtrl));
+      shortcut := (shortcut or scMeta);
+    end;
+{$endif}
+    Result := shortcut;
+  end;
+
+  procedure WriteShortCutToIni(action : TAction);
+  var
+    key_name: string;
+  begin
+    key_name := StringReplace(action.Name, 'ac', '', []);
+    Ini.WriteString('Shortcuts', key_name, ShortcutToText(action.shortcut));
+  end;
+
 var
-  shortcuts: TStringList;
+  act: TAction;
+  ini_shortcut: TShortCut;
+  ini_shortcuts: TStringList;
   i: integer;
 
 begin
-  FixupUnsupportedShortCutKeys;
-  shortcuts := TStringList.Create;
+  ini_shortcuts := TStringList.Create;
   try
-    Ini.ReadSectionValues('ShortCuts', shortcuts);
-    if (shortcuts.Text = '') or (shortcuts.Count <> ActionList.ActionCount) then
-    begin
-      for i := 0 to ActionList.ActionCount - 1 do
-        Ini.WriteString('Shortcuts', StringReplace(
-          ActionList.Actions[i].Name, 'ac', '', []), ShortcutToText(
-          TAction(ActionList.Actions[i]).ShortCut));
+    Ini.ReadSectionValues('ShortCuts', ini_shortcuts);
+    for i := 0 to ini_shortcuts.Count - 1 do begin
+      ini_shortcut := TextToShortcut(ini_shortcuts.ValueFromIndex[i]);
+      if ini_shortcut <> scNone then begin
+        act := TAction(ActionList.ActionByName('ac' + ini_shortcuts.Names[i]));
+        if act <> Nil then act.ShortCut := ini_shortcut;
+      end;
+    end;
 
-      if (i < shortcuts.Count - 1) and (shortcuts.Text <> '') and
-        (ActionList.ActionByName(shortcuts.Names[i]) = nil) then
-        Ini.WriteString('Shortcuts', StringReplace(ActionList.Actions[i].Name,
-          'ac', '', []),
-          ShortcutToText(TAction(ActionList.Actions[i]).ShortCut));
-    end
-    else
-      for i := 0 to shortcuts.Count - 1 do
-        try
-          TAction(ActionList.ActionbyName('ac' + shortcuts.Names[i])).ShortCut :=
-            TextToShortcut(shortcuts.ValueFromIndex[i]);
-        except
-        end;
+    FixupUnsupportedShortCutKeys;
+    for i := 0 to ActionList.ActionCount - 1 do begin
+      act := TAction(ActionList.Actions[i]);
+      act.ShortCut := SanitiseShortCutForPlatform(act.ShortCut);
+      WriteShortCutToIni(act);
+    end;
+
   finally
-    shortcuts.Free;
+    ini_shortcuts.Free;
   end;
-  FixupUnsupportedShortCutKeys;
 end;
 
 { TMainForm }
+function TMainForm.CommentIsLink() : Boolean;
+begin
+  Result := (AnsiCompareText(Copy(txComment.Caption, 1, 7), 'http://') = 0)
+    or (AnsiCompareText(Copy(txComment.Caption, 1, 8), 'https://') = 0);
+end;
+
+procedure TMainForm.SetCommentLinkColor();
+begin
+{$ifdef darwin}
+  if (MacOSThemeDetect.IsDarkMode) then txComment.Font.Color:=clAqua
+  else
+{$endif}
+  txComment.Font.Color:=clBlue;
+end;
+
+procedure TMainForm.SetAlternateColor();
+begin
+{$ifdef darwin}
+  if(MacOSThemeDetect.IsDarkMode) then FAlterColor:=$2e2e2e
+  else FAlterColor:=$efefef;
+{$else}
+  FAlterColor:=GetLikeColor(gTorrents.Color, -$10);
+{$endif}
+  gTorrents.AlternateColor:=FAlterColor;
+  lvPeers.AlternateColor:=FAlterColor;
+  lvTrackers.AlternateColor:=FAlterColor;
+  gStats.AlternateColor:=FAlterColor;
+  txTransferHeader.Color:=FAlterColor;
+  txTorrentHeader.Color:=FAlterColor;
+end;
+
+procedure TMainForm.OnThemeChanged();
+begin
+  SetAlternateColor;
+  if CommentIsLink then SetCommentLinkColor;
+end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
 var
@@ -1534,6 +1630,7 @@ begin
   end;
 
   RegisterURLHandler(@AddTorrentFile);
+  MacOSThemeDetect.Callback := @OnThemeChanged;
 {$endif darwin}
 
 
@@ -1554,7 +1651,6 @@ begin
   FTorrents:=TVarList.Create(gTorrents.Columns.Count, 0);
   FTorrents.ExtraColumns:=TorrentsExtraColumns;
   gTorrents.Items.ExtraColumns:=TorrentsExtraColumns;
-  gTorrents.Options2:=[goNoScrollAfterSetRow];
   lvFiles.Items.ExtraColumns:=FilesExtraColumns;
   FFiles:=lvFiles.Items;
   FFilesTree:=TFilesTree.Create(lvFiles);
@@ -1565,12 +1661,8 @@ begin
   FTrackers:=TStringList.Create;
   FTrackers.Sorted:=True;
   FReconnectTimeOut:=-1;
-  FAlterColor:=GetLikeColor(gTorrents.Color, -$10);
   lvFilter.Items.ExtraColumns:=lvFilterNumExtraColumns;
-  gTorrents.AlternateColor:=FAlterColor;
-  lvPeers.AlternateColor:=FAlterColor;
-  lvTrackers.AlternateColor:=FAlterColor;
-  gStats.AlternateColor:=FAlterColor;
+  SetAlternateColor;
   FPendingTorrents:=TStringList.Create;
   FFilesCapt:=tabFiles.Caption;
   FPasswords:=TStringList.Create;
@@ -1613,8 +1705,6 @@ begin
   acAltSpeed.ImageIndex:=-1;
   tbtAltSpeed.ImageIndex:=i;
 {$endif}
-  txTransferHeader.Color:=GetLikeColor(clBtnFace, -15);
-  txTorrentHeader.Color:=txTransferHeader.Color;
   txTransferHeader.Caption:=' ' + txTransferHeader.Caption;
   txTorrentHeader.Caption:=' ' + txTorrentHeader.Caption;
   txTransferHeader.Height:=txTransferHeader.Canvas.TextHeight(txTransferHeader.Caption) + 2;
@@ -1678,6 +1768,9 @@ begin
     acToolbarShow.Execute;
   if Ini.ReadBool('MainForm', 'BigToolbar', acBigToolBar.Checked)  <> acBigToolBar.Checked then
     acBigToolbar.Execute;
+
+  if Ini.ReadBool('Interface','KeepTableSelection', acKeepSelectionInTables.Checked) <> acKeepSelectionInTables.Checked then
+    acKeepSelectionInTables.Execute;
 
   FFromNow := Ini.ReadBool('MainForm','FromNow',false);
   FWatchLocalFolder := Ini.ReadString('Interface','WatchLocalFolder','');
@@ -3542,7 +3635,6 @@ begin
           StatusBar.Panels[4].Text:= '';
           StatusBar.Panels[5].Text:= '';
           StatusBar.Panels[6].Text:= '';
-          StatusBar.Panels[7].Text:= '';
         end;
         Ini.WriteBool('MainForm','StatusBarSizes',acStatusBarSizes.Checked);
 end;
@@ -3555,6 +3647,14 @@ end;
 procedure TMainForm.acStopTorrentExecute(Sender: TObject);
 begin
   TorrentAction(GetSelectedTorrents, 'torrent-stop');
+end;
+
+procedure TMainForm.acKeepSelectionInTablesExecute(Sender: TObject);
+begin
+  acKeepSelectionInTables.Checked := not acKeepSelectionInTables.Checked;
+  if acKeepSelectionInTables.Checked then gTorrents.Options2:=[]
+  else gTorrents.Options2:=[goNoScrollAfterSetRow];
+  Ini.WriteBool('Interface','KeepTableSelection',acKeepSelectionInTables.Checked);
 end;
 
 procedure TMainForm.gTorrentsKeyDown(Sender: TObject; var Key: Word;
@@ -3665,6 +3765,99 @@ begin
   TorrentProps(0);
 end;
 
+function TMainForm.ArgsToTrackerList(torrentObj: TJSONObject) : TStringList;
+var
+  trlist: TStringList;
+  Trackers: TJSONArray;
+  tr: TJSONObject;
+  i: integer;
+begin
+  trlist:=TStringList.Create;
+  if RpcObj.ShouldUseTrackerList then begin
+    trlist.SetText(PChar(torrentObj.Strings['trackerList']));
+  end
+  else begin
+    Trackers:=torrentObj.Arrays['trackers'];
+    for i:=0 to Trackers.Count - 1 do begin
+      tr:=Trackers[i] as TJSONObject;
+        trlist.AddObject(tr.Strings['announce'], TObject(PtrUInt(tr.Integers['id'])));
+    end;
+  end;
+  Result:=trlist;
+end;
+
+procedure TMainForm.TrackerListToArgs(parsedTrackers: TStringList; torrentSetArgs: TJSONObject; trackerEditField: TMemo);
+var
+  AddT, EditT, DelT: TJSONArray;
+  sl: TStringList;
+  i, j: integer;
+  s: string;
+begin
+  if RpcObj.ShouldUseTrackerList then begin
+    torrentSetArgs.Add('trackerList', trackerEditField.Text);
+  end
+  else begin
+    sl:=TStringList.Create;
+    try
+      sl.Assign(trackerEditField.Lines);
+      // Removing unchanged trackers
+      i:=0;
+      while i < sl.Count do begin
+        s:=Trim(sl[i]);
+        if s = '' then begin
+          sl.Delete(i);
+          continue;
+        end;
+        j:=parsedTrackers.IndexOf(s);
+        if j >= 0 then begin
+          parsedTrackers.Delete(j);
+          sl.Delete(i);
+          continue;
+        end;
+        Inc(i);
+      end;
+
+      AddT:=TJSONArray.Create;
+      EditT:=TJSONArray.Create;
+      DelT:=TJSONArray.Create;
+      try
+        for i:=0 to sl.Count - 1 do begin
+          s:=Trim(sl[i]);
+          if parsedTrackers.Count > 0 then begin
+            EditT.Add(PtrUInt(parsedTrackers.Objects[0]));
+            EditT.Add(UTF8Decode(s));
+            parsedTrackers.Delete(0);
+          end
+          else
+            AddT.Add(UTF8Decode(s));
+        end;
+
+        for i:=0 to parsedTrackers.Count - 1 do
+          DelT.Add(PtrUInt(parsedTrackers.Objects[i]));
+
+        if AddT.Count > 0 then begin
+          torrentSetArgs.Add('trackerAdd', AddT);
+          AddT:=nil;
+        end;
+        if EditT.Count > 0 then begin
+          torrentSetArgs.Add('trackerReplace', EditT);
+          EditT:=nil;
+        end;
+        if DelT.Count > 0 then begin
+          torrentSetArgs.Add('trackerRemove', DelT);
+          DelT:=nil;
+        end;
+      finally
+        DelT.Free;
+        EditT.Free;
+        AddT.Free;
+      end;
+    finally
+      sl.Free;
+    end;
+  end;
+end;
+
 procedure TMainForm.TorrentProps(PageNo: integer);
 const
   TR_RATIOLIMIT_GLOBAL    = 0; // follow the global settings
@@ -3676,26 +3869,33 @@ const
   TR_IDLELIMIT_UNLIMITED  = 2; // override the global settings, seeding regardless of activity
 
 var
-  req, args, t, tr: TJSONObject;
+  req, args, t: TJSONObject;
   i, j, id: integer;
-  ids, Trackers, AddT, EditT, DelT: TJSONArray;
+  ids: TJSONArray;
   TorrentIds: variant;
   s: string;
-  trlist, sl: TStringList;
+  trlist: TStringList;
+  trackerArg: string;
 begin
   gTorrentsClick(nil);
   id:=RpcObj.CurTorrentId;
   if id = 0 then exit;
   AppBusy;
-  trlist:=nil;
   with TTorrPropsForm.Create(Self) do
   try
     Page.ActivePageIndex:=PageNo;
     gTorrents.Tag:=1;
     gTorrents.EnsureSelectionVisible;
     TorrentIds:=GetSelectedTorrents;
+
+    if RpcObj.ShouldUseTrackerList then begin
+      trackerArg := 'trackerList';
+      txTrackers.Caption := sSeparateTiersByEmptyLine;
+    end
+    else trackerArg := 'trackers';
+
     args:=RpcObj.RequestInfo(id, ['downloadLimit', 'downloadLimitMode', 'downloadLimited', 'uploadLimit', 'uploadLimitMode', 'uploadLimited',
-                                  'name', 'maxConnectedPeers', 'seedRatioMode', 'seedRatioLimit', 'seedIdleLimit', 'seedIdleMode', 'trackers']);
+                                  'name', 'maxConnectedPeers', 'seedRatioMode', 'seedRatioLimit', 'seedIdleLimit', 'seedIdleMode', trackerArg]);
     if args = nil then begin
       CheckStatus(False);
       exit;
@@ -3768,12 +3968,7 @@ begin
         edIdleSeedLimit.Value:=t.Integers['seedIdleLimit'];
         cbIdleSeedLimitClick(nil);
 
-        trlist:=TStringList.Create;
-        Trackers:=t.Arrays['trackers'];
-        for i:=0 to Trackers.Count - 1 do begin
-          tr:=Trackers[i] as TJSONObject;
-            trlist.AddObject(UTF8Decode(tr.Strings['announce']), TObject(PtrUInt(tr.Integers['id'])));
-        end;
+        trlist:=ArgsToTrackerList(t);
         edTrackers.Lines.Assign(trlist);
       end
       else begin
@@ -3845,64 +4040,7 @@ begin
           if cbIdleSeedLimit.State = cbChecked then
             args.Add('seedIdleLimit', edIdleSeedLimit.Value);
 
-          sl:=TStringList.Create;
-          try
-            sl.Assign(edTrackers.Lines);
-            // Removing unchanged trackers
-            i:=0;
-            while i < sl.Count do begin
-              s:=Trim(sl[i]);
-              if s = '' then begin
-                sl.Delete(i);
-                continue;
-              end;
-              j:=trlist.IndexOf(s);
-              if j >= 0 then begin
-                trlist.Delete(j);
-                sl.Delete(i);
-                continue;
-              end;
-              Inc(i);
-            end;
-
-            AddT:=TJSONArray.Create;
-            EditT:=TJSONArray.Create;
-            DelT:=TJSONArray.Create;
-            try
-              for i:=0 to sl.Count - 1 do begin
-                s:=Trim(sl[i]);
-                if trlist.Count > 0 then begin
-                  EditT.Add(PtrUInt(trlist.Objects[0]));
-                  EditT.Add(UTF8Decode(s));
-                  trlist.Delete(0);
-                end
-                else
-                  AddT.Add(UTF8Decode(s));
-              end;
-
-              for i:=0 to trlist.Count - 1 do
-                DelT.Add(PtrUInt(trlist.Objects[i]));
-
-              if AddT.Count > 0 then begin
-                args.Add('trackerAdd', AddT);
-                AddT:=nil;
-              end;
-              if EditT.Count > 0 then begin
-                args.Add('trackerReplace', EditT);
-                EditT:=nil;
-              end;
-              if DelT.Count > 0 then begin
-                args.Add('trackerRemove', DelT);
-                DelT:=nil;
-              end;
-            finally
-              DelT.Free;
-              EditT.Free;
-              AddT.Free;
-            end;
-          finally
-            sl.Free;
-          end;
+          TrackerListToArgs(trlist, args, edTrackers);
         end;
 
         args.Add('peer-limit', edPeerLimit.Value);
@@ -4058,8 +4196,16 @@ end;
 
 procedure TMainForm.edSearchKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
+var
+  ctrl_or_cmd: TShiftStateEnum;
 begin
+{$ifdef darwin}
+  ctrl_or_cmd := ssMeta;
+{$else}
+  ctrl_or_cmd := ssCtrl;
+{$endif}
     if Key = VK_ESCAPE then edSearch.Text:='';
+    if (Key = VK_A) and (Shift = [ctrl_or_cmd]) then edSearch.SelectAll;
 end;
 
 procedure TMainForm.FormActivate(Sender: TObject);
@@ -4197,8 +4343,8 @@ begin
       exit;
     RpcObj.CurTorrentId:=i;
   finally
-    RpcObj.Unlock;
     if acStatusBarSizes.Checked then StatusBarSizes;
+    RpcObj.Unlock;
   end;
 
   ClearDetailsInfo(GetPageInfoType(PageInfo.ActivePage));
@@ -5673,25 +5819,7 @@ begin
       end;
 
     if s <> '' then begin
-      j:=Pos('://', s);
-      if j > 0 then
-        s:=Copy(s, j + 3, MaxInt);
-      j:=Pos('/', s);
-      if j > 0 then
-        s:=Copy(s, 1, j - 1);
-      j:=Pos('.', s);
-      if j > 0 then begin
-        ss:=Copy(s, 1, j - 1);
-        if AnsiCompareText(ss, 'bt') = 0 then
-          System.Delete(s, 1, 3)
-        else
-          if (Length(ss) = 3) and (AnsiCompareText(Copy(ss, 1, 2), 'bt') = 0) and (ss[3] in ['1'..'9']) then
-            System.Delete(s, 1, 4);
-      end;
-      j:=Pos(':', s);
-      if j > 0 then
-        System.Delete(s, j, MaxInt);
-      FTorrents[torcolTracker, row]:=UTF8Decode(s);
+      FTorrents[torcolTracker, row]:=trackeruri.Filter(s);
     end;
 
     if FieldExists[torcolPath] then
@@ -6342,13 +6470,12 @@ begin
 
   txHash.Caption:=t.Strings['hashString'];
   txComment.Caption:=UTF8Encode(t.Strings['comment']);
-  if (AnsiCompareText(Copy(txComment.Caption, 1, 7), 'http://') = 0)
-    or (AnsiCompareText(Copy(txComment.Caption, 1, 8), 'https://') = 0)
+  if CommentIsLink
   then begin
     if not Assigned(txComment.OnClick) then begin
       txComment.OnClick:=@UrlLabelClick;
       txComment.Cursor:=crHandPoint;
-      txComment.Font.Color:=clBlue;
+      SetCommentLinkColor;
       txComment.Font.Style:=[fsUnderline];
     end;
   end
@@ -6778,9 +6905,9 @@ begin
         c:=1;
       end;
       bmp.Height:=12;
-      bmp.Canvas.Brush.Color:=clWindow;
+      bmp.Canvas.Brush.Color:=GetWindowColor;
       bmp.Canvas.FillRect(0, 0, bmp.Width, bmp.Height);
-      bmp.Canvas.Brush.Color:=clHighlight;
+      bmp.Canvas.Brush.Color:=GetProgressBarColor;
       x:=0;
       s:=DecodeBase64(Pieces);
       for i:=1 to Length(s) do begin
@@ -6804,16 +6931,16 @@ begin
       if bmp <> nil then begin
         i:=bmp.Height div 3;
         FTorrentProgress.Height:=bmp.Height + 5 + i;
-        Brush.Color:=clWindow;
+        Brush.Color:=GetWindowColor;
         FillRect(0, 0, FTorrentProgress.Width, FTorrentProgress.Height);
-        Brush.Color:=clBtnShadow;
+        Brush.Color:=GetBtnShadowColor;
         R:=Rect(0, i + 3, FTorrentProgress.Width, FTorrentProgress.Height);
         FillRect(R);
         InflateRect(R, -1, -1);
         if bmp.Width > 0 then
           StretchDraw(R, bmp)
         else begin
-          Brush.Color:=clWindow;
+          Brush.Color:=GetWindowColor;
           FillRect(R);
         end;
         R:=Rect(0, 0, FTorrentProgress.Width, i + 2);
@@ -6822,13 +6949,13 @@ begin
         FTorrentProgress.Height:=14;
         R:=Rect(0, 0, FTorrentProgress.Width, FTorrentProgress.Height);
       end;
-      Brush.Color:=clBtnShadow;
+      Brush.Color:=GetBtnShadowColor;
       FillRect(R);
       InflateRect(R, -1, -1);
       x:=R.Left + Round((R.Right - R.Left)*Done/100.0);
-      Brush.Color:=clHighlight;
+      Brush.Color:=GetProgressBarColor;
       FillRect(R.Left, R.Top, x, R.Bottom);
-      Brush.Color:=clWindow;
+      Brush.Color:=GetWindowColor;
       FillRect(x, R.Top, R.Right, R.Bottom);
     end;
     if pbDownloaded.Height <> FTorrentProgress.Height then begin
@@ -6973,52 +7100,41 @@ procedure TMainform.StatusBarSizes;
 var
   MMap: TMyHashMap;
   ids, cidx: variant;
-  TotalSize, TotalDownloaded, TotalSizeToDownload, TorrentDownloaded, TorrentSizeToDownload: Int64;
+  TotalDownloaded, TotalSizeToDownload, TorrentDownloaded, TorrentSizeToDownload: Int64;
   i: Integer;
-  a, b, c, d: Int64;
 begin
-    try
-    if gTorrents.Items.Count > 0 then
-      begin
-        if gTorrents.SelCount > 0 then
-            ids := GetSelectedTorrents
-        else  ids := GetDisplayedTorrents;
-        TotalSize := 0;
-        TotalDownloaded := 0;
-        TotalSizeToDownload := 0;
+  TotalDownloaded := 0;
+  TotalSizeToDownload := 0;
 
-        MMap := TMyHashMap.Create;
-        for i:=0 to FTorrents.Count -1 do
-        begin
-          MMap[StrToInt(Ftorrents.Items[torcolTorrentId, i])] := i;
-        end;
+  if gTorrents.Items.Count > 0 then begin
 
-        for i:=VarArrayLowBound(ids, 1) to VarArrayHighBound(ids, 1) do
-        begin
-          cidx := MMap[ids[i]];
-          TotalSize             := TotalSize + FTorrents.Items[torcolSize, cidx];
-          TorrentSizeToDownload := FTorrents.Items[torcolSizetoDowload, cidx];
-          TorrentDownloaded     := TorrentSizeToDownload * (FTorrents.Items[torcolDone, cidx] / 100);
-          TotalSizeToDownload   := TotalSizeToDownload + TorrentSizeToDownload;
-          TotalDownloaded       := TotalDownloaded + TorrentDownloaded;
-        end;
-        MMap.Free;
+    if gTorrents.SelCount > 0
+      then ids := GetSelectedTorrents
+      else ids := GetDisplayedTorrents;
 
-        StatusBar.Panels[4].Text:=Format(sTotalSize,[GetHumanSize(TotalSize, 0, '?')]);
-        StatusBar.Panels[5].Text:=Format(sTotalSizeToDownload,[GetHumanSize(TotalSizeToDownload, 0, '?')]);
-        StatusBar.Panels[6].Text:=Format(sTotalDownloaded,[GetHumanSize(TotalDownloaded, 0, '?')]);
-        StatusBar.Panels[7].Text:=Format(sTotalRemain,[GetHumanSize(TotalSizeToDownload - TotalDownloaded, 0, '?')]);
-    end
-    else
+    MMap := TMyHashMap.Create;
+    for i:=0 to FTorrents.Count -1 do
     begin
-      StatusBar.Panels[4].Text:=Format(sTotalSize,[GetHumanSize(0, 0, '?')]);
-      StatusBar.Panels[5].Text:=Format(sTotalSizeToDownload,[GetHumanSize(0, 0, '?')]);
-      StatusBar.Panels[6].Text:=Format(sTotalDownloaded,[GetHumanSize(0, 0, '?')]);
-      StatusBar.Panels[7].Text:=Format(sTotalRemain,[GetHumanSize(0, 0, '?')]);
+      MMap[StrToInt(Ftorrents.Items[torcolTorrentId, i])] := i;
     end;
-    except
-        gTorrents.Refresh;
+
+    for i:=VarArrayLowBound(ids, 1) to VarArrayHighBound(ids, 1) - 1 do
+    begin
+      cidx := MMap[ids[i]];
+      TorrentSizeToDownload := FTorrents.Items[torcolSizetoDowload, cidx];
+      TorrentDownloaded     := TorrentSizeToDownload * (FTorrents.Items[torcolDone, cidx] / 100);
+      TotalSizeToDownload   += TorrentSizeToDownload;
+      TotalDownloaded       += TorrentDownloaded;
     end;
+    MMap.Free;
+  end;
+
+  if gTorrents.SelCount > 0
+    then StatusBar.Panels[4].Text:=Format(sTotalSizeSelected,[GetHumanSize(TotalSizeToDownload, 0, '?')])
+    else StatusBar.Panels[4].Text:=Format(sTotalSizeFiltered,[GetHumanSize(TotalSizeToDownload, 0, '?')]);
+
+  StatusBar.Panels[5].Text:=Format(sTotalDownloaded,[GetHumanSize(TotalDownloaded, 0, '?')]);
+  StatusBar.Panels[6].Text:=Format(sTotalRemain,[GetHumanSize(TotalSizeToDownload - TotalDownloaded, 0, '?')]);
 
 end;
 

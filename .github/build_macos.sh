@@ -104,6 +104,11 @@ package_openssl() {
   install_name_tool -change "$libcrypto" '@executable_path/libcrypto.3.dylib' "${bindir}/libssl.3.dylib"
 }
 
+my_lazbuild() {
+  lazbuild --compiler=${fpc_installdir}/lib/fpc/3.2.3/${compiler} \
+    --lazarusdir=${sdk_dir}/lazarus "$@"
+}
+
 if [[ -d $sdk_dir ]]; then
   export PATH=${sdk_dir}/lazarus:${fpc_installdir}/bin:${fpc_basepath}:$PATH
   make_fpc_cfg
@@ -128,8 +133,12 @@ else
   compiler=ppcx64
 fi
 
-lazbuild --compiler=${fpc_installdir}/lib/fpc/3.2.3/${compiler} --build-mode=Release \
-  --ws=cocoa --lazarusdir=${sdk_dir}/lazarus transgui.lpi
+pushd test
+my_lazbuild transguitest.lpi
+./units/transguitest -a
+popd
+
+my_lazbuild --build-mode=Release --ws=cocoa transgui.lpi
 
 mkdir transgui_$compiler
 cd transgui_$compiler

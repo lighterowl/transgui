@@ -273,9 +273,6 @@ inherited MainForm: TMainForm
       end    
       item
         Width = 120
-      end    
-      item
-        Width = 120
       end>
     SimplePanel = False
     OnMouseDown = StatusBarMouseDown
@@ -2033,15 +2030,12 @@ inherited MainForm: TMainForm
       end
       object MenuItem94: TMenuItem
         Action = acFilterPane
-        ShortCut = 122
       end
       object MenuItem95: TMenuItem
         Action = acInfoPane
-        ShortCut = 123
       end
       object MenuItem501: TMenuItem
         Action = acToolbarShow
-        ShortCut = 16506
       end
       object MenuItem103: TMenuItem
         Action = acBigToolbar
@@ -2049,13 +2043,18 @@ inherited MainForm: TMainForm
       end
       object MenuItem502: TMenuItem
         Action = acMenuShow
-        ShortCut = 16507
       end
       object MenuItem96: TMenuItem
         Action = acStatusBar
       end
       object MenuItem102: TMenuItem
         Action = acStatusBarSizes
+      end
+      object Separator1: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem108: TMenuItem
+        Action = acKeepSelectionInTables
       end
     end
     object miTools: TMenuItem
@@ -2517,12 +2516,14 @@ inherited MainForm: TMainForm
       Caption = 'Filter pane'
       Checked = True
       OnExecute = acFilterPaneExecute
+      ShortCut = 122
     end
     object acInfoPane: TAction
       Category = 'View'
       Caption = 'Info pane'
       Checked = True
       OnExecute = acInfoPaneExecute
+      ShortCut = 123
     end
     object acStatusBar: TAction
       Category = 'View'
@@ -2551,12 +2552,14 @@ inherited MainForm: TMainForm
       Caption = 'Toolbar'
       Checked = True
       OnExecute = acToolbarShowExecute
+      ShortCut = 16506
     end
     object acMenuShow: TAction
       Category = 'View'
       Caption = 'Menu'
       Checked = True
       OnExecute = acMenuShowExecute
+      ShortCut = 16507
     end
     object acBigToolbar: TAction
       Caption = 'acBigToolbar'
@@ -2572,6 +2575,11 @@ inherited MainForm: TMainForm
       Category = 'View'
       Caption = 'Label grouping'
       OnExecute = acLabelGroupingExecute
+    end
+    object acKeepSelectionInTables: TAction
+      Category = 'View'
+      Caption = 'Keep selection in tables'
+      OnExecute = acKeepSelectionInTablesExecute
     end
   end
   object TorrentsListTimer: TTimer[9]
