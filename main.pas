@@ -793,7 +793,7 @@ type
     procedure OnThemeChanged;
     function CommentIsLink: Boolean;
     function ArgsToTrackerList(torrentObj: TJSONObject) : TStringList;
-    procedure TrackerListToArgs(torrentSetArgs: TJSONObject; trackerEditField: TMemo);
+    procedure TrackerListToArgs(parsedTrackers: TStringList; torrentSetArgs: TJSONObject; trackerEditField: TMemo);
   public
     procedure FillTorrentsList(list: TJSONArray);
     procedure FillPeersList(list: TJSONArray);
@@ -3786,15 +3786,14 @@ begin
   Result:=trlist;
 end;
 
-procedure TMainForm.TrackerListToArgs(torrentSetArgs: TJSONObject; trackerEditField: TMemo);
+procedure TMainForm.TrackerListToArgs(parsedTrackers: TStringList; torrentSetArgs: TJSONObject; trackerEditField: TMemo);
 var
   AddT, EditT, DelT: TJSONArray;
-  sl, trlist: TStringList;
+  sl: TStringList;
   i, j: integer;
   s: string;
 begin
   if RpcObj.ShouldUseTrackerList then begin
-    writeln(trackerEditField.Text);
     torrentSetArgs.Add('trackerList', trackerEditField.Text);
   end
   else begin
@@ -3809,9 +3808,9 @@ begin
           sl.Delete(i);
           continue;
         end;
-        j:=trlist.IndexOf(s);
+        j:=parsedTrackers.IndexOf(s);
         if j >= 0 then begin
-          trlist.Delete(j);
+          parsedTrackers.Delete(j);
           sl.Delete(i);
           continue;
         end;
@@ -3824,17 +3823,17 @@ begin
       try
         for i:=0 to sl.Count - 1 do begin
           s:=Trim(sl[i]);
-          if trlist.Count > 0 then begin
-            EditT.Add(PtrUInt(trlist.Objects[0]));
+          if parsedTrackers.Count > 0 then begin
+            EditT.Add(PtrUInt(parsedTrackers.Objects[0]));
             EditT.Add(UTF8Decode(s));
-            trlist.Delete(0);
+            parsedTrackers.Delete(0);
           end
           else
             AddT.Add(UTF8Decode(s));
         end;
 
-        for i:=0 to trlist.Count - 1 do
-          DelT.Add(PtrUInt(trlist.Objects[i]));
+        for i:=0 to parsedTrackers.Count - 1 do
+          DelT.Add(PtrUInt(parsedTrackers.Objects[i]));
 
         if AddT.Count > 0 then begin
           torrentSetArgs.Add('trackerAdd', AddT);
@@ -4041,7 +4040,7 @@ begin
           if cbIdleSeedLimit.State = cbChecked then
             args.Add('seedIdleLimit', edIdleSeedLimit.Value);
 
-          TrackerListToArgs(args, edTrackers);
+          TrackerListToArgs(trlist, args, edTrackers);
         end;
 
         args.Add('peer-limit', edPeerLimit.Value);
