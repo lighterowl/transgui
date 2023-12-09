@@ -2,11 +2,9 @@ name: macOS Build
 
 on:
   push:
-    branches:
-      - master
+    branches: [main, develop]
   pull_request:
-    branches:
-      - master
+    branches: [main, develop]
 
 jobs:
   build-macos-arm64:
