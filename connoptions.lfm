@@ -18,7 +18,7 @@ inherited ConnOptionsForm: TConnOptionsForm
   Position = poMainFormCenter
   object Page: TPageControl[0]
     Left = 8
-    Height = 329
+    Height = 283
     Top = 69
     Width = 513
     ActivePage = tabConnection
@@ -174,30 +174,30 @@ inherited ConnOptionsForm: TConnOptionsForm
       end
       object txCertFile: TLabel
         Left = 8
-        Height = 18
+        Height = 15
         Top = 245
-        Width = 105
+        Width = 91
         Caption = 'Client Certificate:'
         ParentColor = False
       end
       object edCertFile: TEdit
         Left = 180
-        Height = 32
+        Height = 23
         Top = 242
         Width = 316
         TabOrder = 10
       end
       object txCertPass: TLabel
         Left = 8
-        Height = 18
+        Height = 15
         Top = 274
-        Width = 72
+        Width = 61
         Caption = 'Private Key:'
         ParentColor = False
       end
       object edCertPass: TEdit
         Left = 180
-        Height = 32
+        Height = 23
         Top = 271
         Width = 316
         EchoMode = emPassword
@@ -213,7 +213,7 @@ inherited ConnOptionsForm: TConnOptionsForm
         Left = 8
         Height = 15
         Top = 37
-        Width = 66
+        Width = 67
         Caption = 'Proxy server:'
         ParentColor = False
       end
@@ -221,7 +221,7 @@ inherited ConnOptionsForm: TConnOptionsForm
         Left = 8
         Height = 15
         Top = 65
-        Width = 57
+        Width = 58
         Caption = 'Proxy port:'
         ParentColor = False
       end
@@ -229,7 +229,7 @@ inherited ConnOptionsForm: TConnOptionsForm
         Left = 24
         Height = 15
         Top = 116
-        Width = 90
+        Width = 91
         Caption = 'Proxy user name:'
         ParentColor = False
       end
@@ -237,7 +237,7 @@ inherited ConnOptionsForm: TConnOptionsForm
         Left = 24
         Height = 15
         Top = 144
-        Width = 85
+        Width = 86
         Caption = 'Proxy password:'
         ParentColor = False
       end
@@ -413,7 +413,7 @@ inherited ConnOptionsForm: TConnOptionsForm
         Left = 18
         Height = 19
         Top = 160
-        Width = 287
+        Width = 286
         Caption = 'Activate the translation of the Transmission strings'
         TabOrder = 2
         Visible = False

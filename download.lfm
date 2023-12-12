@@ -20,25 +20,25 @@ inherited DownloadForm: TDownloadForm
   Position = poMainFormCenter
   object txFileName: TLabel[0]
     Left = 12
-    Height = 14
+    Height = 15
     Top = 8
-    Width = 54
+    Width = 60
     Caption = 'txFileName'
     ParentColor = False
   end
   object txBytes: TLabel[1]
     Left = 12
-    Height = 14
+    Height = 15
     Top = 28
     Width = 38
     Caption = 'txBytes'
     ParentColor = False
   end
   object txPercent: TLabel[2]
-    Left = 344
-    Height = 14
+    Left = 342
+    Height = 15
     Top = 28
-    Width = 48
+    Width = 50
     Alignment = taRightJustify
     Anchors = [akTop, akRight]
     Caption = 'txPercent'
@@ -46,7 +46,7 @@ inherited DownloadForm: TDownloadForm
   end
   object btCancel: TButton[3]
     Left = 160
-    Height = 23
+    Height = 25
     Top = 72
     Width = 75
     AutoSize = True
@@ -70,7 +70,7 @@ inherited DownloadForm: TDownloadForm
   object UpdateTimer: TTimer[5]
     Interval = 300
     OnTimer = UpdateTimerTimer
-    left = 36
-    top = 68
+    Left = 36
+    Top = 68
   end
 end
