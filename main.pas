@@ -3651,10 +3651,10 @@ end;
 
 procedure TMainForm.acKeepSelectionInTablesExecute(Sender: TObject);
 begin
-  {acKeepSelectionInTables.Checked := not acKeepSelectionInTables.Checked;
+  acKeepSelectionInTables.Checked := not acKeepSelectionInTables.Checked;
   if acKeepSelectionInTables.Checked then gTorrents.Options2:=[]
   else gTorrents.Options2:=[goNoScrollAfterSetRow];
-  Ini.WriteBool('Interface','KeepTableSelection',acKeepSelectionInTables.Checked);}
+  Ini.WriteBool('Interface','KeepTableSelection',acKeepSelectionInTables.Checked);
 end;
 
 procedure TMainForm.gTorrentsKeyDown(Sender: TObject; var Key: Word;
