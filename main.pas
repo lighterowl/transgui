@@ -4250,6 +4250,9 @@ begin
         else Key := KeyPressed;
         end;
     end;
+{$ifdef darwin}
+    if (Shift = [ssMeta]) and (Key = VK_M) then Application.Minimize;
+{$endif}
 
 end;
 
