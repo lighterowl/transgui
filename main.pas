@@ -1501,11 +1501,14 @@ procedure TMainForm.ProcessIniShortCuts;
 
   procedure FixupUnsupportedShortCutKeys;
   begin
+{$ifdef darwin}
     // mac keyboards don't have the insert key but default shortcut assignments
     // in .lfm seem to be for all platforms so we have to fix at runtime.
-{$ifdef darwin}
     if acAddTorrent.ShortCut = VK_INSERT then acAddTorrent.ShortCut := VK_F5;
     if (acAddLink.ShortCut and 255) = VK_INSERT then acAddLink.ShortCut := scShift or VK_F5;
+
+    // conflicts with the system-global Meta+H shortcut for "hide window"
+    if (acSetHighPriority.ShortCut and 255) = VK_H then acSetHighPriority.ShortCut := scMeta or VK_9;
 {$endif}
   end;
 
@@ -4247,6 +4250,9 @@ begin
         else Key := KeyPressed;
         end;
     end;
+{$ifdef darwin}
+    if (Shift = [ssMeta]) and (Key = VK_M) then Application.Minimize;
+{$endif}
 
 end;
 
