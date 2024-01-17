@@ -4706,16 +4706,18 @@ end;
 procedure TMainForm.PageControl1DragDrop(Sender, Source: TObject; X, Y: Integer
   );
 var
-  new_page : TTabSheet;
+  pg : TTabSheet;
 begin
-  PageInfo.ActivePage.PageControl := PageControl1;
+  pg := PageInfo.ActivePage;
+  pg.Parent := PageControl1;
+  pg.Visible:= True;
+  pg.TabVisible := True;
 end;
 
 procedure TMainForm.PageControl1DragOver(Sender, Source: TObject; X,
   Y: Integer; State: TDragState; var Accept: Boolean);
 begin
-  if (Source = PageInfo) then Accept := True
-  else Accept := False;
+  Accept := ((Source = PageInfo) and (PageInfo.PageCount >= 2));
 end;
 
 procedure TMainForm.PageInfoResize(Sender: TObject);
