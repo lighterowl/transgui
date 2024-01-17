@@ -285,8 +285,11 @@ type
     ApplicationProperties: TApplicationProperties;
     MenuItem501: TMenuItem;
     MenuItem502: TMenuItem;
+    PageControl1: TPageControl;
+    Panel1: TPanel;
     SearchToolbar: TToolBar;
     Separator1: TMenuItem;
+    Splitter1: TSplitter;
     tbSearchCancel: TToolButton;
     LocalWatchTimer: TTimer;
     ToolButton10: TToolButton;
@@ -615,6 +618,7 @@ type
       );
     procedure lvFilesMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
+    procedure lvFilesStartDrag(Sender: TObject; var DragObject: TDragObject);
     procedure MenuShowExecute(Sender: TObject);
     procedure acToolbarShowExecute(Sender: TObject);
     procedure acTorrentPropsExecute(Sender: TObject);
@@ -659,7 +663,11 @@ type
     procedure MainToolBarContextPopup(Sender: TObject; MousePos: TPoint; var Handled: Boolean);
     procedure MenuItem101Click(Sender: TObject);
     procedure miHomePageClick(Sender: TObject);
+    procedure PageControl1DragDrop(Sender, Source: TObject; X, Y: Integer);
+    procedure PageControl1DragOver(Sender, Source: TObject; X, Y: Integer;
+      State: TDragState; var Accept: Boolean);
     procedure PageInfoResize(Sender: TObject);
+    procedure PageInfoStartDrag(Sender: TObject; var DragObject: TDragObject);
     procedure panReconnectResize(Sender: TObject);
     procedure pbDownloadedPaint(Sender: TObject);
     procedure StatusBarMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
@@ -3745,6 +3753,12 @@ begin
   if Button = mbRight then pmFiles.PopUp;
 end;
 
+procedure TMainForm.lvFilesStartDrag(Sender: TObject;
+  var DragObject: TDragObject);
+begin
+
+end;
+
 procedure TMainForm.MenuShowExecute(Sender: TObject);
 begin
   acMenuShow.Checked:=not acMenuShow.Checked;
@@ -4689,10 +4703,31 @@ begin
   GoHomePage;
 end;
 
+procedure TMainForm.PageControl1DragDrop(Sender, Source: TObject; X, Y: Integer
+  );
+var
+  new_page : TTabSheet;
+begin
+  PageInfo.ActivePage.PageControl := PageControl1;
+end;
+
+procedure TMainForm.PageControl1DragOver(Sender, Source: TObject; X,
+  Y: Integer; State: TDragState; var Accept: Boolean);
+begin
+  if (Source = PageInfo) then Accept := True
+  else Accept := False;
+end;
+
 procedure TMainForm.PageInfoResize(Sender: TObject);
 begin
   if FDetailsWait.Visible then
     CenterDetailsWait;
+end;
+
+procedure TMainForm.PageInfoStartDrag(Sender: TObject;
+  var DragObject: TDragObject);
+begin
+
 end;
 
 procedure TMainForm.panReconnectResize(Sender: TObject);

@@ -87,7 +87,7 @@ begin
         TButtonPanel(C).HandleNeeded;
         w:=0;
         h:=0;
-        THackControl(C).CalculatePreferredSize(w, h, True);
+        //THackControl(C).CalculatePreferredSize(w, h, True);
       end
       else
         h:=Height;

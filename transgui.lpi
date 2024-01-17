@@ -535,11 +535,13 @@
         <StackChecks Value="True"/>
       </Checks>
       <VerifyObjMethodCallValidity Value="True"/>
+      <Optimizations>
+        <OptimizationLevel Value="0"/>
+      </Optimizations>
     </CodeGeneration>
     <Linking>
       <Debugging>
         <DebugInfoType Value="dsDwarf3"/>
-        <UseHeaptrc Value="True"/>
         <TrashVariables Value="True"/>
         <UseExternalDbgSyms Value="True"/>
       </Debugging>
@@ -564,15 +566,19 @@
     <Exceptions>
       <Item>
         <Name Value="EInvalidCast"/>
+        <Enabled Value="False"/>
       </Item>
       <Item>
         <Name Value="RunError(219)"/>
+        <Enabled Value="False"/>
       </Item>
       <Item>
         <Name Value="RunError(216)"/>
+        <Enabled Value="False"/>
       </Item>
       <Item>
         <Name Value="EAccessViolation"/>
+        <Enabled Value="False"/>
       </Item>
     </Exceptions>
   </Debugging>

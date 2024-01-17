@@ -1,7 +1,7 @@
 inherited MainForm: TMainForm
-  Left = 1468
+  Left = 463
   Height = 702
-  Top = 126
+  Top = 50
   Width = 984
   HorzScrollBar.Page = 740
   VertScrollBar.Page = 420
@@ -277,814 +277,7 @@ inherited MainForm: TMainForm
     SimplePanel = False
     OnMouseDown = StatusBarMouseDown
   end
-  object PageInfo: TPageControl[2]
-    Left = 0
-    Height = 326
-    Top = 333
-    Width = 984
-    ActivePage = tabGeneral
-    Align = alBottom
-    Constraints.MinHeight = 50
-    Images = ImageList16
-    TabIndex = 0
-    TabOrder = 1
-    OnChange = PageInfoChange
-    OnResize = PageInfoResize
-    object tabGeneral: TTabSheet
-      Caption = 'General'
-      ClientHeight = 298
-      ClientWidth = 976
-      ImageIndex = 4
-      object sbGenInfo: TScrollBox
-        Left = 0
-        Height = 272
-        Top = 26
-        Width = 976
-        HorzScrollBar.Page = 722
-        VertScrollBar.Page = 268
-        Align = alClient
-        ClientHeight = 268
-        ClientWidth = 955
-        TabOrder = 0
-        object panGeneralInfo: TPanel
-          Left = 0
-          Height = 120
-          Top = 153
-          Width = 955
-          Align = alTop
-          BevelOuter = bvNone
-          ChildSizing.LeftRightSpacing = 4
-          ChildSizing.TopBottomSpacing = 4
-          ChildSizing.HorizontalSpacing = 16
-          ChildSizing.VerticalSpacing = 4
-          ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
-          ChildSizing.ControlsPerLine = 4
-          ClientHeight = 120
-          ClientWidth = 955
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 0
-          object txTorrentNameLabel: TLabel
-            Left = 4
-            Height = 15
-            Top = 4
-            Width = 35
-            Caption = 'Name:'
-            ParentColor = False
-          end
-          object txTorrentName: TLabel
-            Left = 181
-            Height = 15
-            Top = 4
-            Width = 79
-            Caption = 'txTorrentName'
-            ParentColor = False
-            ShowAccelChar = False
-          end
-          object txCreatedLabel: TLabel
-            Left = 381
-            Height = 15
-            Top = 4
-            Width = 61
-            Caption = 'Created on:'
-            ParentColor = False
-          end
-          object txCreated: TLabel
-            Left = 578
-            Height = 15
-            Top = 4
-            Width = 51
-            Caption = 'txCreated'
-            ParentColor = False
-          end
-          object txTotalSizeLabel: TLabel
-            Left = 4
-            Height = 15
-            Top = 22
-            Width = 50
-            Caption = 'Total size:'
-            ParentColor = False
-          end
-          object txTotalSize: TLabel
-            Left = 181
-            Height = 15
-            Top = 22
-            Width = 55
-            Caption = 'txTotalSize'
-            ParentColor = False
-          end
-          object txPiecesLabel: TLabel
-            Left = 381
-            Height = 15
-            Top = 22
-            Width = 36
-            Caption = 'Pieces:'
-            ParentColor = False
-          end
-          object txPieces: TLabel
-            Left = 578
-            Height = 15
-            Top = 22
-            Width = 43
-            Caption = 'txPieces'
-            ParentColor = False
-          end
-          object txHashLabel: TLabel
-            Left = 4
-            Height = 15
-            Top = 40
-            Width = 30
-            Caption = 'Hash:'
-            ParentColor = False
-          end
-          object txHash: TLabel
-            Left = 181
-            Height = 15
-            Top = 40
-            Width = 37
-            Caption = 'txHash'
-            ParentColor = False
-            ShowAccelChar = False
-          end
-          object txCommentLabel: TLabel
-            Left = 381
-            Height = 14
-            Top = 40
-            Width = 181
-            AutoSize = False
-            Caption = 'Comment:'
-            ParentColor = False
-          end
-          object txComment: TLabel
-            Left = 578
-            Height = 15
-            Top = 40
-            Width = 64
-            Caption = 'txComment'
-            ParentColor = False
-            ShowAccelChar = False
-          end
-          object txAddedOnLabel: TLabel
-            Left = 4
-            Height = 15
-            Top = 58
-            Width = 55
-            Caption = 'Added on:'
-            ParentColor = False
-          end
-          object txAddedOn: TLabel
-            Left = 181
-            Height = 15
-            Top = 58
-            Width = 61
-            Caption = 'txAddedOn'
-            ParentColor = False
-          end
-          object txCompletedOnLabel: TLabel
-            Left = 381
-            Height = 15
-            Top = 58
-            Width = 79
-            Caption = 'Completed on:'
-            ParentColor = False
-          end
-          object txCompletedOn: TLabel
-            Left = 578
-            Height = 15
-            Top = 58
-            Width = 85
-            Caption = 'txCompletedOn'
-            ParentColor = False
-          end
-          object txMagLabel: TLabel
-            Left = 4
-            Height = 15
-            Top = 86
-            Width = 69
-            Caption = 'Magnet Link:'
-            ParentColor = False
-          end
-          object txMagnetLink: TEdit
-            Left = 179
-            Height = 23
-            Top = 80
-            Width = 195
-            AutoSize = False
-            AutoSelect = False
-            BorderStyle = bsNone
-            ReadOnly = True
-            TabOrder = 0
-          end
-          object txLabelsLabel: TLabel
-            Left = 381
-            Height = 15
-            Top = 86
-            Width = 36
-            Caption = 'Labels:'
-            ParentColor = False
-          end
-          object txLabels: TLabel
-            Left = 578
-            Height = 15
-            Top = 86
-            Width = 43
-            Caption = 'txLabels'
-            ParentColor = False
-          end
-        end
-        object panTransfer: TPanel
-          Left = 0
-          Height = 111
-          Top = 21
-          Width = 955
-          Align = alTop
-          BevelOuter = bvNone
-          ChildSizing.LeftRightSpacing = 4
-          ChildSizing.TopBottomSpacing = 4
-          ChildSizing.HorizontalSpacing = 16
-          ChildSizing.VerticalSpacing = 4
-          ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
-          ChildSizing.ControlsPerLine = 6
-          ClientHeight = 111
-          ClientWidth = 955
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 1
-          object txStatusLabel: TLabel
-            Left = 4
-            Height = 15
-            Top = 4
-            Width = 35
-            Caption = 'Status:'
-            ParentColor = False
-          end
-          object txStatus: TLabel
-            Left = 140
-            Height = 15
-            Top = 4
-            Width = 42
-            Caption = 'txStatus'
-            ParentColor = False
-          end
-          object txErrorLabel: TLabel
-            Left = 262
-            Height = 15
-            Top = 4
-            Width = 28
-            Caption = 'Error:'
-            ParentColor = False
-          end
-          object txError: TLabel
-            Left = 407
-            Height = 15
-            Top = 4
-            Width = 35
-            Caption = 'txError'
-            ParentColor = False
-          end
-          object txRemainingLabel: TLabel
-            Left = 541
-            Height = 15
-            Top = 4
-            Width = 60
-            Caption = 'Remaining:'
-            ParentColor = False
-          end
-          object txRemaining: TLabel
-            Left = 651
-            Height = 15
-            Top = 4
-            Width = 67
-            Caption = 'txRemaining'
-            ParentColor = False
-          end
-          object txDownloadedLabel: TLabel
-            Left = 4
-            Height = 15
-            Top = 22
-            Width = 70
-            Caption = 'Downloaded:'
-            ParentColor = False
-          end
-          object txDownloaded: TLabel
-            Left = 140
-            Height = 15
-            Top = 22
-            Width = 77
-            Caption = 'txDownloaded'
-            ParentColor = False
-          end
-          object txUploadedLabel: TLabel
-            Left = 262
-            Height = 15
-            Top = 22
-            Width = 54
-            Caption = 'Uploaded:'
-            ParentColor = False
-          end
-          object txUploaded: TLabel
-            Left = 407
-            Height = 15
-            Top = 22
-            Width = 61
-            Caption = 'txUploaded'
-            ParentColor = False
-          end
-          object txWastedLabel: TLabel
-            Left = 541
-            Height = 15
-            Top = 22
-            Width = 42
-            Caption = 'Wasted:'
-            ParentColor = False
-          end
-          object txWasted: TLabel
-            Left = 651
-            Height = 15
-            Top = 22
-            Width = 49
-            Caption = 'txWasted'
-            ParentColor = False
-          end
-          object txDownSpeedLabel: TLabel
-            Left = 4
-            Height = 15
-            Top = 40
-            Width = 91
-            Caption = 'Download speed:'
-            ParentColor = False
-          end
-          object txDownSpeed: TLabel
-            Left = 140
-            Height = 15
-            Top = 40
-            Width = 73
-            Caption = 'txDownSpeed'
-            ParentColor = False
-          end
-          object txUpSpeedLabel: TLabel
-            Left = 262
-            Height = 15
-            Top = 40
-            Width = 75
-            Caption = 'Upload speed:'
-            ParentColor = False
-          end
-          object txUpSpeed: TLabel
-            Left = 407
-            Height = 15
-            Top = 40
-            Width = 57
-            Caption = 'txUpSpeed'
-            ParentColor = False
-          end
-          object txRatioLabel: TLabel
-            Left = 541
-            Height = 15
-            Top = 40
-            Width = 59
-            Caption = 'Share ratio:'
-            ParentColor = False
-          end
-          object txRatio: TLabel
-            Left = 651
-            Height = 15
-            Top = 40
-            Width = 37
-            Caption = 'txRatio'
-            ParentColor = False
-          end
-          object txDownLimitLabel: TLabel
-            Left = 4
-            Height = 15
-            Top = 58
-            Width = 61
-            Caption = 'Down limit:'
-            ParentColor = False
-          end
-          object txDownLimit: TLabel
-            Left = 140
-            Height = 15
-            Top = 58
-            Width = 68
-            Caption = 'txDownLimit'
-            ParentColor = False
-          end
-          object txUpLimitLabel: TLabel
-            Left = 262
-            Height = 15
-            Top = 58
-            Width = 45
-            Caption = 'Up limit:'
-            ParentColor = False
-          end
-          object txUpLimit: TLabel
-            Left = 407
-            Height = 15
-            Top = 58
-            Width = 52
-            Caption = 'txUpLimit'
-            ParentColor = False
-          end
-          object txDummy: TLabel
-            Left = 541
-            Height = 1
-            Top = 58
-            Width = 1
-            ParentColor = False
-          end
-          object txDummy1: TLabel
-            Left = 651
-            Height = 1
-            Top = 58
-            Width = 1
-            ParentColor = False
-          end
-          object txSeedsLabel: TLabel
-            Left = 4
-            Height = 15
-            Top = 76
-            Width = 33
-            Caption = 'Seeds:'
-            ParentColor = False
-          end
-          object txSeeds: TLabel
-            Left = 140
-            Height = 15
-            Top = 76
-            Width = 40
-            Caption = 'txSeeds'
-            ParentColor = False
-          end
-          object txPeersLabel: TLabel
-            Left = 262
-            Height = 15
-            Top = 76
-            Width = 31
-            Caption = 'Peers:'
-            ParentColor = False
-          end
-          object txPeers: TLabel
-            Left = 407
-            Height = 15
-            Top = 76
-            Width = 38
-            Caption = 'txPeers'
-            ParentColor = False
-          end
-          object txMaxPeersLabel: TLabel
-            Left = 541
-            Height = 15
-            Top = 76
-            Width = 57
-            Caption = 'Max peers:'
-            ParentColor = False
-          end
-          object txMaxPeers: TLabel
-            Left = 651
-            Height = 15
-            Top = 76
-            Width = 61
-            Caption = 'txMaxPeers'
-            ParentColor = False
-          end
-          object txTrackerLabel: TLabel
-            Left = 4
-            Height = 15
-            Top = 94
-            Width = 40
-            Caption = 'Tracker:'
-            ParentColor = False
-          end
-          object txTracker: TLabel
-            Left = 140
-            Height = 15
-            Top = 94
-            Width = 47
-            Caption = 'txTracker'
-            ParentColor = False
-          end
-          object txTrackerUpdateLabel: TLabel
-            Left = 262
-            Height = 15
-            Top = 94
-            Width = 97
-            Caption = 'Tracker update on:'
-            ParentColor = False
-          end
-          object txTrackerUpdate: TLabel
-            Left = 407
-            Height = 15
-            Top = 94
-            Width = 85
-            Caption = 'txTrackerUpdate'
-            ParentColor = False
-          end
-          object txLastActiveLabel: TLabel
-            Left = 541
-            Height = 15
-            Top = 94
-            Width = 58
-            Caption = 'Last active:'
-            ParentColor = False
-          end
-          object txLastActive: TLabel
-            Left = 651
-            Height = 15
-            Top = 94
-            Width = 64
-            Caption = 'txLastActive'
-            ParentColor = False
-          end
-        end
-        object txTransferHeader: TPanel
-          Left = 2
-          Height = 17
-          Top = 2
-          Width = 951
-          Align = alTop
-          Alignment = taLeftJustify
-          BorderSpacing.Around = 2
-          BevelOuter = bvNone
-          Caption = 'Transfer'
-          Font.Height = -13
-          Font.Style = [fsBold]
-          ParentColor = False
-          ParentFont = False
-          TabOrder = 2
-        end
-        object txTorrentHeader: TPanel
-          Left = 2
-          Height = 17
-          Top = 134
-          Width = 951
-          Align = alTop
-          Alignment = taLeftJustify
-          BorderSpacing.Around = 2
-          BevelOuter = bvNone
-          Caption = 'Torrent'
-          Font.Height = -13
-          Font.Style = [fsBold]
-          ParentColor = False
-          ParentFont = False
-          TabOrder = 3
-        end
-      end
-      object panProgress: TPanel
-        Left = 0
-        Height = 26
-        Top = 0
-        Width = 976
-        Align = alTop
-        BevelOuter = bvNone
-        ClientHeight = 26
-        ClientWidth = 976
-        TabOrder = 1
-        object txDownProgressLabel: TLabel
-          Left = 8
-          Height = 26
-          Top = 0
-          Width = 70
-          Align = alLeft
-          BorderSpacing.Left = 8
-          Caption = 'Downloaded:'
-          Layout = tlCenter
-          ParentColor = False
-        end
-        object txDownProgress: TLabel
-          Left = 931
-          Height = 26
-          Top = 0
-          Width = 37
-          Align = alRight
-          Alignment = taRightJustify
-          Anchors = [akTop, akRight]
-          BorderSpacing.Right = 8
-          Caption = '100.0%'
-          Layout = tlCenter
-          ParentColor = False
-        end
-        object pbDownloaded: TPaintBox
-          Left = 84
-          Height = 14
-          Top = 6
-          Width = 841
-          Align = alClient
-          Anchors = [akTop, akLeft, akRight]
-          BorderSpacing.Around = 6
-          OnPaint = pbDownloadedPaint
-        end
-      end
-    end
-    object tabTrackers: TTabSheet
-      Caption = 'Trackers'
-      ClientHeight = 298
-      ClientWidth = 976
-      ImageIndex = 5
-      object lvTrackers: TVarGrid
-        Left = 0
-        Height = 298
-        Top = 0
-        Width = 976
-        Align = alClient
-        Columns = <        
-          item
-            Title.Caption = 'Name'
-            Width = 200
-          end        
-          item
-            Title.Caption = 'Status'
-            Width = 200
-          end        
-          item
-            Title.Caption = 'Update in'
-            Width = 80
-          end        
-          item
-            Title.Caption = 'Seeds'
-          end>
-        FixedCols = 0
-        Options = [goFixedVertLine, goFixedHorzLine, goColSizing, goColMoving, goRowSelect, goThumbTracking, goDblClickAutoSize, goHeaderHotTracking, goHeaderPushedLook]
-        PopupMenu = pmTrackers
-        RowCount = 1
-        TabOrder = 0
-        OnDblClick = lvTrackersDblClick
-        OnKeyDown = lvTrackersKeyDown
-        SortColumn = 0
-        HideSelection = True
-        OnCellAttributes = lvTrackersCellAttributes
-      end
-    end
-    object tabPeers: TTabSheet
-      Caption = 'Peers'
-      ClientHeight = 298
-      ClientWidth = 976
-      ImageIndex = 6
-      object lvPeers: TVarGrid
-        Left = 0
-        Height = 298
-        Top = 0
-        Width = 976
-        Align = alClient
-        Columns = <        
-          item
-            Title.Caption = 'Host'
-            Width = 150
-          end        
-          item
-            Alignment = taRightJustify
-            Title.Caption = 'Port'
-            Width = 0
-            Visible = False
-          end        
-          item
-            Title.Caption = 'Country'
-            Width = 100
-          end        
-          item
-            Title.Caption = 'Client'
-            Width = 150
-          end        
-          item
-            Title.Caption = 'Flags'
-            Width = 70
-          end        
-          item
-            Alignment = taRightJustify
-            Title.Caption = 'Have'
-          end        
-          item
-            Alignment = taRightJustify
-            Title.Caption = 'Up speed'
-            Width = 80
-          end        
-          item
-            Alignment = taRightJustify
-            Title.Caption = 'Down speed'
-            Width = 80
-          end>
-        FixedCols = 0
-        Options = [goFixedVertLine, goFixedHorzLine, goColSizing, goColMoving, goRowSelect, goThumbTracking, goDblClickAutoSize, goHeaderHotTracking, goHeaderPushedLook]
-        PopupMenu = pmPeers
-        RowCount = 1
-        TabOrder = 0
-        Images = imgFlags
-        SortColumn = 0
-        HideSelection = True
-        OnCellAttributes = lvPeersCellAttributes
-      end
-    end
-    object tabFiles: TTabSheet
-      Caption = 'Files'
-      ClientHeight = 298
-      ClientWidth = 976
-      ImageIndex = 7
-      object lvFiles: TVarGrid
-        Left = 0
-        Height = 298
-        Top = 0
-        Width = 976
-        Align = alClient
-        Columns = <        
-          item
-            Title.Caption = 'File name'
-            Width = 350
-          end        
-          item
-            Alignment = taRightJustify
-            Title.Caption = 'Size'
-            Width = 80
-          end        
-          item
-            Alignment = taCenter
-            Title.Caption = 'Done'
-            Width = 70
-          end        
-          item
-            Alignment = taCenter
-            Title.Alignment = taCenter
-            Title.Caption = '%'
-            Width = 70
-          end        
-          item
-            Title.Caption = 'Priority'
-            Width = 100
-          end>
-        FixedCols = 0
-        Options = [goFixedVertLine, goFixedHorzLine, goColSizing, goColMoving, goRowSelect, goThumbTracking, goDblClickAutoSize, goHeaderHotTracking, goHeaderPushedLook]
-        PopupMenu = pmFiles
-        RowCount = 1
-        TabOrder = 0
-        OnDblClick = lvFilesDblClick
-        OnKeyDown = lvFilesKeyDown
-        OnMouseUp = lvFilesMouseUp
-        OnSetEditText = lvFilesSetEditText
-        Images = ImageList16
-        MultiSelect = True
-        SortColumn = 0
-        HideSelection = True
-        OnEditorShow = lvFilesEditorShow
-        OnEditorHide = lvFilesEditorHide
-      end
-    end
-    object tabStats: TTabSheet
-      Caption = 'Statistics'
-      ClientHeight = 298
-      ClientWidth = 976
-      ImageIndex = 42
-      object gStats: TVarGrid
-        Left = 0
-        Height = 283
-        Top = 15
-        Width = 976
-        Align = alClient
-        Columns = <        
-          item
-            Title.Caption = ' '
-            Width = 200
-          end        
-          item
-            Alignment = taRightJustify
-            Title.Alignment = taCenter
-            Title.Caption = 'Current'
-            Width = 120
-          end        
-          item
-            Alignment = taRightJustify
-            Title.Alignment = taCenter
-            Title.Caption = 'Cumulative'
-            Width = 120
-          end>
-        FixedCols = 0
-        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goRowSelect, goThumbTracking, goDblClickAutoSize]
-        RowCount = 1
-        TabOrder = 0
-        HideSelection = True
-      end
-      object txGlobalStats: TLabel
-        Left = 0
-        Height = 15
-        Top = 0
-        Width = 976
-        Align = alTop
-        Caption = 'Global statistics:'
-        ParentColor = False
-      end
-    end
-  end
-  object VSplitter: TSplitter[3]
-    Cursor = crVSplit
-    Left = 0
-    Height = 5
-    Top = 328
-    Width = 984
-    Align = alBottom
-    AutoSnap = False
-    MinSize = 80
-    OnChangeBounds = VSplitterChangeBounds
-    ResizeAnchor = akBottom
-  end
-  object MainToolBar: TToolBar[4]
+  object MainToolBar: TToolBar[2]
     Left = 0
     Height = 25
     Top = 0
@@ -1100,7 +293,7 @@ inherited MainForm: TMainForm
     ParentShowHint = False
     ShowCaptions = True
     ShowHint = True
-    TabOrder = 2
+    TabOrder = 1
     OnContextPopup = MainToolBarContextPopup
     object ToolButton1: TToolButton
       Left = 181
@@ -1321,7 +514,7 @@ inherited MainForm: TMainForm
       end
     end
   end
-  object panReconnect: TPanel[5]
+  object panReconnect: TPanel[3]
     Left = 528
     Height = 44
     Top = 56
@@ -1333,7 +526,7 @@ inherited MainForm: TMainForm
     Font.Color = clInfoText
     ParentColor = False
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 4
     Visible = False
     OnResize = panReconnectResize
     object txConnErrorLabel: TLabel
@@ -1386,14 +579,853 @@ inherited MainForm: TMainForm
       Pen.Color = clBtnShadow
     end
   end
-  object panDetailsWait: TPanel[6]
+  object panDetailsWait: TPanel[4]
     Left = 495
     Height = 33
     Top = 56
     Width = 27
     BevelOuter = bvNone
-    TabOrder = 3
+    TabOrder = 2
     Visible = False
+  end
+  object Panel1: TPanel[5]
+    Left = 0
+    Height = 326
+    Top = 333
+    Width = 984
+    Align = alBottom
+    Caption = 'Panel1'
+    ClientHeight = 326
+    ClientWidth = 984
+    TabOrder = 5
+    object PageInfo: TPageControl
+      Left = 1
+      Height = 324
+      Top = 1
+      Width = 777
+      ActivePage = tabStats
+      Align = alClient
+      Constraints.MinHeight = 50
+      DragMode = dmAutomatic
+      Images = ImageList16
+      TabIndex = 4
+      TabOrder = 0
+      OnChange = PageInfoChange
+      OnResize = PageInfoResize
+      OnStartDrag = PageInfoStartDrag
+      object tabGeneral: TTabSheet
+        Caption = 'General'
+        ClientHeight = 296
+        ClientWidth = 769
+        ImageIndex = 4
+        object sbGenInfo: TScrollBox
+          Left = 0
+          Height = 270
+          Top = 26
+          Width = 769
+          HorzScrollBar.Page = 722
+          VertScrollBar.Page = 266
+          Align = alClient
+          ClientHeight = 266
+          ClientWidth = 748
+          TabOrder = 0
+          object panGeneralInfo: TPanel
+            Left = 0
+            Height = 120
+            Top = 153
+            Width = 748
+            Align = alTop
+            BevelOuter = bvNone
+            ChildSizing.LeftRightSpacing = 4
+            ChildSizing.TopBottomSpacing = 4
+            ChildSizing.HorizontalSpacing = 16
+            ChildSizing.VerticalSpacing = 4
+            ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+            ChildSizing.ControlsPerLine = 4
+            ClientHeight = 120
+            ClientWidth = 748
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 0
+            object txTorrentNameLabel: TLabel
+              Left = 4
+              Height = 15
+              Top = 4
+              Width = 35
+              Caption = 'Name:'
+              ParentColor = False
+            end
+            object txTorrentName: TLabel
+              Left = 181
+              Height = 15
+              Top = 4
+              Width = 79
+              Caption = 'txTorrentName'
+              ParentColor = False
+              ShowAccelChar = False
+            end
+            object txCreatedLabel: TLabel
+              Left = 381
+              Height = 15
+              Top = 4
+              Width = 61
+              Caption = 'Created on:'
+              ParentColor = False
+            end
+            object txCreated: TLabel
+              Left = 578
+              Height = 15
+              Top = 4
+              Width = 51
+              Caption = 'txCreated'
+              ParentColor = False
+            end
+            object txTotalSizeLabel: TLabel
+              Left = 4
+              Height = 15
+              Top = 22
+              Width = 50
+              Caption = 'Total size:'
+              ParentColor = False
+            end
+            object txTotalSize: TLabel
+              Left = 181
+              Height = 15
+              Top = 22
+              Width = 55
+              Caption = 'txTotalSize'
+              ParentColor = False
+            end
+            object txPiecesLabel: TLabel
+              Left = 381
+              Height = 15
+              Top = 22
+              Width = 36
+              Caption = 'Pieces:'
+              ParentColor = False
+            end
+            object txPieces: TLabel
+              Left = 578
+              Height = 15
+              Top = 22
+              Width = 43
+              Caption = 'txPieces'
+              ParentColor = False
+            end
+            object txHashLabel: TLabel
+              Left = 4
+              Height = 15
+              Top = 40
+              Width = 30
+              Caption = 'Hash:'
+              ParentColor = False
+            end
+            object txHash: TLabel
+              Left = 181
+              Height = 15
+              Top = 40
+              Width = 37
+              Caption = 'txHash'
+              ParentColor = False
+              ShowAccelChar = False
+            end
+            object txCommentLabel: TLabel
+              Left = 381
+              Height = 14
+              Top = 40
+              Width = 181
+              AutoSize = False
+              Caption = 'Comment:'
+              ParentColor = False
+            end
+            object txComment: TLabel
+              Left = 578
+              Height = 15
+              Top = 40
+              Width = 64
+              Caption = 'txComment'
+              ParentColor = False
+              ShowAccelChar = False
+            end
+            object txAddedOnLabel: TLabel
+              Left = 4
+              Height = 15
+              Top = 58
+              Width = 55
+              Caption = 'Added on:'
+              ParentColor = False
+            end
+            object txAddedOn: TLabel
+              Left = 181
+              Height = 15
+              Top = 58
+              Width = 61
+              Caption = 'txAddedOn'
+              ParentColor = False
+            end
+            object txCompletedOnLabel: TLabel
+              Left = 381
+              Height = 15
+              Top = 58
+              Width = 79
+              Caption = 'Completed on:'
+              ParentColor = False
+            end
+            object txCompletedOn: TLabel
+              Left = 578
+              Height = 15
+              Top = 58
+              Width = 85
+              Caption = 'txCompletedOn'
+              ParentColor = False
+            end
+            object txMagLabel: TLabel
+              Left = 4
+              Height = 15
+              Top = 86
+              Width = 69
+              Caption = 'Magnet Link:'
+              ParentColor = False
+            end
+            object txMagnetLink: TEdit
+              Left = 179
+              Height = 23
+              Top = 80
+              Width = 195
+              AutoSize = False
+              AutoSelect = False
+              BorderStyle = bsNone
+              ReadOnly = True
+              TabOrder = 0
+            end
+            object txLabelsLabel: TLabel
+              Left = 381
+              Height = 15
+              Top = 86
+              Width = 36
+              Caption = 'Labels:'
+              ParentColor = False
+            end
+            object txLabels: TLabel
+              Left = 578
+              Height = 15
+              Top = 86
+              Width = 43
+              Caption = 'txLabels'
+              ParentColor = False
+            end
+          end
+          object panTransfer: TPanel
+            Left = 0
+            Height = 111
+            Top = 21
+            Width = 748
+            Align = alTop
+            BevelOuter = bvNone
+            ChildSizing.LeftRightSpacing = 4
+            ChildSizing.TopBottomSpacing = 4
+            ChildSizing.HorizontalSpacing = 16
+            ChildSizing.VerticalSpacing = 4
+            ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+            ChildSizing.ControlsPerLine = 6
+            ClientHeight = 111
+            ClientWidth = 748
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 1
+            object txStatusLabel: TLabel
+              Left = 4
+              Height = 15
+              Top = 4
+              Width = 35
+              Caption = 'Status:'
+              ParentColor = False
+            end
+            object txStatus: TLabel
+              Left = 140
+              Height = 15
+              Top = 4
+              Width = 42
+              Caption = 'txStatus'
+              ParentColor = False
+            end
+            object txErrorLabel: TLabel
+              Left = 262
+              Height = 15
+              Top = 4
+              Width = 28
+              Caption = 'Error:'
+              ParentColor = False
+            end
+            object txError: TLabel
+              Left = 407
+              Height = 15
+              Top = 4
+              Width = 35
+              Caption = 'txError'
+              ParentColor = False
+            end
+            object txRemainingLabel: TLabel
+              Left = 541
+              Height = 15
+              Top = 4
+              Width = 60
+              Caption = 'Remaining:'
+              ParentColor = False
+            end
+            object txRemaining: TLabel
+              Left = 651
+              Height = 15
+              Top = 4
+              Width = 67
+              Caption = 'txRemaining'
+              ParentColor = False
+            end
+            object txDownloadedLabel: TLabel
+              Left = 4
+              Height = 15
+              Top = 22
+              Width = 70
+              Caption = 'Downloaded:'
+              ParentColor = False
+            end
+            object txDownloaded: TLabel
+              Left = 140
+              Height = 15
+              Top = 22
+              Width = 77
+              Caption = 'txDownloaded'
+              ParentColor = False
+            end
+            object txUploadedLabel: TLabel
+              Left = 262
+              Height = 15
+              Top = 22
+              Width = 54
+              Caption = 'Uploaded:'
+              ParentColor = False
+            end
+            object txUploaded: TLabel
+              Left = 407
+              Height = 15
+              Top = 22
+              Width = 61
+              Caption = 'txUploaded'
+              ParentColor = False
+            end
+            object txWastedLabel: TLabel
+              Left = 541
+              Height = 15
+              Top = 22
+              Width = 42
+              Caption = 'Wasted:'
+              ParentColor = False
+            end
+            object txWasted: TLabel
+              Left = 651
+              Height = 15
+              Top = 22
+              Width = 49
+              Caption = 'txWasted'
+              ParentColor = False
+            end
+            object txDownSpeedLabel: TLabel
+              Left = 4
+              Height = 15
+              Top = 40
+              Width = 91
+              Caption = 'Download speed:'
+              ParentColor = False
+            end
+            object txDownSpeed: TLabel
+              Left = 140
+              Height = 15
+              Top = 40
+              Width = 73
+              Caption = 'txDownSpeed'
+              ParentColor = False
+            end
+            object txUpSpeedLabel: TLabel
+              Left = 262
+              Height = 15
+              Top = 40
+              Width = 75
+              Caption = 'Upload speed:'
+              ParentColor = False
+            end
+            object txUpSpeed: TLabel
+              Left = 407
+              Height = 15
+              Top = 40
+              Width = 57
+              Caption = 'txUpSpeed'
+              ParentColor = False
+            end
+            object txRatioLabel: TLabel
+              Left = 541
+              Height = 15
+              Top = 40
+              Width = 59
+              Caption = 'Share ratio:'
+              ParentColor = False
+            end
+            object txRatio: TLabel
+              Left = 651
+              Height = 15
+              Top = 40
+              Width = 37
+              Caption = 'txRatio'
+              ParentColor = False
+            end
+            object txDownLimitLabel: TLabel
+              Left = 4
+              Height = 15
+              Top = 58
+              Width = 61
+              Caption = 'Down limit:'
+              ParentColor = False
+            end
+            object txDownLimit: TLabel
+              Left = 140
+              Height = 15
+              Top = 58
+              Width = 68
+              Caption = 'txDownLimit'
+              ParentColor = False
+            end
+            object txUpLimitLabel: TLabel
+              Left = 262
+              Height = 15
+              Top = 58
+              Width = 45
+              Caption = 'Up limit:'
+              ParentColor = False
+            end
+            object txUpLimit: TLabel
+              Left = 407
+              Height = 15
+              Top = 58
+              Width = 52
+              Caption = 'txUpLimit'
+              ParentColor = False
+            end
+            object txDummy: TLabel
+              Left = 541
+              Height = 1
+              Top = 58
+              Width = 1
+              ParentColor = False
+            end
+            object txDummy1: TLabel
+              Left = 651
+              Height = 1
+              Top = 58
+              Width = 1
+              ParentColor = False
+            end
+            object txSeedsLabel: TLabel
+              Left = 4
+              Height = 15
+              Top = 76
+              Width = 33
+              Caption = 'Seeds:'
+              ParentColor = False
+            end
+            object txSeeds: TLabel
+              Left = 140
+              Height = 15
+              Top = 76
+              Width = 40
+              Caption = 'txSeeds'
+              ParentColor = False
+            end
+            object txPeersLabel: TLabel
+              Left = 262
+              Height = 15
+              Top = 76
+              Width = 31
+              Caption = 'Peers:'
+              ParentColor = False
+            end
+            object txPeers: TLabel
+              Left = 407
+              Height = 15
+              Top = 76
+              Width = 38
+              Caption = 'txPeers'
+              ParentColor = False
+            end
+            object txMaxPeersLabel: TLabel
+              Left = 541
+              Height = 15
+              Top = 76
+              Width = 57
+              Caption = 'Max peers:'
+              ParentColor = False
+            end
+            object txMaxPeers: TLabel
+              Left = 651
+              Height = 15
+              Top = 76
+              Width = 61
+              Caption = 'txMaxPeers'
+              ParentColor = False
+            end
+            object txTrackerLabel: TLabel
+              Left = 4
+              Height = 15
+              Top = 94
+              Width = 40
+              Caption = 'Tracker:'
+              ParentColor = False
+            end
+            object txTracker: TLabel
+              Left = 140
+              Height = 15
+              Top = 94
+              Width = 47
+              Caption = 'txTracker'
+              ParentColor = False
+            end
+            object txTrackerUpdateLabel: TLabel
+              Left = 262
+              Height = 15
+              Top = 94
+              Width = 97
+              Caption = 'Tracker update on:'
+              ParentColor = False
+            end
+            object txTrackerUpdate: TLabel
+              Left = 407
+              Height = 15
+              Top = 94
+              Width = 85
+              Caption = 'txTrackerUpdate'
+              ParentColor = False
+            end
+            object txLastActiveLabel: TLabel
+              Left = 541
+              Height = 15
+              Top = 94
+              Width = 58
+              Caption = 'Last active:'
+              ParentColor = False
+            end
+            object txLastActive: TLabel
+              Left = 651
+              Height = 15
+              Top = 94
+              Width = 64
+              Caption = 'txLastActive'
+              ParentColor = False
+            end
+          end
+          object txTransferHeader: TPanel
+            Left = 2
+            Height = 17
+            Top = 2
+            Width = 744
+            Align = alTop
+            Alignment = taLeftJustify
+            BorderSpacing.Around = 2
+            BevelOuter = bvNone
+            Caption = 'Transfer'
+            Font.Height = -13
+            Font.Style = [fsBold]
+            ParentColor = False
+            ParentFont = False
+            TabOrder = 2
+          end
+          object txTorrentHeader: TPanel
+            Left = 2
+            Height = 17
+            Top = 134
+            Width = 744
+            Align = alTop
+            Alignment = taLeftJustify
+            BorderSpacing.Around = 2
+            BevelOuter = bvNone
+            Caption = 'Torrent'
+            Font.Height = -13
+            Font.Style = [fsBold]
+            ParentColor = False
+            ParentFont = False
+            TabOrder = 3
+          end
+        end
+        object panProgress: TPanel
+          Left = 0
+          Height = 26
+          Top = 0
+          Width = 769
+          Align = alTop
+          BevelOuter = bvNone
+          ClientHeight = 26
+          ClientWidth = 769
+          TabOrder = 1
+          object txDownProgressLabel: TLabel
+            Left = 8
+            Height = 26
+            Top = 0
+            Width = 70
+            Align = alLeft
+            BorderSpacing.Left = 8
+            Caption = 'Downloaded:'
+            Layout = tlCenter
+            ParentColor = False
+          end
+          object txDownProgress: TLabel
+            Left = 724
+            Height = 26
+            Top = 0
+            Width = 37
+            Align = alRight
+            Alignment = taRightJustify
+            Anchors = [akTop, akRight]
+            BorderSpacing.Right = 8
+            Caption = '100.0%'
+            Layout = tlCenter
+            ParentColor = False
+          end
+          object pbDownloaded: TPaintBox
+            Left = 84
+            Height = 14
+            Top = 6
+            Width = 634
+            Align = alClient
+            Anchors = [akTop, akLeft, akRight]
+            BorderSpacing.Around = 6
+            OnPaint = pbDownloadedPaint
+          end
+        end
+      end
+      object tabTrackers: TTabSheet
+        Caption = 'Trackers'
+        ClientHeight = 296
+        ClientWidth = 769
+        ImageIndex = 5
+        object lvTrackers: TVarGrid
+          Left = 0
+          Height = 296
+          Top = 0
+          Width = 769
+          Align = alClient
+          Columns = <          
+            item
+              Title.Caption = 'Name'
+              Width = 200
+            end          
+            item
+              Title.Caption = 'Status'
+              Width = 200
+            end          
+            item
+              Title.Caption = 'Update in'
+              Width = 80
+            end          
+            item
+              Title.Caption = 'Seeds'
+            end>
+          FixedCols = 0
+          Options = [goFixedVertLine, goFixedHorzLine, goColSizing, goColMoving, goRowSelect, goThumbTracking, goDblClickAutoSize, goHeaderHotTracking, goHeaderPushedLook]
+          PopupMenu = pmTrackers
+          RowCount = 1
+          TabOrder = 0
+          OnDblClick = lvTrackersDblClick
+          OnKeyDown = lvTrackersKeyDown
+          SortColumn = 0
+          HideSelection = True
+          OnCellAttributes = lvTrackersCellAttributes
+        end
+      end
+      object tabPeers: TTabSheet
+        Caption = 'Peers'
+        ClientHeight = 296
+        ClientWidth = 769
+        ImageIndex = 6
+        object lvPeers: TVarGrid
+          Left = 0
+          Height = 296
+          Top = 0
+          Width = 769
+          Align = alClient
+          Columns = <          
+            item
+              Title.Caption = 'Host'
+              Width = 150
+            end          
+            item
+              Alignment = taRightJustify
+              Title.Caption = 'Port'
+              Width = 0
+              Visible = False
+            end          
+            item
+              Title.Caption = 'Country'
+              Width = 100
+            end          
+            item
+              Title.Caption = 'Client'
+              Width = 150
+            end          
+            item
+              Title.Caption = 'Flags'
+              Width = 70
+            end          
+            item
+              Alignment = taRightJustify
+              Title.Caption = 'Have'
+            end          
+            item
+              Alignment = taRightJustify
+              Title.Caption = 'Up speed'
+              Width = 80
+            end          
+            item
+              Alignment = taRightJustify
+              Title.Caption = 'Down speed'
+              Width = 80
+            end>
+          FixedCols = 0
+          Options = [goFixedVertLine, goFixedHorzLine, goColSizing, goColMoving, goRowSelect, goThumbTracking, goDblClickAutoSize, goHeaderHotTracking, goHeaderPushedLook]
+          PopupMenu = pmPeers
+          RowCount = 1
+          TabOrder = 0
+          Images = imgFlags
+          SortColumn = 0
+          HideSelection = True
+          OnCellAttributes = lvPeersCellAttributes
+        end
+      end
+      object tabFiles: TTabSheet
+        Caption = 'Files'
+        ClientHeight = 296
+        ClientWidth = 769
+        ImageIndex = 7
+        object lvFiles: TVarGrid
+          Left = 0
+          Height = 296
+          Top = 0
+          Width = 769
+          Align = alClient
+          Columns = <          
+            item
+              Title.Caption = 'File name'
+              Width = 350
+            end          
+            item
+              Alignment = taRightJustify
+              Title.Caption = 'Size'
+              Width = 80
+            end          
+            item
+              Alignment = taCenter
+              Title.Caption = 'Done'
+              Width = 70
+            end          
+            item
+              Alignment = taCenter
+              Title.Alignment = taCenter
+              Title.Caption = '%'
+              Width = 70
+            end          
+            item
+              Title.Caption = 'Priority'
+              Width = 100
+            end>
+          FixedCols = 0
+          Options = [goFixedVertLine, goFixedHorzLine, goColSizing, goColMoving, goRowSelect, goThumbTracking, goDblClickAutoSize, goHeaderHotTracking, goHeaderPushedLook]
+          PopupMenu = pmFiles
+          RowCount = 1
+          TabOrder = 0
+          OnDblClick = lvFilesDblClick
+          OnKeyDown = lvFilesKeyDown
+          OnMouseUp = lvFilesMouseUp
+          OnSetEditText = lvFilesSetEditText
+          Images = ImageList16
+          MultiSelect = True
+          SortColumn = 0
+          HideSelection = True
+          OnEditorShow = lvFilesEditorShow
+          OnEditorHide = lvFilesEditorHide
+        end
+      end
+      object tabStats: TTabSheet
+        Caption = 'Statistics'
+        ClientHeight = 296
+        ClientWidth = 769
+        ImageIndex = 42
+        object gStats: TVarGrid
+          Left = 0
+          Height = 281
+          Top = 15
+          Width = 769
+          Align = alClient
+          Columns = <          
+            item
+              Title.Caption = ' '
+              Width = 200
+            end          
+            item
+              Alignment = taRightJustify
+              Title.Alignment = taCenter
+              Title.Caption = 'Current'
+              Width = 120
+            end          
+            item
+              Alignment = taRightJustify
+              Title.Alignment = taCenter
+              Title.Caption = 'Cumulative'
+              Width = 120
+            end>
+          FixedCols = 0
+          Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goRowSelect, goThumbTracking, goDblClickAutoSize]
+          RowCount = 1
+          TabOrder = 0
+          HideSelection = True
+        end
+        object txGlobalStats: TLabel
+          Left = 0
+          Height = 15
+          Top = 0
+          Width = 769
+          Align = alTop
+          Caption = 'Global statistics:'
+          ParentColor = False
+        end
+      end
+    end
+    object Splitter1: TSplitter
+      Left = 778
+      Height = 324
+      Top = 1
+      Width = 5
+      Align = alRight
+      ResizeAnchor = akRight
+    end
+    object PageControl1: TPageControl
+      Left = 783
+      Height = 324
+      Top = 1
+      Width = 200
+      Align = alRight
+      DragMode = dmAutomatic
+      TabOrder = 2
+      OnDragDrop = PageControl1DragDrop
+      OnDragOver = PageControl1DragOver
+    end
+  end
+  object VSplitter: TSplitter[6]
+    Cursor = crVSplit
+    Left = 0
+    Height = 5
+    Top = 328
+    Width = 984
+    Align = alBottom
+    AutoSnap = False
+    MinSize = 80
+    OnChangeBounds = VSplitterChangeBounds
+    ResizeAnchor = akBottom
   end
   object MainMenu: TMainMenu[7]
     Images = ImageList16
