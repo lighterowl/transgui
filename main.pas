@@ -2167,7 +2167,7 @@ begin
           aids.Add(integer(ids[i]));
         args.Add('ids', aids);
         args.Add('location', TJSONString.Create(UTF8Decode(edTorrentDir.Text)));
-        args.Add('move', TJSONIntegerNumber.Create(integer(cbMoveData.Checked) and 1));
+        args.Add('move', cbMoveData.Checked);
         req.Add('arguments', args);
         args:=RpcObj.SendRequest(req, False);
         args.Free;
@@ -2348,7 +2348,7 @@ begin
   try
     req.Add('method', 'session-set');
     args:=TJSONObject.Create;
-    args.Add('alt-speed-enabled', integer(not acAltSpeed.Checked) and 1);
+    args.Add('alt-speed-enabled', not acAltSpeed.Checked);
     req.Add('arguments', args);
     args:=RpcObj.SendRequest(req, False);
     if args = nil then begin
@@ -2757,7 +2757,7 @@ begin
         edSearch.Text:='';
 
         args:=TJSONObject.Create;
-        args.Add('paused', TJSONIntegerNumber.Create(1));
+        args.Add('paused', True);
         i:=Ini.ReadInteger(IniSec, 'PeerLimit', 0);
         if i <> 0 then
           args.Add('peer-limit', TJSONIntegerNumber.Create(i));
@@ -2846,7 +2846,7 @@ begin
             TorrentAction(id, 'torrent-remove');
             id:=0;
             args:=TJSONObject.Create;
-            args.Add('paused', TJSONIntegerNumber.Create(1));
+            args.Add('paused', True);
             args.Add('peer-limit', TJSONIntegerNumber.Create(edPeerLimit.Value));
             args.Add('download-dir', TJSONString.Create(UTF8Decode(cbDestFolder.Text)));
             id:=_AddTorrent(args);
@@ -4003,16 +4003,16 @@ begin
         if RpcObj.RPCVersion < 5 then
         begin
           // RPC versions prior to v5
-          args.Add('speed-limit-down-enabled', integer(cbMaxDown.Checked) and 1);
-          args.Add('speed-limit-up-enabled', integer(cbMaxUp.Checked) and 1);
+          args.Add('speed-limit-down-enabled', cbMaxDown.Checked);
+          args.Add('speed-limit-up-enabled', cbMaxUp.Checked);
           if cbMaxDown.Checked then
             args.Add('speed-limit-down', edMaxDown.Value);
           if cbMaxUp.Checked then
             args.Add('speed-limit-up', edMaxUp.Value);
         end else begin
           // RPC version 5
-          args.Add('downloadLimited', integer(cbMaxDown.Checked) and 1);
-          args.Add('uploadLimited', integer(cbMaxUp.Checked) and 1);
+          args.Add('downloadLimited', cbMaxDown.Checked);
+          args.Add('uploadLimited', cbMaxUp.Checked);
           if cbMaxDown.Checked then
             args.Add('downloadLimit', edMaxDown.Value);
           if cbMaxUp.Checked then
@@ -5854,7 +5854,7 @@ begin
     end;
 
     if FieldExists[torcolPrivate] then
-      FTorrents[torcolPrivate, row]:=t.Integers['isPrivate'];
+      FTorrents[torcolPrivate, row]:=t.Integers['isPrivate']; { boolean in json, but must be integer in varlist }
 
     if FieldExists[torcolLabels] then begin
       a := t.Arrays['labels'];
@@ -6222,8 +6222,7 @@ begin
     gTorrents.Tag:=0;
   end;
   args:=TJSONObject.Create;
-  if RemoveLocalData then
-    args.Add('delete-local-data', TJSONIntegerNumber.Create(1));
+  args.Add('delete-local-data', RemoveLocalData);
 
   if TorrentAction(ids, 'torrent-remove', args) then begin
     with gTorrents do begin
@@ -6634,9 +6633,9 @@ begin
   UpdateUIRpcVersion(RpcObj.RPCVersion);
 
   if RpcObj.RPCVersion >= 5 then begin
-    acAltSpeed.Checked:=s.Integers['alt-speed-enabled'] <> 0;
-    acUpdateBlocklist.Tag:=s.Integers['blocklist-enabled'];
-    acUpdateBlocklist.Enabled:=acUpdateBlocklist.Tag <> 0;
+    acAltSpeed.Checked:=s.Booleans['alt-speed-enabled'];
+    if s.Booleans['blocklist-enabled'] then acUpdateBlocklist.Tag:=1 else acUpdateBlocklist.Tag:=0;
+    acUpdateBlocklist.Enabled:=s.Booleans['blocklist-enabled'];
   end;
   if s.IndexOfName('download-dir-free-space') >= 0 then
     StatusBar.Panels[3].Text:=Format(SFreeSpace, [GetHumanSize(s.Floats['download-dir-free-space'])]);
@@ -6646,11 +6645,11 @@ begin
     u:=s.Integers['alt-speed-up']
   end
   else begin
-    if s.Integers['speed-limit-down-enabled'] <> 0 then
+    if s.Booleans['speed-limit-down-enabled'] then
       d:=s.Integers['speed-limit-down']
     else
       d:=-1;
-    if s.Integers['speed-limit-up-enabled'] <> 0 then
+    if s.Booleans['speed-limit-up-enabled'] then
       u:=s.Integers['speed-limit-up']
     else
       u:=-1;
@@ -7456,7 +7455,7 @@ begin
     args.Add(Format('speed-limit-%s-enabled', [Dir]), integer(Speed >= 0) and 1);
     if Speed >= 0 then
       args.Add(Format('speed-limit-%s', [Dir]), Speed);
-    args.Add('alt-speed-enabled', 0);
+    args.Add('alt-speed-enabled', False);
     req.Add('arguments', args);
     args:=RpcObj.SendRequest(req, False);
     if args = nil then begin
