@@ -38,16 +38,18 @@ fpc_lazarus_build_install() {
 
   mkdir -p "${fpc_installdir}"
 
-  make_opts_native=(
+  local -r make_opts_native=(
     COMPILER_LIBRARYDIR=${macosx_libdir}
     COMPILER_OPTIONS=-k-F${macosx_frameworkdir}
   )
   make "${make_opts_native[@]}" all
   make PREFIX=${fpc_installdir} install
 
-  make_opts_cross=("${make_opts_native[@]}" CPU_SOURCE=x86_64 CPU_TARGET=aarch64)
-  make "${make_opts_cross[@]}" all
-  make PREFIX=${fpc_installdir} "${make_opts_cross[@]}" crossinstall
+  if [[ $cross_build ]]; then
+    local -r make_opts_cross=("${make_opts_native[@]}" CPU_SOURCE=x86_64 CPU_TARGET=aarch64)
+    make "${make_opts_cross[@]}" all
+    make PREFIX=${fpc_installdir} "${make_opts_cross[@]}" crossinstall
+  fi
 
   export PATH=${fpc_installdir}/bin:${fpc_basepath}:$PATH
 

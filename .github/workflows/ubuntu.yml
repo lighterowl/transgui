@@ -16,7 +16,7 @@ jobs:
       with:
         submodules: recursive
 
-    - uses: actions/cache@v3
+    - uses: actions/cache@v4
       with:
         path: |
           ~/.transgui_sdk/lazarus
@@ -25,7 +25,8 @@ jobs:
 
     - run: .github/build_ubuntu.sh
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: TransGUI Linux
         path: units/transgui-x86_64.AppImage
+        if-no-files-found: error
