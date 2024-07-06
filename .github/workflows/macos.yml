@@ -32,7 +32,6 @@ jobs:
 
   build-macos-x64:
 
-    needs: build-macos-arm64
     runs-on: macos-12
 
     steps:
@@ -49,17 +48,42 @@ jobs:
 
     - run: .github/build_macos.sh
 
+    - uses: actions/upload-artifact@v3
+      with:
+        name: TransGUI macOS x64
+        path: transgui_ppcx64
+
+  package-macos:
+
+    needs: [build-macos-arm64, build-macos-x64]
+    runs-on: macos-12
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        submodules: recursive
+
+    # no cache needed here as we don't compile anything
     - uses: actions/download-artifact@v3
       with:
         name: TransGUI macOS arm64
         path: transgui_ppca64
 
+    - uses: actions/download-artifact@v3
+      with:
+        name: TransGUI macOS x64
+        path: transgui_ppcx64
+
     - run: .github/package_macos.sh
 
-# keeping this around would just be confusing
+# keeping these around would just be confusing
     - uses: geekyeggo/delete-artifact@v2
       with:
         name: TransGUI macOS arm64
+
+    - uses: geekyeggo/delete-artifact@v2
+      with:
+        name: TransGUI macOS x64
 
     - uses: actions/upload-artifact@v3
       with:
