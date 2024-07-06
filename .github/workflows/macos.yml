@@ -16,7 +16,7 @@ jobs:
       with:
         submodules: recursive
 
-    - uses: actions/cache@v3
+    - uses: actions/cache@v4
       with:
         path: |
           ~/.transgui_sdk/lazarus
@@ -25,10 +25,11 @@ jobs:
 
     - run: .github/build_macos.sh
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: TransGUI macOS arm64
         path: transgui_ppca64
+        if-no-files-found: error
 
   build-macos-x64:
 
@@ -39,7 +40,7 @@ jobs:
       with:
         submodules: recursive
 
-    - uses: actions/cache@v3
+    - uses: actions/cache@v4
       with:
         path: |
           ~/.transgui_sdk/lazarus
@@ -48,10 +49,11 @@ jobs:
 
     - run: .github/build_macos.sh
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: TransGUI macOS x64
         path: transgui_ppcx64
+        if-no-files-found: error
 
   package-macos:
 
@@ -77,15 +79,16 @@ jobs:
     - run: .github/package_macos.sh
 
 # keeping these around would just be confusing
-    - uses: geekyeggo/delete-artifact@v2
+    - uses: geekyeggo/delete-artifact@v5
       with:
         name: TransGUI macOS arm64
 
-    - uses: geekyeggo/delete-artifact@v2
+    - uses: geekyeggo/delete-artifact@v5
       with:
         name: TransGUI macOS x64
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: TransGUI macOS Universal Binary
         path: Release/transgui.dmg
+        if-no-files-found: error
