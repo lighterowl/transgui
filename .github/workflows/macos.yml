@@ -66,12 +66,12 @@ jobs:
         submodules: recursive
 
     # no cache needed here as we don't compile anything
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@v4
       with:
         name: TransGUI macOS arm64
         path: transgui_ppca64
 
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@v4
       with:
         name: TransGUI macOS x64
         path: transgui_ppcx64
