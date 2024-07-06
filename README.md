@@ -9,7 +9,7 @@ This place is meant to be a temporary home for Transmission Remote GUI as both t
 You need to clone the repository with submodules, and then use `lazbuild` to build :
 
 ```
-git clone --recurse-submodules https://github.com/xavery/transgui.git
+git clone --recurse-submodules https://github.com/lighterowl/transgui.git
 cd transgui
 lazbuild transgui.lpi
 ```
@@ -18,9 +18,9 @@ If you hit trouble, have a look at `build_` scripts in the `.github` folder. The
 
 Due to issues with fpc 3.2.2 mentioned below, it is recommended to build transgui with a development version of the Free Pascal compiler. The `build_` scripts include necessary code that downloads and compiles the development version from source.
 
-Also, due to the fix for [one issue](https://github.com/xavery/transgui/issues/25), there was a need to introduce a change to Lazarus code. This version of transgui thus now uses [my own fork of Lazarus](https://gitlab.com/dkk089/lazarus/-/tree/transgui). If you don't want to use it, just remove the offending line when compiling with upstream Lazarus - stuff will still work.
+Also, due to the fix for [one issue](https://github.com/lighterowl/transgui/issues/25), there was a need to introduce a change to Lazarus code. This version of transgui thus now uses [my own fork of Lazarus](https://gitlab.com/dkk089/lazarus/-/tree/transgui). If you don't want to use it, just remove the offending line when compiling with upstream Lazarus - stuff will still work.
 
-You're encouraged to read the [wiki](https://github.com/xavery/transgui/wiki) if you're looking into making changes yourself.
+You're encouraged to read the [wiki](https://github.com/lighterowl/transgui/wiki) if you're looking into making changes yourself.
 
 # Changes made
 
