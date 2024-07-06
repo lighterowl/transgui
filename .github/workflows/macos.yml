@@ -16,6 +16,13 @@ jobs:
       with:
         submodules: recursive
 
+    - uses: actions/cache@v3
+      with:
+        path: |
+          ~/.transgui_sdk/lazarus
+          ~/.transgui_sdk/fpc-3.2.3
+        key: macos-arm64-fpc-lazarus
+
     - run: .github/build_macos.sh
 
     - uses: actions/upload-artifact@v3
@@ -25,6 +32,7 @@ jobs:
 
   build-macos-x64:
 
+    needs: build-macos-arm64
     runs-on: macos-12
 
     steps:
@@ -37,7 +45,7 @@ jobs:
         path: |
           ~/.transgui_sdk/lazarus
           ~/.transgui_sdk/fpc-3.2.3
-        key: macos-fpc-lazarus
+        key: macos-x64-fpc-lazarus
 
     - run: .github/build_macos.sh
 
