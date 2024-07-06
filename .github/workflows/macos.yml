@@ -2,60 +2,93 @@ name: macOS Build
 
 on:
   push:
-    branches:
-      - master
+    branches: [main, develop]
   pull_request:
-    branches:
-      - master
+    branches: [main, develop]
 
 jobs:
   build-macos-arm64:
 
-    runs-on: [self-hosted, macOS, ARM64]
+    runs-on: macos-14
 
     steps:
     - uses: actions/checkout@v1
       with:
         submodules: recursive
 
-    - run: .github/build_macos.sh
-
-    - uses: actions/upload-artifact@v3
-      with:
-        name: TransGUI macOS arm64
-        path: transgui_ppca64
-
-  build-macos-x64:
-
-    runs-on: macos-11
-
-    steps:
-    - uses: actions/checkout@v1
-      with:
-        submodules: recursive
-
-    - uses: actions/cache@v3
+    - uses: actions/cache@v4
       with:
         path: |
           ~/.transgui_sdk/lazarus
           ~/.transgui_sdk/fpc-3.2.3
-        key: macos-fpc-lazarus
+        key: macos-arm64-fpc-lazarus
 
     - run: .github/build_macos.sh
 
-    - uses: actions/download-artifact@v3
+    - uses: actions/upload-artifact@v4
+      with:
+        name: TransGUI macOS arm64
+        path: transgui_ppca64
+        if-no-files-found: error
+
+  build-macos-x64:
+
+    runs-on: macos-12
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        submodules: recursive
+
+    - uses: actions/cache@v4
+      with:
+        path: |
+          ~/.transgui_sdk/lazarus
+          ~/.transgui_sdk/fpc-3.2.3
+        key: macos-x64-fpc-lazarus
+
+    - run: .github/build_macos.sh
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: TransGUI macOS x64
+        path: transgui_ppcx64
+        if-no-files-found: error
+
+  package-macos:
+
+    needs: [build-macos-arm64, build-macos-x64]
+    runs-on: macos-12
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        submodules: recursive
+
+    # no cache needed here as we don't compile anything
+    - uses: actions/download-artifact@v4
       with:
         name: TransGUI macOS arm64
         path: transgui_ppca64
 
+    - uses: actions/download-artifact@v4
+      with:
+        name: TransGUI macOS x64
+        path: transgui_ppcx64
+
     - run: .github/package_macos.sh
 
-# keeping this around would just be confusing
-    - uses: geekyeggo/delete-artifact@v2
+# keeping these around would just be confusing
+    - uses: geekyeggo/delete-artifact@v5
       with:
         name: TransGUI macOS arm64
 
-    - uses: actions/upload-artifact@v3
+    - uses: geekyeggo/delete-artifact@v5
+      with:
+        name: TransGUI macOS x64
+
+    - uses: actions/upload-artifact@v4
       with:
         name: TransGUI macOS Universal Binary
         path: Release/transgui.dmg
+        if-no-files-found: error

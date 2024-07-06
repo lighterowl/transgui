@@ -13,8 +13,8 @@ inherited MoveTorrentForm: TMoveTorrentForm
   Position = poMainFormCenter
   object Buttons: TButtonPanel[0]
     Left = 8
-    Height = 40
-    Top = 78
+    Height = 36
+    Top = 82
     Width = 627
     BorderSpacing.Left = 8
     BorderSpacing.Right = 8
@@ -34,7 +34,7 @@ inherited MoveTorrentForm: TMoveTorrentForm
   end
   object Panel1: TPanel[1]
     Left = 8
-    Height = 70
+    Height = 74
     Top = 8
     Width = 627
     Align = alClient
@@ -42,7 +42,7 @@ inherited MoveTorrentForm: TMoveTorrentForm
     BorderSpacing.Top = 8
     BorderSpacing.Right = 8
     BevelOuter = bvNone
-    ClientHeight = 70
+    ClientHeight = 74
     ClientWidth = 627
     Constraints.MinWidth = 545
     TabOrder = 0
@@ -63,7 +63,7 @@ inherited MoveTorrentForm: TMoveTorrentForm
       Anchors = [akTop, akLeft, akRight]
       AutoSize = False
       DropDownCount = 60
-      ItemHeight = 0
+      ItemHeight = 15
       Sorted = True
       TabOrder = 0
     end

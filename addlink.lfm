@@ -46,15 +46,15 @@ inherited AddLinkForm: TAddLinkForm
     TabOrder = 0
     object txLink: TLabel
       Left = 0
-      Height = 14
+      Height = 15
       Top = 0
-      Width = 183
+      Width = 197
       Caption = 'URL of a .torrent file or a magnet link:'
       ParentColor = False
     end
     object edLink: TEdit
       Left = 0
-      Height = 21
+      Height = 23
       Top = 20
       Width = 558
       Anchors = [akTop, akLeft, akRight]
