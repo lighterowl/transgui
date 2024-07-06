@@ -14,6 +14,7 @@ mkdir -p "$appfolder/Contents/Resources"
 
 for i in libcrypto.3.dylib libssl.3.dylib transgui; do
   lipo -create -output "$appfolder/Contents/MacOS/$i" transgui_{ppca64,ppcx64}/"$i"
+  chmod +x "$appfolder/Contents/MacOS/$i"
 done
 
 cp lang/transgui.* "$appfolder/Contents/MacOS/lang"
