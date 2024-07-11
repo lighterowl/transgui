@@ -17,6 +17,7 @@ fixup_fpc_cfg() {
 
   echo "-Fl${macosx_libdir}" >> "$fpc_cfg_path"
   echo "-k-F${macosx_frameworkdir}" >> "$fpc_cfg_path"
+  echo "-k-weak_framework UserNotifications" >> "$fpc_cfg_path"
 }
 
 make_fpc_cfg() {
@@ -45,7 +46,7 @@ fpc_lazarus_build_install() {
   make "${make_opts_native[@]}" all
   make PREFIX=${fpc_installdir} install
 
-  if [[ $cross_build ]]; then
+  if [[ $(uname -m) != arm64 ]]; then
     local -r make_opts_cross=("${make_opts_native[@]}" CPU_SOURCE=x86_64 CPU_TARGET=aarch64)
     make "${make_opts_cross[@]}" all
     make PREFIX=${fpc_installdir} "${make_opts_cross[@]}" crossinstall
@@ -56,9 +57,10 @@ fpc_lazarus_build_install() {
   make_fpc_cfg
 
   cd "$sdk_dir"
-  curl -L -o lazarus-src.tar.gz 'https://gitlab.com/dkk089/lazarus/-/archive/transgui/lazarus-transgui.tar.gz'
+  local -r lazarus_commit='63dda919964be2dead48c0fdb018a02a95727e16'
+  curl -L -o lazarus-src.tar.gz "https://gitlab.com/dkk089/lazarus/-/archive/${lazarus_commit}/lazarus-${lazarus_commit}.tar.gz"
   tar xf lazarus-src.tar.gz
-  mv lazarus-transgui lazarus
+  mv "lazarus-${lazarus_commit}" lazarus
   cd lazarus
   make bigide
   export PATH=$PWD:$PATH
@@ -149,8 +151,3 @@ cp ../units/transgui .
 strip transgui
 install_name_tool -add_rpath '@executable_path' transgui
 package_openssl "$PWD"
-if [[ $compiler == ppca64 || $compiler == ppcrossa64 ]]; then
-  for i in transgui *.dylib; do
-    codesign --force -s - "$i"
-  done
-fi

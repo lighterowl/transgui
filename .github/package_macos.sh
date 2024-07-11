@@ -13,7 +13,9 @@ mkdir -p "$appfolder/Contents/MacOS/lang"
 mkdir -p "$appfolder/Contents/Resources"
 
 for i in libcrypto.3.dylib libssl.3.dylib transgui; do
-  lipo -create -output "$appfolder/Contents/MacOS/$i" transgui_{ppca64,ppcx64}/"$i"
+  files=(transgui_{ppca64,ppcx64}/"$i")
+  codesign --verbose --force -s - "${files[@]}"
+  lipo -create -output "$appfolder/Contents/MacOS/$i" "${files[@]}"
   chmod +x "$appfolder/Contents/MacOS/$i"
 done
 
@@ -22,6 +24,7 @@ cp "${macosx_dir}/PkgInfo" "${appfolder}/Contents"
 cp "${macosx_dir}/transgui.icns" "${appfolder}/Contents/Resources"
 sed -e "s/@prog_ver@/$prog_ver/" "${macosx_dir}/Info.plist" > "${appfolder}/Contents/Info.plist"
 
+codesign --deep --force --verify --verbose --sign '-' "$appfolder"
 hdiutil create -ov -anyowners -volname "transgui-v${prog_ver}" -format UDRW -srcfolder "$dmgfolder" -fs HFS+ tmp.dmg
 
 mount_device=$(hdiutil attach -readwrite -noautoopen tmp.dmg | awk 'NR==1{print$1}')
