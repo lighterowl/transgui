@@ -34,7 +34,7 @@ This list applies to the first release of this fork : please look into release n
 
 # Sponsorships
 
-The author would like to thank [MacStadium](https://www.macstadium.com/opensource/members) for providing Apple Silicon hardware for making ARM64 builds and testing.
+The author would like to thank [MacStadium](https://www.macstadium.com/company/opensource) for providing Apple Silicon hardware for testing ARM64 builds.
 
 ![MacStadiumOpenSource](https://uploads-ssl.webflow.com/5ac3c046c82724970fc60918/5c019d917bba312af7553b49_MacStadium-developerlogo.png)
 
