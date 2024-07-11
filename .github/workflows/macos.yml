@@ -61,9 +61,10 @@ jobs:
     runs-on: macos-12
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
       with:
-        submodules: recursive
+        sparse-checkout: |
+          .github
 
     # no cache needed here as we don't compile anything
     - uses: actions/download-artifact@v4
