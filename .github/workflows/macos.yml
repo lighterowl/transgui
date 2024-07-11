@@ -65,6 +65,7 @@ jobs:
       with:
         sparse-checkout: |
           .github
+          lang
 
     # no cache needed here as we don't compile anything
     - uses: actions/download-artifact@v4
