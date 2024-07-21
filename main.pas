@@ -1010,14 +1010,14 @@ end;
 
 procedure TMainForm.SetUpWindowsHotKey;
 var
-  GlobalHotKey, GlobalHotKeyMod: string;
+  VKKey, VKModifier: word;
 begin
-  GlobalHotKey:=Ini.ReadString('Interface','GlobalHotkey','');
-  GlobalHotKeyMod:=Ini.ReadString('Interface','GlobalHotkeyMod','');
-  if GlobalHotKey <> '' then begin
+  VKKey:=VKStringToWord(Ini.ReadString('Interface','GlobalHotkey',''));
+  VKModifier:=VKStringToWord(Ini.ReadString('Interface','GlobalHotkeyMod',''));
+  if VKKey <> 0 then begin
     HotKeyID:=GlobalAddAtom('TransGUIHotkey');
     PrevWndProc:=windows.WNDPROC(SetWindowLongPtr(Self.Handle,GWL_WNDPROC,PtrInt(@WndCallback)));
-    RegisterHotKey(Self.Handle,HotKeyID, VKStringToWord(GlobalHotKeyMod), VKStringToWord(GlobalHotKey));
+    RegisterHotKey(Self.Handle,HotKeyID, VKModifier, VKKey);
   end;
 end;
 
