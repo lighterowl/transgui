@@ -309,7 +309,6 @@
             <CompilerMessages>
               <IgnoredMessages idx6058="True"/>
             </CompilerMessages>
-            <CustomOptions Value="-Sa -CX -XX"/>
             <ExecuteBefore>
               <ShowAllMessages Value="True"/>
             </ExecuteBefore>
@@ -534,6 +533,7 @@
       </SyntaxOptions>
     </Parsing>
     <CodeGeneration>
+      <SmartLinkUnit Value="True"/>
       <Checks>
         <IOChecks Value="True"/>
         <RangeChecks Value="True"/>
@@ -550,6 +550,7 @@
         <TrashVariables Value="True"/>
         <UseExternalDbgSyms Value="True"/>
       </Debugging>
+      <LinkSmart Value="True"/>
     </Linking>
     <Other>
       <Verbosity>
@@ -558,7 +559,6 @@
       <CompilerMessages>
         <IgnoredMessages idx6058="True"/>
       </CompilerMessages>
-      <CustomOptions Value="-Sa -CX -XX"/>
       <ExecuteBefore>
         <ShowAllMessages Value="True"/>
       </ExecuteBefore>
