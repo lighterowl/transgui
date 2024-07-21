@@ -631,7 +631,6 @@ type
     procedure FormActivate(Sender: TObject);
     procedure FormDropFiles(Sender: TObject; const FileNames: array of String);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure FormWindowStateChange(Sender: TObject);
     procedure gTorrentsCellAttributes(Sender: TVarGrid; ACol, ARow, ADataCol: integer; AState: TGridDrawState; var CellAttribs: TCellAttributes);
     procedure gTorrentsClick(Sender: TObject);
     procedure gTorrentsDblClick(Sender: TObject);
@@ -1700,17 +1699,6 @@ begin
   DoDisconnect;
   PageInfo.ActivePageIndex:=0;
   PageInfoChange(nil);
-{$ifdef LCLgtk2}
-  with MainToolBar do begin
-    EdgeBorders:=[ebLeft, ebTop, ebRight, ebBottom];
-    EdgeInner:=esNone;
-    EdgeOuter:=esRaised;
-    Flat:=True;
-  end;
-  i:=acAltSpeed.ImageIndex;
-  acAltSpeed.ImageIndex:=-1;
-  tbtAltSpeed.ImageIndex:=i;
-{$endif}
   txTransferHeader.Caption:=' ' + txTransferHeader.Caption;
   txTorrentHeader.Caption:=' ' + txTorrentHeader.Caption;
   txTransferHeader.Height:=txTransferHeader.Canvas.TextHeight(txTransferHeader.Caption) + 2;
@@ -2646,14 +2634,7 @@ var
       TLabel(Controls[0]).Caption:=AText + '...';
       Show;
       BringToFront;
-{$ifdef lclgtk2}
-      Application.ProcessMessages;
-{$endif lclgtk2}
       Update;
-{$ifdef lclgtk2}
-      sleep(100);
-      Application.ProcessMessages;
-{$endif lclgtk2}
     end;
   end;
 
@@ -4224,16 +4205,6 @@ begin
 
 end;
 
-procedure TMainForm.FormWindowStateChange(Sender: TObject);
-begin
-{$ifdef lclgtk2}
-  if WindowState = wsMinimized then
-    ApplicationPropertiesMinimize(nil)
-  else
-    ApplicationPropertiesRestore(nil);
-{$endif lclgtk2}
-end;
-
 procedure TMainForm.gTorrentsCellAttributes(Sender: TVarGrid; ACol, ARow, ADataCol: integer; AState: TGridDrawState;
                                             var CellAttribs: TCellAttributes);
 var
@@ -5260,9 +5231,6 @@ begin
       btNewClick(nil);
       if Ini.ReadInteger('Hosts', 'Count', 0) = 0 then begin
         panTop.Visible:=False;
-{$ifdef LCLgtk2}
-        panTop.Height:=0;
-{$endif LCLgtk2}
         with Page.BorderSpacing do
           Top:=Left;
         tabPaths.TabVisible:=False;

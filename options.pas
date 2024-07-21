@@ -147,10 +147,6 @@ begin
   if i < 10 then
     i:=10;
   edIntfScale.MinValue:=i;
-{$ifdef LCLgtk2}
-  cbLanguage.OnDropDown:=@cbLanguageEnter;
-  cbLanguage.OnMouseMove:=@cbLanguageMouseMove;
-{$endif LCLgtk2}
 
 {$ifdef mswindows}
   gbSysInt.Visible:=True;

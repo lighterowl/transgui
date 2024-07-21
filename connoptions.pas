@@ -230,17 +230,14 @@ begin
   edCertFile.Visible:=cbShowAdvanced.Checked;
   txCertPass.Visible:=cbShowAdvanced.Checked;
   edCertPass.Visible:=cbShowAdvanced.Checked;
-{$ifndef LCLCocoa}
-{$ifndef LCLgtk2}
+{$ifdef LCLCocoa}
+  Page.ShowTabs:=cbShowAdvanced.Checked;
+{$else}
   tabConnection.TabVisible:=cbShowAdvanced.Checked;
-{$endif LCLgtk2}
   tabProxy.TabVisible:=cbShowAdvanced.Checked;
   tabPaths.TabVisible:=cbShowAdvanced.Checked;
   tabMisc.TabVisible:=cbShowAdvanced.Checked;
-{$endif LCLCocoa}
-{$ifdef LCLCocoa}
-  Page.ShowTabs:=cbShowAdvanced.Checked;
-{$endif LCLCocoa}
+{$endif}
   cbShowAdvanced.Visible:=not cbShowAdvanced.Checked;
   Page.ActivePage:=tabConnection;
 end;

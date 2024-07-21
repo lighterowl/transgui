@@ -205,11 +205,6 @@ begin
         with TCustomGroupBox(C).ChildSizing do
           TopBottomSpacing:=TopBottomSpacing + i;
 {$endif darwin}
-{$ifdef LCLgtk2}
-      // Fix panel color bug on GTK2
-      if (C is TCustomPanel) and ParentColor and (Color = clDefault) then
-        Color:=clForm;
-{$endif LCLgtk2}
 
       if C is TWinControl then
         with TWinControl(C) do

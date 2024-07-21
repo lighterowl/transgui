@@ -754,9 +754,6 @@ begin
   with Canvas do
     if (Font.Color = clWindow) and (Brush.Color = clHighlight) then begin
       Font.Color:=clHighlightText;
-{$ifdef LCLgtk2}
-      Brush.Color:=ColorToRGB(Brush.Color); // Workaround for LCL bug
-{$endif LCLgtk2}
   end;
 end;
 
@@ -1346,9 +1343,6 @@ var
   Rs: Boolean;
   R: TRect;
   ClipArea: Trect;
-{$ifdef LCLgtk2}
-  Rgn: HRGN;
-{$endif LCLgtk2}
 
   procedure DoDrawCell;
   begin
@@ -1361,11 +1355,6 @@ var
         Include(gds, gdPushed);
       end;
     end;
-{$ifdef LCLgtk2}
-    Rgn := CreateRectRgn(R.Left, R.Top, R.Right, R.Bottom);
-    SelectClipRgn(Canvas.Handle, Rgn);
-    DeleteObject(Rgn);
-{$endif LCLgtk2}
     DrawCell(aCol, aRow, R, gds);
   end;
 
@@ -1414,13 +1403,6 @@ begin
       if (R.Right > R.Left) and HorizontalIntersect(R, ClipArea) then
         DoDrawCell;
     end;
-
-{$ifdef LCLgtk2}
-    with ClipArea do
-      Rgn := CreateRectRgn(Left, Top, Right, Bottom);
-    SelectClipRgn(Canvas.Handle, Rgn);
-    DeleteObject(Rgn);
-{$endif LCLgtk2}
 
     // Draw the focus Rect
     if FocusRectVisible and (ARow=inherited Row) and
