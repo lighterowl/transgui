@@ -22,10 +22,6 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 *************************************************************************************}
 
-{$ifdef windows}
-{$apptype gui}
-{$endif windows}
-
 program transgui;
 
 {$mode objfpc}{$H+}
@@ -39,20 +35,14 @@ uses
   clocale,
   {$endif}
 {$endif}
-  Interfaces, // this includes the LCL widgetset
-  Forms
-  { you can add units after this }, BaseForm, Main, rpc, AddTorrent,
+  Interfaces, Forms, BaseForm, Main, rpc, AddTorrent,
   ConnOptions, varlist, TorrProps, DaemonOptions, About, IpResolver, download,
   ColSetup, utils, ResTranslator, AddLink, MoveTorrent, AddTracker, Options,
   passwcon;
 
-//{$ifdef windows}
 {$R *.res}
-//{$endif}
 
 begin
-//Application.Scaled:=True; //travis doesnt compile
-
   if not CheckAppParams then exit;
 
   Application.Initialize;

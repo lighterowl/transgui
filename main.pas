@@ -713,8 +713,6 @@ type
 {$ifdef windows}
     FFileManagerDefault: string;
     FFileManagerDefaultParam: string;
-    FGlobalHotkey: string;
-    fGlobalHotkeyMod: string;
     FUserDefinedMenuEx: string;
     FUserDefinedMenuParam: string;
 {$endif windows}
@@ -811,6 +809,9 @@ type
     function SelectRemoteFolder(const CurFolder, DialogTitle: string): string;
     procedure ConnectionSettingsChanged(const ActiveConnection: string; ForceReconnect: boolean);
     procedure StatusBarSizes;
+{$ifdef windows}
+    procedure SetUpWindowsHotKey;
+{$endif windows}
 private
     procedure _onException(Sender: TObject; E: Exception);
 end;
@@ -1005,6 +1006,19 @@ begin
           MainForm.HideApp;
     end;
   result:=CallWindowProc(PrevWndProc,Ahwnd, uMsg, WParam, LParam);
+end;
+
+procedure TMainForm.SetUpWindowsHotKey;
+var
+  GlobalHotKey, GlobalHotKeyMod: string;
+begin
+  GlobalHotKey:=Ini.ReadString('Interface','GlobalHotkey','');
+  GlobalHotKeyMod:=Ini.ReadString('Interface','GlobalHotkeyMod','');
+  if GlobalHotKey <> '' then begin
+    HotKeyID:=GlobalAddAtom('TransGUIHotkey');
+    PrevWndProc:=windows.WNDPROC(SetWindowLongPtr(Self.Handle,GWL_WNDPROC,PtrInt(@WndCallback)));
+    RegisterHotKey(Self.Handle,HotKeyID, VKStringToWord(GlobalHotKeyMod), VKStringToWord(GlobalHotKey));
+  end;
 end;
 
 {$endif windows}
@@ -1822,11 +1836,8 @@ begin
   {$ifdef windows}
   FFileManagerDefault:=Ini.ReadString('Interface','FileManagerDefault','explorer.exe');
   FFileManagerDefaultParam:=Ini.ReadString('Interface', 'FileManagerDefaultParam', '/select,"%s"');
-  FGlobalHotkey:=Ini.ReadString('Interface','GlobalHotkey','');
-  FGlobalHotkeyMod:=Ini.ReadString('Interface','GlobalHotkeyMod','0');
-  HotKeyID := GlobalAddAtom('TransGUIHotkey');
-  PrevWndProc:=windows.WNDPROC(SetWindowLongPtr(Self.Handle,GWL_WNDPROC,PtrInt(@WndCallback)));
-  RegisterHotKey(Self.Handle,HotKeyID, VKStringToWord(FGlobalHotkeyMod), VKStringToWord(FGlobalHotkey));
+  SetUpWindowsHotKey;
+
   // Create UserMenus if any in [UserMenu]
       j:= 1;
       repeat

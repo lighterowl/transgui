@@ -296,6 +296,11 @@
               <GenerateDebugInfo Value="False"/>
             </Debugging>
             <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
           </Linking>
           <Other>
             <Verbosity>
@@ -504,6 +509,7 @@
       <Unit>
         <Filename Value="trackeruri.pas"/>
         <IsPartOfProject Value="True"/>
+        <UnitName Value="TrackerUri"/>
       </Unit>
       <Unit>
         <Filename Value="macosthemedetect.pas"/>
