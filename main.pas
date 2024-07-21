@@ -47,7 +47,7 @@ uses
   Graphics, Dialogs, ComCtrls, Menus, ActnList, LCLVersion,
   httpsend, StdCtrls, fpjson, jsonparser, ExtCtrls, rpc, syncobjs, variants, varlist, IpResolver,
   zipper, ResTranslator, VarGrid, StrUtils, LCLProc, Grids, BaseForm, utils, AddTorrent, Types,
-  LazFileUtils, LazUTF8, StringToVK, passwcon, GContnrs,lineinfo, RegExpr,
+  LazFileUtils, LazUTF8, StringToVK, passwcon, GContnrs,RegExpr,
   Filtering, TorrentStateImages, RPCConstants, TorrentColumns, trackeruri,
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
@@ -1647,11 +1647,6 @@ begin
   RegisterURLHandler(@AddTorrentFile);
   MacOSThemeDetect.Callback := @OnThemeChanged;
 {$endif darwin}
-
-
-  {$if FPC_FULlVERSION>=30101}
-  AllowReuseOfLineInfoData:=false;
-  {$endif}
 
   Application.Title:=AppName + ' v' + AppVersion;
   Caption:=Application.Title;
