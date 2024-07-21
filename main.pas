@@ -623,7 +623,6 @@ type
     procedure acUpdateGeoIPExecute(Sender: TObject);
     procedure acVerifyTorrentExecute(Sender: TObject);
     procedure ApplicationPropertiesEndSession(Sender: TObject);
-    procedure ApplicationPropertiesException(Sender: TObject; E: Exception);
     procedure ApplicationPropertiesIdle(Sender: TObject; var Done: Boolean);
     procedure ApplicationPropertiesMinimize(Sender: TObject);
     procedure ApplicationPropertiesRestore(Sender: TObject);
@@ -724,7 +723,6 @@ type
     FFilesCapt: string;
     FCalcAvg: boolean;
     FPasswords: TStringList;
-    FAppProps:TApplicationProperties;
 
     procedure UpdateUI;
     procedure UpdateUIRpcVersion(RpcVersion: integer);
@@ -1654,10 +1652,6 @@ begin
   {$if FPC_FULlVERSION>=30101}
   AllowReuseOfLineInfoData:=false;
   {$endif}
-  FAppProps := TApplicationProperties.Create(Self);
-  FAppProps.OnException := @_onException;
-  FAppProps.CaptureExceptions := True;
-
 
   Application.Title:=AppName + ' v' + AppVersion;
   Caption:=Application.Title;
@@ -1831,7 +1825,6 @@ begin
   acTrackerGrouping.Checked:=Ini.ReadBool('Interface', 'TrackerGrouping', True);
   FLinksFromClipboard:=Ini.ReadBool('Interface', 'LinksFromClipboard', True);
   Application.OnActivate:=@FormActivate;
-  Application.OnException:=@ApplicationPropertiesException;
 
   {$ifdef windows}
   FFileManagerDefault:=Ini.ReadString('Interface','FileManagerDefault','explorer.exe');
@@ -1920,8 +1913,10 @@ begin
                   Ini.WriteInteger('StatusBarPanels',IntToStr(i),Statusbar.Panels[i].Width);
   end;
   {$IF LCL_FULLVERSION >= 1080000}
-  PageInfo.Options := PageInfo.Options + [nboDoChangeOnSetIndex]
+  PageInfo.Options := PageInfo.Options + [nboDoChangeOnSetIndex];
   {$ENDIF}
+
+  FilterTimer.Interval := 100;
 end;
 
 procedure TMainForm.FormDestroy(Sender: TObject);
@@ -4141,39 +4136,6 @@ procedure TMainForm.ApplicationPropertiesEndSession(Sender: TObject);
 begin
   DeleteFileUTF8(FRunFileName);
   BeforeCloseApp;
-end;
-
-procedure TMainForm.ApplicationPropertiesException(Sender: TObject; E: Exception);
-var
-  msg: string;
-{$ifdef CALLSTACK}
-  sl: TStringList;
-{$endif CALLSTACK}
-begin
-  ForceAppNormal;
-  msg:=E.Message;
-{$ifdef CALLSTACK}
-  try
-    sl:=TStringList.Create;
-    try
-      sl.Text:=GetLastExceptionCallStack;
-      Clipboard.AsText:=msg + LineEnding + sl.Text;
-      DebugLn(msg + LineEnding + sl.Text);
-      if sl.Count > 20 then begin
-        while sl.Count > 20 do
-          sl.Delete(20);
-        sl.Add('...');
-      end;
-      msg:=msg + LineEnding + '---' + LineEnding + 'The error details has been copied to the clipboard.' + LineEnding + '---';
-      msg:=msg + LineEnding + sl.Text;
-    finally
-      sl.Free;
-    end;
-  except
-    ; // suppress exception
-  end;
-{$endif CALLSTACK}
-  MessageDlg(TranslateString(msg, True), mtError, [mbOK], 0);
 end;
 
 procedure TMainForm.ApplicationPropertiesIdle(Sender: TObject; var Done: Boolean);

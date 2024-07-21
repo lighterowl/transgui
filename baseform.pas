@@ -65,12 +65,24 @@ uses LCLType, ButtonPanel, VarGrid, ComCtrls, StdCtrls, ExtCtrls, lclversion;
 var
   ScaleMultiplier, ScaleDivider: integer;
 
+type THackControl = class(TWinControl) end;
+
+procedure CalcPreferredSize(c: TControl; var w: integer; var h: integer);
+begin
+  { this is the only reason why the project needs to be compiled without -CR
+  also known as <VerifyObjMethodCallValidity> in LPI XML. }
+  try
+    THackControl(c).CalculatePreferredSize(w, h, True);
+  except
+    on Exception
+    do
+  end;
+end;
+
 function ScaleInt(i: integer): integer;
 begin
   Result:=i*ScaleMultiplier div ScaleDivider;
 end;
-
-type THackControl = class(TWinControl) end;
 
 procedure AutoSizeForm(Form: TCustomForm);
 var
@@ -87,7 +99,7 @@ begin
         TButtonPanel(C).HandleNeeded;
         w:=0;
         h:=0;
-        THackControl(C).CalculatePreferredSize(w, h, True);
+        CalcPreferredSize(c, w, h);
       end
       else
         h:=Height;
@@ -174,7 +186,7 @@ begin
       if C.Visible and (C is TCustomLabel) and C.AutoSize and (TLabel(C).Alignment = taLeftJustify) and (C.Anchors*[akLeft, akRight] = [akRight]) then begin
         w:=0;
         h:=0;
-        THackControl(C).CalculatePreferredSize(w, h, True);
+        CalcPreferredSize(C, w, h);
         C.Width:=w;
       end;
 {$ifdef darwin}
@@ -182,7 +194,7 @@ begin
       if C.Visible and (C is TCustomButton) then begin
         w:=0;
         h:=0;
-        THackControl(C).CalculatePreferredSize(w, h, True);
+        CalcPreferredSize(C, w, h);
         C.Height:=h;
       end;
       // Add extra top spacing for group box

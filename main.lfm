@@ -3809,7 +3809,6 @@ inherited MainForm: TMainForm
     end
   end
   object FilterTimer: TTimer[21]
-    Interval = 100
     OnTimer = FilterTimerTimer
     Left = 76
     Top = 28
