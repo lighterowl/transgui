@@ -27,9 +27,10 @@ fpc_lazarus_build_install() {
   fpcmkcfg -d basepath=${fpc_basepath} -o ~/.fpc.cfg
 
   cd "$sdk_dir"
-  curl -L -o lazarus-src.tar.gz 'https://gitlab.com/dkk089/lazarus/-/archive/transgui/lazarus-transgui.tar.gz'
-  tar xf lazarus-src.tar.gz
-  mv lazarus-transgui lazarus
+  local -r lazarus_commit='4e69368d79e3801ad26a7bc7c1eda0ad3cf7dcc4'
+  curl -L -o lazarus-src.tar.bz2 "https://gitlab.com/dkk089/lazarus/-/archive/${lazarus_commit}/lazarus-${lazarus_commit}.tar.bz2"
+  tar xf lazarus-src.tar.bz2
+  mv "lazarus-${lazarus_commit}" lazarus
   cd lazarus
   make bigide LCL_PLATFORM=qt5
   export PATH=$PWD:$PATH
