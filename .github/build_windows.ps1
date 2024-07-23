@@ -45,7 +45,7 @@ function FPC-Lazarus-Build-Install {
     cd "$sdk_dir"
     $lazarus_commit = '4e69368d79e3801ad26a7bc7c1eda0ad3cf7dcc4'
     My-Download -Uri "https://gitlab.com/dkk089/lazarus/-/archive/${lazarus_commit}/lazarus-${lazarus_commit}.zip" -OutFile lazarus-src.zip
-    7z x lazarus-${lazarus_commit}.zip
+    7z x lazarus-src.zip
 
     mv lazarus-${lazarus_commit} lazarus
     cd lazarus
