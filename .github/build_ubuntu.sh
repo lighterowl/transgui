@@ -37,7 +37,12 @@ fpc_lazarus_build_install() {
 }
 
 sudo apt update -yqq
-sudo apt install -yqq build-essential libqt5pas-dev libfuse2 qtbase5-dev-tools qt5-qmake libxml2-utils
+sudo apt install -yqq build-essential libfuse2 qtbase5-dev-tools qt5-qmake libxml2-utils
+
+curl -L -O https://github.com/davidbannon/libqt5pas/releases/download/v1.2.15/libqt5pas1_2.15-1_amd64.deb
+curl -L -O https://github.com/davidbannon/libqt5pas/releases/download/v1.2.15/libqt5pas-dev_2.15-1_amd64.deb
+dpkg -i libqt5pas1_2.15-1_amd64.deb
+dpkg -i libqt5pas-dev_2.15-1_amd64.deb
 
 if [[ -d $sdk_dir ]]; then
   export PATH=${sdk_dir}/lazarus:${fpc_installdir}/bin:${fpc_basepath}:$PATH
