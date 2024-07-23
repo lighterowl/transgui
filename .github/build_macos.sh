@@ -4,8 +4,8 @@ set -xe
 
 readonly repo_dir=$PWD
 readonly sdk_dir=~/.transgui_sdk
-readonly fpc_installdir="${sdk_dir}/fpc-3.2.3"
-readonly fpc_basepath="${fpc_installdir}/lib/fpc/3.2.3"
+readonly fpc_installdir="${sdk_dir}/fpc-3.2.4-rc1"
+readonly fpc_basepath="${fpc_installdir}/lib/fpc/3.2.4"
 readonly brew_prefix=$(brew --prefix)
 readonly macosx_libdir=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
 readonly macosx_frameworkdir=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
@@ -32,10 +32,12 @@ fpc_lazarus_build_install() {
 
   mkdir -p "$sdk_dir"
   cd "$sdk_dir"
-  readonly fpc323_commit='0c5256300a323c78caa0b1a9cb772ac137f5aa8e'
-  curl -O "https://gitlab.com/freepascal.org/fpc/source/-/archive/${fpc323_commit}/source-${fpc323_commit}.tar.gz"
-  tar xf "source-${fpc323_commit}.tar.gz"
-  cd "source-${fpc323_commit}"
+
+  readonly fpc324_rc1_commit='d78e2897014a69f56a1cfb53c75335c4cc37ba0e'
+  curl -L -o fpc-src.tar.bz2 "https://gitlab.com/freepascal.org/fpc/source/-/archive/${fpc324_rc1_commit}/source-${fpc324_rc1_commit}.tar.bz2"
+  tar xf fpc-src.tar.bz2
+  mv "source-${fpc324_rc1_commit}" fpc-src
+  cd fpc-src
 
   mkdir -p "${fpc_installdir}"
 
@@ -57,9 +59,9 @@ fpc_lazarus_build_install() {
   make_fpc_cfg
 
   cd "$sdk_dir"
-  local -r lazarus_commit='63dda919964be2dead48c0fdb018a02a95727e16'
-  curl -L -o lazarus-src.tar.gz "https://gitlab.com/dkk089/lazarus/-/archive/${lazarus_commit}/lazarus-${lazarus_commit}.tar.gz"
-  tar xf lazarus-src.tar.gz
+  local -r lazarus_commit='4e69368d79e3801ad26a7bc7c1eda0ad3cf7dcc4'
+  curl -L -o lazarus-src.tar.bz2 "https://gitlab.com/dkk089/lazarus/-/archive/${lazarus_commit}/lazarus-${lazarus_commit}.tar.bz2"
+  tar xf lazarus-src.tar.bz2
   mv "lazarus-${lazarus_commit}" lazarus
   cd lazarus
   make bigide
@@ -109,7 +111,7 @@ package_openssl() {
 }
 
 my_lazbuild() {
-  lazbuild --compiler=${fpc_installdir}/lib/fpc/3.2.3/${compiler} \
+  lazbuild "--compiler=${fpc_basepath}/${compiler}" \
     --lazarusdir=${sdk_dir}/lazarus "$@"
 }
 

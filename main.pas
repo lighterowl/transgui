@@ -1895,11 +1895,13 @@ begin
         if j <> 0 then StatusBar.Panels[i].Width:=j else
                   Ini.WriteInteger('StatusBarPanels',IntToStr(i),Statusbar.Panels[i].Width);
   end;
-  {$IF LCL_FULLVERSION >= 1080000}
-  PageInfo.Options := PageInfo.Options + [nboDoChangeOnSetIndex];
-  {$ENDIF}
 
+  PageInfo.Options := PageInfo.Options + [nboDoChangeOnSetIndex];
   FilterTimer.Interval := 100;
+{$if not declared(lcl_custom_transgui)}
+  acKeepSelectionInTables.Checked := True;
+  acKeepSelectionInTables.Enabled := False;
+{$endif}
 end;
 
 procedure TMainForm.FormDestroy(Sender: TObject);
@@ -3637,8 +3639,10 @@ end;
 procedure TMainForm.acKeepSelectionInTablesExecute(Sender: TObject);
 begin
   acKeepSelectionInTables.Checked := not acKeepSelectionInTables.Checked;
+{$if declared(lcl_custom_transgui)}
   if acKeepSelectionInTables.Checked then gTorrents.Options2:=[]
   else gTorrents.Options2:=[goNoScrollAfterSetRow];
+{$endif}
   Ini.WriteBool('Interface','KeepTableSelection',acKeepSelectionInTables.Checked);
 end;
 

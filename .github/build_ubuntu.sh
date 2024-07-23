@@ -4,8 +4,8 @@ set -xe
 
 readonly repo_dir=$PWD
 readonly sdk_dir=~/.transgui_sdk
-readonly fpc_installdir="${sdk_dir}/fpc-3.2.3"
-readonly fpc_basepath="${fpc_installdir}/lib/fpc/3.2.3"
+readonly fpc_installdir="${sdk_dir}/fpc-3.2.4-rc1"
+readonly fpc_basepath="${fpc_installdir}/lib/fpc/3.2.4"
 
 fpc_lazarus_build_install() {
   sudo apt install -yqq --no-install-recommends fpc build-essential
@@ -14,10 +14,11 @@ fpc_lazarus_build_install() {
 
   mkdir -p "$sdk_dir"
   cd "$sdk_dir"
-  readonly fpc323_commit='0c5256300a323c78caa0b1a9cb772ac137f5aa8e'
-  curl -O "https://gitlab.com/freepascal.org/fpc/source/-/archive/${fpc323_commit}/source-${fpc323_commit}.tar.gz"
-  tar xf "source-${fpc323_commit}.tar.gz"
-  cd "source-${fpc323_commit}"
+  readonly fpc324_rc1_commit='d78e2897014a69f56a1cfb53c75335c4cc37ba0e'
+  curl -L -o fpc-src.tar.bz2 "https://gitlab.com/freepascal.org/fpc/source/-/archive/${fpc324_rc1_commit}/source-${fpc324_rc1_commit}.tar.bz2"
+  tar xf fpc-src.tar.bz2
+  mv "source-${fpc324_rc1_commit}" fpc-src
+  cd fpc-src
 
   make all
   mkdir -p "${fpc_installdir}"
@@ -26,16 +27,21 @@ fpc_lazarus_build_install() {
   fpcmkcfg -d basepath=${fpc_basepath} -o ~/.fpc.cfg
 
   cd "$sdk_dir"
-  curl -L -o lazarus-src.tar.gz 'https://gitlab.com/dkk089/lazarus/-/archive/transgui/lazarus-transgui.tar.gz'
-  tar xf lazarus-src.tar.gz
-  mv lazarus-transgui lazarus
+  local -r lazarus_commit='4e69368d79e3801ad26a7bc7c1eda0ad3cf7dcc4'
+  curl -L -o lazarus-src.tar.bz2 "https://gitlab.com/dkk089/lazarus/-/archive/${lazarus_commit}/lazarus-${lazarus_commit}.tar.bz2"
+  tar xf lazarus-src.tar.bz2
+  mv "lazarus-${lazarus_commit}" lazarus
   cd lazarus
   make bigide LCL_PLATFORM=qt5
   export PATH=$PWD:$PATH
 }
 
 sudo apt update -yqq
-sudo apt install -yqq build-essential libqt5pas-dev libfuse2 qtbase5-dev-tools qt5-qmake libxml2-utils
+sudo apt install -yqq build-essential libfuse2 qtbase5-dev-tools qt5-qmake libxml2-utils
+
+curl -L -O https://github.com/davidbannon/libqt5pas/releases/download/v1.2.15/libqt5pas1_2.15-1_amd64.deb
+curl -L -O https://github.com/davidbannon/libqt5pas/releases/download/v1.2.15/libqt5pas-dev_2.15-1_amd64.deb
+sudo apt install ./libqt5pas1_2.15-1_amd64.deb ./libqt5pas-dev_2.15-1_amd64.deb
 
 if [[ -d $sdk_dir ]]; then
   export PATH=${sdk_dir}/lazarus:${fpc_installdir}/bin:${fpc_basepath}:$PATH

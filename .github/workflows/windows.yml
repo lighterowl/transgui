@@ -19,7 +19,7 @@ jobs:
     - uses: actions/cache@v4
       with:
         path: |
-          ~\transgui_sdk\fpc-3.2.3
+          ~\transgui_sdk\fpc-3.2.4-rc1
           ~\transgui_sdk\lazarus
           ~\transgui_sdk\OpenSSL\bin\libcrypto-3.dll
           ~\transgui_sdk\OpenSSL\bin\libssl-3.dll

@@ -1166,16 +1166,10 @@ begin
   Result:=inherited DoMouseWheel(Shift, WheelDelta, MousePos);
   if not Result then begin
     if Mouse.WheelScrollLines = -1 then
-  {$IF LCL_FULLVERSION < 1080000}
-      GridMouseWheel(Shift, -WheelDelta*VisibleRowCount div 120)
-    else
-      GridMouseWheel(Shift, -WheelDelta*Mouse.WheelScrollLines div 120);
-  {$ENDIF}
-  {$IF LCL_FULLVERSION >= 1080000}
       GridMouseWheel(Shift, WheelDelta*VisibleRowCount div 120)
     else
       GridMouseWheel(Shift, -WheelDelta div 120);
-  {$ENDIF}
+
       Result := True;
   end;
 end;
