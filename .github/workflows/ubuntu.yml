@@ -20,7 +20,7 @@ jobs:
       with:
         path: |
           ~/.transgui_sdk/lazarus
-          ~/.transgui_sdk/fpc-3.2.3
+          ~/.transgui_sdk/fpc-3.2.4-rc1
         key: ubuntu-fpc-lazarus
 
     - run: .github/build_ubuntu.sh
