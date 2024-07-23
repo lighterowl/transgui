@@ -4,8 +4,8 @@ set -xe
 
 readonly repo_dir=$PWD
 readonly sdk_dir=~/.transgui_sdk
-readonly fpc_installdir="${sdk_dir}/fpc-3.2.3"
-readonly fpc_basepath="${fpc_installdir}/lib/fpc/3.2.3"
+readonly fpc_installdir="${sdk_dir}/fpc-3.2.4-rc1"
+readonly fpc_basepath="${fpc_installdir}/lib/fpc/3.2.4"
 
 fpc_lazarus_build_install() {
   sudo apt install -yqq --no-install-recommends fpc build-essential
@@ -14,10 +14,11 @@ fpc_lazarus_build_install() {
 
   mkdir -p "$sdk_dir"
   cd "$sdk_dir"
-  readonly fpc323_commit='0c5256300a323c78caa0b1a9cb772ac137f5aa8e'
-  curl -O "https://gitlab.com/freepascal.org/fpc/source/-/archive/${fpc323_commit}/source-${fpc323_commit}.tar.gz"
-  tar xf "source-${fpc323_commit}.tar.gz"
-  cd "source-${fpc323_commit}"
+  readonly fpc324_rc1_commit='d78e2897014a69f56a1cfb53c75335c4cc37ba0e'
+  curl -L -o fpc-src.tar.bz2 "https://gitlab.com/freepascal.org/fpc/source/-/archive/${fpc324_rc1_commit}/source-${fpc324_rc1_commit}.tar.bz2"
+  tar xf fpc-src.tar.bz2
+  mv "source-${fpc324_rc1_commit}" fpc-src
+  cd fpc-src
 
   make all
   mkdir -p "${fpc_installdir}"

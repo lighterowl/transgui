@@ -15,7 +15,7 @@ function My-Download {
 
 $sdk_dir = "${HOME}\transgui_sdk"
 $fpc322 = "${sdk_dir}\fpc-3.2.2"
-$fpc323 = "${sdk_dir}\fpc-3.2.3"
+$fpc324 = "${sdk_dir}\fpc-3.2.4-rc1"
 $lazarus = "${sdk_dir}\lazarus"
 $openssl = "${sdk_dir}\OpenSSL"
 
@@ -28,26 +28,26 @@ function FPC-Lazarus-Build-Install {
 
     $env:Path = "${fpc322}\bin\i386-win32;" + $env:Path
 
-    # top of fixes_3_2 at the time of writing
-    $fpc323_commit = '0c5256300a323c78caa0b1a9cb772ac137f5aa8e'
-    My-Download -Uri "https://gitlab.com/freepascal.org/fpc/source/-/archive/${fpc323_commit}/source-${fpc323_commit}.zip" -OutFile fpc-fixes.zip
+    $fpc324_commit = 'd78e2897014a69f56a1cfb53c75335c4cc37ba0e'
+    My-Download -Uri "https://gitlab.com/freepascal.org/fpc/source/-/archive/${fpc324_commit}/source-${fpc324_commit}.zip" -OutFile fpc-324-rc1.zip
 
     # we could use Expand-Archive but it takes an eternity and then some
-    7z x fpc-fixes.zip
+    7z x fpc-324-rc1.zip
 
-    cd "source-${fpc323_commit}"
+    cd "source-${fpc324_commit}"
     make all
-    mkdir "$fpc323"
-    make PREFIX=${fpc323} install
+    mkdir "$fpc324"
+    make PREFIX=${fpc324} install
 
-    $env:Path = "${fpc323}\bin\i386-win32;" + $env:Path
-    fpcmkcfg -d basepath=${fpc323} -o "${fpc323}\bin\i386-win32\fpc.cfg"
+    $env:Path = "${fpc324}\bin\i386-win32;" + $env:Path
+    fpcmkcfg -d basepath=${fpc324} -o "${fpc324}\bin\i386-win32\fpc.cfg"
 
     cd "$sdk_dir"
-    My-Download -Uri "https://gitlab.com/dkk089/lazarus/-/archive/transgui/lazarus-transgui.zip" -OutFile lazarus-src.zip
-    7z x lazarus-src.zip
+    $lazarus_commit = '4e69368d79e3801ad26a7bc7c1eda0ad3cf7dcc4'
+    My-Download -Uri "https://gitlab.com/dkk089/lazarus/-/archive/${lazarus_commit}/lazarus-${lazarus_commit}.zip" -OutFile lazarus-src.zip
+    7z x lazarus-${lazarus_commit}.zip
 
-    mv lazarus-transgui lazarus
+    mv lazarus-${lazarus_commit} lazarus
     cd lazarus
     make bigide
     $env:Path = "${lazarus};" + $env:Path
