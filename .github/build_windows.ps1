@@ -61,7 +61,7 @@ $ErrorActionPreference = "Stop"
 
 if (Test-Path -Path "$sdk_dir")
 {
-    $env:Path = "${lazarus};${fpc323}\bin\i386-win32;" + $env:Path
+    $env:Path = "${lazarus};${fpc324}\bin\i386-win32;" + $env:Path
 }
 else
 {
