@@ -809,8 +809,6 @@ type
 {$ifdef windows}
     procedure SetUpWindowsHotKey;
 {$endif windows}
-private
-    procedure _onException(Sender: TObject; E: Exception);
 end;
 
 function AppName: string;
@@ -7696,46 +7694,6 @@ begin
     AppNormal;
   end;
 end;
-
-procedure myDumpAddr(Addr: Pointer;var f:system.text);
-begin
-  try
-    WriteLn(f,BackTraceStrFunc(Addr));
-  except
-    writeLn(f,SysBackTraceStr(Addr));
-  end;
-end;
-procedure MyDumpExceptionBackTrace(var f:system.text);
-var
-  FrameCount: integer;
-  Frames: PPointer;
-  FrameNumber:Integer;
-begin
-  WriteLn(f,'Stack trace:');
-  myDumpAddr(ExceptAddr,f);
-  FrameCount:=ExceptFrameCount;
-  Frames:=ExceptFrames;
-  for FrameNumber := 0 to FrameCount-1 do
-    myDumpAddr(Frames[FrameNumber],f);
-end;
-procedure TMainForm._onException(Sender: TObject; E: Exception);
-var
-  f:system.text;
-  crashreportfilename:shortstring;
-begin
-    crashreportfilename:='crashreport.txt';
-    system.Assign(f,crashreportfilename);
-    if FileExists(crashreportfilename) then
-        system.Append(f)
-    else
-        system.Rewrite(f);
-
-    WriteLn(f,'');WriteLn(f,'v.' + AppVersion + ' crashed((');WriteLn(f,'');
-    myDumpExceptionBackTrace(f);
-    system.close(f);
-    halt(0);
-end;
-
 
 procedure TMainForm.FillSpeedsMenu;
 
