@@ -685,7 +685,6 @@ type
     FLastDone: double;
     FCurConn: string;
     FPathMap: TStringList;
-    FLastFilerIndex: integer;
     FFilterChanged: boolean;
     FCurDownSpeedLimit: integer;
     FCurUpSpeedLimit: integer;
@@ -4418,7 +4417,6 @@ begin
 end;
 
 procedure TMainForm.lvFilterCellAttributes(Sender: TVarGrid; ACol, ARow, ADataCol: integer; AState: TGridDrawState; var CellAttribs: TCellAttributes);
-var t: Integer;
 begin
   if ARow < 0 then exit;
   with CellAttribs do begin
@@ -4445,11 +4443,8 @@ end;
 procedure TMainForm.lvFilterClick(Sender: TObject);
 begin
   if VarIsNull(lvFilter.Items[fcolDisplayText, lvFilter.Row]) then
-    if (FLastFilerIndex > lvFilter.Row) or (lvFilter.Row = lvFilter.Items.Count - 1) then
-      lvFilter.Row:=lvFilter.Row - 1
-    else
-      lvFilter.Row:=lvFilter.Row + 1;
-  FLastFilerIndex:=lvFilter.Row;
+    lvFilter.Row:=lvFilter.Row - 1;
+
   FilterTimer.Enabled:=False;
   FilterTimer.Enabled:=True;
 end;
@@ -4460,7 +4455,7 @@ var
   i: integer;
   RR: TRect;
 begin
-  ADefaultDrawing:=not VarIsNull(Sender.Items[0, ARow]);
+  ADefaultDrawing:=not VarIsNull(Sender.Items[fcolDisplayText, ARow]);
   if ADefaultDrawing then exit;
 
   with lvFilter.Canvas do begin
