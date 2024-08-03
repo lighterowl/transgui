@@ -47,7 +47,7 @@ uses
   Graphics, Dialogs, ComCtrls, Menus, ActnList, LCLVersion,
   httpsend, StdCtrls, fpjson, jsonparser, ExtCtrls, rpc, syncobjs, variants, varlist, IpResolver,
   zipper, ResTranslator, VarGrid, StrUtils, LCLProc, Grids, BaseForm, utils, AddTorrent, Types,
-  LazFileUtils, LazUTF8, StringToVK, passwcon, GContnrs,RegExpr,
+  LazFileUtils, LazUTF8, StringToVK, passwcon, RegExpr,
   Filtering, TorrentStateImages, RPCConstants, TorrentColumns, trackeruri,
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
@@ -155,14 +155,6 @@ resourcestring
   sSeparateTiersByEmptyLine = 'Separate tiers by an empty line:';
 
 type
-
-  { TMyHashMap example from hashmapdemo }
-  TMyHashMap = class(specialize TGenHashMap<Integer, Integer>)
-    function DefaultHashKey(const Key: Integer): Integer; override;
-    function DefaultKeysEqual(const A, B: Integer): Boolean; override;
-    function DefaultKeyToString(const Key: Integer): String; override;
-    function DefaultItemToString(const Item: Integer): String; override;
-  end;
 
   // for torrent folder
   FolderData = class
@@ -884,29 +876,6 @@ uses
   synacode, ConnOptions, clipbrd, DateUtils, TorrProps, DaemonOptions, About,
   ToolWin, download, ColSetup, AddLink, MoveTorrent, ssl_openssl3_lib, AddTracker, lcltype,
   Options, ButtonPanel, BEncode, synautil, Math;
-
-  {TMyHashMap}
-  function TMyHashMap.DefaultHashKey(const Key: Integer): Integer;
-  begin
-    Result := Key;
-    if Odd(Result) then
-      Result := Result * 3;
-    end;
-
-  function TMyHashMap.DefaultKeysEqual(const A, B: Integer): Boolean;
-  begin
-    Result := A = B;
-  end;
-
-  function TMyHashMap.DefaultKeyToString(const Key: Integer): String;
-  begin
-    WriteStr(Result, Key);
-  end;
-
-  function TMyHashMap.DefaultItemToString(const Item: Integer): String;
-  begin
-    WriteStr(Result, Item);
-  end;
 
 const
   TR_STATUS_FINISHED        = $100; // Torrent is finished (pseudo status)
@@ -7015,62 +6984,55 @@ begin
 
   i := 0;
   if gTorrents.SelCount = 0 then numRows := 1 else numRows := gTorrents.SelCount;
-  ids := VarArrayCreate([0, numRows], varinteger);
+  ids := VarArrayCreate([0, numRows - 1], varinteger);
   gTorrents.ForEachSelectedRow(@SaveTorrentId);
   Result := ids;
 end;
 
 function TMainForm.GetDisplayedTorrents: variant;
 var
-  i,j : integer;
+  i: Integer;
+  ids: variant;
+
+procedure SaveTorrentId(Sender: TVarGrid; Row: Integer);
 begin
-  with gTorrents do begin
-    if Items.Count = 0 then begin
-      Result:=Unassigned;
-      exit;
-    end;
-        Result:=VarArrayCreate([0, gTorrents.Items.Count - 1], varinteger);
-        j:=0;
-        for i:=0 to gTorrents.Items.Count - 1 do
-          if gTorrents.RowVisible[i] then begin
-            Result[j]:=Items[torcolTorrentId, i];
-            Inc(j);
-          end;
-  end;
+  ids[i] := Sender.Items[torcolTorrentId, Row];
+  Inc(i);
+end;
+
+begin
+  if gTorrents.Items.Count = 0 then
+    exit(Unassigned);
+
+  i := 0;
+  ids := VarArrayCreate([0, gTorrents.Items.Count - 1], varinteger);
+  gTorrents.ForEachDisplayedRow(@SaveTorrentId);
+  Result := ids;
 end;
 
 procedure TMainform.StatusBarSizes;
 var
-  MMap: TMyHashMap;
-  ids, cidx: variant;
-  TotalDownloaded, TotalSizeToDownload, TorrentDownloaded, TorrentSizeToDownload: Int64;
-  i: Integer;
+  TotalDownloaded, TotalSizeToDownload: Int64;
+
+procedure AddDownloadedSizes(Sender: TVarGrid; Row: Integer);
+var
+  TorrentDownloaded, TorrentSizeToDownload: Int64;
+begin
+  TorrentSizeToDownload := Sender.Items[torcolSizetoDowload, Row];
+  TorrentDownloaded     := TorrentSizeToDownload * (Sender.Items[torcolDone, Row] / 100);
+  TotalSizeToDownload   += TorrentSizeToDownload;
+  TotalDownloaded       += TorrentDownloaded;
+end;
+
 begin
   TotalDownloaded := 0;
   TotalSizeToDownload := 0;
 
-  if gTorrents.Items.Count > 0 then begin
-
-    if gTorrents.SelCount > 0
-      then ids := GetSelectedTorrents
-      else ids := GetDisplayedTorrents;
-
-    MMap := TMyHashMap.Create;
-    for i:=0 to FTorrents.Count -1 do
-    begin
-      MMap[StrToInt(Ftorrents.Items[torcolTorrentId, i])] := i;
-    end;
-
-    for i:=VarArrayLowBound(ids, 1) to VarArrayHighBound(ids, 1) - 1 do
-    begin
-      cidx := MMap[ids[i]];
-      TorrentSizeToDownload := FTorrents.Items[torcolSizetoDowload, cidx];
-      TorrentDownloaded     := TorrentSizeToDownload * (FTorrents.Items[torcolDone, cidx] / 100);
-      TotalSizeToDownload   += TorrentSizeToDownload;
-      TotalDownloaded       += TorrentDownloaded;
-    end;
-    MMap.Free;
-  end;
+  if gTorrents.Items.Count > 0 then
+    if gTorrents.SelCount > 0 then
+      gTorrents.ForEachSelectedRow(@AddDownloadedSizes)
+    else
+      gTorrents.ForEachDisplayedRow(@AddDownloadedSizes);
 
   if gTorrents.SelCount > 0
     then StatusBar.Panels[4].Text:=Format(sTotalSizeSelected,[GetHumanSize(TotalSizeToDownload, 0, '?')])
@@ -7078,7 +7040,6 @@ begin
 
   StatusBar.Panels[5].Text:=Format(sTotalDownloaded,[GetHumanSize(TotalDownloaded, 0, '?')]);
   StatusBar.Panels[6].Text:=Format(sTotalRemain,[GetHumanSize(TotalSizeToDownload - TotalDownloaded, 0, '?')]);
-
 end;
 
 procedure TMainForm.FillDownloadDirs(CB: TComboBox; const CurFolderParam: string);

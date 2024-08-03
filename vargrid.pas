@@ -165,6 +165,7 @@ type
     procedure EndUpdate(aRefresh: boolean = true); reintroduce;
     procedure EditCell(ACol, ARow: integer);
     procedure ForEachSelectedRow(Cbk: TRowCallback);
+    procedure ForEachDisplayedRow(Cbk: TRowCallback);
 
     property Items: TVarList read FItems;
     property RowSelected[RowIndex: integer]: boolean read GetRowSelected write SetRowSelected;
@@ -304,6 +305,15 @@ begin
     for i:=0 to Items.Count - 1 do
       if RowSelected[i] then
         Cbk(Self, i);
+end;
+
+procedure TVarGrid.ForEachDisplayedRow(Cbk: TRowCallback);
+var
+  i: Integer;
+begin
+  for i:=0 to Items.Count - 1 do
+    if RowVisible[i] then
+      Cbk(Self, i);
 end;
 
 procedure TVarGrid.ItemsChanged(Sender: TObject);
