@@ -37,7 +37,7 @@ unit ResTranslator;
 interface
 
 uses
-  Classes, StrUtils, SysUtils, FileUtil, LazFileUtils, LResources, TypInfo, LCLProc, LazUTF8;
+  Classes, StrUtils, SysUtils, FileUtil, LazFileUtils, LResources, TypInfo, LCLProc, LazUTF8, Translations;
 
 type
 
@@ -266,10 +266,11 @@ end;
 
 procedure MakeTranslationFile(Language: AnsiString); overload;
 var
-  lLang, sLang, s: string;
+  lang_id : Translations.TLanguageID;
+  sLang, s : string;
 begin
-  LazGetLanguageIDs(lLang, sLang);
-  sLang:=AnsiLowerCase(sLang);
+  lang_id := Translations.GetLanguageID;
+  sLang:=AnsiLowerCase(lang_id.LanguageCode);
   s:=ExtractFileNameOnly(ParamStrUtf8(0));
   if (sLang <> '') and not FileExistsUTF8(DefaultLangDir + s + '.' + sLang) then
     s:=s + '.' + sLang
@@ -357,12 +358,13 @@ end;
 
 function LoadDefaultTranslationFile(const TranslationFilesPath: AnsiString; const OnTranslate: TTranslateStringEvent): TFileName;
 var
+  lang_id : Translations.TLanguageID;
   lLang, sLang, s: string;
   i: integer;
 begin
-  LazGetLanguageIDs(lLang, sLang);
-  lLang:=LowerCase(lLang);
-  sLang:=LowerCase(sLang);
+  lang_id := Translations.GetLanguageID;
+  lLang:=LowerCase(lang_id.LanguageID);
+  sLang:=LowerCase(lang_id.LanguageCode);
 {$ifdef windows}
   if sLang = 'ch' then begin
     sLang:='zh';

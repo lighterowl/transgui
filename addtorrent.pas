@@ -86,7 +86,6 @@ type
     procedure SearchGoodExtension ();
     function  GetTempate (ext:string; var e: array of string):integer;
     function  IsFileTemplate(filename:string; cntE : integer; e: array of string):boolean;
-    function  CorrectPath (path: string): string;
     procedure DeleteDirs(maxdel : Integer);
 
   private
@@ -876,20 +875,6 @@ begin
 
   DiskSpaceTimerTimer(nil);
   AppNormal;
-end;
-
-function TAddTorrentForm.CorrectPath (path: string): string;
-var
-  l_old: integer;
-begin
-  path  := StringReplace(path, '//', '/', [rfReplaceAll, rfIgnoreCase]);
-  Result:= path;
-  l_old := length(path);
-  if l_old >= 1 then begin
-    if path[l_old]='/' then
-        path := MidStr(path,1,l_old-1);
-    Result:= path;
-  end;
 end;
 
 procedure TAddTorrentForm.DeleteDirs(maxdel : Integer);
