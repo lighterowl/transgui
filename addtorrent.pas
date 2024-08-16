@@ -38,7 +38,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  StdCtrls, Spin, VarGrid, Grids, ButtonPanel, ExtCtrls, Buttons, BaseForm,
+  StdCtrls, Spin, VarGrid, Grids, ButtonPanel, ExtCtrls, Buttons,
   varlist, fpjson, StrUtils, DateUtils, LazUTF8;
 
 resourcestring
@@ -51,7 +51,7 @@ type
 
   { TAddTorrentForm }
 
-  TAddTorrentForm = class(TBaseForm)
+  TAddTorrentForm = class(TForm)
     DelButton: TBitBtn;
     btSelectAll: TButton;
     btSelectNone: TButton;

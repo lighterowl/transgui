@@ -36,7 +36,7 @@ interface
 
 uses
   Classes, SysUtils, LazUTF8, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls, Spin, ComCtrls, CheckLst, EditBtn, MaskEdit,
-  ButtonPanel, BaseForm, Rpc, Main;
+  ButtonPanel, Rpc, Main;
 
 resourcestring
  sPortTestSuccess = 'Incoming port tested successfully.';
@@ -53,7 +53,7 @@ type
 
   { TDaemonOptionsForm }
 
-  TDaemonOptionsForm = class(TBaseForm)
+  TDaemonOptionsForm = class(TForm)
     btTestPort: TButton;
     Buttons: TButtonPanel;
     cbBlocklist: TCheckBox;
