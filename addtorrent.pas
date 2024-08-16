@@ -1264,7 +1264,7 @@ begin
   gbSaveAs.Caption:='';
 {$endif windows}
 {$ifdef darwin}
-  Buttons.BorderSpacing.Right:=Buttons.BorderSpacing.Right + ScaleInt(12);
+  Buttons.BorderSpacing.Right:=Buttons.BorderSpacing.Right + 12;
 {$endif darwin}
 end;
 

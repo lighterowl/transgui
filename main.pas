@@ -2223,7 +2223,6 @@ begin
     cbShowAddTorrentWindow.Checked:=Ini.ReadBool('Interface', 'ShowAddTorrentWindow', True);
     cbDeleteTorrentFile.Checked:=Ini.ReadBool('Interface', 'DeleteTorrentFile', False);
     cbLinksFromClipboard.Checked:=Ini.ReadBool('Interface', 'LinksFromClipboard', True);
-    edIntfScale.Value:=Ini.ReadInteger('Interface', 'Scaling', 100);
     cbCheckNewVersion.Checked:=Ini.ReadBool('Interface', 'CheckNewVersion', False);
     edCheckVersionDays.Value:=Ini.ReadInteger('Interface', 'CheckNewVersionDays', 5);
     cbCheckNewVersionClick(nil);
@@ -2255,8 +2254,6 @@ begin
       Ini.WriteBool('Interface', 'DeleteTorrentFile', cbDeleteTorrentFile.Checked);
       Ini.WriteBool('Interface', 'LinksFromClipboard', cbLinksFromClipboard.Checked);
       FLinksFromClipboard:=cbLinksFromClipboard.Checked;
-
-      Ini.WriteInteger('Interface', 'Scaling', edIntfScale.Value);
 
       Ini.WriteBool('Interface', 'CheckNewVersion', cbCheckNewVersion.Checked);
       Ini.WriteInteger('Interface', 'CheckNewVersionDays', edCheckVersionDays.Value);

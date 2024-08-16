@@ -56,7 +56,6 @@ type
     cbRegExt: TCheckBox;
     cbRegMagnet: TCheckBox;
     cbTrayNotify: TCheckBox;
-    edIntfScale: TSpinEdit;
     edCheckVersionDays: TSpinEdit;
     edRefreshInterval: TSpinEdit;
     edRefreshIntervalMin: TSpinEdit;
@@ -66,11 +65,9 @@ type
     gbSysInt: TGroupBox;
     txDays: TLabel;
     tabGeneral: TTabSheet;
-    txPerc: TLabel;
     Page: TPageControl;
     tabAdvanced: TTabSheet;
     txLanguage: TLabel;
-    txIntfScale: TLabel;
     txRefreshInterval: TLabel;
     txRefreshIntervalMin: TLabel;
     txSeconds: TLabel;
@@ -141,11 +138,6 @@ begin
 
   cbLanguage.Items.Add(FTranslationLanguage);
   cbLanguage.ItemIndex:=0;
-{  i:=80*100 div (ScaleInt(100)*100 div IntfScale);
-  i:=i - i mod 5;
-  if i < 10 then
-    i:=10;
-  edIntfScale.MinValue:=i;}
 
 {$ifdef mswindows}
   gbSysInt.Visible:=True;
