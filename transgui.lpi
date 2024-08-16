@@ -282,7 +282,6 @@
           <Parsing>
             <SyntaxOptions>
               <CStyleOperator Value="False"/>
-              <UseAnsiStrings Value="False"/>
             </SyntaxOptions>
           </Parsing>
           <CodeGeneration>
@@ -321,18 +320,9 @@
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
-      <DestinationDirectory Value="\home\pi\project\0"/>
     </PublishOptions>
     <RunParams>
       <FormatVersion Value="2"/>
-      <Modes>
-        <Mode Name="default">
-          <local>
-            <CommandLineParams Value="--home=home"/>
-            <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T &apos;Lazarus Run Output&apos; -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
-          </local>
-        </Mode>
-      </Modes>
     </RunParams>
     <RequiredPackages>
       <Item>
@@ -471,14 +461,6 @@
         <UnitName Value="Options"/>
       </Unit>
       <Unit>
-        <Filename Value="baseform.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="BaseForm"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="BaseForm"/>
-      </Unit>
-      <Unit>
         <Filename Value="passwcon.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="PasswordConnect"/>
@@ -529,7 +511,6 @@
       <SyntaxOptions>
         <CStyleOperator Value="False"/>
         <IncludeAssertionCode Value="True"/>
-        <UseAnsiStrings Value="False"/>
       </SyntaxOptions>
     </Parsing>
     <CodeGeneration>
@@ -540,6 +521,7 @@
         <OverflowChecks Value="True"/>
         <StackChecks Value="True"/>
       </Checks>
+      <VerifyObjMethodCallValidity Value="True"/>
       <Optimizations>
         <OptimizationLevel Value="0"/>
       </Optimizations>

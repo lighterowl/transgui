@@ -35,7 +35,7 @@ unit AddTracker;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, ButtonPanel, StdCtrls, ExtCtrls, BaseForm;
+  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, ButtonPanel, StdCtrls, ExtCtrls;
 
 resourcestring
   STrackerProps = 'Tracker properties';
@@ -45,7 +45,7 @@ type
 
   { TAddTrackerForm }
 
-  TAddTrackerForm = class(TBaseForm)
+  TAddTrackerForm = class(TForm)
     Buttons: TButtonPanel;
     edTracker: TEdit;
     Panel1: TPanel;

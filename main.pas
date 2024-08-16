@@ -46,7 +46,7 @@ uses
   {$endif}
   Graphics, Dialogs, ComCtrls, Menus, ActnList, LCLVersion,
   httpsend, StdCtrls, fpjson, jsonparser, ExtCtrls, rpc, syncobjs, variants, varlist, IpResolver,
-  zipper, ResTranslator, VarGrid, StrUtils, LCLProc, Grids, BaseForm, utils, AddTorrent, Types,
+  zipper, ResTranslator, VarGrid, StrUtils, LCLProc, Grids, utils, AddTorrent, Types,
   LazFileUtils, LazUTF8, StringToVK, passwcon, RegExpr,
   Filtering, TorrentStateImages, RPCConstants, TorrentColumns, trackeruri,
   {$IFDEF UNIX}{$IFDEF UseCThreads}
@@ -202,7 +202,7 @@ type
 
   { TMainForm }
 
-  TMainForm = class(TBaseForm)
+  TMainForm = class(TForm)
     acConnect: TAction;
     acAddTorrent: TAction;
     acExport: TAction;
@@ -1301,8 +1301,6 @@ begin
   SizeNames[4]:=sGByte;
   SizeNames[5]:=sTByte;
 
-  IntfScale:=Ini.ReadInteger('Interface', 'Scaling', 100);
-
   Result:=True;
 end;
 
@@ -1615,8 +1613,6 @@ begin
 
   Application.Title:=AppName + ' v' + AppVersion;
   Caption:=Application.Title;
-  txTransferHeader.Font.Size:=Font.Size + 2;
-  txTorrentHeader.Font.Size:=txTransferHeader.Font.Size;
   TrayIcon.Icon.Assign(Application.Icon);
   RpcObj:=TRpc.Create;
   FTorrents:=TVarList.Create(gTorrents.Columns.Count, 0);
@@ -1644,7 +1640,7 @@ begin
     Images:=ImageList16;
     StartIndex:=30;
     EndIndex:=37;
-    Width:=ScaleInt(24);
+    Width:=24;
     Left:=MainToolBar.ClientWidth;
     Parent:=MainToolBar;
   end;
@@ -1665,10 +1661,10 @@ begin
   DoDisconnect;
   PageInfo.ActivePageIndex:=0;
   PageInfoChange(nil);
-  txTransferHeader.Caption:=' ' + txTransferHeader.Caption;
+  {txTransferHeader.Caption:=' ' + txTransferHeader.Caption;
   txTorrentHeader.Caption:=' ' + txTorrentHeader.Caption;
   txTransferHeader.Height:=txTransferHeader.Canvas.TextHeight(txTransferHeader.Caption) + 2;
-  txTorrentHeader.Height:=txTorrentHeader.Canvas.TextHeight(txTorrentHeader.Caption) + 2;
+  txTorrentHeader.Height:=txTorrentHeader.Canvas.TextHeight(txTorrentHeader.Caption) + 2;}
 
   with gStats do begin
     BeginUpdate;
@@ -2227,7 +2223,6 @@ begin
     cbShowAddTorrentWindow.Checked:=Ini.ReadBool('Interface', 'ShowAddTorrentWindow', True);
     cbDeleteTorrentFile.Checked:=Ini.ReadBool('Interface', 'DeleteTorrentFile', False);
     cbLinksFromClipboard.Checked:=Ini.ReadBool('Interface', 'LinksFromClipboard', True);
-    edIntfScale.Value:=Ini.ReadInteger('Interface', 'Scaling', 100);
     cbCheckNewVersion.Checked:=Ini.ReadBool('Interface', 'CheckNewVersion', False);
     edCheckVersionDays.Value:=Ini.ReadInteger('Interface', 'CheckNewVersionDays', 5);
     cbCheckNewVersionClick(nil);
@@ -2259,8 +2254,6 @@ begin
       Ini.WriteBool('Interface', 'DeleteTorrentFile', cbDeleteTorrentFile.Checked);
       Ini.WriteBool('Interface', 'LinksFromClipboard', cbLinksFromClipboard.Checked);
       FLinksFromClipboard:=cbLinksFromClipboard.Checked;
-
-      Ini.WriteInteger('Interface', 'Scaling', edIntfScale.Value);
 
       Ini.WriteBool('Interface', 'CheckNewVersion', cbCheckNewVersion.Checked);
       Ini.WriteInteger('Interface', 'CheckNewVersionDays', edCheckVersionDays.Value);
@@ -2362,7 +2355,7 @@ end;
 function TMainForm.DoAddTorrent(const FileName: Utf8String): boolean;
 var
   torrent: string;
-  WaitForm: TBaseForm;
+  WaitForm: TForm;
   IsAppHidden: boolean;
 
   Procedure _AddTrackers(TorrentId: integer);
@@ -2578,7 +2571,7 @@ var
   procedure ShowWaitMsg(const AText: string);
   begin
     if WaitForm = nil then begin
-      WaitForm:=TBaseForm.CreateNew(Self);
+      WaitForm:=TForm.CreateNew(Self);
       with WaitForm do begin
 {$ifndef windows}
         if IsAppHidden then
@@ -2590,7 +2583,7 @@ var
         Position:=poScreenCenter;
         Constraints.MinWidth:=400;
         AutoSize:=True;
-        BorderWidth:=ScaleInt(16);
+        BorderWidth:=16;
         with TLabel.Create(WaitForm) do begin
           Alignment:=taCenter;
           Align:=alClient;
@@ -2760,7 +2753,6 @@ begin
             gbContents.Hide;
             gbSaveAs.BorderSpacing.Bottom:=gbSaveAs.BorderSpacing.Top;
             BorderStyle:=bsDialog;
-            AutoSizeForm(TCustomForm(gbContents.Parent));
             edSaveAs.Enabled:=False;
             edSaveAs.ParentColor:=True;
           end
@@ -5209,7 +5201,6 @@ begin
         panTop.ClientHeight:=btNew.Top;
       end;
       cbShowAdvancedClick(nil);
-      AutoSizeForm(frm);
     end;
     AppNormal;
     ShowModal;

@@ -37,7 +37,7 @@ unit AddLink;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls, ButtonPanel, ExtCtrls, BaseForm;
+  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls, ButtonPanel, ExtCtrls;
 
 resourcestring
   SNoLink = 'No link was specified.';
@@ -46,7 +46,7 @@ type
 
   { TAddLinkForm }
 
-  TAddLinkForm = class(TBaseForm)
+  TAddLinkForm = class(TForm)
     Buttons: TButtonPanel;
     edLink: TEdit;
     Panel1: TPanel;

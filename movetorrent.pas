@@ -35,7 +35,7 @@ unit MoveTorrent;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls, ButtonPanel, ExtCtrls, BaseForm;
+  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls, ButtonPanel, ExtCtrls;
 
 resourcestring
   SNoTorrentDir = 'No torrent location was specified.';
@@ -45,7 +45,7 @@ type
 
   { TMoveTorrentForm }
 
-  TMoveTorrentForm = class(TBaseForm)
+  TMoveTorrentForm = class(TForm)
     btBrowse: TButton;
     Buttons: TButtonPanel;
     cbMoveData: TCheckBox;
