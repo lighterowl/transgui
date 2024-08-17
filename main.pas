@@ -1661,10 +1661,6 @@ begin
   DoDisconnect;
   PageInfo.ActivePageIndex:=0;
   PageInfoChange(nil);
-  {txTransferHeader.Caption:=' ' + txTransferHeader.Caption;
-  txTorrentHeader.Caption:=' ' + txTorrentHeader.Caption;
-  txTransferHeader.Height:=txTransferHeader.Canvas.TextHeight(txTransferHeader.Caption) + 2;
-  txTorrentHeader.Height:=txTorrentHeader.Canvas.TextHeight(txTorrentHeader.Caption) + 2;}
 
   with gStats do begin
     BeginUpdate;

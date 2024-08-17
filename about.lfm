@@ -1,4 +1,4 @@
-inherited AboutForm: TAboutForm
+object AboutForm: TAboutForm
   Left = 421
   Height = 349
   Top = 188
@@ -16,9 +16,10 @@ inherited AboutForm: TAboutForm
   Constraints.MinWidth = 350
   OnCreate = FormCreate
   Position = poMainFormCenter
-  object Page: TPageControl[0]
+  LCLVersion = '3.4.0.0'
+  object Page: TPageControl
     Left = 8
-    Height = 299
+    Height = 298
     Top = 8
     Width = 435
     ActivePage = tabAbout
@@ -27,8 +28,8 @@ inherited AboutForm: TAboutForm
     TabOrder = 0
     object tabAbout: TTabSheet
       Caption = 'About'
-      ClientHeight = 271
-      ClientWidth = 427
+      ClientHeight = 269
+      ClientWidth = 431
       object imgTransmission: TImage
         Left = 10
         Height = 48
@@ -135,7 +136,7 @@ inherited AboutForm: TAboutForm
         Cursor = crHandPoint
         Left = 124
         Height = 42
-        Top = 221
+        Top = 219
         Width = 102
         Anchors = [akLeft, akBottom]
         AutoSize = True
@@ -278,7 +279,7 @@ inherited AboutForm: TAboutForm
         Cursor = crHandPoint
         Left = 6
         Height = 47
-        Top = 216
+        Top = 214
         Width = 102
         Anchors = [akLeft, akBottom]
         AutoSize = True
@@ -478,7 +479,7 @@ inherited AboutForm: TAboutForm
         Left = 86
         Height = 17
         Top = 14
-        Width = 73
+        Width = 86
         Caption = 'txAppName'
         Font.Height = -13
         Font.Style = [fsBold]
@@ -499,15 +500,15 @@ inherited AboutForm: TAboutForm
         Left = 86
         Height = 15
         Top = 38
-        Width = 107
+        Width = 125
         Caption = 'Version %s, Build %s'
         ParentColor = False
       end
       object Bevel1: TBevel
         Left = 6
         Height = 7
-        Top = 200
-        Width = 416
+        Top = 198
+        Width = 420
         Anchors = [akLeft, akRight, akBottom]
         Shape = bsTopLine
       end
@@ -516,7 +517,7 @@ inherited AboutForm: TAboutForm
         Left = 86
         Height = 15
         Top = 164
-        Width = 62
+        Width = 70
         Caption = 'Home page'
         Font.Color = clBlue
         Font.Style = [fsUnderline]
@@ -528,20 +529,20 @@ inherited AboutForm: TAboutForm
         Left = 86
         Height = 15
         Top = 72
-        Width = 56
+        Width = 66
         Caption = 'Version %s'
         ParentColor = False
       end
     end
     object tabLicense: TTabSheet
       Caption = 'License'
-      ClientHeight = 271
-      ClientWidth = 427
+      ClientHeight = 269
+      ClientWidth = 431
       object edLicense: TMemo
         Left = 4
-        Height = 263
+        Height = 261
         Top = 4
-        Width = 419
+        Width = 423
         Align = alClient
         BorderSpacing.Around = 4
         Lines.Strings = (
@@ -902,10 +903,10 @@ inherited AboutForm: TAboutForm
       end
     end
   end
-  object Buttons: TButtonPanel[1]
+  object Buttons: TButtonPanel
     Left = 8
-    Height = 26
-    Top = 315
+    Height = 27
+    Top = 314
     Width = 435
     BorderSpacing.Top = 8
     BorderSpacing.Around = 0

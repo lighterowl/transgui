@@ -239,8 +239,6 @@ end;
 procedure TAboutForm.FormCreate(Sender: TObject);
 begin
   bidiMode := GetBiDi();
-  txAppName.Font.Size:=Font.Size + 2;
-  txHomePage.Font.Size:=Font.Size;
   BorderStyle:=bsSizeable;
   txAppName.Caption:=AppName;
   txVersion.Caption:=Format(txVersion.Caption, [AppVersion, BuildInfo.GIT_COMMIT]);
