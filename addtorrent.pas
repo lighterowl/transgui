@@ -64,7 +64,6 @@ type
     gbSaveAs: TGroupBox;
     gbContents: TGroupBox;
     edPeerLimit: TSpinEdit;
-    DiskSpaceTimer: TTimer;
     txSaveAs: TLabel;
     txSaveAs1: TLabel;
     txSize: TLabel;
@@ -89,6 +88,7 @@ type
     procedure DeleteDirs(maxdel : Integer);
 
   private
+    DiskSpaceTimer: TTimer;
     FDiskSpaceCaption: string;
     FTree: TFilesTree;
     procedure TreeStateChanged(Sender: TObject);
@@ -1259,6 +1259,11 @@ begin
     cbStartTorrent.Font.Style:= [];
     Buttons.OKButton.Font.Style:= []
   end;
+
+  DiskSpaceTimer := TTimer.Create(Self);
+  DiskSpaceTimer.Enabled  := False;
+  DiskSpaceTimer.Interval := 1000;
+  DiskSpaceTimer.OnTimer  := @DiskSpaceTimerTimer;
 
 {$ifdef windows}
   gbSaveAs.Caption:='';
