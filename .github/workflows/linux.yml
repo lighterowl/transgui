@@ -13,7 +13,7 @@ jobs:
     container:
       image: lighterowl/transgui-sdk:1.0
       credentials:
-        username: lighterowl
+        username: dkk089@gmail.com
         password: ${{ secrets.DOCKER_HUB_PAT }}
 
     steps:
