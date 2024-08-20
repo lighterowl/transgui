@@ -7,7 +7,7 @@ on:
     branches: [main, develop]
 
 jobs:
-  build-ubuntu:
+  build-linux:
 
     runs-on: ubuntu-latest
     container: ligherowl/transgui-sdk:1.0
