@@ -9,8 +9,12 @@ on:
 jobs:
   build-ubuntu:
 
-    runs-on: ubuntu-24.04
-    container: lighterowl/transgui-sdk:1.0
+    runs-on: ubuntu-latest
+    container:
+      image: lighterowl/transgui-sdk:1.0
+      credentials:
+        username: lighterowl
+        password: ${{ secrets.DOCKER_HUB_PAT }}
 
     steps:
     - uses: actions/checkout@v1
