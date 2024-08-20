@@ -10,11 +10,7 @@ jobs:
   build-ubuntu:
 
     runs-on: ubuntu-latest
-    container:
-      image: lighterowl/transgui-sdk:1.0
-      credentials:
-        username: dkk089@gmail.com
-        password: ${{ secrets.DOCKER_HUB_PAT }}
+    container: ligherowl/transgui-sdk:1.0
 
     steps:
     - uses: actions/checkout@v1
