@@ -10,7 +10,7 @@ jobs:
   build-linux:
 
     runs-on: ubuntu-latest
-    container: lighterowl/transgui-sdk:1.2
+    container: lighterowl/transgui-sdk:1.3
 
     steps:
     - uses: actions/checkout@v1
@@ -19,6 +19,7 @@ jobs:
 
     - run: |
         git config --global --add safe.directory /__w/transgui/transgui
+        export HOME=/root
         source /root/.transgui_sdk/source.me
         ./.github/build_linux.sh
 
