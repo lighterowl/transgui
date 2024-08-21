@@ -18,8 +18,8 @@ jobs:
         submodules: recursive
 
     - run: |
-        git config --global --add safe.directory /__w/transgui/transgui
         export HOME=/root
+        git config --global --add safe.directory '*'
         source /root/.transgui_sdk/source.me
         ./.github/build_linux.sh
 
