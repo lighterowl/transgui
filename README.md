@@ -14,7 +14,7 @@ cd transgui
 lazbuild transgui.lpi
 ```
 
-If you hit trouble, have a look at `build_` scripts in the `.github` folder. They are used to build the project for each of the supported platforms in GitHub Actions.
+If you hit trouble, have a look at `build_` scripts in the `.github` folder. They are used to build the project for each of the supported platforms in GitHub Actions. If you can run Docker containers, you might find it easier to just use [`lighterowl/transgui-sdk`](https://hub.docker.com/r/lighterowl/transgui-sdk/) which includes the proper versions of FPC and Lazarus.
 
 Due to issues with fpc 3.2.2 mentioned below, it is recommended to build transgui with a development version of the Free Pascal compiler. The `build_` scripts include necessary code that downloads and compiles the development version from source.
 
