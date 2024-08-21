@@ -19,7 +19,7 @@ jobs:
 
     - run: |
         git config --global --add safe.directory /__w/transgui/transgui
-        source /root/source.me
+        source /root/.transgui_sdk/source.me
         ./.github/build_linux.sh
 
     - uses: actions/upload-artifact@v4
