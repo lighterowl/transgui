@@ -10,7 +10,7 @@ jobs:
   build-linux:
 
     runs-on: ubuntu-latest
-    container: lighterowl/transgui-sdk:1.3
+    container: lighterowl/transgui-sdk:1.0
 
     steps:
     - uses: actions/checkout@v1
