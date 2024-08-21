@@ -18,9 +18,9 @@ jobs:
         submodules: recursive
 
     - run: |
-      git config --global --add safe.directory /__w/transgui/transgui
-      source ~/.transgui_sdk/source.me
-      ./.github/build_linux.sh
+        git config --global --add safe.directory /__w/transgui/transgui
+        source ~/.transgui_sdk/source.me
+        ./.github/build_linux.sh
 
     - uses: actions/upload-artifact@v4
       with:
