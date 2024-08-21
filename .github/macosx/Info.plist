@@ -47,6 +47,12 @@
 			<array>
 				<string>torrent</string>
 			</array>
+			<key>LSHandlerRank</key>
+			<string>Alternate</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>org.bittorrent.torrent</string>
+			</array>
 		</dict>
 	</array>
 	<key>CFBundleURLTypes</key>
@@ -62,6 +68,36 @@
 			<array>
 				<string>magnet</string>
 			</array>
+		</dict>
+	</array>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+				<string>public.item</string>
+				<string>com.bittorrent.torrent</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>BitTorrent Document</string>
+			<key>UTTypeIconFile</key>
+			<string>transgui.icns</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.bittorrent.torrent</string>
+			<key>UTTypeReferenceURL</key>
+			<string>http://www.bittorrent.org/beps/bep_0000.html</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>com.apple.ostype</key>
+				<string>TORR</string>
+				<key>public.filename-extension</key>
+				<array>
+					<string>torrent</string>
+				</array>
+				<key>public.mime-type</key>
+				<string>application/x-bittorrent</string>
+			</dict>
 		</dict>
 	</array>
 </dict>
