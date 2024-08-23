@@ -35,13 +35,13 @@ unit TorrProps;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls, Spin, ButtonPanel, ComCtrls, BaseForm;
+  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls, Spin, ButtonPanel, ComCtrls;
 
 type
 
   { TTorrPropsForm }
 
-  TTorrPropsForm = class(TBaseForm)
+  TTorrPropsForm = class(TForm)
     Buttons: TButtonPanel;
     cbIdleSeedLimit: TCheckBox;
     cbMaxDown: TCheckBox;

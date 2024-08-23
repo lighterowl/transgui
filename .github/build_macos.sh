@@ -4,8 +4,8 @@ set -xe
 
 readonly repo_dir=$PWD
 readonly sdk_dir=~/.transgui_sdk
-readonly fpc_installdir="${sdk_dir}/fpc-3.2.3"
-readonly fpc_basepath="${fpc_installdir}/lib/fpc/3.2.3"
+readonly fpc_installdir="${sdk_dir}/fpc-3.2.4-rc1"
+readonly fpc_basepath="${fpc_installdir}/lib/fpc/3.2.4"
 readonly brew_prefix=$(brew --prefix)
 readonly macosx_libdir=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
 readonly macosx_frameworkdir=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
@@ -17,6 +17,7 @@ fixup_fpc_cfg() {
 
   echo "-Fl${macosx_libdir}" >> "$fpc_cfg_path"
   echo "-k-F${macosx_frameworkdir}" >> "$fpc_cfg_path"
+  echo "-k-weak_framework UserNotifications" >> "$fpc_cfg_path"
 }
 
 make_fpc_cfg() {
@@ -31,10 +32,12 @@ fpc_lazarus_build_install() {
 
   mkdir -p "$sdk_dir"
   cd "$sdk_dir"
-  readonly fpc323_commit='0c5256300a323c78caa0b1a9cb772ac137f5aa8e'
-  curl -O "https://gitlab.com/freepascal.org/fpc/source/-/archive/${fpc323_commit}/source-${fpc323_commit}.tar.gz"
-  tar xf "source-${fpc323_commit}.tar.gz"
-  cd "source-${fpc323_commit}"
+
+  readonly fpc324_rc1_commit='d78e2897014a69f56a1cfb53c75335c4cc37ba0e'
+  curl -L -o fpc-src.tar.bz2 "https://gitlab.com/freepascal.org/fpc/source/-/archive/${fpc324_rc1_commit}/source-${fpc324_rc1_commit}.tar.bz2"
+  tar xf fpc-src.tar.bz2
+  mv "source-${fpc324_rc1_commit}" fpc-src
+  cd fpc-src
 
   mkdir -p "${fpc_installdir}"
 
@@ -45,7 +48,7 @@ fpc_lazarus_build_install() {
   make "${make_opts_native[@]}" all
   make PREFIX=${fpc_installdir} install
 
-  if [[ $cross_build ]]; then
+  if [[ $(uname -m) != arm64 ]]; then
     local -r make_opts_cross=("${make_opts_native[@]}" CPU_SOURCE=x86_64 CPU_TARGET=aarch64)
     make "${make_opts_cross[@]}" all
     make PREFIX=${fpc_installdir} "${make_opts_cross[@]}" crossinstall
@@ -56,9 +59,10 @@ fpc_lazarus_build_install() {
   make_fpc_cfg
 
   cd "$sdk_dir"
-  curl -L -o lazarus-src.tar.gz 'https://gitlab.com/dkk089/lazarus/-/archive/transgui/lazarus-transgui.tar.gz'
-  tar xf lazarus-src.tar.gz
-  mv lazarus-transgui lazarus
+  local -r lazarus_commit='4e69368d79e3801ad26a7bc7c1eda0ad3cf7dcc4'
+  curl -L -o lazarus-src.tar.bz2 "https://gitlab.com/dkk089/lazarus/-/archive/${lazarus_commit}/lazarus-${lazarus_commit}.tar.bz2"
+  tar xf lazarus-src.tar.bz2
+  mv "lazarus-${lazarus_commit}" lazarus
   cd lazarus
   make bigide
   export PATH=$PWD:$PATH
@@ -107,7 +111,7 @@ package_openssl() {
 }
 
 my_lazbuild() {
-  lazbuild --compiler=${fpc_installdir}/lib/fpc/3.2.3/${compiler} \
+  lazbuild "--compiler=${fpc_basepath}/${compiler}" \
     --lazarusdir=${sdk_dir}/lazarus "$@"
 }
 
@@ -149,8 +153,3 @@ cp ../units/transgui .
 strip transgui
 install_name_tool -add_rpath '@executable_path' transgui
 package_openssl "$PWD"
-if [[ $compiler == ppca64 || $compiler == ppcrossa64 ]]; then
-  for i in transgui *.dylib; do
-    codesign --force -s - "$i"
-  done
-fi

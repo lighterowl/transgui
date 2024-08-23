@@ -1,4 +1,4 @@
-name: Ubuntu Build
+name: Linux Build
 
 on:
   push:
@@ -7,23 +7,21 @@ on:
     branches: [main, develop]
 
 jobs:
-  build-ubuntu:
+  build-linux:
 
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
+    container: lighterowl/transgui-sdk:1.0
 
     steps:
     - uses: actions/checkout@v1
       with:
         submodules: recursive
 
-    - uses: actions/cache@v4
-      with:
-        path: |
-          ~/.transgui_sdk/lazarus
-          ~/.transgui_sdk/fpc-3.2.3
-        key: ubuntu-fpc-lazarus
-
-    - run: .github/build_ubuntu.sh
+    - run: |
+        export HOME=/root
+        git config --global --add safe.directory '*'
+        source /root/.transgui_sdk/source.me
+        ./.github/build_linux.sh
 
     - uses: actions/upload-artifact@v4
       with:

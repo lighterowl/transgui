@@ -35,7 +35,7 @@ unit ConnOptions;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls, Spin, ComCtrls, Buttons, ButtonPanel, ExtCtrls, BaseForm, ResTranslator;
+  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls, Spin, ComCtrls, Buttons, ButtonPanel, ExtCtrls, ResTranslator;
 
 const
   DefSpeeds = '0,10,25,50,100,250,500,750,1000,2500,5000,7000';
@@ -50,7 +50,7 @@ type
 
   { TConnOptionsForm }
 
-  TConnOptionsForm = class(TBaseForm)
+  TConnOptionsForm = class(TForm)
     btNew: TButton;
     btDel: TButton;
     btRename: TButton;
@@ -230,17 +230,14 @@ begin
   edCertFile.Visible:=cbShowAdvanced.Checked;
   txCertPass.Visible:=cbShowAdvanced.Checked;
   edCertPass.Visible:=cbShowAdvanced.Checked;
-{$ifndef LCLCocoa}
-{$ifndef LCLgtk2}
+{$ifdef LCLCocoa}
+  Page.ShowTabs:=cbShowAdvanced.Checked;
+{$else}
   tabConnection.TabVisible:=cbShowAdvanced.Checked;
-{$endif LCLgtk2}
   tabProxy.TabVisible:=cbShowAdvanced.Checked;
   tabPaths.TabVisible:=cbShowAdvanced.Checked;
   tabMisc.TabVisible:=cbShowAdvanced.Checked;
-{$endif LCLCocoa}
-{$ifdef LCLCocoa}
-  Page.ShowTabs:=cbShowAdvanced.Checked;
-{$endif LCLCocoa}
+{$endif}
   cbShowAdvanced.Visible:=not cbShowAdvanced.Checked;
   Page.ActivePage:=tabConnection;
 end;

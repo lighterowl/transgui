@@ -36,7 +36,7 @@ unit About;
 interface
 
 uses
-  BaseForm, Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics,
+  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics,
   Dialogs, StdCtrls, ComCtrls, ExtCtrls, ButtonPanel, lclversion, BuildInfo,
   ssl_openssl3, ssl_openssl3_lib, fpjson;
 
@@ -52,7 +52,7 @@ type
 
   { TAboutForm }
 
-  TAboutForm = class(TBaseForm)
+  TAboutForm = class(TForm)
     Bevel1: TBevel;
     Buttons: TButtonPanel;
     edLicense: TMemo;
@@ -239,8 +239,6 @@ end;
 procedure TAboutForm.FormCreate(Sender: TObject);
 begin
   bidiMode := GetBiDi();
-  txAppName.Font.Size:=Font.Size + 2;
-  txHomePage.Font.Size:=Font.Size;
   BorderStyle:=bsSizeable;
   txAppName.Caption:=AppName;
   txVersion.Caption:=Format(txVersion.Caption, [AppVersion, BuildInfo.GIT_COMMIT]);

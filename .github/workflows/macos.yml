@@ -20,7 +20,7 @@ jobs:
       with:
         path: |
           ~/.transgui_sdk/lazarus
-          ~/.transgui_sdk/fpc-3.2.3
+          ~/.transgui_sdk/fpc-3.2.4-rc1
         key: macos-arm64-fpc-lazarus
 
     - run: .github/build_macos.sh
@@ -44,7 +44,7 @@ jobs:
       with:
         path: |
           ~/.transgui_sdk/lazarus
-          ~/.transgui_sdk/fpc-3.2.3
+          ~/.transgui_sdk/fpc-3.2.4-rc1
         key: macos-x64-fpc-lazarus
 
     - run: .github/build_macos.sh
@@ -61,9 +61,11 @@ jobs:
     runs-on: macos-12
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
       with:
-        submodules: recursive
+        sparse-checkout: |
+          .github
+          lang
 
     # no cache needed here as we don't compile anything
     - uses: actions/download-artifact@v4
