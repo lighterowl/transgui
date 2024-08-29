@@ -1,6 +1,7 @@
 {*************************************************************************************
   This file is part of Transmission Remote GUI.
   Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group.
+  Copyright (c) 2023-2024 by Daniel Kamil Kozar
 
   Transmission Remote GUI is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -862,6 +863,8 @@ const
   TR_PRI_LOW    = -1;
   TR_PRI_NORMAL =  0;
   TR_PRI_HIGH   =  1;
+
+  DefSpeeds = '0,10,25,50,100,250,500,750,1000,2500,5000,7000';
 
 implementation
 
@@ -1876,7 +1879,6 @@ procedure TMainForm.FormDestroy(Sender: TObject);
     TDaemonOptionsForm.Create(Self).Free;
     TDownloadForm.Create(Self).Free;
     TMoveTorrentForm.Create(Self).Free;
-    TOptionsForm.Create(Self).Free;
     TTorrPropsForm.Create(Self).Free;
   end;
 
@@ -2201,9 +2203,8 @@ var
   OldCheckVer: boolean;
 begin
   AppBusy;
-  with TOptionsForm.Create(Self) do
+  with TOptionsForm.Create(Self, FCurConn) do
   try
-    ConnForm.ActiveConnection:=FCurConn;
     edRefreshInterval.Value:=Ini.ReadInteger('Interface', 'RefreshInterval', 5);
     edRefreshIntervalMin.Value:=Ini.ReadInteger('Interface', 'RefreshIntervalMin', 20);
     cbCalcAvg.Checked:=FCalcAvg;
@@ -2259,8 +2260,7 @@ begin
       Ini.UpdateFile;
       UpdateTray;
       AppNormal;
-      with ConnForm do
-        ConnectionSettingsChanged(ActiveConnection, ActiveSettingChanged);
+      ConnectionSettingsChanged(FCurConn, connOptions.IsConnSettingsChanged(FCurConn, Ini));
     end;
   finally
     Free;
@@ -5172,12 +5172,9 @@ begin
 end;
 
 procedure TMainForm.ShowConnOptions(NewConnection: boolean);
-var
-  frm: TConnOptionsForm;
 begin
   AppBusy;
-  frm:=TConnOptionsForm.Create(Self);
-  with frm do
+  with TConnOptionsForm.Create(Self) do
   try
     ActiveConnection:=FCurConn;
     if NewConnection then begin
@@ -5196,7 +5193,6 @@ begin
         btDel.Hide;
         panTop.ClientHeight:=btNew.Top;
       end;
-      cbShowAdvancedClick(nil);
     end;
     AppNormal;
     ShowModal;

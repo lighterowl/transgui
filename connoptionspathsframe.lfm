@@ -1,0 +1,51 @@
+object ConnOptionsPathsFrame: TConnOptionsPathsFrame
+  Left = 0
+  Height = 341
+  Top = 0
+  Width = 502
+  ClientHeight = 341
+  ClientWidth = 502
+  TabOrder = 0
+  DesignLeft = 1393
+  DesignTop = 295
+  object txPaths: TLabel
+    Left = 8
+    Height = 57
+    Top = 32
+    Width = 492
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'Remote to local path mappings.'#13#10'Examples:'#13#10'/share=\\pch\share'#13#10'/var/downloads/music=Z:\music'
+    ParentColor = False
+    WordWrap = True
+  end
+  object edPaths: TMemo
+    Left = 8
+    Height = 225
+    Top = 96
+    Width = 492
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ScrollBars = ssAutoVertical
+    TabOrder = 0
+    WordWrap = False
+  end
+  object edMaxFolder: TSpinEdit
+    Left = 8
+    Height = 24
+    Top = 8
+    Width = 70
+    MaxValue = 99
+    MinValue = 10
+    TabOrder = 1
+    Value = 50
+  end
+  object Label1: TLabel
+    Left = 88
+    Height = 23
+    Top = 9
+    Width = 385
+    AutoSize = False
+    Caption = 'The maximum history of directories for storage of torrents'
+    Layout = tlCenter
+    ParentColor = False
+  end
+end

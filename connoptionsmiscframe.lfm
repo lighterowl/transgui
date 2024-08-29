@@ -1,0 +1,111 @@
+object ConnOptionsMiscFrame: TConnOptionsMiscFrame
+  Left = 0
+  Height = 345
+  Top = 0
+  Width = 524
+  ClientHeight = 345
+  ClientWidth = 524
+  TabOrder = 0
+  DesignLeft = 412
+  DesignTop = 651
+  object gbSpeed: TGroupBox
+    Left = 7
+    Height = 125
+    Top = 6
+    Width = 517
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'Speed limit menu items'
+    ClientHeight = 101
+    ClientWidth = 511
+    TabOrder = 0
+    object txDownSpeeds: TLabel
+      Left = 8
+      Height = 15
+      Top = 4
+      Width = 150
+      Caption = 'Download speeds (KB/s):'
+      ParentColor = False
+    end
+    object txUpSpeeds: TLabel
+      Left = 8
+      Height = 15
+      Top = 52
+      Width = 132
+      Caption = 'Upload speeds (KB/s):'
+      ParentColor = False
+    end
+    object edDownSpeeds: TEdit
+      Left = 8
+      Height = 23
+      Top = 24
+      Width = 495
+      Anchors = [akTop, akLeft, akRight]
+      TabOrder = 0
+    end
+    object edUpSpeeds: TEdit
+      Left = 8
+      Height = 23
+      Top = 72
+      Width = 495
+      Anchors = [akTop, akLeft, akRight]
+      TabOrder = 1
+    end
+  end
+  object edTranslateForm: TCheckBox
+    Left = 8
+    Height = 21
+    Top = 136
+    Width = 516
+    Caption = 'Activate the translated version of the application (need to restart the application)'
+    TabOrder = 1
+    Visible = False
+    OnChange = edTranslateFormChange
+  end
+  object edTranslateMsg: TCheckBox
+    Left = 8
+    Height = 21
+    Top = 160
+    Width = 331
+    Caption = 'Activate the translation of the Transmission strings'
+    TabOrder = 2
+    Visible = False
+  end
+  object Label111: TLabel
+    Left = 7
+    Height = 15
+    Top = 189
+    Width = 64
+    Caption = 'Language:'
+    ParentColor = False
+    Visible = False
+  end
+  object edLanguage: TEdit
+    Left = 80
+    Height = 23
+    Top = 184
+    Width = 368
+    ReadOnly = True
+    TabOrder = 3
+    Visible = False
+    OnDblClick = edLanguageDblClick
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 15
+    Top = 216
+    Width = 65
+    Caption = 'Config file:'
+    ParentColor = False
+    Visible = False
+  end
+  object edIniFileName: TEdit
+    Left = 80
+    Height = 23
+    Top = 211
+    Width = 368
+    ReadOnly = True
+    TabOrder = 4
+    Visible = False
+    OnDblClick = edIniFileNameDblClick
+  end
+end
