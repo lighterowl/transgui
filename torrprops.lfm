@@ -1,4 +1,4 @@
-inherited TorrPropsForm: TTorrPropsForm
+object TorrPropsForm: TTorrPropsForm
   Left = 364
   Height = 270
   Top = 185
@@ -15,9 +15,11 @@ inherited TorrPropsForm: TTorrPropsForm
   ClientWidth = 517
   Constraints.MinHeight = 186
   Constraints.MinWidth = 350
+  Font.Height = -12
   OnCreate = FormCreate
   Position = poMainFormCenter
-  object Buttons: TButtonPanel[0]
+  LCLVersion = '3.4.0.0'
+  object Buttons: TButtonPanel
     Left = 8
     Height = 26
     Top = 236
@@ -39,7 +41,7 @@ inherited TorrPropsForm: TTorrPropsForm
     ShowButtons = [pbOK, pbCancel]
     ShowBevel = False
   end
-  object Page: TPageControl[1]
+  object Page: TPageControl
     Left = 8
     Height = 220
     Top = 8
@@ -101,10 +103,10 @@ inherited TorrPropsForm: TTorrPropsForm
         Left = 10
         Height = 19
         Top = 36
-        Width = 168
+        Width = 166
         Caption = 'Maximum download speed:'
-        OnClick = cbMaxDownClick
         TabOrder = 0
+        OnClick = cbMaxDownClick
       end
       object edMaxDown: TSpinEdit
         Left = 340
@@ -120,10 +122,10 @@ inherited TorrPropsForm: TTorrPropsForm
         Left = 10
         Height = 19
         Top = 68
-        Width = 152
+        Width = 150
         Caption = 'Maximum upload speed:'
-        OnClick = cbMaxUpClick
         TabOrder = 2
+        OnClick = cbMaxUpClick
       end
       object edMaxUp: TSpinEdit
         Left = 340
@@ -150,11 +152,11 @@ inherited TorrPropsForm: TTorrPropsForm
         Left = 10
         Height = 19
         Top = 131
-        Width = 75
+        Width = 73
         AllowGrayed = True
         Caption = 'Seed ratio:'
-        OnClick = cbSeedRatioClick
         TabOrder = 5
+        OnClick = cbSeedRatioClick
       end
       object edSeedRatio: TFloatSpinEdit
         Left = 340
@@ -170,11 +172,11 @@ inherited TorrPropsForm: TTorrPropsForm
         Left = 10
         Height = 19
         Top = 162
-        Width = 185
+        Width = 183
         AllowGrayed = True
         Caption = 'Stop seeding when inactive for:'
-        OnClick = cbIdleSeedLimitClick
         TabOrder = 7
+        OnClick = cbIdleSeedLimitClick
       end
       object edIdleSeedLimit: TSpinEdit
         Left = 340

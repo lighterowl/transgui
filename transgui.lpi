@@ -6,7 +6,6 @@
     <General>
       <Flags>
         <MainUnitHasTitleStatement Value="False"/>
-        <MainUnitHasScaledStatement Value="False"/>
         <LRSInOutputDirectory Value="False"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
@@ -496,6 +495,36 @@
         <Filename Value="macosthemedetect.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="MacOSThemeDetect"/>
+      </Unit>
+      <Unit>
+        <Filename Value="connoptionstransmissionframe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ConnOptionsTransmissionFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="connoptionsproxyframe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ConnOptionsProxyFrame"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="connoptionspathsframe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ConnOptionsPathsFrame"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="connoptionsmiscframe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ConnOptionsMiscFrame"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="connoptionsframes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ConnOptionsFrames"/>
       </Unit>
     </Units>
   </ProjectOptions>

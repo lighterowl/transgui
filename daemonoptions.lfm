@@ -1,4 +1,4 @@
-inherited DaemonOptionsForm: TDaemonOptionsForm
+object DaemonOptionsForm: TDaemonOptionsForm
   Left = 354
   Height = 383
   Top = 216
@@ -14,9 +14,11 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
   ClientWidth = 617
   Constraints.MinHeight = 340
   Constraints.MinWidth = 400
+  Font.Height = -12
   OnCreate = FormCreate
   Position = poMainFormCenter
-  object Page: TPageControl[0]
+  LCLVersion = '3.4.0.0'
+  object Page: TPageControl
     Left = 8
     Height = 333
     Top = 8
@@ -76,10 +78,10 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
         Left = 8
         Height = 19
         Top = 80
-        Width = 176
+        Width = 174
         Caption = 'Directory for incomplete files:'
-        OnClick = cbIncompleteDirClick
         TabOrder = 2
+        OnClick = cbIncompleteDirClick
       end
       object edIncompleteDir: TEdit
         Left = 8
@@ -93,7 +95,7 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
         Left = 8
         Height = 19
         Top = 56
-        Width = 224
+        Width = 222
         Caption = 'Add .part extension to incomplete files'
         TabOrder = 1
       end
@@ -101,10 +103,10 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
         Left = 8
         Height = 19
         Top = 134
-        Width = 75
+        Width = 73
         Caption = 'Seed ratio:'
-        OnClick = cbSeedRatioClick
         TabOrder = 4
+        OnClick = cbSeedRatioClick
       end
       object edSeedRatio: TFloatSpinEdit
         Left = 431
@@ -129,10 +131,10 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
         Left = 8
         Height = 19
         Top = 163
-        Width = 185
+        Width = 183
         Caption = 'Stop seeding when inactive for:'
-        OnClick = cbIdleSeedLimitClick
         TabOrder = 6
+        OnClick = cbIdleSeedLimitClick
       end
       object edIdleSeedLimit: TSpinEdit
         Left = 431
@@ -198,7 +200,7 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
         Left = 292
         Height = 19
         Top = 38
-        Width = 141
+        Width = 139
         Caption = 'Enable port forwarding'
         TabOrder = 3
       end
@@ -206,7 +208,7 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
         Left = 192
         Height = 19
         Top = 160
-        Width = 135
+        Width = 133
         Caption = 'Enable Peer Exchange'
         TabOrder = 7
       end
@@ -224,7 +226,7 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
         Left = 192
         Height = 19
         Top = 184
-        Width = 81
+        Width = 79
         Caption = 'Enable DHT'
         TabOrder = 8
       end
@@ -232,10 +234,10 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
         Left = 292
         Height = 19
         Top = 13
-        Width = 240
+        Width = 238
         Caption = 'Pick random port on Transmission launch'
-        OnClick = cbRandomPortClick
         TabOrder = 1
+        OnClick = cbRandomPortClick
       end
       object btTestPort: TButton
         Left = 192
@@ -243,17 +245,17 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
         Top = 35
         Width = 90
         Caption = 'Test port'
-        OnClick = btTestPortClick
         TabOrder = 2
+        OnClick = btTestPortClick
       end
       object cbBlocklist: TCheckBox
         Left = 8
         Height = 19
         Top = 256
-        Width = 105
+        Width = 103
         Caption = 'Enable blocklist:'
-        OnClick = cbBlocklistClick
         TabOrder = 11
+        OnClick = cbBlocklistClick
       end
       object edBlocklistURL: TEdit
         Left = 8
@@ -267,7 +269,7 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
         Left = 192
         Height = 19
         Top = 208
-        Width = 166
+        Width = 164
         Caption = 'Enable Local Peer Discovery'
         TabOrder = 9
       end
@@ -275,7 +277,7 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
         Left = 192
         Height = 19
         Top = 232
-        Width = 78
+        Width = 76
         Caption = 'Enable µTP'
         TabOrder = 10
       end
@@ -334,10 +336,10 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
           Left = 8
           Height = 19
           Top = 4
-          Width = 168
+          Width = 166
           Caption = 'Maximum download speed:'
-          OnClick = cbMaxDownClick
           TabOrder = 0
+          OnClick = cbMaxDownClick
         end
         object edMaxDown: TSpinEdit
           Left = 455
@@ -353,10 +355,10 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
           Left = 8
           Height = 19
           Top = 30
-          Width = 152
+          Width = 150
           Caption = 'Maximum upload speed:'
-          OnClick = cbMaxUpClick
           TabOrder = 2
+          OnClick = cbMaxUpClick
         end
         object edMaxUp: TSpinEdit
           Left = 455
@@ -463,7 +465,7 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
           Left = 8
           Height = 19
           Top = 54
-          Width = 192
+          Width = 190
           Caption = 'Use alternate bandwidth settings'
           TabOrder = 2
         end
@@ -471,16 +473,17 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
           Left = 8
           Height = 19
           Top = 76
-          Width = 279
+          Width = 277
           Caption = 'Apply alternate bandwidth settings automatically'
-          OnClick = cbAutoAltClick
           TabOrder = 3
+          OnClick = cbAutoAltClick
         end
         object edAltTimeBegin: TMaskEdit
           Left = 82
           Height = 23
           Top = 100
           Width = 64
+          EnableSets = False
           MaxLength = 5
           TabOrder = 4
           EditMask = '!99:99;1; '
@@ -492,6 +495,7 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
           Height = 23
           Top = 100
           Width = 64
+          EnableSets = False
           MaxLength = 5
           TabOrder = 5
           EditMask = '!99:99;1; '
@@ -508,7 +512,7 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
         Left = 8
         Height = 19
         Top = 12
-        Width = 135
+        Width = 133
         Caption = 'Download queue size:'
         TabOrder = 0
       end
@@ -527,7 +531,7 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
         Left = 8
         Height = 19
         Top = 40
-        Width = 119
+        Width = 117
         Caption = 'Upload queue size:'
         TabOrder = 2
       end
@@ -547,7 +551,7 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
         Height = 19
         Hint = 'Torrents that are idle for N minuets aren''t counted toward the Download queue or Upload queue'
         Top = 68
-        Width = 271
+        Width = 269
         Caption = 'Consider active torrents as stalled when idle for:'
         ParentShowHint = False
         ShowHint = True
@@ -575,7 +579,7 @@ inherited DaemonOptionsForm: TDaemonOptionsForm
       end
     end
   end
-  object Buttons: TButtonPanel[1]
+  object Buttons: TButtonPanel
     Left = 8
     Height = 26
     Top = 349
