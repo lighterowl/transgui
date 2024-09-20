@@ -52,7 +52,7 @@ function FPC-Lazarus-Build-Install {
     make bigide
     $env:Path = "${lazarus};" + $env:Path
 
-    My-Download -Uri "https://slproweb.com/download/Win32OpenSSL_Light-3_1_6.exe" -OutFile openssl-install.exe
+    My-Download -Uri "https://slproweb.com/download/Win32OpenSSL_Light-3_1_7.exe" -OutFile openssl-install.exe
     Start-Process -FilePath openssl-install.exe -Wait -ArgumentList "/sp-","/verysilent","/suppressmsgboxes","/norestart","/dir=${openssl}"
 }
 
