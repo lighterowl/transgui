@@ -1,6 +1,7 @@
 {*************************************************************************************
   This file is part of Transmission Remote GUI.
   Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group.
+  Copyright (c) 2023-2024 by Daniel Kamil Kozar
 
   Transmission Remote GUI is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -38,13 +39,15 @@ uses
   Interfaces, Forms, Main, rpc, AddTorrent,
   ConnOptions, varlist, TorrProps, DaemonOptions, About, IpResolver, download,
   ColSetup, utils, ResTranslator, AddLink, MoveTorrent, AddTracker, Options,
-  passwcon;
+  passwcon, ConnOptionsTransmissionFrame, ConnOptionsProxyFrame,
+  ConnOptionsPathsFrame, ConnOptionsMiscFrame, ConnOptionsFrames;
 
 {$R *.res}
 
 begin
   if not CheckAppParams then exit;
 
+  Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TMainForm, MainForm);
   Application.Run;

@@ -1,4 +1,4 @@
-inherited AddTrackerForm: TAddTrackerForm
+object AddTrackerForm: TAddTrackerForm
   Left = 411
   Height = 93
   Top = 283
@@ -9,9 +9,11 @@ inherited AddTrackerForm: TAddTrackerForm
   Caption = 'Add tracker'
   ClientHeight = 93
   ClientWidth = 533
+  Font.Height = -12
   OnCreate = FormCreate
   Position = poMainFormCenter
-  object Buttons: TButtonPanel[0]
+  LCLVersion = '3.4.0.0'
+  object Buttons: TButtonPanel
     Left = 8
     Height = 26
     Top = 59
@@ -33,7 +35,7 @@ inherited AddTrackerForm: TAddTrackerForm
     ShowButtons = [pbOK, pbCancel]
     ShowBevel = False
   end
-  object Panel1: TPanel[1]
+  object Panel1: TPanel
     Left = 8
     Height = 43
     Top = 8

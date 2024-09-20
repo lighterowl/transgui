@@ -1,4 +1,4 @@
-inherited MoveTorrentForm: TMoveTorrentForm
+object MoveTorrentForm: TMoveTorrentForm
   Left = 476
   Height = 126
   Top = 200
@@ -9,9 +9,11 @@ inherited MoveTorrentForm: TMoveTorrentForm
   Caption = 'Torrent data location'
   ClientHeight = 126
   ClientWidth = 643
+  Font.Height = -12
   OnCreate = FormCreate
   Position = poMainFormCenter
-  object Buttons: TButtonPanel[0]
+  LCLVersion = '3.4.0.0'
+  object Buttons: TButtonPanel
     Left = 8
     Height = 36
     Top = 82
@@ -32,7 +34,7 @@ inherited MoveTorrentForm: TMoveTorrentForm
     Spacing = 8
     ShowButtons = [pbOK, pbCancel]
   end
-  object Panel1: TPanel[1]
+  object Panel1: TPanel
     Left = 8
     Height = 74
     Top = 8
@@ -87,8 +89,8 @@ inherited MoveTorrentForm: TMoveTorrentForm
       Caption = 'Browse...'
       Constraints.MaxWidth = 91
       Constraints.MinWidth = 91
-      OnClick = btBrowseClick
       TabOrder = 1
+      OnClick = btBrowseClick
     end
   end
 end

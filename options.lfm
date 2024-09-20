@@ -1,7 +1,7 @@
 object OptionsForm: TOptionsForm
-  Left = 1408
+  Left = 1741
   Height = 309
-  Top = 438
+  Top = 651
   Width = 564
   AutoSize = True
   BorderIcons = [biSystemMenu]
@@ -9,6 +9,7 @@ object OptionsForm: TOptionsForm
   Caption = 'Application options'
   ClientHeight = 309
   ClientWidth = 564
+  Font.Height = -12
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy

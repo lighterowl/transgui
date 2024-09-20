@@ -1,6 +1,7 @@
 {*************************************************************************************
   This file is part of Transmission Remote GUI.
   Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group.
+  Copyright (c) 2023-2024 by Daniel Kamil Kozar
 
   Transmission Remote GUI is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -35,7 +36,8 @@ unit Options;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, ComCtrls, StdCtrls, Spin, Buttons, ButtonPanel, ConnOptions;
+  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
+  ComCtrls, StdCtrls, Spin, Buttons, ButtonPanel, ConnOptionsFrames;
 
 type
 
@@ -81,16 +83,20 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure OKButtonClick(Sender: TObject);
+  public
+    connOptions: TConnOptionsFrames;
+    constructor Create(TheOwner: TComponent; ConnectionName: String); reintroduce;
+    destructor Destroy; override;
   private
+    CurrentConnectionName: String;
     FLangList: TStringList;
+    tabTransmission: TTabSheet;
 {$ifdef mswindows}
     FRegExt: boolean;
     FRegMagnet: boolean;
 {$endif mswindows}
 
     procedure FillLanguageItems;
-  public
-    ConnForm: TConnOptionsForm;
   end;
 
 implementation
@@ -103,27 +109,50 @@ uses
 
 { TOptionsForm }
 
+constructor TOptionsForm.Create(TheOwner: TComponent; ConnectionName: String);
+begin
+  inherited Create(TheOwner);
+  Self.CurrentConnectionName:=ConnectionName;
+end;
+
+destructor TOptionsForm.Destroy;
+begin
+  FreeAndNil(connOptions);
+  inherited;
+end;
+
 procedure TOptionsForm.FormCreate(Sender: TObject);
 var
-  i: integer;
-  pg: TTabSheet;
+  tabProxy, tabPaths, tabMisc: TTabSheet;
 {$ifdef mswindows}
   reg: TRegistry;
   s: string;
 {$endif mswindows}
+
 begin
   bidiMode := GetBiDi();
   cbRegExt.Caption:=Format(cbRegExt.Caption, [AppName]);
   cbRegMagnet.Caption:=Format(cbRegMagnet.Caption, [AppName]);
 
-  ConnForm:=TConnOptionsForm.Create(Self);
-  while ConnForm.Page.ControlCount > 0 do begin
-    pg:=ConnForm.Page.Pages[0];
-    pg.Parent:=Page;
-    pg.TabVisible:=True;
-  end;
-  ConnForm.Page.Free;
-  ConnForm.Page:=Page;
+  tabTransmission := TTabSheet.Create(Self);
+  tabTransmission.Parent := Page;
+  tabTransmission.Caption := 'Transmission';
+
+  tabProxy := TTabSheet.Create(Self);
+  tabProxy.Parent := Page;
+  tabProxy.Caption := 'Proxy';
+
+  tabPaths := TTabSheet.Create(Self);
+  tabPaths.Parent := Page;
+  tabPaths.Caption := 'Paths';
+
+  tabMisc := TTabSheet.Create(Self);
+  tabMisc.Parent := Page;
+  tabMisc.Caption := 'Misc';
+
+  connOptions := TConnOptionsFrames.Create(Self, tabTransmission, tabProxy,
+                 tabPaths, tabMisc, Page);
+  connOptions.LoadConnSettings(CurrentConnectionName, Ini);
 
   Page.ActivePageIndex:=0;
   Buttons.OKButton.ModalResult:=mrNone;
@@ -234,10 +263,9 @@ end;
 
 procedure TOptionsForm.FormShow(Sender: TObject);
 begin
-  ConnForm.FormShow(nil);
-  if ConnForm.edHost.Text = '' then begin
-    tabGeneral.Hide;
-    ActiveControl:=ConnForm.edHost;
+  if connOptions.transmission.edHost.Text = '' then begin
+    tabTransmission.Show;
+    ActiveControl:=connOptions.transmission.edHost;
   end;
 end;
 
@@ -250,10 +278,8 @@ var
   reg: TRegistry;
 {$endif mswindows}
 begin
-  ConnForm.ModalResult:=mrNone;
-  ConnForm.btOKClick(nil);
-  if ConnForm.ModalResult = mrNone then
-    exit;
+  if not connOptions.Validate then exit;
+
   restart:=False;
   if cbLanguage.Text <> FTranslationLanguage then begin
     if cbLanguage.Text = 'English' then
@@ -335,6 +361,7 @@ begin
   if restart then
     MessageDlg(sRestartRequired, mtInformation, [mbOk], 0);
   ModalResult:=mrOk;
+  connOptions.SaveConnSettings(CurrentConnectionName, Ini);
 end;
 
 initialization
