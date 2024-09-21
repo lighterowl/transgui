@@ -1,6 +1,7 @@
 {*************************************************************************************
   This file is part of Transmission Remote GUI.
   Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group.
+  Copyright (c) 2023-2024 by Daniel Kamil Kozar
 
   Transmission Remote GUI is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -22,10 +23,6 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 *************************************************************************************}
 
-{$ifdef windows}
-{$apptype gui}
-{$endif windows}
-
 program transgui;
 
 {$mode objfpc}{$H+}
@@ -39,22 +36,18 @@ uses
   clocale,
   {$endif}
 {$endif}
-  Interfaces, // this includes the LCL widgetset
-  Forms
-  { you can add units after this }, BaseForm, Main, rpc, AddTorrent,
+  Interfaces, Forms, Main, rpc, AddTorrent,
   ConnOptions, varlist, TorrProps, DaemonOptions, About, IpResolver, download,
   ColSetup, utils, ResTranslator, AddLink, MoveTorrent, AddTracker, Options,
-  passwcon;
+  passwcon, ConnOptionsTransmissionFrame, ConnOptionsProxyFrame,
+  ConnOptionsPathsFrame, ConnOptionsMiscFrame, ConnOptionsFrames;
 
-//{$ifdef windows}
 {$R *.res}
-//{$endif}
 
 begin
-//Application.Scaled:=True; //travis doesnt compile
-
   if not CheckAppParams then exit;
 
+  Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TMainForm, MainForm);
   Application.Run;

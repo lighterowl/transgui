@@ -165,6 +165,7 @@ type
     procedure EndUpdate(aRefresh: boolean = true); reintroduce;
     procedure EditCell(ACol, ARow: integer);
     procedure ForEachSelectedRow(Cbk: TRowCallback);
+    procedure ForEachDisplayedRow(Cbk: TRowCallback);
 
     property Items: TVarList read FItems;
     property RowSelected[RowIndex: integer]: boolean read GetRowSelected write SetRowSelected;
@@ -304,6 +305,15 @@ begin
     for i:=0 to Items.Count - 1 do
       if RowSelected[i] then
         Cbk(Self, i);
+end;
+
+procedure TVarGrid.ForEachDisplayedRow(Cbk: TRowCallback);
+var
+  i: Integer;
+begin
+  for i:=0 to Items.Count - 1 do
+    if RowVisible[i] then
+      Cbk(Self, i);
 end;
 
 procedure TVarGrid.ItemsChanged(Sender: TObject);
@@ -754,9 +764,6 @@ begin
   with Canvas do
     if (Font.Color = clWindow) and (Brush.Color = clHighlight) then begin
       Font.Color:=clHighlightText;
-{$ifdef LCLgtk2}
-      Brush.Color:=ColorToRGB(Brush.Color); // Workaround for LCL bug
-{$endif LCLgtk2}
   end;
 end;
 
@@ -1169,16 +1176,10 @@ begin
   Result:=inherited DoMouseWheel(Shift, WheelDelta, MousePos);
   if not Result then begin
     if Mouse.WheelScrollLines = -1 then
-  {$IF LCL_FULLVERSION < 1080000}
-      GridMouseWheel(Shift, -WheelDelta*VisibleRowCount div 120)
-    else
-      GridMouseWheel(Shift, -WheelDelta*Mouse.WheelScrollLines div 120);
-  {$ENDIF}
-  {$IF LCL_FULLVERSION >= 1080000}
       GridMouseWheel(Shift, WheelDelta*VisibleRowCount div 120)
     else
       GridMouseWheel(Shift, -WheelDelta div 120);
-  {$ENDIF}
+
       Result := True;
   end;
 end;
@@ -1346,9 +1347,6 @@ var
   Rs: Boolean;
   R: TRect;
   ClipArea: Trect;
-{$ifdef LCLgtk2}
-  Rgn: HRGN;
-{$endif LCLgtk2}
 
   procedure DoDrawCell;
   begin
@@ -1361,11 +1359,6 @@ var
         Include(gds, gdPushed);
       end;
     end;
-{$ifdef LCLgtk2}
-    Rgn := CreateRectRgn(R.Left, R.Top, R.Right, R.Bottom);
-    SelectClipRgn(Canvas.Handle, Rgn);
-    DeleteObject(Rgn);
-{$endif LCLgtk2}
     DrawCell(aCol, aRow, R, gds);
   end;
 
@@ -1414,13 +1407,6 @@ begin
       if (R.Right > R.Left) and HorizontalIntersect(R, ClipArea) then
         DoDrawCell;
     end;
-
-{$ifdef LCLgtk2}
-    with ClipArea do
-      Rgn := CreateRectRgn(Left, Top, Right, Bottom);
-    SelectClipRgn(Canvas.Handle, Rgn);
-    DeleteObject(Rgn);
-{$endif LCLgtk2}
 
     // Draw the focus Rect
     if FocusRectVisible and (ARow=inherited Row) and

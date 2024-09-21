@@ -36,7 +36,7 @@ interface
 
 uses
   Classes, SysUtils, LazUTF8, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls, Spin, ComCtrls, CheckLst, EditBtn, MaskEdit,
-  ButtonPanel, BaseForm, Rpc, Main;
+  ButtonPanel, Rpc, Main;
 
 resourcestring
  sPortTestSuccess = 'Incoming port tested successfully.';
@@ -53,7 +53,7 @@ type
 
   { TDaemonOptionsForm }
 
-  TDaemonOptionsForm = class(TBaseForm)
+  TDaemonOptionsForm = class(TForm)
     btTestPort: TButton;
     Buttons: TButtonPanel;
     cbBlocklist: TCheckBox;
@@ -160,19 +160,19 @@ begin
           if RpcObj.RPCVersion >= 5 then begin
             // RPC version 5
             edPort.Value:=args.Integers['peer-port'];
-            cbPEX.Checked:=args.Integers['pex-enabled'] <> 0;
+            cbPEX.Checked:=args.Booleans['pex-enabled'];
             edMaxPeers.Value:=args.Integers['peer-limit-global'];
             edMaxPeersPerTorrent.Value:=args.Integers['peer-limit-per-torrent'];
-            cbRandomPort.Checked:=args.Integers['peer-port-random-on-start'] <> 0;
-            cbDHT.Checked:=args.Integers['dht-enabled'] <> 0;
-            cbSeedRatio.Checked:=args.Integers['seedRatioLimited'] <> 0;
+            cbRandomPort.Checked:=args.Booleans['peer-port-random-on-start'];
+            cbDHT.Checked:=args.Booleans['dht-enabled'];
+            cbSeedRatio.Checked:=args.Booleans['seedRatioLimited'];
             edSeedRatio.Value:=args.Floats['seedRatioLimit'];
-            cbBlocklist.Checked:=args.Integers['blocklist-enabled'] <> 0;
+            cbBlocklist.Checked:=args.Booleans['blocklist-enabled'];
 
-            cbAltEnabled.Checked:=args.Integers['alt-speed-enabled'] <> 0;
+            cbAltEnabled.Checked:=args.Booleans['alt-speed-enabled'];
             edAltDown.Value:=args.Integers['alt-speed-down'];
             edAltUp.Value:=args.Integers['alt-speed-up'];
-            cbAutoAlt.Checked:=args.Integers['alt-speed-time-enabled'] <> 0;
+            cbAutoAlt.Checked:=args.Booleans['alt-speed-time-enabled'];
             edAltTimeBegin.Text:=FormatDateTime('hh:nn', args.Integers['alt-speed-time-begin']/MinsPerDay);
             edAltTimeEnd.Text:=FormatDateTime('hh:nn', args.Integers['alt-speed-time-end']/MinsPerDay);
             j:=args.Integers['alt-speed-time-day'];
@@ -199,7 +199,7 @@ begin
           end;
 
           if RpcObj.RPCVersion >= 7 then begin
-            cbIncompleteDir.Checked:=args.Integers['incomplete-dir-enabled'] <> 0;
+            cbIncompleteDir.Checked:=args.Booleans['incomplete-dir-enabled'];
             edIncompleteDir.Text:=UTF8Encode(args.Strings['incomplete-dir']);
             cbIncompleteDirClick(nil);
           end
@@ -209,18 +209,18 @@ begin
           end;
 
           if RpcObj.RPCVersion >= 8 then
-            cbPartExt.Checked:=args.Integers['rename-partial-files'] <> 0
+            cbPartExt.Checked:=args.Booleans['rename-partial-files']
           else
             cbPartExt.Visible:=False;
 
           if RpcObj.RPCVersion >= 9 then
-            cbLPD.Checked:=args.Integers['lpd-enabled'] <> 0
+            cbLPD.Checked:=args.Booleans['lpd-enabled']
           else
             cbLPD.Visible:=False;
 
           if RpcObj.RPCVersion >= 10 then begin
             edCacheSize.Value:=args.Integers['cache-size-mb'];
-            cbIdleSeedLimit.Checked:=args.Integers['idle-seeding-limit-enabled'] <> 0;
+            cbIdleSeedLimit.Checked:=args.Booleans['idle-seeding-limit-enabled'];
             edIdleSeedLimit.Value:=args.Integers['idle-seeding-limit'];
             cbIdleSeedLimitClick(nil);
           end
@@ -243,23 +243,23 @@ begin
           cbBlocklistClick(nil);
 
           if RpcObj.RPCVersion >= 13 then
-            cbUTP.Checked:=args.Integers['utp-enabled'] <> 0
+            cbUTP.Checked:=args.Booleans['utp-enabled']
           else
             cbUTP.Visible:=False;
 
           if RpcObj.RPCVersion >= 14 then begin
             tabQueue.TabVisible:=True;
-            cbDownQueue.Checked:=args.Integers['download-queue-enabled'] <> 0;
+            cbDownQueue.Checked:=args.Booleans['download-queue-enabled'];
             edDownQueue.Value:=args.Integers['download-queue-size'];
-            cbUpQueue.Checked:=args.Integers['seed-queue-enabled'] <> 0;
+            cbUpQueue.Checked:=args.Booleans['seed-queue-enabled'];
             edUpQueue.Value:=args.Integers['seed-queue-size'];
-            cbStalled.Checked:=args.Integers['queue-stalled-enabled'] <> 0;
+            cbStalled.Checked:=args.Booleans['queue-stalled-enabled'];
             edStalledTime.Value:=args.Integers['queue-stalled-minutes'];
           end
           else
             tabQueue.TabVisible:=False;
 
-          cbPortForwarding.Checked:=args.Integers['port-forwarding-enabled'] <> 0;
+          cbPortForwarding.Checked:=args.Booleans['port-forwarding-enabled'];
           s:=args.Strings['encryption'];
           if s = 'preferred' then
             cbEncryption.ItemIndex:=1
@@ -268,9 +268,9 @@ begin
             cbEncryption.ItemIndex:=2
           else
             cbEncryption.ItemIndex:=0;
-          cbMaxDown.Checked:=args.Integers['speed-limit-down-enabled'] <> 0;
+          cbMaxDown.Checked:=args.Booleans['speed-limit-down-enabled'];
           edMaxDown.Value:=args.Integers['speed-limit-down'];
-          cbMaxUp.Checked:=args.Integers['speed-limit-up-enabled'] <> 0;
+          cbMaxUp.Checked:=args.Booleans['speed-limit-up-enabled'];
           edMaxUp.Value:=args.Integers['speed-limit-up'];
         finally
           args.Free;
@@ -296,35 +296,35 @@ begin
         req.Add('method', 'session-set');
         args:=TJSONObject.Create;
         args.Add('download-dir', UTF8Decode(edDownloadDir.Text));
-        args.Add('port-forwarding-enabled', integer(cbPortForwarding.Checked) and 1);
+        args.Add('port-forwarding-enabled', cbPortForwarding.Checked);
         case cbEncryption.ItemIndex of
           1: s:='preferred';
           2: s:='required';
           else s:='tolerated';
         end;
         args.Add('encryption', s);
-        args.Add('speed-limit-down-enabled', integer(cbMaxDown.Checked) and 1);
+        args.Add('speed-limit-down-enabled', cbMaxDown.Checked);
         if cbMaxDown.Checked then
           args.Add('speed-limit-down', edMaxDown.Value);
-        args.Add('speed-limit-up-enabled', integer(cbMaxUp.Checked) and 1);
+        args.Add('speed-limit-up-enabled', cbMaxUp.Checked);
         if cbMaxUp.Checked then
           args.Add('speed-limit-up', edMaxUp.Value);
         if RpcObj.RPCVersion >= 5 then begin
           args.Add('peer-limit-global', edMaxPeers.Value);
           args.Add('peer-limit-per-torrent', edMaxPeersPerTorrent.Value);
           args.Add('peer-port', edPort.Value);
-          args.Add('pex-enabled', integer(cbPEX.Checked) and 1);
-          args.Add('peer-port-random-on-start', integer(cbRandomPort.Checked) and 1);
-          args.Add('dht-enabled', integer(cbDHT.Checked) and 1);
-          args.Add('seedRatioLimited', integer(cbSeedRatio.Checked) and 1);
+          args.Add('pex-enabled', cbPEX.Checked);
+          args.Add('peer-port-random-on-start', cbRandomPort.Checked);
+          args.Add('dht-enabled', cbDHT.Checked);
+          args.Add('seedRatioLimited', cbSeedRatio.Checked);
           if cbSeedRatio.Checked then
             args.Add('seedRatioLimit', edSeedRatio.Value);
-          args.Add('blocklist-enabled', integer(cbBlocklist.Checked) and 1);
+          args.Add('blocklist-enabled', cbBlocklist.Checked);
 
-          args.Add('alt-speed-enabled', integer(cbAltEnabled.Checked) and 1);
+          args.Add('alt-speed-enabled', cbAltEnabled.Checked);
           args.Add('alt-speed-down', edAltDown.Value);
           args.Add('alt-speed-up', edAltUp.Value);
-          args.Add('alt-speed-time-enabled', integer(cbAutoAlt.Checked) and 1);
+          args.Add('alt-speed-time-enabled', cbAutoAlt.Checked);
           if cbAutoAlt.Checked then begin
             args.Add('alt-speed-time-begin', Round(Frac(StrToTime(edAltTimeBegin.Text))*MinsPerDay));
             args.Add('alt-speed-time-end', Round(Frac(StrToTime(edAltTimeEnd.Text))*MinsPerDay));
@@ -339,33 +339,33 @@ begin
         else begin
           args.Add('peer-limit', edMaxPeers.Value);
           args.Add('port', edPort.Value);
-          args.Add('pex-allowed', integer(cbPEX.Checked) and 1);
+          args.Add('pex-allowed', cbPEX.Checked);
         end;
         if RpcObj.RPCVersion >= 7 then begin
-          args.Add('incomplete-dir-enabled', integer(cbIncompleteDir.Checked) and 1);
+          args.Add('incomplete-dir-enabled', cbIncompleteDir.Checked);
           if cbIncompleteDir.Checked then
             args.Add('incomplete-dir', UTF8Decode(edIncompleteDir.Text));
         end;
         if RpcObj.RPCVersion >= 8 then
-          args.Add('rename-partial-files', integer(cbPartExt.Checked) and 1);
+          args.Add('rename-partial-files', cbPartExt.Checked);
         if RpcObj.RPCVersion >= 9 then
-          args.Add('lpd-enabled', integer(cbLPD.Checked) and 1);
+          args.Add('lpd-enabled', cbLPD.Checked);
         if RpcObj.RPCVersion >= 10 then begin
           args.Add('cache-size-mb', edCacheSize.Value);
-          args.Add('idle-seeding-limit-enabled', integer(cbIdleSeedLimit.Checked) and 1);
+          args.Add('idle-seeding-limit-enabled', cbIdleSeedLimit.Checked);
           args.Add('idle-seeding-limit', edIdleSeedLimit.Value);
         end;
         if edBlocklistURL.Visible then
           if cbBlocklist.Checked then
             args.Add('blocklist-url', UTF8Decode(edBlocklistURL.Text));
         if RpcObj.RPCVersion >= 13 then
-          args.Add('utp-enabled', integer(cbUTP.Checked) and 1);
+          args.Add('utp-enabled', cbUTP.Checked);
         if RpcObj.RPCVersion >= 14 then begin
-          args.Add('download-queue-enabled', integer(cbDownQueue.Checked) and 1);
+          args.Add('download-queue-enabled', cbDownQueue.Checked);
           args.Add('download-queue-size', edDownQueue.Value);
-          args.Add('seed-queue-enabled', integer(cbUpQueue.Checked) and 1);
+          args.Add('seed-queue-enabled', cbUpQueue.Checked);
           args.Add('seed-queue-size', edUpQueue.Value);
-          args.Add('queue-stalled-enabled', integer(cbStalled.Checked) and 1);
+          args.Add('queue-stalled-enabled', cbStalled.Checked);
           args.Add('queue-stalled-minutes', edStalledTime.Value);
         end;
 
@@ -405,7 +405,7 @@ begin
     if res = nil then
       MainForm.CheckStatus(False)
     else
-      if res.Objects['arguments'].Integers['port-is-open'] <> 0 then
+      if res.Objects['arguments'].Booleans['port-is-open'] then
         MessageDlg(sPortTestSuccess, mtInformation, [mbOk], 0)
       else
         MessageDlg(sPortTestFailed, mtError, [mbOK], 0);

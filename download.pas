@@ -36,7 +36,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls,
-  httpsend, synsock, ExtCtrls, BaseForm, utils;
+  httpsend, synsock, ExtCtrls, utils;
 
 resourcestring
   SDownloadProgress = '%s of %s downloaded';
@@ -47,7 +47,7 @@ type
 
   { TDownloadForm }
 
-  TDownloadForm = class(TBaseForm)
+  TDownloadForm = class(TForm)
     btCancel: TButton;
     UpdateTimer: TTimer;
     txPercent: TLabel;

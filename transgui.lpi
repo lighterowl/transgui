@@ -6,7 +6,6 @@
     <General>
       <Flags>
         <MainUnitHasTitleStatement Value="False"/>
-        <MainUnitHasScaledStatement Value="False"/>
         <LRSInOutputDirectory Value="False"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
@@ -270,7 +269,7 @@
       <UseVersionInfo Value="True"/>
       <MajorVersionNr Value="5"/>
       <MinorVersionNr Value="18"/>
-      <StringTable CompanyName="Transmission Remote GUI working group" FileDescription="Transmission Remote GUI" InternalName="transgui" LegalCopyright="Copyright (c) 2008-2019 by Yury Sidorov &amp; Transmission Remote GUI working group" OriginalFilename="transgui.exe" ProductName="Transmission Remote GUI" ProductVersion="5.18.4.f"/>
+      <StringTable CompanyName="Transmission Remote GUI working group" FileDescription="Transmission Remote GUI" InternalName="transgui" LegalCopyright="Copyright (c) 2008-2019 by Yury Sidorov &amp; Transmission Remote GUI working group" OriginalFilename="transgui.exe" ProductName="Transmission Remote GUI" ProductVersion="5.18.8.f"/>
     </VersionInfo>
     <BuildModes>
       <Item Name="Debug" Default="True"/>
@@ -286,7 +285,6 @@
           <Parsing>
             <SyntaxOptions>
               <CStyleOperator Value="False"/>
-              <UseAnsiStrings Value="False"/>
             </SyntaxOptions>
           </Parsing>
           <CodeGeneration>
@@ -300,6 +298,11 @@
               <GenerateDebugInfo Value="False"/>
             </Debugging>
             <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
           </Linking>
           <Other>
             <Verbosity>
@@ -308,7 +311,6 @@
             <CompilerMessages>
               <IgnoredMessages idx6058="True"/>
             </CompilerMessages>
-            <CustomOptions Value="-Sa -CX -XX"/>
             <ExecuteBefore>
               <ShowAllMessages Value="True"/>
             </ExecuteBefore>
@@ -321,18 +323,9 @@
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
-      <DestinationDirectory Value="\home\pi\project\0"/>
     </PublishOptions>
     <RunParams>
       <FormatVersion Value="2"/>
-      <Modes>
-        <Mode Name="default">
-          <local>
-            <CommandLineParams Value="--home=home"/>
-            <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T &apos;Lazarus Run Output&apos; -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
-          </local>
-        </Mode>
-      </Modes>
     </RunParams>
     <RequiredPackages>
       <Item>
@@ -471,14 +464,6 @@
         <UnitName Value="Options"/>
       </Unit>
       <Unit>
-        <Filename Value="baseform.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="BaseForm"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="BaseForm"/>
-      </Unit>
-      <Unit>
         <Filename Value="passwcon.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="PasswordConnect"/>
@@ -508,11 +493,42 @@
       <Unit>
         <Filename Value="trackeruri.pas"/>
         <IsPartOfProject Value="True"/>
+        <UnitName Value="TrackerUri"/>
       </Unit>
       <Unit>
         <Filename Value="macosthemedetect.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="MacOSThemeDetect"/>
+      </Unit>
+      <Unit>
+        <Filename Value="connoptionstransmissionframe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ConnOptionsTransmissionFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="connoptionsproxyframe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ConnOptionsProxyFrame"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="connoptionspathsframe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ConnOptionsPathsFrame"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="connoptionsmiscframe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ConnOptionsMiscFrame"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="connoptionsframes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ConnOptionsFrames"/>
       </Unit>
     </Units>
   </ProjectOptions>
@@ -528,10 +544,10 @@
       <SyntaxOptions>
         <CStyleOperator Value="False"/>
         <IncludeAssertionCode Value="True"/>
-        <UseAnsiStrings Value="False"/>
       </SyntaxOptions>
     </Parsing>
     <CodeGeneration>
+      <SmartLinkUnit Value="True"/>
       <Checks>
         <IOChecks Value="True"/>
         <RangeChecks Value="True"/>
@@ -539,14 +555,17 @@
         <StackChecks Value="True"/>
       </Checks>
       <VerifyObjMethodCallValidity Value="True"/>
+      <Optimizations>
+        <OptimizationLevel Value="0"/>
+      </Optimizations>
     </CodeGeneration>
     <Linking>
       <Debugging>
         <DebugInfoType Value="dsDwarf3"/>
-        <UseHeaptrc Value="True"/>
         <TrashVariables Value="True"/>
         <UseExternalDbgSyms Value="True"/>
       </Debugging>
+      <LinkSmart Value="True"/>
     </Linking>
     <Other>
       <Verbosity>
@@ -555,7 +574,6 @@
       <CompilerMessages>
         <IgnoredMessages idx6058="True"/>
       </CompilerMessages>
-      <CustomOptions Value="-Sa -CX -XX"/>
       <ExecuteBefore>
         <ShowAllMessages Value="True"/>
       </ExecuteBefore>
@@ -564,20 +582,4 @@
       </ExecuteAfter>
     </Other>
   </CompilerOptions>
-  <Debugging>
-    <Exceptions>
-      <Item>
-        <Name Value="EInvalidCast"/>
-      </Item>
-      <Item>
-        <Name Value="RunError(219)"/>
-      </Item>
-      <Item>
-        <Name Value="RunError(216)"/>
-      </Item>
-      <Item>
-        <Name Value="EAccessViolation"/>
-      </Item>
-    </Exceptions>
-  </Debugging>
 </CONFIG>

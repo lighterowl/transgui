@@ -38,7 +38,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  StdCtrls, Spin, VarGrid, Grids, ButtonPanel, ExtCtrls, Buttons, BaseForm,
+  StdCtrls, Spin, VarGrid, Grids, ButtonPanel, ExtCtrls, Buttons,
   varlist, fpjson, StrUtils, DateUtils, LazUTF8;
 
 resourcestring
@@ -51,7 +51,7 @@ type
 
   { TAddTorrentForm }
 
-  TAddTorrentForm = class(TBaseForm)
+  TAddTorrentForm = class(TForm)
     DelButton: TBitBtn;
     btSelectAll: TButton;
     btSelectNone: TButton;
@@ -64,7 +64,6 @@ type
     gbSaveAs: TGroupBox;
     gbContents: TGroupBox;
     edPeerLimit: TSpinEdit;
-    DiskSpaceTimer: TTimer;
     txSaveAs: TLabel;
     txSaveAs1: TLabel;
     txSize: TLabel;
@@ -86,10 +85,10 @@ type
     procedure SearchGoodExtension ();
     function  GetTempate (ext:string; var e: array of string):integer;
     function  IsFileTemplate(filename:string; cntE : integer; e: array of string):boolean;
-    function  CorrectPath (path: string): string;
     procedure DeleteDirs(maxdel : Integer);
 
   private
+    DiskSpaceTimer: TTimer;
     FDiskSpaceCaption: string;
     FTree: TFilesTree;
     procedure TreeStateChanged(Sender: TObject);
@@ -878,20 +877,6 @@ begin
   AppNormal;
 end;
 
-function TAddTorrentForm.CorrectPath (path: string): string;
-var
-  l_old: integer;
-begin
-  path  := StringReplace(path, '//', '/', [rfReplaceAll, rfIgnoreCase]);
-  Result:= path;
-  l_old := length(path);
-  if l_old >= 1 then begin
-    if path[l_old]='/' then
-        path := MidStr(path,1,l_old-1);
-    Result:= path;
-  end;
-end;
-
 procedure TAddTorrentForm.DeleteDirs(maxdel : Integer);
 var
   i,min,max,indx, fldr: integer;
@@ -1275,11 +1260,16 @@ begin
     Buttons.OKButton.Font.Style:= []
   end;
 
+  DiskSpaceTimer := TTimer.Create(Self);
+  DiskSpaceTimer.Enabled  := False;
+  DiskSpaceTimer.Interval := 1000;
+  DiskSpaceTimer.OnTimer  := @DiskSpaceTimerTimer;
+
 {$ifdef windows}
   gbSaveAs.Caption:='';
 {$endif windows}
 {$ifdef darwin}
-  Buttons.BorderSpacing.Right:=Buttons.BorderSpacing.Right + ScaleInt(12);
+  Buttons.BorderSpacing.Right:=Buttons.BorderSpacing.Right + 12;
 {$endif darwin}
 end;
 

@@ -1,6 +1,7 @@
 {*************************************************************************************
   This file is part of Transmission Remote GUI.
   Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group.
+  Copyright (c) 2023-2024 by Daniel Kamil Kozar
 
   Transmission Remote GUI is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -35,14 +36,11 @@ unit ConnOptions;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls, Spin, ComCtrls, Buttons, ButtonPanel, ExtCtrls, BaseForm, ResTranslator;
-
-const
-  DefSpeeds = '0,10,25,50,100,250,500,750,1000,2500,5000,7000';
+  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
+  StdCtrls, Spin, ComCtrls, Buttons, ButtonPanel, ExtCtrls, ResTranslator,
+  ConnOptionsFrames;
 
 resourcestring
-  sNoHost = 'No host name specified.';
-  sNoProxy = 'No proxy server specified.';
   SDelConnection = 'Are you sure to delete connection ''%s''?';
   SNewConnection = 'New connection to Transmission';
 
@@ -50,95 +48,43 @@ type
 
   { TConnOptionsForm }
 
-  TConnOptionsForm = class(TBaseForm)
+  TConnOptionsForm = class(TForm)
     btNew: TButton;
     btDel: TButton;
     btRename: TButton;
     Buttons: TButtonPanel;
-    cbProxyAuth: TCheckBox;
-    cbUseProxy: TCheckBox;
-    cbUseSocks5: TCheckBox;
-    cbAuth: TCheckBox;
-    cbShowAdvanced: TCheckBox;
-    cbAskPassword: TCheckBox;
-    edMaxFolder: TSpinEdit;
-    edIniFileName: TEdit;
-    edLanguage: TEdit;
-    edTranslateForm: TCheckBox;
-    edTranslateMsg: TCheckBox;
-    edRpcPath: TEdit;
-    edUpSpeeds: TEdit;
-    edHost: TEdit;
-    cbSSL: TCheckBox;
-    cbAutoReconnect: TCheckBox;
     cbConnection: TComboBox;
-    edDownSpeeds: TEdit;
-    edProxy: TEdit;
-    edProxyPassword: TEdit;
-    edProxyPort: TSpinEdit;
-    edProxyUserName: TEdit;
-    edUserName: TEdit;
-    edPassword: TEdit;
-    edPaths: TMemo;
-    gbSpeed: TGroupBox;
-    Label1: TLabel;
-    Label2: TLabel;
-    txRpcPath: TLabel;
     txConName: TLabel;
-    txConnHelp: TLabel;
-    txDownSpeeds: TLabel;
     panTop: TPanel;
     tabProxy: TTabSheet;
     tabMisc: TTabSheet;
-    txUpSpeeds: TLabel;
-    txPaths: TLabel;
     tabPaths: TTabSheet;
     Page: TPageControl;
     tabConnection: TTabSheet;
-    txProxy: TLabel;
-    txProxyPassword: TLabel;
-    txProxyPort: TLabel;
-    txProxyUserName: TLabel;
-    txUserName: TLabel;
-    txPort: TLabel;
-    edPort: TSpinEdit;
-    txHost: TLabel;
-    txPassword: TLabel;
-    txCertFile: TLabel;
-    edCertFile: TEdit;
-    txCertPass: TLabel;
-    edCertPass: TEdit;
     procedure btDelClick(Sender: TObject);
     procedure btNewClick(Sender: TObject);
     procedure btOKClick(Sender: TObject);
     procedure btRenameClick(Sender: TObject);
-    procedure cbAskPasswordClick(Sender: TObject);
-    procedure cbAuthClick(Sender: TObject);
     procedure cbConnectionSelect(Sender: TObject);
-    procedure cbProxyAuthClick(Sender: TObject);
-    procedure cbShowAdvancedClick(Sender: TObject);
-    procedure cbUseProxyClick(Sender: TObject);
-    procedure edHostChange(Sender: TObject);
-    procedure edIniFileOpen(Sender: TObject);
-    procedure edLanguageDoubleClick(Sender: TObject);
-    procedure edTranslateFormChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure tabPathsShow(Sender: TObject);
-    procedure cbSSLClick(Sender: TObject);
   private
     FCurConn: string;
     FCurHost: string;
     edConnection: TEdit;
 
-    function Validate: boolean;
+    optionsFrames: TConnOptionsFrames;
+
     procedure BeginEdit;
     procedure EndEdit;
     procedure SaveConnectionsList;
+    procedure transmissionHostChange(Sender: TObject);
   public
     ActiveConnection: string;
     ActiveSettingChanged: boolean;
 
+    destructor Destroy; override;
     procedure LoadConnSettings(const ConnName: string);
     procedure SaveConnSettings(const ConnName: string);
     function IsConnSettingsChanged(const ConnName: string): boolean;
@@ -150,9 +96,15 @@ uses Main, synacode, utils, rpc, LCLIntf;
 
 { TConnOptionsForm }
 
+destructor TConnOptionsForm.Destroy;
+begin
+  FreeAndNil(optionsFrames);
+  inherited;
+end;
+
 procedure TConnOptionsForm.btOKClick(Sender: TObject);
 begin
-  if not Validate then
+  if not optionsFrames.Validate then
     exit;
   EndEdit;
   SaveConnSettings(FCurConn);
@@ -173,26 +125,6 @@ begin
   edConnection.SelectAll;
 end;
 
-procedure TConnOptionsForm.cbAskPasswordClick(Sender: TObject);
-begin
-  EnableControls(not cbAskPassword.Checked and cbAskPassword.Enabled, [txPassword, edPassword]);
-end;
-
-procedure TConnOptionsForm.cbAuthClick(Sender: TObject);
-begin
-  EnableControls(cbAuth.Checked, [txUserName, edUserName, txPassword, cbAskPassword]);
-  cbAskPasswordClick(nil);
-end;
-
-procedure TConnOptionsForm.cbSSLClick(Sender: TObject);
-begin
-{$ifndef windows}
-  EnableControls(cbSSL.Checked, [txCertFile, edCertFile, txCertPass, edCertPass]);
-{$else}
-  EnableControls(False, [txCertFile, edCertFile, txCertPass, edCertPass]);
-{$endif windows}
-end;
-
 procedure TConnOptionsForm.cbConnectionSelect(Sender: TObject);
 var
   i: integer;
@@ -207,7 +139,7 @@ begin
     s:='';
 
   if (FCurConn <> s) and (FCurConn <> '') then begin
-    if not Validate then begin
+    if not optionsFrames.Validate then begin
       cbConnection.ItemIndex:=cbConnection.Items.IndexOf(FCurConn);
       exit;
     end;
@@ -217,45 +149,17 @@ begin
     LoadConnSettings(s);
 end;
 
-procedure TConnOptionsForm.cbProxyAuthClick(Sender: TObject);
-begin
-  EnableControls(cbProxyAuth.Checked and cbProxyAuth.Enabled, [txProxyUserName, edProxyUserName, txProxyPassword, edProxyPassword]);
-end;
-
-procedure TConnOptionsForm.cbShowAdvancedClick(Sender: TObject);
-begin
-  txRpcPath.Visible:=cbShowAdvanced.Checked;
-  edRpcPath.Visible:=cbShowAdvanced.Checked;
-  txCertFile.Visible:=cbShowAdvanced.Checked;
-  edCertFile.Visible:=cbShowAdvanced.Checked;
-  txCertPass.Visible:=cbShowAdvanced.Checked;
-  edCertPass.Visible:=cbShowAdvanced.Checked;
-{$ifndef LCLCocoa}
-{$ifndef LCLgtk2}
-  tabConnection.TabVisible:=cbShowAdvanced.Checked;
-{$endif LCLgtk2}
-  tabProxy.TabVisible:=cbShowAdvanced.Checked;
-  tabPaths.TabVisible:=cbShowAdvanced.Checked;
-  tabMisc.TabVisible:=cbShowAdvanced.Checked;
-{$endif LCLCocoa}
-{$ifdef LCLCocoa}
-  Page.ShowTabs:=cbShowAdvanced.Checked;
-{$endif LCLCocoa}
-  cbShowAdvanced.Visible:=not cbShowAdvanced.Checked;
-  Page.ActivePage:=tabConnection;
-end;
-
 procedure TConnOptionsForm.btNewClick(Sender: TObject);
 begin
   EndEdit;
-  if (FCurConn <> '') and not Validate then
+  if (FCurConn <> '') and not optionsFrames.Validate then
     exit;
   SaveConnSettings(FCurConn);
   LoadConnSettings('');
   BeginEdit;
   edConnection.Text:='';
   Page.ActivePage:=tabConnection;
-  ActiveControl:=edHost;
+  ActiveControl:=optionsFrames.transmission.edHost;
 end;
 
 procedure TConnOptionsForm.btDelClick(Sender: TObject);
@@ -302,75 +206,18 @@ begin
   SaveConnectionsList;
 end;
 
-procedure TConnOptionsForm.cbUseProxyClick(Sender: TObject);
-begin
-  EnableControls(cbUseProxy.Checked, [txProxy, edProxy, txProxyPort, edProxyPort, cbUseSocks5, cbProxyAuth]);
-  cbProxyAuthClick(nil);
-end;
-
-procedure TConnOptionsForm.edHostChange(Sender: TObject);
-begin
-  if edConnection.Visible and (edConnection.Text = FCurHost) then
-    edConnection.Text:=edHost.Text;
-  FCurHost:=edHost.Text;
-end;
-
-procedure TConnOptionsForm.edIniFileOpen(Sender: TObject);
-  begin
-    if edIniFileName.Text <> '' then begin
-      AppBusy;
-      OpenURL(Main.FHomeDir+ChangeFileExt(ExtractFileName(ParamStrUTF8(0)), '.ini'));
-      AppNormal;
-      exit;
-    end;
-
-    ForceAppNormal;
-    MessageDlg(sNoPathMapping, mtInformation, [mbOK], 0);
-end;
-
-procedure TConnOptionsForm.edLanguageDoubleClick(Sender: TObject);
-var
-Sl: TStringList;
-begin
-Sl:= GetAvailableTranslations(DefaultLangDir);
-GetTranslationFileName(Main.FTranslationLanguage, Sl);
-ShowMessage(
-            sLanguagePathFile + ': ' + IniFileName + sLineBreak + sLineBreak +
-            sLanguagePath + ': ' + DefaultLangDir + sLineBreak + sLineBreak +
-            sLanguageList + ':' + sLineBreak + Sl.Text
-            );
-edLanguage.Text:=IniFileName;
-  if IniFileName <> '' then begin
-      AppBusy;
-      OpenURL(DefaultLangDir);
-      AppNormal;
-      exit;
-  end;
-  ForceAppNormal;
-  MessageDlg(sNoPathMapping, mtInformation, [mbOK], 0);
-end;
-
-procedure TConnOptionsForm.edTranslateFormChange(Sender: TObject);
-begin
-  if edTranslateForm.Checked then
-    edTranslateMsg.Enabled:=True
-  else
-    begin
-    edTranslateMsg.Enabled:=False;
-    edLanguage.Text:='';
-    end;
-
-end;
-
 procedure TConnOptionsForm.FormCreate(Sender: TObject);
 var
   i, cnt: integer;
   s: string;
 begin
+  optionsFrames := TConnOptionsFrames.Create(Self, tabConnection,
+                   tabProxy, tabPaths, tabMisc, Page);
+  optionsFrames.transmission.edHost.OnChange:=@transmissionHostChange;
+
   bidiMode := GetBiDi();
   Page.ActivePageIndex:=0;
-  txConnHelp.Caption:=Format(txConnHelp.Caption, [AppName]);
-  ActiveControl:=edHost;
+  ActiveControl:=optionsFrames.transmission.edHost;
   Buttons.OKButton.ModalResult:=mrNone;
   Buttons.OKButton.OnClick:=@btOKClick;
 
@@ -385,16 +232,6 @@ begin
     if s <> '' then
       cbConnection.Items.Add(s);
   end;
-
-  cbShowAdvanced.Top:=edRpcPath.Top;
-
-  if edTranslateForm.Checked then
-    edTranslateMsg.Enabled:=True
-  else
-    edTranslateMsg.Enabled:=False;
-  Main.LoadTranslation;
-  edLanguage.Text:=Main.FTranslationLanguage;
-  edIniFileName.Text:=Main.FHomeDir+ChangeFileExt(ExtractFileName(ParamStrUTF8(0)), '.ini');
 end;
 
 procedure TConnOptionsForm.FormShow(Sender: TObject);
@@ -415,29 +252,16 @@ procedure TConnOptionsForm.tabPathsShow(Sender: TObject);
 var
   R: TRect;
 begin
-  R:=edPaths.BoundsRect;
-  R.Top:=txPaths.BoundsRect.Bottom + 8;
-  edPaths.BoundsRect:=R;
+  R:=optionsFrames.paths.edPaths.BoundsRect;
+  R.Top:=optionsFrames.paths.txPaths.BoundsRect.Bottom + 8;
+  optionsFrames.paths.edPaths.BoundsRect:=R;
 end;
 
-function TConnOptionsForm.Validate: boolean;
+procedure TConnOptionsForm.transmissionHostChange(Sender: TObject);
 begin
-  Result:=False;
-  edHost.Text:=Trim(edHost.Text);
-  if Trim(edHost.Text) = '' then begin
-    Page.ActivePage:=tabConnection;
-    edHost.SetFocus;
-    MessageDlg(sNoHost, mtError, [mbOK], 0);
-    exit;
-  end;
-  edProxy.Text:=Trim(edProxy.Text);
-  if tabProxy.TabVisible and cbUseProxy.Checked and (edProxy.Text = '') then begin
-    Page.ActivePage:=tabProxy;
-    edProxy.SetFocus;
-    MessageDlg(sNoProxy, mtError, [mbOK], 0);
-    exit;
-  end;
-  Result:=True;
+  if edConnection.Visible and (edConnection.Text = FCurHost) then
+    edConnection.Text:=optionsFrames.transmission.edHost.Text;
+  FCurHost:=optionsFrames.transmission.edHost.Text;
 end;
 
 procedure TConnOptionsForm.EndEdit;
@@ -466,7 +290,7 @@ begin
   if not edConnection.Visible then exit;
   NewName:=Trim(edConnection.Text);
   if NewName = '' then
-    NewName:=Trim(edHost.Text);
+    NewName:=Trim(optionsFrames.transmission.edHost.Text);
   if NewName <> FCurConn then begin
     if FCurConn <> '' then begin
       p:=cbConnection.Items.IndexOf(FCurConn);
@@ -529,68 +353,16 @@ begin
 end;
 
 procedure TConnOptionsForm.LoadConnSettings(const ConnName: string);
-var
-  Sec, s: string;
 begin
-  with Ini do begin
-    Sec:='Connection.' + ConnName;
-    if (ConnName <> '') and not SectionExists(Sec) then
-      Sec:='Connection';
-    edHost.Text:=ReadString(Sec, 'Host', '');
-    FCurHost:=edHost.Text;
-    edPort.Value:=ReadInteger(Sec, 'Port', 9091);
-    cbSSL.Checked:=ReadBool(Sec, 'UseSSL', False);
-    edCertFile.Text:=ReadString(Sec, 'CertFile', '');
-    if cbSSL.Checked then
-      if ReadString(Sec, 'CertPass', '') <> '' then
-        edCertPass.Text:='******'
-      else
-        edCertPass.Text:='';
-    cbAutoReconnect.Checked:=ReadBool(Sec, 'Autoreconnect', False);
-    edUserName.Text:=ReadString(Sec, 'UserName', '');
-    s:=ReadString(Sec, 'Password', '');
-    cbAuth.Checked:=(edUserName.Text <> '') or (s <> '');
-    if cbAuth.Checked then begin
-      cbAskPassword.Checked:=s = '-';
-      if not cbAskPassword.Checked then
-        if s <> '' then
-          edPassword.Text:='******'
-        else
-          edPassword.Text:='';
-    end;
-    cbAuthClick(nil);
-    cbSSLClick(nil);
-    edRpcPath.Text:=ReadString(Sec, 'RpcPath', DefaultRpcPath);
-    cbUseProxy.Checked:=ReadBool(Sec, 'UseProxy', False);
-    cbUseSocks5.Checked:=ReadBool(Sec, 'UseSockProxy', False);
-    edProxy.Text:=ReadString(Sec, 'ProxyHost', '');
-    edProxyPort.Value:=ReadInteger(Sec, 'ProxyPort', 8080);
-    edProxyUserName.Text:=ReadString(Sec, 'ProxyUser', '');
-    cbProxyAuth.Checked:=edProxyUserName.Text <> '';
-    if cbProxyAuth.Checked then
-      if ReadString(Sec, 'ProxyPass', '') <> '' then
-        edProxyPassword.Text:='******'
-      else
-        edProxyPassword.Text:='';
-    edPaths.Text:=StringReplace(ReadString(Sec, 'PathMap', ''), '|', LineEnding, [rfReplaceAll]);
-    edDownSpeeds.Text:=ReadString(Sec, 'DownSpeeds', DefSpeeds);
-    edUpSpeeds.Text:=ReadString(Sec, 'UpSpeeds', DefSpeeds);
-    edTranslateMsg.Checked:=ReadBool('Translation', 'TranslateMsg', True);
-    edTranslateForm.Checked:=ReadBool('Translation', 'TranslateForm', True);
-    cbUseProxyClick(nil);
-  end;
-
-  edMaxFolder.Value:= Ini.ReadInteger('Interface','MaxFoldersHistory', 50); // PETROV
+  optionsFrames.LoadConnSettings(ConnName, Ini);
 
   FCurConn:=ConnName;
-  FCurHost:=edHost.Text;
+  FCurHost:=optionsFrames.transmission.edHost.Text;
 end;
 
 procedure TConnOptionsForm.SaveConnSettings(const ConnName: string);
 var
-  Sec: string;
   i: integer;
-  s,ss: string;
 begin
   if ConnName = '' then
     exit;
@@ -598,113 +370,18 @@ begin
     if IsConnSettingsChanged(ConnName) then
       ActiveSettingChanged:=True;
 
-  Ini.WriteInteger('Interface','MaxFoldersHistory', edMaxFolder.Value);
-  with Ini do begin
-    Sec:='Connection.' + ConnName;
-    WriteString(Sec, 'Host', Trim(edHost.Text));
-    WriteBool(Sec, 'UseSSL', cbSSL.Checked);
-    if not cbSSL.Checked then begin
-      edCertFile.Text:='';
-      edCertPass.Text:='';
-    end;
-    WriteString(Sec, 'CertFile', edCertFile.Text);
-    if edCertPass.Text <> '******' then begin
-      if edCertPass.Text = '' then
-        s:=''
-      else
-        s:=EncodeBase64(edCertPass.Text);
-      WriteString(Sec, 'CertPass', s);
-    end;
-    WriteBool(Sec, 'Autoreconnect', cbAutoReconnect.Checked);
-    WriteInteger(Sec, 'Port', edPort.Value);
-    if not cbAuth.Checked then begin
-      edUserName.Text:='';
-      edPassword.Text:='';
-      cbAskPassword.Checked:=False;
-    end;
-    WriteString(Sec, 'UserName', edUserName.Text);
-    if cbAskPassword.Checked then
-      WriteString(Sec, 'Password', '-')
-    else
-      if edPassword.Text <> '******' then begin
-        ss := edPassword.Text;
-        if (Pos('{', ss) > 0) or (Pos('}', ss) > 0) then begin
-          MessageDlg('The password can''t contain the characters: { }', mtError, [mbOK], 0);
-        end;
+  optionsFrames.SaveConnSettings(ConnName, Ini);
 
-        if edPassword.Text = '' then
-          s:=''
-        else
-          s:=EncodeBase64(edPassword.Text);
-        WriteString(Sec, 'Password', s);
-      end;
+  i:=cbConnection.Items.IndexOf(ConnName);
+  if i < 0 then
+    cbConnection.Items.Insert(0, ConnName);
 
-    if (edRpcPath.Text = DefaultRpcPath) or (edRpcPath.Text = '') then
-      DeleteKey(Sec, 'RpcPath')
-    else
-      WriteString(Sec, 'RpcPath', edRpcPath.Text);
-
-    WriteBool('Translation', 'TranslateMsg', edTranslateMsg.Checked);
-    WriteBool('Translation', 'TranslateForm', edTranslateForm.Checked);
-    WriteBool(Sec, 'UseProxy', cbUseProxy.Checked);
-    WriteBool(Sec, 'UseSockProxy', cbUseSocks5.Checked);
-    WriteString(Sec, 'ProxyHost', Trim(edProxy.Text));
-    WriteInteger(Sec, 'ProxyPort', edProxyPort.Value);
-    if not cbProxyAuth.Checked then begin
-      edProxyUserName.Text:='';
-      edProxyPassword.Text:='';
-    end;
-    WriteString(Sec, 'ProxyUser', edProxyUserName.Text);
-    if edProxyPassword.Text <> '******' then begin
-      if edProxyPassword.Text = '' then
-        s:=''
-      else
-        s:=EncodeBase64(edProxyPassword.Text);
-      WriteString(Sec, 'ProxyPass', s);
-    end;
-    WriteString(Sec, 'PathMap', StringReplace(edPaths.Text, LineEnding, '|', [rfReplaceAll]));
-    WriteString(Sec, 'DownSpeeds', Trim(edDownSpeeds.Text));
-    WriteString(Sec, 'UpSpeeds', Trim(edUpSpeeds.Text));
-
-    i:=cbConnection.Items.IndexOf(ConnName);
-    if i < 0 then
-      cbConnection.Items.Insert(0, ConnName);
-    UpdateFile;
-  end;
+  Ini.UpdateFile;
 end;
 
 function TConnOptionsForm.IsConnSettingsChanged(const ConnName: string): boolean;
-var
-  Sec: string;
 begin
-  with Ini do begin
-    Sec:='Connection.' + ConnName;
-    if not SectionExists(Sec) then
-      Sec:='Connection';
-    Result:=(edPort.Value <> ReadInteger(Sec, 'Port', 9091)) or
-            (edHost.Text <> ReadString(Sec, 'Host', '')) or
-            (cbSSL.Checked <> ReadBool(Sec, 'UseSSL', False)) or
-            (edCertFile.Text <> ReadString(Sec, 'CertFile', '')) or
-            ((ReadString(Sec, 'CertPass', '') = '') and (edCertPass.Text <> '')) or
-            ((ReadString(Sec, 'CertPass', '') <> '') and (edCertPass.Text <> '******')) or
-            (cbAutoReconnect.Checked <> ReadBool(Sec, 'Autoreconnect', False)) or
-            (edUserName.Text <> ReadString(Sec, 'UserName', '')) or
-            ((ReadString(Sec, 'Password', '') = '') and (edPassword.Text <> '')) or
-            ((ReadString(Sec, 'Password', '') <> '') and (edPassword.Text <> '******')) or
-            (edRpcPath.Text <> ReadString(Sec, 'RpcPath', DefaultRpcPath)) or
-            (cbUseProxy.Checked <> ReadBool(Sec, 'UseProxy', False)) or
-            (edTranslateMsg.Checked <> ReadBool('Translation', 'TranslateMsg', True)) or
-            (edTranslateForm.Checked <> ReadBool('Translation', 'TranslateForm', True)) or
-            (edProxy.Text <> ReadString(Sec, 'ProxyHost', '')) or
-            (edProxyPort.Value <> ReadInteger(Sec, 'ProxyPort', 8080)) or
-            (edProxyUserName.Text <> ReadString(Sec, 'ProxyUser', '')) or
-            ((ReadString(Sec, 'ProxyPass', '') = '') and (edProxyPassword.Text <> '')) or
-            ((ReadString(Sec, 'ProxyPass', '') <> '') and (edProxyPassword.Text <> '******')) or
-            (edPaths.Text <> StringReplace(ReadString(Sec, 'PathMap', ''), '|', LineEnding, [rfReplaceAll])) or
-            (edDownSpeeds.Text <> ReadString(Sec, 'DownSpeeds', '')) or
-            (edUpSpeeds.Text <> ReadString(Sec, 'UpSpeeds', ''))
-            ;
-  end;
+  Result := optionsFrames.IsConnSettingsChanged(ConnName, Ini);
 end;
 
 initialization

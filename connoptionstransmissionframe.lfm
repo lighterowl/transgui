@@ -1,0 +1,173 @@
+object ConnOptionsTransmissionFrame: TConnOptionsTransmissionFrame
+  Left = 0
+  Height = 334
+  Top = 0
+  Width = 516
+  ClientHeight = 334
+  ClientWidth = 516
+  TabOrder = 0
+  DesignLeft = 397
+  DesignTop = 637
+  object txPassword: TLabel
+    Left = 24
+    Height = 15
+    Top = 157
+    Width = 61
+    Caption = 'Password:'
+    ParentColor = False
+  end
+  object txUserName: TLabel
+    Left = 24
+    Height = 15
+    Top = 128
+    Width = 70
+    Caption = 'User name:'
+    ParentColor = False
+  end
+  object txPort: TLabel
+    Left = 8
+    Height = 15
+    Top = 76
+    Width = 28
+    Caption = 'Port:'
+    ParentColor = False
+  end
+  object txHost: TLabel
+    Left = 8
+    Height = 15
+    Top = 48
+    Width = 80
+    Caption = 'Remote host:'
+    ParentColor = False
+  end
+  object edPassword: TEdit
+    Left = 180
+    Height = 23
+    Top = 153
+    Width = 320
+    Anchors = [akTop, akLeft, akRight]
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 0
+  end
+  object edUserName: TEdit
+    Left = 180
+    Height = 23
+    Top = 125
+    Width = 320
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 1
+  end
+  object edPort: TSpinEdit
+    Left = 180
+    Height = 24
+    Top = 73
+    Width = 70
+    MaxValue = 65535
+    MinValue = 1
+    TabOrder = 2
+    Value = 65535
+  end
+  object cbSSL: TCheckBox
+    Left = 260
+    Height = 21
+    Top = 77
+    Width = 74
+    Caption = 'Use SSL'
+    TabOrder = 3
+    OnClick = cbSSLClick
+  end
+  object edHost: TEdit
+    Left = 180
+    Height = 23
+    Top = 45
+    Width = 320
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 4
+  end
+  object txConnHelp: TLabel
+    Left = 8
+    Height = 31
+    Top = 9
+    Width = 492
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    Caption = 'Please specify how %s will connect to a remote host running Transmission daemon (service).'
+    ParentColor = False
+    WordWrap = True
+  end
+  object cbAuth: TCheckBox
+    Left = 8
+    Height = 21
+    Top = 101
+    Width = 167
+    Caption = 'Authentication required'
+    TabOrder = 5
+    OnClick = cbAuthClick
+  end
+  object edRpcPath: TEdit
+    Left = 180
+    Height = 23
+    Top = 209
+    Width = 316
+    TabOrder = 6
+  end
+  object txRpcPath: TLabel
+    Left = 8
+    Height = 15
+    Top = 212
+    Width = 60
+    Caption = 'RPC path:'
+    ParentColor = False
+  end
+  object cbAskPassword: TCheckBox
+    Left = 180
+    Height = 21
+    Top = 181
+    Width = 128
+    Caption = 'Ask for password'
+    TabOrder = 7
+    OnClick = cbAskPasswordClick
+  end
+  object cbAutoReconnect: TCheckBox
+    Left = 180
+    Height = 19
+    Top = 101
+    Width = 268
+    AutoSize = False
+    Caption = 'Always auto-reconnect'
+    TabOrder = 8
+  end
+  object txCertFile: TLabel
+    Left = 8
+    Height = 15
+    Top = 256
+    Width = 105
+    Caption = 'Client Certificate:'
+    ParentColor = False
+  end
+  object edCertFile: TEdit
+    Left = 180
+    Height = 23
+    Top = 248
+    Width = 316
+    TabOrder = 9
+  end
+  object txCertPass: TLabel
+    Left = 8
+    Height = 15
+    Top = 296
+    Width = 71
+    Caption = 'Private Key:'
+    ParentColor = False
+  end
+  object edCertPass: TEdit
+    Left = 180
+    Height = 23
+    Top = 288
+    Width = 316
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 10
+  end
+end

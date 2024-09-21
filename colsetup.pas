@@ -36,13 +36,13 @@ unit ColSetup;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, ComCtrls, CheckLst, StdCtrls, ButtonPanel, ExtCtrls, VarGrid, BaseForm;
+  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs, ComCtrls, CheckLst, StdCtrls, ButtonPanel, ExtCtrls, VarGrid;
 
 type
 
   { TColSetupForm }
 
-  TColSetupForm = class(TBaseForm)
+  TColSetupForm = class(TForm)
     btDown: TButton;
     btUp: TButton;
     Buttons: TButtonPanel;

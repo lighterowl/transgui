@@ -1,4 +1,4 @@
-inherited AboutForm: TAboutForm
+object AboutForm: TAboutForm
   Left = 421
   Height = 349
   Top = 188
@@ -14,9 +14,11 @@ inherited AboutForm: TAboutForm
   ClientWidth = 451
   Constraints.MinHeight = 330
   Constraints.MinWidth = 350
+  Font.Height = -12
   OnCreate = FormCreate
   Position = poMainFormCenter
-  object Page: TPageControl[0]
+  LCLVersion = '3.4.0.0'
+  object Page: TPageControl
     Left = 8
     Height = 299
     Top = 8
@@ -491,7 +493,7 @@ inherited AboutForm: TAboutForm
         Top = 104
         Width = 307
         AutoSize = False
-        Caption = 'Fork maintained by xavery.'#10'Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group'
+        Caption = 'Fork maintained by lighterowl.'#10'Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group'
         ParentColor = False
         WordWrap = True
       end
@@ -499,7 +501,7 @@ inherited AboutForm: TAboutForm
         Left = 86
         Height = 15
         Top = 38
-        Width = 57
+        Width = 107
         Caption = 'Version %s, Build %s'
         ParentColor = False
       end
@@ -519,6 +521,7 @@ inherited AboutForm: TAboutForm
         Width = 62
         Caption = 'Home page'
         Font.Color = clBlue
+        Font.Height = -12
         Font.Style = [fsUnderline]
         ParentColor = False
         ParentFont = False
@@ -528,18 +531,18 @@ inherited AboutForm: TAboutForm
         Left = 86
         Height = 15
         Top = 72
-        Width = 57
+        Width = 56
         Caption = 'Version %s'
         ParentColor = False
       end
     end
     object tabLicense: TTabSheet
       Caption = 'License'
-      ClientHeight = 273
+      ClientHeight = 271
       ClientWidth = 427
       object edLicense: TMemo
         Left = 4
-        Height = 265
+        Height = 263
         Top = 4
         Width = 419
         Align = alClient
@@ -902,7 +905,7 @@ inherited AboutForm: TAboutForm
       end
     end
   end
-  object Buttons: TButtonPanel[1]
+  object Buttons: TButtonPanel
     Left = 8
     Height = 26
     Top = 315

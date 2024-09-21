@@ -11,9 +11,10 @@ object PasswordConnect: TPasswordConnect
   Constraints.MaxWidth = 456
   Constraints.MinHeight = 99
   Constraints.MinWidth = 456
+  Font.Height = -12
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '3.4.0.0'
   object lMsg: TLabel
     Left = 8
     Height = 23

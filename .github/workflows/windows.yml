@@ -2,11 +2,9 @@ name: Windows Build
 
 on:
   push:
-    branches:
-      - master
+    branches: [main, develop]
   pull_request:
-    branches:
-      - master
+    branches: [main, develop]
 
 jobs:
   build-win:
@@ -18,10 +16,10 @@ jobs:
       with:
         submodules: recursive
 
-    - uses: actions/cache@v3
+    - uses: actions/cache@v4
       with:
         path: |
-          ~\transgui_sdk\fpc-3.2.3
+          ~\transgui_sdk\fpc-3.2.4-rc1
           ~\transgui_sdk\lazarus
           ~\transgui_sdk\OpenSSL\bin\libcrypto-3.dll
           ~\transgui_sdk\OpenSSL\bin\libssl-3.dll
@@ -30,7 +28,8 @@ jobs:
     - shell: pwsh
       run: .github/build_windows.ps1
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: TransGUI Windows
         path: Release\transgui.7z
+        if-no-files-found: error

@@ -1,0 +1,30 @@
+name: Linux Build
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  build-linux:
+
+    runs-on: ubuntu-latest
+    container: lighterowl/transgui-sdk:1.0
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        submodules: recursive
+
+    - run: |
+        export HOME=/root
+        git config --global --add safe.directory '*'
+        source /root/.transgui_sdk/source.me
+        ./.github/build_linux.sh
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: TransGUI Linux
+        path: units/transgui-x86_64.AppImage
+        if-no-files-found: error
