@@ -36,7 +36,11 @@ unit LocalFileManager;
 
 interface
 
-uses SysUtils, Dialogs, dbus;
+uses SysUtils, Dialogs
+{$ifdef linux}
+, dbus
+{$endif}
+;
 
 procedure ShowFile(Path: string);
 
