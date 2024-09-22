@@ -33,12 +33,17 @@
 unit LocalFileManager;
 
 {$mode ObjFPC}{$H+}{$J-}
+{$ifdef darwin}
+{$modeswitch objectivec1}
+{$endif}
 
 interface
 
 uses SysUtils, Dialogs
-{$ifdef linux}
+{$if defined(linux)}
 , dbus
+{$elseif defined(darwin)}
+, CocoaAll
 {$endif}
 ;
 
@@ -49,7 +54,7 @@ implementation
 type
   EFileManagerError = class(Exception);
 
-{$ifdef linux}
+{$if defined(linux)}
 
 procedure ShowFile_impl(Path : string);
 var
@@ -59,7 +64,7 @@ var
   args: DBusMessageIter;
   array_iter: DBusMessageIter;
   uri_p, startupId: PChar;
-  uri: string;
+  uri: UTF8String;
   dbus_rv: dbus_bool_t;
 
   procedure Cleanup;
@@ -118,11 +123,25 @@ begin
   Cleanup;
 end;
 
+{$elseif defined(darwin)}
+procedure ShowFile_impl(Path : string);
+var
+  u8path: UTF8String;
+begin
+  u8path := Path;
+  NSWorkspace.sharedWorkspace.activateFileViewerSelectingURLs(
+    NSArray.arrayWithObject(
+      NSURL.fileURLWithPath(
+        NSString.stringWithUTF8String(PChar(u8path)))));
+end;
+
 {$endif}
 
 procedure ShowFile(Path: string);
 begin
   try
+    if Length(Path) = 0 then exit;
+
     ShowFile_impl(Path);
   except
     on e: EFileManagerError do
