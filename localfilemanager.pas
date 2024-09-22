@@ -44,6 +44,8 @@ uses SysUtils, Dialogs
 , dbus
 {$elseif defined(darwin)}
 , CocoaAll
+{$elseif defined(windows)}
+, Process
 {$endif}
 ;
 
@@ -133,6 +135,15 @@ begin
     NSArray.arrayWithObject(
       NSURL.fileURLWithPath(
         NSString.stringWithUTF8String(PChar(u8path)))));
+end;
+
+{$elseif defined(windows)}
+
+procedure ShowFile_impl(Path : string);
+var
+  output: string;
+begin
+  Process.RunCommand('explorer.exe', [TProcessString.Format('/select,"%s"', [Path])], output);
 end;
 
 {$endif}
