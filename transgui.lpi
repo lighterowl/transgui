@@ -526,6 +526,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="ConnOptionsFrames"/>
       </Unit>
+      <Unit>
+        <Filename Value="localfilemanager.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LocalFileManager"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
