@@ -526,6 +526,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="ConnOptionsFrames"/>
       </Unit>
+      <Unit>
+        <Filename Value="localfilemanager.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LocalFileManager"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -557,7 +562,7 @@
     </CodeGeneration>
     <Linking>
       <Debugging>
-        <DebugInfoType Value="dsDwarf3"/>
+        <DebugInfoType Value="dsDwarf2"/>
         <TrashVariables Value="True"/>
         <UseExternalDbgSyms Value="True"/>
       </Debugging>
