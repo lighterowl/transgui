@@ -53,7 +53,7 @@ uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
-  fileinfo, winpeimagereader, elfreader, machoreader;
+  fileinfo, winpeimagereader, elfreader, machoreader, LocalFileManager;
 
 resourcestring
   sAll = 'All torrents';
@@ -2162,17 +2162,46 @@ begin
 end;
 
 procedure TMainForm.acOpenContainingFolderExecute(Sender: TObject);
+
+function GetCurrentTorrentPath : string;
+var
+  name: string;
+  downloadDir: variant;
+  info : TJSONObject;
+begin
+  name := string(gTorrents.Items[torcolName, gTorrents.Row]);
+  downloadDir := gTorrents.Items[torcolPath, gTorrents.Row];
+  if downloadDir <> nil then
+    Result := string(downloadDir) + '/' + name
+  else begin
+    AppBusy;
+
+    info := RpcObj.RequestInfo(gTorrents.Items[torcolTorrentId, gTorrents.Row], ['downloadDir']);
+    if info <> nil then
+      Result := info.Arrays['torrents'].Objects[0].Strings['downloadDir'] + '/' + name
+    else
+      CheckStatus(False);
+
+    AppNormal;
+  end;
+end;
+
+var
+  mapped : string;
 begin
   if gTorrents.Items.Count = 0 then
     exit;
   Application.ProcessMessages;
-  if lvFiles.Focused and (lvFiles.Items.Count > 0) then begin
-    AppBusy;
-    ExecRemoteFile(FFilesTree.GetFullPath(lvFiles.Row), not FFilesTree.IsFolder(lvFiles.Row));
-    AppNormal;
-  end
+  if lvFiles.Focused and (lvFiles.Items.Count > 0) then
+    mapped := MapRemoteToLocal(FFilesTree.GetFullPath(lvFiles.Row))
   else
-    OpenCurrentTorrent(True);
+    mapped := MapRemoteToLocal(GetCurrentTorrentPath());
+
+  if (mapped <> '') and (FileExistsUTF8(mapped) or DirectoryExistsUTF8(mapped)) then
+    LocalFileManager.ShowFile(mapped)
+  else if mapped = '' then
+    MessageDlg(sNoPathMapping, mtInformation, [mbOK], 0);
+
 end;
 
 procedure TMainForm.acOpenFileExecute(Sender: TObject);

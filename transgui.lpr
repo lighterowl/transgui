@@ -36,7 +36,7 @@ uses
   clocale,
   {$endif}
 {$endif}
-  Interfaces, Forms, Main, rpc, AddTorrent,
+  Interfaces, Forms, Main, rpc, AddTorrent, LazLogger,
   ConnOptions, varlist, TorrProps, DaemonOptions, About, IpResolver, download,
   ColSetup, utils, ResTranslator, AddLink, MoveTorrent, AddTracker, Options,
   passwcon, ConnOptionsTransmissionFrame, ConnOptionsProxyFrame,

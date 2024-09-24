@@ -39,7 +39,7 @@ unit LocalFileManager;
 
 interface
 
-uses SysUtils, Dialogs
+uses SysUtils, Dialogs, LazLoggerBase, lclintf
 {$if defined(linux)}
 , dbus
 {$elseif defined(darwin)}
@@ -108,16 +108,16 @@ begin
   dbus_message_iter_init_append(msg, @args);
 
   dbus_rv := dbus_message_iter_open_container(@args, DBUS_TYPE_ARRAY, DBUS_TYPE_STRING_AS_STRING, @array_iter);
-  if dbus_rv <> 0 then ReportCustomError('iter_open_container returned null');
+  if dbus_rv <> 1 then ReportCustomError('iter_open_container returned false');
 
   dbus_rv := dbus_message_iter_append_basic(@array_iter, DBUS_TYPE_STRING, @uri_p);
-  if dbus_rv <> 0 then ReportCustomError('iter_append_basic returned null');
+  if dbus_rv <> 1 then ReportCustomError('iter_append_basic returned false');
 
   dbus_rv := dbus_message_iter_close_container(@args, @array_iter);
-  if dbus_rv <> 0 then ReportCustomError('iter_close_container returned null');
+  if dbus_rv <> 1 then ReportCustomError('iter_close_container returned false');
 
   dbus_rv := dbus_message_iter_append_basic(@args, DBUS_TYPE_STRING, @startupId);
-  if dbus_rv <> 0 then ReportCustomError('iter_append_basic returned null');
+  if dbus_rv <> 1 then ReportCustomError('iter_append_basic returned false');
 
   replymsg := dbus_connection_send_with_reply_and_block(conn, msg, 1000, @err);
   if replymsg = nil then ReportDBusError;
@@ -143,7 +143,8 @@ procedure ShowFile_impl(Path : string);
 var
   output: string;
 begin
-  Process.RunCommand('explorer.exe', [TProcessString.Format('/select,"%s"', [Path])], output);
+  if Process.RunCommand('explorer.exe', [TProcessString.Format('/select,"%s"', [Path])], output) <> True then
+    raise EFileManagerError.Create('failed to launch explorer.exe /select');
 end;
 
 {$endif}
@@ -155,8 +156,12 @@ begin
 
     ShowFile_impl(Path);
   except
-    on e: EFileManagerError do
-      ShowMessage('Failed to show file in file manager :' + sLineBreak + e.Message);
+    on e: EFileManagerError do begin
+      DebugLn('error while trying to show %s : %s', [Path, e.Message]);
+
+      { try to do _anything_ at this point }
+      OpenDocument(ExtractFileDir(Path));
+    end;
   end;
 end;
 
