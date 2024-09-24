@@ -2165,20 +2165,21 @@ procedure TMainForm.acOpenContainingFolderExecute(Sender: TObject);
 
 function GetCurrentTorrentPath : string;
 var
-  name: string;
-  downloadDir: variant;
+  name, downloadDir: variant;
   info : TJSONObject;
 begin
-  name := string(gTorrents.Items[torcolName, gTorrents.Row]);
+  name := gTorrents.Items[torcolName, gTorrents.Row];
   downloadDir := gTorrents.Items[torcolPath, gTorrents.Row];
-  if downloadDir <> nil then
-    Result := string(downloadDir) + '/' + name
+  if (downloadDir <> nil) and (name <> nil) then
+    Result := string(downloadDir) + '/' + string(name)
   else begin
     AppBusy;
 
-    info := RpcObj.RequestInfo(gTorrents.Items[torcolTorrentId, gTorrents.Row], ['downloadDir']);
-    if info <> nil then
-      Result := info.Arrays['torrents'].Objects[0].Strings['downloadDir'] + '/' + name
+    info := RpcObj.RequestInfo(gTorrents.Items[torcolTorrentId, gTorrents.Row], ['name', 'downloadDir']);
+    if info <> nil then begin
+      info := info.Arrays['torrents'].Objects[0];
+      Result := info.Strings['downloadDir'] + '/' + info.Strings['name'];
+    end
     else
       CheckStatus(False);
 
