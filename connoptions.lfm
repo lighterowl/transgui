@@ -13,7 +13,6 @@ object ConnOptionsForm: TConnOptionsForm
   ClientWidth = 541
   Constraints.MinHeight = 280
   Constraints.MinWidth = 471
-  Font.Height = -12
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poMainFormCenter

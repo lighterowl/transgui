@@ -14,7 +14,6 @@ object DaemonOptionsForm: TDaemonOptionsForm
   ClientWidth = 617
   Constraints.MinHeight = 340
   Constraints.MinWidth = 400
-  Font.Height = -12
   OnCreate = FormCreate
   Position = poMainFormCenter
   LCLVersion = '3.4.0.0'

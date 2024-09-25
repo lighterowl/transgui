@@ -13,7 +13,6 @@ object ColSetupForm: TColSetupForm
   ClientWidth = 355
   Constraints.MinHeight = 200
   Constraints.MinWidth = 260
-  Font.Height = -12
   OnCreate = FormCreate
   Position = poMainFormCenter
   LCLVersion = '3.4.0.0'

@@ -13,7 +13,6 @@ object MainForm: TMainForm
   ClientWidth = 984
   Constraints.MinHeight = 300
   Constraints.MinWidth = 300
-  Font.Height = -12
   KeyPreview = True
   Menu = MainMenu
   OnActivate = FormActivate

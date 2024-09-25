@@ -9,7 +9,6 @@ object MoveTorrentForm: TMoveTorrentForm
   Caption = 'Torrent data location'
   ClientHeight = 126
   ClientWidth = 643
-  Font.Height = -12
   OnCreate = FormCreate
   Position = poMainFormCenter
   LCLVersion = '3.4.0.0'

@@ -12,7 +12,6 @@ object DownloadForm: TDownloadForm
   Caption = 'Downloading'
   ClientHeight = 106
   ClientWidth = 404
-  Font.Height = -12
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy

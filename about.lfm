@@ -14,7 +14,6 @@ object AboutForm: TAboutForm
   ClientWidth = 451
   Constraints.MinHeight = 330
   Constraints.MinWidth = 350
-  Font.Height = -12
   OnCreate = FormCreate
   Position = poMainFormCenter
   LCLVersion = '3.4.0.0'

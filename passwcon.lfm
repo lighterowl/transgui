@@ -11,7 +11,6 @@ object PasswordConnect: TPasswordConnect
   Constraints.MaxWidth = 456
   Constraints.MinHeight = 99
   Constraints.MinWidth = 456
-  Font.Height = -12
   OnCreate = FormCreate
   Position = poMainFormCenter
   LCLVersion = '3.4.0.0'

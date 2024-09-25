@@ -13,7 +13,6 @@ object AddTorrentForm: TAddTorrentForm
   ClientWidth = 508
   Constraints.MinHeight = 300
   Constraints.MinWidth = 470
-  Font.Height = -12
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poMainFormCenter
