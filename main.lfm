@@ -248,36 +248,6 @@ object MainForm: TMainForm
       OnEditorHide = gTorrentsEditorHide
     end
   end
-  object StatusBar: TStatusBar
-    Left = 0
-    Height = 23
-    Top = 679
-    Width = 984
-    Panels = <    
-      item
-        Width = 300
-      end    
-      item
-        Width = 140
-      end    
-      item
-        Width = 140
-      end    
-      item
-        Width = 120
-      end    
-      item
-        Width = 120
-      end    
-      item
-        Width = 120
-      end    
-      item
-        Width = 120
-      end>
-    SimplePanel = False
-    OnMouseDown = StatusBarMouseDown
-  end
   object PageInfo: TPageControl
     Left = 0
     Height = 326
@@ -1072,6 +1042,41 @@ object MainForm: TMainForm
         ParentColor = False
       end
     end
+  end
+  object StatusBar: TStatusBar
+    AnchorSideTop.Control = PageInfo
+    AnchorSideTop.Side = asrBottom
+    Left = 0
+    Height = 23
+    Top = 679
+    Width = 984
+    Anchors = [akTop]
+    Constraints.MaxHeight = 23
+    Constraints.MinHeight = 23
+    Panels = <    
+      item
+        Width = 300
+      end    
+      item
+        Width = 140
+      end    
+      item
+        Width = 140
+      end    
+      item
+        Width = 120
+      end    
+      item
+        Width = 120
+      end    
+      item
+        Width = 120
+      end    
+      item
+        Width = 120
+      end>
+    SimplePanel = False
+    OnMouseDown = StatusBarMouseDown
   end
   object VSplitter: TSplitter
     Cursor = crVSplit
