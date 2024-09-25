@@ -3584,10 +3584,13 @@ procedure TMainForm.acStatusBarExecute(Sender: TObject);
 begin
   acStatusBar.Checked:=not acStatusBar.Checked;
   StatusBar.Visible:=acStatusBar.Checked;
-  if not StatusBar.Visible then begin
-    acStatusBarSizes.Checked := true;
-    acStatusBarSizesExecute(nil);
-  end;
+  if StatusBar.Visible then
+      StatusBar.Top:=ClientHeight
+  else
+    begin
+      acStatusBarSizes.Checked := true;
+      acStatusBarSizesExecute(nil);
+    end;
 end;
 
 procedure TMainForm.acStatusBarSizesExecute(Sender: TObject);
