@@ -1,0 +1,6 @@
+{"version":1,"strings":[
+{"hash":111055982,"name":"tmovetorrentform.caption","sourcebytes":[84,111,114,114,101,110,116,32,100,97,116,97,32,108,111,99,97,116,105,111,110],"value":"Torrent data location"},
+{"hash":230317338,"name":"tmovetorrentform.txtorrentdir.caption","sourcebytes":[78,101,119,32,108,111,99,97,116,105,111,110,32,102,111,114,32,116,111,114,114,101,110,116,32,100,97,116,97,58],"value":"New location for torrent data:"},
+{"hash":244353342,"name":"tmovetorrentform.cbmovedata.caption","sourcebytes":[77,111,118,101,32,116,111,114,114,101,110,116,32,100,97,116,97,32,102,114,111,109,32,99,117,114,114,101,110,116,32,108,111,99,97,116,105,111,110,32,116,111,32,110,101,119,32,108,111,99,97,116,105,111,110],"value":"Move torrent data from current location to new location"},
+{"hash":115952286,"name":"tmovetorrentform.btbrowse.caption","sourcebytes":[66,114,111,119,115,101,46,46,46],"value":"Browse..."}
+]}

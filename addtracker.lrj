@@ -1,0 +1,4 @@
+{"version":1,"strings":[
+{"hash":197150642,"name":"taddtrackerform.caption","sourcebytes":[65,100,100,32,116,114,97,99,107,101,114],"value":"Add tracker"},
+{"hash":142824282,"name":"taddtrackerform.txtrackerurl.caption","sourcebytes":[84,114,97,99,107,101,114,32,97,110,110,111,117,110,99,101,32,85,82,76,58],"value":"Tracker announce URL:"}
+]}

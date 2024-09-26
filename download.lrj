@@ -1,0 +1,7 @@
+{"version":1,"strings":[
+{"hash":52216343,"name":"tdownloadform.caption","sourcebytes":[68,111,119,110,108,111,97,100,105,110,103],"value":"Downloading"},
+{"hash":3144933,"name":"tdownloadform.txfilename.caption","sourcebytes":[116,120,70,105,108,101,78,97,109,101],"value":"txFileName"},
+{"hash":197790387,"name":"tdownloadform.txbytes.caption","sourcebytes":[116,120,66,121,116,101,115],"value":"txBytes"},
+{"hash":113828228,"name":"tdownloadform.txpercent.caption","sourcebytes":[116,120,80,101,114,99,101,110,116],"value":"txPercent"},
+{"hash":77089212,"name":"tdownloadform.btcancel.caption","sourcebytes":[67,97,110,99,101,108],"value":"Cancel"}
+]}

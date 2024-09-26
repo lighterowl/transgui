@@ -1,0 +1,20 @@
+{"version":1,"strings":[
+{"hash":220006020,"name":"taddtorrentform.caption","sourcebytes":[65,100,100,32,110,101,119,32,116,111,114,114,101,110,116],"value":"Add new torrent"},
+{"hash":32,"name":"taddtorrentform.gbsaveas.caption","sourcebytes":[32],"value":" "},
+{"hash":256138298,"name":"taddtorrentform.txdestfolder.caption","sourcebytes":[68,101,115,116,105,110,97,116,105,111,110,32,102,111,108,100,101,114,58],"value":"Destination folder:"},
+{"hash":125475898,"name":"taddtorrentform.txpeerlimit.caption","sourcebytes":[80,101,101,114,32,108,105,109,105,116,58],"value":"Peer limit:"},
+{"hash":258262002,"name":"taddtorrentform.btbrowse.hint","sourcebytes":[66,114,111,119,115,101,32,102,111,108,100,101,114],"value":"Browse folder"},
+{"hash":115952286,"name":"taddtorrentform.btbrowse.caption","sourcebytes":[66,114,111,119,115,101,46,46,46],"value":"Browse..."},
+{"hash":147287546,"name":"taddtorrentform.txsaveas.caption","sourcebytes":[83,97,118,101,32,97,115,58],"value":"Save as:"},
+{"hash":263475366,"name":"taddtorrentform.edextension.hint","sourcebytes":[102,111,114,32,101,120,97,109,112,108,101,58,32,42,46,97,118,105,32,42,46,109,107,118],"value":"for example: *.avi *.mkv"},
+{"hash":263475366,"name":"taddtorrentform.txsaveas1.hint","sourcebytes":[102,111,114,32,101,120,97,109,112,108,101,58,32,42,46,97,118,105,32,42,46,109,107,118],"value":"for example: *.avi *.mkv"},
+{"hash":47204432,"name":"taddtorrentform.txsaveas1.caption","sourcebytes":[84,101,109,112,108,97,116,101,58,32,32],"value":"Template:  "},
+{"hash":238193682,"name":"taddtorrentform.delbutton.hint","sourcebytes":[68,101,108,101,116,101,32,100,101,115,116,105,110,97,116,105,111,110,32,102,111,108,100,101,114],"value":"Delete destination folder"},
+{"hash":245003683,"name":"taddtorrentform.gbcontents.caption","sourcebytes":[84,111,114,114,101,110,116,32,99,111,110,116,101,110,116,115],"value":"Torrent contents"},
+{"hash":13215978,"name":"taddtorrentform.txdiskspace.caption","sourcebytes":[70,114,101,101,32,100,105,115,107,32,115,112,97,99,101,58],"value":"Free disk space:"},
+{"hash":41356085,"name":"taddtorrentform.lvfiles.columns[0].title.caption","sourcebytes":[70,105,108,101,32,110,97,109,101],"value":"File name"},
+{"hash":368901,"name":"taddtorrentform.lvfiles.columns[1].title.caption","sourcebytes":[83,105,122,101],"value":"Size"},
+{"hash":195296268,"name":"taddtorrentform.btselectall.caption","sourcebytes":[83,101,108,101,99,116,32,97,108,108],"value":"Select all"},
+{"hash":172005621,"name":"taddtorrentform.btselectnone.caption","sourcebytes":[83,101,108,101,99,116,32,110,111,110,101],"value":"Select none"},
+{"hash":29433460,"name":"taddtorrentform.cbstarttorrent.caption","sourcebytes":[83,116,97,114,116,32,116,111,114,114,101,110,116],"value":"Start torrent"}
+]}

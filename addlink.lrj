@@ -1,0 +1,4 @@
+{"version":1,"strings":[
+{"hash":47566507,"name":"taddlinkform.caption","sourcebytes":[65,100,100,32,116,111,114,114,101,110,116,32,108,105,110,107],"value":"Add torrent link"},
+{"hash":241104202,"name":"taddlinkform.txlink.caption","sourcebytes":[85,82,76,32,111,102,32,97,32,46,116,111,114,114,101,110,116,32,102,105,108,101,32,111,114,32,97,32,109,97,103,110,101,116,32,108,105,110,107,58],"value":"URL of a .torrent file or a magnet link:"}
+]}

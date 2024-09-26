@@ -9,7 +9,7 @@ readonly macosx_dir='./.github/macosx'
 
 readonly appfolder="${dmgfolder}/${appname}.app"
 
-mkdir -p "$appfolder/Contents/MacOS/lang"
+mkdir -p "$appfolder/Contents/MacOS"
 mkdir -p "$appfolder/Contents/Resources"
 
 for i in libcrypto.3.dylib libssl.3.dylib transgui; do
@@ -19,7 +19,6 @@ for i in libcrypto.3.dylib libssl.3.dylib transgui; do
   chmod +x "$appfolder/Contents/MacOS/$i"
 done
 
-cp lang/transgui.* "$appfolder/Contents/MacOS/lang"
 cp "${macosx_dir}/PkgInfo" "${appfolder}/Contents"
 cp "${macosx_dir}/transgui.icns" "${appfolder}/Contents/Resources"
 sed -e "s/@prog_ver@/$prog_ver/" "${macosx_dir}/Info.plist" > "${appfolder}/Contents/Info.plist"
