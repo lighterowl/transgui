@@ -336,7 +336,7 @@ Torrents verification may take a long time.~Are you sure to start verification o
 Torrents=Торренты
 Total size=Общий размер
 Total: %s=Всего: %s
-Tracker announce URL=Аnnounce URL трекера
+Tracker announce URL=Анонсировать URL трекера
 Tracker grouping=Группировка по трекерам
 Tracker properties=Свойства трекера
 Tracker status=Состояние трекера
