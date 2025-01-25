@@ -136,19 +136,19 @@ begin
 
   tabTransmission := TTabSheet.Create(Self);
   tabTransmission.Parent := Page;
-  tabTransmission.Caption := 'Transmission';
+  tabTransmission.Caption := ResTranslator.TranslateString('Transmission');
 
   tabProxy := TTabSheet.Create(Self);
   tabProxy.Parent := Page;
-  tabProxy.Caption := 'Proxy';
+  tabProxy.Caption := ResTranslator.TranslateString('Proxy');
 
   tabPaths := TTabSheet.Create(Self);
   tabPaths.Parent := Page;
-  tabPaths.Caption := 'Paths';
+  tabPaths.Caption := ResTranslator.TranslateString('Paths');
 
   tabMisc := TTabSheet.Create(Self);
   tabMisc.Parent := Page;
-  tabMisc.Caption := 'Misc';
+  tabMisc.Caption := ResTranslator.TranslateString('Misc');
 
   connOptions := TConnOptionsFrames.Create(Self, tabTransmission, tabProxy,
                  tabPaths, tabMisc, Page);
