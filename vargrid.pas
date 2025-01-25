@@ -921,7 +921,7 @@ var
   i, r: integer;
 begin
   inherited UTF8KeyPress(UTF8Key);
-  if UTF8Key = #0 then
+  if (UTF8Key = '') or (EditorMode = True) then
     exit;
   FSearchTimer.Enabled:=False;
   FSearchTimer.Enabled:=True;
