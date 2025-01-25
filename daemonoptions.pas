@@ -1,6 +1,7 @@
 {*************************************************************************************
   This file is part of Transmission Remote GUI.
   Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group.
+  Copyright (c) 2023-2025 by Daniel Kamil Kozar
 
   Transmission Remote GUI is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -41,9 +42,9 @@ uses
 resourcestring
  sPortTestSuccess = 'Incoming port tested successfully.';
  sPortTestFailed = 'Incoming port is closed. Check your firewall settings.';
- sEncryptionDisabled = 'Encryption disabled';
- sEncryptionEnabled = 'Encryption enabled';
- sEncryptionRequired = 'Encryption required';
+ sEncryptionDisabled = 'Allow encryption';
+ sEncryptionEnabled = 'Prefer encryption';
+ sEncryptionRequired = 'Require encryption';
  SNoDownloadDir = 'The downloads directory was not specified.';
  SNoIncompleteDir = 'The directory for incomplete files was not specified.';
 // SNoBlocklistURL = 'The blocklist URL was not specified.';
