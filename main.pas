@@ -2799,8 +2799,8 @@ begin
           HideWaitMsg;
           ok:=ShowModal = mrOk;
           if BorderStyle = bsSizeable then begin
-            Ini.WriteInteger('AddTorrent', 'Width', Width);
-            Ini.WriteInteger('AddTorrent', 'Height', Height);
+            Ini.WriteInteger('AddTorrent', 'Width', ScaleFormTo96(Width));
+            Ini.WriteInteger('AddTorrent', 'Height', ScaleFormTo96(Height));
           end;
         end;
 
@@ -2997,8 +2997,8 @@ begin
   if WindowState = wsNormal then begin
     Ini.WriteInteger('MainForm', 'Left', Left);
     Ini.WriteInteger('MainForm', 'Top', Top);
-    Ini.WriteInteger('MainForm', 'Width', Width);
-    Ini.WriteInteger('MainForm', 'Height', Height);
+    Ini.WriteInteger('MainForm', 'Width', ScaleFormTo96(Width));
+    Ini.WriteInteger('MainForm', 'Height', ScaleFormTo96(Height));
   end;
   if WindowState <> wsMinimized then
     Ini.WriteInteger('MainForm', 'State', integer(WindowState));
@@ -5239,7 +5239,7 @@ begin
   for i:=0 to LV.Columns.Count - 1 do
     with LV.Columns[i] do begin
       Ini.WriteInteger(AName, Format('Id%d', [i]), ID - 1);
-      Ini.WriteInteger(AName, Format('Width%d', [i]), Width);
+      Ini.WriteInteger(AName, Format('Width%d', [i]), ScaleFormTo96(Width));
       if FullInfo then begin
         Ini.WriteInteger(AName, Format('Index%d', [i]), Index);
         Ini.WriteBool(AName, Format('Visible%d', [i]), Visible);
