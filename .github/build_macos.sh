@@ -33,10 +33,11 @@ fpc_lazarus_build_install() {
   mkdir -p "$sdk_dir"
   cd "$sdk_dir"
 
-  readonly fpc324_rc1_commit='d78e2897014a69f56a1cfb53c75335c4cc37ba0e'
-  curl -L -o fpc-src.tar.bz2 "https://gitlab.com/freepascal.org/fpc/source/-/archive/${fpc324_rc1_commit}/source-${fpc324_rc1_commit}.tar.bz2"
+  # use a private fork which includes a fix for compilation under Sequoia
+  readonly fpc324_rc1_commit='dae96b96a1839e1a3624c664d6293661cc4bed67'
+  curl -L -o fpc-src.tar.bz2 "https://gitlab.com/dkk089/fpc-src/-/archive/${fpc324_rc1_commit}/fpc-src-${fpc324_rc1_commit}.tar.bz2"
   tar xf fpc-src.tar.bz2
-  mv "source-${fpc324_rc1_commit}" fpc-src
+  mv "fpc-src-${fpc324_rc1_commit}" fpc-src
   cd fpc-src
 
   mkdir -p "${fpc_installdir}"
@@ -59,7 +60,7 @@ fpc_lazarus_build_install() {
   make_fpc_cfg
 
   cd "$sdk_dir"
-  local -r lazarus_commit='4e69368d79e3801ad26a7bc7c1eda0ad3cf7dcc4'
+  local -r lazarus_commit='dab5c509c6fd70f8fac2144e468291899286616f'
   curl -L -o lazarus-src.tar.bz2 "https://gitlab.com/dkk089/lazarus/-/archive/${lazarus_commit}/lazarus-${lazarus_commit}.tar.bz2"
   tar xf lazarus-src.tar.bz2
   mv "lazarus-${lazarus_commit}" lazarus
