@@ -33,7 +33,7 @@ fpc_lazarus_build_install() {
   mkdir -p "$sdk_dir"
   cd "$sdk_dir"
 
-  # use a private fork which includes a fix for compilation under macos sequoia
+  # use a private fork which includes a fix for compilation under Sequoia
   readonly fpc324_rc1_commit='dae96b96a1839e1a3624c664d6293661cc4bed67'
   curl -L -o fpc-src.tar.bz2 "https://gitlab.com/dkk089/fpc-src/-/archive/${fpc324_rc1_commit}/fpc-src-${fpc324_rc1_commit}.tar.bz2"
   tar xf fpc-src.tar.bz2
