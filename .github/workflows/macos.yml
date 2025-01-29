@@ -16,12 +16,12 @@ jobs:
       with:
         submodules: recursive
 
-    - uses: actions/cache@v4
-      with:
-        path: |
-          ~/.transgui_sdk/lazarus
-          ~/.transgui_sdk/fpc-3.2.4-rc1
-        key: macos-arm64-fpc-lazarus
+#    - uses: actions/cache@v4
+#      with:
+#        path: |
+#          ~/.transgui_sdk/lazarus
+#          ~/.transgui_sdk/fpc-3.2.4-rc1
+#        key: macos-arm64-fpc-lazarus
 
     - run: .github/build_macos.sh
 
@@ -40,12 +40,12 @@ jobs:
       with:
         submodules: recursive
 
-    - uses: actions/cache@v4
-      with:
-        path: |
-          ~/.transgui_sdk/lazarus
-          ~/.transgui_sdk/fpc-3.2.4-rc1
-        key: macos-x64-fpc-lazarus
+#    - uses: actions/cache@v4
+#      with:
+#        path: |
+#          ~/.transgui_sdk/lazarus
+#          ~/.transgui_sdk/fpc-3.2.4-rc1
+#        key: macos-x64-fpc-lazarus
 
     - run: .github/build_macos.sh
 
