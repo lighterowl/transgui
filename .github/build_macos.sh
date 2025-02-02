@@ -60,7 +60,7 @@ fpc_lazarus_build_install() {
   make_fpc_cfg
 
   cd "$sdk_dir"
-  local -r lazarus_commit='dab5c509c6fd70f8fac2144e468291899286616f'
+  local -r lazarus_commit='cf6b6acfad7d35bcb97d9f763c1f9b7c1ecc2a5d'
   curl -L -o lazarus-src.tar.bz2 "https://gitlab.com/dkk089/lazarus/-/archive/${lazarus_commit}/lazarus-${lazarus_commit}.tar.bz2"
   tar xf lazarus-src.tar.bz2
   mv "lazarus-${lazarus_commit}" lazarus

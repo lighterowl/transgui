@@ -2912,13 +2912,11 @@ end;
 
 procedure TMainForm.UpdateTray;
 begin
-{$ifndef CPUARM}
   TrayIcon.Visible:=not IsUnity and
     (Ini.ReadBool('Interface', 'TrayIconAlways', True)  or
     ((WindowState = wsMinimized) and Ini.ReadBool('Interface', 'TrayMinimize', True) ) or
     (not Self.Visible and Ini.ReadBool('Interface', 'TrayClose', False) )
     );
-{$endif CPUARM}
 
 {$ifdef darwin}
   acShowApp.Visible:=False;
@@ -2959,12 +2957,10 @@ end;
 
 procedure TMainForm.DownloadFinished(const TorrentName: string);
 begin
-{$ifndef CPUARM}
   if not TrayIcon.Visible or not Ini.ReadBool('Interface', 'TrayNotify', True) then exit;
   TrayIcon.BalloonHint:=Format(sFinishedDownload, [TorrentName]);
   TrayIcon.BalloonTitle:=sDownloadComplete;
   TrayIcon.ShowBalloonHint;
-{$endif CPUARM}
 end;
 
 function TMainForm.GetFlagImage(const CountryCode: string): integer;
@@ -4109,11 +4105,7 @@ begin
 end;
 
 procedure TMainForm.ApplicationPropertiesMinimize(Sender: TObject);
-begin
-{$ifdef CPUARM}
-  exit;
-{$endif  CPUARM}
-
+begins
 {$ifndef darwin}
   if not IsUnity and Ini.ReadBool('Interface', 'TrayMinimize', True) then
     HideApp;
@@ -4739,12 +4731,6 @@ end;
 
 procedure TMainForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-{$ifdef CPUARM}
-//  CloseAction:=caMinimize;
-  BeforeCloseApp;
-  exit;
-{$endif CPUARM}
-
   if Ini.ReadBool('Interface', 'TrayClose', False) then begin
 {$ifdef darwin}
     CloseAction:=caMinimize;
