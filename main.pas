@@ -4105,7 +4105,7 @@ begin
 end;
 
 procedure TMainForm.ApplicationPropertiesMinimize(Sender: TObject);
-begins
+begin
 {$ifndef darwin}
   if not IsUnity and Ini.ReadBool('Interface', 'TrayMinimize', True) then
     HideApp;
