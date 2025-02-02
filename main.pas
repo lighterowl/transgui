@@ -1,7 +1,7 @@
 {*************************************************************************************
   This file is part of Transmission Remote GUI.
   Copyright (c) 2008-2019 by Yury Sidorov and Transmission Remote GUI working group.
-  Copyright (c) 2023-2024 by Daniel Kamil Kozar
+  Copyright (c) 2023-2025 by Daniel Kamil Kozar
 
   Transmission Remote GUI is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -43,7 +43,7 @@ uses
   lclintf,
   {$endif windows}
   {$ifdef darwin}
-  MacOSThemeDetect,
+  MacOSThemeDetect, CocoaConfig,
   {$endif}
   Graphics, Dialogs, ComCtrls, Menus, ActnList, LCLVersion,
   httpsend, StdCtrls, fpjson, jsonparser, ExtCtrls, rpc, syncobjs, variants, varlist, IpResolver,
@@ -801,6 +801,9 @@ type
 {$ifdef windows}
     procedure SetUpWindowsHotKey;
 {$endif windows}
+{$ifdef darwin}
+    procedure CocoaQuitApp(Data: PtrInt);
+{$endif darwin}
 end;
 
 function AppName: string;
@@ -988,6 +991,18 @@ begin
 end;
 
 {$endif windows}
+
+{$ifdef darwin}
+procedure TMainForm.CocoaQuitApp(Data: PtrInt);
+begin
+  { called by the OS when "Quit" is selected from the application's right-click
+    menu in the dock, or when the user is logging out / machine is shutting
+    down - in which case EndSession is called too so we end up calling it twice
+    which isn't really a problem. }
+  ApplicationPropertiesEndSession(self);
+  Application.Terminate;
+end;
+{$endif darwin}
 
 function IsHash(Hash: String): boolean;
 var i: integer;
@@ -1612,6 +1627,7 @@ begin
 
   RegisterURLHandler(@AddTorrentFile);
   MacOSThemeDetect.Callback := @OnThemeChanged;
+  CocoaConfigApplication.events.onQuitApp := @CocoaQuitApp;
 {$endif darwin}
 
   Application.Title:=AppName + ' v' + AppVersion;
@@ -2238,12 +2254,13 @@ begin
     edRefreshInterval.Value:=Ini.ReadInteger('Interface', 'RefreshInterval', 5);
     edRefreshIntervalMin.Value:=Ini.ReadInteger('Interface', 'RefreshIntervalMin', 20);
     cbCalcAvg.Checked:=FCalcAvg;
-{$ifndef darwin}
-    cbTrayMinimize.Checked:=Ini.ReadBool('Interface', 'TrayMinimize', True);
+{$ifdef darwin}
+    cbTrayMinimize.Visible := False;
+    cbTrayClose.Visible := False;
 {$else}
-    cbTrayMinimize.Enabled:=False;
-{$endif}
+    cbTrayMinimize.Checked:=Ini.ReadBool('Interface', 'TrayMinimize', True);
     cbTrayClose.Checked:=Ini.ReadBool('Interface', 'TrayClose', False);
+{$endif}
     cbTrayIconAlways.Checked:=Ini.ReadBool('Interface', 'TrayIconAlways', True);
     cbTrayNotify.Checked:=Ini.ReadBool('Interface', 'TrayNotify', True);
 
@@ -2270,10 +2287,13 @@ begin
       Ini.WriteInteger('Interface', 'RefreshInterval', edRefreshInterval.Value);
       Ini.WriteInteger('Interface', 'RefreshIntervalMin', edRefreshIntervalMin.Value);
       Ini.WriteBool('Interface', 'CalcAvg', cbCalcAvg.Checked);
-{$ifndef darwin}
+{$ifdef darwin}
+      Ini.DeleteKey('Interface', 'TrayMinimize');
+      Ini.DeleteKey('Interface', 'TrayClose');
+{$else}
       Ini.WriteBool('Interface', 'TrayMinimize', cbTrayMinimize.Checked);
-{$endif}
       Ini.WriteBool('Interface', 'TrayClose', cbTrayClose.Checked);
+{$endif}
       Ini.WriteBool('Interface', 'TrayIconAlways', cbTrayIconAlways.Checked);
       Ini.WriteBool('Interface', 'TrayNotify', cbTrayNotify.Checked);
 
@@ -2913,9 +2933,12 @@ end;
 procedure TMainForm.UpdateTray;
 begin
   TrayIcon.Visible:=not IsUnity and
-    (Ini.ReadBool('Interface', 'TrayIconAlways', True)  or
+    (Ini.ReadBool('Interface', 'TrayIconAlways', True)
+{$ifndef darwin}
+    or
     ((WindowState = wsMinimized) and Ini.ReadBool('Interface', 'TrayMinimize', True) ) or
     (not Self.Visible and Ini.ReadBool('Interface', 'TrayClose', False) )
+{$endif darwin}
     );
 
 {$ifdef darwin}
@@ -4096,6 +4119,7 @@ procedure TMainForm.ApplicationPropertiesEndSession(Sender: TObject);
 begin
   DeleteFileUTF8(FRunFileName);
   BeforeCloseApp;
+  MainForm.OnClose:=nil;
 end;
 
 procedure TMainForm.ApplicationPropertiesIdle(Sender: TObject; var Done: Boolean);
@@ -4731,10 +4755,12 @@ end;
 
 procedure TMainForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  if Ini.ReadBool('Interface', 'TrayClose', False) then begin
 {$ifdef darwin}
-    CloseAction:=caMinimize;
+  Application.Minimize; { calls NSApplication.hide }
+  CloseAction:=caNone;
+  exit;
 {$else}
+  if Ini.ReadBool('Interface', 'TrayClose', False) then begin
 {$ifdef linux}
     if IsUnity then
       CloseAction:=caMinimize
@@ -4745,10 +4771,10 @@ begin
       HideApp;
       UpdateTray;
     end;
-{$endif darwin}
     exit;
   end;
   BeforeCloseApp;
+{$endif}
 end;
 
 procedure TMainForm.PageInfoChange(Sender: TObject);
