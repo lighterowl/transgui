@@ -43,7 +43,7 @@ uses
   lclintf,
   {$endif windows}
   {$ifdef darwin}
-  MacOSThemeDetect, CocoaAll, CocoaConfig,
+  MacOSThemeDetect, CocoaConfig,
   {$endif}
   Graphics, Dialogs, ComCtrls, Menus, ActnList, LCLVersion,
   httpsend, StdCtrls, fpjson, jsonparser, ExtCtrls, rpc, syncobjs, variants, varlist, IpResolver,
@@ -995,9 +995,12 @@ end;
 {$ifdef darwin}
 procedure TMainForm.CocoaQuitApp(Data: PtrInt);
 begin
-  MainForm.OnClose:=nil;
-  BeforeCloseApp;
-  MainForm.Close;
+  { called by the OS when "Quit" is selected from the application's right-click
+    menu in the dock, or when the user is logging out / machine is shutting
+    down - in which case EndSession is called too so we end up calling it twice
+    which isn't really a problem. }
+  ApplicationPropertiesEndSession(self);
+  Application.Terminate;
 end;
 {$endif darwin}
 
