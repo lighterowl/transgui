@@ -121,7 +121,7 @@ procedure TConnOptionsFrames.SaveConnSettings(const ConnName: string; Ini: TIniF
 var
   Section: String;
 begin
-  Section := ConnNameToSectionName(ConnName, Ini);
+  Section := 'Connection.' + ConnName;
   transmission.SaveConnSettings(Section, Ini);
   proxy.SaveConnSettings(Section, Ini);
   paths.SaveConnSettings(Section, Ini);
@@ -143,6 +143,11 @@ class function TConnOptionsFrames.ConnNameToSectionName(const ConnName: string; 
 var
   Section: String;
 begin
+  { to be used only when loading as it preserves compatibility with (I presume)
+    really old INIs created by single-connection-only transgui versions that
+    stored all settings in the "Connection" section.
+    newly created settings should always be stored in "Connection.$conn_name"
+    sections. }
   Section := 'Connection.' + ConnName;
   if (ConnName <> '') and not Ini.SectionExists(Section) then
     Section := 'Connection';
